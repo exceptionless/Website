@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1>Exceptionless 3.4 &#8211; New User Dashboards, Job Reliability, and Bug Fixes</h1>
+
+<p><a href="http://exceptionless.com/assets/exceptionless-3-4-header.png"><img loading="lazy" class="alignright size-full wp-image-14573" src="http://exceptionless.com/assets/exceptionless-3-4-header.png" alt="Exceptionless 3.4" width="260" height="260" data-id="14573" srcset="https://exceptionless.com/assets/exceptionless-3-4-header.png 260w, https://exceptionless.com/assets/exceptionless-3-4-header-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" /></a>The latest Exceptionless release has several additions we think most of our users will find helpful. We sat down and worked on the UI, fixed some bugs, and spend a considerable amount of time improving reliability and efficiency of some of the primary pieces of the app.</p>
+<p>If you’re a self hoster, you’ll need to <a href="https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting#upgrading">upgrade your existing install</a>, but if you’re hosting with us there is no action required on your part to experiences the Exceptionless 3.4.</p>
+<p>For more information about this release, take a look below and/or review the <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v3.4.0">full release notes over on GitHub</a>.<!--more--></p>
+<h2>UI Updates</h2>
+<p>These updates were all pushed with <a href="https://github.com/exceptionless/Exceptionless.UI/releases/tag/v2.5.0">Exceptionless.UI 2.5</a> a few days prior to this release of the main app. Enjoy!</p>
+<h3>Search Wildcard</h3>
+<p>You can now use <code>*</code> to show **all **events in the search box. Woohoo!</p>
+<h3>Most Users Dashboard</h3>
+<p>The new most users dashboard allows you a quick view of events sorted by the highest number of affected users. This is great for helping prioritize your work pipeline.</p>
+<p>Also, as an aside, we’ve added the users affected column to the dashboard. We know some of you guys will find that helpful.</p>
+<h3>New Keyboard Shortcuts</h3>
+<p>MacOS &amp; Linux keyboard shortcut support has been added, as well as additional shortcuts such as <code>C</code> to chat with support, <code>S</code> to focus the search bar, and <code>g</code> <code>a</code> to go to your account. Hit <code>SHIFT</code> + <code>/</code> (also known as <code>?</code> ) to access the keyboard shortcut list on any screen.</p>
+<p>As an aside here, there is also now a <code>&lt;/&gt;</code> button near the top of the event occurrence that lets you quickly copy the JSON to your clipboard with a click.</p>
+<h2>Other Updates</h2>
+<p>This is just a quick list of everything else we tweaked, updated, added, or fixed with the v2.4 release.</p>
+<h3>Performance &amp; Reliability</h3>
+<p>We made several reliability and performance enhancements to queue and job processing. A few specific examples include fixing auto-abandoned jobs and instances where batch events weren’t being requeued.</p>
+<h3>Heartbeat API Endpoints</h3>
+<p>Previously we had <a href="http://exceptionless.com/session-heartbeats-no-longer-count-towards-plan-limits/">worked on making heartbeat events efficient</a> so we didn’t have to count them toward event quotas, and with this release we’ve added new API Endpoints that allow clients to submit those heartbeats cheaply.</p>
+<h3>Active Directory Authentication</h3>
+<p>Support has been added for Active Directory Authentication. Thanks <a href="https://github.com/laughinggoose">@laughinggoose</a>! To enable this feature, head over to the <a href="https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting#active-directory-authentication">Active Directory Authentication</a> documentation page on GitHub.</p>
+<h3>Count</h3>
+<p>This <code>Count</code> property was added to the event model that tracks deduplicated events and allows for some pretty cool metrics from here on out while avoiding the full cost of storing every event.</p>
+<h3>MaximumRetentionDays</h3>
+<p><code>MaximumRetentionDays</code> is pretty self explanatory. It controls the max retention perdiod for events, which allows the retention job and plans to be smarter about cleaning up old data.</p>
+<h3>Bugs</h3>
+<p>SignalR (web sockets) support wasn’t always working in some hosting environments such as AWS, so we fixed a few bugs related to that.</p>
+
+</body>
+</html>

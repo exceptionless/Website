@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1>Exceptionless 2.0 Client Rewrite Sneak Peek Usage Example</h1>
+
+<img loading="lazy" class="aligncenter size-full wp-image-9099" src="http://exceptionless.com/assets/new-client-header.jpg" alt="new-client-header" width="708" height="250" data-id="9099" srcset="https://exceptionless.com/assets/new-client-header.jpg 708w, https://exceptionless.com/assets/new-client-header-300x105.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<p>As Exceptionless 2.0 continues to become a reality, we thought we would give everyone a little taste of what you will be able to do with the new, rewritten client. Continue reading for a glimpse at the primary features, along with a complete usage example for adding extra data to events.</p>
+<p>After you check it out, let us know if you have questions or suggestions. We’re listening!<!--more--></p>
+<h2>New Client Features</h2>
+<ul>
+<li>The Exceptionless client has been completely rewritten to be highly simplified and extensible.</li>
+<li>Will work with Mono and Project K.</li>
+<li>The base client is <a title="Exceptionless.Portable PCL" href="https://www.nuget.org/packages/exceptionless.portable" target="_blank">PCL</a>, and we will have platform specific clients that add additional functionality for each platform.</li>
+<li>Adding extra data to events is extremely easy.</li>
+</ul>
+<p><strong><a title="Exceptionless 2.0 Client Source" href="https://github.com/exceptionless/Exceptionless.net" target="_blank">View Client Source</a></strong></p>
+<h3>Extended event data usage example</h3>
+<img loading="lazy" class="aligncenter size-large wp-image-9100" src="http://exceptionless.com/assets/ex-client-1024x420.png" alt="Exceptionless Code Example" width="940" height="385" data-id="9100" srcset="https://exceptionless.com/assets/ex-client-1024x420.png 1024w, https://exceptionless.com/assets/ex-client-300x123.png 300w, https://exceptionless.com/assets/ex-client.png 1167w" sizes="(max-width: 940px) 100vw, 940px" /> 
+<p><strong>Lets break that example down</strong>, line by line, shall we? Check out the <a title="Exceptionless 2.0 Client Source" href="https://github.com/exceptionless/Exceptionless/tree/master/Source/Clients" target="_blank">client source</a> if you want to take a look at the complete code.</p>
+<p><strong>First, set your API key.</strong></p>
+<pre>var client = new ExceptionlessClient(config =&gt; {
+config.ApiKey = "API_KEY_HERE";
+</pre>
+<hr>
+<p>Then, send events to your own free Exceptionless server install.</p>
+<pre>config.ServerUrl = "https://exceptionless.myorg.com";
+</pre>
+<hr>
+<p>Now, read config settings from attributes.</p>
+<pre>config.ReadFromAttributes();
+</pre>
+<hr>
+<p>Read config settings from a config section in your app/web.config.</p>
+<pre>config.ReadFromConfigSection();
+</pre>
+<hr>
+<p>Store all client data including the offline queue in the store folder, by default isolated storage is used.</p>
+<pre>config.UseFolderStorage("store");
+</pre>
+<hr>
+<p>Exclude any form fields, cookies, query string parameters, and custom data properties containing “CreditCard”.</p>
+<pre>config.AddDataExclusions("CreditCard");
+</pre>
+<hr>
+<p>Add the “SomeTag” to all events.</p>
+<pre>config.DefaultTags.Add("SomeTag");
+</pre>
+<hr>
+<p>Add the “MyObject” custom data object to every event.</p>
+<pre>config.DefaultData.Add("MyObject", new { MyProperty = "Value1" });
+</pre>
+<hr>
+<p>Add a custom event enrichment that will add a tag called “MyTag” to every event.</p>
+<pre>config.AddEnrichment(ev =&gt; ev.Tags.Add("MyTag"));
+</pre>
+<hr>
+<p>Register a custom log implementation that uses NLog.</p>
+<pre>config.Resolver.Register(new NLogExceptionlessLog());
+</pre>
+<hr>
+<p>The Startup method is specific for each platform and wires up to all relevant unhandled exception events so that they will be automatically sent to the server.</p>
+<pre>client.Startup();
+</pre>
+<hr>
+<p>Manually catch and report an error with a custom tag on it.</p>
+<pre>try {
+throw new ApplicationException("Boom!");
+} catch (Exception ex) {
+ex.ToExceptionless().AddTags("MyTag").Submit();
+}
+</pre>
+<hr>
+<p>Let users add their email address and a description of the error.</p>
+<pre>client.UpdateUserEmailAndDescription(client.GetLastReferenceId(), "me@me.com", "It broke!");
+</pre>
+<hr>
+<p>Create and submit a log message and add an extra “Order” object to the event.</p>
+<pre>client.CreateLog("Order", "New order created.")
+.AddObject(new { Total = 14.95 }, name: "Order")
+.Submit();
+</pre>
+<hr>
+<p>Submit a feature usage event that will let you see how much certain features of your app are being used.</p>
+<pre>client.SubmitFeatureUsage("FeatureA");
+</pre>
+<hr>
+<p>Submit a page not found event so you can keep track of your broken links and fix them.</p>
+<pre>client.SubmitNotFound("/badpage");
+</pre>
+<hr>
+<p>Listen to all events being sent and cancel any errors that are “IgnoredType”.</p>
+<pre>client.SubmittingEvent += (sender, args) =&gt;
+args.Cancel = args.Event.IsError() && args.Event.GetError().Type.Contains("IgnoredType");
+</pre>
+<hr>
+<p>Settings data is synced in real-time with the project settings in your Exceptionless project on the server.</p>
+<pre>client.Configuration.Settings.Changed += (sender, args) =&gt;
+Trace.WriteLine(String.Format("Action: {0} Key: {1} Value: {2}", args.Action, args.Item.Key, args.Item.Value));
+</pre>
+<hr>
+<p>You can use those settings to control behavior in your app.</p>
+<pre>if (client.Configuration.Settings.GetBoolean("IncludeMyCustomData", false))
+Trace.WriteLine("Should include my custom data");
+</pre>
+<h2>That’s All There Is To It!</h2>
+<p>After checking out the above example, we hope you agree that we’ve drastically simplified and improved the process of adding data to events, allowing for much more flexibility.</p>
+<p>As always, if you have any questions, comments, suggestions, or concerns, let us know!</p>
+<h3>Read more about Exceptionless 2.0</h3>
+<ul>
+<li><a href="http://exceptionless.com/exceptionless-2-in-the-making/" title="Exceptionless 2.0 – In the Making">Exceptionless 2.0 – In the Making</a></li>
+<li><a href="http://exceptionless.com/event-based-reporting-system-coming-version-2-0/" title="Event Based Reporting System Coming in Version 2.0">Event Based Reporting System</a></li>
+<li><a href="http://exceptionless.com/upcoming-exceptionless-2-0-simplified-api/" title="More from the Upcoming Exceptionless 2.0: Simplified API">Simplified API</a></li>
+<li><a href="http://exceptionless.com/coming-exceptionless-2-0-pluggable-system/" title="Coming in Exceptionless 2.0 – A Pluggable System">A Pluggable System</a></li>
+</ul>
+<p> </p>
+
+</body>
+</html>

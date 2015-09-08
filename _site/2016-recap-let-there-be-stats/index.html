@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1></h1>
+
+<p><a href="/2016-recap-let-stats/"><img loading="lazy" class="aligncenter wp-image-15174 size-large" src="https://exceptionless.com/assets/2016-in-review-1024x538.jpg" alt="Exceptionless 2016 in review" width="940" height="494" data-id="15174" srcset="https://exceptionless.com/assets/2016-in-review-1024x538.jpg 1024w, https://exceptionless.com/assets/2016-in-review-300x158.jpg 300w, https://exceptionless.com/assets/2016-in-review-768x403.jpg 768w, https://exceptionless.com/assets/2016-in-review.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" /></a></p>
+<p>We were curious, so we thought we would put together some stats for 2016, along with and a recap of some of the notable changes and progression. Enjoy!</p>
+<h2>General Exceptionless Stats</h2>
+<ul>
+<li><strong>Over 120,000,000</strong> events processed</li>
+<li>4716 users</li>
+<li>3614 projects</li>
+<li>2809 organizations</li>
+</ul>
+<!--more-->
+<h2>Release Stats</h2>
+<h3>Exceptionless Server:</h3>
+<ul>
+<li>7 releases</li>
+<li>88 watching</li>
+<li>774 stars</li>
+<li>236 forks</li>
+</ul>
+<h3>Exceptionless UI:</h3>
+<ul>
+<li>6 releases</li>
+<li>9 watching</li>
+<li>38 stars</li>
+<li>34 forks</li>
+</ul>
+<h3>Foundatio:</h3>
+<ul>
+<li>4 releases</li>
+<li>65 watching</li>
+<li>472 stars</li>
+<li>97 forks</li>
+</ul>
+<h2>Popular Blog Posts / Updates</h2>
+<p>Judging by the traffic to these posts and updates, they’re all worth a read. Check them out!</p>
+<ul>
+<li><a href="/sending-log-messages-to-exceptionless/">Sending Log Messages to Exceptionless</a></li>
+<li><a href="/better-approach-running-azure-webjobs/">A Better Approach to Running Azure WebJobs</a></li>
+<li><a href="/simple-app-deployment-azure-continuous-deployment-github/">Simple App Deployment with Azure Continuous Deployment and GitHub</a></li>
+<li><a href="/exceptionless-4-0-net-core-asp-net-core-support/">Exceptionless.NET 4.0 – .NET Core and ASP.NET Core Support!</a></li>
+<li><a href="/exceptionless-api-usage-and-overview/">Exceptionless API Usage and Overview</a></li>
+</ul>
+<h2>Notable Changes / Milestones</h2>
+<h3>Server License Changes</h3>
+<p>We changed the server licensing to use the Apache license. Now, every Exceptionless project is under the Apache license and there should be no more confusion on how it’s licensed. <a href="/new-releases-for-all-the-codes-exceptionless-3-2/">Read more here.</a></p>
+<h3>Session Tracking &amp; Management</h3>
+<p>The ability to track and automatically manage a users session was added, giving you visibility into how long and what a user did while they were using your product. This also answers the question, “what did my users do leading up to this exception?” <a href="/track-view-user-session-data-exceptionless/">Read more here.</a></p>
+<h3>Fixed by Version</h3>
+<p>In 2016, we also added the ability to mark an event as fixed in a specific version of your app. <a href="/set-application-version-for-improved-regression-notifications-and-stacking/">Read more here.</a></p>
+<h3>Performance &amp; Reliablity</h3>
+<p>We spent a lot of time this past year making massive performance and reliability improvements across the board. Tons of bugs got fixed along the way, and additions like bulk updates and deletes, along with optimized query generation got squeezed in there, too! One big factor here is that it has allowed us to move to Elasticsearch 5 <em>much</em> quicker because all of these improvements allowed us to do things more generically throughout. Much less code to update/change!</p>
+<h4>Elasticsearch 5</h4>
+<p>Like we mentioned above, we’ve done a ton of work to ensure we can move to Elasticsearch 5:</p>
+<ul>
+<li>Insanely fast document indexing and searching</li>
+<li>Dynamic aggregations (allowing us to do completely customize stats on any data)</li>
+<li>Reindexing support</li>
+<li>Daily indexes</li>
+<li>Making it easier to self host</li>
+<li>Getting one step closer to server being able to run cross-platform</li>
+</ul>
+<p>We have been doing QA on the Elasticsearch 5 migration since the end of the year and it is currently still in progress – coming soon!</p>
+<h3>Open Source ALL the Things</h3>
+<p>We open sourced two major new libraries this year:</p>
+<ul>
+<li><a href="https://github.com/exceptionless/Foundatio.Repositories" target="_blank">Foundatio.Repositories</a><br>
+Foundatio.Repositories are generic repositories with an implementation for Elasticsearch</li>
+<li><a href="https://github.com/exceptionless/Foundatio.Parsers" target="_blank">Foundatio.Parsers</a><br>
+Foundatio.Parsers are Lucene query parsers that allow you to validate or modify lucene queries with ease!</li>
+</ul>
+<h3>Other Noteworthy Enhancements</h3>
+<ul>
+<li>Added <a href="/add-reverse-geocoding-to-your-app/">Geo location features</a></li>
+<li>Added <a href="/exceptionless-keyboard-shortcuts/">Keybaord shortcuts</a></li>
+<li>The <a href="/introducing-foundatio-3-0-async-efficiency/">API is now 100% Async</a></li>
+<li>Had third-party security review conducted</li>
+<li>Made it even easier to self host.</li>
+<li>Massive <a href="/foundatio-featured-net-blog-version-4-0-release/">improvements to Foundatio</a> (100% Async, new implementations)</li>
+</ul>
+<h2>Onward to 2017 – Stay Tuned for a Roadmap!</h2>
+<p>We’ve got big things coming up, like Exceptionless 5.0 with Elasticsearch 5, which should boost performance gains like 80% faster indexing, lower memory usage, and native reindexing support! No slowing down over here, so stay tuned and enjoy the ride.</p>
+<p>And, as always, if you have anything you’d like to see in upcoming Exceptionless releases, please let us know!</p>
+
+</body>
+</html>

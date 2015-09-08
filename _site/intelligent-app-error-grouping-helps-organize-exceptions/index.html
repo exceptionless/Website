@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1></h1>
+
+<p><img loading="lazy" class="alignright size-full wp-image-4831" alt="Exception Grouping Totals" src="http://exceptionless.com/assets/thumbnail.png" width="164" height="120" data-id="4831" />Having a tool like Exceptionless to report and log your software’s errors is great, but many of our clients experience thousands of instances of each error over various lengths of time, which can become overwhelming quickly.</p>
+<p>We couldn’t just leave them with a huge list of individual error occurrences to drudge through, so we went through several different potential options until we devised the best way to group them.<!--more--></p>
+<h2>Grouping Errors Intelligently</h2>
+<h3>What’s there to group by?</h3>
+<ol>
+<li>The details we provide on each error give us countless ways to group them. While some wouldn’t make sense, we considered everything.</li>
+</ol>
+<ul>
+<li>Date</li>
+<li>Type</li>
+<li>Message</li>
+<li>Platform</li>
+<li>Location</li>
+<li>Browser information</li>
+<li>User information</li>
+<li>Environment information</li>
+<li>Request details</li>
+<li>and more…</li>
+</ul>
+<h3>Drill down fast</h3>
+<p>Since we use Exceptionless to report and track down our own bugs, it was easy to put ourselves in our own shoes and think about what would allow us to drill down and fix errors quickly.</p>
+<p>With that mindset, we decided that there were two important error details that should be used for grouping.</p>
+<ol>
+<li><strong>Where the error occurred</strong><br>
+We felt that, first and foremost, we wanted to know where the error was occurring. Even though there is a possibility it might be occurring in multiple locations, we felt that each location represented its own importance in our grouping scheme.</li>
+<li><strong>Type of error</strong><br>
+The type of error is also very important, and we felt that when you combine type with location, you get a set of errors that holds enough significant explicit data to be recognized as a group.</li>
+</ol>
+<h2>What Grouping Allows Us to Do</h2>
+<p>When we group app errors by location and type, it allows us to report error instance counts, first occurrences, frequency of occurrence, and most recent occurrence on the dashboard.<figure id="attachment_4823" class="thumbnail wp-caption alignleft" style="width: 150px"></p>
+<p><a href="http://exceptionless.com/assets/dashboard-home.png"><img loading="lazy" class="size-thumbnail wp-image-4823 " alt="Grouping Error Dashboard" src="http://exceptionless.com/assets/dashboard-home-150x150.png" width="150" height="150" data-id="4823" /></a><figcaption class="caption wp-caption-text">Exceptionless Dashboard</figcaption></figure> <figure id="attachment_4825" class="thumbnail wp-caption alignleft" style="width: 150px"><a href="http://exceptionless.com/assets/group-details.png"><img loading="lazy" class="size-thumbnail wp-image-4825 " alt="Error Group Details" src="http://exceptionless.com/assets/group-details-150x150.png" width="150" height="150" data-id="4825" /></a><figcaption class="caption wp-caption-text">Error Group Details</figcaption></figure></p>
+<div style="clear: both;">
+</div>
+<p>This seemingly basic grouping forms the basis for the different Exceptionless dashboard tabs and pages, thus becoming a major cornerstone for the platform. Click into a group, and you see the title, exception type, and location, along with a graph of occurrences and the most recent occurrences.</p>
+<p>From there, you can drill down into each occurrence and scrutinize all of the <a href="http://exceptionless.com/whats-included-exceptionless-detailed-error-reports/" title="Error Report Details">error’s details</a>.</p>
+<p>That’s how we do it! Any questions? Let us know.</p>
+
+</body>
+</html>

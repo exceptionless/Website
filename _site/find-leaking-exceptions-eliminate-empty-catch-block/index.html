@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1></h1>
+
+<h2>How a client eliminated 50+ exceptions/hour</h2>
+<p>Recently, a client contacted us and gave us a pretty incredible case study. He found a huge number of “leaking” exceptions by eliminating all of the empty catch statements in his ASP.NET code and sending an exception to Exceptionless instead. By doing so, he was able to track down about <strong>12 individual bugs</strong> and get rid of <strong>over 50 exceptions per hour</strong> by fixing them. That’s <strong>1200+ exceptions per day</strong> – gone!<!--more--></p>
+<blockquote>
+<p>“This gave us a picture of just how many poorly written methods were leaking exceptions. The answer was, A LOT. So, even though these weren’t customer facing, they were expensive and a good indicator of code quality. In just a couple of days, we were able to eliminate the majority of them completely.” – Eric Burcham</p>
+</blockquote>
+<p>After speaking with Mr. Burcham further, he explained that while there were only about 12 individual bugs, the number of times that those bugs were occurring in different areas throughout the code (an ASP.NET eCommerce solution) was numerous. Luckily, he was able to use several mult-line find and replace actions to make all the changes relatively quickly and get things back on track.</p>
+<h2>A brief code example</h2>
+<h3>Empty .NET catch blocks</h3>
+<p>Before using Exceptionless to generated exceptions, the catch blocks were empty.</p>
+<pre>try
+{
+                // Do Something
+}
+catch { }</pre>
+<h3>Using Exceptionless to generate an exception in the catch block</h3>
+<p>By submitting an exception in the catch block, instead, their eyes were opened to thousands of daily exceptions.</p>
+<pre>try
+{
+                // Do Something
+}
+catch(Exception ex)
+{
+                ex.ToExceptionless().Submit();
+}</pre>
+<h3 style="text-rendering: auto;">
+  But I can already throw an exception in my catch block&#8230;
+</h3>
+<p>While you can throw an exception in a catch block normally with .NET, Eric was able to utilize Exceptionless’ intelligent error grouping, notifications, and detailed reporting to pinpoint the problems and deal with them accordingly. Then, he was able to monitor the decline of occurrences and make sure that there were no regressions. That’s pretty powerful, we think.</p>
+
+</body>
+</html>

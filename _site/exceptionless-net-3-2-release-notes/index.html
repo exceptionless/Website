@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1></h1>
+
+<p><img loading="lazy" class="alignright wp-image-2978" style="margin-left: 15px;" src="http://exceptionless.com/assets/exceptionless-logoBLK.png" alt="Exceptionless Logo" width="360" height="90" data-id="2978" srcset="https://exceptionless.com/assets/exceptionless-logoBLK.png 1000w, https://exceptionless.com/assets/exceptionless-logoBLK-300x75.png 300w" sizes="(max-width: 360px) 100vw, 360px" />The .NET Exceptionless client has received <strong>several improvements</strong> and <strong>some bug fixes</strong> in version 3.2. Details below!</p>
+<p>A special shout-out to <a href="https://github.com/airwareic" target="_blank">@airwareic</a>, <a href="https://github.com/srijken" target="_blank">@srijken</a>, <a href="https://github.com/xbelt" target="_blank">@xbelt</a>, and <a href="https://github.com/mgnslndh" target="_blank">@mgnslndh</a> for contributing and helping make this release happen. <strong>You guys rock!</strong></p>
+<p><strong>Please download and update to the latest</strong> <a href="https://github.com/exceptionless/Exceptionless.Net/releases/tag/v3.2.0" target="_blank">source here</a>, and you can view the full <a href="http://exceptionless.com/why/" target="_blank">change log here</a>.<!--more--></p>
+<h2>.NET Exceptionless Client v3.2.0 Release Details</h2>
+<h3>Additions &amp; Improvements</h3>
+<p><strong>Read Configuration</strong><br>
+We added support for reading configuration from environmental variables and app settings</p>
+<p>**Closing Applications<br>
+** Closing applications after submission is now easier due to the new <code>SubmittedEvent</code> event handler.</p>
+<p>**Custom Persistence Settings<br>
+** The new <code>QueueMaxAttempts</code> and <code>QueueMaxAge</code> configuration settings allow custom persistence settings and are intended to improve offline support. Thanks @airwareic!</p>
+<p><strong>Data Exclusions Improvements</strong><br>
+We’ve made huge improvements to Data Exclusions, which now check default data and extra exception properties.</p>
+<p>**New Overloads<br>
+** Thanks @xbelt for creating overloads for <code>CreateLog</code> and <code>SubmitLog</code> to accept the <code>LogLevel</code> enum!</p>
+<p><strong>Custom Themes</strong><br>
+@mgnslndh updated the styling of the <code>CrashReportDialog</code> to play nice with custom themes. Thanks!</p>
+<p>**Dependencies<br>
+** All dependencies (Nancy, NLog, etc) have been updated.</p>
+<p>**Deprecated!<br>
+** The <code>EnableSSL</code> property has been marked Obsolete because it is no longer used. <code>ServerURL</code> is now being looked at for this.</p>
+<h3>Fixes</h3>
+<p>**Startup()<br>
+** <code>Startup()</code> was overriding configured dependencies – Fixed!</p>
+<p>**Empty Errors<br>
+** We fixed a bug where you could have empty errors submitted with no stack trace info.</p>
+<p><strong>API Keys</strong></p>
+<ul>
+<li>Previously set valid API keys were being overwritten with default API keys, so we fixed it.</li>
+<li>We also fixed an issue where <code>ApiKey</code> couldn’t be changed after the client was initialized.</li>
+</ul>
+<p><strong>Reference IDs</strong><br>
+An issue with submitting generated reference IDs was resolved, thanks to @srijken</p>
+<p>**Updating WebAPI Package<br>
+** @srijken also fixed another issue where updating the WebApi package would remove the Exceptionless Module. Thanks again!</p>
+<p><strong>NLog</strong><br>
+Nlog wasn’t working with .NET 4.0. This has been resolved.</p>
+<p><strong>IsolatedStorage</strong><br>
+There was a problem that caused IsolatedStorage to not be able to be used. Fixed!</p>
+<p><strong>Min Log Level</strong><br>
+NLog and log4net have been updated to allow setting the min log level.</p>
+<h2>What Say You?</h2>
+<p>As always, we’re listening to your feedback, comments, suggestions, and rants!</p>
+<ul>
+<li><a href="https://github.com/exceptionless/Exceptionless.UI/issues/new">User Interface Feedback</a></li>
+<li><a href="https://github.com/exceptionless/Exceptionless.Net/issues/new">.NET Client Feedback</a></li>
+<li><a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues/new">JavaScript Client Feedback</a></li>
+<li><a href="https://github.com/exceptionless/exceptionless/issues/new">Exceptionless Feedback</a></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1></h1>
+
+<p><img loading="lazy" class="alignright size-full wp-image-3971" style="margin-left: 20px; margin-right: 20px;" alt="Exceptionless Version 1.4" src="http://exceptionless.com/assets/version1.4.png" width="175" height="88" data-id="3971" />Exceptionless 1.4 brings with it both server and client changes, a new client integration, some minor updates, and lots of bug fixes. Check out the changelog items below, and let us know if you have any questions.</p>
+<p>We want to extend our thanks again to the developers that have worked on the project since we <a href="/fork-us-exceptionless-goes-open-source/" title="Exceptionless Goes Open Source">went open source</a> a few weeks ago. See their contributions below, along with links to their GitHub profiles.</p>
+<!--more-->
+<h2>Server</h2>
+<ul>
+<li>The app will now be displayed in full screen mode on iOS devices (via Add to Home Screen).</li>
+<li>Added the ability to view the status page while in maintenance mode.</li>
+<li>Added the ability disable error processing on the error controller.</li>
+<li>Various usability improvements dealing with chart date-range selection.</li>
+<li>Added documentation link on the sidebar.</li>
+<li>Added checks to limit the number of max results returned from various API methods.</li>
+<li>Add new indexes to help performance and fix some inefficient queries.</li>
+<li>Changed the way we are filtering fixed and hidden errors to be more efficient.</li>
+<li>Updated all indexes to be created in the background if they don’t already exist.</li>
+<li>Switched the JavaScriptEngineSwitcher to use JurassicJsEngine. Jurassic has no external dependencies on IE or Windows specific libraries.</li>
+<li>Fixed a race condition that would throw an exception when updating stats.</li>
+<li>Fixed a bug where the EnforceRetentionLimitsAction was returning all the query results and then paging them.</li>
+<li>The upgrade script now upgrades the database in a background thread.</li>
+<li>Fixed a bug where an error with no stack trace wouldn’t be processed.</li>
+<li>Fixed a bug where the list loading indicators could spin non-stop.</li>
+<li>Fixed a bug where errors could be stored with the incorrect DateTimeOffset. This caused inconsistencies between charts and list data.</li>
+<li>Fixed a bug where the error stack’s tags were not being synced with the error instances.</li>
+<li>Fixed a bug where the terms and privacy links could point to the wrong domain.</li>
+<li>Fixed a bug where a UriFormatException could be thrown when viewing an error occurrence. This could be caused by third party obfuscators that create a new pdb file.</li>
+<li>Updated the UpgradableJsonMediaTypeFormatter to handle errors gracefully.</li>
+<li>Fixed a bug where the EncodingDelegatingHandler could throw an exception when there was no request content.</li>
+<li>Fixed a bug that could <a href="https://jira.mongodb.org/browse/CSHARP-893" target="_blank">prevent an error from being processed</a>.</li>
+</ul>
+<h2>Client</h2>
+<ul>
+<li>Added support for <a title="NancyFX" href="http://nancyfx.org/" target="_blank">Nancy </a>(Contrib: <a title="Luis Rudge on GitHub" href="https://github.com/luisrudge" target="_blank">luisrudge</a>).</li>
+<li>Better support for low trust environments (Contrib: <a title="Obsbne on GitHub" href="https://github.com/obsbne" target="_blank">obsbne</a>).</li>
+<li>Fixed a bug where the MVC integration could interfere with custom error pages.</li>
+<li>Fixed a bug where a batch of errors wouldn’t be sent if an error occurred while sending a previous error in the same batch.</li>
+<li>The client will now attempt to delete an already sent error when ProcessQueue is called.</li>
+<li>Fixed a bug where an exception would occur while deleting the manifest file that was saved by a different or elevated user.</li>
+</ul>
+
+</body>
+</html>

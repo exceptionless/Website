@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1>Version 2.0&#8217;s New Message Bus and Queueing Systems</h1>
+
+<p>In an effort to improve scalability, allow for new functionality to easily be added to Exceptionless, make the system less coupled, process things more efficiently, go fully Async, and further support Azure, we’ve been working hard on a new message bus and queueing system.</p>
+<p>Lets take a look at a few of the details surrounding these new systems we’re building for Exceptionless 2.0. Take a look and let us know what you think. If you’ve got questions or comments, we’d love to hear them!<!--more--></p>
+<h2>Message Bus</h2>
+<p>The new message bus allows us to publish and subscribe to messages across all our resources. We <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/Hubs/MessageBusHub.cs">subscribe to different types of messages to send SignalR notifications</a> to the client.</p>
+<h2>Queueing</h2>
+<p>The new queueing system allows us to enqueue expensive tasks that can be handled at a later time. This lets us greatly reduce the processing and latency times of the api.</p>
+<ul>
+<li>We stream event data that is posted to the event controller directly into the queue without taking the IO or Memory hit of processing it. This means that we can process more errors, faster, with less resources.</li>
+</ul>
+<p>The system also supports retrying and discarding of data.</p>
+<ul>
+<li>We queue emails that need to be sent, as well as user defined webhooks that need to be called with data. Email servers on the sending and receiving can go offline or error out while sending, but by queuing the notification emails we can ensure you always get them by re-sending in the future, after a failure occurs. In the event that we can’t send you an email after a few retries, we can discard the notification.</li>
+</ul>
+<h2>More on Version 2.0</h2>
+<p>If you’re just now learning about the upcoming Exceptionless 2.0, make sure to catch up on previous feature announcements and examples by reading the below articles.</p>
+<ul>
+<li><a href="http://exceptionless.com/exceptionless-2-in-the-making/" title="Exceptionless 2.0 – In the Making">Exceptionless 2.0 – In the Making</a></li>
+<li><a href="http://exceptionless.com/event-based-reporting-system-coming-version-2-0/" title="Event Based Reporting System Coming in Version 2.0">Event Based Reporting System</a></li>
+<li><a href="http://exceptionless.com/upcoming-exceptionless-2-0-simplified-api/" title="More from the Upcoming Exceptionless 2.0: Simplified API">Simplified API</a></li>
+<li><a href="http://exceptionless.com/coming-exceptionless-2-0-pluggable-system/" title="Coming in Exceptionless 2.0 – A Pluggable System">A Pluggable System</a></li>
+<li><a href="http://exceptionless.com/exceptionless-2-0-client-rewrite-sneak-peek-usage-example/" title="Exceptionless 2.0 Client Rewrite Sneak Peek Usage Example">Exceptionless 2.0 Client Rewrite Sneak Peak and Example</a></li>
+</ul>
+
+</body>
+</html>

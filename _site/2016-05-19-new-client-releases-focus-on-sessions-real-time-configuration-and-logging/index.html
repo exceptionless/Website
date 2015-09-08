@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1>New Client Releases Focus on Sessions, Real Time Configuration, and Logging</h1>
+
+<p><img loading="lazy" class="alignright size-full wp-image-14451" src="http://exceptionless.com/assets/net-3.5.0-js-1.4.0.png" alt="net-3.5.0-js-1.4.0" width="260" height="260" data-id="14451" srcset="https://exceptionless.com/assets/net-3.5.0-js-1.4.0.png 260w, https://exceptionless.com/assets/net-3.5.0-js-1.4.0-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Exceptionless.NET v3.5.0 and Exceptionless.JavaScript v1.4.0 have been released and they are chock full of <strong>new features and feature improvements!</strong></p>
+<p>There weren’t a whole lot of bug fixes with these releases. Could it be that Exceptionless is working and we’ve squelched most of the bugs? We think so!</p>
+<p>Notably, we focused on sessions, real time configuration, and logging, all of which we think you’ll find super helpful.</p>
+<p>Read on for details.<!--more--></p>
+<h2>Exceptionless .NET Client V3.5.0 and JavaScript Client V1.4.0 Release Notes</h2>
+<h3>Session Heartbeats No Longer Count Towards Plan Limits!</h3>
+<p>We’ve updated Session Heartbeats and Session End events to be sent through an optimized API end point, and they will no longer count towards your plane’s event limits.</p>
+<h3>Real Time Project Configuration Improvements</h3>
+<p>You can now exclude events by type and source, along with setting minimum log levels, <strong>in real time</strong>. So, for example, if you accidentally disable logging completely, you can <strong>simply update your settings</strong> and the updates will go into affect, restoring functionality!</p>
+<p>UI support will be expanded moving forward, but for the time being here is an example project configuration.</p>
+<h4>Source</h4>
+<p><strong>Key:</strong> <code>@@EVENT_TYPE:SOURCE&lt;br /&gt; </code></p>
+<p><strong>Value:</strong> <code>false</code></p>
+<p>Any event type or source can be used, and wildcards <code>*</code> are supported, so you can ignore whole event types and set the source to <code>*</code>.</p>
+<h4>Disable Submissions of Events with Type Name</h4>
+<p><strong>Key:</strong> <code>@@error:*MyCustomException</code></p>
+<p>**Value: **<code>false</code></p>
+<p>This configuration will disable submission of any error event with a stack trace containing an exception with a type name that ends with <code>MyCustomException</code>. You could also remove the wildcard and specify the full type name with the namespace.</p>
+<h4>Log Message Settings</h4>
+<p><strong>Key:</strong> <code>@@log:*</code></p>
+<p><strong>Value:</strong> <code>off</code></p>
+<p>Even though log types are special cased, they still accept rue or false values, so this example completely turns off log messages.</p>
+<p>Other known values are <code>Trace</code>, <code>Debug</code>, <code>Info</code>, <code>Warn</code>, <code>Error</code>, <code>Fatal</code>, and <code>Off</code>.</p>
+<h4>Minimum Log Level</h4>
+<p>**Key: **<code>@@log:MyNamespace.EventPostsJob</code></p>
+<p>**Value: **<code>Info</code></p>
+<p>This example is setting the minimum log level for <code>EventPostsJob</code> to <code>Info</code>.</p>
+<h3>Automatically Check for Updated Configuration Settings on Client Idle</h3>
+<p>We’ve implemented an a<strong>utomatic recurring check for updated configuration settings</strong> that occurs <strong>two minutes</strong> after the last event submission.</p>
+<p>A few notes:</p>
+<ul>
+<li>Each configuration check <strong>does not</strong> count towards your account’s plan limits.</li>
+<li>No user information will be sent – only the current configuration version.</li>
+<li>Nothing will be retrieved if no settings have been changed.</li>
+</ul>
+<p>The automatic recurring configuration settings check <strong>can be disable</strong> by calling:</p>
+<h4>.NET</h4>
+<p><code>client.Configuration.UpdateSettingsWhenIdleInterval = TimeSpan.Zero;</code></p>
+<h4>JavaScript</h4>
+<p><code>client.config.updateSettingsWhenIdleInterval = -1;</code></p>
+<h3></h3>
+<h3>New Easy Way to Exclude Events from Being Submitted in .NET</h3>
+<p>You can now define a simple <code>Func&lt;Event,bool&gt;</code> callback to stop events from being submitted in the .NET client.</p>
+<p>For example, if I wanted to ignore any event with a <code>value</code> property of <code>2</code> I could use <code>client.Configuration.AddEventExclusion(e =&gt; e.Value.GetValueOrDefault() != 2);</code></p>
+<h3>Bug Fix for SettingsCollection Boolean Values Support in .NET Client</h3>
+<p><code>SettingsCollection.GetBoolean(name)</code> was not supporting `` or <code>1</code> as boolean values, but now it does. We are also now supporting <code>yes</code> and <code>no</code> as valid values.</p>
+<h3>JavaScript Client Passing Settings Bug</h3>
+<p><a href="https://github.com/csantero">@csantero</a> fixed an issue with passing settings to a new isntance of ExceptionlessClient – thanks!</p>
+<h3>Improved Stacking of Angular Response Errors in JavaScript Client</h3>
+<p>^^^ Nothing much to say here – the header says it all!</p>
+<h2>Feedback</h2>
+<p>We hope these new features and feature improvements help your Exceptionless experience, and we plan to continue to listen to user feedback and improve the system where improvements need to be made. To do that, though, we need to hear what you want out of the app. If you have a favorite feature request, or something that just bothers you, please let us know by dropping us a line on GitHub Issues under the appropriate repository, listed below, or just comment here and we’ll figure it out!</p>
+<ul>
+<li><a href="https://github.com/exceptionless/Exceptionless.UI/issues/new">User Interface Feedback</a></li>
+<li><a href="https://github.com/exceptionless/Exceptionless.Net/issues/new">.NET Client Feedback</a></li>
+<li><a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues/new">JavaScript Client Feedback</a></li>
+<li><a href="https://github.com/exceptionless/exceptionless/issues/new">Exceptionless Feedback</a></li>
+</ul>
+<p>Thanks for reading and have an awesome day!</p>
+
+</body>
+</html>

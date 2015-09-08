@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1></h1>
+
+<p><img loading="lazy" class="alignright wp-image-11617" style="margin-left: 15px; margin-bottom: 15px; margin-top: 10px;" src="http://exceptionless.com/assets/AngularJS-large-300x84.png" alt="Angular JS" width="248" height="70" data-id="11617" srcset="https://exceptionless.com/assets/AngularJS-large-300x84.png 300w, https://exceptionless.com/assets/AngularJS-large.png 383w" sizes="(max-width: 248px) 100vw, 248px" />As we plug away at Exceptionless 2.0, perfecting and future-proofing it, we wanted to stop and take the time to talk about AngularJS, how we are using it in version two, and what benefits we’re going to get out of it.</p>
+<p>Naturally, we want to maintain all current functionality while supporting planned V2.0 features like search and filtering. We also want it to be static and use the REST API for everything. We’re pretty determined to not cheat on that point. Then, thinking ahead, building it to support easily adding new features in the future is a huge priority.</p>
+<p>Lets look at these points in a bit more detail.<!--more--></p>
+<h2>Static UI</h2>
+<p>Using our fully documented REST API, the new Exceptionless 2.0 UI will be static, with no server side logic. What this allows us to do is host the UI on a content delivery network (CDN), guaranteeing faster load times for users anywhere in the world. <strong>Everyone</strong> loves fast load times!</p>
+<h2>Much, Much Faster</h2>
+<p>Being a single page application (SPA), the new version of the app eliminates page loads. The only thing being loaded is the JSON data, and we can pre-load other content as users navigate the site. That, along with the static UI mentioned above, means we can deliver an app that responds almost instantaneously to the user’s input. What a time to be alive.</p>
+<h2>Maintainable Modularity</h2>
+<p>Version 1 taught us a lot. We gained valuable feedback from users, beat our head against several complex problems, and made countless wish lists for the future. Most of that lead to the desire for a more modular, easily maintainable system that new features could be added to with minimal reinvention.</p>
+<p>AngularJS has helped us fulfill those dreams. We can now add new features very easily, without breaking other sections of the site, and our code based has been greatly simplified. And, even with all the modularity, we are still able to run tests on the UI. Pretty snazzy!</p>
+<p>Event type support is handled via pluggable view modules, and we’ll be able to add new ones that we haven’t even conceived of with relative ease.</p>
+<h2>Do You Angular?</h2>
+<p>Making the choice to go with AngularJS wasn’t easy or quick, but be believe it was the right path to take.</p>
+<p>Do you Angular? What apps have you used it on? If not, what other frameworks do you use for this type of app, and why?</p>
+<p> </p>
+
+</body>
+</html>

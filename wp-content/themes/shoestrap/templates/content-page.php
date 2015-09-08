@@ -1,0 +1,1 @@
+<?php do_action( 'shoestrap_single_page_content' ); ?>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1>Case Study: Server Expiration Error for Pre-Alpha Game Release</h1>
+
+<p><img loading="lazy" class="alignright size-full wp-image-9759" style="margin-left: 15px;" src="http://exceptionless.com/assets/game-post.jpg" alt="game-post" width="160" height="160" data-id="9759" srcset="https://exceptionless.com/assets/game-post.jpg 160w, https://exceptionless.com/assets/game-post-150x150.jpg 150w" sizes="(max-width: 160px) 100vw, 160px" />Today we’ve got a pretty cool case study that comes to us from a game development studio!</p>
+<p>We love to see Exceptionless being used by companies with interesting projects and development pipelines, and what’s more interesting than gaming, multi-server, and multi-player environments?</p>
+<p>These guys also gave us some good feedback, which we’ll address.</p>
+<p>Check it out!<!--more--></p>
+<h2>Project</h2>
+<p>This user is working on a pre-alpha game that is, at the time of the feedback, only available to the in-house team. The game environment requires multiple servers that are deployed via script. When an old version of a server comes down and a new one is deployed, there is cleanup that must happen, etc.</p>
+<blockquote>
+<p>“I like your product! I’ve previously written an exception-reporting system that did the same type of thing as Exceptionless but used a mail-server as the exception repository. Since that system was something I had to leave behind at my last company, I wanted to find a solution for my current company, and after comparing alternatives liked what your team had built, so that’s what we’re using now.”</p>
+</blockquote>
+<h2>How Exceptionless Helped</h2>
+<p>Because the game had such limited players, servers, and testing, it’s tough to catch all the little bugs. Fortunately, Exceptionless was able to catch a potentially huge bug that would cause old versions of the servers that were still running to crash because of files being deleted by the new server development clean up scripts.</p>
+<blockquote>
+<p>“If an old version was still running it would crash because its data-files got deleted. Since we’re still in development mode there aren’t enough people playing on our game servers to notice this exception — but we would have when going into alpha or beta test! Fortunately Exceptionless did notice and report this problem.”</p>
+</blockquote>
+<p>We think that’s pretty awesome, and not just because we’re huge nerds!</p>
+<h2>Feature Requests &amp; Thoughts</h2>
+<p>We were lucky enough to get some great feedback from these guys, as well.</p>
+<h3>Bug Ownership</h3>
+<blockquote>
+<p><span style="color: #282f33;">“We’d like a feature that allows our developers to claim ownership of bugs so that they’re not seen by others in the Dashboard view by default.”</span></p>
+</blockquote>
+<p>With multiple developers on multiple projects, bugs can stack up and things can get messy. John doesn’t need to see Billy’s bugs from project A when he’s working on his own bugs for project B.</p>
+<p>We definitely agree here and understand, but <span style="color: #282f33;">there is a fine line between us being an error reporting service and getting into <a href="/bug-tracking/">bug tracking</a> type features. We had a previous product that tried to do too much and turned people off so we really wanted to try and keep Exceptionless simple. That being said, <strong>we want to make Exceptionless integrate with other apps</strong> much more in the future and make it really easy to create new integrations. We’re working on this now with <a title="Upcoming Exceptionless Version 2.0 Overview & Review" href="http://exceptionless.com/upcoming-exceptionless-version-2-0-overview-review/">Exceptionless 2.0, coming soon</a>!</span></p>
+<h3>Multiple Services on Single Server</h3>
+<blockquote>
+<p>“<span style="color: #282f33;">One other thing that was painful for me personally: we run multiple services of the same type on a single server (e.g. multiple instances of “game-server.exe”). In order to ensure that each server has its own queue folder and logfile, I had to write a chunk of custom code.”</span></p>
+</blockquote>
+<p>Again, we totally agree! <span style="color: #282f33;">The <a title="Exceptionless 2.0 Client Rewrite Sneak Peek Usage Example" href="http://exceptionless.com/exceptionless-2-0-client-rewrite-sneak-peek-usage-example/">client in Exceptionless 2.0</a> will be MUCH simpler and will make things much easier. You will be able to easily use in-memory storage and be able to plug in different storage implementations.</span></p>
+<h2>We Love Feedback!</h2>
+<p>If you’re a current user, we’d love to hear how you’ve used Exceptionless to cut down on bugs and build better apps. If you’ve got any criticisms or feature feedback/requests, keep those coming as well – they help us improve!</p>
+<p>Have an awesome day!</p>
+<p> </p>
+
+</body>
+</html>

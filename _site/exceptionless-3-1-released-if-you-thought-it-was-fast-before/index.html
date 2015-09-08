@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1></h1>
+
+<p><img loading="lazy" class="alignright size-full wp-image-13736" style="margin-left:15px;" src="http://exceptionless.com/assets/exceptionles-3-1-header.png" alt="exceptionles-3-1-header" width="260" height="260" data-id="13736" srcset="https://exceptionless.com/assets/exceptionles-3-1-header.png 260w, https://exceptionless.com/assets/exceptionles-3-1-header-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />If you thought Exceptionless was fast before, <strong>prepare to have your mind blown</strong> by what we’ve been able to do in version 3.1, which released today.</p>
+<p>In short, we’ve reduced cpu and memory usage, increase caching efficiency, and sped up searching, all quite significantly as you’ll see below.</p>
+<p>Along with these speed boosts, we’ve also made Job improvements (look for a blog post on this soon) and upgraded to .NET 4.6 (<strong>self-hosters</strong>, please install .NET 4.6 on your servers before upgrading).</p>
+<p>Details on the release changes can be found below.<!--more--></p>
+<h2>It’s All About Speed!</h2>
+<h3>CPU &amp; Memory</h3>
+<p>We reduced the CPU and Memory load <strong>across the entire app</strong>. This allows the application to use fewer resources, meaning it has more time to process additional events, making everything faster. Between making Exceptionless and <a href="https://github.com/exceptionless/Foundatio">Foundatio</a> 100% Async and these improvements, we’ve drastically increased the efficiency of the entire platform.</p>
+<p><strong>Below</strong>, we see the increase in performance from two examples. On the left, we see a reduction in CPU and Memory usage for a deployed web app instance. On the right is a visible reduction in CPU usage for an Elasticsearch node.</p>
+<p><a href="http://exceptionless.com/assets/cpu-memory-percentage-improvements.png"><img loading="lazy" class="aligncenter wp-image-13721 size-large" src="http://exceptionless.com/assets/cpu-memory-percentage-improvements-e1446046152986-1024x343.png" alt="cpu-memory-percentage-improvements" width="940" height="315" data-id="13721" srcset="https://exceptionless.com/assets/cpu-memory-percentage-improvements-e1446046152986-1024x343.png 1024w, https://exceptionless.com/assets/cpu-memory-percentage-improvements-e1446046152986-300x100.png 300w" sizes="(max-width: 940px) 100vw, 940px" /></a></p>
+<h3>Elasticsearch Queries</h3>
+<p>By profiling the Elasticsearch queries for efficiency and usage, we’ve been able to reduce the overall number we were running and improve the efficiency on the ones that still are.</p>
+<p><a href="http://exceptionless.com/assets/search-request-rate-improvements.png"><img loading="lazy" class="aligncenter wp-image-13723 size-full" src="http://exceptionless.com/assets/search-request-rate-improvements-e1446046076483.png" alt="search-request-rate-improvements" width="485" height="221" data-id="13723" srcset="https://exceptionless.com/assets/search-request-rate-improvements-e1446046076483.png 485w, https://exceptionless.com/assets/search-request-rate-improvements-e1446046076483-300x137.png 300w" sizes="(max-width: 485px) 100vw, 485px" /></a></p>
+<h3>Caching</h3>
+<p>Caching efficiency has been improved by removing redundant components that were utilizing valuable resources. For example, we removed the SignalR Redis Backplane, which drastically decreased the number of calls to Redis. Overall, we’ve made the app smarter throughout regarding how we cache and retrieve data.</p>
+<p><a href="http://exceptionless.com/assets/cache-improvements-2.png"><img loading="lazy" class="aligncenter wp-image-13724 size-large" src="http://exceptionless.com/assets/cache-improvements-2-e1446046201498-1024x346.png" alt="cache-improvements-2" width="940" height="318" data-id="13724" srcset="https://exceptionless.com/assets/cache-improvements-2-e1446046201498-1024x346.png 1024w, https://exceptionless.com/assets/cache-improvements-2-e1446046201498-300x101.png 300w" sizes="(max-width: 940px) 100vw, 940px" /></a></p>
+<p> </p>
+<p><a href="http://exceptionless.com/assets/Caching-improvements-e1446046263253.png"><img loading="lazy" class="aligncenter size-medium wp-image-13725" src="http://exceptionless.com/assets/Caching-improvements-e1446046263253-300x224.png" alt="Caching-improvements" width="300" height="224" data-id="13725" srcset="https://exceptionless.com/assets/Caching-improvements-e1446046263253-300x224.png 300w, https://exceptionless.com/assets/Caching-improvements-e1446046263253-1024x766.png 1024w, https://exceptionless.com/assets/Caching-improvements-e1446046263253.png 1151w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p> </p>
+<h3>Long-running API Tasks</h3>
+<p>We’ve offloaded long-running API tasks to background jobs, freeing up a lot of resources in the app and allowing us to scale work items independently. For example, marking a stack as fixed or removing a project may take a few moments to be updated now, but the trade-off is worth it. We’re working on updating the UI experience to prompt users that the task is running in the background.</p>
+<h2>Other Improvements</h2>
+<h3>Jobs</h3>
+<p>We’ve made each Job a console app, so it’s much easier to debug and deploy. Look for a full blog post on Job improvements soon.</p>
+<h3>.NET 4.6</h3>
+<p>Exceptionless is now running on .NET 4.6, which has improved startup time due to various improvements with the new version. <strong>Self-hosting users</strong> should be sure to upgrade to .NET 4.6 on their servers before updating Exceptionless.</p>
+<h2>Upgrading</h2>
+<p>For full release notes and to download the latest version, please visit the <a href="https://github.com/exceptionless/Exceptionless/releases">GitHub Release Page</a>.</p>
+<h2>Always Improving</h2>
+<p><strong>We’re always striving to improve</strong> the efficiency of Exceptionless and all of our projects. If you see any room for improvement or have any comments when using anything from us, please send us an in-app message, submit a GitHub issue or <a href="/contact/">contact us</a> on the website.</p>
+
+</body>
+</html>

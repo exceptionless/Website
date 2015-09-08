@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1></h1>
+
+<img loading="lazy" class="aligncenter wp-image-13283 size-full" src="/_site/assets/javascript-release-candidate.jpg" alt="Exceptionless JavaScript Client" width="708" height="250" data-id="13281" srcset="https://exceptionless.com/assets/javascript-release-candidate.jpg 708w, https://exceptionless.com/assets/javascript-release-candidate-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<p>If you’ve been following along the last few weeks, you know we’ve been working hard to get the new <a href="http://exceptionless.com/javascript-client-available-for-preview-testing/" target="_blank">JavaScript Client</a> up to speed and ready for a version 1 release.</p>
+<p><strong>We think we’re there!</strong></p>
+<p>Whether you’re a <a href="http://exceptionless.com/javascript-client-demo-exceptionless/" target="_blank">JavaScript</a> or <a href="http://exceptionless.com/exceptionless-node-js-javascript-client-demo/" target="_blank">Node.js</a> user, you’ll be able to enjoy the same full featured exception and event reporting platform that our primary .NET client offers, with fewer platform specific boundaries.<!--more--></p>
+<h2>Sure It’s Ready?</h2>
+<p>We have been doing extensive testing over the course of the last month, which has allowed us to identify issues and inefficiencies throughout. Each of those has been addressed with several improvements and fixes, leaving us with a much faster, more stable client.</p>
+<p>Many of the tweaks we made were related to IE9 and Node. Those issues have been resolved and things are working well now. In addition, we further increased performance by shrinking the library size fairly drastically.</p>
+<p>Moving forward, we will just be working on bug fixes related to user-reported issues as usage picks up.</p>
+<h3>Recent Bug Fixes, Issue Resolutions, &amp; Improvements</h3>
+<ul>
+<li>Ensured compatibility with module formats like <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="_blank">es6</a> (<a href="https://github.com/systemjs/systemjs" target="_blank">SystemJS</a>/<a href="http://jspm.io/" target="_blank">jspm</a>) and <a href="http://requirejs.org/" target="_blank">RequireJS</a></li>
+<li>Various IE9 and Node compatibility issues fixed</li>
+<li>Decreased library size to improve performance and efficiency</li>
+<li>Various other performance improvements</li>
+<li>Fixed Angular integration failures with Angular Router</li>
+<li>Fixed – Unable to integrate with Aurelia due to node being improperly detected</li>
+<li>Changed the implementation of the InMemoryStorage to do a get instead of a get and delete</li>
+<li>Unable to post events with the NodeSubmissionClient over http fixed</li>
+<li>Fixed – Unit tests are failing due to transpilation</li>
+</ul>
+<h2>Start Using It!</h2>
+<p>We’ve already released a few blog posts (linked below) that detail how to get up and running, but please visit the <a href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub Repo</a> for the most up-to-date documentation.</p>
+<p><strong><a href="http://exceptionless.com/javascript-client-demo-exceptionless/" target="_blank">JavaScript Users</a></strong> can find installation, configuration, usage details and examples <a href="http://exceptionless.com/javascript-client-demo-exceptionless/" target="_blank">here</a>.</p>
+<p>If you’re a <strong><a href="http://exceptionless.com/exceptionless-node-js-javascript-client-demo/" target="_blank">Node.js</a> user</strong>, follow <a href="http://exceptionless.com/exceptionless-node-js-javascript-client-demo/" target="_blank">this article</a> to get set up and running.</p>
+<p>We’ve also got <a href="https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example" target="_blank"><strong>examples/samples on GitHub</strong></a> for JavaScript, Express, TypeScript, SystemJS, and RequireJS.</p>
+<div class="signup center">
+  <a class="btn btn-large btn-primary" href="https://github.com/exceptionless/Exceptionless.JavaScript">Try It Today!</a>
+</div>
+<h2>Let Us Know What You Think</h2>
+<p>We’re suckers for feedback, so let us have it whether good, bad, or indifferent. Bugs, etc should be reported on the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">GitHub Issues</a> page, but feel free to shoot us an in-app message, email, etc and let us know what you think and if you had any issues getting everything working.</p>
+
+</body>
+</html>

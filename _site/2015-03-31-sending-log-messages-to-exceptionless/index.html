@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1>Sending Log Messages to Exceptionless</h1>
+
+<p><img loading="lazy" class="alignright wp-image-12886 size-full" style="margin-left: 15px;" src="http://exceptionless.com/assets/log-messages.png" alt="Exceptionless Log Message Events" width="199" height="200" data-id="12886" srcset="https://exceptionless.com/assets/log-messages.png 199w, https://exceptionless.com/assets/log-messages-150x150.png 150w" sizes="(max-width: 199px) 100vw, 199px" />We’re all about exceptions, but sometimes, as developers, we run into bugs that don’t throw them but still cause major havoc in the system. There are also times we just need to record an event with a custom message to help track down bottlenecks, etc.</p>
+<p>That’s where Exceptionless meets log messages.</p>
+<p>In Exceptionless 2.0, you can now send custom log messages to a Log Messages dashboard where they can be tracked and view just like exceptions and other events.</p>
+<p>Lets take a closer look…<!--more--></p>
+<h2>How to Submit a Log Message to Exceptionless</h2>
+<h3>Using the Client</h3>
+<p>For this example, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="http://docs.exceptionless.com/contents/configuration/" target="_blank">configured</a> the Exceptionless 2.0 client. If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="http://docs.exceptionless.com/contents/upgrading/" target="_blank">upgrade</a> to send us log messages. Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="http://exceptionless.com/contact/" target="_blank">contact page</a> if you have any questions or need assistance in this area.</p>
+<h4>Let’s submit a log message</h4>
+<pre>using Exceptionless;
+ExceptionlessClient.Default.SubmitLog("Application starting up");</pre>
+<p>That’s your basic log message.</p>
+<h4><strong>Getting fancier</strong>, you can also specify the log source and log level.</h4>
+<p>In the below example, “<em>typeof(MainWindow)__.FullName</em>” specifies the log source, and “<em>Info</em>” specifies the log level. If no log source is specified, the log messages will be stacked under a global log stack.</p>
+<p>We recommend specifying one of the following log levels, all of which add a visual indicator to each log message (see below screenshot).</p>
+<ul>
+<li>Trace</li>
+<li>Debug</li>
+<li>Info</li>
+<li>Warn</li>
+<li>Error</li>
+</ul>
+<pre>ExceptionlessClient.Default.SubmitLog(typeof(MainWindow).FullName, "Info log example", "Info");
+</pre>
+<p>Here’s a screenshot of what the visual indicators for the different types of log levels look like.</p>
+<p><a href="http://exceptionless.com/assets/log-messages-log-level.png"><img loading="lazy" class="aligncenter wp-image-12887 size-full" src="http://exceptionless.com/assets/log-messages-log-level.png" alt="Exceptionless Log Message Preview" width="813" height="537" data-id="12887" srcset="https://exceptionless.com/assets/log-messages-log-level.png 813w, https://exceptionless.com/assets/log-messages-log-level-300x198.png 300w" sizes="(max-width: 813px) 100vw, 813px" /></a></p>
+<h4>You can also add additional information using our fluent API.</h4>
+<p>This is helpful wen you want to add contextual information, contact information, or a tag.</p>
+<p>In the below example, we will use the “<em>CreateLog</em>” method to add a tag to the log message.</p>
+<pre>using Exceptionless;
+ExceptionlessClient.Default.CreateLog(typeof(MainWindow).FullName, "Info log example", "Info").AddTags("Wpf").Submit();
+</pre>
+<p>There are a number of additional pieces of data you can use for your event. The below bullets include the current EventBuilder list, but we are always adding more that can be found on <a title="Exceptionless EventBuilder.cs" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Shared/EventBuilder.cs" target="_blank">GitHub</a>. Also, view more examples here on our <a title="Send Exceptionless Events" href="http://docs.exceptionless.com/contents/sendingevents/" target="_blank">Sending Events</a> page.</p>
+<ul>
+<li>AddTags</li>
+<li>SetProperty</li>
+<li>AddObject</li>
+<li>MarkAsCritical</li>
+<li>SetUserIdentity</li>
+<li>SetUserDescription</li>
+<li>SetVersion</li>
+<li>SetSource</li>
+<li>SetSessionId</li>
+<li>SetReferenceId</li>
+<li>SetMessage</li>
+<li>SetGeo</li>
+<li>SetValue</li>
+<li>And more, depending on your client</li>
+</ul>
+<h3>Using the REST API</h3>
+<p>You can also submit a log message with an HTTP post to our <a title="Exceptionless Events Endpoint" href="https://api.exceptionless.io/docs/index#!/Event/Event_Post" target="_blank">events endpoint</a>.</p>
+<pre>My log message
+My second log message.</pre>
+<p>By default, any content that is submitted to the API post is a log message. The above example will be broken into two log messages because it automatically splits text content by the new line.</p>
+<h4>You can submit a log message via JSON, too.</h4>
+<p>See details in our <a title="Exceptionless JSON Post API Documentation" href="https://api.exceptionless.io/docs/index#!/Event/Event_Post" target="_blank">API Documentation</a>. If you need an API key for simply posting events, you can find it in your <a title="Exceptionless" href="https://be.exceptionless.io/" target="_blank">project settings</a>. Otherwise, please refer to the <a title="Exceptionless Auth Login API Documentation" href="https://api.exceptionless.io/docs/index#!/Auth/Auth_Login" target="_blank">auth login documentation</a> to get a user scoped api key.</p>
+<p>Below is a JSON example of a log message, with source, message, and log level.</p>
+<pre>{
+  "type": "log",
+  "source": "WpfApplication3.MainWindow",
+  "message": "Application started",
+  "data": {
+    "@level": "Info",
+  }
+}
+</pre>
+<h3>Using NLog or Log4net Targets</h3>
+<p>We also have integrations with major logging frameworks. The benefits of using a logging framework is finer, more granular control over what is logged.</p>
+<p>For example, you can log only warnings or errors project-wide, but then enable trace level messages for a specific class. <a title="Exceptionless NLog Log Message Implementation" href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/NLog.config#L31-L34" target="_blank">We do this on our project</a> to keep our system from getting filled up with noise that doesn’t add any value unless there is an issue.</p>
+<p>This also allows you to quickly change what you want to log to. Maybe you want to turn off logging to Exceptionless, or log to Exceptionless and to disk.</p>
+<h4>NLog or Log4net Usage</h4>
+<p>To use the <a title="Exceptionless NLog Nuget Package" href="https://www.nuget.org/packages/exceptionless.nlog" target="_blank">NLog </a>or <a title="Exceptionless Log4net Nuget Package" href="https://www.nuget.org/packages/exceptionless.log4net" target="_blank">Log4net</a> clients, you’ll just need to bring down the nuget package and follow the detailed readme. You can also take a look at our <a title="Exceptionless NLog Log4net Logging Sample" href="https://github.com/exceptionless/Exceptionless.Net/tree/master/Source/Samples/SampleConsole" target="_blank">sample app</a>, which uses both frameworks.</p>
+<p><em><span style="color: #993300;"><strong>Note on performance: Use in-memory event storage for high volumes</strong></span></em></p>
+<p><em>There are some performance considerations you should be aware of when you are logging very high numbers of log events and using our client. We’ve spent a lot of time to ensure Exceptionless doesn’t degrade your applications performance. However, if you are logging thousands of messages a minute, you should use the in-memory event storage.</em></p>
+<pre>using Exceptionless;
+ExceptionlessClient.Default.Configuration.UseInMemoryStorage();
+</pre>
+<p>This tells the client not to serialize the log events to disk before sending and thus is much faster (the client doesn’t need to serialize the event to disk and read it from disk before sending). This comes at the expense that if the application dies, you will lose any unsent events that were in memory. When you use the NLog or Log4net targets and specify the API key as part of the target configuration, we will automatically create a second client instance that uses in-memory storage only for log messages. This way, any logged exceptions or feature usages still use disk storage, while log messages use in-memory storage, allowing maximum performance.</p>
+<p>**Another Note: **We are also working on updating the <a title="Exceptionless Serilog Github Issue" href="https://github.com/serilog/serilog/issues/381" target="_blank">Serilog implementation</a>.</p>
+<h2>Log Messages Dashboard</h2>
+<p>The Log Messages Dashboard makes it easy to see log occurrences. You can keep track of how active a component is, or how long code takes to execute using existing metrics.</p>
+<p>For metrics, we have created an <a href="https://github.com/exceptionless/Foundatio" target="_blank">open source metrics library called Foundatio</a>. We use it for Exceptionless, and think you will find it extremely helpful as well. Check it out! We’ll be posting an article on Foundatio soon, so check back.</p>
+<h2><a href="http://exceptionless.com/assets/log-messages-dashboard.png"><img loading="lazy" class="aligncenter size-full wp-image-12889" src="http://exceptionless.com/assets/log-messages-dashboard.png" alt="log-messages-dashboard" width="796" height="867" data-id="12889" srcset="https://exceptionless.com/assets/log-messages-dashboard.png 796w, https://exceptionless.com/assets/log-messages-dashboard-275x300.png 275w" sizes="(max-width: 796px) 100vw, 796px" /></a></h2>
+<p>How Are You Liking Exceptionless 2.0?</p>
+<p>We think we’ve added some pretty cool features to Exceptionless 2.0, including logging, but you are the ultimate judge. What’s good? What’s bad? What’s missing? Let us know via a comment on the blog, social media, in-app, or however else you want to get in touch!</p>
+<p>If you’re new to Exceptionless 2.0, make sure to <a href="http://exceptionless.com/its-go-time-exceptionless-2-0-launched/" title="Exceptionless 2.0 Launched">check out the launch article</a> for more details on the new features and enhancements.</p>
+
+</body>
+</html>

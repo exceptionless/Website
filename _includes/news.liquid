@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+<body>
+{% include header.html %}
+<div class="margin-top">
+    <div class="page-header">
+        <h1>News</h1>
+    </div>
+    <div class="container margin-top">
+        {%- paginate blog.articles by 5 -%}
+        {% for post in collections.posts reversed %}
+        <article class="post type-post status-publish format-standard">
+            <h2><a href="{{ post.url }}">{{ post.data.postTitle }}</a></h2>
+            <span>
+                {% if post.data.author % }
+                {{post.data.author}}
+                {% else %}
+                "Exceptionless"
+                {% endif %}
+            </span>
+        </article>
+        {% endfor %}
+        {{ paginate | default_pagination: next: 'Older', previous: 'Newer' }}
+        {%- endpaginate -%}
+    </div>
+</div>
+</body>
+</html>

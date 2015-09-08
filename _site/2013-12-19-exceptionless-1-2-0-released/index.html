@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1>Exceptionless 1.2.0 Released</h1>
+
+<h2>Server Features</h2>
+<ul>
+<li>Added ability to copy extended data to the clipboard.</li>
+<li>Added ability to copy stack traces to the clipboard. This is very useful when you have an obfuscated stack trace and wish to decode it.</li>
+<li>Added ability to purchase yearly billing plans.</li>
+<li>Added the ability to consume the rest api with an apikey query string parameter.</li>
+<li>We now show friendly error messages when an error occurs while downgrading or upgrading billing plans.</li>
+<li>Numerous improvements to the project configuration page.</li>
+<li>Numerous bug fixes and performance enhancements.</li>
+</ul>
+<h2>Client Features</h2>
+<p>Update your NuGet packages to take advantage of these improvements!</p>
+<ul>
+<li>Added support for MVC5 and Web API 2.0.</li>
+<li>Improved the detection and ignoring of duplicate errors to prevent them from being reported.</li>
+<li>The client now excludes dynamic assemblies from the modules error report section.</li>
+<li>AddObject now serializes objects to a depth of 5 by default.</li>
+<li>Fixed a couple bugs that may occur when multiple client instances are running on the same machine concurrently.</li>
+<li>Fixed a bug with the ExceptionlessWcfHandleErrorAttribute where it wouldn’t catch errors when aspNetCompatibilityEnabled was set to false.</li>
+<li>The client now submits errors to <a href="http://collector.exceptionless.com/api/v1/error">collector.exceptionless.com/api/v1/error</a>.</li>
+<li>Fixed a bug that would prevent the Windows Form client from showing the Crash Report dialog.</li>
+<li>Fixed a bug where multiple HttpModule sections could be added by the NuGet installer.</li>
+</ul>
+
+</body>
+</html>

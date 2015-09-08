@@ -1,0 +1,760 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cyclone Slider 2 for persians\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-18 14:47+0800\n"
+"PO-Revision-Date: 2013-09-18 15:02+0800\n"
+"Last-Translator: \n"
+"Language-Team: Mixa <info@Mixa.ir>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.7\n"
+"Language: Persian\n"
+"X-Poedit-SearchPath-0: D:\\webserver\\htdocs\\wp_dev\\cyclone-slider-2\\wp-content\\plugins\\cyclone-slider-2\n"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/cyclone-slider.php:127
+#, fuzzy
+msgid "Cyclone Slider Settings"
+msgstr "ابزارک اسلایدر میکسا"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/cyclone-slider.php:128
+#, fuzzy
+msgid "Settings"
+msgstr "تنظیمات اسلایدشو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/cyclone-slider.php:131
+#, fuzzy
+msgid "Cyclone Slider Export"
+msgstr "اسلایدر"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/cyclone-slider.php:132
+#, fuzzy
+msgid "Export"
+msgstr "وارد کردن"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/cyclone-slider.php:135
+#, fuzzy
+msgid "Cyclone Slider Import"
+msgstr "اسلایدر"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/cyclone-slider.php:136
+msgid "Import"
+msgstr "وارد کردن"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:94
+msgid "Cyclone Slider"
+msgstr "اسلایدر"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:95
+msgid "Slideshow"
+msgstr "اسلایدشو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:96
+msgid "Add Slideshow"
+msgstr "افزودن اسلایدشو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:97
+msgid "Add New Slideshow"
+msgstr "افزودن اسلایدشو جدید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:98
+msgid "Edit Slideshow"
+msgstr "ویرایش اسلایدشو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:99
+msgid "New Slideshow"
+msgstr "اسلایدشو جدید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:100
+msgid "View Slideshow"
+msgstr "نمایش اسلایدشو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:101
+msgid "Search Slideshows"
+msgstr "جستجو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:102
+msgid "No slideshows found"
+msgstr "چیزی یافت نشد"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:103
+msgid "No slideshows found in Trash"
+msgstr "چیزی در سطل زباله یافت نشد"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:139
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:142
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:143
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:146
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:147
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:148
+msgid "Slideshow updated."
+msgstr "اسلایدشو به روز شد"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:140
+msgid "Custom field updated."
+msgstr "فیلدهای سفارشی بروز شدند"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:141
+msgid "Custom field deleted."
+msgstr "فیلدهای سفارشی حذف شدند"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:144
+msgid "Slideshow published."
+msgstr "اسلایدشو منتشر شد"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:145
+msgid "Slideshow saved."
+msgstr "اسلایدشو ذخیره شد"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:149
+#, php-format
+msgid "Templates CSS could not be saved. Make sure %stemplates.css is writable."
+msgstr "css مربوط به الگو نمی تواند ذخیره شود. دسترسی نوشتن را به %stemplates.css بدهید."
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:150
+#, php-format
+msgid "Templates JS could not be saved. Make sure %stemplates.js is writable."
+msgstr "JS مربوط به الگو نمی تواند ذخیره شود. دسترسی نوشتن را به %stemplates.css بدهید."
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:184
+msgid "Slides"
+msgstr "اسلایدر"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:193
+#, fuzzy
+msgid "Slider Preview"
+msgstr "تنظیمات اسلاید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:202
+msgid "Get Slider Codes"
+msgstr "دریافت کد اسلایدر"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:211
+#, fuzzy
+msgid "Basic Settings"
+msgstr "تنظیمات اسلایدشو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:220
+#, fuzzy
+msgid "Advanced Settings"
+msgstr "تنظیمات اسلایدشو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:229
+#, fuzzy
+msgid "Templates"
+msgstr "الگو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:238
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:502
+msgid "Slideshow ID"
+msgstr "کد اسلایدشو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:266
+msgid "Slide"
+msgstr "اسلاید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:435
+msgid "Slide *"
+msgstr "اسلاید *"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:499
+msgid "Slideshow Name"
+msgstr "نام اسلایدشو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:500
+msgid "Template"
+msgstr "الگو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:501
+msgid "No. of Slides"
+msgstr "شماره اسلاید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-admin.php:503
+msgid "Shortcode"
+msgstr "کد کوتاه"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-scripts.php:52
+msgid "Select an image"
+msgstr "انتخاب عکس"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-scripts.php:53
+msgid "Add to Slide"
+msgstr "افزودن به اسلایدر"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-scripts.php:54
+msgid "Error. Make sure its a valid YouTube URL."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:17
+msgid "Play with these settings if Cyclone Slider 2 is not working or if you want to optimize it."
+msgstr "در صورتی که مشکل در نمایش صحیح یا برای بهینه سازی اسلایدر، تنظیمات زیر را تغییر دهید."
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:30
+#, fuzzy
+msgid "Load scripts in:"
+msgstr "بارگزاری اسکریپت های زیر"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:33
+msgid "Header"
+msgstr "سرصفحه"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:34
+msgid "Footer"
+msgstr "پاصفحه"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:39
+msgid "Load these scripts:"
+msgstr "بارگزاری اسکریپت های زیر"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:44
+msgid "Cycle 2. This is the core script needed by the plugin."
+msgstr "Cycle 2. اسکریپت هسته اصلی افزونه"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:49
+msgid "Cycle 2 - Carousel. Used by these templates: Galleria, Lea, Dos."
+msgstr "Cycle 2 - Carousel. استفاده شده در پوسته های افزونه"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:54
+#, fuzzy
+msgid "Cycle 2 - Swipe. For touch swipe events."
+msgstr "Cycle 2 - Tile. برای جلوه نمایش حرکت کاشی ها در افزونه"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:59
+msgid "Cycle 2 - Tile. Used for tile transition effects."
+msgstr "Cycle 2 - Tile. برای جلوه نمایش حرکت کاشی ها در افزونه"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:64
+msgid "Cycle 2 - Video. Used by YouTube template."
+msgstr "Cycle 2 - Video. برای نمایش فایل های یوتیوب در الگوها"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:69
+msgid "Easing - Enable easing options."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:74
+msgid "Scripts loading priority:"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:77
+msgid "Make this value bigger to load scripts last."
+msgstr "برای سرعت"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:82
+msgid "Save Options"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:83
+msgid "Restore Defaults"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-settings-page.php:96
+msgid "Default options restored."
+msgstr "تنظیمات پیش فرض بازیابی شد"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-widget.php:15
+msgid "Cyclone Slider Widget"
+msgstr "ابزارک اسلایدر میکسا"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-widget.php:16
+msgid "Widget for displaying slideshows."
+msgstr "ابزارک برای نمایش اسلایدرشوها"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-widget.php:62
+msgid "Select a Slideshow:"
+msgstr "انتخاب اسلایدشو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider-widget.php:77
+msgid "No slideshows found."
+msgstr "اسلایدشو یافت نشد"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider.php:55
+#, php-format
+msgid "[Slideshow \"%s\" not found]"
+msgstr "[اسلایدشو  \"%s\" یافت نشد]"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-cyclone-slider.php:67
+#, php-format
+msgid "[Template \"%s\" not found]"
+msgstr "[الگوی \"%s\" یافت نشد]"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-nextgen-integration.php:37
+msgid "NextGEN Integration"
+msgstr "ادغام با NextGEN"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-nextgen-integration.php:53
+msgid "Choose a NextGEN Gallery"
+msgstr "گالری NextGEN  را انتخاب کنید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/classes/class-nextgen-integration.php:65
+msgid "Select a gallery to import images from. Images will be added as new slides."
+msgstr "گالری را برای وارد کردن تصاویر انتخاب کنید. تصاویر در یک اسلاید جدید افزوده خواهند شد."
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/templates/default/slider.php:63
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/templates/standard/slider.php:63
+#, fuzzy
+msgid "Slide type not supported."
+msgstr "اسلایدشو به روز شد"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/export-step-1.php:18
+#, fuzzy
+msgid "Select sliders:"
+msgstr "انتخاب اسلایدشو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/export-step-1.php:24
+msgid "Select All"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/export-step-1.php:37
+#, fuzzy
+msgid "No slider to export."
+msgstr "اسلایدشو یافت نشد"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/export-step-1.php:40
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/import-step-1.php:25
+msgid "Next"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/export-step-2.php:16
+msgid "Your export file is ready. Click Download."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/export-step-2.php:18
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/export-step-2.php:27
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/import-step-2.php:18
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/import-step-2.php:26
+msgid "Back"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/export-step-2.php:19
+msgid "Download"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/import-step-1.php:18
+msgid "Import Zip File:"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/import-step-2.php:16
+msgid "Import operation success!"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:16
+msgid "Delete"
+msgstr "حذف"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:25
+msgid "Image"
+msgstr "عکس"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:26
+msgid "YouTube"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:27
+#, fuzzy
+msgid "Vimeo"
+msgstr "فیلم"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:28
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:173
+msgid "Custom HTML"
+msgstr "HTML دلخواه"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:29
+msgid "Video (Old Version)"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:41
+msgid "Get Image"
+msgstr "افزودن عکس"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:44
+msgid "Slide Properties:"
+msgstr "تنظیمات اسلاید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:46
+msgid "Link"
+msgstr "لینک"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:49
+msgid "Link URL:"
+msgstr "آدرس لینک"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:53
+msgid "Open Link in:"
+msgstr "نمایش لینک در"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:55
+msgid "Same Window"
+msgstr "همان پنجره"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:56
+msgid "New Tab or Window"
+msgstr "تب یا پنجره جدید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:57
+msgid "Lightbox"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:63
+msgid "Title"
+msgstr "عنوان"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:71
+msgid "Description"
+msgstr "توضیح"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:80
+msgid "Image Attributes"
+msgstr "ویژگی های عکس"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:83
+msgid "Alternate Text:"
+msgstr "متن جایگزین تصاویر"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:87
+msgid "Title Text:"
+msgstr "متن عنوان"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:93
+msgid "Slide Transition Effects"
+msgstr "افکت حرکت اسلاید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:97
+msgid "Disable"
+msgstr "غیرفعال"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:98
+msgid "Enable Slide Effects"
+msgstr "فعال سازی افکت اسلاید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:104
+msgid "Transition Effects:"
+msgstr "افکت حرکت"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:115
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:32
+msgid "Transition Effects Speed:"
+msgstr "سرعت نمایش جلوه ها"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:117
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:124
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:34
+msgid "Milliseconds"
+msgstr "میلی ثانیه"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:122
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:26
+msgid "Next Slide Delay:"
+msgstr "تاخیر نمایش اسلاید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:132
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:13
+msgid "Tile Count:"
+msgstr "تعداد کاشی ها"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:134
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:15
+msgid "The number of tiles to use in the transition."
+msgstr "تعداد کاشی ها برای استفاده در جلوه های حرکتی"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:138
+msgid "Tile Delay:"
+msgstr "تاخیر کاشی"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:140
+msgid "Milliseconds to delay each individual tile transition."
+msgstr "برحسب میلی ثانیه برای تاخیر بین حرکت کاشی ها"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:144
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:18
+msgid "Tile Position:"
+msgstr "موقعیت"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:146
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:20
+msgid "Vertical"
+msgstr "عمودی"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:147
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:21
+msgid "Horizontal"
+msgstr "افقی"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:159
+msgid "YouTube URL:"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:161
+msgid "Copy and paste a valid YouTube URL here."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:166
+#, fuzzy
+msgid "Vimeo URL:"
+msgstr "آدرس ویدیو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:168
+#, fuzzy
+msgid "Copy and paste a valid Vimeo URL here."
+msgstr "آدرس ویدیو یوتیوب یا Vimeo را در اینجا گذاشته و دکمه افزودن ویدیو را کلیک کنید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:180
+msgid "This video slide is problematic. Please consider using YouTube, Vimeo or Custom slide type for videos. This slide will be removed in the future and will be replaced with a better one."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:191
+msgid "Video URL:"
+msgstr "آدرس ویدیو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:193
+msgid "Copy and paste a Youtube or Vimeo URL and hit the Get Video button."
+msgstr "آدرس ویدیو یوتیوب یا Vimeo را در اینجا گذاشته و دکمه افزودن ویدیو را کلیک کنید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:197
+msgid "Get Video"
+msgstr "افزودن ویدیو"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:202
+msgid "Embed Code"
+msgstr "کد ضمیمه شده"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:204
+msgid "You can place your embed code directly here. Or you can use the Get Video button to generate the embed code."
+msgstr "شما می توانید کد ویدیو را مستقیما اینجا بریزید یا با کلیک بر روی افزودن ویدیو آن را به ما بسپارید."
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:206
+msgid "<strong>Note:</strong> The Slide Properties and Tile effects are not supported for videos."
+msgstr "<strong>نکته:</strong> تنظیمات اسلاید و افکت کاشی بر روی ویدیو غیرفعال است"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slide-edit.php:208
+msgid "<strong>Note:</strong> Append &wmode=transparent to the embed code src attribute to make HTML elements appear on top of Flash."
+msgstr "<strong>نکته:</strong> افزودن &wmode=transparent برای چسباندن ویژگی  src برای ساختن المنت HTML در بالای آن"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:4
+msgid "Allow Wrap?"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:6
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:44
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:56
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:52
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:60
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:68
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:78
+msgid "Yes"
+msgstr "بله"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:7
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:45
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:55
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:53
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:61
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:69
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:77
+msgid "No"
+msgstr "خیر"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:10
+msgid "Determines if slider wraps to beginning slide if it reaches the end slide."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:15
+#, fuzzy
+msgid "Dynamic Height:"
+msgstr "ارتفاع"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:17
+msgid "Off"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:18
+msgid "On"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:21
+msgid "Adjust slider height depending on current slide."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:26
+#, fuzzy
+msgid "Delay:"
+msgstr "تاخیر کاشی"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:28
+msgid "Milliseconds to add or substract from the time before the first transition occurs."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:32
+msgid "Easing:"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:38
+msgid "Easing for transition animations."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:42
+msgid "Swipe:"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:48
+msgid "Enable swipe gesture support for touch devices."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:53
+msgid "Resize Images?"
+msgstr "تغییر اندازه عکس ها"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:58
+msgid "Yes - resize images to slideshow dimension. <br>No - use the original uploaded image."
+msgstr "بله: تغییر اندازه تصاویر به نسبت ابعاد اسلایدشو </br> خیر: استفاده از فایل اصلی آپلود شده"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:62
+#, fuzzy
+msgid "Resize Options:"
+msgstr "توضیح"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:70
+msgid "Force Resize"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:72
+msgid "Auto - Cyclone Slider decides the resize option."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:73
+msgid "Crop - Resize and remove excess parts."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:74
+msgid "Exact - Resize to exact dimensions."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:75
+msgid "Landscape - Resize to exact width."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-advanced-settings.php:76
+msgid "Portrait - Resize to exact height."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-codes.php:4
+msgid "Your Shortcode:"
+msgstr "کد کوتاه"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-codes.php:6
+msgid "Copy and paste this shortcode into your Post, Page or Custom Post editor."
+msgstr "با نمایش این کد کوتاه در نوشته ها، صفحات و یا ویرایشگرهای سفارشی، می توانید اسلایدر را به نمایش درآوردید."
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-codes.php:10
+msgid "Your PHP Code:"
+msgstr "کد پی اچ پی"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-codes.php:12
+msgid "Copy and paste this code when you need to display the slider in template files (header.php, front-page.php, etc.)."
+msgstr "با استفاده از این کد می توانید در فایل های اصلی پوسته خود اسلایدر را به نمایش درآورید."
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-id.php:5
+msgid "Change the Slideshow ID here."
+msgstr "آی دی اسلایدشو را از اینجا تغییر دهید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-preview.php:9
+msgid "Your preview will appear here."
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:4
+msgid "Transition Effects to Use:"
+msgstr "افکت حرکت"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:28
+msgid "Milliseconds. 0 to disable auto advance."
+msgstr "میلی ثانیه. 0 برای غیرفعال سازی حالت خودکار"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:38
+msgid "Width:"
+msgstr "عرض"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:40
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:46
+msgid "pixels."
+msgstr "پیکسل"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:44
+msgid "Height:"
+msgstr "ارتفاع"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:50
+msgid "Pause on Hover?"
+msgstr "توقف در زمان عبور ماوس"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:58
+msgid "Show Prev/Next Buttons?"
+msgstr "نمایش دکمه قبلی - بعدی"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:66
+msgid "Show Navigation?"
+msgstr "نمایش ناوبری"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:71
+msgid "The thumbnails or dots depending on template."
+msgstr "تصویر بندانگشتی یا نقطه یا نمایه، بسته به تنظیمات طرح انتخابی"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:75
+msgid "Random Slide Order?"
+msgstr "نمایش نامرتب اسلایدها"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slider-properties.php:80
+msgid "Randomize order of slides on every page visit."
+msgstr "نمایش تصادفی ترتیب اسلایدها در هر بار نمایش سایت"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/slides.php:8
+msgid "Add Slide"
+msgstr "افزودن اسلاید"
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/template-selection.php:4
+msgid "Name"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/template-selection.php:5
+msgid "Supported Slides"
+msgstr ""
+
+#: D:\webserver\htdocs\wp_dev\cyclone-slider-2\wp-content\plugins\cyclone-slider-pro/views/template-selection.php:6
+#, fuzzy
+msgid "Selected"
+msgstr "حذف"
+
+#~ msgid "Slideshow Settings"
+#~ msgstr "تنظیمات اسلایدشو"
+
+#~ msgid "Slideshow Templates"
+#~ msgstr "الگوهای اسلایشو"
+
+#~ msgid "Drag"
+#~ msgstr "کشیدن"
+
+#~ msgid "Toggle"
+#~ msgstr "Toggle"
+
+#~ msgid "Custom"
+#~ msgstr "سایر"
+
+#~ msgid ""
+#~ "Select a template to use. Check the template icons to see what slide type "
+#~ "it supports."
+#~ msgstr ""
+#~ "یک الگو را برای استفاده انتخاب کنید. با چک کردن آیکن های نمایش داده شده، "
+#~ "از ساپورت فرمت مورد نظر خود مطمئن شوید."
+
+#~ msgid ""
+#~ "Note: If you are looking for the Black, Blue or Myrtle, checkout this <a "
+#~ "href=\"%s\">post</a>."
+#~ msgstr ""
+#~ "نکته: اگر به دنبال استفاده از طرحی خاص مثل مشکی، آبی هستید، <a href=\"%s"
+#~ "\">اینجا</a> را چک کنید."
+
+#~ msgid "Get more templates.."
+#~ msgstr "دانلود مدل های بیشتر..."

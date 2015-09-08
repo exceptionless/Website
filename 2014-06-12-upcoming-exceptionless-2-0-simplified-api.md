@@ -1,0 +1,29 @@
+---
+id: 9027
+postTitle: 'More from the Upcoming Exceptionless 2.0: Simplified API'
+date: 2014-06-12T08:00:13-06:00
+author: Exceptionless
+layout: blog_post.liquid
+tags: ["posts", "api"]
+---
+<img loading="lazy" class="alignright wp-image-9032" src="http://exceptionless.com/assets/v2-api.png" alt="Exceptionless 2.0 API Simplified" width="150" height="144" data-id="9032" />Since [going open source](http://exceptionless.com/fork-us-exceptionless-goes-open-source/ "Fork Us! Exceptionless Goes Open Source"), we&#8217;ve wanted to simplify the API and make it easier to work with.
+
+We&#8217;re taking the time to do it now, and it&#8217;s going to be **awesome!**
+
+Exceptionless 2.0, [coming soon](http://exceptionless.com/exceptionless-2-in-the-making/ "Exceptionless 2.0 – In the Making"), will have a new, manageable API with tons of great documentation and examples. Take a look at the preliminary documentation at the below link, and make sure to give us any feedback you might have.<!--more-->
+
+## API Simplified
+
+  * <a href="https://api.exceptionless.io/docs/index" target="_blank">New REST API documentation and samples site.<br /> </a>Take a look and let us know what you think![<img loading="lazy" class="aligncenter size-medium wp-image-9028" style="margin-top: 20px;" src="http://exceptionless.com/assets/Screen-shot-2014-06-11-at-5.20.44-PM-300x225.png" alt="Exceptionless API Documentation" width="300" height="225" data-id="9028" srcset="https://exceptionless.com/assets/Screen-shot-2014-06-11-at-5.20.44-PM-300x225.png 300w, https://exceptionless.com/assets/Screen-shot-2014-06-11-at-5.20.44-PM-1024x770.png 1024w, https://exceptionless.com/assets/Screen-shot-2014-06-11-at-5.20.44-PM.png 1262w" sizes="(max-width: 300px) 100vw, 300px" />](http://exceptionless.com/assets/Screen-shot-2014-06-11-at-5.20.44-PM.png)<a style="color: #4183c4;" href="http://docs.exceptionless.apiary.io/"><br /> </a>
+  * Event POSTs take the raw data and use a plugin system to interpret that data and translate them into events. 
+      * This allows us to take literally any data and turn it into events in the system.
+      * The POST data is captured as a raw bytes and added immediately added to a queue for processing.
+      * Plugins can easily be created to support new data formats like system logs.
+  * This simplified API will make creating libraries for other platforms dead simple.
+  * The API lives in a separate project and can be hosted on high-performance systems like the new Helios IIS host.
+  * Makes it easy for us to migrate the UI to a SPA app.
+  * Now uses OAuth 2.0 in addition to supporting API tokens.
+  * Highly consistent REST API modeled after GitHub and Stripe.
+  * It&#8217;s so simple you can just use CURL as a client.
+
+We hope you&#8217;re as excited as we are to have this new, improved, more complete, and more usable documentation. Stay tuned for more details on the upcoming Exceptionless 2.0, and don&#8217;t forget to leave a comment letting us know what you think.

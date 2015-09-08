@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1></h1>
+
+<div class="videoWrapper" style="margin-bottom: 20px;">
+</div>
+<p>This week we’ve got some cool stuff in our weekly update! Along with the below, you can now follow along over on the new <a href="https://www.youtube.com/playlist?list=PLGHP7IVwFs_81fZTMgF7Dm5e0Ax4YvW_V">YouTube Exceptionless Weekly Updates playlist</a>, so make sure to check it out and <a href="https://www.youtube.com/user/exceptionless?sub_confirmation=1">subscribe</a>!<!--more--></p>
+<h2>Let’s Get Down To Business</h2>
+<h3>Updates to Exceptionless</h3>
+<ul>
+<li>
+<p>We fixed an issue where you couldn’t run Exceptionless on AWS because you couldn’t install plugins on their ElasticSearch service. <em><a href="https://github.com/exceptionless/Exceptionless/issues/280">#280</a></em></p>
+</li>
+<li>
+<p>The archival format has also been change from <code>projected\year\month\day</code> to <code>year\month\day\hour\projectid</code>. This allows you to quickly restore or download all events in a time period without enumerating all backed up projects.</p>
+</li>
+</ul>
+<h3>Foundatio Updates</h3>
+<ul>
+<li>In Foundatio, we fixed an issue where Redis Queues could deadlock, causing them to stop processing. This was being caused from topic messages locking the calling thread.</li>
+</ul>
+<h3>Updates to Foundatio Repositories</h3>
+<ul>
+<li>GetById and GetByIds now take an Id Type which allows us to specify routing information and much more. We have an implicit conversion that handles existing signatures.</li>
+</ul>
+<h2 style="text-align: center;">
+  <a href="https://youtu.be/osuMyj6eW98?list=PLGHP7IVwFs_81fZTMgF7Dm5e0Ax4YvW_V">WATCH NOW</a>
+</h2>
+<p style="text-align: center;">
+  <a href="/category/live-coding/">Watch more Live Code Demos</a>
+</p>
+
+</body>
+</html>

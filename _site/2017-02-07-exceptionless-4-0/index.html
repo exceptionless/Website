@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1>Exceptionless 4.0 is Here!</h1>
+
+<p><img loading="lazy" class="alignright size-full wp-image-15281" style="margin-left: 15px;" src="https://exceptionless.com/assets/exceptionless-4.png" alt="Exceptionless 4.0 Announcement" width="260" height="260" data-id="15281" srcset="https://exceptionless.com/assets/exceptionless-4.png 260w, https://exceptionless.com/assets/exceptionless-4-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That’s right folks, Exceptionless 4.0 is here and we’ve got the full low-down on all the improvements, upgrades, and enhancements in this week’s blog article, along with how to upgrade instructions for self hosters.</p>
+<p>The primary focus of version 4.0 was to add support for Elasticsearch 5. By migrating from Elasticsearch 1.7 to 5, we removed growing technical debt and benefited greatly in the process. Here is an overview of the benefits gained by migrating to Elasticsearch 5 in 4.0.0.<!--more--></p>
+<h2>Performance</h2>
+<p>Since we first migrated to Elasticsearch 1.x from MongoDB, we’ve learned a lot of hard lessons. With 4.0 and the upgrade to Elasticsearch 5, we took all those lessons and applied them to the new release and infrastructure setup. Here are some performance improvements and notes that came out of those implementations.</p>
+<ul>
+<li>
+<p>We’ve moved from monthly indexes to daily indexes. This change means that when you are filtering by the last 24 hours or last week, you are greatly reducing the amount of work Elasticsearch has to do to return the requested data.</p>
+</li>
+<li>
+<p>Because of this, the average use case will see between <strong>25% and 80% improvement to indexing</strong> throughput. This means that, with the same hardware, we can index the same documents much faster!</p>
+</li>
+<li>
+<p>We moved from Groovy scripts to Painless scripts, which are <strong>four times faster</strong>. By moving to Painless scripts, we also greatly simplified the burden of having to modify configuration files to enable scripting!</p>
+</li>
+<li>
+<p>Elasticsearch has added a lot of new data types since 1.7, and we are now taking advantage of them to <strong>reduce memory, storage and query costs.</strong> This means we can query the same data faster, using less memory doing it. We’ve also set up more sensible defaults to ensure we don’t index very long strings.</p>
+</li>
+<li>
+<p>We’ve also made several performance and reliability improvements to snapshots (backups).</p>
+</li>
+</ul>
+<h2>Self Hosting improvements</h2>
+<p>Our goal is to have everyone be able to setup and use Exceptionless in a matter of minutes. One of the areas that had hendered a lot of self hosters in the past was forgetting to update the elasticsearch.yml file, which is no longer an issue with the migration to Painless scripts. If you’re a self hoster, check out the</p>
+<ul>
+<li>
+<p>The move to using Painless scripts as part of bulk updates and ingest pipelines reduced the burden of having to modify configuration files to enable scripting! Long gone are the times where you would have to reset your setup because you missed a configuration step.</p>
+</li>
+<li>
+<p>We’ve also added various maintenance jobs that handle backups and restores automatically, so you don’t have to worry about losing your data!</p>
+</li>
+<li>
+<p><strong>Future upgrades should be seamless</strong> as Elasticsearch now handles reindexing out of the box! Once you have migrated your data to Elasticsearch 5, we think future major upgrades will just be handled by the Exceptionless app itself!</p>
+</li>
+<li>
+<p>You can now also use <a href="https://hub.docker.com/_/elasticsearch">Docker</a> or <a href="https://github.com/elastic/azure-marketplace">Azure arm templates</a> to quickly set up a cluster. We really like this direction and will continue moving down this path, hopefully getting to the point where you can click a single button and have an Exceptionless production instance running locally!</p>
+</li>
+</ul>
+<h2>Dashboards</h2>
+<p>With Exceptionless 4.0.0, we continued to focus on finishing up backend improvements to both our <a href="https://github.com/exceptionless/Foundatio.Repositories">repositories</a> and <a href="https://github.com/exceptionless/Foundatio.Parsers">parsers</a> that we made in the 3.5 releases. We feel that <strong>all the pieces are finally in place to allow us to do custom dashboards in the near future</strong>, something we talk about in our <a href="https://exceptionless.com/2017-exceptionless-feature-functionality-and-enhancement-roadmap/">2017 Roadmap blog post</a>.</p>
+<p><a href="https://github.com/exceptionless/Foundatio.Parsers">Foundatio.Parsers</a> now gives us the ability to define and validate custom aggregations using Lucene-style syntax. For example, lets say I want a date histogram that shows the min, max and average event value. I’d just need to pass <code>date:(date min:value max:value avg:value)</code> to the following endpoint: <a href="https://api.exceptionless.io/docs/index#!/Event/Event_GetCountAsync"><code>/api/v2/events/count?aggregations=date:(date min:value max:value avg:value)</code></a> to return aggregations across a time series!</p>
+<h2>Upgrading to 4.0.0</h2>
+<p>The only users that need to worry about upgrading anything for this new release are self hosters. If you are self hosting Exceptionless, please review the <a href="https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting">Self Hosting Documentation</a>, which contains information about upgrading your existing install.</p>
+<p>Also, please take a look at the <a href="https://github.com/exceptionless/Exceptionless/compare/v3.5.1...v4.0.0">change log</a> for a full list of the changes.</p>
+<h2>Always Improving</h2>
+<p>We’re always striving to improve the efficiency of Exceptionless and all of our projects. If you see any room for improvement or have any comments when using anything from us, please send us an in-app message, <a href="https://github.com/exceptionless/Exceptionless/issues">submit a GitHub issue</a> or <a href="https://exceptionless.com/contact/">contact us</a> on the website.</p>
+<h2>And Lastly, Thanks!</h2>
+<p>We’d like to say thank you to the community, project sponsors, and the Elasticsearch team for helping us ship 4.0.0. You guys rock!</p>
+<h3>Want to know what’s coming next?</h3>
+<p><a href="https://exceptionless.com/2017-exceptionless-feature-functionality-and-enhancement-roadmap/">Check out the 2017 Roadmap</a> and let us know your thoughts on our planned development.</p>
+<p> </p>
+
+</body>
+</html>

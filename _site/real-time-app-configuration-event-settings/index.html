@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+</head>
+<body>
+<h1></h1>
+
+<img loading="lazy" class="alignright size-full wp-image-14606" src="http://exceptionless.com/assets/exceptionless-project-settings-header.png" alt="exceptionless-project-settings-header" width="260" height="260" data-id="14606" srcset="https://exceptionless.com/assets/exceptionless-project-settings-header.png 260w, https://exceptionless.com/assets/exceptionless-project-settings-header-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />
+<h2>Bet You Didn’t Know Exceptionless Could Do This…</h2>
+<p>Have you ever needed to <strong>cut through the noise and just focus on one type of event</strong> <em>(in real time)</em>, such as only error logs, to track down a bug?</p>
+<p>Do you want to <strong>limit certain types of event reporting</strong> <em>(in real time)</em> to save your event quota and limit clutter?</p>
+<p>What about <strong>controlling your application’s settings or features</strong> <em><strong>in real time</strong></em> via Exceptionless, without having to update your files and deploy your app!?</p>
+<p>Well, with our client configuration settings, <strong>you can do all that, and more</strong>, in <strong>real time</strong>, on a per-project basis via your Exceptionless dashboard!<!--more--></p>
+<h2>How Could This Help Me?</h2>
+<p>We’ll talk details, below, but first lets look at a few scenarios where the above could be useful.</p>
+<h3>Scenario 1 – Way too many events!</h3>
+<p>Let’s say you’re on the small plan, and you’ve got a bunch of warning log events clogging your system that you know about and are working on, but they are pushing you over your plan limits.</p>
+<p>#BOOM – set a minimum log level of error, and Exceptionless won’t report those warnings anymore and they won’t count against your plan limits! This is a great way to get the most out of your Exceptionless plan.</p>
+<h3>Scenario 2 – This Authentication Issue is KILLING Me!</h3>
+<p>Maybe you’re having major issues with an authentication bug, but you’ve already set minimum log levels to only include errors. Well, now you also want to see the trace values for those events without opening the flood gates for every event by removing your minimum log level.</p>
+<p>#NOPROBLEM – Just add a key for authentication that just lets trace events through!</p>
+<h3>Scenario 3 – You Said Something About Controlling My App’s Features In Real Time?</h3>
+<p>Yup! Our client configurations are basically just a key value pair dictionary, but what makes them powerful and helps them control <strong>your</strong> application’s features is that they get updated in nearly real-time, meaning you can build settings, features, etc into your app that react to value changes, and if you change that configuration setting in Exceptionless, your app will react almost instantly!</p>
+<p>This can be super useful, especially if changing your app’s settings would normally require you to deploy to production. No need – just use Exceptionless!</p>
+<h2>Primer: How Project Settings Work</h2>
+<p>First, settings updates <strong>do not count towards plan limits</strong>. We say that because each time an event is submitted, we send a response header with the current configuration version to the client, and if a newer version is available, it is retrieved and the latest configuration is applied. That means that config changes are nearly <strong>real time.</strong></p>
+<p>When the client is idle, we also check for config changes, including five seconds after client startup if no events are submitted at startup, and every two minutes after the last event submission.</p>
+<p>If the version hasn’t changed, nothing is retrieved, <strong>limiting data transfer,</strong> and no user information is ever sent when checking.</p>
+<h3>Turning Off Automatic Updating</h3>
+<p>If you do not want the configuration settings to update when idle, you can turn off automatic updates. To do so, please follow the respective <a href="https://github.com/exceptionless/Exceptionless.Net/wiki/Client-Configuration-Values#updating-client-configuration-settings">.NET</a> or <a href="https://github.com/exceptionless/Exceptionless.JavaScript/wiki/Client-Configuration-Values#updating-client-configuration-settings">JavaScript/Node.js</a> documentation.</p>
+<h2>The Main Event: Client Configuration</h2>
+<p><a href="http://exceptionless.com/assets/client-configuration.png"><img loading="lazy" class="size-medium wp-image-14603 aligncenter" src="http://exceptionless.com/assets/client-configuration-300x143.png" alt="client-configuration" width="300" height="143" data-id="14603" srcset="https://exceptionless.com/assets/client-configuration-300x143.png 300w, https://exceptionless.com/assets/client-configuration.png 736w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Exceptionless client configurations are a dictionary of key value pairs that can be used to control the behavior of your app in real time by doing things like controlling data exclusions, protecting sensitive data, enabling and disable features, or disabling certain types of events (<code>error</code>, <code>usage</code>, <code>log</code>, <code>404</code>, or <code>session</code>).</p>
+<p>We also have some built in configuration key naming conventions (<code>@@EVENT_TYPE:SOURCE</code>) that the clients recognize for ignoring events based on event type and event source. Just replace <code>EVENT_TYPE</code> part with the event type (E.G., <code>error</code>, <code>log</code>…) and the <code>SOURCE</code> (E.G., exception type or log source) you’d like the setting to apply to. Next, specify key value of <code>false</code> to discard matching events client side. It’s worth noting that  <code>log</code> event types can also accept a log level value (E.G., <code>Trace</code>, <code>Debug</code>, <code>Info</code>, <code>Warn</code>, <code>Error</code>, or <code>Fatal</code>).</p>
+<p>For example, we can use it to turn off all error events of type, lets say, <code>System.ArgumentNullException</code>, by using the key <code>@@error:System.ArgumentNullException</code> and the value <code>false</code>.</p>
+<p>Or, we could turn off all error events entirely by using the <code>*</code> wildcard. So, the key would be <code>@@error:*</code> and the value would be <code>false</code> again.</p>
+<h3>Examples for the Above Scenarios</h3>
+<h4>Scenario 1</h4>
+<p>In scenario 1, above, we were trying to save our plan limits by limiting log events to only errors. So our Client Configuration key would simply be <code>@@log:*</code> with value <code>Error</code>.</p>
+<h4>Scenario 2</h4>
+<p>Here we already limited our log events to errors, but now we’re troubleshooting a specific issue with authentication (let’s say we’re using the AuthController API), so we want to look at the trace messages coming through. We can override any general minimum log levels that we’ve defined by setting a level for a specific log source. So, all we would do is add the <code>@@log:*AuthController</code> key with value <code>Trace</code>! Then, when the bug’s fixed, turn it off as needed.</p>
+<h4>Scenario 3</h4>
+<p>This is the cool one. Here you are wanting to, let’s say, pass a value for a setting in your app that turns something on or off without having to re-deploy everything. This is super easy to accomplish all we need to do is create a setting which will control our feature! Let’s assume we have have a feature flag to show a welcome screen. We will name this feature flag <code>enableWelcomeScreen</code> and create a new configuration setting respectively with a value of <code>true</code> (<em>You can change this value at any time</em>). These changes will be pushed based on the above “How Project Settings Work” section automatically, all we have to do is check the setting as shown below.</p>
+<h4>C#</h4>
+<pre class="brush: csharp; title: ; notranslate" title="">using Exceptionless;
+// Check the configuration settings for our enableWelcomeScreen feature flag with a default value of false.
+if (ExceptionlessClient.Default.Configuration.Settings.GetBoolean("enableWelcomeScreen", false)) {
+  // Show the welcome screen!
+}
+</pre>
+<h4>JavaScript</h4>
+<pre class="brush: jscript; title: ; notranslate" title="">// Check the configuration settings for our enableWelcomeScreen feature flag
+if (exceptionless.ExceptionlessClient.default.config.settings['enableWelcomeScreen'] === true) {
+  // Show the welcome screen!
+}
+</pre>
+<p>Pretty cool, right!</p>
+<p>For more details on client configuration, check out the <a href="https://github.com/exceptionless/Exceptionless/wiki/Project-Settings#client-configuration">Client Configuration Project Settings documentation</a>. Specific usage examples can be found on the <a href="https://github.com/exceptionless/Exceptionless.Net/wiki/Client-Configuration-Values">.NET</a> and <a href="https://github.com/exceptionless/Exceptionless.JavaScript/wiki/Client-Configuration-Values">JavaScript/Node.js</a> documentation pages respectively.</p>
+<h3></h3>
+<h2>Other Project Settings You Might Find Useful</h2>
+<h3>General</h3>
+<p><a href="http://exceptionless.com/assets/general.png"><img loading="lazy" class="aligncenter size-medium wp-image-14600" src="http://exceptionless.com/assets/general-300x132.png" alt="general" width="300" height="132" data-id="14600" srcset="https://exceptionless.com/assets/general-300x132.png 300w, https://exceptionless.com/assets/general.png 739w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>If you go to Admin &gt; Projects in Exceptionless, you can choose the project you would like to edit the settings for. Each project can have unique settings.</p>
+<p>The default tab is “General,” which simply houses the project name and attached organization. Nothing fancy here – pretty self explanatory.</p>
+<h3>API Keys</h3>
+<p><a href="http://exceptionless.com/assets/api-keys.png"><img loading="lazy" class="aligncenter size-medium wp-image-14601" src="http://exceptionless.com/assets/api-keys-300x127.png" alt="exceptionless api keys" width="300" height="127" data-id="14601" srcset="https://exceptionless.com/assets/api-keys-300x127.png 300w, https://exceptionless.com/assets/api-keys.png 738w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>This tab is where you can generate an API key for your project. Again, pretty self explanatory. Hit “New API Key” and one gets generated. For more details on API usage, check out the <a href="https://github.com/exceptionless/Exceptionless/wiki/API-Usage">API Usage documentation</a> on GitHub.</p>
+<h3>Settings</h3>
+<p><a href="http://exceptionless.com/assets/settings.png"><img loading="lazy" class="aligncenter size-medium wp-image-14602" src="http://exceptionless.com/assets/settings-300x281.png" alt="exceptionless project settings" width="300" height="281" data-id="14602" srcset="https://exceptionless.com/assets/settings-300x281.png 300w, https://exceptionless.com/assets/settings.png 734w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>This is where you can set data exclusions, customize error stacking, and build in some spam detection to your project.</p>
+<h4>Data Exclusions</h4>
+<p>There are several use cases where you might not want to send some data to your Exceptionless project. This field allows you to enter a comma delimited list of field names that will be removed and not transferred to Exceptionless. The perfect example here is a password field, or other personal and sensitive data.</p>
+<p>The <code>*</code> wildcard is supported in this field and can be used at the end (<code>password*</code>), beginning(<code>*password</code>), or on both sides (<code>*password*</code>) of the field name to further customize your data exclusion.</p>
+<h4>Error Stacking</h4>
+<p>Control over error stacking is another level of customization project settings allows. You can specify user namespaces or common methods to ignore. More details below.</p>
+<p><strong>User Namespaces</strong></p>
+<p>Here you can enter a comma delimited list of namespace names that own your application. With those in place, the only methods that will be considered stacking targets are ones inside those namespaces.</p>
+<p><strong>Common Methods</strong></p>
+<p>If your code has shared utility methods that may generate a bunch of errors, this could be useful. Enter a comma delimited list of common method names that shouldn’t be used as stacking targets, and they will be ignored.</p>
+<h4>Spam Detection</h4>
+<p>Spam is the worst. So, we added a “Spam Detection” list of common user agents that should be ignored, which you can add to as you see fit. This eliminates a lot of noise, and can be customized to help trim even more depending on your application.</p>
+<p>Along with the comma delimited list of user agents to ignore, you can also tick the box that says “Reduce noise by automatically hiding high volumes of events coming from a single client IP address.” This can ward off large numbers of events being submitted by a spammer or attack on your app.</p>
+<h2></h2>
+<h4>Integrations</h4>
+<p><a href="http://exceptionless.com/assets/integrations.png"><img loading="lazy" class="aligncenter size-medium wp-image-14604" src="http://exceptionless.com/assets/integrations-300x143.png" alt="exceptionless integrations" width="300" height="143" data-id="14604" srcset="https://exceptionless.com/assets/integrations-300x143.png 300w, https://exceptionless.com/assets/integrations.png 734w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Integrations with tools like Slack, Hipchat, JIRA, Basecamp, and others are very popular and can add a level of automated notifications, etc, to your workflow. So, on the integrations tab of your project’s configuration you can create web hooks to integrate with your service or others as mentioned. Each web hook has a URL that it can call, and options for when it should be called. When a selected event occurs, a POST request is submitted with either event or stack data in JSON format. For more details and sample data, visit the <a href="https://github.com/exceptionless/Exceptionless/wiki/Integrations">Exceptionless integrations documentation</a>.</p>
+<h2>That About Covers It!</h2>
+<p>We hope this will help you make the most out of your Exceptionless projects, allowing you to save some event submissions, get that customization you were looking for, etc.</p>
+<p>Please let us know if you have any questions, comments, concerns, bugs, or anything else we can help with!</p>
+
+</body>
+</html>
