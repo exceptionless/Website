@@ -162,7 +162,7 @@ textarea {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
- 
+
   thead {
     display: table-header-group;
   }
@@ -4355,7 +4355,7 @@ input[type="submit"].btn.btn-mini {
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   }
-  
+
   @media (max-width: 360px) {
 	.navbar .btn-navbar {
 		padding:10px;
@@ -5923,7 +5923,7 @@ ul.icons li div:first-child {
 	ul.icons {
 		margin-left:50px;
 	}
-	
+
 	ul.icons li {
 		width:49%;
 	}
@@ -5933,17 +5933,17 @@ ul.icons li div:first-child {
 	ul.icons {
 		margin-left:25px;
 	}
-	
+
 	ul.icons li {
 		float:none;
 		width:100%;
 		clear:both;
 	}
-	
+
 	.feature {
 		float:none;
 		margin-left:48px;
-	}	
+	}
 }
 
 .howDoesWork {
@@ -5968,7 +5968,7 @@ ul.icons li div:first-child {
 }
 
 .howDoesWorkSection {
-	float:left; 
+	float:left;
 	width:30%;
 }
 
@@ -5984,7 +5984,7 @@ ul.icons li div:first-child {
 @media(min-width:980px)and (max-width:1199px) {
 
 	.howDoesWorkSection {
-		float:left; 
+		float:left;
 		width:30%;
 	}
 
@@ -6002,7 +6002,7 @@ ul.icons li div:first-child {
 @media(max-width:767px) {
 
 .howDoesWorkSection {
-	float:none; 
+	float:none;
 	width:100%;
 	margin-bottom:20px;
 }
@@ -6013,15 +6013,15 @@ ul.icons li div:first-child {
 
 }
 
-.tweet {width:31%; margin-right:3%;float:left;} 
+.tweet {width:31%; margin-right:3%;float:left;}
 
 .tweet:last-child {
 	margin-right:0;
 }
 
 @media(max-width:767px) {
-	.tweet, .tweet:last-child {margin:0 auto; width:74%; float:none;} 
-	
+	.tweet, .tweet:last-child {margin:0 auto; width:74%; float:none;}
+
 }
 
 html,
@@ -6132,7 +6132,7 @@ figure.thumbnail {
 	.signup {
 		width: 410px;
 	}
-	
+
 	.signup a {
 		padding: 10px 40px;
 		font-size: 18px;
@@ -6146,7 +6146,7 @@ figure.thumbnail {
 		width: 90%;
 		text-align: center;
 	}
-	
+
 	.signup a {
 		width: auto;
 		line-height: 26px;
@@ -6213,11 +6213,11 @@ h4 {
 	.cycloneslider-slides {
 		width: 744px;
 	}
-	
+
 	.cycloneslider-template-standard .cycloneslider-slide img {
 		margin-top: 30px;
 	}
-	
+
 	.cycloneslider-slide h2 {
 		margin-top: 24px;
 	}
@@ -6227,19 +6227,19 @@ h4 {
 	.cycloneslider-slides {
 		width: auto;
 	}
-	
+
 	.cycloneslider-template-standard {
 		padding: 0 20px;
 	}
-	
+
 	.span6 {
 		width: 100%;
 	}
-	
+
 	.cycloneslider-template-standard .cycloneslider-slide img {
 		margin-top: 30px;
 	}
-	
+
 	.cycloneslider-slide h2 {
 		margin-top: 24px;
 	}
@@ -6254,7 +6254,7 @@ h4 {
 .cycloneslider-prev, .cycloneslider-next {
 	cursor: pointer;
 	position: absolute;
-	top: 130px;
+	top: 250px;
 	height: 36px;
 	width: 30px;
 	z-index: 160;
@@ -6417,7 +6417,7 @@ figure {
 		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
 		margin-top: 1px;
 	}
-	
+
 	li.menu-sign-up a {
 		background-color: #6B991C;
 		background-image: -moz-linear-gradient(top,#73a818,#4c7701);
@@ -6436,7 +6436,7 @@ figure {
 		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
 		margin-top: 2px;
 	}
-	
+
 	li.menu-log-in a, li.menu-sign-up a {
 		padding: 15px 20px !important;
 		border-radius: 6px;
@@ -6446,11 +6446,11 @@ figure {
 		position: relative;
 		color: #FFF !important;
 	}
-	
+
 	li.menu-log-in a:hover {
 		border-bottom: 1px solid #000 !important;
 	}
-	
+
 	li.menu-sign-up a:hover {
 		border-bottom: none !important;
 	}
