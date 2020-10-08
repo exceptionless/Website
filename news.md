@@ -2,6 +2,6 @@
 layout: news.liquid
 postTitle: News
 pagination:
-  data: blog.articles
+  data: collections.posts
   size: 2
 ---
