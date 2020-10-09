@@ -3,5 +3,6 @@ layout: news.liquid
 postTitle: News
 pagination:
   data: collections.posts
-  size: 2
+  size: 10
+  reverse: true
 ---
