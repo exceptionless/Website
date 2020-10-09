@@ -1,0 +1,3 @@
+; Slide Types Supported
+slide_type[] = "image"
+slide_type[] = "custom"

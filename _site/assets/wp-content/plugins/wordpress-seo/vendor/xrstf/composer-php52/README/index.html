@@ -1,0 +1,23 @@
+<h1>PHP 5.2 Autoloading for Composer</h1>
+<p>This package provides an easy way to get a PHP 5.2 compatible autoloader out of Composer. The generated autoloader is fully compatible to the original and is written into separate files, each ending with <code>_52.php</code>.</p>
+<h2>Usage</h2>
+<p>In your project's <code>composer.json</code>, add the following lines:</p>
+<pre><code>:::json
+{
+    &quot;require&quot;: {
+        &quot;xrstf/composer-php52&quot;: &quot;1.*&quot;
+    },
+    &quot;scripts&quot;: {
+        &quot;post-install-cmd&quot;: [
+            &quot;xrstf\\Composer52\\Generator::onPostInstallCmd&quot;
+        ],
+        &quot;post-update-cmd&quot;: [
+            &quot;xrstf\\Composer52\\Generator::onPostInstallCmd&quot;
+        ],
+        &quot;post-autoload-dump&quot;: [
+            &quot;xrstf\\Composer52\\Generator::onPostInstallCmd&quot;
+        ]
+    }
+}
+</code></pre>
+<p>After the next update/install, you will have a <code>vendor/autoload_52.php</code> file, that you can simply include and use in PHP 5.2 projects.</p>

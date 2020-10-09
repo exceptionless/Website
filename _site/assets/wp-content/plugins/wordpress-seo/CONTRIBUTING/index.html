@@ -1,0 +1,54 @@
+<p>Thanks for reading our contribution guidelines! What do you want to do:</p>
+<ul>
+<li><a href="#filing-issue">File a bug / an issue</a></li>
+<li><a href="#security">Security issues</a></li>
+<li><a href="#contribute">Contribute to Yoast SEO</a></li>
+</ul>
+<p><a name="filing-issue"></a>
+#Filing issues</p>
+<p><strong>Please Note:</strong> GitHub is for bug reports and code contributions only - if you have a support question or a request for a customisation don't post here, go to our <a href="http://wordpress.org/support/plugin/wordpress-seo">Support Forum</a> instead.</p>
+<p>For localization, please refer to <a href="http://translate.yoast.com/projects/wordpress-seo">translate.yoast.com</a>, though bugs with strings that can't be translated are welcome here.</p>
+<h2>How to write a useful bug report</h2>
+<p>If you think you have found a bug (we acknowledge that that's a possibility), please make sure you're using the latest version of the plugin. If possible check out the latest version from GitHub and see if the bug still exists there.</p>
+<p>A useful bug report explains:</p>
+<ol>
+<li>What you were trying to achieve.</li>
+<li>What you were expecting to happen.</li>
+<li>What actually happened, illustrated with screenshots if possible.</li>
+</ol>
+<p>Your bug report should also contain your WordPress version and if there are any errors, the <em>exact</em> error text, including line numbers.</p>
+<h3>Blank / white screen</h3>
+<p>If you're getting a blank screen and you report just that, we can do <em>absolutely</em> nothing. By default, your WordPress install suppresses all errors, to prevent information leaks, but we need those errors to be able to help you. If you apply the small piece of code in <a href="https://yoast.com/wordpress-debug/">this post on WP_DEBUG</a> to your site, you should be able to open the URL that gave you a white screen, append <code>?debug=debug</code> to the URL and get the actual error.</p>
+<p>That error will help us, without that error, we're completely in the dark about your white page problem...</p>
+<h3>Interface errors</h3>
+<p>If you're reporting a bug about specific interface elements not working as expected, there's probably an error showing in your browsers JavaScript console. Please open your browsers console and copy the exact error showing there, or make a screenshot. If you don't know how to open your browsers console, here is info for <a href="https://developer.chrome.com/devtools/docs/console">Chrome</a> and <a href="https://developer.mozilla.org/en/docs/Tools/Web_Console">Firefox</a>. For IE, some Googling will help but it changes with every version.</p>
+<p><a name="security"></a>
+#Security issues
+Please do <em>not</em> report security issues here, but email them to security at yoast dot com so we can deal with them securely and quickly.</p>
+<p><a name="contribute"></a>
+#Contribute to Yoast SEO</p>
+<p>Community made patches, localisations, bug reports and contributions are very welcome and help make Yoast SEO remains the #1 SEO plugin for WordPress.</p>
+<p>When contributing please ensure you follow the guidelines below so that we can keep on top of things.</p>
+<h2>Getting Started</h2>
+<p>If there is no ticket for your issue, submit it first, following the above guidelines.</p>
+<h2>Making Changes</h2>
+<ul>
+<li>Fork the repository on GitHub (make sure to use the trunk branch, not master).</li>
+<li>Make the changes to your forked repository.
+<ul>
+<li>Ensure you stick to the <a href="http://make.wordpress.org/core/handbook/coding-standards/">WordPress Coding Standards</a> and have properly documented any new functions, actions and filters following the <a href="http://make.wordpress.org/core/handbook/inline-documentation-standards/php-documentation-standards/">documentation standards</a>.</li>
+</ul>
+</li>
+<li>When committing, reference your issue (if present) and include a note about the fix.</li>
+<li>Push the changes to your fork and submit a pull request to the 'trunk' branch of the Yoast SEO repository.</li>
+</ul>
+<p>At this point you're waiting on us to merge your pull request. We'll review all pull requests, and make suggestions and changes if necessary.</p>
+<p><a name="patch-welcome"></a></p>
+<h2>&quot;Patch welcome&quot; issues</h2>
+<p>Some issues are labeled &quot;Patch-welcome&quot;. This means we see the value in the particular enhancement being suggested but have decided for now not to prioritize it. If you however decide to write a patch for it we'll gladly include it after some code review.</p>
+<h1>Additional Resources</h1>
+<ul>
+<li><a href="https://yoast.com/wordpress/plugins/seo/api/">Yoast SEO API</a></li>
+<li><a href="http://help.github.com/">General GitHub Documentation</a></li>
+<li><a href="http://help.github.com/send-pull-requests/">GitHub Pull Request documentation</a></li>
+</ul>
