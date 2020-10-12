@@ -266,14 +266,24 @@
                 <div style="margin-top: 10px; margin-bottom: 10px;">
                     <span>
                         
-                    </span><br />
-                    <span>
-                        
-                    </span>
+                    </span><br />  
+                    <hr />                  
                 </div>
-                <div style="margin-bottom: 10px;">
-                    <a class="btn" href="/test-post/">Read Now</a>
-                </div>
+                <p>Hi this is a simple test. Here are some formatting tests:</p>
+<h1>h1</h1>
+<h2>h2</h2>
+<h3>h3</h3>
+<blockquote>
+<p>Block quote</p>
+</blockquote>
+<p>List:</p>
+<ul>
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ul>
+<p><a href="https://google.com">link</a>;</p>
+
             </article>
             
             <article class="post type-post status-publish format-standard">
@@ -281,14 +291,53 @@
                 <div style="margin-top: 10px; margin-bottom: 10px;">
                     <span>
                         Justin Hunter
-                    </span><br />
-                    <span>
-                        Thu Sep 24 2020 09:54:40 GMT-0500 (Central Daylight Time)
-                    </span>
+                    </span><br />  
+                    <hr />                  
                 </div>
-                <div style="margin-bottom: 10px;">
-                    <a class="btn" href="/2020-09-24-why-we-upgraded-our-production-application-to-net-5-0/">Read Now</a>
-                </div>
+                <p>For anyone who has built an application, you’ve probably built it on some library or framework that changes over time. To keep up, you have to upgrade your application. However, there are varying schools of thought around when you should upgrade. At <a href="https://exceptionless/">Exceptionless</a>, we like to be on the bleeding edge. As an open-source company, we feel a responsibility to the community to know and understand the open-source tools we use. As such, we have already upgraded Exceptionless to use .NET 5.0.</p>
+<p>To give you a little background, .NET 5.0 was <a href="https://devblogs.microsoft.com/dotnet/introducing-net-5/">introduced in May of 2019</a>. The announcement was a big one as Microsoft chose to drop the .NET Core distinction. Going forward, we will just see cross-platform support in the form of “.NET X.X”. The first release candidate for .NET 5.0 was <a href="https://devblogs.microsoft.com/dotnet/announcing-net-5-0-rc-1/">announced September 13, 2020</a>. We chose to upgrade and begin using .NET 5.0 immediately. That decision was driven by Microsoft’s commitment to supporting production usage of the rc1 release. And as it turned out, the upgrade process was not too painful at all.</p>
+<p>All in, the upgrade took about one hour and was a very small commit. You can actually <a href="https://github.com/exceptionless/Exceptionless/commit/874f08e70a3ded2762f8d34df0378de38d7a3193">see the commit here</a>. This is really a testament to the foundation we’ve built here combined with the long-running foundation Microsoft has built with the .NET framework. Exceptionless is no small application and yet we were able to upgrade to an early release candidate in order to capitalize on new capabilities. To highlight the scale of Exceptionless and the relatively minor impact the upgrade process had, let’s take a look at some of our numbers.</p>
+<ul>
+<li>1.4 TB Elasticsearch Cluster</li>
+<li>173M Elasticsearch Documents</li>
+<li>384M Redis Operations/Day</li>
+<li>122M HTTP Requests/Day</li>
+<li>2,476 GitHub Stars</li>
+<li>568 GitHub Forks</li>
+</ul>
+<p>There are always multiple schools of thought around running pre-release code on production applications, but for us, the decision was a no-brainer. The top motivators were performance improvements, availability of new C# features, and Docker improvements for our self-hosted solution.</p>
+<h2>Performance Improvements</h2>
+<p>We are a developer tool, and as such, performance is important. .NET 5.0 allows us to leverage the performance boosts associated with the upgrade and pass that along to our customers and the community around us. We compared our memory and performance from .NET Core 3.1 to the .NET 5.0 rc-1 release and saw enough gains to help support our decision to move forward with rolling this out to production.</p>
+<p>The .NET team’s focus on pushing the boundaries of garbage collection was an important factor for us. GC is such a critical component to performance, and it impacts almost everything within the framework. We were excited to see the <a href="https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/#gc">focus Microsoft put on continuing to improve performance</a> in this area and felt the gains were enough to really tilt us towards our production release of Exceptionless using .NET 5.0.</p>
+<p>As a quick, visual example, of other improvements, here’s a table Ben Adams tweeted that gives us glimpse into the performance gains of .NET 5.0 over .NET 3.1: <figure class="wp-block-embed-twitter wp-block-embed is-type-rich is-provider-twitter"></p>
+<div class="wp-block-embed__wrapper">
+  <div class="entry-content-asset">
+    <blockquote class="twitter-tweet" data-width="550" data-dnt="true">
+      <p lang="en" dir="ltr">
+        On <a href="https://twitter.com/TFBenchmarks?ref_src=twsrc%5Etfw">@TFBenchmarks</a> upgrading to .NET 5.0 (rc1)<br />(netcoreapp3.1 => net5.0)<br /><br />Middleware is now faster than Platform was, and Platform is now much faster <a href="https://twitter.com/hashtag/aspnetcore?src=hash&ref_src=twsrc%5Etfw">#aspnetcore</a> <a href="https://twitter.com/hashtag/dotnet?src=hash&ref_src=twsrc%5Etfw">#dotnet</a> <a href="https://t.co/93mmYhBYjw">pic.twitter.com/93mmYhBYjw</a>
+      </p>&mdash; Ben Adams #BLM (@ben_a_adams) 
+<pre><code>  &lt;a href=&quot;https://twitter.com/ben_a_adams/status/1306817978927902720?ref_src=twsrc%5Etfw&quot;&gt;September 18, 2020&lt;/a&gt;
+&lt;/blockquote&gt;
+</code></pre>
+  </div>
+</div></figure> 
+<h2>New C# Features</h2>
+<p>With the release of C# 9, we, once again, get significant improvements. Anytime a programming language releases new features, it’s important to ask yourself whether those features are necessary for your application. In the case of C# 9, there are multiple features we believe will help improve the code legibility, overall codebase size, and ultimately performance. It always comes back to performance!</p>
+<p>Pattern matching in C# 9 is a feature we are particularly excited about. If you’re interested in a deep dive into the improvements here, <a href="https://anthonygiretti.com/2020/06/23/introducing-c-9-improved-pattern-matching/">Anthony Giretti has a great post</a> highlighting the new functionality. For Exceptionless, pattern matching represents a better way for us to execute logical operations we already support. In doing so, we can reduce code complexity, improve performance, and deliver a better experience.</p>
+<p>Records are an exciting new feature in C# 9 as well. Data immutability is important, once again, for—you guessed it—performance. The way <a href="https://daveabrock.com/2020/07/06/c-sharp-9-deep-dive-records">Dave Brock puts it</a> on his blog is apt:</p>
+<blockquote class="wp-block-quote">
+  <p>
+    Immutable types reduce risk, are safer, and help to prevent a lot of nasty bugs that occur when you update your object.
+  </p>
+</blockquote>
+<p>Data records give us immutability in the form of a dedicated struct. Rather than extending the functionality of C#’s existing structs, records give us the ability to reach for a data-specific type that offers built-in immutability.</p>
+<h2>Docker Improvements</h2>
+<p>We are proud of our open-source roots. We want to make self-hosting Exceptionless as easy as possible, and Docker has made this a reality. Our Docker image is the fastest and easiest way to get started with self-hosting and .NET 5.0 only improves the Docker experience.</p>
+<p>.NET 5.0 enables better resource compaction which, in turn, reduces the cost associated with Docker images. This is important to the bottom line, but .NET 5.0’s improvements go beyond dollar-savings with Docker. The new features also improve memory constraints which—say it with me now—improve performance.</p>
+<p>One additional benefit of the .NET 5.0 rc-1 release candidate is how our Docker image now works better with Kubernetes resource constraints. We’re pretty big fans of Docker and Kubernetes, so anything to improve the experience around both is a win in our eyes.</p>
+<h2>Conclusion</h2>
+<p>We took an early release candidate from a massive framework and rolled it out to production almost immediately after it was announced. Are we crazy? We don’t think so, but you decide.</p>
+
             </article>
             
             <article class="post type-post status-publish format-standard">
@@ -296,14 +345,61 @@
                 <div style="margin-top: 10px; margin-bottom: 10px;">
                     <span>
                         Justin Hunter
-                    </span><br />
-                    <span>
-                        Wed Sep 23 2020 08:02:36 GMT-0500 (Central Daylight Time)
-                    </span>
+                    </span><br />  
+                    <hr />                  
                 </div>
-                <div style="margin-bottom: 10px;">
-                    <a class="btn" href="/2020-09-23-using-an-error-monitoring-service-to-track-user-experience/">Read Now</a>
-                </div>
+                <p>In development, we tend to think of errors as things that are thrown when our code does not execute properly. Errors can be caught and handled or they can be missed and result in uncaught exceptions. But how do we classify errors that are not directly caused by the code we write? How do we identify and address errors that are caused by the design decisions we made (or didn’t make)?</p>
+<p>You may already be using an error monitoring service, and if you are, you could continue using that and reach for yet another tool to help you with your user experience woes. Or, rather than adding another product to your endless list of tools that keep your application running, you can use the error monitoring service to both monitor for traditional errors and user experience problems.</p>
+<p>Let’s take a look at how we can do this. There are plenty of logging services out there, and most of them do the same thing. However, we’re going to take a look at <a href="https://exceptionless.com/">Exceptionless</a>. Exceptionless is an especially attractive choice for three reasons:</p>
+<ol>
+<li>Fair pricing on their hosted version</li>
+<li>It’s <a href="https://github.com/exceptionless/Exceptionless">open-source</a> and can be totally self-hosted</li>
+<li>The API allows us to do exactly what I’m proposing in this article.</li>
+</ol>
+<p>While self-hosting may be an attractive option (and one that I will surely write about ina future post), we’re going to sign up for a free account using Exceptionless’s hosted platform. To do so, go to <a href="https://exceptionless.com/">https://exceptionless.com</a> and click the Sign Up button in the top-right:<figure class="wp-block-image"></p>
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--vr57dYkT--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/q55zt3ytzydt1ahqiyx8.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--vr57dYkT--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/q55zt3ytzydt1ahqiyx8.png" alt="Exceptionless home page"></a></figure></p>
+<p>Once you sign up, you’ll be prompted to name your team and project. You’ll also need to choose the language in which your project is written. I’m choosing NodeJS, but you can choose whatever language applies to you because I’ll be referencing cURL commands to keep our solution as general-purpose and adaptable as possible. Once you’ve created a project, you will be provided an API Key. Hold on to that, we’ll need to use it as a bearer token later.</p>
+<p>*Pro-tip: To convert a cURL command to the language of your choice, use <a href="https://www.postman.com/">Postman</a> and import the raw command. You can then choose the code option and see how to run the API call in the language you prefer.</p>
+<p>You’ll want to follow the documentation to set up your codebase to send errors appropriately to Exceptionless, but we will also need to think about how we are going to handle these UX errors.</p>
+<p>To do this, let’s first think about some of the problems a user may face on a site and how we can handle them. A simple example that I can think of is what I’m going to call “Happy Path Slippage.” We build applications with a happy path in mind. It’s how we test, naturally. We have to force ourselves to test outside of the happy path, so it’s also important to monitor how often our users deviate from the happy path.</p>
+<p>Let’s say we have a simple e-commerce application. The happy path, in this case, would be:</p>
+<ol>
+<li>User signs up</li>
+<li>User searches for a product</li>
+<li>User adds product to shopping cart</li>
+<li>User checks out</li>
+</ol>
+<p>That is the ideal flow, but we know users won’t always follow that flow. However, what we don’t know is how often users will deviate and if they do deviate. To track this with Exceptionless, we are going to use simple GET requests with a query parameter to build a funnel analysis. We will want to track product searches, shopping cart adds, and checkouts.</p>
+<p>Let’s start with the setup for product searches. Remember, we’re going to use a GET request. You can read more of the Exceptionless documentation <a href="https://api.exceptionless.io/docs/index.html">here</a>, but the request is pretty simple. We will want to pass in an indicator that the event is a <code>productSearch</code> and what the product is. We can do that like this:</p>
+<pre class="brush: plain; title: ; notranslate" title="">curl --location --request GET 'https://api.exceptionless.io/api/v2/events/submit/usage?source=productSearch&amp;message=YOUR_PRODUCT' \
+--header 'Authorization: Bearer YOUR_API_KEY'
+
+</pre>
+<p>Feel free to add whatever product name you’d like in the query. Just replace <code>YOUR_PRODUCT</code> with the name of the product you’d like to track. You can run the cURL command from the command line or you can use it to build a real request you would use in your app. If we run that then take a look at our dashboard in Exceptionless, we can start to make use of the data.</p>
+<p>The Exceptionless dashboard takes you to a handy chart of most frequent exceptions/errors. However, we’re tracking User Experience issues tied to features in our application, so those events won’t appear on the Exceptions dashboard. Instead, if you click the Features Usage link on the left navigation, then click Events, you should see your new <code>productSearch</code> event.<figure class="wp-block-image"></p>
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--MsGu3Dvt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/xl6duukcca6gaudnk5sm.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--MsGu3Dvt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/xl6duukcca6gaudnk5sm.png" alt="Features Usage Dashboard Example"></a></figure></p>
+<p>Pretty cool! This alone starts to become useful. We can cut out a separate analytics tracking tool by using our error monitoring service (Exceptionless in this case) to track events outside the normal error reporting. But we can take it a step further.</p>
+<p>Remember, we want to track the funnel from search to checkout. So, let’s send through another event representing a <code>cartAdd</code> when a user adds a product to their shopping cart. Here we are adding an extra parameter to also track how many of the product is added to the cart.</p>
+<pre class="brush: plain; title: ; notranslate" title="">curl --location --request GET 'https://api.exceptionless.io/api/v2/events/submit/usage?source=cartAdd&amp;value=QUANTITY_ADDED&amp;message=YOUR_PRODUCT' \
+--header 'Authorization: Bearer YOUR_API_KEY'
+
+</pre>
+<p>Exceptionless has real-time monitoring, so if you flip back to your dashboard after running the above command, you should already see the event in the list:<figure class="wp-block-image"></p>
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--HnB_sGzg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/4yysom04m8f8doqktrip.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--HnB_sGzg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/4yysom04m8f8doqktrip.png" alt="Cart Add Example"></a></figure></p>
+<p>I think you’re already seeing how easy this is, but let’s round this out by adding a <code>checkout</code> event to track.</p>
+<pre class="brush: plain; title: ; notranslate" title="">curl --location --request GET 'https://api.exceptionless.io/api/v2/events/submit/usage?source=checkout&amp;message=YOUR_PRODUCT' \
+--header 'Authorization: Bearer YOUR_API_KEY'
+
+</pre>
+<p>Again, your Exceptionless dashboard should update in real-time. This is starting to shape up! Now, let’s dive into the events because right now we have the start of a nice funnel analysis, but we don’t know yet what products were searched for, added to the cart, and checked out. The cool thing here is we can click into an event like <code>productSearch</code> for example and get detailed info.</p>
+<p>Go ahead and try it. Click on the event and you’ll be taken to a dedicated Event Occurrence page.<figure class="wp-block-image"></p>
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--DZcBh5pq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/kinzwx1ee3lnmrdhd8ql.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--DZcBh5pq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/kinzwx1ee3lnmrdhd8ql.png" alt="Event Occurrence Example"></a></figure></p>
+<p>This is useful information. Combined with our user experience funnel analysis, we can start to make product decisions. Just for fun, I want to show you what this could look like when leveraging the Most Frequent view.</p>
+<p>Again, we should click on the Features Usage link on the side navigation. This time, we’ll choose the Most Frequent option. I’ve created a bunch of events so that we can see how useful the Most Frequent view can be.<figure class="wp-block-image"></p>
+<p><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--UI_sv1sV--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/tx77krsijxyz9zudp25c.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--UI_sv1sV--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/tx77krsijxyz9zudp25c.png" alt="Funnel Example"></a></figure></p>
+<p>Now we have the makings of a useful way of tracking the user experience right from within our error reporting tool. The benefit here is that we can use a single tool to help us with monitoring, bugs, event tracking, and user experience. <a href="https://exceptionless.com/">Exceptionless</a> makes this incredibly easy, is self-hostable, is open source, and if you choose the hosted option is very affordable.</p>
+<p>Go forth and track errors AND user experience all in one place.</p>
+
             </article>
             
             <article class="post type-post status-publish format-standard">
@@ -311,14 +407,36 @@
                 <div style="margin-top: 10px; margin-bottom: 10px;">
                     <span>
                         Exceptionless
-                    </span><br />
-                    <span>
-                        Thu Aug 29 2019 16:02:09 GMT-0500 (Central Daylight Time)
-                    </span>
+                    </span><br />  
+                    <hr />                  
                 </div>
-                <div style="margin-bottom: 10px;">
-                    <a class="btn" href="/2019-08-29-exceptionless-5-0-release-asp-net-core-localization-support-and-more/">Read Now</a>
-                </div>
+                <img loading="lazy" class="aligncenter size-full wp-image-16747" src="https://exceptionless.com/assets/exceptionless-5.0-localization.png" alt="Exceptionless 5.0 Localization" width="737" height="634" data-id="16747" srcset="https://exceptionless.com/assets/exceptionless-5.0-localization.png 737w, https://exceptionless.com/assets/exceptionless-5.0-localization-300x258.png 300w" sizes="(max-width: 737px) 100vw, 737px" />
+<p><a href="https://github.com/exceptionless/Exceptionless">Exceptionless</a> 5.0 is here and we wanted to make a quick blog post highlighting the new features, bug fixes, and of course upgrading.</p>
+<p>In this release, we focused primarily on migrating the application to ASP.NET Core, localization, along with ongoing performance enhancements and bug fixes.</p>
+<p>More details, below:<!--more--></p>
+<h2>Exceptionless 5.0 New Features</h2>
+<ol>
+<li>Exceptionless now runs on ASP.NET Core! This brings in many performance advantages as well as cross platform support.</li>
+<li>Docker/Kubernetes based hosting is now the default hosting model. This will bring seamless and quick upgrades while reducing the amount of environmental related errors.</li>
+<li>Added Chinese localization support. Thanks <a href="https://github.com/Varorbc">@Varorbc</a>, <a href="https://github.com/edwardmeng">@edwardmeng</a> for that contribution!</li>
+<li>Added support for using various different cloud hosted services (e.g., Aliyun, Minio, S3) and metric providers (e.g., InfluxDB). Thanks <a href="https://github.com/edwardmeng">@edwardmeng</a> for that contribution!</li>
+<li>When viewing 404 event types, you will now see a grid column for IP addresses. This will allow you to quickly identify any bots or security scans that might be happening to your applications.</li>
+<li>In addition to client side plugins that will remove sensitive user data, we’ve added server side code as well to remove any missed sensitive user data.</li>
+<li>Added the ability to delete your account on the manage account page.</li>
+</ol>
+<h2>Version 5.0 Bug Fixes</h2>
+<ul>
+<li>Various user interface usability issues have been fixed in this release. Please view the UI release notes (<a href="https://github.com/exceptionless/Exceptionless.UI/releases/tag/v2.8.0">v2.8.0</a> for more info).</li>
+<li>Fixed a bug where notifications and web hooks would be sent for fixed events.</li>
+<li>Updated <a href="https://github.com/FoundatioFx/Foundatio">Foundatio</a> which uses a task queue to resolve dead locking and thread exhaustion.</li>
+</ul>
+<h2>Upgrading to Exceptionless 5.0</h2>
+<p>If you are using our hosted service, you do not need to upgrade anything on your end. If you are self hosting Exceptionless and upgrading from version 4 or 5, a little work is needed to get up and running using the new docker images and configuration. See our <a href="https://github.com/exceptionless/Exceptionless/wiki/Upgrading">upgrade guide</a> for more information.</p>
+<p>Check out the <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v5.0.0">official release notes</a> here, or view the <a href="https://github.com/exceptionless/Exceptionless/compare/v4.1.0...v5.0.0">full changelog</a> if you are interested in a complete list of changes.</p>
+<h2>How are we doing?</h2>
+<p>As always, we want to know what you think! If you have questions, concerns, or any feedback, please <a href="https://github.com/exceptionless/Exceptionless/issues/new">submit an issue over on the GitHub repo</a>.</p>
+<p> </p>
+
             </article>
             
             <article class="post type-post status-publish format-standard">
@@ -326,14 +444,28 @@
                 <div style="margin-top: 10px; margin-bottom: 10px;">
                     <span>
                         Exceptionless
-                    </span><br />
-                    <span>
-                        Sat Jun 02 2018 10:56:18 GMT-0500 (Central Daylight Time)
-                    </span>
+                    </span><br />  
+                    <hr />                  
                 </div>
-                <div style="margin-bottom: 10px;">
-                    <a class="btn" href="/2018-06-02-event-tracking-and-logging-software/">Read Now</a>
-                </div>
+                <img loading="lazy" data-id="16233"  src="https://exceptionless.com/assets/event-tracking-logging-software-1024x538.jpg" alt="" width="940" height="494" class="aligncenter size-large wp-image-16233" srcset="https://exceptionless.com/assets/event-tracking-logging-software-1024x538.jpg 1024w, https://exceptionless.com/assets/event-tracking-logging-software-300x158.jpg 300w, https://exceptionless.com/assets/event-tracking-logging-software-768x403.jpg 768w, https://exceptionless.com/assets/event-tracking-logging-software.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />  
+Whether you’re developing a quick module, application, or full blown, go-to-market product, you’re going to need some form of event logging throughout the development process. It can be done without, but you’ll be making your job multiple magnitudes more difficult and losing valuable man hours that could be put towards making your product better instead of just not breaking.<!--more-->
+<h2>WHAT IS EVENT LOGGING?</h2>
+<p>Event logging provides a detailed record of events, bugs, and custom triggers that occur in your application, environment, or product. The information collected gives you a wealth of data to both forensically troubleshoot a bug after it’s occurred as well as proactively to prevent future errors.</p>
+<p>This now service is now an invaluable resource to increase your development team’s efficiency and productivity as well as increasing visibility of what goes on behind the scenes in your development environment. On top of that, it also helps maximize application uptime and operation by minimizing the long-term effects of bugs and unwanted events.</p>
+<h3>INTUITIVELY PARSE EVENT DATA</h3>
+<p>Individual raw event logs are too dense and unwieldy to be reviewed. If you were to rely on the raw data, you’d need to specifically hire someone to dig through all that info to pass on the important info to your developers. Event tracking software will parse the data and catalog the important information in an intuitive manner to make everyone’s lives easier. In a nutshell, it will shine a light on the needle in your proverbial haystack.</p>
+<h3>FAST AND EASY REPORTING</h3>
+<p>The great thing about event tracking is that it’s running around the clock. When you and your team aren’t in the office, it’s keeping a watchful eye on your project and collecting data 24/7. It collects data from all sources across your development environment and all of this data is funneled to your dashboard for real-time reporting and criteria based sorting. This allows you to both find the event you’re looking for and quickly dive into its potential causes.</p>
+<h3>INTELLIGENT EVENT GROUPING</h3>
+<p>Exceptionless groups common events into stacks based on where the event occurred and the type of error. This cleans up and consolidates the data on your dashboard and in your reports to keep it from being cluttered as well as keeping that information in a single place for your analysis. Even though the event’s footprint is smaller, you’ll still be able to identify larger iterations of the same event to prioritize your work.</p>
+<h3>SAVE TIME ON MAINTENANCE</h3>
+<p>It can be incredibly difficult to replicate an event that a user encountered. There’s a slew of information you need to accurately track the cause and the user simply may not, or cannot, provide it. You could spends hours or days just trying to isolate what triggered an event. Hours that could have been put towards building a new feature or getting your product to market.</p>
+<p>Event tracking software makes it so a bug that once took a week to find can be found, patched, and pushed live in a matter of minutes or hours instead of days or weeks. Spend less time on maintenance and more time innovating.</p>
+<h3>EVENT LOGGING SOFTWARE PAYS FOR ITSELF</h3>
+<p>Your developers’ time is valuable, and expensive. Even though it’s important, having them blindly diving down rabbit holes to chase bugs and other events can be incredibly costly and not productive. Not every project has a big budget and you may have to work faster and more efficiently to wrap it up without going over budget. While an event logging software may sound like an additional expense, the amount of time you save troubleshooting and fixing bugs will easily cover the cost. And the great thing is, the more you use it, the more you save.</p>
+<h3>USER FRIENDLY DASHBOARD</h3>
+<p>All the information in the world won’t help you if it’s impossible to dig through. We specifically built our dashboard to give a clear high level view of your application while still being clear the further you drill down into individual events and bugs. You can quickly view the health of your application, track data from actually users, and intelligently drill down into recent errors. It seamlessly unites metrics and productivity while you analyze and explore data to rapidly troubleshoot your application.</p>
+
             </article>
             
             <article class="post type-post status-publish format-standard">
@@ -341,14 +473,34 @@
                 <div style="margin-top: 10px; margin-bottom: 10px;">
                     <span>
                         Exceptionless
-                    </span><br />
-                    <span>
-                        Mon Apr 30 2018 12:53:21 GMT-0500 (Central Daylight Time)
-                    </span>
+                    </span><br />  
+                    <hr />                  
                 </div>
-                <div style="margin-bottom: 10px;">
-                    <a class="btn" href="/2018-04-30-c-bug-tracking-software/">Read Now</a>
-                </div>
+                <img loading="lazy" data-id="16177"  src="https://exceptionless.com/assets/c-sharp-bug-tracking-software-1024x538.jpg" alt="" width="940" height="494" class="aligncenter size-large wp-image-16177" srcset="https://exceptionless.com/assets/c-sharp-bug-tracking-software-1024x538.jpg 1024w, https://exceptionless.com/assets/c-sharp-bug-tracking-software-300x158.jpg 300w, https://exceptionless.com/assets/c-sharp-bug-tracking-software-768x403.jpg 768w, https://exceptionless.com/assets/c-sharp-bug-tracking-software.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+<p>Bugs, exceptions, issues, faults, errors, incidents, whatever you want to call them, they’re unavoidable. No matter how elegantly you think you wrote your code, no matter how many user cases you think you’ve covered, your application is going to have bugs and part of our jobs is to find those bugs and fix them. You can track these bugs using an Excel or Google sheet (if you’re a glutton for punishment), but the best way is to use a bug tracking platform that tracks, records, reports, and manages these exceptions for you.<!--more--></p>
+<h2>WHAT IS BUG TRACKING?</h2>
+<p>In its simplest form, bug tracking is when a developer is alerted to an event when their code does not operate as intended. They catalog the issue, collect as much information as they can that led to said event, and attempt to recreate it so they can fix the problem.</p>
+<p>As you can imagine, doing all of this manually becomes quite unwieldy the larger an application gets. On top of that, with larger applications comes additional layers of complexity that a user simply can’t account for or give you the proper information to set you on the path for resolving their bug. This is why it’s so important to have an automated event tracker.</p>
+<h3>IMPORTANCE OF BUG TRACKING</h3>
+<p>A bug tracking software of any kind is a must have for any sort of application at any stage of development, even months or years after it goes live. The larger your product, the more important it is to have some form of bug tracking implemented. (This is also a tell tale sign of whether or not a development team is worth their salt.)</p>
+<p>You can spend hours, days, weeks, and even months trying to track down a bug if you don’t have the right information. Having a software platform in place for tracking bugs helps your development team work smarter and faster when troubleshooting these issues. The software will record, document, and organize these bugs automatically with critical information about the user, event, and the application at the time it occurred. No more chasing down info. It’s already done for you!</p>
+<h2>C# FRAMEWORK OVERVIEW</h2>
+<p>C# is one of, if not the most used programming language of the last 15 years. It’s an elegant object oriented language that allows developers to build .NET applications. While it can be daunting at first if you aren’t familiar with it, it’s actually quite simple to use and relatively easy to learn. However, the applications can get quite complicated because of its structure. A misplaced bracket, variable, or object can cause cascading issues that aren’t easy to detect or remedy.</p>
+<h3>C# BUG TRACKING SOFTWARE</h3>
+<p>Due to the potentially complicated landscape that is a C# application, detecting, diagnosing, and fixing a bug can be a near-Herculean task, especially if you aren’t the developer that originally created said application. It may have been coded in a non-optimal way or due to time constraints, it had to be done in a hacky way that’s just waiting to implode. This is where a bug tracking solution for your C# application is an invaluable addition to your infrastructure.</p>
+<h3>REAL TIME BUG DISCOVERY</h3>
+<p>You can’t be everywhere at once and see everything, especially in the larger C# applications. Having C# bug tracking software guarantees that you can be with it collecting data in the background. Regardless of when a bug occurs, our platform will have a full report with everything you need to set your development team in the right direction.</p>
+<h3>CUSTOM OBJECTS</h3>
+<p>Exceptionless’ automated bug tracking already tracks an enormous amount of contextual information automatically, but you can track even more information by creating a custom object. If you want to grab info on what was in a customer’s before it threw a bug, custom object. Once created, you can set these objects as top level tabs to improve their visibility.</p>
+<h3>INTUITIVE ERROR GROUPING</h3>
+<p>Every bug is intelligently tracked on our dashboard and consolidated into stacked groups based on where it occurred and the type of bug. Not only does this keep things nice and tidy, but it also lets you triage whether or not a bug needs to be fixed as soon as possible. These reports also persist after the bug has been fixed so you have historical data just in case the bug resurfaces later.</p>
+<h3>DETAILED BUG REPORTS</h3>
+<p>Our bug reports extensively tracks a robust set of information to help you quickly track down and fix the error. The default information covers type of error, stack trace, date, request information, and environment information, but that can easily be expanded upon and tailored to your application with custom objects.</p>
+<h3>FLUENT API</h3>
+<p>We have extensively documented our platform and API to make it easy and painless to use. You can use our fluent API to easily add custom objects, tags, and other information as well as marking certain errors as vitally important.</p>
+<p>RECAP<br>
+Troubleshooting and fixing bugs is part of our jobs as developers and, as the saying goes, we need to work smarter, not harder so we can spend more time creating new features to our applications rather than patching errors. Exceptionless’ C# bug tracking software will intuitively, and automatically, organize any bugs that do occur to help you pinpoint the cause so your application can get back on track.</p>
+
             </article>
             
             <article class="post type-post status-publish format-standard">
@@ -356,14 +508,35 @@
                 <div style="margin-top: 10px; margin-bottom: 10px;">
                     <span>
                         Exceptionless
-                    </span><br />
-                    <span>
-                        Wed Jan 31 2018 22:05:38 GMT-0600 (Central Standard Time)
-                    </span>
+                    </span><br />  
+                    <hr />                  
                 </div>
-                <div style="margin-bottom: 10px;">
-                    <a class="btn" href="/2018-01-31-asp-net-bug-tracking-software/">Read Now</a>
-                </div>
+                <img loading="lazy" data-id="16101"  src="https://exceptionless.com/assets/asp-net-bug-tracking-software-platform-1024x538.jpg" alt="asp.net bug tracking software platform" width="940" height="494" class="aligncenter size-large wp-image-16101" srcset="https://exceptionless.com/assets/asp-net-bug-tracking-software-platform-1024x538.jpg 1024w, https://exceptionless.com/assets/asp-net-bug-tracking-software-platform-300x158.jpg 300w, https://exceptionless.com/assets/asp-net-bug-tracking-software-platform-768x403.jpg 768w, https://exceptionless.com/assets/asp-net-bug-tracking-software-platform.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+<p>Bug tracking. Two words that you’ll never be able to escape as a developer. Our goal as developers is to always create a high quality product with pristine code, but let’s face it, nobody’s perfect and accidents happen. Bugs are going to pop up no matter how hard we work or how much we plan ahead. They’re an inevitable part of the job and the more complex your project becomes, the more likely unexpected bugs are to start popping up.<!--more--></p>
+<p>You can try and track these little annoyances manually, like some kind of an animal, or use a bug tracking software to significantly speed up the process and provide a log of what happened and where to prevent future iterations of the same issue.</p>
+<h2>WHAT IS BUG TRACKING?</h2>
+<p>At its core, bug tracking is when a developer tracks, logs, and resolves a bug or issue that caused their software to not perform as intended. This could be as simple as a missing semicolon or trailing slash or as complicated as a vulnerability in your back end.</p>
+<p>In the old days of yesteryear, there weren’t any (good) bug tracking software platforms so developer had to exhaustively QA test their code before publishing and even then, they couldn’t catch everything. Bugs sometimes went to production undetected and they relied on users to report issues so they could investigate them manually later. As you can imagine, this was an incredibly time consuming and tedious process that ate up far too much time and resources that could have been spent developing the next great feature to propel sales.</p>
+<h3>IMPORTANCE OF BUG TRACKING</h3>
+<p>At the risk of sounding pretentious, Kurt Vonnegut said that “Everyone wants to build and nobody wants to do maintenance.” Whether we like it or not, we can’t always build the next big feature or streamline the functionality of our platform. Sometimes we have to hunt down elusive bugs and do maintenance to keep our code clean and keep a solid foundation so we can keep building.</p>
+<p>Ignoring or intentionally leaving bugs to multiply in the code can damage your company’s reputation (and revenue) if one of these errors affects your customers’ ability to do their job or compromises their information. It will save everyone involved a ton of time, money, and headache if you simply implement a bug tracking software from the get go. Your code will stay clean and you’ll stop losing users, leads, and customers. It’s a win / win for everyone.</p>
+<h2>ASP.NET FRAMEWORK OVERVIEW</h2>
+<p>ASP.NET is a coding model used to build enterprise class applications with minimal coding. This not only cuts down on the amount of man hours necessary to complete your project, but also simplifies running and maintaining said application due to its (relative) simplicity. If you’re new to the ASP.NET platform, do not be surprised if it’s not the easiest thing to pick up, but once you do, you’ll understand why it’s one of the most popular development platforms out there. (There are a ton of <a href="https://www.asp.net/learn" rel="noopener" target="_blank">tutorials</a> &amp; <a href="https://www.microsoft.com/web/webmatrix/" rel="noopener" target="_blank">learning environments</a> if you’re looking to learn the platform.)</p>
+<h2>ASP.NET BUG TRACKING SOFTWARE PLATFORM</h2>
+<p>Just because ASP.NET is a simplified coding platform doesn’t mean that you won’t have bugs. If anything, it can make them a bit tougher to find, but that’s where having an integrated bug tracking suite comes into play.</p>
+<p>Our bug tracking software suite helps development teams find, record, and categorize bugs and errors in real time for your ASP.NET websites, applications, and services. It organizes information in an intuitive and easy to digest dashboard to help your platform become exceptionless.</p>
+<h3>REAL TIME BUG DISCOVERY</h3>
+<p>Bugs can happen anywhere at anytime and if you aren’t watching, they can go unnoticed for months, sometimes years. Our bug tracking software runs in the background of your ASP.net platform 24/7/365 so if something happens, we have a full report with the data you need to craft surgical solution with ease</p>
+<h3>DETAILED BUG REPORTS</h3>
+<p>Once a bug has been discovered and tracked, there’s no need to attempt to replicate the issue. A detailed report is automatically created that intelligently organizes important information to help resolve the bug.</p>
+<p>Curious about what else is captured in our reports? Check out the full write up on our <a href="/whats-included-exceptionless-detailed-error-reports/">detailed error reports</a>.</p>
+<h3>INTUITIVE ERROR GROUPING</h3>
+<p>For ease of browsing, our platforms groups errors together based on a variety of criteria, i.e. date, type, platform, browser, etc. to help you drill down and pinpoint the cause of bugs in your application. It also keeps a full history of the exception even after it’s been resolved in case it resurfaces in the future.</p>
+<h3>EMAIL NOTIFICATIONS</h3>
+<p>You no longer have to worry about your customers letting you know about bugs or checking a dashboard every morning. Simply update your notification settings and get instant emails when an error happens, only when new errors happen, or not at all. You can even flag resolved errors to send emails in the event that regress to their previously broken state.</p>
+<h2>RECAP</h2>
+<p>Bugs are an inescapable part of any ASP.NET application, but they don’t have to be an unmanageable nuisance. Implementing an error tracking solution will help you organize bugs as they occur while providing vital information that will help you pinpoint the cause and quickly resolve them. Keep your development teams updating your application with new features with an ASP.NET bug tracking software.</p>
+
             </article>
             
             <article class="post type-post status-publish format-standard">
@@ -371,14 +544,32 @@
                 <div style="margin-top: 10px; margin-bottom: 10px;">
                     <span>
                         Exceptionless
-                    </span><br />
-                    <span>
-                        Tue Nov 07 2017 15:51:12 GMT-0600 (Central Standard Time)
-                    </span>
+                    </span><br />  
+                    <hr />                  
                 </div>
-                <div style="margin-bottom: 10px;">
-                    <a class="btn" href="/2017-11-07-exceptionless-net-4-1-release-net-standard-2-0-microsoft-extensions-logging-support-and-more/">Read Now</a>
-                </div>
+                <img loading="lazy" class="aligncenter size-large wp-image-15970" style="margin-bottom: 20px;" src="https://exceptionless.com/assets/exceptionless-net-4-1-release-1024x538.jpg" alt="Exceptionless.NET 4.1 Release" width="940" height="494" data-id="15970" srcset="https://exceptionless.com/assets/exceptionless-net-4-1-release-1024x538.jpg 1024w, https://exceptionless.com/assets/exceptionless-net-4-1-release-300x158.jpg 300w, https://exceptionless.com/assets/exceptionless-net-4-1-release-768x403.jpg 768w, https://exceptionless.com/assets/exceptionless-net-4-1-release.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+<p><a href="https://github.com/exceptionless/Exceptionless.Net">Exceptionless.NET</a> 4.1 is here and we wanted to make a quick blog post highlighting the new features, bug fixes, and of course upgrading.</p>
+<p>In this release, we focused primarily on adding .NET Standard 2.0 support, along with ongoing performance enhancements and bug fixes.</p>
+<p>More details, below:<!--more--></p>
+<h2>Exceptionless.NET 4.1 New Features</h2>
+<ol>
+<li>We’ve added .NET Standard 2.0 support, which allows you to easily integrate with UWP applications now.</li>
+<li>Microsoft.Extensions.Logging support has also been added via the Exceptionless.Extensions.Logging client. Thank you <a href="https://github.com/moogle001">@moogle001</a> for contributing to this feature!</li>
+<li>Thanks to <a href="https://github.com/jamierushton">@jamierushton</a>, we now allow <code>null</code> and <code>default</code> values to be serialized, which translates to greater insight into contextual data.</li>
+<li>We’re now using <a href="https://github.com/GitTools/GitLink">GitLink</a> to debug packages more easily.</li>
+</ol>
+<h2>Version 4.1 Bug Fixes</h2>
+<ul>
+<li>GetFiles has been replaced with the EnumerateFiles method to improve performance in FolderObjectStorage. Thanks <a href="https://github.com/edwardmeng">@edwardmeng</a> for that contribution!</li>
+<li>@edwardmeng also helped us improve diangnostic logging by including timestamps and log level. Thanks again!</li>
+</ul>
+<h2>Upgrading to Exceptionless.NET 4.1</h2>
+<p>If you are using our hosted service, you do not need to upgrade anything on your end. If you are self hosting Exceptionless and upgrading from version 2 or 3, you should just have to update your NuGet packages. See our <a href="https://github.com/exceptionless/Exceptionless.Net/wiki/Upgrading">upgrade guide</a> for more information.</p>
+<p>Check out the <a href="https://github.com/exceptionless/Exceptionless.Net/releases/tag/v4.1.0">official release notes</a> here, or view the <a href="https://github.com/exceptionless/Exceptionless.Net/compare/v4.0.4...v4.1.0">full changelog</a> if you are interested in a complete list of changes.</p>
+<h2>How are we doing?</h2>
+<p>As always, we want to know what you think! If you have questions, concerns, or any feedback, please <a href="https://github.com/exceptionless/Exceptionless.Net/issues/new">submit an issue over on the GitHub repo</a>.</p>
+<p> </p>
+
             </article>
             
             <article class="post type-post status-publish format-standard">
@@ -386,14 +577,27 @@
                 <div style="margin-top: 10px; margin-bottom: 10px;">
                     <span>
                         Exceptionless
-                    </span><br />
-                    <span>
-                        Fri Oct 06 2017 14:00:13 GMT-0500 (Central Daylight Time)
-                    </span>
+                    </span><br />  
+                    <hr />                  
                 </div>
-                <div style="margin-bottom: 10px;">
-                    <a class="btn" href="/2017-10-06-slack-integration-update-recap/">Read Now</a>
-                </div>
+                <img loading="lazy" style="margin-bottom:20px;" class="aligncenter size-large wp-image-15919" src="https://exceptionless.com/assets/slack-integration-ft-img-1024x538.jpg" alt="Exceptionless Slack Integration" width="940" height="494" data-id="15919" srcset="https://exceptionless.com/assets/slack-integration-ft-img-1024x538.jpg 1024w, https://exceptionless.com/assets/slack-integration-ft-img-300x158.jpg 300w, https://exceptionless.com/assets/slack-integration-ft-img-768x403.jpg 768w, https://exceptionless.com/assets/slack-integration-ft-img.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+<p>Since we first introduced Slack integration with the goal of further improving notifications in Exceptionless, we’ve come back around with updates, a few bug fixes, and wanted to give everyone a quick all-in-one overview of the feature!</p>
+<p>Thanks to everyone that has provided feedback, bug reports, and suggestions. If <em>you</em> have any, don’t hesitate to <a href="https://github.com/exceptionless/Exceptionless/issues">submit an issue over on GitHub</a>. We’re always looking to improve and would love your input!<!--more--></p>
+<p>Along the way, we have run into <strong>incoming webhook issues</strong>, some <strong>usability/setup workflow updates</strong> that needed to be made to make the process more usable, and, among other things, <strong>incorrectly created action URLs</strong> that weren’t being handled correctly with rate limiting.</p>
+<p>We’ll cover <strong>setting up Slack integration with Exceptionless</strong> below, but you can also review the <a href="/exceptionless-slack-integration/">original post</a> and <a href="https://youtu.be/U9GbYqWK1ik">weekly update video</a>, the <a href="/slack-integration-updates-bug-fixes-weekly-update-5222017/">first bug fix update</a> and <a href="https://youtu.be/WtHj9e4M9zU">video</a>, and the most recent <a href="/improvements-exceptionless-slack-integration/">Slack integration improvement update</a> and <a href="https://youtu.be/k4CMOk5lpVw">video</a>.</p>
+<h2>Setting up Slack Notifications for Exceptionless</h2>
+<p>First, go into your project’s settings in the Exceptionless app and click on the Integrations tab.</p>
+<p><a href="https://exceptionless.com/assets/exceptionless-slack-setup.png"><img loading="lazy" class="aligncenter wp-image-15626 size-full" src="https://exceptionless.com/assets/exceptionless-slack-setup.png" alt="" width="811" height="595" data-id="15626" srcset="https://exceptionless.com/assets/exceptionless-slack-setup.png 811w, https://exceptionless.com/assets/exceptionless-slack-setup-300x220.png 300w, https://exceptionless.com/assets/exceptionless-slack-setup-768x563.png 768w" sizes="(max-width: 811px) 100vw, 811px" /></a></p>
+<p>Then, click on “Add Slack Notifications” and log in to your slack team.</p>
+<p>Once logged in, you will need to select the channel you want Exceptionless Notifications to post to and click Authorize.</p>
+<p>Once authorized, you can then configure the different notification settings by going back to the Exceptionless app and into the project’s integrations tab again.</p>
+<p><a href="https://exceptionless.com/assets/exceptionless-slack-settings.png"><img loading="lazy" class="aligncenter size-full wp-image-15628" src="https://exceptionless.com/assets/exceptionless-slack-settings.png" alt="" width="620" height="399" data-id="15628" srcset="https://exceptionless.com/assets/exceptionless-slack-settings.png 620w, https://exceptionless.com/assets/exceptionless-slack-settings-300x193.png 300w" sizes="(max-width: 620px) 100vw, 620px" /></a></p>
+<p>Once integrated and configured, notifications will look something like the below screenshot, with the message, type of event, stack trace, links to actions, etc.</p>
+<p><a href="https://exceptionless.com/assets/exceptionless-slack-example.jpg"><img loading="lazy" class="aligncenter size-full wp-image-15629" src="https://exceptionless.com/assets/exceptionless-slack-example.jpg" alt="Exceptionless Slack notification" width="533" height="920" data-id="15629" srcset="https://exceptionless.com/assets/exceptionless-slack-example.jpg 533w, https://exceptionless.com/assets/exceptionless-slack-example-174x300.jpg 174w" sizes="(max-width: 533px) 100vw, 533px" /></a></p>
+<p>We’re excited to keep improving notifications, and would love for you guys to continue testing and providing feedback! What else would you like to see happening with notifications? What are we doing right, and wrong?</p>
+<p>Integrations with other chat &amp; productivity tools like Hipchat and Microsoft Teams are on our list, as well, so if you use these please ping us and let us know so we can gauge interest!</p>
+<p>Until next time, code on my friends.</p>
+
             </article>
             
             <article class="post type-post status-publish format-standard">
@@ -401,14 +605,22 @@
                 <div style="margin-top: 10px; margin-bottom: 10px;">
                     <span>
                         Exceptionless
-                    </span><br />
-                    <span>
-                        Wed Aug 30 2017 17:14:46 GMT-0500 (Central Daylight Time)
-                    </span>
+                    </span><br />  
+                    <hr />                  
                 </div>
-                <div style="margin-bottom: 10px;">
-                    <a class="btn" href="/2017-08-30-universal-javascript-support-added-exceptionless-javascript/">Read Now</a>
-                </div>
+                <img loading="lazy" class="aligncenter size-large wp-image-15833" src="https://exceptionless.com/assets/universal-javascript-1024x538.jpg" alt="Exceptionless Universal JavaScript" width="940" height="494" data-id="15833" srcset="https://exceptionless.com/assets/universal-javascript-1024x538.jpg 1024w, https://exceptionless.com/assets/universal-javascript-300x158.jpg 300w, https://exceptionless.com/assets/universal-javascript-768x403.jpg 768w, https://exceptionless.com/assets/universal-javascript.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+<p>Recently, we released <a href="https://exceptionless.com/javascript-client-v1-5-release-details-notes/">Exceptionless.JavaScript 1.5</a>. The major update for the release was the addition of universal JavaScript (React Universal) support! More details below. The key is that we can now run in server side node apps, or in the browser, with a single script and do the right thing!</p>
+<blockquote>
+<p>TL;DR: Isomorphism is the functional aspect of seamlessly switching between client- and server-side rendering without losing state. Universal is a term used to emphasize the fact that a particular piece of JavaScript code is able to run in multiple environments. – <a href="https://medium.com/@ghengeveld/isomorphism-vs-universal-javascript-4b47fb481beb">Gert Hengeveld, Isomorphism vs Universal JavaScript</a></p>
+</blockquote>
+<!--more-->
+<p>We have gotten lots of requests for Universal JavaScript support. What this means is that you can use a library in the browser or server without any changes from the end user. This is great because you can just consume the library and just know it will work using the same API service no matter where you want to use it. The main con of using a universal client is the increased payload size as you know have to send node support to the browser as well.</p>
+<p>We implemented universal JavaScript support by bundling both the browser and node scripts together. But it wasn’t as easy as concatenating the files together. We had to refactor the node and browser entry points so that they would automatically run, while ensuring that the initialization of environment specific code (storage, network, etc.) only ran when specific environment conditions were met. This is pretty easy to do with an <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">IIFE function</a> and a quick if check as shown <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.5.4/src/exceptionless.ts#L14-L38">here</a>. Next, we needed to provide a <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.5.4/src/exceptionless.universal.ts">new entry point that imported both of the entry points</a> which ensures that browser and node entry points run.</p>
+<p>This update adds support for universal apps, and a React Universal sample that shows the exact changes that were required to get everything working and setup can be found <a href="https://github.com/niemyjski/react-redux-universal-hot-example/commit/7f7c01ca1b328f3389c3919a53376bccbbfe1f08">here</a>. The pull request for universal support can be found <a href="https://github.com/exceptionless/Exceptionless.JavaScript/pull/75">here</a>.</p>
+<p><strong>To target it</strong>, you just need to reference the universal script (exceptionless.universal.js), this will happen automatically if you install via browserfiy or webpack.</p>
+<h2>Questions? Feedback?</h2>
+<p>Let us know what you think about the new Universal JavaScript support over on <a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues">GitHub</a>!</p>
+
             </article>
             
             

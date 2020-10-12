@@ -15,14 +15,10 @@
                 <div style="margin-top: 10px; margin-bottom: 10px;">
                     <span>
                         {{post.data.author || "Exceptionless"}}
-                    </span><br />
-                    <span>
-                        {{post.data.date || ""}}
-                    </span>
+                    </span><br />  
+                    <hr />                  
                 </div>
-                <div style="margin-bottom: 10px;">
-                    <a class="btn" href="{{ post.url }}">Read Now</a>
-                </div>
+                {{ post.data.content }}
             </article>
             {% endfor %}
             {% if pagination.pageLinks.length > 1 %}
