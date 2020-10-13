@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-13461" src="http://exceptionless.com/assets/version-3-featured.png" alt="version-3-featured" width="260" height="260" data-id="13461" srcset="https://exceptionless.com/assets/version-3-featured.png 260w, https://exceptionless.com/assets/version-3-featured-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Version 2.0 was a pretty big rewrite for us, and we&#8217;re happy with how everything played out, but that doesn&#8217;t mean we&#8217;re done!
+<img loading="lazy" class="alignright size-full wp-image-13461" src="http://exceptionless.com/assets/version-3-featured.png" alt="version-3-featured" width="260" height="260" data-id="13461" srcset="/assets/version-3-featured.png 260w, /assets/version-3-featured-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Version 2.0 was a pretty big rewrite for us, and we&#8217;re happy with how everything played out, but that doesn&#8217;t mean we&#8217;re done!
 
 We&#8217;ve been working on 3.0, and it&#8217;s ready.
 

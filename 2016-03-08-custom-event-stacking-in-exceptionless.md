@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-14180" src="http://exceptionless.com/assets/custom-event-stacking-graphicl.png" alt="custom event stacking with exceptionless" width="260" height="260" data-id="14180" srcset="https://exceptionless.com/assets/custom-event-stacking-graphicl.png 260w, https://exceptionless.com/assets/custom-event-stacking-graphicl-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Sometimes you just need things to be your way.
+<img loading="lazy" class="alignright size-full wp-image-14180" src="http://exceptionless.com/assets/custom-event-stacking-graphicl.png" alt="custom event stacking with exceptionless" width="260" height="260" data-id="14180" srcset="/assets/custom-event-stacking-graphicl.png 260w, /assets/custom-event-stacking-graphicl-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Sometimes you just need things to be your way.
 
 We get it&#8230; your morning coffee, folded towels, and how events stack (group) in your event reporting application should be controllable and customizable.
 

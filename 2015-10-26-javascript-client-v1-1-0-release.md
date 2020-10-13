@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-medium wp-image-13683" src="http://exceptionless.com/assets/blog-header-image-post2b-300x106.png" alt="Exceptionless JavaScript Client" width="300" height="106" data-id="13683" srcset="https://exceptionless.com/assets/blog-header-image-post2b-300x106.png 300w, https://exceptionless.com/assets/blog-header-image-post2b.png 708w" sizes="(max-width: 300px) 100vw, 300px" />We&#8217;ve been hard at work on several things here at Exceptionless, including a minor version release of our [JavaScript Client](https://github.com/exceptionless/Exceptionless.JavaScript)!
+<img loading="lazy" class="alignright size-medium wp-image-13683" src="http://exceptionless.com/assets/blog-header-image-post2b-300x106.png" alt="Exceptionless JavaScript Client" width="300" height="106" data-id="13683" srcset="/assets/blog-header-image-post2b-300x106.png 300w, /assets/blog-header-image-post2b.png 708w" sizes="(max-width: 300px) 100vw, 300px" />We&#8217;ve been hard at work on several things here at Exceptionless, including a minor version release of our [JavaScript Client](https://github.com/exceptionless/Exceptionless.JavaScript)!
 
 Please see the details of this release below.
 

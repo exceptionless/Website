@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-13237" src="/_site/assets/blog-header-javascript.jpg" alt="Exceptionless JavaScript Client" width="708" height="250" data-id="13237" srcset="https://exceptionless.com/assets/blog-header-javascript.jpg 708w, https://exceptionless.com/assets/blog-header-javascript-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-13237" src="/_site/assets/blog-header-javascript.jpg" alt="Exceptionless JavaScript Client" width="708" height="250" data-id="13237" srcset="/assets/blog-header-javascript.jpg 708w, /assets/blog-header-javascript-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 We&#8217;re getting closer and closer to version 1.0 of our <a title="Exceptionless JavaScript Client" href="/javascript-client-available-for-preview-testing/" target="_blank">JavaScript client</a>, and we wanted to give everyone a demo of installation, configuration, and usage.
 

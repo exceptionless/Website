@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "open source"]
 ---
-**<img loading="lazy" class="alignright  wp-image-2845" alt="Octocat" src="http://exceptionless.com/assets/Octocat-300x249.png" width="240" height="199" data-id="2845" srcset="https://exceptionless.com/assets/Octocat-300x249.png 300w, https://exceptionless.com/assets/Octocat.png 800w" sizes="(max-width: 240px) 100vw, 240px" />It&#8217;s a big day at Exceptionless.**
+**<img loading="lazy" class="alignright  wp-image-2845" alt="Octocat" src="http://exceptionless.com/assets/Octocat-300x249.png" width="240" height="199" data-id="2845" srcset="/assets/Octocat-300x249.png 300w, /assets/Octocat.png 800w" sizes="(max-width: 240px) 100vw, 240px" />It&#8217;s a big day at Exceptionless.**
 
 We are super excited to announce that we are <a title="Exceptionless on GitHub" href="https://github.com/exceptionless/Exceptionless" target="_blank">open sourcing the Exceptionless code</a>! That&#8217;s right, now you can hack on our real-time error reporting tool yourself.
 

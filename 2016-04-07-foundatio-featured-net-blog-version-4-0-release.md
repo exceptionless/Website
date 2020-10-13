@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-14292" src="http://exceptionless.com/assets/foundatio-4.0.png" alt="Foundatio 4.0 release" width="260" height="260" data-id="14292" srcset="https://exceptionless.com/assets/foundatio-4.0.png 260w, https://exceptionless.com/assets/foundatio-4.0-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />We&#8217;ve continued to focus some of our attention on our pluggable app foundation block solution, Foundatio, and last week it got some attention from the Microsoft .NET Blog as well!
+<img loading="lazy" class="alignright size-full wp-image-14292" src="http://exceptionless.com/assets/foundatio-4.0.png" alt="Foundatio 4.0 release" width="260" height="260" data-id="14292" srcset="/assets/foundatio-4.0.png 260w, /assets/foundatio-4.0-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />We&#8217;ve continued to focus some of our attention on our pluggable app foundation block solution, Foundatio, and last week it got some attention from the Microsoft .NET Blog as well!
 
 <a href="https://blogs.msdn.microsoft.com/dotnet/2016/03/29/the-week-in-net-3292016/" target="_blank">Foundatio featured as Project of the Week on .NET Blog</a>
 

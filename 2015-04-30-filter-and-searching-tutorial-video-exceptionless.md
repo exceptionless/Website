@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright wp-image-13067 size-full" style="margin-left: 20px;" src="/assets/filter-search.png" alt="Exceptionless Search Filtering" width="260" height="260" data-id="13054" srcset="https://exceptionless.com/assets/filter-search.png 260w, https://exceptionless.com/assets/filter-search-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />One of the most requested features from the beginning of Exceptionless 1.0 was a filtering and searching system. When we started developing Exceptionless 2.0, we knew it was one of the major features we wanted to include.
+<img loading="lazy" class="alignright wp-image-13067 size-full" style="margin-left: 20px;" src="/assets/filter-search.png" alt="Exceptionless Search Filtering" width="260" height="260" data-id="13054" srcset="/assets/filter-search.png 260w, /assets/filter-search-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />One of the most requested features from the beginning of Exceptionless 1.0 was a filtering and searching system. When we started developing Exceptionless 2.0, we knew it was one of the major features we wanted to include.
 
 We couldn&#8217;t just throw in a string search and hope for the best. We had to build it in a way that let users perform basic and advanced filtering, easily, with fast and streamlined results.
 
@@ -21,7 +21,7 @@ Watch the video below for a quick test drive, and read further down the page for
 
 ## Filter by Organization & Project
 
-[<img loading="lazy" class="alignright size-medium wp-image-13047" style="margin-left: 20px;" src="/assets/filter-by-project-organization-300x208.png" alt="Exceptionless Organizations and Projects" width="300" height="208" data-id="13047" srcset="https://exceptionless.com/assets/filter-by-project-organization-300x208.png 300w, https://exceptionless.com/assets/filter-by-project-organization.png 593w" sizes="(max-width: 300px) 100vw, 300px" />](/_site/assets/filter-by-project-organization.png)By default, the dashboard loads up with all projects selected.
+[<img loading="lazy" class="alignright size-medium wp-image-13047" style="margin-left: 20px;" src="/assets/filter-by-project-organization-300x208.png" alt="Exceptionless Organizations and Projects" width="300" height="208" data-id="13047" srcset="/assets/filter-by-project-organization-300x208.png 300w, /assets/filter-by-project-organization.png 593w" sizes="(max-width: 300px) 100vw, 300px" />](/_site/assets/filter-by-project-organization.png)By default, the dashboard loads up with all projects selected.
 
 To show only data from a specific organization or project within an organization, simply click on the &#8220;All Projects&#8221; drop down in the top left of the dashboard and select your organization or project.
 
@@ -31,7 +31,7 @@ To change it back to all projects, simply select the drop down again and click o
 
 ## Filter by Time Frame
 
-[<img loading="lazy" class="alignright size-medium wp-image-13048" style="margin-left: 20px;" src="/assets/filter-by-timeframe-300x205.png" alt="Exceptionles Time Frame Filters" width="300" height="205" data-id="13048" srcset="https://exceptionless.com/assets/filter-by-timeframe-300x205.png 300w, https://exceptionless.com/assets/filter-by-timeframe.png 675w" sizes="(max-width: 300px) 100vw, 300px" />](/_site/assets/filter-by-timeframe.png)Exceptionless offers multiple preset time frame options, as well as the ability to customize the time frame down to the second.
+[<img loading="lazy" class="alignright size-medium wp-image-13048" style="margin-left: 20px;" src="/assets/filter-by-timeframe-300x205.png" alt="Exceptionles Time Frame Filters" width="300" height="205" data-id="13048" srcset="/assets/filter-by-timeframe-300x205.png 300w, /assets/filter-by-timeframe.png 675w" sizes="(max-width: 300px) 100vw, 300px" />](/_site/assets/filter-by-timeframe.png)Exceptionless offers multiple preset time frame options, as well as the ability to customize the time frame down to the second.
 
 To select your time frame of choice, click on the calendar icon next to the project drop down on the top navigation bar of your dashboard.
 
@@ -43,7 +43,7 @@ Another way to control the data time frame is to simply select a period of time 
 
 ## Filter and Search by Specific Criteria
 
-[<img loading="lazy" class="alignright wp-image-13063 size-medium" style="margin-left: 20px;" src="/assets/filter-by-search-filter-criteria-300x203.png" alt="Exceptionless Search Filter Feature" width="300" height="203" data-id="13049" srcset="https://exceptionless.com/assets/filter-by-search-filter-criteria-300x203.png 300w, https://exceptionless.com/assets/filter-by-search-filter-criteria.png 774w" sizes="(max-width: 300px) 100vw, 300px" />](/_site/assets/filter-by-search-filter-criteria.png)Being able to search your errors and events by specific criteria is, perhaps, the largest improvement for version 2.0.
+[<img loading="lazy" class="alignright wp-image-13063 size-medium" style="margin-left: 20px;" src="/assets/filter-by-search-filter-criteria-300x203.png" alt="Exceptionless Search Filter Feature" width="300" height="203" data-id="13049" srcset="/assets/filter-by-search-filter-criteria-300x203.png 300w, /assets/filter-by-search-filter-criteria.png 774w" sizes="(max-width: 300px) 100vw, 300px" />](/_site/assets/filter-by-search-filter-criteria.png)Being able to search your errors and events by specific criteria is, perhaps, the largest improvement for version 2.0.
 
 By selecting the magnifying glass icon next to the calendar icon in the top navigation, you can enter <a title="Exceptionless Search Filter Documentation" href="http://docs.exceptionless.com/contents/search/" target="_blank">search criteria</a> and select whether you want the results to include fixed and/or hidden events/errors.
 

@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "Case Study"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-13383" src="http://exceptionless.com/assets/blog-header-image-small-case-study.png" alt="blog-header-image-small-case-study" width="260" height="260" data-id="13383" srcset="https://exceptionless.com/assets/blog-header-image-small-case-study.png 260w, https://exceptionless.com/assets/blog-header-image-small-case-study-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />It&#8217;s always great to hear back from our users, whether it&#8217;s a simple &#8220;atta boy&#8221; or a full page&#8217;s worth of feedback.
+<img loading="lazy" class="alignright size-full wp-image-13383" src="http://exceptionless.com/assets/blog-header-image-small-case-study.png" alt="blog-header-image-small-case-study" width="260" height="260" data-id="13383" srcset="/assets/blog-header-image-small-case-study.png 260w, /assets/blog-header-image-small-case-study-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />It&#8217;s always great to hear back from our users, whether it&#8217;s a simple &#8220;atta boy&#8221; or a full page&#8217;s worth of feedback.
 
 Today we thought it would be nice to share a recent case study from one of our users that lives in the scientific laboratory and processing equipment space. Their company is a leading provider of stirring, mixing, and kneading machines, among other things, that are used by the pharmaceutical, chemical, food, paint, cosmetic, and plastics industries around the world. Neat!
 

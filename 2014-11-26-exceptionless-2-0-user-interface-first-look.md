@@ -21,7 +21,7 @@ Please don&#8217;t hesitate to give us any feedback you may have after watching 
 
 ## **Video Transcript**
 
-<img loading="lazy" class="alignright size-medium wp-image-12325" style="margin-left: 20px; margin-bottom: 20px;" src="http://exceptionless.com/assets/v2VideoThumbnail-300x179.png" alt="Exceptionless 2.0" width="300" height="179" data-id="12325" srcset="https://exceptionless.com/assets/v2VideoThumbnail-300x179.png 300w, https://exceptionless.com/assets/v2VideoThumbnail-1024x611.png 1024w, https://exceptionless.com/assets/v2VideoThumbnail.png 1904w" sizes="(max-width: 300px) 100vw, 300px" /> Lets take a quick look around, shall we?
+<img loading="lazy" class="alignright size-medium wp-image-12325" style="margin-left: 20px; margin-bottom: 20px;" src="http://exceptionless.com/assets/v2VideoThumbnail-300x179.png" alt="Exceptionless 2.0" width="300" height="179" data-id="12325" srcset="/assets/v2VideoThumbnail-300x179.png 300w, /assets/v2VideoThumbnail-1024x611.png 1024w, /assets/v2VideoThumbnail.png 1904w" sizes="(max-width: 300px) 100vw, 300px" /> Lets take a quick look around, shall we?
 
 Everything is built on angularJS and talking to the REST api, so the UI itself is static, with no more server-rendered views.
 

@@ -6,9 +6,9 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-[<img loading="lazy" class="aligncenter size-large wp-image-15307" style="margin-bottom: 20px;" src="https://exceptionless.com/assets/query-validation-di-issues-error-handling-1024x538.jpg" alt="" width="940" height="494" data-id="15307" srcset="https://exceptionless.com/assets/query-validation-di-issues-error-handling-1024x538.jpg 1024w, https://exceptionless.com/assets/query-validation-di-issues-error-handling-300x158.jpg 300w, https://exceptionless.com/assets/query-validation-di-issues-error-handling-768x403.jpg 768w, https://exceptionless.com/assets/query-validation-di-issues-error-handling.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/videos/4DDYJ-exceptionless-weekly-demo-2-1-17)
+[<img loading="lazy" class="aligncenter size-large wp-image-15307" style="margin-bottom: 20px;" src="/assets/query-validation-di-issues-error-handling-1024x538.jpg" alt="" width="940" height="494" data-id="15307" srcset="/assets/query-validation-di-issues-error-handling-1024x538.jpg 1024w, /assets/query-validation-di-issues-error-handling-300x158.jpg 300w, /assets/query-validation-di-issues-error-handling-768x403.jpg 768w, /assets/query-validation-di-issues-error-handling.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/videos/4DDYJ-exceptionless-weekly-demo-2-1-17)
 
-This week&#8217;s live code demo comes to you during a week of final testing and tweaks prior to our [launch of Exceptionless 4.0](https://exceptionless.com/exceptionless-4-0/).
+This week&#8217;s live code demo comes to you during a week of final testing and tweaks prior to our [launch of Exceptionless 4.0](/exceptionless-4-0/).
 
 Blake dives into and shows you the code for several important improvements and fixes, which we&#8217;ve listed below.<!--more-->
 
@@ -25,5 +25,5 @@ Blake dives into and shows you the code for several important improvements and f
 </h2>
 
 <p style="text-align: center;">
-  <a href="https://exceptionless.com/category/live-coding/">Watch more Live Code Demos</a>
+  <a href="/category/live-coding/">Watch more Live Code Demos</a>
 </p>

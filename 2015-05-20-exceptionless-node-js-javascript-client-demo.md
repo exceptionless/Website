@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-13218" src="/_site/assets/node-js-header.jpg" alt="Exceptionless Node.js Javascript Client" width="708" height="250" data-id="13218" srcset="https://exceptionless.com/assets/node-js-header.jpg 708w, https://exceptionless.com/assets/node-js-header-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-13218" src="/_site/assets/node-js-header.jpg" alt="Exceptionless Node.js Javascript Client" width="708" height="250" data-id="13218" srcset="/assets/node-js-header.jpg 708w, /assets/node-js-header-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 Last week we announced our full featured <a title="Exceptionless JavaScript Client" href="/javascript-client-available-for-preview-testing/" target="_blank">JavaScript client</a>, and we&#8217;re super excited about releasing a version 1.0 soon.
 

@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" data-id="16177"  src="https://exceptionless.com/assets/c-sharp-bug-tracking-software-1024x538.jpg" alt="" width="940" height="494" class="aligncenter size-large wp-image-16177" srcset="https://exceptionless.com/assets/c-sharp-bug-tracking-software-1024x538.jpg 1024w, https://exceptionless.com/assets/c-sharp-bug-tracking-software-300x158.jpg 300w, https://exceptionless.com/assets/c-sharp-bug-tracking-software-768x403.jpg 768w, https://exceptionless.com/assets/c-sharp-bug-tracking-software.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+<img loading="lazy" data-id="16177"  src="/assets/c-sharp-bug-tracking-software-1024x538.jpg" alt="" width="940" height="494" class="aligncenter size-large wp-image-16177" srcset="/assets/c-sharp-bug-tracking-software-1024x538.jpg 1024w, /assets/c-sharp-bug-tracking-software-300x158.jpg 300w, /assets/c-sharp-bug-tracking-software-768x403.jpg 768w, /assets/c-sharp-bug-tracking-software.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
 
 Bugs, exceptions, issues, faults, errors, incidents, whatever you want to call them, they’re unavoidable. No matter how elegantly you think you wrote your code, no matter how many user cases you think you’ve covered, your application is going to have bugs and part of our jobs is to find those bugs and fix them. You can track these bugs using an Excel or Google sheet (if you’re a glutton for punishment), but the best way is to use a bug tracking platform that tracks, records, reports, and manages these exceptions for you.<!--more-->
 

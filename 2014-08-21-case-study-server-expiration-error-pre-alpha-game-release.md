@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "Case Study"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-9759" style="margin-left: 15px;" src="http://exceptionless.com/assets/game-post.jpg" alt="game-post" width="160" height="160" data-id="9759" srcset="https://exceptionless.com/assets/game-post.jpg 160w, https://exceptionless.com/assets/game-post-150x150.jpg 150w" sizes="(max-width: 160px) 100vw, 160px" />Today we&#8217;ve got a pretty cool case study that comes to us from a game development studio!
+<img loading="lazy" class="alignright size-full wp-image-9759" style="margin-left: 15px;" src="http://exceptionless.com/assets/game-post.jpg" alt="game-post" width="160" height="160" data-id="9759" srcset="/assets/game-post.jpg 160w, /assets/game-post-150x150.jpg 150w" sizes="(max-width: 160px) 100vw, 160px" />Today we&#8217;ve got a pretty cool case study that comes to us from a game development studio!
 
 We love to see Exceptionless being used by companies with interesting projects and development pipelines, and what&#8217;s more interesting than gaming, multi-server, and multi-player environments?
 

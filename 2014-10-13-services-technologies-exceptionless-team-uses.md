@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-11519" src="http://exceptionless.com/assets/services-and-tech.png" alt="Exceptionless Services & Technology" width="155" height="155" data-id="11519" srcset="https://exceptionless.com/assets/services-and-tech.png 155w, https://exceptionless.com/assets/services-and-tech-150x150.png 150w" sizes="(max-width: 155px) 100vw, 155px" />Over the past couple of weeks, we have been writing about the tools and technologies that the Exceptionless Team uses to create, support, and maintain Exceptionless. In part three of the series, we want to take a look at the services used.
+<img loading="lazy" class="alignright size-full wp-image-11519" src="http://exceptionless.com/assets/services-and-tech.png" alt="Exceptionless Services & Technology" width="155" height="155" data-id="11519" srcset="/assets/services-and-tech.png 155w, /assets/services-and-tech-150x150.png 150w" sizes="(max-width: 155px) 100vw, 155px" />Over the past couple of weeks, we have been writing about the tools and technologies that the Exceptionless Team uses to create, support, and maintain Exceptionless. In part three of the series, we want to take a look at the services used.
 
 Most projects need project organization, time management, tracking, the ability to easily communicate with team members, version control, etc &#8211; the list goes on. Exceptionless is no different. Here are some of our favorite tools that provide those services to help keep Exceptionless, well, Exceptionless.<!--more-->
 

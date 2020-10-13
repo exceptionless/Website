@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-13908" style="margin-bottom: 20px;" src="http://exceptionless.com/assets/reference-ids-blog-header-image.png" alt="Exceptionless Reference IDs" width="708" height="250" data-id="13908" srcset="https://exceptionless.com/assets/reference-ids-blog-header-image.png 708w, https://exceptionless.com/assets/reference-ids-blog-header-image-300x106.png 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-13908" style="margin-bottom: 20px;" src="http://exceptionless.com/assets/reference-ids-blog-header-image.png" alt="Exceptionless Reference IDs" width="708" height="250" data-id="13908" srcset="/assets/reference-ids-blog-header-image.png 708w, /assets/reference-ids-blog-header-image-300x106.png 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 This week we want to talk about **reference Ids** and how we use them to **improve customer service** for Exceptionless. And how we think you can do the same for your users.
 

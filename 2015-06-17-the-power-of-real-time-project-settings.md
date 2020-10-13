@@ -23,7 +23,7 @@ Let&#8217;s take a look at a JavaScript and .NET client usage example to get yo
 
 ## Adding a New Client Configuration Value
 
-[<img loading="lazy" class="alignright wp-image-13327 size-medium" style="margin-left: 15px; margin-bottom: 15px;" src="http://exceptionless.com/assets/project-settings-page-300x209.png" alt="Exceptionless Client Configuration Settings" width="300" height="209" data-id="13327" srcset="https://exceptionless.com/assets/project-settings-page-300x209.png 300w, https://exceptionless.com/assets/project-settings-page.png 813w" sizes="(max-width: 300px) 100vw, 300px" />](http://exceptionless.com/assets/project-settings-page.png)
+[<img loading="lazy" class="alignright wp-image-13327 size-medium" style="margin-left: 15px; margin-bottom: 15px;" src="http://exceptionless.com/assets/project-settings-page-300x209.png" alt="Exceptionless Client Configuration Settings" width="300" height="209" data-id="13327" srcset="/assets/project-settings-page-300x209.png 300w, /assets/project-settings-page.png 813w" sizes="(max-width: 300px) 100vw, 300px" />](http://exceptionless.com/assets/project-settings-page.png)
 
 Before we get started with more of an explanation and an example, we need to add a new key and value. To do so, we go to `Admin > Projects` in our Exceptionless Dashboard, select the project we are working on, then go to the &#8220;Settings&#8221; tab.
 

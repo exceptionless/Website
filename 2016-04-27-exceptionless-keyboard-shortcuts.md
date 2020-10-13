@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-14345" src="http://exceptionless.com/assets/keyboard-shortcuts.png" alt="keyboard-shortcuts" width="353" height="302" data-id="14345" srcset="https://exceptionless.com/assets/keyboard-shortcuts.png 353w, https://exceptionless.com/assets/keyboard-shortcuts-300x257.png 300w" sizes="(max-width: 353px) 100vw, 353px" />Today we&#8217;ve got a quick article on one of the little known features of Exceptionless: keyboard shortcuts.
+<img loading="lazy" class="alignright size-full wp-image-14345" src="http://exceptionless.com/assets/keyboard-shortcuts.png" alt="keyboard-shortcuts" width="353" height="302" data-id="14345" srcset="/assets/keyboard-shortcuts.png 353w, /assets/keyboard-shortcuts-300x257.png 300w" sizes="(max-width: 353px) 100vw, 353px" />Today we&#8217;ve got a quick article on one of the little known features of Exceptionless: keyboard shortcuts.
 
 In an effort to help you navigate Exceptionless event stacks better and troubleshoot faster, we&#8217;ve added keyboard shortcuts that lets you do things like go to the stack from an individual event occurrence, copy the event JSON, navigate to the previous event occurrence, etc.
 

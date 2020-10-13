@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" data-id="16233"  src="https://exceptionless.com/assets/event-tracking-logging-software-1024x538.jpg" alt="" width="940" height="494" class="aligncenter size-large wp-image-16233" srcset="https://exceptionless.com/assets/event-tracking-logging-software-1024x538.jpg 1024w, https://exceptionless.com/assets/event-tracking-logging-software-300x158.jpg 300w, https://exceptionless.com/assets/event-tracking-logging-software-768x403.jpg 768w, https://exceptionless.com/assets/event-tracking-logging-software.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />  
+<img loading="lazy" data-id="16233"  src="/assets/event-tracking-logging-software-1024x538.jpg" alt="" width="940" height="494" class="aligncenter size-large wp-image-16233" srcset="/assets/event-tracking-logging-software-1024x538.jpg 1024w, /assets/event-tracking-logging-software-300x158.jpg 300w, /assets/event-tracking-logging-software-768x403.jpg 768w, /assets/event-tracking-logging-software.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />  
 Whether you’re developing a quick module, application, or full blown, go-to-market product, you’re going to need some form of event logging throughout the development process. It can be done without, but you’ll be making your job multiple magnitudes more difficult and losing valuable man hours that could be put towards making your product better instead of just not breaking.<!--more-->
 
 ## WHAT IS EVENT LOGGING?

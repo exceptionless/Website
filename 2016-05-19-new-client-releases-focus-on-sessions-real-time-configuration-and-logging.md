@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", ".NET"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-14451" src="http://exceptionless.com/assets/net-3.5.0-js-1.4.0.png" alt="net-3.5.0-js-1.4.0" width="260" height="260" data-id="14451" srcset="https://exceptionless.com/assets/net-3.5.0-js-1.4.0.png 260w, https://exceptionless.com/assets/net-3.5.0-js-1.4.0-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Exceptionless.NET v3.5.0 and Exceptionless.JavaScript v1.4.0 have been released and they are chock full of **new features and feature improvements!**
+<img loading="lazy" class="alignright size-full wp-image-14451" src="http://exceptionless.com/assets/net-3.5.0-js-1.4.0.png" alt="net-3.5.0-js-1.4.0" width="260" height="260" data-id="14451" srcset="/.png 260w, /assets/net-3.5.0-js-1.4./"(max-width: 260px) 100vw, 260px" />Exceptionless.NET v3.5.0 and Exceptionless.JavaScript v1.4.0 have been released and they are chock full of **new features and feature improvements!**
 
 There weren&#8217;t a whole lot of bug fixes with these releases. Could it be that Exceptionless is working and we&#8217;ve squelched most of the bugs? We think so!
 

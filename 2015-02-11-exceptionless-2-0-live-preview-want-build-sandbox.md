@@ -14,7 +14,7 @@ We&#8217;re super excited, but we also <span style="color: #ff0000;"><strong>ne
 
 ## You Can Be.Exceptionless<figure id="attachment_12699" class="thumbnail wp-caption alignright" style="width: 300px">
 
-<a href="http://exceptionless.com/assets/sandbox-preview.jpg" rel="attachment wp-att-12699"><img loading="lazy" class="wp-image-12699 size-medium" src="http://exceptionless.com/assets/sandbox-preview-300x183.jpg" alt="Exceptionless 2.0 Dashboard Preview" width="300" height="183" data-id="12699" srcset="https://exceptionless.com/assets/sandbox-preview-300x183.jpg 300w, https://exceptionless.com/assets/sandbox-preview-1024x623.jpg 1024w, https://exceptionless.com/assets/sandbox-preview.jpg 1280w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption class="caption wp-caption-text">Exceptionless 2.0 Dashboard Preview</figcaption></figure> 
+<a href="http://exceptionless.com/assets/sandbox-preview.jpg" rel="attachment wp-att-12699"><img loading="lazy" class="wp-image-12699 size-medium" src="http://exceptionless.com/assets/sandbox-preview-300x183.jpg" alt="Exceptionless 2.0 Dashboard Preview" width="300" height="183" data-id="12699" srcset="/assets/sandbox-preview-300x183.jpg 300w, /assets/sandbox-preview-1024x623.jpg 1024w, /assets/sandbox-preview.jpg 1280w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption class="caption wp-caption-text">Exceptionless 2.0 Dashboard Preview</figcaption></figure> 
 
 **Simply&#8230;**
 

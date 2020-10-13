@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-large wp-image-15970" style="margin-bottom: 20px;" src="https://exceptionless.com/assets/exceptionless-net-4-1-release-1024x538.jpg" alt="Exceptionless.NET 4.1 Release" width="940" height="494" data-id="15970" srcset="https://exceptionless.com/assets/exceptionless-net-4-1-release-1024x538.jpg 1024w, https://exceptionless.com/assets/exceptionless-net-4-1-release-300x158.jpg 300w, https://exceptionless.com/assets/exceptionless-net-4-1-release-768x403.jpg 768w, https://exceptionless.com/assets/exceptionless-net-4-1-release.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+<img loading="lazy" class="aligncenter size-large wp-image-15970" style="margin-bottom: 20px;" src="/assets/exceptionless-net-4-1-release-1024x538.jpg" alt="Exceptionless.NET 4.1 Release" width="940" height="494" data-id="15970" srcset="/assets/exceptionless-net-4-1-release-1024x538.jpg 1024w, /assets/exceptionless-net-4-1-release-300x158.jpg 300w, /assets/exceptionless-net-4-1-release-768x403.jpg 768w, /assets/exceptionless-net-4-1-release.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
 
 [Exceptionless.NET](https://github.com/exceptionless/Exceptionless.Net) 4.1 is here and we wanted to make a quick blog post highlighting the new features, bug fixes, and of course upgrading.
 

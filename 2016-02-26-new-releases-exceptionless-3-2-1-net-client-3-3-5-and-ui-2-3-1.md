@@ -7,7 +7,7 @@ layout: blog_post.liquid
 tags: ["posts"]
 ---
 <p style="text-align: center;">
-  <img loading="lazy" class="aligncenter size-full wp-image-14148" src="http://exceptionless.com/assets/blog-header-image-3.2.1.jpg" alt="Exceptionless error logging" width="708" height="250" data-id="14148" srcset="https://exceptionless.com/assets/blog-header-image-3.2.1.jpg 708w, https://exceptionless.com/assets/blog-header-image-3.2.1-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+  <img loading="lazy" class="aligncenter size-full wp-image-14148" src="http://exceptionless.com/assets/blog-header-image-3.2.1.jpg" alt="Exceptionless error logging" width="708" height="250" data-id="14148" srcset="/assets/blog-header-image-3.2.1.jpg 708w, /assets/blog-header-image-3.2.1-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 </p>
 
 Since the [last major release](http://exceptionless.com/new-releases-for-all-the-codes-exceptionless-3-2/) cycle, we&#8217;ve made several minor releases, including Exceptionless 3.2.1, Exceptionless.NET 3.3.5, and Exceptionless.UI 2.3.1.

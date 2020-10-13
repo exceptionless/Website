@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-14112" src="http://exceptionless.com/assets/reverse-geocoding-header.jpg" alt="Reverse Geocoding" width="708" height="250" data-id="14112" srcset="https://exceptionless.com/assets/reverse-geocoding-header.jpg 708w, https://exceptionless.com/assets/reverse-geocoding-header-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-14112" src="http://exceptionless.com/assets/reverse-geocoding-header.jpg" alt="Reverse Geocoding" width="708" height="250" data-id="14112" srcset="/assets/reverse-geocoding-header.jpg 708w, /assets/reverse-geocoding-header-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 We recently introduced reverse geocoding into Exceptionless and are now adding features to make full use of it.
 
@@ -24,7 +24,7 @@ It’s the process of taking geo coordinates or an IP Address and resolving it t
 
 ### Why You Need It
 
-<img loading="lazy" class="aligncenter size-full wp-image-14104" src="http://exceptionless.com/assets/user-event-geo-location.jpg" alt="Reverse Geocoding - User Location" width="359" height="49" data-id="14104" srcset="https://exceptionless.com/assets/user-event-geo-location.jpg 359w, https://exceptionless.com/assets/user-event-geo-location-300x41.jpg 300w" sizes="(max-width: 359px) 100vw, 359px" /> 
+<img loading="lazy" class="aligncenter size-full wp-image-14104" src="http://exceptionless.com/assets/user-event-geo-location.jpg" alt="Reverse Geocoding - User Location" width="359" height="49" data-id="14104" srcset="/assets/user-event-geo-location.jpg 359w, /assets/user-event-geo-location-300x41.jpg 300w" sizes="(max-width: 359px) 100vw, 359px" /> 
 
 Wouldn’t it be nice if you could **provide location services to your users automatically**? Maybe help them fill in a shipping form from a zip code or there current location?
 

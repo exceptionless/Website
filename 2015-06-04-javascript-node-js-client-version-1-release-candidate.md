@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "javascript", "node.js"]
 ---
-<img loading="lazy" class="aligncenter wp-image-13283 size-full" src="/_site/assets/javascript-release-candidate.jpg" alt="Exceptionless JavaScript Client" width="708" height="250" data-id="13281" srcset="https://exceptionless.com/assets/javascript-release-candidate.jpg 708w, https://exceptionless.com/assets/javascript-release-candidate-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter wp-image-13283 size-full" src="/_site/assets/javascript-release-candidate.jpg" alt="Exceptionless JavaScript Client" width="708" height="250" data-id="13281" srcset="/assets/javascript-release-candidate.jpg 708w, /assets/javascript-release-candidate-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 If you&#8217;ve been following along the last few weeks, you know we&#8217;ve been working hard to get the new <a href="http://exceptionless.com/javascript-client-available-for-preview-testing/" target="_blank">JavaScript Client</a> up to speed and ready for a version 1 release.
 

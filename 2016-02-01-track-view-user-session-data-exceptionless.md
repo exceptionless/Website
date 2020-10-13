@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-large wp-image-14055" src="http://exceptionless.com/assets/sessions-dashboard-header2-1024x411.png" alt="app user session logging" width="940" height="377" data-id="14055" srcset="https://exceptionless.com/assets/sessions-dashboard-header2-1024x411.png 1024w, https://exceptionless.com/assets/sessions-dashboard-header2-300x120.png 300w, https://exceptionless.com/assets/sessions-dashboard-header2-768x308.png 768w, https://exceptionless.com/assets/sessions-dashboard-header2.png 1824w" sizes="(max-width: 940px) 100vw, 940px" />
+<img loading="lazy" class="aligncenter size-large wp-image-14055" src="http://exceptionless.com/assets/sessions-dashboard-header2-1024x411.png" alt="app user session logging" width="940" height="377" data-id="14055" srcset="/assets/sessions-dashboard-header2-1024x411.png 1024w, /assets/sessions-dashboard-header2-300x120.png 300w, /assets/sessions-dashboard-header2-768x308.png 768w, /assets/sessions-dashboard-header2.png 1824w" sizes="(max-width: 940px) 100vw, 940px" />
 
 To many, this feature may be the missing piece&#8230; that connection you&#8217;ve always wanted to make between users, bugs, exceptions, app events, etc. I&#8217;m talking about, of course, **user session tracking!**
 
@@ -29,7 +29,7 @@ Each user session records how long they were active and what they did. For insta
 With that, each user session event has a &#8220;Session Events&#8221; tab that displays all the relevant events that occurred during that session and allows you to see exactly what that user did. This is especially helpful, of course, if that session lead to an exception or noteworthy event in your app.
 
 <p style="text-align: center;">
-  <a href="http://exceptionless.com/assets/sessions-event-tab-user-footsteps.jpg" rel="attachment wp-att-14046"><img loading="lazy" class="aligncenter size-medium wp-image-14046" src="http://exceptionless.com/assets/sessions-event-tab-user-footsteps-300x142.jpg" alt="App User Session Reporting" width="300" height="142" data-id="14046" srcset="https://exceptionless.com/assets/sessions-event-tab-user-footsteps-300x142.jpg 300w, https://exceptionless.com/assets/sessions-event-tab-user-footsteps-768x364.jpg 768w, https://exceptionless.com/assets/sessions-event-tab-user-footsteps.jpg 815w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="http://exceptionless.com/assets/sessions-event-tab-user-footsteps.jpg" rel="attachment wp-att-14046"><img loading="lazy" class="aligncenter size-medium wp-image-14046" src="http://exceptionless.com/assets/sessions-event-tab-user-footsteps-300x142.jpg" alt="App User Session Reporting" width="300" height="142" data-id="14046" srcset="/assets/sessions-event-tab-user-footsteps-300x142.jpg 300w, /assets/sessions-event-tab-user-footsteps-768x364.jpg 768w, /assets/sessions-event-tab-user-footsteps.jpg 815w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 </p>
 
 <p style="text-align: left;">
@@ -37,7 +37,7 @@ With that, each user session event has a &#8220;Session Events&#8221; tab that d
 </p>
 
 <p style="text-align: left;">
-  <a href="http://exceptionless.com/assets/sessions-unique-user-data.jpg" rel="attachment wp-att-14047"><img loading="lazy" class="aligncenter size-medium wp-image-14047" src="http://exceptionless.com/assets/sessions-unique-user-data-300x155.jpg" alt="app user session unique data" width="300" height="155" data-id="14047" srcset="https://exceptionless.com/assets/sessions-unique-user-data-300x155.jpg 300w, https://exceptionless.com/assets/sessions-unique-user-data-768x398.jpg 768w, https://exceptionless.com/assets/sessions-unique-user-data.jpg 801w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="http://exceptionless.com/assets/sessions-unique-user-data.jpg" rel="attachment wp-att-14047"><img loading="lazy" class="aligncenter size-medium wp-image-14047" src="http://exceptionless.com/assets/sessions-unique-user-data-300x155.jpg" alt="app user session unique data" width="300" height="155" data-id="14047" srcset="/assets/sessions-unique-user-data-300x155.jpg 300w, /assets/sessions-unique-user-data-768x398.jpg 768w, /assets/sessions-unique-user-data.jpg 801w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 </p>
 
 <h2 style="text-align: left;">

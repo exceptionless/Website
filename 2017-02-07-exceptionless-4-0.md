@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-15281" style="margin-left: 15px;" src="https://exceptionless.com/assets/exceptionless-4.png" alt="Exceptionless 4.0 Announcement" width="260" height="260" data-id="15281" srcset="https://exceptionless.com/assets/exceptionless-4.png 260w, https://exceptionless.com/assets/exceptionless-4-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That&#8217;s right folks, Exceptionless 4.0 is here and we&#8217;ve got the full low-down on all the improvements, upgrades, and enhancements in this week&#8217;s blog article, along with how to upgrade instructions for self hosters.
+<img loading="lazy" class="alignright size-full wp-image-15281" style="margin-left: 15px;" src="/assets/exceptionless-4.png" alt="Exceptionless 4.0 Announcement" width="260" height="260" data-id="15281" srcset="/assets/exceptionless-4.png 260w, /assets/exceptionless-4-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That&#8217;s right folks, Exceptionless 4.0 is here and we&#8217;ve got the full low-down on all the improvements, upgrades, and enhancements in this week&#8217;s blog article, along with how to upgrade instructions for self hosters.
 
 The primary focus of version 4.0 was to add support for Elasticsearch 5. By migrating from Elasticsearch 1.7 to 5, we removed growing technical debt and benefited greatly in the process. Here is an overview of the benefits gained by migrating to Elasticsearch 5 in 4.0.0.<!--more-->
 
@@ -38,7 +38,7 @@ Our goal is to have everyone be able to setup and use Exceptionless in a matter 
 
 ## Dashboards
 
-With Exceptionless 4.0.0, we continued to focus on finishing up backend improvements to both our [repositories](https://github.com/exceptionless/Foundatio.Repositories) and [parsers](https://github.com/exceptionless/Foundatio.Parsers) that we made in the 3.5 releases. We feel that **all the pieces are finally in place to allow us to do custom dashboards in the near future**, something we talk about in our [2017 Roadmap blog post](https://exceptionless.com/2017-exceptionless-feature-functionality-and-enhancement-roadmap/).
+With Exceptionless 4.0.0, we continued to focus on finishing up backend improvements to both our [repositories](https://github.com/exceptionless/Foundatio.Repositories) and [parsers](https://github.com/exceptionless/Foundatio.Parsers) that we made in the 3.5 releases. We feel that **all the pieces are finally in place to allow us to do custom dashboards in the near future**, something we talk about in our [2017 Roadmap blog post](/2017-exceptionless-feature-functionality-and-enhancement-roadmap/).
 
 [Foundatio.Parsers](https://github.com/exceptionless/Foundatio.Parsers) now gives us the ability to define and validate custom aggregations using Lucene-style syntax. For example, lets say I want a date histogram that shows the min, max and average event value. I&#8217;d just need to pass `date:(date min:value max:value avg:value)` to the following endpoint: [`/api/v2/events/count?aggregations=date:(date min:value max:value avg:value)`](https://api.exceptionless.io/docs/index#!/Event/Event_GetCountAsync) to return aggregations across a time series!
 
@@ -50,7 +50,7 @@ Also, please take a look at the [change log](https://github.com/exceptionless/Ex
 
 ## Always Improving
 
-We’re always striving to improve the efficiency of Exceptionless and all of our projects. If you see any room for improvement or have any comments when using anything from us, please send us an in-app message, [submit a GitHub issue](https://github.com/exceptionless/Exceptionless/issues) or [contact us](https://exceptionless.com/contact/) on the website.
+We’re always striving to improve the efficiency of Exceptionless and all of our projects. If you see any room for improvement or have any comments when using anything from us, please send us an in-app message, [submit a GitHub issue](https://github.com/exceptionless/Exceptionless/issues) or [contact us](/contact/) on the website.
 
 ## And Lastly, Thanks!
 
@@ -58,6 +58,6 @@ We&#8217;d like to say thank you to the community, project sponsors, and the Ela
 
 ### Want to know what&#8217;s coming next?
 
-[Check out the 2017 Roadmap](https://exceptionless.com/2017-exceptionless-feature-functionality-and-enhancement-roadmap/) and let us know your thoughts on our planned development.
+[Check out the 2017 Roadmap](/2017-exceptionless-feature-functionality-and-enhancement-roadmap/) and let us know your thoughts on our planned development.
 
 &nbsp;

@@ -34,7 +34,7 @@ To be extra careful with your data, using * allows you to specify wildcards that
 
 ### Example
 
-<img loading="lazy" class="aligncenter wp-image-13355 size-full" src="/_site/assets/data-exclusion-examples.png" alt="Exceptionless Security" width="520" height="44" data-id="13355" srcset="https://exceptionless.com/assets/data-exclusion-examples.png 520w, https://exceptionless.com/assets/data-exclusion-examples-300x25.png 300w" sizes="(max-width: 520px) 100vw, 520px" /> 
+<img loading="lazy" class="aligncenter wp-image-13355 size-full" src="/_site/assets/data-exclusion-examples.png" alt="Exceptionless Security" width="520" height="44" data-id="13355" srcset="/assets/data-exclusion-examples.png 520w, /assets/data-exclusion-examples-300x25.png 300w" sizes="(max-width: 520px) 100vw, 520px" /> 
 
 One potential example is, let’s say, user addresses. Perhaps you have multiple user addresses that may get transmitted, and you want to exclude some or all of them. Maybe you have &#8220;HomeAddress&#8221; and &#8220;WorkAddress&#8221;.
 

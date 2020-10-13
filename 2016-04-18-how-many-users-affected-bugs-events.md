@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-**<img loading="lazy" class="alignright size-full wp-image-14327" src="http://exceptionless.com/assets/users-featured-image.png" alt="exceptionless user tracking" width="260" height="260" data-id="14327" srcset="https://exceptionless.com/assets/users-featured-image.png 260w, https://exceptionless.com/assets/users-featured-image-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Prioritizing your bug fixes and development time** in general can be a daunting task.
+**<img loading="lazy" class="alignright size-full wp-image-14327" src="http://exceptionless.com/assets/users-featured-image.png" alt="exceptionless user tracking" width="260" height="260" data-id="14327" srcset="/assets/users-featured-image.png 260w, /assets/users-featured-image-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Prioritizing your bug fixes and development time** in general can be a daunting task.
 
 Sometimes, as developers, **we want to work on this shiny widget** or this annoying bug, and we don&#8217;t really have anything in our face telling us to **quit focusing on our dreams** and work on what matters to the bottom line.
 
@@ -30,13 +30,13 @@ If you mouse over the percentage, you can see the number of users the percentage
 
 These numbers are dynamically calculated for your selected timeframe that you are currently viewing.
 
-<a href="http://exceptionless.com/assets/dashboardv2-edited.png" rel="attachment wp-att-14353"><img loading="lazy" class="aligncenter size-large wp-image-14353" src="http://exceptionless.com/assets/dashboardv2-edited-1024x662.png" alt="users affected by bug" width="940" height="608" data-id="14353" srcset="https://exceptionless.com/assets/dashboardv2-edited-1024x662.png 1024w, https://exceptionless.com/assets/dashboardv2-edited-300x194.png 300w, https://exceptionless.com/assets/dashboardv2-edited-768x497.png 768w, https://exceptionless.com/assets/dashboardv2-edited.png 1404w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href="http://exceptionless.com/assets/dashboardv2-edited.png" rel="attachment wp-att-14353"><img loading="lazy" class="aligncenter size-large wp-image-14353" src="http://exceptionless.com/assets/dashboardv2-edited-1024x662.png" alt="users affected by bug" width="940" height="608" data-id="14353" srcset="/assets/dashboardv2-edited-1024x662.png 1024w, /assets/dashboardv2-edited-300x194.png 300w, /assets/dashboardv2-edited-768x497.png 768w, /assets/dashboardv2-edited.png 1404w" sizes="(max-width: 940px) 100vw, 940px" /></a>
 
 ### Most Users Dashboard
 
 Because the main dashboard shows you the most frequent events, not necessarily with the highest usage, **we thought it would be helpful to have a new dashboard that automatically sorts event stacks by the percentage of users affected,** letting you start at the top of an exception list, for example, and work your way down knowing you&#8217;re always working on a bug, etc, that is affecting the highest percentage of users.
 
-<a href="http://exceptionless.com/assets/dashboard-most-usersv2-edited.png" rel="attachment wp-att-14354"><img loading="lazy" class="aligncenter size-large wp-image-14354" src="http://exceptionless.com/assets/dashboard-most-usersv2-edited-1024x644.png" alt="user event dashboard" width="940" height="591" data-id="14354" srcset="https://exceptionless.com/assets/dashboard-most-usersv2-edited-1024x644.png 1024w, https://exceptionless.com/assets/dashboard-most-usersv2-edited-300x189.png 300w, https://exceptionless.com/assets/dashboard-most-usersv2-edited-768x483.png 768w, https://exceptionless.com/assets/dashboard-most-usersv2-edited.png 1408w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href="http://exceptionless.com/assets/dashboard-most-usersv2-edited.png" rel="attachment wp-att-14354"><img loading="lazy" class="aligncenter size-large wp-image-14354" src="http://exceptionless.com/assets/dashboard-most-usersv2-edited-1024x644.png" alt="user event dashboard" width="940" height="591" data-id="14354" srcset="/assets/dashboard-most-usersv2-edited-1024x644.png 1024w, /assets/dashboard-most-usersv2-edited-300x189.png 300w, /assets/dashboard-most-usersv2-edited-768x483.png 768w, /assets/dashboard-most-usersv2-edited.png 1408w" sizes="(max-width: 940px) 100vw, 940px" /></a>
 
 ## Setting User Identity
 

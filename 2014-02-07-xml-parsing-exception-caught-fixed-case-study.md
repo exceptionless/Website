@@ -10,7 +10,7 @@ This is yet another story of an elusive bug that, without a proper error reporti
 
 When third-party software and services interact with your code, in any way, you have to be wary that their data may be different from yours. In this instance, our client was parsing some XML that included an unfriendly cookie name. Lets see what happened next&#8230;<!--more-->
 
-<img loading="lazy" class="aligncenter size-full wp-image-2603" alt=".NET Exception Dashboard" src="http://exceptionless.com/assets/apexExceptionsRandom.png" width="878" height="248" data-id="2603" srcset="https://exceptionless.com/assets/apexExceptionsRandom.png 878w, https://exceptionless.com/assets/apexExceptionsRandom-300x84.png 300w" sizes="(max-width: 878px) 100vw, 878px" /> 
+<img loading="lazy" class="aligncenter size-full wp-image-2603" alt=".NET Exception Dashboard" src="http://exceptionless.com/assets/apexExceptionsRandom.png" width="878" height="248" data-id="2603" srcset="/assets/apexExceptionsRandom.png 878w, /assets/apexExceptionsRandom-300x84.png 300w" sizes="(max-width: 878px) 100vw, 878px" /> 
 
 ## Killer Cookies
 

@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", ".NET"]
 ---
-<img loading="lazy" class="aligncenter size-large wp-image-15226" src="https://exceptionless.com/assets/elasticsearch-2017-roadmap-header-1024x538.jpg" alt="exceptionless feature roadmap for 2017" width="940" height="494" data-id="15226" srcset="https://exceptionless.com/assets/elasticsearch-2017-roadmap-header-1024x538.jpg 1024w, https://exceptionless.com/assets/elasticsearch-2017-roadmap-header-300x158.jpg 300w, https://exceptionless.com/assets/elasticsearch-2017-roadmap-header-768x403.jpg 768w, https://exceptionless.com/assets/elasticsearch-2017-roadmap-header.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+<img loading="lazy" class="aligncenter size-large wp-image-15226" src="/assets/elasticsearch-2017-roadmap-header-1024x538.jpg" alt="exceptionless feature roadmap for 2017" width="940" height="494" data-id="15226" srcset="/assets/elasticsearch-2017-roadmap-header-1024x538.jpg 1024w, /assets/elasticsearch-2017-roadmap-header-300x158.jpg 300w, /assets/elasticsearch-2017-roadmap-header-768x403.jpg 768w, /assets/elasticsearch-2017-roadmap-header.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
 
 Can you believe it&#8217;s almost February already! Us either. No rest for the whicked, though, as we sit down to get cranking on our list of Exceptionless changes for 2017.
 

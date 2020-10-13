@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-medium wp-image-14664" style="margin: 50px;" src="http://exceptionless.com/assets/cevo-logo-300x60.png" alt="CEVO, Inc. Logo" width="200" height="40" data-id="14664" srcset="https://exceptionless.com/assets/cevo-logo-300x60.png 300w, https://exceptionless.com/assets/cevo-logo.png 584w" sizes="(max-width: 200px) 100vw, 200px" />Case study time!
+<img loading="lazy" class="alignright size-medium wp-image-14664" style="margin: 50px;" src="http://exceptionless.com/assets/cevo-logo-300x60.png" alt="CEVO, Inc. Logo" width="200" height="40" data-id="14664" srcset="/assets/cevo-logo-300x60.png 300w, /assets/cevo-logo.png 584w" sizes="(max-width: 200px) 100vw, 200px" />Case study time!
 
 Today we&#8217;ve got a great example of Exceptionless helping software developers identify major issues in their web applications affecting thousands of users.
 

@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", ".NET"]
 ---
-[<img loading="lazy" class="aligncenter size-large wp-image-15370" style="margin-bottom: 20px;" src="https://exceptionless.com/assets/live-code-demo-170308-1024x538.jpg" alt="Exceptionless live code demo 2/20/17" width="940" height="494" data-id="15370" srcset="https://exceptionless.com/assets/live-code-demo-170308-1024x538.jpg 1024w, https://exceptionless.com/assets/live-code-demo-170308-300x158.jpg 300w, https://exceptionless.com/assets/live-code-demo-170308-768x403.jpg 768w, https://exceptionless.com/assets/live-code-demo-170308.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/xAq0E-exceptionless-weekly-demo-2-20-17/)
+[<img loading="lazy" class="aligncenter size-large wp-image-15370" style="margin-bottom: 20px;" src="/assets/live-code-demo-170308-1024x538.jpg" alt="Exceptionless live code demo 2/20/17" width="940" height="494" data-id="15370" srcset="/assets/live-code-demo-170308-1024x538.jpg 1024w, /assets/live-code-demo-170308-300x158.jpg 300w, /assets/live-code-demo-170308-768x403.jpg 768w, /assets/live-code-demo-170308.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/xAq0E-exceptionless-weekly-demo-2-20-17/)
 
 Watch out this week, Blake&#8217;s on fire! We&#8217;re talking email loggings, UI tweaks, Exceptionless.NET updates and fixes, Foundatio updates, and Foundatio.Repositories updates. Lot&#8217;s going on, let&#8217;s check it out in [this week&#8217;s Live Code Demo](https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/xAq0E-exceptionless-weekly-demo-2-20-17/).<!--more-->
 

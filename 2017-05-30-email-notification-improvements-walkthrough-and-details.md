@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "email", "nodejs", "notifications", "zurb"]
 ---
-<img loading="lazy" class="aligncenter size-large wp-image-15587" style="margin-bottom: 20px;" src="https://exceptionless.com/assets/email-improvements-header-1024x538.jpg" alt="exceptionless email notifications" width="940" height="494" data-id="15587" srcset="https://exceptionless.com/assets/email-improvements-header-1024x538.jpg 1024w, https://exceptionless.com/assets/email-improvements-header-300x158.jpg 300w, https://exceptionless.com/assets/email-improvements-header-768x403.jpg 768w, https://exceptionless.com/assets/email-improvements-header.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+<img loading="lazy" class="aligncenter size-large wp-image-15587" style="margin-bottom: 20px;" src="/assets/email-improvements-header-1024x538.jpg" alt="exceptionless email notifications" width="940" height="494" data-id="15587" srcset="/assets/email-improvements-header-1024x538.jpg 1024w, /assets/email-improvements-header-300x158.jpg 300w, /assets/email-improvements-header-768x403.jpg 768w, /assets/email-improvements-header.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
 
 Recently, we made several improvements to our email notifications, adding additional details, improving rendering, and more. Blake has mentioned it in a few of his [weekly update videos](/category/weekly-updates/), but today we wanted to walk you through it and add a few more details, with examples. Check it out!<!--more-->
 

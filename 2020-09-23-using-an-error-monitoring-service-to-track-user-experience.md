@@ -10,13 +10,13 @@ In development, we tend to think of errors as things that are thrown when our co
 
 You may already be using an error monitoring service, and if you are, you could continue using that and reach for yet another tool to help you with your user experience woes. Or, rather than adding another product to your endless list of tools that keep your application running, you can use the error monitoring service to both monitor for traditional errors and user experience problems.
 
-Let&#8217;s take a look at how we can do this. There are plenty of logging services out there, and most of them do the same thing. However, we&#8217;re going to take a look at&nbsp;[Exceptionless](https://exceptionless.com/). Exceptionless is an especially attractive choice for three reasons:
+Let&#8217;s take a look at how we can do this. There are plenty of logging services out there, and most of them do the same thing. However, we&#8217;re going to take a look at&nbsp;[Exceptionless](/). Exceptionless is an especially attractive choice for three reasons:
 
   1. Fair pricing on their hosted version
   2. It&#8217;s&nbsp;[open-source](https://github.com/exceptionless/Exceptionless)&nbsp;and can be totally self-hosted
   3. The API allows us to do exactly what I&#8217;m proposing in this article.
 
-While self-hosting may be an attractive option (and one that I will surely write about ina future post), we&#8217;re going to sign up for a free account using Exceptionless&#8217;s hosted platform. To do so, go to&nbsp;[https://exceptionless.com](https://exceptionless.com/)&nbsp;and click the Sign Up button in the top-right:<figure class="wp-block-image">
+While self-hosting may be an attractive option (and one that I will surely write about ina future post), we&#8217;re going to sign up for a free account using Exceptionless&#8217;s hosted platform. To do so, go to&nbsp;[https://exceptionless.com](/)&nbsp;and click the Sign Up button in the top-right:<figure class="wp-block-image">
 
 [![Exceptionless home page](https://res.cloudinary.com/practicaldev/image/fetch/s--vr57dYkT--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/q55zt3ytzydt1ahqiyx8.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--vr57dYkT--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/q55zt3ytzydt1ahqiyx8.png)</figure> 
 
@@ -82,6 +82,6 @@ Again, we should click on the Features Usage link on the side navigation. This t
 
 [![Funnel Example](https://res.cloudinary.com/practicaldev/image/fetch/s--UI_sv1sV--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/tx77krsijxyz9zudp25c.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--UI_sv1sV--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/tx77krsijxyz9zudp25c.png)</figure> 
 
-Now we have the makings of a useful way of tracking the user experience right from within our error reporting tool. The benefit here is that we can use a single tool to help us with monitoring, bugs, event tracking, and user experience.&nbsp;[Exceptionless](https://exceptionless.com/)&nbsp;makes this incredibly easy, is self-hostable, is open source, and if you choose the hosted option is very affordable.
+Now we have the makings of a useful way of tracking the user experience right from within our error reporting tool. The benefit here is that we can use a single tool to help us with monitoring, bugs, event tracking, and user experience.&nbsp;[Exceptionless](/)&nbsp;makes this incredibly easy, is self-hostable, is open source, and if you choose the hosted option is very affordable.
 
 Go forth and track errors AND user experience all in one place.

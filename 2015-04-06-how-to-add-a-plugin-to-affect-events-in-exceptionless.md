@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-12927" style="margin-top: 10px; margin-bottom: 15px;" src="http://exceptionless.com/assets/plugins-code-featured1.jpg" alt="Exceptionless Plugins" width="708" height="200" data-id="12927" srcset="https://exceptionless.com/assets/plugins-code-featured1.jpg 708w, https://exceptionless.com/assets/plugins-code-featured1-300x85.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />A plugin is a client-side addin that is run every time you submit an event.
+<img loading="lazy" class="aligncenter size-full wp-image-12927" style="margin-top: 10px; margin-bottom: 15px;" src="http://exceptionless.com/assets/plugins-code-featured1.jpg" alt="Exceptionless Plugins" width="708" height="200" data-id="12927" srcset="/assets/plugins-code-featured1.jpg 708w, /assets/plugins-code-featured1-300x85.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />A plugin is a client-side addin that is run every time you submit an event.
 
 Plugins can be used to add or remove data from an event, or even allow you to cancel an event submission.
 
@@ -72,7 +72,7 @@ namespace Exceptionless.SampleConsole.Plugins {
 
 **Output in Exceptionless:**
 
-#### [<img loading="lazy" class="aligncenter wp-image-12937 size-full" src="http://exceptionless.com/assets/exceptionless-plugin-system-uptime.png" alt="Exceptionless Plugin System Uptime" width="755" height="350" data-id="12922" srcset="https://exceptionless.com/assets/exceptionless-plugin-system-uptime.png 755w, https://exceptionless.com/assets/exceptionless-plugin-system-uptime-300x139.png 300w" sizes="(max-width: 755px) 100vw, 755px" />](http://exceptionless.com/assets/exceptionless-plugin-system-uptime.png)
+#### [<img loading="lazy" class="aligncenter wp-image-12937 size-full" src="http://exceptionless.com/assets/exceptionless-plugin-system-uptime.png" alt="Exceptionless Plugin System Uptime" width="755" height="350" data-id="12922" srcset="/assets/exceptionless-plugin-system-uptime.png 755w, /assets/exceptionless-plugin-system-uptime-300x139.png 300w" sizes="(max-width: 755px) 100vw, 755px" />](http://exceptionless.com/assets/exceptionless-plugin-system-uptime.png)
 
 _Note:_ We kept the formatting of the uptime simple for the sake of this example, but we recommend using our <a title="Exceptionless Date Time Extensions Library" href="https://github.com/exceptionless/Exceptionless.DateTimeExtensions" target="_blank">open source DateTimeExtensions library</a> if you wish to format it in a really pretty manner.
 
@@ -86,7 +86,7 @@ To make sure your plugin runs first (if required), you can inspect the configura
     Console.WriteLine(plugin);
 </pre>
 
-[<img loading="lazy" class="aligncenter wp-image-12923 size-full" src="http://exceptionless.com/assets/exceptionless-plugin-priority.png" alt="Exceptionless Plugin Priority" width="938" height="276" data-id="12923" srcset="https://exceptionless.com/assets/exceptionless-plugin-priority.png 938w, https://exceptionless.com/assets/exceptionless-plugin-priority-300x88.png 300w" sizes="(max-width: 938px) 100vw, 938px" />](http://exceptionless.com/assets/exceptionless-plugin-priority.png)
+[<img loading="lazy" class="aligncenter wp-image-12923 size-full" src="http://exceptionless.com/assets/exceptionless-plugin-priority.png" alt="Exceptionless Plugin Priority" width="938" height="276" data-id="12923" srcset="/assets/exceptionless-plugin-priority.png 938w, /assets/exceptionless-plugin-priority-300x88.png 300w" sizes="(max-width: 938px) 100vw, 938px" />](http://exceptionless.com/assets/exceptionless-plugin-priority.png)
 
 ## Adding the Plugin to Your App
 

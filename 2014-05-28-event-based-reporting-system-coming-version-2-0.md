@@ -14,7 +14,7 @@ Many users have asked for ways to use Exceptionless to report additional types o
 
   * The new system allows us to receive literally any data people want to send us instead of only allowing errors.
   * Event posts can be as simple as this:  
-    [<img loading="lazy" class="alignnone wp-image-8588 size-full" style="margin-top: 20px; margin-bottom: 20px;" src="http://exceptionless.com/assets/ex-curl.png" alt="Post Event Exceptionless" width="427" height="160" data-id="8588" srcset="https://exceptionless.com/assets/ex-curl.png 427w, https://exceptionless.com/assets/ex-curl-300x112.png 300w" sizes="(max-width: 427px) 100vw, 427px" />](http://exceptionless.com/assets/ex-curl.png)
+    [<img loading="lazy" class="alignnone wp-image-8588 size-full" style="margin-top: 20px; margin-bottom: 20px;" src="http://exceptionless.com/assets/ex-curl.png" alt="Post Event Exceptionless" width="427" height="160" data-id="8588" srcset="/assets/ex-curl.png 427w, /assets/ex-curl-300x112.png 300w" sizes="(max-width: 427px) 100vw, 427px" />](http://exceptionless.com/assets/ex-curl.png)
   * You can send log messages or even entire log files.
   * Log messages can contain extended data objects just like errors can now.
   * You can post random JSON objects and the data within them will be treated as extended data.

@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<a href="https://www.liveedu.tv/niemyjski/videos/xAYyE-exceptionless-weekly-demo-1-9-17" target="_blank"><img loading="lazy" class="aligncenter size-large wp-image-15198" style="margin-bottom: 20px;" src="https://exceptionless.com/assets/live-stream-1-elasticsearch-header-1024x538.jpg" alt="elasticsearch 1.x to 1.5 upgrade" width="940" height="494" data-id="15198" srcset="https://exceptionless.com/assets/live-stream-1-elasticsearch-header-1024x538.jpg 1024w, https://exceptionless.com/assets/live-stream-1-elasticsearch-header-300x158.jpg 300w, https://exceptionless.com/assets/live-stream-1-elasticsearch-header-768x403.jpg 768w, https://exceptionless.com/assets/live-stream-1-elasticsearch-header.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href="https://www.liveedu.tv/niemyjski/videos/xAYyE-exceptionless-weekly-demo-1-9-17" target="_blank"><img loading="lazy" class="aligncenter size-large wp-image-15198" style="margin-bottom: 20px;" src="/assets/live-stream-1-elasticsearch-header-1024x538.jpg" alt="elasticsearch 1.x to 1.5 upgrade" width="940" height="494" data-id="15198" srcset="/assets/live-stream-1-elasticsearch-header-1024x538.jpg 1024w, /assets/live-stream-1-elasticsearch-header-300x158.jpg 300w, /assets/live-stream-1-elasticsearch-header-768x403.jpg 768w, /assets/live-stream-1-elasticsearch-header.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" /></a>
 
 ## New Weekly Coding Live Stream
 
@@ -25,5 +25,5 @@ Want Blake to demo something specific? Just leave a comment here and we&#8217;ll
 </h3>
 
 <p style="text-align: center;">
-  <a href="https://exceptionless.com/category/live-coding/">Watch more Live Code Demos</a>
+  <a href="/category/live-coding/">Watch more Live Code Demos</a>
 </p>

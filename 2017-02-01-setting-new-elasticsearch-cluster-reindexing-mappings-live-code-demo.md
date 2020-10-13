@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-[<img loading="lazy" class="aligncenter size-large wp-image-15250" src="https://exceptionless.com/assets/170116-live-code-demo-1024x538.jpg" alt="" width="940" height="494" data-id="15250" srcset="https://exceptionless.com/assets/170116-live-code-demo-1024x538.jpg 1024w, https://exceptionless.com/assets/170116-live-code-demo-300x158.jpg 300w, https://exceptionless.com/assets/170116-live-code-demo-768x403.jpg 768w, https://exceptionless.com/assets/170116-live-code-demo.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/videos/k4JO7-exceptionless-weekly-demo-1-16-17)
+[<img loading="lazy" class="aligncenter size-large wp-image-15250" src="/assets/170116-live-code-demo-1024x538.jpg" alt="" width="940" height="494" data-id="15250" srcset="/assets/170116-live-code-demo-1024x538.jpg 1024w, /assets/170116-live-code-demo-300x158.jpg 300w, /assets/170116-live-code-demo-768x403.jpg 768w, /assets/170116-live-code-demo.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/videos/k4JO7-exceptionless-weekly-demo-1-16-17)
 
 ## Getting Ready for Exceptionless 4.0!
 
@@ -23,5 +23,5 @@ Then, we had to <a href="https://www.elastic.co/guide/en/elasticsearch/reference
 </h2>
 
 <p style="text-align: center;">
-  <a href="https://exceptionless.com/category/live-coding/">Watch more Live Code Demos</a>
+  <a href="/category/live-coding/">Watch more Live Code Demos</a>
 </p>

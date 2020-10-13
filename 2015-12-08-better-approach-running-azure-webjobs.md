@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-13876" src="http://exceptionless.com/assets/jobs-blog-header-image.jpg" alt="Azure Webjobs" width="708" height="250" data-id="13876" srcset="https://exceptionless.com/assets/jobs-blog-header-image.jpg 708w, https://exceptionless.com/assets/jobs-blog-header-image-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-13876" src="http://exceptionless.com/assets/jobs-blog-header-image.jpg" alt="Azure Webjobs" width="708" height="250" data-id="13876" srcset="/assets/jobs-blog-header-image.jpg 708w, /assets/jobs-blog-header-image-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 Lets talk about jobs in the Exceptionless world for a minute and **how you can use our methods to improve your Azure WebJobs.**
 
@@ -30,7 +30,7 @@ This new approach also gave us a great deployment strategy, for free. Simply cop
 
 ### Jobs (processes) running in Azure as an Azure web job
 
-[<img loading="lazy" class="aligncenter wp-image-13862" src="http://exceptionless.com/assets/Jobs-1024x670.jpg" alt="Exceptionless Jobs and Processes" width="600" height="393" data-id="13862" srcset="https://exceptionless.com/assets/Jobs-1024x670.jpg 1024w, https://exceptionless.com/assets/Jobs-300x196.jpg 300w, https://exceptionless.com/assets/Jobs.jpg 1600w" sizes="(max-width: 600px) 100vw, 600px" />](http://exceptionless.com/assets/Jobs.jpg)
+[<img loading="lazy" class="aligncenter wp-image-13862" src="http://exceptionless.com/assets/Jobs-1024x670.jpg" alt="Exceptionless Jobs and Processes" width="600" height="393" data-id="13862" srcset="/assets/Jobs-1024x670.jpg 1024w, /assets/Jobs-300x196.jpg 300w, /assets/Jobs.jpg 1600w" sizes="(max-width: 600px) 100vw, 600px" />](http://exceptionless.com/assets/Jobs.jpg)
 
 ### How you can implement a better Azure WebJob
 

@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-14271" style="margin-bottom: 20px;" src="http://exceptionless.com/assets/Exceptionless3-3-0-release-notes.jpg" alt="Exceptionless 3.3.0 Release Notes" width="708" height="250" data-id="14271" srcset="https://exceptionless.com/assets/Exceptionless3-3-0-release-notes.jpg 708w, https://exceptionless.com/assets/Exceptionless3-3-0-release-notes-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-14271" style="margin-bottom: 20px;" src="http://exceptionless.com/assets/Exceptionless3-3-0-release-notes.jpg" alt="Exceptionless 3.3.0 Release Notes" width="708" height="250" data-id="14271" srcset="/assets/Exceptionless3-3-0-release-notes.jpg 708w, /assets/Exceptionless3-3-0-release-notes-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 We always work hard to keep improving Exceptionless, and this release is no different!
 

@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-[<img loading="lazy" class="aligncenter size-large wp-image-15351" style="margin-bottom: 20px;" src="https://exceptionless.com/assets/170228-header-1024x538.jpg" alt="exceptionless duplicate event totals, min log levels, foundatio" width="940" height="494" data-id="15351" srcset="https://exceptionless.com/assets/170228-header-1024x538.jpg 1024w, https://exceptionless.com/assets/170228-header-300x158.jpg 300w, https://exceptionless.com/assets/170228-header-768x403.jpg 768w, https://exceptionless.com/assets/170228-header.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/bGgd4-exceptionless-weekly-demo-2-13-17/)
+[<img loading="lazy" class="aligncenter size-large wp-image-15351" style="margin-bottom: 20px;" src="/assets/170228-header-1024x538.jpg" alt="exceptionless duplicate event totals, min log levels, foundatio" width="940" height="494" data-id="15351" srcset="/assets/170228-header-1024x538.jpg 1024w, /assets/170228-header-300x158.jpg 300w, /assets/170228-header-768x403.jpg 768w, /assets/170228-header.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/bGgd4-exceptionless-weekly-demo-2-13-17/)
 
 Blake&#8217;s back at it this week, onward to something new after the Exceptionless 4.0 launch. Today we talk deduplicate event totals, setting minimum log levels, updates to Foundatio, and tracking down an event processor job issue!<!--more-->
 
@@ -25,5 +25,5 @@ Blake&#8217;s back at it this week, onward to something new after the Exceptionl
     </h2>
     
     <p style="text-align: center;">
-      <a href="https://exceptionless.com/category/live-coding/">Watch more Live Code Demos</a>
+      <a href="/category/live-coding/">Watch more Live Code Demos</a>
     </p>

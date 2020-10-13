@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-[<img loading="lazy" class="alignright size-full wp-image-14573" src="http://exceptionless.com/assets/exceptionless-3-4-header.png" alt="Exceptionless 3.4" width="260" height="260" data-id="14573" srcset="https://exceptionless.com/assets/exceptionless-3-4-header.png 260w, https://exceptionless.com/assets/exceptionless-3-4-header-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />](http://exceptionless.com/assets/exceptionless-3-4-header.png)The latest Exceptionless release has several additions we think most of our users will find helpful. We sat down and worked on the UI, fixed some bugs, and spend a considerable amount of time improving reliability and efficiency of some of the primary pieces of the app.
+[<img loading="lazy" class="alignright size-full wp-image-14573" src="http://exceptionless.com/assets/exceptionless-3-4-header.png" alt="Exceptionless 3.4" width="260" height="260" data-id="14573" srcset="/header.png 260w, /assets/exceptionless-3-4/sizes="(max-width: 260px) 100vw, 260px" />](http://exceptionless.com/assets/exceptionless-3-4-header.png)The latest Exceptionless release has several additions we think most of our users will find helpful. We sat down and worked on the UI, fixed some bugs, and spend a considerable amount of time improving reliability and efficiency of some of the primary pieces of the app.
 
 If you&#8217;re a self hoster, you&#8217;ll need to [upgrade your existing install](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting#upgrading), but if you&#8217;re hosting with us there is no action required on your part to experiences the Exceptionless 3.4.
 

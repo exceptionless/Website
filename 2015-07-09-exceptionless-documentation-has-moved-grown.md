@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", ".NET"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-13419" style="margin-left: 15px;" src="http://exceptionless.com/assets/Exceptionless-documentation-github.png" alt="Exceptionless-documentation-github" width="260" height="260" data-id="13419" srcset="https://exceptionless.com/assets/Exceptionless-documentation-github.png 260w, https://exceptionless.com/assets/Exceptionless-documentation-github-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />The <a href="https://github.com/exceptionless/Exceptionless/wiki" target="_blank">Exceptionless documentation has moved to GitHub</a>!
+<img loading="lazy" class="alignright size-full wp-image-13419" style="margin-left: 15px;" src="http://exceptionless.com/assets/Exceptionless-documentation-github.png" alt="Exceptionless-documentation-github" width="260" height="260" data-id="13419" srcset="/assets/Exceptionless-documentation-github.png 260w, /assets/Exceptionless-documentation-github-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />The <a href="https://github.com/exceptionless/Exceptionless/wiki" target="_blank">Exceptionless documentation has moved to GitHub</a>!
 
 Over the past few weeks, we have taken all the existing documentation on the docs subdomain and migrated it over to the respective GitHub repo.
 

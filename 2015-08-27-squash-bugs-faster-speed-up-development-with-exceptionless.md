@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-13638" src="http://exceptionless.com/assets/blog-header-image-js-demo.jpg" alt="Developer Bug Tracking" width="708" height="250" data-id="13638" srcset="https://exceptionless.com/assets/blog-header-image-js-demo.jpg 708w, https://exceptionless.com/assets/blog-header-image-js-demo-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-13638" src="http://exceptionless.com/assets/blog-header-image-js-demo.jpg" alt="Developer Bug Tracking" width="708" height="250" data-id="13638" srcset="/assets/blog-header-image-js-demo.jpg 708w, /assets/blog-header-image-js-demo-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 <h2 style="margin-top: 30px;">
   Calling All Developers!
@@ -34,7 +34,7 @@ tags: ["posts"]
   </p>
 </blockquote>
 
-<img loading="lazy" class="aligncenter wp-image-13619 size-full" src="http://exceptionless.com/assets/codesmith-client-logo-bar-left-short.png" alt="" width="585" height="97" data-id="13594" srcset="https://exceptionless.com/assets/codesmith-client-logo-bar-left-short.png 585w, https://exceptionless.com/assets/codesmith-client-logo-bar-left-short-300x50.png 300w" sizes="(max-width: 585px) 100vw, 585px" /> 
+<img loading="lazy" class="aligncenter wp-image-13619 size-full" src="http://exceptionless.com/assets/codesmith-client-logo-bar-left-short.png" alt="" width="585" height="97" data-id="13594" srcset="/assets/codesmith-client-logo-bar-left-short.png 585w, /assets/codesmith-client-logo-bar-left-short-300x50.png 300w" sizes="(max-width: 585px) 100vw, 585px" /> 
 
 ## Up & Running In Minutes
 
@@ -43,7 +43,7 @@ This 1:37 video demonstrates how quick and easy it is to get the Exceptionless J
 <div class="videoWrapper">
 </div>
 
-<img loading="lazy" class="aligncenter wp-image-13620 size-full" style="margin-top: 20px;" src="http://exceptionless.com/assets/codesmith-client-logo-bar-right-short.png" alt="" width="585" height="97" data-id="13593" srcset="https://exceptionless.com/assets/codesmith-client-logo-bar-right-short.png 585w, https://exceptionless.com/assets/codesmith-client-logo-bar-right-short-300x50.png 300w" sizes="(max-width: 585px) 100vw, 585px" /> 
+<img loading="lazy" class="aligncenter wp-image-13620 size-full" style="margin-top: 20px;" src="http://exceptionless.com/assets/codesmith-client-logo-bar-right-short.png" alt="" width="585" height="97" data-id="13593" srcset="/assets/codesmith-client-logo-bar-right-short.png 585w, /assets/codesmith-client-logo-bar-right-short-300x50.png 300w" sizes="(max-width: 585px) 100vw, 585px" /> 
 
 ## **IT&#8217;S. THAT. EASY.**
 
