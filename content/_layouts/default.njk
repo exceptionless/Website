@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ metadata.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <meta name="description" content="{{ metadata.description }}">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ metadata.title }}">
+    <meta property="og:description" content="{{ metadata.description }}">
+    <meta property="og:url" content="/">
+    <meta property="og:site_name" content="Exceptionless">
+    <meta property="article:modified_time" content="2017-04-07T18:29:45+00:00">
+    <meta property="og:image" content="/assets/codesmith-client-logo-bar-left.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@exceptionless">
+    <meta name="twitter:site" content="@exceptionless">
+    <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"/#website","url":"/","name":"Exceptionless","description":"","potentialAction":[{"@type":"SearchAction","target":"/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"/#primaryimage","inLanguage":"en-US","url":"/assets/codesmith-client-logo-bar-left.png"},{"@type":"WebPage","@id":"/#webpage","url":"/","name":"Exceptionless Exception and Event Reporting in real-time","isPartOf":{"@id":"/#website"},"primaryImageOfPage":{"@id":"/#primaryimage"},"datePublished":"2013-09-27T02:37:44+00:00","dateModified":"2017-04-07T18:29:45+00:00","description":"Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["/"]}]}]}</script>
+
+    <link rel="dns-prefetch" href="//secure.gravatar.com">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="stylesheet" href="/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:&amp;subset=" rel="stylesheet" type="text/css">
+
+    <link rel="alternate" type="application/rss+xml" title="Exceptionless Feed" href="/feed.xml">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- Facebook Pixel Code -->
+    <script>	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,	document,'script','https://connect.facebook.net/en_US/fbevents.js');	fbq('init', '722987251177335');	fbq('track', "PageView");</script>	<noscript><img height="1" width="1" style="display:none"	src="https://www.facebook.com/tr?id=722987251177335&ev=PageView&noscript=1"	/></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <script charset="utf-8" src="https://platform.twitter.com/js/horizon_tweet.716ef7f4c155526f8ec8e60dbd2fbf56.js"></script>
+    <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/custom.css">
+  </head>
+  <body>
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/">
+                    <img id="site-logo" src="/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/news/">News</a></li>
+                        <li class="menu-help"><a href="https://github.com/exceptionless/Exceptionless/wiki">Help</a></li>
+                        <li class="menu-contact"><a href="/contact/">Contact</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+    
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/tour/">Tour</a></li>
+                        <li><a href="/why/">Why?</a></li>
+                        <li><a href="/pricing/">Pricing</a></li>
+                        <li><a href="/news/">News</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless/wiki">Help</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="http://exceptionless.uservoice.com">Feedback</a></li>
+                        <li><a href="/terms/">Terms of Use</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="http://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="http://plus.google.com/b/111513069275546127753/111513069275546127753/posts" target="_blank" class="social-icon social-icon-googleplus" rel="noopener noreferrer">Google +</a>
+                        </li>
+                        <li>
+                            <a href="http://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span4"><section id="text-4" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"> <h3><span class="slash">//</span> Newsletter</h3>
+
+                    <div id="newsletter">
+                        <p>Subscribe to our newsletter and stay up to date with the latest news!</p>
+                    </div></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script>
+      window.intercomSettings = {
+          app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+      };
+    </script>
+
+    <script>
+    // We pre-filled your app ID in the widget URL: '//widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1'
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='//widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    </script>
+
+    <script defer src="//www.google-analytics.com/analytics.js"></script>
+    <script defer src="//www.googletagmanager.com/gtm.js?id=GTM-PV8Q8J"></script>
+    <script defer src="//connect.facebook.net/signals/config/722987251177335?v=2.9.27&r=stable"></script>
+    <script defer src="//connect.facebook.net/en_US/fbevents.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+    <script type="text/javascript"> jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 1) {jQuery('#input_1_2').mask('(999) 999-9999').bind('keypress', function(e){if(e.which == 13){jQuery(this).blur();} } );} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type="text/javascript"> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [1, 1]) } ); </script>
+  </body>
+</html>

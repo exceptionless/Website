@@ -1,0 +1,6 @@
+{
+  "layout": "post.njk",
+  "author": "Exceptionless",
+  "tags": ["posts"],
+  "permalink": "{{ page.filePathStem }}"
+}
