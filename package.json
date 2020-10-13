@@ -1,7 +1,7 @@
 {
-  "name": "eleventy-sample",
+  "name": "exceptionless-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Exceptionless website",
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
