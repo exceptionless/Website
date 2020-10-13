@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "davidanson.vscode-markdownlint",
+        "sissel.shopify-liquid",
+        "douglaszaltron.nunjucks-vscode-extensionpack"
+    ]
+}
