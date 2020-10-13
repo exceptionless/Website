@@ -6,9 +6,9 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "AngularJS", "javascript"]
 ---
-<img loading="lazy" class="alignright wp-image-11617" style="margin-left: 15px; margin-bottom: 15px; margin-top: 10px;" src="http://exceptionless.com/assets/AngularJS-large-300x84.png" alt="Angular JS" width="248" height="70" data-id="11617" srcset="/assets/AngularJS-large-300x84.png 300w, /assets/AngularJS-large.png 383w" sizes="(max-width: 248px) 100vw, 248px" />As we plug away at Exceptionless 2.0, perfecting and future-proofing it, we wanted to stop and take the time to talk about AngularJS, how we are using it in version two, and what benefits we&#8217;re going to get out of it.
+<img loading="lazy" class="alignright wp-image-11617" style="margin-left: 15px; margin-bottom: 15px; margin-top: 10px;" src="/assets/AngularJS-large-300x84.png" alt="Angular JS" width="248" height="70" data-id="11617" srcset="/assets/AngularJS-large-300x84.png 300w, /assets/AngularJS-large.png 383w" sizes="(max-width: 248px) 100vw, 248px" />As we plug away at Exceptionless 2.0, perfecting and future-proofing it, we wanted to stop and take the time to talk about AngularJS, how we are using it in version two, and what benefits we're going to get out of it.
 
-Naturally, we want to maintain all current functionality while supporting planned V2.0 features like search and filtering. We also want it to be static and use the REST API for everything. We&#8217;re pretty determined to not cheat on that point. Then, thinking ahead, building it to support easily adding new features in the future is a huge priority.
+Naturally, we want to maintain all current functionality while supporting planned V2.0 features like search and filtering. We also want it to be static and use the REST API for everything. We're pretty determined to not cheat on that point. Then, thinking ahead, building it to support easily adding new features in the future is a huge priority.
 
 Lets look at these points in a bit more detail.<!--more-->
 
@@ -18,7 +18,7 @@ Using our fully documented REST API, the new Exceptionless 2.0 UI will be static
 
 ## Much, Much Faster
 
-Being a single page application (SPA), the new version of the app eliminates page loads. The only thing being loaded is the JSON data, and we can pre-load other content as users navigate the site. That, along with the static UI mentioned above, means we can deliver an app that responds almost instantaneously to the user&#8217;s input. What a time to be alive.
+Being a single page application (SPA), the new version of the app eliminates page loads. The only thing being loaded is the JSON data, and we can pre-load other content as users navigate the site. That, along with the static UI mentioned above, means we can deliver an app that responds almost instantaneously to the user's input. What a time to be alive.
 
 ## Maintainable Modularity
 
@@ -26,12 +26,12 @@ Version 1 taught us a lot. We gained valuable feedback from users, beat our head
 
 AngularJS has helped us fulfill those dreams. We can now add new features very easily, without breaking other sections of the site, and our code based has been greatly simplified. And, even with all the modularity, we are still able to run tests on the UI. Pretty snazzy!
 
-Event type support is handled via pluggable view modules, and we&#8217;ll be able to add new ones that we haven&#8217;t even conceived of with relative ease.
+Event type support is handled via pluggable view modules, and we'll be able to add new ones that we haven't even conceived of with relative ease.
 
 ## Do You Angular?
 
-Making the choice to go with AngularJS wasn&#8217;t easy or quick, but be believe it was the right path to take.
+Making the choice to go with AngularJS wasn't easy or quick, but be believe it was the right path to take.
 
 Do you Angular? What apps have you used it on? If not, what other frameworks do you use for this type of app, and why?
 
-&nbsp;
+

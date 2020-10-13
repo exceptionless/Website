@@ -6,9 +6,9 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-11241" src="http://exceptionless.com/assets/colored-swoosh.png" alt="colored-swoosh" width="220" height="155" data-id="11241" />Last week we wrote up a whole list of <a title="Server Side Technology the Exceptionless Team Uses" href="/server-side-technology-exceptionless-team-uses/" target="_blank">server side technologies</a> that we use to build and maintain Exceptionless. This week, we&#8217;re going to look at client side tools and services.
+<img loading="lazy" class="alignright size-full wp-image-11241" src="/assets/colored-swoosh.png" alt="colored-swoosh" width="220" height="155" data-id="11241" />Last week we wrote up a whole list of <a title="Server Side Technology the Exceptionless Team Uses" href="/server-side-technology-exceptionless-team-uses/" target="_blank">server side technologies</a> that we use to build and maintain Exceptionless. This week, we're going to look at client side tools and services.
 
-We&#8217;re all about function around here, but we like to think that the app looks and feels pretty good, too! We hope you agree, and maybe you&#8217;ll come across a thing or two you could use in the future to jazz up the user side of your projects.
+We're all about function around here, but we like to think that the app looks and feels pretty good, too! We hope you agree, and maybe you'll come across a thing or two you could use in the future to jazz up the user side of your projects.
 
 Most of these are **free** services, so check them out!
 
@@ -20,7 +20,7 @@ Most of these are **free** services, so check them out!
 
 **JavaScript framework for building dynamic, awesome apps**
 
-<a title="AngularJS" href="https://angularjs.org/" target="_blank">AngularJS </a>is a structural framework for dynamic web apps. It lets you use HTML as your UI language and lets you extend HTML&#8217;s syntax to define your application’s structure efficiently. Angular&#8217;s data binding and dependency injection eliminates much of the “fluff” code needed and does this all in the browser.
+<a title="AngularJS" href="https://angularjs.org/" target="_blank">AngularJS </a>is a structural framework for dynamic web apps. It lets you use HTML as your UI language and lets you extend HTML's syntax to define your application’s structure efficiently. Angular's data binding and dependency injection eliminates much of the “fluff” code needed and does this all in the browser.
 
 ### Bootstrap
 

@@ -1,18 +1,18 @@
 ---
 id: 13427
-postTitle: 'Introducing Foundatio &#8211; Pluggable Foundation Blocks for Building Distributed Apps'
+postTitle: Introducing Foundatio &#8211; Pluggable Foundation Blocks for Building Distributed Apps
 date: 2015-07-14T11:18:58-06:00
 author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "open source"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-13436" style="margin-left: 10px;" src="http://exceptionless.com/assets/foundatio-article-featured-image.png" alt="Exceptionless Foundatio App Building Blocks" width="260" height="260" data-id="13436" srcset="/assets/foundatio-article-featured-image.png 260w, /assets/foundatio-article-featured-image-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />In the process of developing Exceptionless, we realized there was a lack of good, simple, open source solutions for caching, queues, locks, messaging, jobs, file storage, and metrics when building scaleable applications.
+<img loading="lazy" class="alignright size-full wp-image-13436" style="margin-left: 10px;" src="/assets/foundatio-article-featured-image.png" alt="Exceptionless Foundatio App Building Blocks" width="260" height="260" data-id="13436" srcset="/assets/foundatio-article-featured-image.png 260w, /assets/foundatio-article-featured-image-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />In the process of developing Exceptionless, we realized there was a lack of good, simple, open source solutions for caching, queues, locks, messaging, jobs, file storage, and metrics when building scaleable applications.
 
-We tried an open source Redis cache client for caching, but it went commercial (expensive) and there wasn&#8217;t any in-memory implementations. For the message bus, we looked at <a href="http://particular.net/nservicebus" target="_blank">NServiceBus</a> (good product, high cost, not open source friendly) and <a href="http://masstransit-project.com/" target="_blank">MassTransit</a> (local setup a pain, Azure support lacking), but were left disappointed. For storage, we simply could not find a solution that was decoupled and supported in memory, file storage, or Azure Blog Storage.
+We tried an open source Redis cache client for caching, but it went commercial (expensive) and there wasn't any in-memory implementations. For the message bus, we looked at <a href="http://particular.net/nservicebus" target="_blank">NServiceBus</a> (good product, high cost, not open source friendly) and <a href="http://masstransit-project.com/" target="_blank">MassTransit</a> (local setup a pain, Azure support lacking), but were left disappointed. For storage, we simply could not find a solution that was decoupled and supported in memory, file storage, or Azure Blog Storage.
 
 So, naturally, we built our own!
 
-Meet <a href="https://github.com/exceptionless/Foundatio" target="_blank">Foundatio</a> &#8211; your key to painless, scalable development and testing for your app! Let&#8217;s take a look at some examples, below.
+Meet <a href="https://github.com/exceptionless/Foundatio" target="_blank">Foundatio</a> &#8211; your key to painless, scalable development and testing for your app! Let's take a look at some examples, below.
 
 <div class="signup center">
   <a class="btn btn-large btn-primary" href="https://github.com/exceptionless/Foundatio" target="_blank">Try Foundatio Today</a>
@@ -32,7 +32,7 @@ Foundatio provides four cache implementations, all derived from the <a href="htt
 
 These implementations include <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Caching/InMemoryCacheClient.cs" target="_blank">InMemoryCacheClient</a>, <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Caching/HybridCacheClient.cs" target="_blank">HybridCacheClient</a>, <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Redis/Cache/RedisCacheClient.cs" target="_blank">RedisCacheClient</a>, and <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Redis/Cache/RedisHybridCacheClient.cs" target="_blank">RedisHybridCacheClient</a>. Learn more about each in the <a href="https://github.com/exceptionless/Foundatio#caching" target="_blank">Foundatio Readme Caching section</a>.
 
-For Exceptionless, we use RedisHybridCacheClient to cache users, organizations, and projects, which has a huge performance boost since we don&#8217;t have to serialize the item if it&#8217;s in local memory cache.
+For Exceptionless, we use RedisHybridCacheClient to cache users, organizations, and projects, which has a huge performance boost since we don't have to serialize the item if it's in local memory cache.
 
 #### Foundatio Caching Sample
 
@@ -172,4 +172,4 @@ As with any development project, Foundatio is a work in progress and we will con
 
 Naturally, we want to know what you think and what we should work on next, so [please let us know](https://github.com/exceptionless/Foundatio/issues)!
 
-&nbsp;
+

@@ -1,6 +1,6 @@
 ---
 id: 15368
-postTitle: 'Email Logging, UI Improvements, Foundatio Updates, and more &#8211; Live Code Demo'
+postTitle: Email Logging, UI Improvements, Foundatio Updates, and more &#8211; Live Code Demo
 date: 2017-03-08T11:15:49-06:00
 author: Exceptionless
 layout: blog_post.liquid
@@ -8,7 +8,7 @@ tags: ["posts", ".NET"]
 ---
 [<img loading="lazy" class="aligncenter size-large wp-image-15370" style="margin-bottom: 20px;" src="/assets/live-code-demo-170308-1024x538.jpg" alt="Exceptionless live code demo 2/20/17" width="940" height="494" data-id="15370" srcset="/assets/live-code-demo-170308-1024x538.jpg 1024w, /assets/live-code-demo-170308-300x158.jpg 300w, /assets/live-code-demo-170308-768x403.jpg 768w, /assets/live-code-demo-170308.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/xAq0E-exceptionless-weekly-demo-2-20-17/)
 
-Watch out this week, Blake&#8217;s on fire! We&#8217;re talking email loggings, UI tweaks, Exceptionless.NET updates and fixes, Foundatio updates, and Foundatio.Repositories updates. Lot&#8217;s going on, let&#8217;s check it out in [this week&#8217;s Live Code Demo](https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/xAq0E-exceptionless-weekly-demo-2-20-17/).<!--more-->
+Watch out this week, Blake's on fire! We're talking email loggings, UI tweaks, Exceptionless.NET updates and fixes, Foundatio updates, and Foundatio.Repositories updates. Lot's going on, let's check it out in [this week's Live Code Demo](https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/xAq0E-exceptionless-weekly-demo-2-20-17/).<!--more-->
 
 ## Exceptionless Updates
 
@@ -22,24 +22,24 @@ We were only showing the exception tab if there was an event type of error, prev
 
 ## Exceptionless.NET
 
-  * We added SetException EventBuilder overload so you can submit any event type with an exception object.
-  * Then, we fixed an issue where the client could blow up on startup while trying to wire up to trace listeners.
-  * Finally, we also fixed an issue where signed web packages http handlers weren&#8217;t being registered with the right namespace.
+* We added SetException EventBuilder overload so you can submit any event type with an exception object.
+* Then, we fixed an issue where the client could blow up on startup while trying to wire up to trace listeners.
+* Finally, we also fixed an issue where signed web packages http handlers weren't being registered with the right namespace.
 
 [View Repo](https://github.com/exceptionless/Exceptionless.Net)
 
 ## Foundatio
 
-  * Attempted to track down issues where the redis queues would stop processing.
-  * Worked with Microsoft to get our unit tests discoverable on the new csproject format.
-  * Added new [Foundatio.Jobs commands package](https://github.com/exceptionless/Foundatio/commit/50dddaa52d3cc929a62d42b40f8d767e4f916545) that allows you to quickly discover and get command line help on your jobs.
+* Attempted to track down issues where the redis queues would stop processing.
+* Worked with Microsoft to get our unit tests discoverable on the new csproject format.
+* Added new [Foundatio.Jobs commands package](https://github.com/exceptionless/Foundatio/commit/50dddaa52d3cc929a62d42b40f8d767e4f916545) that allows you to quickly discover and get command line help on your jobs.
 
 [View Repo](https://github.com/exceptionless/Foundatio)
 
 ## Foundatio.Repositories
 
-  * Fixed various issues with running data migration scripts for the first time.
-  * Fixed an issues with GetByIds where falling back to search wouldn&#8217;t take into account multiple pages of results.
+* Fixed various issues with running data migration scripts for the first time.
+* Fixed an issues with GetByIds where falling back to search wouldn't take into account multiple pages of results.
 
 [View Repo](https://github.com/exceptionless/Foundatio.Repositories)
 

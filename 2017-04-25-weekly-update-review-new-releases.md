@@ -1,13 +1,11 @@
 ---
 id: 15515
-postTitle: 'Weekly Update &#8211; Review of New Releases and More'
+postTitle: Weekly Update &#8211; Review of New Releases and More
 date: 2017-04-25T14:02:06-06:00
 author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", ".NET"]
 ---
-<div class="videoWrapper" style="margin-bottom: 20px;">
-</div>
 
 Last week we [announced release notes](/exceptionless-net-client-and-core-releases-bugs-usability-performance-self-hosting/) for Exceptionless 4.0.2, Exceptionless.NET 4.0.3, and Exceptionless.UI 2.6.2. In our weekly update this week, we review some of those changes/updates, Foundatio changes, and more. Check it out!<!--more-->
 
@@ -19,7 +17,7 @@ In Exceptionless Core, we added support for [MailKit](https://github.com/jstedfa
 
 ### Foundatio Updates
 
-For [Foundatio](https://github.com/exceptionless/Foundatio), we updated the Azure storage copy implementation to copy server side, fixed an issue where FolderFileStorage wasn&#8217;t behaving properly when renaming files that exist, and fixed a Redis cache client issue where deleting cache items by wild card was erroring out if there were no matching keys.  
+For [Foundatio](https://github.com/exceptionless/Foundatio), we updated the Azure storage copy implementation to copy server side, fixed an issue where FolderFileStorage wasn't behaving properly when renaming files that exist, and fixed a Redis cache client issue where deleting cache items by wild card was erroring out if there were no matching keys.
 &#8211; Updated the azure storage copy implementation to copy server side.
 
 ### Changes to Exceptionless.NET
@@ -32,7 +30,7 @@ In Exceptionless.UI, lists of tags now wrap to the next line, and we fixed an is
 
 ### Updates to Foundatio.Repositories
 
-Here, we fixed a caching issue where you couldn&#8217;t set the key without enabling cache, and we simplified index creation and stopped using a lock.
+Here, we fixed a caching issue where you couldn't set the key without enabling cache, and we simplified index creation and stopped using a lock.
 
 <h2 style="text-align: center;">
   <a href="https://youtu.be/rwl4FfyNCtc?list=PLGHP7IVwFs_81fZTMgF7Dm5e0Ax4YvW_V">WATCH NOW</a>

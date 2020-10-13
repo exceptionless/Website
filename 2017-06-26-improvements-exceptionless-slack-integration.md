@@ -6,16 +6,14 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "Foundatio", "Serilog", "slack"]
 ---
-<div class="videoWrapper" style="margin-bottom: 20px;">
-</div>
 
-In this week&#8217;s video, Blake covers a quick update on the Exceptionless Slack integration, along with a minor update to Foundatio.
+In this week's video, Blake covers a quick update on the Exceptionless Slack integration, along with a minor update to Foundatio.
 
 Take a look!<!--more-->
 
 ## Slack Integration Update
 
-We have been tweaking the recent Slack integration over the past month or so, and this week we noticed that action URLs being created incorrectly and failures weren&#8217;t being handle correctly with rate limiting. So, those two issues have been tweaked and should be working much better now.
+We have been tweaking the recent Slack integration over the past month or so, and this week we noticed that action URLs being created incorrectly and failures weren't being handle correctly with rate limiting. So, those two issues have been tweaked and should be working much better now.
 
 ### In Foundatio News
 

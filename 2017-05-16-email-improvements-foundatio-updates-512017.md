@@ -1,13 +1,11 @@
 ---
 id: 15561
-postTitle: 'Daily Summary Email Improvements, Foundatio Updates, and more &#8211; Weekly Update 5/1/2017'
+postTitle: Daily Summary Email Improvements, Foundatio Updates, and more &#8211; Weekly Update 5/1/2017
 date: 2017-05-16T10:25:50-06:00
 author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "cache", "email"]
 ---
-<div class="videoWrapper" style="margin-bottom: 20px;">
-</div>
 
 In the 5/1/17 weekly update, Blake talks email notification improvements, bug fixes, and Foundatio.Repositories and Foundatio.Parsers updates. Check out the video above or read the details below.<!--more-->
 

@@ -6,9 +6,9 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "open source"]
 ---
-**<img loading="lazy" class="alignright  wp-image-2845" alt="Octocat" src="http://exceptionless.com/assets/Octocat-300x249.png" width="240" height="199" data-id="2845" srcset="/assets/Octocat-300x249.png 300w, /assets/Octocat.png 800w" sizes="(max-width: 240px) 100vw, 240px" />It&#8217;s a big day at Exceptionless.**
+**<img loading="lazy" class="alignright  wp-image-2845" alt="Octocat" src="/assets/Octocat-300x249.png" width="240" height="199" data-id="2845" srcset="/assets/Octocat-300x249.png 300w, /assets/Octocat.png 800w" sizes="(max-width: 240px) 100vw, 240px" />It's a big day at Exceptionless.**
 
-We are super excited to announce that we are <a title="Exceptionless on GitHub" href="https://github.com/exceptionless/Exceptionless" target="_blank">open sourcing the Exceptionless code</a>! That&#8217;s right, now you can hack on our real-time error reporting tool yourself.
+We are super excited to announce that we are <a title="Exceptionless on GitHub" href="https://github.com/exceptionless/Exceptionless" target="_blank">open sourcing the Exceptionless code</a>! That's right, now you can hack on our real-time error reporting tool yourself.
 
 Too many apps are throwing too many errors out there, resulting in confused users, lost business, and endless frustration.
 
@@ -20,7 +20,7 @@ We believe Exceptionless can help the development community become more in-tune 
 
 Check out the <a title="Exceptionless on GitHub" href="https://github.com/exceptionless/Exceptionless" target="_blank">Exceptionless Github Repository</a>, and make sure to <a title="Contributing to Exceptionless" href="https://github.com/exceptionless/Exceptionless/blob/master/CONTRIBUTING.md" target="_blank">read about contributing</a> if you plan on helping us improve the project.
 
-You&#8217;ll find instructions on getting started there, including setting up your hosting environment if you want to host things yourself. If you would rather host with us, we offer [easy and affordable plans](http://exceptionless.com/pricing/).
+You'll find instructions on getting started there, including setting up your hosting environment if you want to host things yourself. If you would rather host with us, we offer [easy and affordable plans](/pricing/).
 
 If you have a feature request or issue, let us know on the <a title="Exceptionless Feedback Forum" href="https://exceptionless.uservoice.com/" target="_blank">feedback forum</a>. We are **100% committed** to supporting the project.
 
@@ -34,20 +34,20 @@ The Exceptionless Team will continue to work on a road map of features and impro
 
 ### Planned features/enhancements
 
-  * Refactor client so that the base client is a PCL library thus supporting WinRT and Mono.
-  * Implement search features using ElasticSearch.
-  * JavaScript client for reporting client side errors.
-  * Refactor the API and UI to be completely separate layers and rewrite the UI as a SPA app using AngularJS.
-  * Add a server side plugin system that allows new functionality to be easily added like HipChat notifications.
+* Refactor client so that the base client is a PCL library thus supporting WinRT and Mono.
+* Implement search features using ElasticSearch.
+* JavaScript client for reporting client side errors.
+* Refactor the API and UI to be completely separate layers and rewrite the UI as a SPA app using AngularJS.
+* Add a server side plugin system that allows new functionality to be easily added like HipChat notifications.
 
 ### Ideas for the community
 
-These include just a few of feature requests, etc, that aren&#8217;t in the team&#8217;s immediate pipeline that you might consider tackling.
+These include just a few of feature requests, etc, that aren't in the team's immediate pipeline that you might consider tackling.
 
-  * Clients for Ruby, Java, Python, PHP, etc
-  * Ability to log non-exception data
-  * Teams within organizations
-  * Bookmarks
+* Clients for Ruby, Java, Python, PHP, etc
+* Ability to log non-exception data
+* Teams within organizations
+* Bookmarks
 
 ### Lets make something awesome
 

@@ -1,6 +1,6 @@
 ---
 id: 15963
-postTitle: 'Exceptionless.NET 4.1 Release &#8211; .NET Standard 2.0 &#038; Microsoft.Extensions.Logging Support, and more!'
+postTitle: Exceptionless.NET 4.1 Release &#8211; .NET Standard 2.0 &#038; Microsoft.Extensions.Logging Support, and more!
 date: 2017-11-07T15:51:12-06:00
 author: Exceptionless
 layout: blog_post.liquid
@@ -16,15 +16,15 @@ More details, below:<!--more-->
 
 ## Exceptionless.NET 4.1 New Features
 
-  1. We&#8217;ve added .NET Standard 2.0 support, which allows you to easily integrate with UWP applications now.
+  1. We've added .NET Standard 2.0 support, which allows you to easily integrate with UWP applications now.
   2. Microsoft.Extensions.Logging support has also been added via the Exceptionless.Extensions.Logging client. Thank you [@moogle001](https://github.com/moogle001) for contributing to this feature!
   3. Thanks to [@jamierushton](https://github.com/jamierushton), we now allow `null` and `default` values to be serialized, which translates to greater insight into contextual data.
-  4. We&#8217;re now using [GitLink](https://github.com/GitTools/GitLink) to debug packages more easily.
+  4. We're now using [GitLink](https://github.com/GitTools/GitLink) to debug packages more easily.
 
 ## Version 4.1 Bug Fixes
 
-  * GetFiles has been replaced with the EnumerateFiles method to improve performance in FolderObjectStorage. Thanks [@edwardmeng](https://github.com/edwardmeng) for that contribution!
-  * @edwardmeng also helped us improve diangnostic logging by including timestamps and log level. Thanks again!
+* GetFiles has been replaced with the EnumerateFiles method to improve performance in FolderObjectStorage. Thanks [@edwardmeng](https://github.com/edwardmeng) for that contribution!
+* @edwardmeng also helped us improve diangnostic logging by including timestamps and log level. Thanks again!
 
 ## Upgrading to Exceptionless.NET 4.1
 
@@ -36,4 +36,4 @@ Check out the [official release notes](https://github.com/exceptionless/Exceptio
 
 As always, we want to know what you think! If you have questions, concerns, or any feedback, please [submit an issue over on the GitHub repo](https://github.com/exceptionless/Exceptionless.Net/issues/new).
 
-&nbsp;
+

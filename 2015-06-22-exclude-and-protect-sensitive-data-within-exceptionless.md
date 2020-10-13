@@ -16,25 +16,25 @@ Once set, the excluded field data is discarded at the client level and never hit
 
 You can exclude data from any of the following:
 
-  * Extended Data Properties
-  * Form Fields
-  * Cookies
-  * Query Parameters
+* Extended Data Properties
+* Form Fields
+* Cookies
+* Query Parameters
 
 ## Data Exclusion Wildcards
 
 To be extra careful with your data, using * allows you to specify wildcards that can be used to dictate “starts with,” “ends with,” or “contains.”
 
-  * `string*`  
+* `string*`
     Following the string with a wildcard removes any field that starts with the string from the event report.
-  * `*string`  
+* `*string`
     If you prefix the field name with a wildcard, it will remove any field that ends with the string.
-  * `*string*`  
+* `*string*`
     Using a wildcard before and after the string means that the system will remove any field that contains the string.
 
 ### Example
 
-<img loading="lazy" class="aligncenter wp-image-13355 size-full" src="/_site/assets/data-exclusion-examples.png" alt="Exceptionless Security" width="520" height="44" data-id="13355" srcset="/assets/data-exclusion-examples.png 520w, /assets/data-exclusion-examples-300x25.png 300w" sizes="(max-width: 520px) 100vw, 520px" /> 
+<img loading="lazy" class="aligncenter wp-image-13355 size-full" src="/_site/assets/data-exclusion-examples.png" alt="Exceptionless Security" width="520" height="44" data-id="13355" srcset="/assets/data-exclusion-examples.png 520w, /assets/data-exclusion-examples-300x25.png 300w" sizes="(max-width: 520px) 100vw, 520px" />
 
 One potential example is, let’s say, user addresses. Perhaps you have multiple user addresses that may get transmitted, and you want to exclude some or all of them. Maybe you have &#8220;HomeAddress&#8221; and &#8220;WorkAddress&#8221;.
 
@@ -42,7 +42,7 @@ To exclude only &#8220;HomeAddress&#8221; data, you would just add `HomeAddress`
 
 To exclude both, you could either add `HomeAddress` and `WorkAddress`, separated by a comma, or you could use `*Address` if those were the only two fields that ended with “Address.” If those were the only fields that contained “Address” at all, you could use `*Address*`.
 
-It&#8217;s easy stuff, but powerful enough to be aware of and use where possible to ensure security.
+It's easy stuff, but powerful enough to be aware of and use where possible to ensure security.
 
 ## What Do You Exclude?
 

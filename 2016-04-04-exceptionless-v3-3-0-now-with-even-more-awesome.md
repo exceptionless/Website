@@ -1,24 +1,24 @@
 ---
 id: 14268
-postTitle: 'Exceptionless V3.3.0 Release &#8211; Now with Even More Awesome'
+postTitle: Exceptionless V3.3.0 Release &#8211; Now with Even More Awesome
 date: 2016-04-04T10:00:12-06:00
 author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-14271" style="margin-bottom: 20px;" src="http://exceptionless.com/assets/Exceptionless3-3-0-release-notes.jpg" alt="Exceptionless 3.3.0 Release Notes" width="708" height="250" data-id="14271" srcset="/assets/Exceptionless3-3-0-release-notes.jpg 708w, /assets/Exceptionless3-3-0-release-notes-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-14271" style="margin-bottom: 20px;" src="/assets/Exceptionless3-3-0-release-notes.jpg" alt="Exceptionless 3.3.0 Release Notes" width="708" height="250" data-id="14271" srcset="/assets/Exceptionless3-3-0-release-notes.jpg 708w, /assets/Exceptionless3-3-0-release-notes-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 We always work hard to keep improving Exceptionless, and this release is no different!
 
-Since the last release, we&#8217;ve put a lot of time into <a href="http://exceptionless.com/filter-improvements-exceptionless-single-page-app/" target="_blank">making the filtering and searching more user friendly</a> and intuitive, improving the reliability of jobs, and of course fixing any bugs that you guys (or Exceptionless) have been able to find.
+Since the last release, we've put a lot of time into <a href="/filter-improvements-exceptionless-single-page-app/" target="_blank">making the filtering and searching more user friendly</a> and intuitive, improving the reliability of jobs, and of course fixing any bugs that you guys (or Exceptionless) have been able to find.
 
-Let&#8217;s see what we&#8217;ve got going on, shall we?<!--more-->
+Let's see what we've got going on, shall we?<!--more-->
 
-## What&#8217;s Goin On?
+## What's Goin On?
 
 ### Filter / Search
 
-For starters, as mentioned above, we relocated the search bar to exist on the top level of the UI, and the date picker filter now shows the current choice on the top level. Both icons were replaced, and we really think it&#8217;s much more intuitive and efficient. You can read more and see examples over on the <a href="http://exceptionless.com/filter-improvements-exceptionless-single-page-app/" target="_blank">dedicated blog post</a> we did last week.
+For starters, as mentioned above, we relocated the search bar to exist on the top level of the UI, and the date picker filter now shows the current choice on the top level. Both icons were replaced, and we really think it's much more intuitive and efficient. You can read more and see examples over on the <a href="/filter-improvements-exceptionless-single-page-app/" target="_blank">dedicated blog post</a> we did last week.
 
 ### New Stats API
 
@@ -34,18 +34,18 @@ We introduced <a href="/custom-event-stacking-in-exceptionless/" target="_blank"
 
 ### Discard events created from bots
 
-A default list of bot wild card exclusions is now automatically set on new projects, so if you&#8217;re upgrading, you now have the ability to run a maintenance job via the admin controller to set a default bot list. All events with user agents matching these wild cards will then be discarded on the client side.
+A default list of bot wild card exclusions is now automatically set on new projects, so if you're upgrading, you now have the ability to run a maintenance job via the admin controller to set a default bot list. All events with user agents matching these wild cards will then be discarded on the client side.
 
 ### Bugfixes!
 
-  * Marking stacks as fixed or hidden was causing some significant slow down and sometimes wouldn&#8217;t work at all. This has been remedied!
-  * Redis connection failures and lock timeouts were sometimes causing jobs to stop working or fail. We dug through and found what was causing that and fixed it as well.
-  * When the geo field contained a localized number, sometimes events were not being processed. This <a href="/add-reverse-geocoding-to-your-app/" target="_blank">localization</a> issue has been solved.
-  * And last but not least (well, maybe least), a seralization bug has been fixed that would cause query strings, cookies, and other extended data items to be transformed to lowercase and underscored.
+* Marking stacks as fixed or hidden was causing some significant slow down and sometimes wouldn't work at all. This has been remedied!
+* Redis connection failures and lock timeouts were sometimes causing jobs to stop working or fail. We dug through and found what was causing that and fixed it as well.
+* When the geo field contained a localized number, sometimes events were not being processed. This <a href="/add-reverse-geocoding-to-your-app/" target="_blank">localization</a> issue has been solved.
+* And last but not least (well, maybe least), a seralization bug has been fixed that would cause query strings, cookies, and other extended data items to be transformed to lowercase and underscored.
 
 ### Time to Upgrade
 
-Well, only if you&#8217;re a self hoster. Everyone else will experience all of these awesome improvements and bug fixes the next time they log in. If you are a self hoster, please review the <a href="https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting" target="_blank">Self Hosting Docs</a> for info regarding upgrading your current Exceptionless install. Naturally, if you have any questions please let us know and we will get you taken care of.
+Well, only if you're a self hoster. Everyone else will experience all of these awesome improvements and bug fixes the next time they log in. If you are a self hoster, please review the <a href="https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting" target="_blank">Self Hosting Docs</a> for info regarding upgrading your current Exceptionless install. Naturally, if you have any questions please let us know and we will get you taken care of.
 
 ## In Conclusion
 

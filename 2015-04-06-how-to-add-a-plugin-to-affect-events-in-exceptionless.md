@@ -6,13 +6,13 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-12927" style="margin-top: 10px; margin-bottom: 15px;" src="http://exceptionless.com/assets/plugins-code-featured1.jpg" alt="Exceptionless Plugins" width="708" height="200" data-id="12927" srcset="/assets/plugins-code-featured1.jpg 708w, /assets/plugins-code-featured1-300x85.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />A plugin is a client-side addin that is run every time you submit an event.
+<img loading="lazy" class="aligncenter size-full wp-image-12927" style="margin-top: 10px; margin-bottom: 15px;" src="/assets/plugins-code-featured1.jpg" alt="Exceptionless Plugins" width="708" height="200" data-id="12927" srcset="/assets/plugins-code-featured1.jpg 708w, /assets/plugins-code-featured1-300x85.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />A plugin is a client-side addin that is run every time you submit an event.
 
 Plugins can be used to add or remove data from an event, or even allow you to cancel an event submission.
 
 Each client-specific implementation registers a plugin to provide client-specific information like request info, environmental info, etc. These abilities make plugins very powerful.
 
-Let&#8217;s take a more in-depth look at Exceptionless Plugins and how they are used.
+Let's take a more in-depth look at Exceptionless Plugins and how they are used.
 
 <!--more-->
 
@@ -28,15 +28,15 @@ To create a plugin, you have to specify a System.Action<EventPluginContext>, or
 
 Every plugin is passed an <a title="Exceptionless Plugin Contect" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Shared/Plugins/EventPluginContext.cs" target="_blank">EventPluginContext</a>, which contains all the valuable contextual information that your plugin may need via the following properties:
 
-  * **Client  
+* **Client
 ** The ExceptionlessClient that created the event.
-  * **Event  
+* **Event
 ** The target event.
-  * **ContextData  
+* **ContextData
 ** Allows plugins to access additional contextual data to allow them to add additional data to events.
-  * **Log  
+* **Log
 ** An ExceptionlessLog implementation that lets you write to the internal logger. This internal logger is used only when debugging the client.
-  * ****Resolver  
+* ****Resolver
 **** The ExceptionlessClient\`s dependency resolver. This is useful for resolving other dependencies at runtime that were not requested via constructor injection.
 
 ### Exceptionless Plugin Example &#8211; Add System Uptime to Feature Usages
@@ -72,7 +72,7 @@ namespace Exceptionless.SampleConsole.Plugins {
 
 **Output in Exceptionless:**
 
-#### [<img loading="lazy" class="aligncenter wp-image-12937 size-full" src="http://exceptionless.com/assets/exceptionless-plugin-system-uptime.png" alt="Exceptionless Plugin System Uptime" width="755" height="350" data-id="12922" srcset="/assets/exceptionless-plugin-system-uptime.png 755w, /assets/exceptionless-plugin-system-uptime-300x139.png 300w" sizes="(max-width: 755px) 100vw, 755px" />](http://exceptionless.com/assets/exceptionless-plugin-system-uptime.png)
+#### [<img loading="lazy" class="aligncenter wp-image-12937 size-full" src="/assets/exceptionless-plugin-system-uptime.png" alt="Exceptionless Plugin System Uptime" width="755" height="350" data-id="12922" srcset="/assets/exceptionless-plugin-system-uptime.png 755w, /assets/exceptionless-plugin-system-uptime-300x139.png 300w" sizes="(max-width: 755px) 100vw, 755px" />](/assets/exceptionless-plugin-system-uptime.png)
 
 _Note:_ We kept the formatting of the uptime simple for the sake of this example, but we recommend using our <a title="Exceptionless Date Time Extensions Library" href="https://github.com/exceptionless/Exceptionless.DateTimeExtensions" target="_blank">open source DateTimeExtensions library</a> if you wish to format it in a really pretty manner.
 
@@ -80,36 +80,36 @@ _Note:_ We kept the formatting of the uptime simple for the sake of this exampl
 
 You might have noticed that there is a priority attribute with a value of 100. The priority of a plugin determines the order that the plugin will run in (runs in order of lowest to highest, and then by order added). All plugins that ship as part of the client start with a priority of 10 and increment by multiples of 10. If you want your addin to run first, give it a low priority (e.g., 0, 1, 2, 3, 4, 5). If you want it to run last, give it a high priority (>100). By default, if you don’t specify a priority, 0 will be used.
 
-To make sure your plugin runs first (if required), you can inspect the configuration&#8217;s plugin property in Visual Studio while debugging.
+To make sure your plugin runs first (if required), you can inspect the configuration's plugin property in Visual Studio while debugging.
 
 <pre>foreach (var plugin in Exceptionless.ExceptionlessClient.Default.Configuration.Plugins)
     Console.WriteLine(plugin);
 </pre>
 
-[<img loading="lazy" class="aligncenter wp-image-12923 size-full" src="http://exceptionless.com/assets/exceptionless-plugin-priority.png" alt="Exceptionless Plugin Priority" width="938" height="276" data-id="12923" srcset="/assets/exceptionless-plugin-priority.png 938w, /assets/exceptionless-plugin-priority-300x88.png 300w" sizes="(max-width: 938px) 100vw, 938px" />](http://exceptionless.com/assets/exceptionless-plugin-priority.png)
+[<img loading="lazy" class="aligncenter wp-image-12923 size-full" src="/assets/exceptionless-plugin-priority.png" alt="Exceptionless Plugin Priority" width="938" height="276" data-id="12923" srcset="/assets/exceptionless-plugin-priority.png 938w, /assets/exceptionless-plugin-priority-300x88.png 300w" sizes="(max-width: 938px) 100vw, 938px" />](/assets/exceptionless-plugin-priority.png)
 
 ## Adding the Plugin to Your App
 
-Now that we&#8217;ve created the plugin, we’ll add it when our application starts up by calling one of the Exceptionless.ExceptionlessClient.Default.Configuration.AddPlugin() overloads.
+Now that we've created the plugin, we’ll add it when our application starts up by calling one of the Exceptionless.ExceptionlessClient.Default.Configuration.AddPlugin() overloads.
 
 In most cases, we use the following overload to register plugins:
 
-<pre>using Exceptionless;            
+<pre>using Exceptionless;
 ExceptionlessClient.Default.Configuration.AddPlugin&lt;SystemUptimePlugin&gt;();
 </pre>
 
 When you add a plugin by specifying the type, we inspect the type and try to find a PriorityAttribute. If we can’t find one, the default value of 0 will be used.
 
-You can also add a plugin by passing a System.Action<EventPluginContext> to AddPlugin.  
+You can also add a plugin by passing a System.Action<EventPluginContext> to AddPlugin.
 _Please note that we are specifying a key when adding the action plugin so we can remove it later. If you are not going to be removing your plugin, then you can omit the first argument._
 
 **We pass AddPlugin three arguments:**
 
-  * **A unique plugin key** (which can be used to remove the plugin later)
-  * **Priority**
-  * **An action** that contains all of our logic to add the system uptime (or whatever your plugin does).
+* **A unique plugin key** (which can be used to remove the plugin later)
+* **Priority**
+* **An action** that contains all of our logic to add the system uptime (or whatever your plugin does).
 
-<pre>using Exceptionless;  
+<pre>using Exceptionless;
 ExceptionlessClient.Default.Configuration.AddPlugin("system-uptime", 100, context =&gt; {
     // Only update feature usage events.
     if (context.Event.Type != Event.KnownTypes.FeatureUsage)
@@ -143,4 +143,4 @@ ExceptionlessClient.Default.Configuration.RemovePlugin("system-uptime");
 
 ## How Can You Use Plugins?
 
-Can you think of ways that plugins can help your app? Are you already building some? Let us know what they are and how they help! Eventually, we plan on building a library of useful and common plugins that other developers can easily implement. The more help we&#8217;ve got, the faster that library will grow!
+Can you think of ways that plugins can help your app? Are you already building some? Let us know what they are and how they help! Eventually, we plan on building a library of useful and common plugins that other developers can easily implement. The more help we've got, the faster that library will grow!

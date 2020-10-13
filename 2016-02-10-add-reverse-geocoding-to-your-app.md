@@ -6,13 +6,13 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-14112" src="http://exceptionless.com/assets/reverse-geocoding-header.jpg" alt="Reverse Geocoding" width="708" height="250" data-id="14112" srcset="/assets/reverse-geocoding-header.jpg 708w, /assets/reverse-geocoding-header-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-14112" src="/assets/reverse-geocoding-header.jpg" alt="Reverse Geocoding" width="708" height="250" data-id="14112" srcset="/assets/reverse-geocoding-header.jpg 708w, /assets/reverse-geocoding-header-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 We recently introduced reverse geocoding into Exceptionless and are now adding features to make full use of it.
 
-What we&#8217;d like to do in this blog article is **walk any interested developers through the process of adding it to their own app.**
+What we'd like to do in this blog article is **walk any interested developers through the process of adding it to their own app.**
 
-We&#8217;ll talk about the resources and services we&#8217;re using to pull it off, why we chose them, and give you code snippets for implementation. It&#8217;s all open source, so we&#8217;ve also included links to all the relevant code in hopes it will make your life easier!
+We'll talk about the resources and services we're using to pull it off, why we chose them, and give you code snippets for implementation. It's all open source, so we've also included links to all the relevant code in hopes it will make your life easier!
 
 Lets check it out.
 
@@ -24,7 +24,7 @@ It’s the process of taking geo coordinates or an IP Address and resolving it t
 
 ### Why You Need It
 
-<img loading="lazy" class="aligncenter size-full wp-image-14104" src="http://exceptionless.com/assets/user-event-geo-location.jpg" alt="Reverse Geocoding - User Location" width="359" height="49" data-id="14104" srcset="/assets/user-event-geo-location.jpg 359w, /assets/user-event-geo-location-300x41.jpg 300w" sizes="(max-width: 359px) 100vw, 359px" /> 
+<img loading="lazy" class="aligncenter size-full wp-image-14104" src="/assets/user-event-geo-location.jpg" alt="Reverse Geocoding - User Location" width="359" height="49" data-id="14104" srcset="/assets/user-event-geo-location.jpg 359w, /assets/user-event-geo-location-300x41.jpg 300w" sizes="(max-width: 359px) 100vw, 359px" />
 
 Wouldn’t it be nice if you could **provide location services to your users automatically**? Maybe help them fill in a shipping form from a zip code or there current location?
 
@@ -38,7 +38,7 @@ One of our primary goals with Exceptionless is to be **completely open source an
 
 After researching many different services, we ended up goin
 
-g with <a href="http://dev.maxmind.com/geoip/geoip2/geolite2/" target="_blank">GeoLite2&#8217;s free, offline, downloadable databases</a>. These databases are **free and updated once a month**, but if you require a more accurate and up-to-date database they offer a paid subscription. We also use their <a href="https://github.com/maxmind/GeoIP2-dotnet" target="_blank">open source library</a> for interacting with the database in memory.
+g with <a href="http://dev.maxmind.com/geoip/geoip2/geolite2/" target="_blank">GeoLite2's free, offline, downloadable databases</a>. These databases are **free and updated once a month**, but if you require a more accurate and up-to-date database they offer a paid subscription. We also use their <a href="https://github.com/maxmind/GeoIP2-dotnet" target="_blank">open source library</a> for interacting with the database in memory.
 
 ## Automating the GeoIP Database Download
 
@@ -66,11 +66,11 @@ After we automate the database download, the next step involves loading the data
 public async Task&lt;GeoResult&gt; ResolveIpAsync(string ip, CancellationToken cancellationToken = new CancellationToken()) {
     if (String.IsNullOrWhiteSpace(ip) || (!ip.Contains(".") && !ip.Contains(":")))
         return null;
-            
+
     var database = await GetDatabaseAsync(cancellationToken);
     if (database == null)
         return null;
-            
+
     try {
         var city = database.City(ip);
         if (city?.Location != null) {
@@ -92,7 +92,7 @@ public async Task&lt;GeoResult&gt; ResolveIpAsync(string ip, CancellationToken c
 private async Task&lt;DatabaseReader&gt; GetDatabaseAsync(CancellationToken cancellationToken) {
     if (_database != null)
         return _database;
-    
+
     if (!await _storage.ExistsAsync("GeoLite2-City.mmdb")) {
         Logger.Warn().Message("No GeoIP database was found.").Write();
         return null;
@@ -114,7 +114,7 @@ Then, just call the `ResolveIPAsync` method with an IP address to look up the lo
 
 Feel free to take a look at `<a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Geo/MaxMindGeoIPService.cs" target="_blank">MaxMindGeoIPService</a>` for a complete sample that includes logging, error handling, caching of the results, and IP validation for higher lookup throughput. We’ve spent the time writing tests and optimizing it to ensure **its rock solid and works great**. So feel free to grab our <a href="https://github.com/exceptionless/Exceptionless/tree/master/Source/Core/Geo" target="_blank">IGeoIPService interfaces and models</a> and use them in your app.
 
-**It’s worth noting** that in our app, we use the IP address provided in the event. This could come from a server request or the actual machine&#8217;s IP address. We also fall back to the <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/Controllers/EventController.cs#L617" target="_blank">API consumer&#8217;s client IP address</a>.
+**It’s worth noting** that in our app, we use the IP address provided in the event. This could come from a server request or the actual machine's IP address. We also fall back to the <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/Controllers/EventController.cs#L617" target="_blank">API consumer's client IP address</a>.
 
 ### Looking up a Physical Address from Geo Coordinates
 
@@ -156,4 +156,4 @@ We also queue work items to look up the geo location since that can be an expen
 
 ## Feedback? Questions?
 
-Get in touch on <a href="https://github.com/exceptionless" target="_blank">GitHub</a> or leave a comment below to let us know your thoughts or questions. We&#8217;re always open to suggestions and will do what we can to help you out if you&#8217;re having issues with implementation!
+Get in touch on <a href="https://github.com/exceptionless" target="_blank">GitHub</a> or leave a comment below to let us know your thoughts or questions. We're always open to suggestions and will do what we can to help you out if you're having issues with implementation!

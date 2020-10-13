@@ -1,6 +1,6 @@
 ---
 id: 15248
-postTitle: 'Setting Up New Elasticsearch Cluster, Reindexing &#038; Mappings &#8211; Live Code Demo'
+postTitle: Setting Up New Elasticsearch Cluster, Reindexing &#038; Mappings &#8211; Live Code Demo
 date: 2017-02-01T12:56:26-06:00
 author: Exceptionless
 layout: blog_post.liquid

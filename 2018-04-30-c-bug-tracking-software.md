@@ -1,6 +1,6 @@
 ---
 id: 16174
-postTitle: 'C# Bug Tracking Software'
+postTitle: C# Bug Tracking Software
 date: 2018-04-30T11:53:21-06:00
 author: Exceptionless
 layout: blog_post.liquid
@@ -12,7 +12,7 @@ Bugs, exceptions, issues, faults, errors, incidents, whatever you want to call t
 
 ## WHAT IS BUG TRACKING?
 
-In its simplest form, bug tracking is when a developer is alerted to an event when their code does not operate as intended. They catalog the issue, collect as much information as they can that led to said event, and attempt to recreate it so they can fix the problem. 
+In its simplest form, bug tracking is when a developer is alerted to an event when their code does not operate as intended. They catalog the issue, collect as much information as they can that led to said event, and attempt to recreate it so they can fix the problem.
 
 As you can imagine, doing all of this manually becomes quite unwieldy the larger an application gets. On top of that, with larger applications comes additional layers of complexity that a user simply can’t account for or give you the proper information to set you on the path for resolving their bug. This is why it’s so important to have an automated event tracker.
 
@@ -32,7 +32,7 @@ Due to the potentially complicated landscape that is a C# application, detecting
 
 ### REAL TIME BUG DISCOVERY
 
-You can’t be everywhere at once and see everything, especially in the larger C# applications. Having C# bug tracking software guarantees that you can be with it collecting data in the background. Regardless of when a bug occurs, our platform will have a full report with everything you need to set your development team in the right direction. 
+You can’t be everywhere at once and see everything, especially in the larger C# applications. Having C# bug tracking software guarantees that you can be with it collecting data in the background. Regardless of when a bug occurs, our platform will have a full report with everything you need to set your development team in the right direction.
 
 ### CUSTOM OBJECTS
 
@@ -50,5 +50,5 @@ Our bug reports extensively tracks a robust set of information to help you quick
 
 We have extensively documented our platform and API to make it easy and painless to use. You can use our fluent API to easily add custom objects, tags, and other information as well as marking certain errors as vitally important.
 
-RECAP  
+RECAP
 Troubleshooting and fixing bugs is part of our jobs as developers and, as the saying goes, we need to work smarter, not harder so we can spend more time creating new features to our applications rather than patching errors. Exceptionless’ C# bug tracking software will intuitively, and automatically, organize any bugs that do occur to help you pinpoint the cause so your application can get back on track.

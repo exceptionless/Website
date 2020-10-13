@@ -1,6 +1,6 @@
 ---
 id: 15666
-postTitle: 'Slack Integration Updates and Bug Fixes &#8211; Weekly Update 5/22/2017'
+postTitle: Slack Integration Updates and Bug Fixes &#8211; Weekly Update 5/22/2017
 date: 2017-06-20T15:59:48-06:00
 author: Exceptionless
 layout: blog_post.liquid

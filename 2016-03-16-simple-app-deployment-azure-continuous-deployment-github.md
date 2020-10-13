@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-14224" src="http://exceptionless.com/assets/cloud-icon.png" alt="simple app deployment" width="260" height="260" data-id="14224" srcset="/assets/cloud-icon.png 260w, /assets/cloud-icon-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />We’ve learned a lot about simple app deployment since we first started Exceptionless. We initially went with what everyone else was doing (Octopus Deploy), but over time we thought we could greatly simplify and automate it, letting us focus on what matters, improving the product!
+<img loading="lazy" class="alignright size-full wp-image-14224" src="/assets/cloud-icon.png" alt="simple app deployment" width="260" height="260" data-id="14224" srcset="/assets/cloud-icon.png 260w, /assets/cloud-icon-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />We’ve learned a lot about simple app deployment since we first started Exceptionless. We initially went with what everyone else was doing (Octopus Deploy), but over time we thought we could greatly simplify and automate it, letting us focus on what matters, improving the product!
 
 Through a lot of testing and iterations of our deployment process, we think we finally nailed it.
 
@@ -50,7 +50,7 @@ Here are the details on our solution for simple app deployment using GitHub and 
 
 ### 1. Use AppVeyor to build the app.
 
-<a href="https://github.com/exceptionless/Exceptionless/blob/master/appveyor.yml" target="_blank">Here&#8217;s our code.</a>
+<a href="https://github.com/exceptionless/Exceptionless/blob/master/appveyor.yml" target="_blank">Here's our code.</a>
 
 ### 2. Store build artifacts in a separate GitHub artifacts repository.
 
@@ -58,17 +58,17 @@ This works really well because you can see the entire history of your build arti
 
 We found that we could <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L71" target="_blank">format the commit message with a specific format</a> that GitHub could understand and parse into different links. We can click on the &#8220;Commit:&#8221; part of the message to link to the actual commit that is building to see exactly has changed.
 
-<a href="http://exceptionless.com/assets/github-build-history-artifacts.jpg" rel="attachment wp-att-14204"><img loading="lazy" class="aligncenter size-large wp-image-14204" src="http://exceptionless.com/assets/github-build-history-artifacts-1024x380.jpg" alt="github build history artifacts" width="940" height="349" data-id="14204" srcset="/assets/github-build-history-artifacts-1024x380.jpg 1024w, /assets/github-build-history-artifacts-300x111.jpg 300w, /assets/github-build-history-artifacts-768x285.jpg 768w, /assets/github-build-history-artifacts.jpg 1402w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href="/assets/github-build-history-artifacts.jpg" rel="attachment wp-att-14204"><img loading="lazy" class="aligncenter size-large wp-image-14204" src="/assets/github-build-history-artifacts-1024x380.jpg" alt="github build history artifacts" width="940" height="349" data-id="14204" srcset="/assets/github-build-history-artifacts-1024x380.jpg 1024w, /assets/github-build-history-artifacts-300x111.jpg 300w, /assets/github-build-history-artifacts-768x285.jpg 768w, /assets/github-build-history-artifacts.jpg 1402w" sizes="(max-width: 940px) 100vw, 940px" /></a>
 
 We can then click on the build to see what artifacts changed.
 
-<a href="http://exceptionless.com/assets/gitHube-build-history-details.jpg" rel="attachment wp-att-14205"><img loading="lazy" class="aligncenter size-large wp-image-14205" src="http://exceptionless.com/assets/gitHube-build-history-details-1024x193.jpg" alt="gitHub build history details" width="940" height="177" data-id="14205" srcset="/assets/gitHube-build-history-details-1024x193.jpg 1024w, /assets/gitHube-build-history-details-300x57.jpg 300w, /assets/gitHube-build-history-details-768x145.jpg 768w, /assets/gitHube-build-history-details.jpg 1494w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href="/assets/gitHube-build-history-details.jpg" rel="attachment wp-att-14205"><img loading="lazy" class="aligncenter size-large wp-image-14205" src="/assets/gitHube-build-history-details-1024x193.jpg" alt="gitHub build history details" width="940" height="177" data-id="14205" srcset="/assets/gitHube-build-history-details-1024x193.jpg 1024w, /assets/gitHube-build-history-details-300x57.jpg 300w, /assets/gitHube-build-history-details-768x145.jpg 768w, /assets/gitHube-build-history-details.jpg 1494w" sizes="(max-width: 940px) 100vw, 940px" /></a>
 
 Another great thing about using Git to store your artifacts is that you can easily clone the artifacts to your local machine to see the exact files that are being used in a specific environment.
 
 The artifacts repository has branches to match the branches of our code repo so we have separate build artifacts for each branch. This also means that we can just merge the feature into master when we are done and that will cause the production website that is pointed to our master repository to automatically get updated. So, it’s as simple as merge your branch to master to promote a build to production.
 
-<a href="http://exceptionless.com/assets/merge-branch-master-promote-build-production.jpg" rel="attachment wp-att-14206"><img loading="lazy" class="aligncenter size-full wp-image-14206" src="http://exceptionless.com/assets/merge-branch-master-promote-build-production.jpg" alt="merge-branch-master promote build production" width="624" height="430" data-id="14206" srcset="/assets/merge-branch-master-promote-build-production.jpg 624w, /assets/merge-branch-master-promote-build-production-300x207.jpg 300w" sizes="(max-width: 624px) 100vw, 624px" /></a>
+<a href="/assets/merge-branch-master-promote-build-production.jpg" rel="attachment wp-att-14206"><img loading="lazy" class="aligncenter size-full wp-image-14206" src="/assets/merge-branch-master-promote-build-production.jpg" alt="merge-branch-master promote build production" width="624" height="430" data-id="14206" srcset="/assets/merge-branch-master-promote-build-production.jpg 624w, /assets/merge-branch-master-promote-build-production-300x207.jpg 300w" sizes="(max-width: 624px) 100vw, 624px" /></a>
 
 **One issue** with this approach is that the repo can get large because we are storing binary files that change on every build. We are looking into using [Git Large File Support](https://git-lfs.github.com/) to fix this issue.
 
@@ -90,7 +90,7 @@ For our .NET application, <a href="https://github.com/exceptionless/Exceptionles
 
 It will see when new artifact commits happen and automatically deploy the changes.
 
-<a href="http://exceptionless.com/assets/azure-sees-new-artifact-commit-and-deploys.jpg" rel="attachment wp-att-14207"><img loading="lazy" class="aligncenter size-large wp-image-14207" src="http://exceptionless.com/assets/azure-sees-new-artifact-commit-and-deploys-1024x846.jpg" alt="azure sees new artifact commit and deploys" width="940" height="777" data-id="14207" srcset="/assets/azure-sees-new-artifact-commit-and-deploys-1024x846.jpg 1024w, /assets/azure-sees-new-artifact-commit-and-deploys-300x248.jpg 300w, /assets/azure-sees-new-artifact-commit-and-deploys-768x635.jpg 768w, /assets/azure-sees-new-artifact-commit-and-deploys.jpg 1118w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href="/assets/azure-sees-new-artifact-commit-and-deploys.jpg" rel="attachment wp-att-14207"><img loading="lazy" class="aligncenter size-large wp-image-14207" src="/assets/azure-sees-new-artifact-commit-and-deploys-1024x846.jpg" alt="azure sees new artifact commit and deploys" width="940" height="777" data-id="14207" srcset="/assets/azure-sees-new-artifact-commit-and-deploys-1024x846.jpg 1024w, /assets/azure-sees-new-artifact-commit-and-deploys-300x248.jpg 300w, /assets/azure-sees-new-artifact-commit-and-deploys-768x635.jpg 768w, /assets/azure-sees-new-artifact-commit-and-deploys.jpg 1118w" sizes="(max-width: 940px) 100vw, 940px" /></a>
 
 Azure Continuous Deployment is another Git repository that we can easily view to see the history of deployments to each of our sites. It also allows us to easily roll back to previous versions.
 
@@ -98,7 +98,7 @@ Azure Continuous Deployment is another Git repository that we can easily view to
 
 Azure Websites makes this very easy.
 
-<a href="http://exceptionless.com/assets/override-config-settings-environment-variables.jpg" rel="attachment wp-att-14208"><img loading="lazy" class="aligncenter size-large wp-image-14208" src="http://exceptionless.com/assets/override-config-settings-environment-variables-1024x497.jpg" alt="azure override config settings environment variables" width="940" height="456" data-id="14208" srcset="/assets/override-config-settings-environment-variables-1024x497.jpg 1024w, /assets/override-config-settings-environment-variables-300x146.jpg 300w, /assets/override-config-settings-environment-variables-768x373.jpg 768w, /assets/override-config-settings-environment-variables.jpg 1128w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href="/assets/override-config-settings-environment-variables.jpg" rel="attachment wp-att-14208"><img loading="lazy" class="aligncenter size-large wp-image-14208" src="/assets/override-config-settings-environment-variables-1024x497.jpg" alt="azure override config settings environment variables" width="940" height="456" data-id="14208" srcset="/assets/override-config-settings-environment-variables-1024x497.jpg 1024w, /assets/override-config-settings-environment-variables-300x146.jpg 300w, /assets/override-config-settings-environment-variables-768x373.jpg 768w, /assets/override-config-settings-environment-variables.jpg 1128w" sizes="(max-width: 940px) 100vw, 940px" /></a>
 
 No production settings are stored in source control or artifacts repository.
 
@@ -110,9 +110,9 @@ For our ASP.NET application, our <a href="https://github.com/exceptionless/Excep
 
 It will then fall back to a <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Utility/SettingsBase.cs#L59" target="_blank">default value</a> if no explicit settings are found.
 
-**Configuring our static Angular JavaScript app** is a bit more work since it can&#8217;t look these settings up dynamically at runtime. So instead we add some code to our deployment process.
+**Configuring our static Angular JavaScript app** is a bit more work since it can't look these settings up dynamically at runtime. So instead we add some code to our deployment process.
 
-  * Azure automatically runs a <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/deploy.sh" target="_blank">deploy.sh</a> file after getting the artifacts via git deploy. It’s sole job is to run a <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/app_data/jobs/triggered/config/run.js" target="_blank">node script</a> that rewrites our <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/app.config.js" target="_blank">app.config.js</a> settings with settings defined in environment variables.
+* Azure automatically runs a <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/deploy.sh" target="_blank">deploy.sh</a> file after getting the artifacts via git deploy. It’s sole job is to run a <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/app_data/jobs/triggered/config/run.js" target="_blank">node script</a> that rewrites our <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/app.config.js" target="_blank">app.config.js</a> settings with settings defined in environment variables.
 
 ## Conclusion
 
@@ -120,4 +120,4 @@ You can create multiple Azure websites (think environments) that use Continuous 
 
 **Pro Tip:** We created a <http://local-app.exceptionless.io> website for our spa website that’s pre-built and points to your localhost Exceptionless server. This allows us to do work on the server part without setting up or configuring a local instance of our spa app. Development made simple!
 
-We won&#8217;t lie, it took some work to get here, but **the good news is you can do this really easily too**. Please feel free to steal our deployment scripts and modify them for your projects. And let us know if you have questions along the way!
+We won't lie, it took some work to get here, but **the good news is you can do this really easily too**. Please feel free to steal our deployment scripts and modify them for your projects. And let us know if you have questions along the way!

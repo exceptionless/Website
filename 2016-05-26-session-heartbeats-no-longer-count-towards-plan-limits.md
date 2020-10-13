@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-14475" style="margin-left: 15px;" src="http://exceptionless.com/assets/session-tracking-revised.png" alt="session-tracking-revised" width="260" height="260" data-id="14475" srcset="/assets/session-tracking-revised.png 260w, /assets/session-tracking-revised-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That&#8217;s right! We&#8217;ve re-imagined how session heartbeats and session end events should work on the back end and were able to make them much more efficient, allowing us to stop counting them toward user plan limits!
+<img loading="lazy" class="alignright size-full wp-image-14475" style="margin-left: 15px;" src="/assets/session-tracking-revised.png" alt="session-tracking-revised" width="260" height="260" data-id="14475" srcset="/assets/session-tracking-revised.png 260w, /assets/session-tracking-revised-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That's right! We've re-imagined how session heartbeats and session end events should work on the back end and were able to make them much more efficient, allowing us to stop counting them toward user plan limits!
 
 This blog post explains our original goals and implementation of these session events, and how we were able to retain the same functionality of the feature while limiting resource usage.
 
@@ -24,9 +24,9 @@ And because of that, they counted against user plan limits.
 
 ## Noise
 
-After releasing the sessions feature, **it didn&#8217;t take us long to notice that the heartbeats were noise**. However, we knew that users wanted to see what their customers or users were doing while being active throughout the session, so we didn&#8217;t remove them.
+After releasing the sessions feature, **it didn't take us long to notice that the heartbeats were noise**. However, we knew that users wanted to see what their customers or users were doing while being active throughout the session, so we didn't remove them.
 
-We knew they were counting towards plan limits, causing some users to reach theirs quickly, and we knew they were adding noise, thus limiting the feature&#8217;s value, but we also wanted to keep the feature alive because of the _potential_ value offered. So, we had to react and make the entire feature more feasible, streamlined, and cheap.
+We knew they were counting towards plan limits, causing some users to reach theirs quickly, and we knew they were adding noise, thus limiting the feature's value, but we also wanted to keep the feature alive because of the _potential_ value offered. So, we had to react and make the entire feature more feasible, streamlined, and cheap.
 
 ## Back to the Drawing Board
 
@@ -42,10 +42,10 @@ Then we just updated the clients to call this new API endpoint when `client.Subm
 
 Our new solution gives us the ability to have clients send us session heartbeat and session end information very efficiently, which lets us provide a great session tracking feature **without adding any additional cost** to our plans!
 
-That&#8217;s how we like to roll, and we hope you find value from the feature and our run down of the process we went through to get it to our users.
+That's how we like to roll, and we hope you find value from the feature and our run down of the process we went through to get it to our users.
 
-### Don&#8217;t Forget to Update Your Client
+### Don't Forget to Update Your Client
 
-If you haven&#8217;t already updated your client, please do so to start taking advantage of the free session events.
+If you haven't already updated your client, please do so to start taking advantage of the free session events.
 
-And, as always, please let us know if you&#8217;ve got any feedback or questions. We&#8217;d love to hear from you!
+And, as always, please let us know if you've got any feedback or questions. We'd love to hear from you!

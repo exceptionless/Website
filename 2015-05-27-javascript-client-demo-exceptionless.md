@@ -1,6 +1,6 @@
 ---
 id: 13235
-postTitle: 'JavaScript Client Demo &#8211; Exceptionless'
+postTitle: JavaScript Client Demo &#8211; Exceptionless
 date: 2015-05-27T16:38:38-06:00
 author: Exceptionless
 layout: blog_post.liquid
@@ -8,9 +8,9 @@ tags: ["posts"]
 ---
 <img loading="lazy" class="aligncenter size-full wp-image-13237" src="/_site/assets/blog-header-javascript.jpg" alt="Exceptionless JavaScript Client" width="708" height="250" data-id="13237" srcset="/assets/blog-header-javascript.jpg 708w, /assets/blog-header-javascript-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
-We&#8217;re getting closer and closer to version 1.0 of our <a title="Exceptionless JavaScript Client" href="/javascript-client-available-for-preview-testing/" target="_blank">JavaScript client</a>, and we wanted to give everyone a demo of installation, configuration, and usage.
+We're getting closer and closer to version 1.0 of our <a title="Exceptionless JavaScript Client" href="/javascript-client-available-for-preview-testing/" target="_blank">JavaScript client</a>, and we wanted to give everyone a demo of installation, configuration, and usage.
 
-If you&#8217;re using Node.js, make sure to check out last week&#8217;s blog post for <a title="Exceptionless Node.js Demo" href="/exceptionless-node-js-javascript-client-demo/" target="_blank">Node specific examples</a>. Otherwise, continue reading for Javascript examples.
+If you're using Node.js, make sure to check out last week's blog post for <a title="Exceptionless Node.js Demo" href="/exceptionless-node-js-javascript-client-demo/" target="_blank">Node specific examples</a>. Otherwise, continue reading for Javascript examples.
 
 As you read and begin playing with the Exceptionless JavaScript client, please make note of any feedback, bugs, etc, and <a title="Exceptionless.JavaScript GitHub Repo" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">submit a GitHub issue</a> so we can fast track version 1.0 &#8211; we surely appreciate it!
 
@@ -31,8 +31,8 @@ We built our JavaScript client in <a title="TypeScript" href="https://github.co
 
 ## Configuring the Client
 
-Configuration of the Exceptionless JavaScript client can be accomplished a variety of ways. We list the common ways below, but make sure to check the <a title="Exceptionless Javascript Client GitHub Page" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub repo</a> for the most up to date documentation if you run into any problems using this example code.  
-_NOTE: The only required setting you need to configure is the client&#8217;s apiKey._
+Configuration of the Exceptionless JavaScript client can be accomplished a variety of ways. We list the common ways below, but make sure to check the <a title="Exceptionless Javascript Client GitHub Page" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub repo</a> for the most up to date documentation if you run into any problems using this example code.
+_NOTE: The only required setting you need to configure is the client's apiKey._
 
 ### Configuration Options
 
@@ -122,7 +122,7 @@ Finishing off the Exceptionless JavaScript client features, every event also inc
 
 A few screenshots of an individual event can be found below.<figure id="attachment_13248" class="thumbnail wp-caption alignleft" style="width: 150px">
 
-[<img loading="lazy" class="wp-image-13248 size-thumbnail" src="/assets/javascript-client-event-overview-150x150.png" alt="Exceptionless Javascript Event Overview" width="150" height="150" data-id="13200" />](/_site/assets/javascript-client-event-overview.png)<figcaption class="caption wp-caption-text">Event Overview</figcaption></figure> <figure id="attachment_13249" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="wp-image-13249 size-thumbnail" src="/assets/javascript-client-exception-details-150x150.png" alt="Exceptionless Javascript Event Details" width="150" height="150" data-id="13201" />](/_site/assets/javascript-client-exception-details.png)<figcaption class="caption wp-caption-text">Event Details</figcaption></figure> <figure id="attachment_13250" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="wp-image-13250 size-thumbnail" src="/assets/javascript-client-event-request-info-150x150.png" alt="Exceptionless Javascript Event Request Details" width="150" height="150" data-id="13202" />](/_site/assets/javascript-client-event-request-info.png)<figcaption class="caption wp-caption-text">Request Details</figcaption></figure> 
+[<img loading="lazy" class="wp-image-13248 size-thumbnail" src="/assets/javascript-client-event-overview-150x150.png" alt="Exceptionless Javascript Event Overview" width="150" height="150" data-id="13200" />](/_site/assets/javascript-client-event-overview.png)<figcaption class="caption wp-caption-text">Event Overview</figcaption></figure> <figure id="attachment_13249" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="wp-image-13249 size-thumbnail" src="/assets/javascript-client-exception-details-150x150.png" alt="Exceptionless Javascript Event Details" width="150" height="150" data-id="13201" />](/_site/assets/javascript-client-exception-details.png)<figcaption class="caption wp-caption-text">Event Details</figcaption></figure> <figure id="attachment_13250" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="wp-image-13250 size-thumbnail" src="/assets/javascript-client-event-request-info-150x150.png" alt="Exceptionless Javascript Event Request Details" width="150" height="150" data-id="13202" />](/_site/assets/javascript-client-event-request-info.png)<figcaption class="caption wp-caption-text">Request Details</figcaption></figure>
 
 <h2 style="clear: both;">
   Sample
@@ -146,6 +146,6 @@ Calling `client.config.useDebugLogger();` to enable debug logging is recommend 
 
 ## Feedback
 
-As we move forward towards version 1.0 of our JavaScript client, we are looking for any and all feedback, so please don&#8217;t hesitate to <a title="Exceptionless JavaScript Client Feedback" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">let us know what you think, report a bug, etc</a>.
+As we move forward towards version 1.0 of our JavaScript client, we are looking for any and all feedback, so please don't hesitate to <a title="Exceptionless JavaScript Client Feedback" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">let us know what you think, report a bug, etc</a>.
 
 Happy coding!

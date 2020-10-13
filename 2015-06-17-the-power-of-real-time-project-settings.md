@@ -6,42 +6,42 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", ".NET"]
 ---
-Did you know there are customizable server/client configuration values within your Exceptionless Project&#8217;s settings? Well **now you do** &#8211; and knowing&#8217;s half the battle!
+Did you know there are customizable server/client configuration values within your Exceptionless Project's settings? Well **now you do** &#8211; and knowing's half the battle!
 
 These project level settings are a dictionary of key value pairs (string key, string value). They are defined server-side and automatically pushed to the client when they are updated. Using this feature allows you to control what you send without redeploying your app, which we think is pretty cool!<!--more-->
 
 **You can use these client configuration settings for a variety of applications, including:**
 
-  * Controlling <a href="http://docs.exceptionless.com/contents/security/" target="_blank">data exclusions</a> for protecting sensitive information
-  * Enabling / Disabling user signups
-  * Turning logging on or off
-  * Enabling analytics
-  * Controlling information collection
-  * And many more! You can send any key value pair to control whatever you like within your app.
+* Controlling <a href="http://docs.exceptionless.com/contents/security/" target="_blank">data exclusions</a> for protecting sensitive information
+* Enabling / Disabling user signups
+* Turning logging on or off
+* Enabling analytics
+* Controlling information collection
+* And many more! You can send any key value pair to control whatever you like within your app.
 
-Let&#8217;s take a look at a JavaScript and .NET client usage example to get your rolling with this feature.
+Let's take a look at a JavaScript and .NET client usage example to get your rolling with this feature.
 
 ## Adding a New Client Configuration Value
 
-[<img loading="lazy" class="alignright wp-image-13327 size-medium" style="margin-left: 15px; margin-bottom: 15px;" src="http://exceptionless.com/assets/project-settings-page-300x209.png" alt="Exceptionless Client Configuration Settings" width="300" height="209" data-id="13327" srcset="/assets/project-settings-page-300x209.png 300w, /assets/project-settings-page.png 813w" sizes="(max-width: 300px) 100vw, 300px" />](http://exceptionless.com/assets/project-settings-page.png)
+[<img loading="lazy" class="alignright wp-image-13327 size-medium" style="margin-left: 15px; margin-bottom: 15px;" src="/assets/project-settings-page-300x209.png" alt="Exceptionless Client Configuration Settings" width="300" height="209" data-id="13327" srcset="/assets/project-settings-page-300x209.png 300w, /assets/project-settings-page.png 813w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/project-settings-page.png)
 
 Before we get started with more of an explanation and an example, we need to add a new key and value. To do so, we go to `Admin > Projects` in our Exceptionless Dashboard, select the project we are working on, then go to the &#8220;Settings&#8221; tab.
 
-This is where we can add a &#8220;New Client Configuration,&#8221; which simply consists of the key and value. For the example below, we&#8217;ll add the (fictional) `enableLogSubmission` key and set it to `true`.
+This is where we can add a &#8220;New Client Configuration,&#8221; which simply consists of the key and value. For the example below, we'll add the (fictional) `enableLogSubmission` key and set it to `true`.
 
 ## How it Works
 
-When your application first starts up, your project&#8217;s client configuration settings are read (from storage) and applied.
+When your application first starts up, your project's client configuration settings are read (from storage) and applied.
 
 If a setting value doesn’t exist in storage, it will be retrieved from the server after the next event submission occurs. We do this by inspecting the response headers and comparing a response header that contains the setting version. If the version doesn’t match the saved setting value then we make a request to get the setting and apply it.
 
-_It’s worth noting that we allow you to define your own default settings and overwrite them with server side settings, which we&#8217;ll include in our example._
+_It’s worth noting that we allow you to define your own default settings and overwrite them with server side settings, which we'll include in our example._
 
 ### How do I use the client configuration settings?
 
 In the example below, we will dynamically turn on or off the log event submissions at runtime without restarting the app or logging into the server to change configuration settings.
 
-**Why, you ask?** Maybe we don&#8217;t care about log submission until there is a really tough issue to solve. With Client Configuration Values, we can simply turn it on only when needed.
+**Why, you ask?** Maybe we don't care about log submission until there is a really tough issue to solve. With Client Configuration Values, we can simply turn it on only when needed.
 
 We’ll assume for this example that we are using the `enableLogSubmission` key we created above to control this. This setting is made up and doesn’t have to exist server side since we will be providing a default value client side. This allows us to define it via the project settings page at anytime and change our applications behavior.
 
@@ -67,19 +67,19 @@ Above, we used the `GetBoolean` helper method. In the .NET client, we have a few
 
 **Helper List**
 
-  * `GetString`
-  * `GetBoolean`
-  * `GetInt32`
-  * `GetInt64`
-  * `GetDouble`
-  * `GetDateTime`
-  * `GetDateTimeOffset`
-  * `GetGuid`
-  * `GetStringCollection` (breaks a comma delimited list into an IEnumerable of strings)
+* `GetString`
+* `GetBoolean`
+* `GetInt32`
+* `GetInt64`
+* `GetDouble`
+* `GetDateTime`
+* `GetDateTimeOffset`
+* `GetGuid`
+* `GetStringCollection` (breaks a comma delimited list into an IEnumerable of strings)
 
 ### JavaScript Example
 
-The same functionality above can also be achieved using our new [JavaScript Client](http://exceptionless.com/javascript-node-js-client-v1-release-notes/).
+The same functionality above can also be achieved using our new [JavaScript Client](/javascript-node-js-client-v1-release-notes/).
 
 <pre class="brush: jscript; title: ; notranslate" title="">exceptionless.ExceptionlessClient.default.config.addPlugin('Conditionally cancel log submission', 100, function (context, next) {
     var enableLogSubmission = context.client.config.settings['enableLogSubmission'];
@@ -118,4 +118,4 @@ private void SettingsOnChanged(object sender, ChangedEventArgs&lt;KeyValuePair&l
 
 These Client Configuration Values are somewhat of a hidden Exceptionless gem, but we think they are power and that many of our users can find real value in using them to control the flow of information, specifically sensitive data.
 
-If you have any questions or comments, please let us know. As usual, we&#8217;re all ears!
+If you have any questions or comments, please let us know. As usual, we're all ears!

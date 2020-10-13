@@ -1,15 +1,13 @@
 ---
 id: 15547
-postTitle: 'Weekly Update for 4/24/17 &#8211; Blake Speaking @ North Dallas .NET and more!'
+postTitle: Weekly Update for 4/24/17 &#8211; Blake Speaking @ North Dallas .NET and more!
 date: 2017-05-10T14:41:06-06:00
 author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", ".NET", "email", "Foundatio"]
 ---
-<div class="videoWrapper" style="margin-bottom: 20px;">
-</div>
 
-In this week&#8217;d update, Blake does a little traveling and speaking, and both Exceptionless and Foundatio.Repositories get an update!<!--more-->
+In this week'd update, Blake does a little traveling and speaking, and both Exceptionless and Foundatio.Repositories get an update!<!--more-->
 
 ## Blake Speaks @ North Dallas .NET
 

@@ -1,6 +1,6 @@
 ---
 id: 16744
-postTitle: 'Exceptionless 5.0 Release &#8211; ASP.NET Core &#038; Localization Support, and more!'
+postTitle: Exceptionless 5.0 Release &#8211; ASP.NET Core &#038; Localization Support, and more!
 date: 2019-08-29T15:02:09-06:00
 author: Exceptionless
 layout: blog_post.liquid
@@ -21,14 +21,14 @@ More details, below:<!--more-->
   3. Added Chinese localization support. Thanks [@Varorbc](https://github.com/Varorbc), [@edwardmeng](https://github.com/edwardmeng) for that contribution!
   4. Added support for using various different cloud hosted services (e.g., Aliyun, Minio, S3) and metric providers (e.g., InfluxDB). Thanks [@edwardmeng](https://github.com/edwardmeng) for that contribution!
   5. When viewing 404 event types, you will now see a grid column for IP addresses. This will allow you to quickly identify any bots or security scans that might be happening to your applications.
-  6. In addition to client side plugins that will remove sensitive user data, we&#8217;ve added server side code as well to remove any missed sensitive user data.
+  6. In addition to client side plugins that will remove sensitive user data, we've added server side code as well to remove any missed sensitive user data.
   7. Added the ability to delete your account on the manage account page.
 
 ## Version 5.0 Bug Fixes
 
-  * Various user interface usability issues have been fixed in this release. Please view the UI release notes ([v2.8.0](https://github.com/exceptionless/Exceptionless.UI/releases/tag/v2.8.0) for more info).
-  * Fixed a bug where notifications and web hooks would be sent for fixed events.
-  * Updated [Foundatio](https://github.com/FoundatioFx/Foundatio) which uses a task queue to resolve dead locking and thread exhaustion.
+* Various user interface usability issues have been fixed in this release. Please view the UI release notes ([v2.8.0](https://github.com/exceptionless/Exceptionless.UI/releases/tag/v2.8.0) for more info).
+* Fixed a bug where notifications and web hooks would be sent for fixed events.
+* Updated [Foundatio](https://github.com/FoundatioFx/Foundatio) which uses a task queue to resolve dead locking and thread exhaustion.
 
 ## Upgrading to Exceptionless 5.0
 
@@ -40,4 +40,4 @@ Check out the [official release notes](https://github.com/exceptionless/Exceptio
 
 As always, we want to know what you think! If you have questions, concerns, or any feedback, please [submit an issue over on the GitHub repo](https://github.com/exceptionless/Exceptionless/issues/new).
 
-&nbsp;
+

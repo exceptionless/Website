@@ -1,6 +1,6 @@
 ---
 id: 13046
-postTitle: 'Filter and Searching Tutorial Video &#8211; Exceptionless'
+postTitle: Filter and Searching Tutorial Video &#8211; Exceptionless
 date: 2015-04-30T15:00:20-06:00
 author: Exceptionless
 layout: blog_post.liquid
@@ -8,7 +8,7 @@ tags: ["posts"]
 ---
 <img loading="lazy" class="alignright wp-image-13067 size-full" style="margin-left: 20px;" src="/assets/filter-search.png" alt="Exceptionless Search Filtering" width="260" height="260" data-id="13054" srcset="/assets/filter-search.png 260w, /assets/filter-search-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />One of the most requested features from the beginning of Exceptionless 1.0 was a filtering and searching system. When we started developing Exceptionless 2.0, we knew it was one of the major features we wanted to include.
 
-We couldn&#8217;t just throw in a string search and hope for the best. We had to build it in a way that let users perform basic and advanced filtering, easily, with fast and streamlined results.
+We couldn't just throw in a string search and hope for the best. We had to build it in a way that let users perform basic and advanced filtering, easily, with fast and streamlined results.
 
 **Enter Exceptionless filtering and searching.** You can filter by organization, project, multiple time frame selectors, and specific event variables (with modifiers).
 
@@ -16,8 +16,6 @@ Watch the video below for a quick test drive, and read further down the page for
 
 ## Exceptionless Filtering and Search Demo Video
 
-<div class="videoWrapper" style="margin-bottom: 20px;">
-</div>
 
 ## Filter by Organization & Project
 
@@ -49,6 +47,6 @@ By selecting the magnifying glass icon next to the calendar icon in the top navi
 
 You can filter by tag, ID, organization, project, stack, type, value, IP, architecture, user, and much much more. Some searches, such as ID, require a prefix (&#8220;id:&#8221;) on the search, but others, such as error.message, can be entered as strings (&#8220;A NullReferenceException occurred&#8221;). View a complete list of searchable terms, examples, and FAQs on our <a title="Exceptionless Search Documentation" href="http://docs.exceptionless.com/contents/search/" target="_blank">Searching Documentation Page</a>.
 
-## We&#8217;re Always Improving &#8211; What Could be Better?
+## We're Always Improving &#8211; What Could be Better?
 
-Please let us know what you think of the filtering and searching abilities by commenting here on the blog, sending us an in-app support message, or filling out our [contact form](/contact/ "Exceptionless Contact Form"). We&#8217;re always looking for feedback, and genuinely want to know what you think!
+Please let us know what you think of the filtering and searching abilities by commenting here on the blog, sending us an in-app support message, or filling out our [contact form](/contact/ "Exceptionless Contact Form"). We're always looking for feedback, and genuinely want to know what you think!

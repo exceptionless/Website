@@ -6,30 +6,30 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-14033" style="margin-left: 15px;" src="http://exceptionless.com/assets/exceptionless-3-2-release-notes.png" alt="Exceptionless 3.2 Highlights" width="260" height="260" data-id="14033" srcset="/assets/exceptionless-3-2-release-notes.png 260w, /assets/exceptionless-3-2-release-notes-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That&#8217;s right folks &#8211; we&#8217;ve gone and released Exceptionless 3.2, which includes releases for Exceptionless.NET, Exceptionless.JavaScript, and Exceptionless.UI! Awe yeah.
+<img loading="lazy" class="alignright size-full wp-image-14033" style="margin-left: 15px;" src="/assets/exceptionless-3-2-release-notes.png" alt="Exceptionless 3.2 Highlights" width="260" height="260" data-id="14033" srcset="/assets/exceptionless-3-2-release-notes.png 260w, /assets/exceptionless-3-2-release-notes-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That's right folks &#8211; we've gone and released Exceptionless 3.2, which includes releases for Exceptionless.NET, Exceptionless.JavaScript, and Exceptionless.UI! Awe yeah.
 
-We&#8217;re kind of excited, in case you couldn&#8217;t tell. Big stuff in here, like **session tracking** (#BOOM), licensing changes (less confusion &#8211; it&#8217;s a good thing), and **posting via HTTP GET** (such easy, much wow)!
+We're kind of excited, in case you couldn't tell. Big stuff in here, like **session tracking** (#BOOM), licensing changes (less confusion &#8211; it's a good thing), and **posting via HTTP GET** (such easy, much wow)!
 
 Lets get into some of the details&#8230;<!--more-->
 
 ## Exceptionless 3.2.0
 
-### 
+###
 
 ### Sessions!
 
 **Track and automatically manage user sessions** for much more visibility into their user experience, how they interact with your app, and, of course, any errors or events that occur related to that user. This answers the age-old question, &#8220;What the hell was this guy doing when stuff blew up!?&#8221;
 
-<a href="http://exceptionless.com/track-view-user-session-data-exceptionless/" target="_blank">Check out the User Sessions post for more details and instructions!</a>
+<a href="/track-view-user-session-data-exceptionless/" target="_blank">Check out the User Sessions post for more details and instructions!</a>
 
-[<img loading="lazy" class="alignleft wp-image-14027 size-large" style="width: 50%;" src="http://exceptionless.com/assets/sessions-1024x662.png" alt="Exceptionless User Sessions" width="940" height="608" data-id="14027" srcset="/assets/sessions-1024x662.png 1024w, /assets/sessions-300x194.png 300w, /assets/sessions-768x496.png 768w, /assets/sessions.png 1038w" sizes="(max-width: 940px) 100vw, 940px" />](http://exceptionless.com/assets/sessions.png)[<img loading="lazy" class="alignleft wp-image-14026 size-full" style="width: 50%;" src="http://exceptionless.com/assets/sessions-2.png" alt="Exceptionless Event Sessions" width="815" height="386" data-id="14026" srcset="/assets/sessions-2.png 815w, /assets/sessions-2-300x142.png 300w, /assets/sessions-2-768x364.png 768w" sizes="(max-width: 815px) 100vw, 815px" />](http://exceptionless.com/assets/sessions-2.png)
+[<img loading="lazy" class="alignleft wp-image-14027 size-large" style="width: 50%;" src="/assets/sessions-1024x662.png" alt="Exceptionless User Sessions" width="940" height="608" data-id="14027" srcset="/assets/sessions-1024x662.png 1024w, /assets/sessions-300x194.png 300w, /assets/sessions-768x496.png 768w, /assets/sessions.png 1038w" sizes="(max-width: 940px) 100vw, 940px" />](/assets/sessions.png)[<img loading="lazy" class="alignleft wp-image-14026 size-full" style="width: 50%;" src="/assets/sessions-2.png" alt="Exceptionless Event Sessions" width="815" height="386" data-id="14026" srcset="/assets/sessions-2.png 815w, /assets/sessions-2-300x142.png 300w, /assets/sessions-2-768x364.png 768w" sizes="(max-width: 815px) 100vw, 815px" />](/assets/sessions-2.png)
 
 <div style="clear: both;">
 </div>
 
 ### HTTP GET!
 
-Now it&#8217;s even easier to **integrate with Exceptionless from any environment**, because you can post event or meta data via HTTP GET! More info coming soon (blog post).
+Now it's even easier to **integrate with Exceptionless from any environment**, because you can post event or meta data via HTTP GET! More info coming soon (blog post).
 
 ### License Change
 
@@ -41,7 +41,7 @@ User locations are now resolved from geographic coordinates or the IP address. 
 
 ### More Speed Improvements
 
-As always, we keep speed improvements in mind with each release. With 3.2, we&#8217;ve been able to make more **massive improvements in processing time for events** (over 250% per 1000 events!) and further reduce app startup times and elastic query execution times. #alwaysoptimizing!
+As always, we keep speed improvements in mind with each release. With 3.2, we've been able to make more **massive improvements in processing time for events** (over 250% per 1000 events!) and further reduce app startup times and elastic query execution times. #alwaysoptimizing!
 
 ### Hourly Throttling
 
@@ -71,15 +71,15 @@ Support for looking up reference ids was added, so you can now navigate to `/eve
 
 ### Other Improvements
 
-  * Better messages and a loading mask has been added to data grids to improve user experience when filtering and loading data.
-  * Escaping of strack traces containing HTML or CSS has also been improved.
-  * You can now sort extended data items alphabetically.
-  * The request and environment info tabs for events now show additional extended data.
+* Better messages and a loading mask has been added to data grids to improve user experience when filtering and loading data.
+* Escaping of strack traces containing HTML or CSS has also been improved.
+* You can now sort extended data items alphabetically.
+* The request and environment info tabs for events now show additional extended data.
 
 ### Bug Fixes
 
-  * You can now create an organization or project that ends with a period or whitespace.
-  * Sometimes an incorrect time range would be set when users used the history chart/graph to select a period of time to drill down to.
+* You can now create an organization or project that ends with a period or whitespace.
+* Sometimes an incorrect time range would be set when users used the history chart/graph to select a period of time to drill down to.
 
 Check out the <a href="https://github.com/exceptionless/Exceptionless.UI/compare/v2.2.0...v2.3.0" target="_blank">Exceptionless.UI Changelog</a> for all the code changes (87 files / 75 commits).
 

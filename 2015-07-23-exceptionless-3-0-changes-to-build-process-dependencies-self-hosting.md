@@ -1,16 +1,16 @@
 ---
 id: 13459
-postTitle: 'Exceptionless V3.0 &#8211; Changes to the Build Process, Dependencies, and Self Hosting'
+postTitle: Exceptionless V3.0 &#8211; Changes to the Build Process, Dependencies, and Self Hosting
 date: 2015-07-23T16:28:18-06:00
 author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-13461" src="http://exceptionless.com/assets/version-3-featured.png" alt="version-3-featured" width="260" height="260" data-id="13461" srcset="/assets/version-3-featured.png 260w, /assets/version-3-featured-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Version 2.0 was a pretty big rewrite for us, and we&#8217;re happy with how everything played out, but that doesn&#8217;t mean we&#8217;re done!
+<img loading="lazy" class="alignright size-full wp-image-13461" src="/assets/version-3-featured.png" alt="version-3-featured" width="260" height="260" data-id="13461" srcset="/assets/version-3-featured.png 260w, /assets/version-3-featured-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Version 2.0 was a pretty big rewrite for us, and we're happy with how everything played out, but that doesn't mean we're done!
 
-We&#8217;ve been working on 3.0, and it&#8217;s ready.
+We've been working on 3.0, and it's ready.
 
-What was the focus, you ask? To make life **easier** for **you**! We&#8217;ve simplified the build process, removed dependencies, and drastically improved the ease of self hosting.
+What was the focus, you ask? To make life **easier** for **you**! We've simplified the build process, removed dependencies, and drastically improved the ease of self hosting.
 
 Check out the details, below, and upgrade today!<!--more-->
 

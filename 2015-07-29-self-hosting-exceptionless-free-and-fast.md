@@ -1,18 +1,18 @@
 ---
 id: 13478
-postTitle: 'Self Hosting Exceptionless &#8211; Free and Fast!'
+postTitle: Self Hosting Exceptionless &#8211; Free and Fast!
 date: 2015-07-29T14:13:08-06:00
 author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-13489" src="http://exceptionless.com/assets/blog-header-image-self-hosting.jpg" alt="Self Hosting Exceptionless" width="708" height="250" data-id="13489" srcset="/assets/blog-header-image-self-hosting.jpg 708w, /assets/blog-header-image-self-hosting-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-13489" src="/assets/blog-header-image-self-hosting.jpg" alt="Self Hosting Exceptionless" width="708" height="250" data-id="13489" srcset="/assets/blog-header-image-self-hosting.jpg 708w, /assets/blog-header-image-self-hosting-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
-**Self hosting allows you to run your own instance of <a href="http://exceptionless.com/" target="_blank">Exceptionless</a>, our real-time error, feature, and log reporting tool, on your own systems &#8211; FOR FREE!**
+**Self hosting allows you to run your own instance of <a href="/" target="_blank">Exceptionless</a>, our real-time error, feature, and log reporting tool, on your own systems &#8211; FOR FREE!**
 
 ## Not Just Free, but Fast!
 
-When developing <a href="http://exceptionless.com/exceptionless-3-0-changes-to-build-process-dependencies-self-hosting/" target="_blank">Exceptionless 3.0</a>, we put extensive focus on making self hosting much easier, and therefore more viable, for our users.
+When developing <a href="/exceptionless-3-0-changes-to-build-process-dependencies-self-hosting/" target="_blank">Exceptionless 3.0</a>, we put extensive focus on making self hosting much easier, and therefore more viable, for our users.
 
 It is now possible to get a test environment up and running on your local machine in **only a few minutes**, and production environments can be set up very quickly as well.
 
@@ -37,6 +37,6 @@ Please note that you should review the requirements on the <a href="https://gith
 <div class="videoWrapper">
 </div>
 
-## We&#8217;re Always Improving
+## We're Always Improving
 
-Exceptionless has come a long way, and it&#8217;s only going to get easier, faster, and more robust moving forward. Our users are a huge part of that, so please <a href="https://github.com/exceptionless/Exceptionless/issues" target="_blank">submit an issue on GitHub</a> or send us an in-app message if you have any feedbacks, bugs, installation questions, etc. Thanks!
+Exceptionless has come a long way, and it's only going to get easier, faster, and more robust moving forward. Our users are a huge part of that, so please <a href="https://github.com/exceptionless/Exceptionless/issues" target="_blank">submit an issue on GitHub</a> or send us an in-app message if you have any feedbacks, bugs, installation questions, etc. Thanks!

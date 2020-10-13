@@ -1,6 +1,6 @@
 ---
 id: 15586
-postTitle: 'Email Notification Improvements &#8211; Walkthrough and Details'
+postTitle: Email Notification Improvements &#8211; Walkthrough and Details
 date: 2017-05-30T09:48:11-06:00
 author: Exceptionless
 layout: blog_post.liquid
@@ -12,7 +12,7 @@ Recently, we made several improvements to our email notifications, adding additi
 
 ## Exceptionless Email Notification Implementation
 
-We decided to use [Zurb&#8217;s Foundation for Emails](https://github.com/zurb/foundation-emails) to help us create emails that look great on all email clients. The reason we went with Zurb is because it has clean markup that translates to good old (ugly) HTML that just works. It also works great with [Handlebars.Net](https://github.com/rexm/Handlebars.Net) which we use to render the email content.
+We decided to use [Zurb's Foundation for Emails](https://github.com/zurb/foundation-emails) to help us create emails that look great on all email clients. The reason we went with Zurb is because it has clean markup that translates to good old (ugly) HTML that just works. It also works great with [Handlebars.Net](https://github.com/rexm/Handlebars.Net) which we use to render the email content.
 
 An example of one of our event notification emails can be found [here](https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.EmailTemplates/src/pages/event-notice.html).
 
@@ -20,7 +20,7 @@ Then, we run a [Node.js build task](https://github.com/exceptionless/Exception
 
 These templates are stored as embedded resources so we can use them from any environment and render them out with ease! Here is a [code example](https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Mail/Mailer.cs#L260-L277) of how we perform that task.
 
-We added [JSON-LD](https://json-ld.org/) support, to the emails to give us rich contextual actions, by starting with this [Google Developer tutorial](https://developers.google.com/gmail/markup/getting-started) and ended up with [the below implementation](https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.EmailTemplates/src/pages/event-notice.html#L75-L94). _It&#8217;s worth noting that we had to go through their verification process for the actions to be enabled._
+We added [JSON-LD](https://json-ld.org/) support, to the emails to give us rich contextual actions, by starting with this [Google Developer tutorial](https://developers.google.com/gmail/markup/getting-started) and ended up with [the below implementation](https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.EmailTemplates/src/pages/event-notice.html#L75-L94). _It's worth noting that we had to go through their verification process for the actions to be enabled._
 
 <pre class="brush: jscript; title: ; notranslate" title="">&lt;script type="application/ld+json"&gt;
 {
@@ -52,4 +52,4 @@ We hope our buildout here can help other developers, and we would love to hear y
 
 Code on.
 
-&nbsp;
+

@@ -8,15 +8,15 @@ tags: ["posts"]
 ---
 <img loading="lazy" class="aligncenter size-full wp-image-13218" src="/_site/assets/node-js-header.jpg" alt="Exceptionless Node.js Javascript Client" width="708" height="250" data-id="13218" srcset="/assets/node-js-header.jpg 708w, /assets/node-js-header-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
-Last week we announced our full featured <a title="Exceptionless JavaScript Client" href="/javascript-client-available-for-preview-testing/" target="_blank">JavaScript client</a>, and we&#8217;re super excited about releasing a version 1.0 soon.
+Last week we announced our full featured <a title="Exceptionless JavaScript Client" href="/javascript-client-available-for-preview-testing/" target="_blank">JavaScript client</a>, and we're super excited about releasing a version 1.0 soon.
 
-This week we&#8217;d like to put more details out there on the Node.js version of the JavaScript client, including installation, configuration, and usage. We&#8217;ve also set up an <a title="Exceptionless Express.js Sample App" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/example/express/app.js" target="_blank">Express.js sample app</a> that you can spin up locally to play with things.
+This week we'd like to put more details out there on the Node.js version of the JavaScript client, including installation, configuration, and usage. We've also set up an <a title="Exceptionless Express.js Sample App" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/example/express/app.js" target="_blank">Express.js sample app</a> that you can spin up locally to play with things.
 
-Let&#8217;s take a look.<!--more-->
+Let's take a look.<!--more-->
 
 ## How the JavaScript Client was Built
 
-Our javascript client is built in <a title="TypeScript" href="https://github.com/Microsoft/TypeScript" target="_blank">typescript 1.5</a> and is transpiled to es5. We have a single client that works with both Node.js and JavaScript due to dependency injection and a <a title="Universal Module Definition (UMD)" href="https://github.com/umdjs/umd" target="_blank">Universal Module Definition (UMD)</a>. For capturing Node stack traces, we use <a title="Node Stack Trace" href="https://github.com/felixge/node-stack-trace" target="_blank">Felixge&#8217;s Node Stack Trace</a> library.
+Our javascript client is built in <a title="TypeScript" href="https://github.com/Microsoft/TypeScript" target="_blank">typescript 1.5</a> and is transpiled to es5. We have a single client that works with both Node.js and JavaScript due to dependency injection and a <a title="Universal Module Definition (UMD)" href="https://github.com/umdjs/umd" target="_blank">Universal Module Definition (UMD)</a>. For capturing Node stack traces, we use <a title="Node Stack Trace" href="https://github.com/felixge/node-stack-trace" target="_blank">Felixge's Node Stack Trace</a> library.
 
 ## Installing Exceptionless for Node.js
 
@@ -27,7 +27,7 @@ Our javascript client is built in <a title="TypeScript" href="https://github.com
 
 ## Configuring the Client
 
-You can configure the Exceptionless client a few different ways for Node.js. The below is the most common way, but for more configuration options and documentation, visit the <a title="Exceptionless Javascript Client GitHub Page" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub repo</a>. _NOTE: The only required setting you need to configure is the client&#8217;s apiKey._
+You can configure the Exceptionless client a few different ways for Node.js. The below is the most common way, but for more configuration options and documentation, visit the <a title="Exceptionless Javascript Client GitHub Page" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub repo</a>. _NOTE: The only required setting you need to configure is the client's apiKey._
 
 Set the `apiKey` on the default ExceptionlessClient instance.
 
@@ -117,11 +117,11 @@ app.use(function(req, res, next) {
 
 The JavaScript/Node.js client is full featured, will collect all the information our other clients collect, and has a fluent API as shown above.
 
-By default, we wire up to the processes&#8217; <a title="Exceptionless Uncaught Exception Handler" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/bootstrap/NodeBootstrapper.ts#L24-L37" target="_blank">uncaught exception handler</a> to automatically send any unhandled exceptions to your Exceptionless dashboard. We also submit a log message if your app doesn&#8217;t shut down properly via inspecting the <a title="Exit Code" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/bootstrap/NodeBootstrapper.ts#L24-L37" target="_blank">exit code</a>, which is very useful and lets you know what your app is doing. Additionally, any queued up events are processed and sent before your app closes.
+By default, we wire up to the processes' <a title="Exceptionless Uncaught Exception Handler" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/bootstrap/NodeBootstrapper.ts#L24-L37" target="_blank">uncaught exception handler</a> to automatically send any unhandled exceptions to your Exceptionless dashboard. We also submit a log message if your app doesn't shut down properly via inspecting the <a title="Exit Code" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/bootstrap/NodeBootstrapper.ts#L24-L37" target="_blank">exit code</a>, which is very useful and lets you know what your app is doing. Additionally, any queued up events are processed and sent before your app closes.
 
 Each event contains environment and request information, as well, rounding out the complete list of Exceptionless features that we have made available via the JavaScript client, making it a great error and event reporting/logging solution for all your Node.js projects.<figure id="attachment_13200" class="thumbnail wp-caption alignleft" style="width: 150px">
 
-[<img loading="lazy" class="size-thumbnail wp-image-13200" src="/assets/node-js-stacktrace-environment-info-150x150.png" alt="Exceptionless Node.js Javascript Overview" width="150" height="150" data-id="13200" />](/_site/assets/node-js-stacktrace-environment-info.png)<figcaption class="caption wp-caption-text">Event Overview</figcaption></figure> <figure id="attachment_13201" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="size-thumbnail wp-image-13201" src="/assets/node-js-event-details-150x150.png" alt="Exceptionless Node.js Client" width="150" height="150" data-id="13201" />](/_site/assets/node-js-event-details.png)<figcaption class="caption wp-caption-text">Event Details</figcaption></figure> <figure id="attachment_13202" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="size-thumbnail wp-image-13202" src="/assets/node-js-event-request-150x150.png" alt="Exceptionless Node.js Request Details" width="150" height="150" data-id="13202" />](/_site/assets/node-js-event-request.png)<figcaption class="caption wp-caption-text">Request Details</figcaption></figure> <figure id="attachment_13203" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="size-thumbnail wp-image-13203" src="/assets/node-js-event-environment-details-150x150.png" alt="Exceptionless Node.js Event Environment Details" width="150" height="150" data-id="13203" />](/_site/assets/node-js-event-environment-details.png)<figcaption class="caption wp-caption-text">Environment Details</figcaption></figure> 
+[<img loading="lazy" class="size-thumbnail wp-image-13200" src="/assets/node-js-stacktrace-environment-info-150x150.png" alt="Exceptionless Node.js Javascript Overview" width="150" height="150" data-id="13200" />](/_site/assets/node-js-stacktrace-environment-info.png)<figcaption class="caption wp-caption-text">Event Overview</figcaption></figure> <figure id="attachment_13201" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="size-thumbnail wp-image-13201" src="/assets/node-js-event-details-150x150.png" alt="Exceptionless Node.js Client" width="150" height="150" data-id="13201" />](/_site/assets/node-js-event-details.png)<figcaption class="caption wp-caption-text">Event Details</figcaption></figure> <figure id="attachment_13202" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="size-thumbnail wp-image-13202" src="/assets/node-js-event-request-150x150.png" alt="Exceptionless Node.js Request Details" width="150" height="150" data-id="13202" />](/_site/assets/node-js-event-request.png)<figcaption class="caption wp-caption-text">Request Details</figcaption></figure> <figure id="attachment_13203" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="size-thumbnail wp-image-13203" src="/assets/node-js-event-environment-details-150x150.png" alt="Exceptionless Node.js Event Environment Details" width="150" height="150" data-id="13203" />](/_site/assets/node-js-event-environment-details.png)<figcaption class="caption wp-caption-text">Environment Details</figcaption></figure>
 
 <h2 style="clear: both;">
   Sample Express.js App
@@ -146,6 +146,6 @@ We recommend enabling debug logging by calling `client.config.useDebugLogger();`
 
 ## Feedback
 
-As we move forward towards version 1.0 of our JavaScript client, we are looking for any and all feedback, so please don&#8217;t hesitate to <a title="Exceptionless JavaScript Client Feedback" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">let us know what you think, report a bug, etc</a>.
+As we move forward towards version 1.0 of our JavaScript client, we are looking for any and all feedback, so please don't hesitate to <a title="Exceptionless JavaScript Client Feedback" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">let us know what you think, report a bug, etc</a>.
 
 Thanks!

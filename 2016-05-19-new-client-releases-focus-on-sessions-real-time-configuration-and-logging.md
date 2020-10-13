@@ -6,11 +6,11 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", ".NET"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-14451" src="http://exceptionless.com/assets/net-3.5.0-js-1.4.0.png" alt="net-3.5.0-js-1.4.0" width="260" height="260" data-id="14451" srcset="/.png 260w, /assets/net-3.5.0-js-1.4./"(max-width: 260px) 100vw, 260px" />Exceptionless.NET v3.5.0 and Exceptionless.JavaScript v1.4.0 have been released and they are chock full of **new features and feature improvements!**
+<img loading="lazy" class="alignright size-full wp-image-14451" src="/assets/net-3.5.0-js-1.4.0.png" alt="net-3.5.0-js-1.4.0" width="260" height="260" data-id="14451" srcset="/.png 260w, /assets/net-3.5.0-js-1.4./"(max-width: 260px) 100vw, 260px" />Exceptionless.NET v3.5.0 and Exceptionless.JavaScript v1.4.0 have been released and they are chock full of **new features and feature improvements!**
 
-There weren&#8217;t a whole lot of bug fixes with these releases. Could it be that Exceptionless is working and we&#8217;ve squelched most of the bugs? We think so!
+There weren't a whole lot of bug fixes with these releases. Could it be that Exceptionless is working and we've squelched most of the bugs? We think so!
 
-Notably, we focused on sessions, real time configuration, and logging, all of which we think you&#8217;ll find super helpful.
+Notably, we focused on sessions, real time configuration, and logging, all of which we think you'll find super helpful.
 
 Read on for details.<!--more-->
 
@@ -18,7 +18,7 @@ Read on for details.<!--more-->
 
 ### Session Heartbeats No Longer Count Towards Plan Limits!
 
-We&#8217;ve updated Session Heartbeats and Session End events to be sent through an optimized API end point, and they will no longer count towards your plane&#8217;s event limits.
+We've updated Session Heartbeats and Session End events to be sent through an optimized API end point, and they will no longer count towards your plane's event limits.
 
 ### Real Time Project Configuration Improvements
 
@@ -29,7 +29,7 @@ UI support will be expanded moving forward, but for the time being here is an ex
 #### Source
 
 **Key:** `@@EVENT_TYPE:SOURCE<br />
-` 
+`
 
 **Value:** `false`
 
@@ -63,13 +63,13 @@ This example is setting the minimum log level for `EventPostsJob` to `Info`.
 
 ### Automatically Check for Updated Configuration Settings on Client Idle
 
-We&#8217;ve implemented an a**utomatic recurring check for updated configuration settings** that occurs **two minutes** after the last event submission.
+We've implemented an a**utomatic recurring check for updated configuration settings** that occurs **two minutes** after the last event submission.
 
 A few notes:
 
-  * Each configuration check **does not** count towards your account&#8217;s plan limits.
-  * No user information will be sent &#8211; only the current configuration version.
-  * Nothing will be retrieved if no settings have been changed.
+* Each configuration check **does not** count towards your account's plan limits.
+* No user information will be sent &#8211; only the current configuration version.
+* Nothing will be retrieved if no settings have been changed.
 
 The automatic recurring configuration settings check **can be disable** by calling:
 
@@ -81,7 +81,7 @@ The automatic recurring configuration settings check **can be disable** by calli
 
 `client.config.updateSettingsWhenIdleInterval = -1;`
 
-### 
+###
 
 ### New Easy Way to Exclude Events from Being Submitted in .NET
 
@@ -103,11 +103,11 @@ For example, if I wanted to ignore any event with a `value` property of `2` I co
 
 ## Feedback
 
-We hope these new features and feature improvements help your Exceptionless experience, and we plan to continue to listen to user feedback and improve the system where improvements need to be made. To do that, though, we need to hear what you want out of the app. If you have a favorite feature request, or something that just bothers you, please let us know by dropping us a line on GitHub Issues under the appropriate repository, listed below, or just comment here and we&#8217;ll figure it out!
+We hope these new features and feature improvements help your Exceptionless experience, and we plan to continue to listen to user feedback and improve the system where improvements need to be made. To do that, though, we need to hear what you want out of the app. If you have a favorite feature request, or something that just bothers you, please let us know by dropping us a line on GitHub Issues under the appropriate repository, listed below, or just comment here and we'll figure it out!
 
-  * [User Interface Feedback](https://github.com/exceptionless/Exceptionless.UI/issues/new)
-  * [.NET Client Feedback](https://github.com/exceptionless/Exceptionless.Net/issues/new)
-  * [JavaScript Client Feedback](https://github.com/exceptionless/Exceptionless.JavaScript/issues/new)
-  * [Exceptionless Feedback](https://github.com/exceptionless/exceptionless/issues/new)
+* [User Interface Feedback](https://github.com/exceptionless/Exceptionless.UI/issues/new)
+* [.NET Client Feedback](https://github.com/exceptionless/Exceptionless.Net/issues/new)
+* [JavaScript Client Feedback](https://github.com/exceptionless/Exceptionless.JavaScript/issues/new)
+* [Exceptionless Feedback](https://github.com/exceptionless/exceptionless/issues/new)
 
 Thanks for reading and have an awesome day!

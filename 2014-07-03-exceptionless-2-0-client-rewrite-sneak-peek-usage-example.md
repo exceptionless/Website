@@ -6,24 +6,24 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "announcement"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-9099" src="http://exceptionless.com/assets/new-client-header.jpg" alt="new-client-header" width="708" height="250" data-id="9099" srcset="/jpg 708w, /assets/new-client-header/(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-9099" src="/assets/new-client-header.jpg" alt="new-client-header" width="708" height="250" data-id="9099" srcset="/jpg 708w, /assets/new-client-header/(max-width: 708px) 100vw, 708px" />
 
 As Exceptionless 2.0 continues to become a reality, we thought we would give everyone a little taste of what you will be able to do with the new, rewritten client. Continue reading for a glimpse at the primary features, along with a complete usage example for adding extra data to events.
 
-After you check it out, let us know if you have questions or suggestions. We&#8217;re listening!<!--more-->
+After you check it out, let us know if you have questions or suggestions. We're listening!<!--more-->
 
 ## New Client Features
 
-  * The Exceptionless client has been completely rewritten to be highly simplified and extensible.
-  * Will work with Mono and Project K.
-  * The base client is <a title="Exceptionless.Portable PCL" href="https://www.nuget.org/packages/exceptionless.portable" target="_blank">PCL</a>, and we will have platform specific clients that add additional functionality for each platform.
-  * Adding extra data to events is extremely easy.
+* The Exceptionless client has been completely rewritten to be highly simplified and extensible.
+* Will work with Mono and Project K.
+* The base client is <a title="Exceptionless.Portable PCL" href="https://www.nuget.org/packages/exceptionless.portable" target="_blank">PCL</a>, and we will have platform specific clients that add additional functionality for each platform.
+* Adding extra data to events is extremely easy.
 
 **<a title="Exceptionless 2.0 Client Source" href="https://github.com/exceptionless/Exceptionless.net" target="_blank">View Client Source</a>**
 
 ### Extended event data usage example
 
-<img loading="lazy" class="aligncenter size-large wp-image-9100" src="http://exceptionless.com/assets/ex-client-1024x420.png" alt="Exceptionless Code Example" width="940" height="385" data-id="9100" srcset="/.png 1024w, /assets/ex-client-300x123/nt.png 1167w" sizes="(max-width: 94/
+<img loading="lazy" class="aligncenter size-large wp-image-9100" src="/assets/ex-client-1024x420.png" alt="Exceptionless Code Example" width="940" height="385" data-id="9100" srcset="/.png 1024w, /assets/ex-client-300x123/nt.png 1167w" sizes="(max-width: 94/
 
 **Lets break that example down**, line by line, shall we? Check out the <a title="Exceptionless 2.0 Client Source" href="https://github.com/exceptionless/Exceptionless/tree/master/Source/Clients" target="_blank">client source</a> if you want to take a look at the complete code.
 
@@ -168,17 +168,17 @@ You can use those settings to control behavior in your app.
 Trace.WriteLine("Should include my custom data");
 </pre>
 
-## That&#8217;s All There Is To It!
+## That's All There Is To It!
 
-After checking out the above example, we hope you agree that we&#8217;ve drastically simplified and improved the process of adding data to events, allowing for much more flexibility.
+After checking out the above example, we hope you agree that we've drastically simplified and improved the process of adding data to events, allowing for much more flexibility.
 
 As always, if you have any questions, comments, suggestions, or concerns, let us know!
 
 ### Read more about Exceptionless 2.0
 
-  * [Exceptionless 2.0 &#8211; In the Making](http://exceptionless.com/exceptionless-2-in-the-making/ "Exceptionless 2.0 – In the Making")
-  * [Event Based Reporting System](http://exceptionless.com/event-based-reporting-system-coming-version-2-0/ "Event Based Reporting System Coming in Version 2.0")
-  * [Simplified API](http://exceptionless.com/upcoming-exceptionless-2-0-simplified-api/ "More from the Upcoming Exceptionless 2.0: Simplified API")
-  * [A Pluggable System](http://exceptionless.com/coming-exceptionless-2-0-pluggable-system/ "Coming in Exceptionless 2.0 – A Pluggable System")
+* [Exceptionless 2.0 &#8211; In the Making](/exceptionless-2-in-the-making/ "Exceptionless 2.0 – In the Making")
+* [Event Based Reporting System](/event-based-reporting-system-coming-version-2-0/ "Event Based Reporting System Coming in Version 2.0")
+* [Simplified API](/upcoming-exceptionless-2-0-simplified-api/ "More from the Upcoming Exceptionless 2.0: Simplified API")
+* [A Pluggable System](/coming-exceptionless-2-0-pluggable-system/ "Coming in Exceptionless 2.0 – A Pluggable System")
 
-&nbsp;
+

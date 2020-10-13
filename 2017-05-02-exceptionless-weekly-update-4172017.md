@@ -6,10 +6,8 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", ".NET", "client", "email", "javascript"]
 ---
-<div class="videoWrapper" style="margin-bottom: 20px;">
-</div>
 
-Nothing too crazy going on in this week&#8217;s update. A few tweaks to Exceptionless, Exceptionless.NET, and Exceptionless.JavaScript. Check out the details below, and don&#8217;t forget to let us know how we&#8217;re doing!<!--more-->
+Nothing too crazy going on in this week's update. A few tweaks to Exceptionless, Exceptionless.NET, and Exceptionless.JavaScript. Check out the details below, and don't forget to let us know how we're doing!<!--more-->
 
 ## Weekly Code & Development Update &#8211; 4/17/2017
 

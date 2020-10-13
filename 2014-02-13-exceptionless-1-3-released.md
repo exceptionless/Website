@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "new release"]
 ---
-Exceptionless 1.3 brings with it both server and client changes, including [open sourcing the project](http://exceptionless.com/fork-us-exceptionless-goes-open-source/ "Exceptionless Goes Open Source!") (which we&#8217;re super excited about!), some minor updates, and a few bug fixes. Check out the changelog items below, and let us know if you have any questions.<!--more-->
+Exceptionless 1.3 brings with it both server and client changes, including [open sourcing the project](/fork-us-exceptionless-goes-open-source/ "Exceptionless Goes Open Source!") (which we're super excited about!), some minor updates, and a few bug fixes. Check out the changelog items below, and let us know if you have any questions.<!--more-->
 
 ## Server
 

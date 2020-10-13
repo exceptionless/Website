@@ -6,7 +6,7 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-13876" src="http://exceptionless.com/assets/jobs-blog-header-image.jpg" alt="Azure Webjobs" width="708" height="250" data-id="13876" srcset="/assets/jobs-blog-header-image.jpg 708w, /assets/jobs-blog-header-image-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-13876" src="/assets/jobs-blog-header-image.jpg" alt="Azure Webjobs" width="708" height="250" data-id="13876" srcset="/assets/jobs-blog-header-image.jpg 708w, /assets/jobs-blog-header-image-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 Lets talk about jobs in the Exceptionless world for a minute and **how you can use our methods to improve your Azure WebJobs.**
 
@@ -30,18 +30,18 @@ This new approach also gave us a great deployment strategy, for free. Simply cop
 
 ### Jobs (processes) running in Azure as an Azure web job
 
-[<img loading="lazy" class="aligncenter wp-image-13862" src="http://exceptionless.com/assets/Jobs-1024x670.jpg" alt="Exceptionless Jobs and Processes" width="600" height="393" data-id="13862" srcset="/assets/Jobs-1024x670.jpg 1024w, /assets/Jobs-300x196.jpg 300w, /assets/Jobs.jpg 1600w" sizes="(max-width: 600px) 100vw, 600px" />](http://exceptionless.com/assets/Jobs.jpg)
+[<img loading="lazy" class="aligncenter wp-image-13862" src="/assets/Jobs-1024x670.jpg" alt="Exceptionless Jobs and Processes" width="600" height="393" data-id="13862" srcset="/assets/Jobs-1024x670.jpg 1024w, /assets/Jobs-300x196.jpg 300w, /assets/Jobs.jpg 1600w" sizes="(max-width: 600px) 100vw, 600px" />](/assets/Jobs.jpg)
 
 ### How you can implement a better Azure WebJob
 
 [Foundatio Jobs](https://github.com/exceptionless/Foundatio#jobs) allows you to run a long running process (in process or out of process) with out worrying about it being terminated prematurely. By using Foundatio Jobs you gain all of the following features **without changing your job implementation**:
 
-  * Run job in process
-  * Run job out of process
-  * Run job with a start up delay
-  * Run job in an continuous loop with an optional interval delay.
+* Run job in process
+* Run job out of process
+* Run job with a start up delay
+* Run job in an continuous loop with an optional interval delay.
 
-In this sample we&#8217;ll just define a new class called HelloWorldJob that will hold our job that increments a counter and derives from JobBase. Please note that there are a few different base classes you can derive from based on your use case.
+In this sample we'll just define a new class called HelloWorldJob that will hold our job that increments a counter and derives from JobBase. Please note that there are a few different base classes you can derive from based on your use case.
 
 <pre class="brush: csharp; title: ; notranslate" title="">using Foundatio.Jobs;
 
@@ -63,7 +63,7 @@ await job.RunContinuousAsync(cancellationToken: new CancellationTokenSource(Time
 
 But our goal is to run this out of process in an Azure WebJob (this also works if you want to run this as a service or from the desktop).
 
-The first step is to create a new console application and reference the <a style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;" href="https://www.nuget.org/packages/Foundatio/">Foundatio NuGet Package</a> and the project that contains our HelloWorldJob. We are going to call our console application HelloWorldJob. Inside of the Program class, we&#8217;ll update the main method to run our job.
+The first step is to create a new console application and reference the <a style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;" href="https://www.nuget.org/packages/Foundatio/">Foundatio NuGet Package</a> and the project that contains our HelloWorldJob. We are going to call our console application HelloWorldJob. Inside of the Program class, we'll update the main method to run our job.
 
 <pre class="brush: csharp; title: ; notranslate" title="">using System;
 using System.IO;

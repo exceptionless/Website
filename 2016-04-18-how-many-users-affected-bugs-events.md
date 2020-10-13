@@ -6,13 +6,13 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-**<img loading="lazy" class="alignright size-full wp-image-14327" src="http://exceptionless.com/assets/users-featured-image.png" alt="exceptionless user tracking" width="260" height="260" data-id="14327" srcset="/assets/users-featured-image.png 260w, /assets/users-featured-image-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Prioritizing your bug fixes and development time** in general can be a daunting task.
+**<img loading="lazy" class="alignright size-full wp-image-14327" src="/assets/users-featured-image.png" alt="exceptionless user tracking" width="260" height="260" data-id="14327" srcset="/assets/users-featured-image.png 260w, /assets/users-featured-image-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Prioritizing your bug fixes and development time** in general can be a daunting task.
 
-Sometimes, as developers, **we want to work on this shiny widget** or this annoying bug, and we don&#8217;t really have anything in our face telling us to **quit focusing on our dreams** and work on what matters to the bottom line.
+Sometimes, as developers, **we want to work on this shiny widget** or this annoying bug, and we don't really have anything in our face telling us to **quit focusing on our dreams** and work on what matters to the bottom line.
 
-I can hear you over there: **&#8220;But, my dreams are important!&#8221;** Well, yes, but you don&#8217;t get to have fun working on those until you&#8217;ve made your **users** happy by fixing the bugs that are affecting the majority of them or expanding on that feature that they are all using every single time they use your app.
+I can hear you over there: **&#8220;But, my dreams are important!&#8221;** Well, yes, but you don't get to have fun working on those until you've made your **users** happy by fixing the bugs that are affecting the majority of them or expanding on that feature that they are all using every single time they use your app.
 
-We&#8217;ve got something that will let you get those pesky tasks off your plate though, so you can move on to the fun stuff!
+We've got something that will let you get those pesky tasks off your plate though, so you can move on to the fun stuff!
 
 <!--more-->
 
@@ -20,7 +20,7 @@ We&#8217;ve got something that will let you get those pesky tasks off your plate
 
 Our new &#8220;users&#8221; column and &#8220;Most Users&#8221; dashboard lets you **know exactly what percentage of your users are being affected by events or using features**. This allows you to prioritize the most important bugs or features to work on right away and potentially backlog things that only a few users are having issues with or using.
 
-Of course, you&#8217;ll need to be sending at least a user id (and preferably a display name) for each user. We&#8217;ll cover how to do that later in the article.
+Of course, you'll need to be sending at least a user id (and preferably a display name) for each user. We'll cover how to do that later in the article.
 
 ### Percentage of Users Column
 
@@ -30,13 +30,13 @@ If you mouse over the percentage, you can see the number of users the percentage
 
 These numbers are dynamically calculated for your selected timeframe that you are currently viewing.
 
-<a href="http://exceptionless.com/assets/dashboardv2-edited.png" rel="attachment wp-att-14353"><img loading="lazy" class="aligncenter size-large wp-image-14353" src="http://exceptionless.com/assets/dashboardv2-edited-1024x662.png" alt="users affected by bug" width="940" height="608" data-id="14353" srcset="/assets/dashboardv2-edited-1024x662.png 1024w, /assets/dashboardv2-edited-300x194.png 300w, /assets/dashboardv2-edited-768x497.png 768w, /assets/dashboardv2-edited.png 1404w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href="/assets/dashboardv2-edited.png" rel="attachment wp-att-14353"><img loading="lazy" class="aligncenter size-large wp-image-14353" src="/assets/dashboardv2-edited-1024x662.png" alt="users affected by bug" width="940" height="608" data-id="14353" srcset="/assets/dashboardv2-edited-1024x662.png 1024w, /assets/dashboardv2-edited-300x194.png 300w, /assets/dashboardv2-edited-768x497.png 768w, /assets/dashboardv2-edited.png 1404w" sizes="(max-width: 940px) 100vw, 940px" /></a>
 
 ### Most Users Dashboard
 
-Because the main dashboard shows you the most frequent events, not necessarily with the highest usage, **we thought it would be helpful to have a new dashboard that automatically sorts event stacks by the percentage of users affected,** letting you start at the top of an exception list, for example, and work your way down knowing you&#8217;re always working on a bug, etc, that is affecting the highest percentage of users.
+Because the main dashboard shows you the most frequent events, not necessarily with the highest usage, **we thought it would be helpful to have a new dashboard that automatically sorts event stacks by the percentage of users affected,** letting you start at the top of an exception list, for example, and work your way down knowing you're always working on a bug, etc, that is affecting the highest percentage of users.
 
-<a href="http://exceptionless.com/assets/dashboard-most-usersv2-edited.png" rel="attachment wp-att-14354"><img loading="lazy" class="aligncenter size-large wp-image-14354" src="http://exceptionless.com/assets/dashboard-most-usersv2-edited-1024x644.png" alt="user event dashboard" width="940" height="591" data-id="14354" srcset="/assets/dashboard-most-usersv2-edited-1024x644.png 1024w, /assets/dashboard-most-usersv2-edited-300x189.png 300w, /assets/dashboard-most-usersv2-edited-768x483.png 768w, /assets/dashboard-most-usersv2-edited.png 1408w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href="/assets/dashboard-most-usersv2-edited.png" rel="attachment wp-att-14354"><img loading="lazy" class="aligncenter size-large wp-image-14354" src="/assets/dashboard-most-usersv2-edited-1024x644.png" alt="user event dashboard" width="940" height="591" data-id="14354" srcset="/assets/dashboard-most-usersv2-edited-1024x644.png 1024w, /assets/dashboard-most-usersv2-edited-300x189.png 300w, /assets/dashboard-most-usersv2-edited-768x483.png 768w, /assets/dashboard-most-usersv2-edited.png 1408w" sizes="(max-width: 940px) 100vw, 940px" /></a>
 
 ## Setting User Identity
 
@@ -53,11 +53,11 @@ ExceptionlessClient.Default.Configuration.SetUserIdentity("UNIQUE_ID_OR_EMAIL_AD
 
 Once the user is set on the config object, it will be applied to all future events.
 
-**Please Note:** In WinForms and WPF applications, a plugin will automatically set the default user to the `<strong>Environment.UserName</strong>` if the default user hasn&#8217;t been already set. Likewise, if you are in a web environment, we will set the default user to the request principal&#8217;s identity if the default user hasn&#8217;t already been set.
+**Please Note:** In WinForms and WPF applications, a plugin will automatically set the default user to the `<strong>Environment.UserName</strong>` if the default user hasn't been already set. Likewise, if you are in a web environment, we will set the default user to the request principal's identity if the default user hasn't already been set.
 
 ### ASP.NET Example
 
-You can also manually set the user info on the event directly. This is intended for **multi-user processes (web applications)[.](http://www.businessinsider.com/slack-free-unlimited-plan-has-limits-2015-6) **For most MVC and WebAPI packages, the user will be set automatically based on the logged in principal, so you don&#8217;t have to do anything.
+You can also manually set the user info on the event directly. This is intended for **multi-user processes (web applications)[.](http://www.businessinsider.com/slack-free-unlimited-plan-has-limits-2015-6) **For most MVC and WebAPI packages, the user will be set automatically based on the logged in principal, so you don't have to do anything.
 
 <pre class="brush: csharp; title: ; notranslate" title="">// Import the exceptionless namespace.
 using Exceptionless;
@@ -67,12 +67,12 @@ ExceptionlessClient.Default.CreateFeatureUsage("MyFeature").SetUserIdentity(“1
 
 ### JavaScript Example
 
-If you&#8217;re using the JavaScript client, the entire session of the client will typically be for a single user, so you should be able to set it one time when they log in to your app.
+If you're using the JavaScript client, the entire session of the client will typically be for a single user, so you should be able to set it one time when they log in to your app.
 
 <pre class="brush: jscript; title: ; notranslate" title="">exceptionless.ExceptionlessClient.default.setUserIdentity("id", "friendly name")`
 </pre>
 
-Like with .NET, if you are running a multi-user process (Node.js), you&#8217;ll need to set the user at the event level.
+Like with .NET, if you are running a multi-user process (Node.js), you'll need to set the user at the event level.
 
 <pre class="brush: jscript; title: ; notranslate" title="">// javascript
 var client = exceptionless.ExceptionlessClient.default;
@@ -84,6 +84,6 @@ client.createFeatureUsage('MyFeature’).setUserIdentity('123456789', 'Blake Nie
 
 ## How Will You Use this Data
 
-We are always interested in how our users use our features, and if our users feature helps our users help their users, well, that&#8217;s a win win for our users and their users. Go users!
+We are always interested in how our users use our features, and if our users feature helps our users help their users, well, that's a win win for our users and their users. Go users!
 
-Don&#8217;t forget to stop by and let us know if you love or hate it, and of course let us know if you think we can improve on anything within Exceptionless.
+Don't forget to stop by and let us know if you love or hate it, and of course let us know if you think we can improve on anything within Exceptionless.

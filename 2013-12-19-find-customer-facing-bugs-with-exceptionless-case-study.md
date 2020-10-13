@@ -1,6 +1,6 @@
 ---
 id: 427
-postTitle: 'Find Customer Facing Bugs with Exceptionless &#8211; Case Study'
+postTitle: Find Customer Facing Bugs with Exceptionless &#8211; Case Study
 date: 2013-12-19T00:10:29-06:00
 author: Exceptionless
 layout: blog_post.liquid
@@ -8,7 +8,7 @@ tags: ["posts", ".NET", "asp.net", "Case Study"]
 ---
 ## The Power of .NET Error Reporting
 
-<img loading="lazy" class="alignright size-full wp-image-438" style="margin-left: 10px;" alt="ApexCCTV Logo" src="http://exceptionless.com/assets/header-logoNew.png" width="182" height="96" data-id="438" /> One of our long time customers, ApexCCTV, recently described how Exceptionless&#8217; .NET error reporting allowed them to find and squash a bug that was causing their website to be completely unusable by some customers.
+<img loading="lazy" class="alignright size-full wp-image-438" style="margin-left: 10px;" alt="ApexCCTV Logo" src="/assets/header-logoNew.png" width="182" height="96" data-id="438" /> One of our long time customers, ApexCCTV, recently described how Exceptionless' .NET error reporting allowed them to find and squash a bug that was causing their website to be completely unusable by some customers.
 
 Because of the e-commerce development environment being used, this issue would not have been brought to their attention without the implementation of Exceptionless, making this a prime example of how powerful the tool is and what it can mean for all types of .NET web applications.<!--more-->
 

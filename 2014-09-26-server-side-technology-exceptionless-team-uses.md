@@ -6,9 +6,9 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-11102" src="http://exceptionless.com/assets/servers.jpg" alt="Server Technology" width="200" height="191" data-id="11102" />As it turns out, building technology and web applications takes a **lot** of other technology. We were reflecting the other day and decided it would be cool if we did a blog series that went over all the different &#8220;stuff&#8221; we use to make and maintain Exceptionless.
+<img loading="lazy" class="alignright size-full wp-image-11102" src="/assets/servers.jpg" alt="Server Technology" width="200" height="191" data-id="11102" />As it turns out, building technology and web applications takes a **lot** of other technology. We were reflecting the other day and decided it would be cool if we did a blog series that went over all the different &#8220;stuff&#8221; we use to make and maintain Exceptionless.
 
-For the first part in the series, we decided to look at all the **server-side products and services**. They are listed below, along with a short description of what they are used for. See something you&#8217;ve never used? Check it out! Have something we should try out instead? Let us know by commenting!<!--more-->
+For the first part in the series, we decided to look at all the **server-side products and services**. They are listed below, along with a short description of what they are used for. See something you've never used? Check it out! Have something we should try out instead? Let us know by commenting!<!--more-->
 
 ## The Server Tech
 
@@ -86,4 +86,4 @@ A small validation library for .NET, <a title="Fluent Validation" href="http://f
 
 ## What Did We Miss?
 
-We know you&#8217;ve got some cool toys you use on your projects. Spit it out! What other technology should we give a try. We&#8217;re always looking for the best, fastest, coolest stuff to try out.
+We know you've got some cool toys you use on your projects. Spit it out! What other technology should we give a try. We're always looking for the best, fastest, coolest stuff to try out.

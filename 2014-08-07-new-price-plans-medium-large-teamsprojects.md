@@ -6,9 +6,9 @@ author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "new features"]
 ---
-We&#8217;ve had quite a few requests for pricing plans that support users, retention, and errors somewhere between our old medium and enterprise plans, so we crunched the numbers and came up with new large and extra large plans that find a happy medium.
+We've had quite a few requests for pricing plans that support users, retention, and errors somewhere between our old medium and enterprise plans, so we crunched the numbers and came up with new large and extra large plans that find a happy medium.
 
-Both plans include more users, more retention, and more errors. Check out the details on each package below or [view the Pricing Page](http://exceptionless.com/pricing/ "Pricing Plans") for a quick summary.<!--more-->
+Both plans include more users, more retention, and more errors. Check out the details on each package below or [view the Pricing Page](/pricing/ "Pricing Plans") for a quick summary.<!--more-->
 
 ## Free
 
@@ -43,5 +43,5 @@ For those businesses and enterprise-level teams that have several large projects
 And, of course, should you need to customize a plan to handle even more errors, we can always get you taken care of, just let us know!
 
 <div class="signup center">
-  <a class="btn btn-large btn-primary" href="https://app.exceptionless.com/signup">Sign Up Now!</a>
+  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Sign Up Now!</a>
 </div>

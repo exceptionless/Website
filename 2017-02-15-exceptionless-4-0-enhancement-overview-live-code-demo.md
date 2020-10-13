@@ -1,6 +1,6 @@
 ---
 id: 15303
-postTitle: 'Exceptionless 4.0 Enhancement Overview &#8211; Live Code Demo'
+postTitle: Exceptionless 4.0 Enhancement Overview &#8211; Live Code Demo
 date: 2017-02-15T12:01:08-06:00
 author: Exceptionless
 layout: blog_post.liquid
@@ -12,21 +12,21 @@ We recently [announced Exceptionless 4.0](/exceptionless-4-0/), but we also reco
 
 **In this live code/feature/functionality review video, Blake talks about:**<!--more-->
 
-  * Deploying Elasticsearch 5.x to production with completely new Azure resources.
+* Deploying Elasticsearch 5.x to production with completely new Azure resources.
 
-  * Fixing bugs and doing extensive testing on the new Elasticsearch 5 and Azure implementation.
+* Fixing bugs and doing extensive testing on the new Elasticsearch 5 and Azure implementation.
 
-  * Massive performance boosts due to daily indexes, SSD-backed storage, and bug fixes. These boosts should result in near0instant page loads and huge improvements to session dashboards.
+* Massive performance boosts due to daily indexes, SSD-backed storage, and bug fixes. These boosts should result in near0instant page loads and huge improvements to session dashboards.
 
-  * Automating cluster setup using Azure CLI and Elasticsearch ARM Templates.
+* Automating cluster setup using Azure CLI and Elasticsearch ARM Templates.
 
-  * A new custom SSH script that allows us to quickly and securely connect to machines, as well as forward ports for things like Kibana.
+* A new custom SSH script that allows us to quickly and securely connect to machines, as well as forward ports for things like Kibana.
 
-  * New Azure resources and dashboards.
+* New Azure resources and dashboards.
 
-  * Setting up WebJobs to run as cron jobs.
+* Setting up WebJobs to run as cron jobs.
 
-  * We also found [PM2](http://pm2.keymetrics.io/), a new way to manage Node.js services for our [StatsD](https://github.com/etsy/statsd) service.
+* We also found [PM2](http://pm2.keymetrics.io/), a new way to manage Node.js services for our [StatsD](https://github.com/etsy/statsd) service.
 
 <h2 style="text-align: center;">
   <a href="https://www.liveedu.tv/niemyjski/videos/9WmaQ-exceptionless-weekly-demo-1-23-17">WATCH VIDEO</a>

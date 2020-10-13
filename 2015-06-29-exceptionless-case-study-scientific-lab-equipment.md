@@ -1,12 +1,12 @@
 ---
 id: 13380
-postTitle: 'Exceptionless Case Study &#8211; Scientific Lab Equipment'
+postTitle: Exceptionless Case Study &#8211; Scientific Lab Equipment
 date: 2015-06-29T21:50:40-06:00
 author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts", "Case Study"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-13383" src="http://exceptionless.com/assets/blog-header-image-small-case-study.png" alt="blog-header-image-small-case-study" width="260" height="260" data-id="13383" srcset="/assets/blog-header-image-small-case-study.png 260w, /assets/blog-header-image-small-case-study-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />It&#8217;s always great to hear back from our users, whether it&#8217;s a simple &#8220;atta boy&#8221; or a full page&#8217;s worth of feedback.
+<img loading="lazy" class="alignright size-full wp-image-13383" src="/assets/blog-header-image-small-case-study.png" alt="blog-header-image-small-case-study" width="260" height="260" data-id="13383" srcset="/assets/blog-header-image-small-case-study.png 260w, /assets/blog-header-image-small-case-study-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />It's always great to hear back from our users, whether it's a simple &#8220;atta boy&#8221; or a full page's worth of feedback.
 
 Today we thought it would be nice to share a recent case study from one of our users that lives in the scientific laboratory and processing equipment space. Their company is a leading provider of stirring, mixing, and kneading machines, among other things, that are used by the pharmaceutical, chemical, food, paint, cosmetic, and plastics industries around the world. Neat!
 
@@ -16,14 +16,14 @@ Today we thought it would be nice to share a recent case study from one of our u
 
 ## The Questions
 
-When a user hits a certain number of sessions with Exceptionless, we shoot them a quick survey email asking them a few things that might help us improve our product and get a better feel for how our users are utilizing it&#8217;s features.
+When a user hits a certain number of sessions with Exceptionless, we shoot them a quick survey email asking them a few things that might help us improve our product and get a better feel for how our users are utilizing it's features.
 
 **In a nutshell, we ask the following:**
 
-  1. What&#8217;s the number one customer-facing bug Exceptionless helped you squash?
+  1. What's the number one customer-facing bug Exceptionless helped you squash?
   2. Were you surprised at the initial results of using Exceptionless for the first time? How many errors were you seeing?
   3. What is the number one internal bug you were able to track down with Exceptionless?
-  4. If you had one feature you&#8217;d like us to add to Exceptionless, what would it be?
+  4. If you had one feature you'd like us to add to Exceptionless, what would it be?
   5. What other examples or feedback do you have?
 
 ## Answer Time!
@@ -42,4 +42,4 @@ The user was gracious enough to provide us with the following answers to the abo
 
 **Consider this for a second:** If every user provided 10 minutes of feedback on the products they use and love, the owners of those products/programs/tools/experiences would be able to improve them much faster and with drastically more focus and drive.
 
-With that said&#8230; give us 5, 10, or maybe 15 minutes and answer the above questions for us in the comments below. We&#8217;re no Microsoft &#8211; your voice **will be heard**, and any suggestions will be strongly considered/debated. Who knows &#8211; maybe we work on your feature request next!
+With that said&#8230; give us 5, 10, or maybe 15 minutes and answer the above questions for us in the comments below. We're no Microsoft &#8211; your voice **will be heard**, and any suggestions will be strongly considered/debated. Who knows &#8211; maybe we work on your feature request next!

@@ -1,14 +1,14 @@
 ---
 id: 9074
-postTitle: 'Coming in Exceptionless 2.0 &#8211; A Pluggable System'
+postTitle: Coming in Exceptionless 2.0 &#8211; A Pluggable System
 date: 2014-06-25T09:30:52-06:00
 author: Exceptionless
 layout: blog_post.liquid
 tags: ["posts"]
 ---
-<img loading="lazy" style="margin-bottom:20px;" class="aligncenter size-full wp-image-9075" src="http://exceptionless.com/assets/pluggable-system.jpg" alt="Pluggable System" width="708" height="250" data-id="9075" srcset="/assets/pluggable-system.jpg 708w, /assets/pluggable-system-300x105.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" style="margin-bottom:20px;" class="aligncenter size-full wp-image-9075" src="/assets/pluggable-system.jpg" alt="Pluggable System" width="708" height="250" data-id="9075" srcset="/assets/pluggable-system.jpg 708w, /assets/pluggable-system-300x105.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
-In the last Exceptionless 2.0 article, we announced the upcoming <a title="More from the Upcoming Exceptionless 2.0: Simplified API" href="http://exceptionless.com/upcoming-exceptionless-2-0-simplified-api/" target="_blank">simplified API</a>. Today, we want to introduce another major piece of V2.0 &#8211; the **pluggable system**.
+In the last Exceptionless 2.0 article, we announced the upcoming <a title="More from the Upcoming Exceptionless 2.0: Simplified API" href="/upcoming-exceptionless-2-0-simplified-api/" target="_blank">simplified API</a>. Today, we want to introduce another major piece of V2.0 &#8211; the **pluggable system**.
 
 Plugins will allow customization and translation throughout the Exceptionless platform, including integration with third-party services and more. Read on for more details about pluggable details such as event parsing, event pipeline, and formatting.<!--more-->
 
@@ -70,11 +70,11 @@ Plugins will allow customization and translation throughout the Exceptionless pl
   </li>
 </ul>
 
-[Source](https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Plugins/Formatting/IFormattingPlugin.cs)  
+[Source](https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Plugins/Formatting/IFormattingPlugin.cs)
 We believe building a pluggable exception reporting system and allowing third-party service and app access will create one of the most flexible, usable, and friendly solutions on the market.
 
 ### Coming Soon
 
-We&#8217;re anxious to get Exceptionless 2.0 wrapped up, but we do not have an ETA currently. We are working hard and making good progress, so keep an eye out for more sneak peeks, feature announcements, and progress reports!
+We're anxious to get Exceptionless 2.0 wrapped up, but we do not have an ETA currently. We are working hard and making good progress, so keep an eye out for more sneak peeks, feature announcements, and progress reports!
 
 As always, please let us know if you have any feedback or questions.
