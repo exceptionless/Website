@@ -63,7 +63,6 @@
                         <li class="menu-pricing"><a href="/pricing/">Pricing</a></li>
                         <li class="menu-news"><a href="/news/">News</a></li>
                         <li class="menu-help"><a href="https://github.com/exceptionless/Exceptionless/wiki">Help</a></li>
-                        <li class="menu-contact"><a href="/contact/">Contact</a></li>
                         <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
                         <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&type=organic">Sign Up</a></li>
                     </ul>
@@ -90,7 +89,7 @@
                         <li><a href="https://github.com/exceptionless/Exceptionless/wiki">Help</a></li>
                     </ul>
                     <ul class="footer-links clearfix">
-                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
                         <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                         <li><a href="/about/">About Us</a></li>
                         <li><a href="/terms/">Terms of Use</a></li>
@@ -121,14 +120,13 @@
     </div>
 
     <script>
-      window.intercomSettings = {
-          app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
-      };
+    window.intercomSettings = {
+        app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+    };
     </script>
 
     <script>
-    // We pre-filled your app ID in the widget URL: '//widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1'
-    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='//widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
     </script>
 
     <script defer src="//www.google-analytics.com/analytics.js"></script>
