@@ -1,6 +1,6 @@
 ---
 id: 8185
-title: Exceptionless 2.0 &#8211; In the Making
+title: Exceptionless 2.0 - In the Making
 date: 2014-05-20
 tags: [ "api", "client"]
 ---

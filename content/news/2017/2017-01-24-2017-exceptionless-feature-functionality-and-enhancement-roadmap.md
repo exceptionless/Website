@@ -39,7 +39,7 @@ We're always working on notifications, we've got <a href="https://github.com/exc
 * We want to port the Exceptionless app to [.NET Core](https://www.microsoft.com/net/core) so we can run it anywhere (macOS, Linux or Windows).
 * Running on .NET Core also brings massive performance improvements and lower overhead, which will have positive trickle down affects throughout the app.
 * Once we support .NET Core, we can containerize the entire app, allowing us to scale more easily.
-* These changes will make self hosting super simple. You'll basically be able to run &#8220;docker run -d exceptionless\`&#8221; and be done!
+* These changes will make self hosting super simple. You'll basically be able to run "docker run -d exceptionless\`" and be done!
 
 ## Custom Exceptionless Dashboards
 

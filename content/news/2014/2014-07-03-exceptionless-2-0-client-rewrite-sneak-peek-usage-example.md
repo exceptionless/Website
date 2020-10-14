@@ -61,28 +61,28 @@ Store all client data including the offline queue in the store folder, by defaul
 
 * * *
 
-Exclude any form fields, cookies, query string parameters, and custom data properties containing &#8220;CreditCard&#8221;.
+Exclude any form fields, cookies, query string parameters, and custom data properties containing "CreditCard".
 
 <pre>config.AddDataExclusions("CreditCard");
 </pre>
 
 * * *
 
-Add the &#8220;SomeTag&#8221; to all events.
+Add the "SomeTag" to all events.
 
 <pre>config.DefaultTags.Add("SomeTag");
 </pre>
 
 * * *
 
-Add the &#8220;MyObject&#8221; custom data object to every event.
+Add the "MyObject" custom data object to every event.
 
 <pre>config.DefaultData.Add("MyObject", new { MyProperty = "Value1" });
 </pre>
 
 * * *
 
-Add a custom event enrichment that will add a tag called &#8220;MyTag&#8221; to every event.
+Add a custom event enrichment that will add a tag called "MyTag" to every event.
 
 <pre>config.AddEnrichment(ev =&gt; ev.Tags.Add("MyTag"));
 </pre>
@@ -121,7 +121,7 @@ Let users add their email address and a description of the error.
 
 * * *
 
-Create and submit a log message and add an extra &#8220;Order&#8221; object to the event.
+Create and submit a log message and add an extra "Order" object to the event.
 
 <pre>client.CreateLog("Order", "New order created.")
 .AddObject(new { Total = 14.95 }, name: "Order")
@@ -144,7 +144,7 @@ Submit a page not found event so you can keep track of your broken links and fix
 
 * * *
 
-Listen to all events being sent and cancel any errors that are &#8220;IgnoredType&#8221;.
+Listen to all events being sent and cancel any errors that are "IgnoredType".
 
 <pre>client.SubmittingEvent += (sender, args) =&gt;
 args.Cancel = args.Event.IsError() && args.Event.GetError().Type.Contains("IgnoredType");
@@ -174,7 +174,7 @@ As always, if you have any questions, comments, suggestions, or concerns, let us
 
 ### Read more about Exceptionless 2.0
 
-* [Exceptionless 2.0 &#8211; In the Making](/exceptionless-2-in-the-making/ "Exceptionless 2.0 – In the Making")
+* [Exceptionless 2.0 - In the Making](/exceptionless-2-in-the-making/ "Exceptionless 2.0 – In the Making")
 * [Event Based Reporting System](/event-based-reporting-system-coming-version-2-0/ "Event Based Reporting System Coming in Version 2.0")
 * [Simplified API](/upcoming-exceptionless-2-0-simplified-api/ "More from the Upcoming Exceptionless 2.0: Simplified API")
 * [A Pluggable System](/coming-exceptionless-2-0-pluggable-system/ "Coming in Exceptionless 2.0 – A Pluggable System")

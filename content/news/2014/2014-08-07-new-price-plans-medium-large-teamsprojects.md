@@ -14,25 +14,25 @@ The free plan, which is great for trying things out or super small personal proj
 
 It does not include premium features such as advanced notifications, web hooks, and other future premium features.
 
-## Small &#8211; $15
+## Small - $15
 
 For $15 per month, you get **five projects, ten users, thirty days of retention, 15,000 errors per month**, and premium features.
 
-## Medium &#8211; $49
+## Medium - $49
 
 The medium Exceptionless plan offers **fifteen projects and twenty-five users**. You get **ninety days of retention, 75,000 errors per month**, and premium features.
 
-## Large Plan &#8211; $99 _(new)_
+## Large Plan - $99 _(new)_
 
 The large plan is new, and includes **unlimited projects and users, 180 days of error retention, 250,000 errors per month**, and premium features.
 
 This is quickly becoming a popular plan and makes sense for a lot of medium to medium-large teams and projects.
 
-## Extra Large &#8211; $199 _(new)_
+## Extra Large - $199 _(new)_
 
 The extra large plan was created to bridge the gap between large and enterprise by quadrupling the **number of errors per month to 1,000,000**. You still get unlimited projects and users, as well as 180 days of retention and premium features.
 
-## Enterprise &#8211; $499
+## Enterprise - $499
 
 For those businesses and enterprise-level teams that have several large projects and need to handle huge numbers of errors, the Enterprise plan offers everything that the Extra Large plan offers, with **3,000,000 errors per month**.
 

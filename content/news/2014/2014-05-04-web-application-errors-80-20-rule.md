@@ -15,7 +15,7 @@ All we're trying to point out is that when you start tracking and organizing the
 
 ### What we did about it
 
-We realized this ourselves, so we built the &#8220;Most Frequent Errors&#8221; report right into the Exceptionless dashboard.
+We realized this ourselves, so we built the "Most Frequent Errors" report right into the Exceptionless dashboard.
 
 When you log into your account, you immediately see which errors are causing the largest number of exceptions, how many instances of each there is, when the first occurrence was, and when the last occurrence was.
 

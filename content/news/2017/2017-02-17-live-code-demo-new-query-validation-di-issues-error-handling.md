@@ -1,6 +1,6 @@
 ---
 id: 15306
-title: Live Code Demo &#8211; New Query Validation, DI Issues, and Error Handling
+title: Live Code Demo - New Query Validation, DI Issues, and Error Handling
 date: 2017-02-17
 ---
 [<img loading="lazy" class="aligncenter size-large wp-image-15307" style="margin-bottom: 20px;" src="/assets/query-validation-di-issues-error-handling-1024x538.jpg" alt="" width="940" height="494" data-id="15307" srcset="/assets/query-validation-di-issues-error-handling-1024x538.jpg 1024w, /assets/query-validation-di-issues-error-handling-300x158.jpg 300w, /assets/query-validation-di-issues-error-handling-768x403.jpg 768w, /assets/query-validation-di-issues-error-handling.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/videos/4DDYJ-exceptionless-weekly-demo-2-1-17)

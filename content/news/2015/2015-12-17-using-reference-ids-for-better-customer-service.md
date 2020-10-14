@@ -103,7 +103,7 @@ We’ve found that this allows consumers of our API to quickly contact us with a
 
 ## Looking up Events by Reference Id
 
-You might be thinking: &#8220;Reference Ids are great, but what do I do with them now that I have one.&#8221; Well, you can view the event that they reference on our site or via our API. This can be accomplished two different ways:
+You might be thinking: "Reference Ids are great, but what do I do with them now that I have one." Well, you can view the event that they reference on our site or via our API. This can be accomplished two different ways:
 
 * **Hotlinking
 ** You can link directly to a submitted event by outputting a link in your UI or logs (e.g. https://be.exceptionless.io/event/by-ref/YOUR\_REFERENCE\_ID)

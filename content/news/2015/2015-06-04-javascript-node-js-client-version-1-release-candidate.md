@@ -27,10 +27,10 @@ Moving forward, we will just be working on bug fixes related to user-reported is
 * Decreased library size to improve performance and efficiency
 * Various other performance improvements
 * Fixed Angular integration failures with Angular Router
-* Fixed &#8211; Unable to integrate with Aurelia due to node being improperly detected
+* Fixed - Unable to integrate with Aurelia due to node being improperly detected
 * Changed the implementation of the InMemoryStorage to do a get instead of a get and delete
 * Unable to post events with the NodeSubmissionClient over http fixed
-* Fixed &#8211; Unit tests are failing due to transpilation
+* Fixed - Unit tests are failing due to transpilation
 
 ## Start Using It!
 
@@ -40,7 +40,7 @@ We've already released a few blog posts (linked below) that detail how to get u
 
 If you're a **<a href="/exceptionless-node-js-javascript-client-demo/" target="_blank">Node.js</a> user**, follow <a href="/exceptionless-node-js-javascript-client-demo/" target="_blank">this article</a> to get set up and running.
 
-We've also got <a href="https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example" target="_blank"><strong>examples/samples on GitHub</strong></a> for JavaScript, Express, TypeScript, SystemJS, and RequireJS.
+We've also got <a href="https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example" target="_blank">**examples/samples on GitHub**</a> for JavaScript, Express, TypeScript, SystemJS, and RequireJS.
 
 <div class="signup center">
   <a class="btn btn-large btn-primary" href="https://github.com/exceptionless/Exceptionless.JavaScript">Try It Today!</a>

@@ -22,7 +22,7 @@ Don't see shortcuts available on a page? Don't freak out, there may just not be 
 If you hit SHIFT + / (?) on an event occurrence, you will see three or four new options, depending on whether you are on the first occurrence in the stack or not.
 
 * **Go to Stack
-** On any event occurrence, you can hit CTRL + UP to go to that event's stack quicker than finding the &#8220;Go To Stack&#8221; button and clicking.
+** On any event occurrence, you can hit CTRL + UP to go to that event's stack quicker than finding the "Go To Stack" button and clicking.
 
 * **Copy Event JSON to Clipboard
 ** Hit CTRL + SHIFT + C to copy that event's JSON data to your clipboard.

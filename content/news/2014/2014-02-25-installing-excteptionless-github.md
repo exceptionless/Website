@@ -22,12 +22,12 @@ Please note that before contributing to the Exceptionless project, you must read
   3. Fork the <a href="https://github.com/exceptionless/Exceptionless" title="Exceptionless on GitHub" target="_blank">Exceptionless repository</a>
   4. Clone the repo to your machine (Clone to Desktop)
   5. Open your local repository you just cloned
-  6. Follow the &#8220;<a href="https://github.com/exceptionless/Exceptionless#getting-started" title="Exceptionless GitHub Getting Started" target="_blank">Getting Started</a>&#8221; section of github readme
+  6. Follow the "<a href="https://github.com/exceptionless/Exceptionless#getting-started" title="Exceptionless GitHub Getting Started" target="_blank">Getting Started</a>" section of github readme
 * Start StartBackendServers.bat file to start redis and mongodb
 * Open the Exceptionles solution in Visual Studio
-* Right click solution and select select &#8220;set startup projects&#8221;
-* Click on &#8220;Multiple startup projects&#8221;
-    * Locate Exceptionless.app and Exceptionless.SampleConsole and change them to &#8220;Start&#8221;
+* Right click solution and select select "set startup projects"
+* Click on "Multiple startup projects"
+    * Locate Exceptionless.app and Exceptionless.SampleConsole and change them to "Start"
     * Rebuild the solution to pull down the NuGet packages
     * Start Debugging
     * A console app and Internet explorer instance will start
@@ -39,8 +39,8 @@ Please note that before contributing to the Exceptionless project, you must read
     * Then, sync the changes
     * Go back to github and click on the green compare, review, or create a pull request icon.
     * Review the updates and make sure the pull request includes the proper changes.
-    * Click &#8220;Create a Pull Request&#8221;
+    * Click "Create a Pull Request"
     * Add any comments relevant to the pull request. Details are great!
-    * Click &#8220;Send Pull Request&#8221;
+    * Click "Send Pull Request"
     * The Exceptionless Team will review the request and merge it into the project, provide feedback, etc.</ol>
     Please let us know if you have any questions. Happy coding!

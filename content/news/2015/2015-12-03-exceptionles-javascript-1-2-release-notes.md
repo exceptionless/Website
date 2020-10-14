@@ -21,7 +21,7 @@ Shout out to <a href="https://github.com/frankebersoll" target="_blank">@frankeb
 **Node** **Info
 ** Support for collecting Node module info has also been added (thanks again, @frankebersoll).
 
-**Bug Fix &#8211; Invalid States**
+**Bug Fix - Invalid States**
 An issue where Data Exclusions could cause events to be submitted in an invalid state has been fixed.
 
 ### As always, let us know if you have any questions or feedback!

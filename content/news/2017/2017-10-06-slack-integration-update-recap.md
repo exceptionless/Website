@@ -19,7 +19,7 @@ First, go into your project's settings in the Exceptionless app and click on the
 
 [<img loading="lazy" class="aligncenter wp-image-15626 size-full" src="/k-setup.png" alt="" width="811" height="595" data-id="15626" srcset="/assets/exceptionless-sla//exceptionless-slack-setup-300x220.png 300w/ack-setup-768x563.png 768w" sizes="(max-width: 811p/ts/exceptionless-slack-setup.png)/
 
-Then, click on &#8220;Add Slack Notifications&#8221; and log in to your slack team.
+Then, click on "Add Slack Notifications" and log in to your slack team.
 
 Once logged in, you will need to select the channel you want Exceptionless Notifications to post to and click Authorize.
 

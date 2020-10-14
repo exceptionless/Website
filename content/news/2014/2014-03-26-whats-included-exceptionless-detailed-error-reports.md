@@ -1,10 +1,10 @@
 ---
 id: 4171
-title: Detailed Error Reports &#8211; What's Included?
+title: Detailed Error Reports - What's Included?
 date: 2014-03-26
 ---
 
-When an error occurs in your app, you need to know the critical details, fast, so you can drill down and fix it. We get it &#8211; we're developers too &#8211; that's why we built Exceptionless.
+When an error occurs in your app, you need to know the critical details, fast, so you can drill down and fix it. We get it - we're developers too - that's why we built Exceptionless.
 
 The trick was organizing the data so it didn't overwhelm our users, while still providing all the important stuff so developers wouldn't have to spend extra time tracking down versions, requesting stack traces, or pulling teeth to get environment information.
 

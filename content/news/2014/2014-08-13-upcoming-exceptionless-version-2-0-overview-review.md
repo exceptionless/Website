@@ -14,37 +14,37 @@ To make things easier for everyone, we thought we'd do an overview post as well,
 
 [<img loading="lazy" style="margin-left:15px;" class="alignright wp-image-8588 size-thumbnail" src="/assets/ex-curl-150x150.png" alt="Post Event Exceptionless" width="150" height="150" data-id="8588" />](/assets/ex-curl.png)Many users have asked for ways to use Exceptionless to report additional types of events, rather than just errors. With version 2.0, we are moving to an event based system that will accommodate such requests.
 
-[Read full article&#8230;](/event-based-reporting-system-coming-version-2-0/ "Event Based Reporting System Coming in Version 2.0")
+[Read full article...](/event-based-reporting-system-coming-version-2-0/ "Event Based Reporting System Coming in Version 2.0")
 
 ### Simplified API
 
 [<img loading="lazy" style="margin-left:15px;" class="alignright wp-image-9028 size-thumbnail" src="/assets/Screen-shot-2014-06-11-at-5.20.44-PM-150x150.png" alt="Exceptionless API Documentation" width="150" height="150" data-id="9028" />](/assets/Screen-shot-2014-06-11-at-5.20.44-PM.png)2.0 will have a new, manageable API with tons of great documentation and examples. Take a look at the preliminary documentation at the below link, and make sure to give us any feedback you might have.
 
-[Read full article&#8230;](/upcoming-exceptionless-2-0-simplified-api/ "More from the Upcoming Exceptionless 2.0: Simplified API")
+[Read full article...](/upcoming-exceptionless-2-0-simplified-api/ "More from the Upcoming Exceptionless 2.0: Simplified API")
 
 ### A Pluggable System
 
 [<img loading="lazy" style="margin-left:15px;" class="alignright wp-image-9075 size-thumbnail" src="/assets/pluggable-system-150x150.jpg" alt="Pluggable System" width="150" height="150" data-id="9075" />](/assets/pluggable-system.jpg)The new pluggable system will allow customization and translation throughout the Exceptionless platform, including integration with third-party services and more. Read on for more details and source code about event parsing, the event pipeline, and formatting.
 
-[Read full article&#8230;](/coming-exceptionless-2-0-pluggable-system/ "Coming in Exceptionless 2.0 – A Pluggable System")
+[Read full article...](/coming-exceptionless-2-0-pluggable-system/ "Coming in Exceptionless 2.0 – A Pluggable System")
 
 ### Client Rewrite
 
 [<img loading="lazy" style="margin-left:15px;" class="alignright wp-image-9099 size-thumbnail" src="/assets/new-client-header-150x150.jpg" alt="new-client-header" width="150" height="150" data-id="9099" />](/assets/new-client-header.jpg)The Exceptionless client has been completely rewritten to be highly simplified and extensible, work with Mono and Project K, include additional platform specific clients, and much more. Take a look at an extended event data usage example at the link below.
 
-[Read full article&#8230;](/exceptionless-2-0-client-rewrite-sneak-peek-usage-example/ "Exceptionless 2.0 Client Rewrite Sneak Peek Usage Example")
+[Read full article...](/exceptionless-2-0-client-rewrite-sneak-peek-usage-example/ "Exceptionless 2.0 Client Rewrite Sneak Peek Usage Example")
 
 ### New Message Bus & Queueing
 
 In an effort to improve scalability, allow for new functionality to easily be added to Exceptionless, make the system less coupled, process things more efficiently, go fully Async, and further support Azure, we’ve been working hard on a new message bus and queueing system.
 
-[Read full article&#8230;](/version-2-0s-new-message-bus-queueing-systems/ "Version 2.0′s New Message Bus and Queueing Systems")
+[Read full article...](/version-2-0s-new-message-bus-queueing-systems/ "Version 2.0′s New Message Bus and Queueing Systems")
 
 ### Job System Enhancements
 
 A lot of time has been spent on enhancing the job system behind Exceptionless. From the ability to run jobs standalone, making testing easier, to more ways to run jobs and the ability to auto-scale jobs based on resource constraints, lots of great changes are coming!
 
-[Ready full article&#8230;](/job-system-enhancements-version-2s-got-em/ "Job System Enhancements – Version 2′s Got Em!")
+[Ready full article...](/job-system-enhancements-version-2s-got-em/ "Job System Enhancements – Version 2′s Got Em!")
 
 ## Feedback Welcome!
 

@@ -15,7 +15,7 @@ Let's take a more in-depth look at Exceptionless Plugins and how they are used.
 
 ## Pre-Reqs
 
-First, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="http://docs.exceptionless.com/contents/configuration/" target="_blank">configured</a> the latest version of the Exceptionless client (plugins require client v3 &#8211; released 4/6/2015). If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="http://docs.exceptionless.com/contents/upgrading/" target="_blank">upgrade</a> to use plugins.  Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/contact/" target="_blank">contact page</a> if you have any questions or need assistance in this area.
+First, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="http://docs.exceptionless.com/contents/configuration/" target="_blank">configured</a> the latest version of the Exceptionless client (plugins require client v3 - released 4/6/2015). If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="http://docs.exceptionless.com/contents/upgrading/" target="_blank">upgrade</a> to use plugins.  Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/contact/" target="_blank">contact page</a> if you have any questions or need assistance in this area.
 
 ## Creating a New Plugin
 
@@ -36,7 +36,7 @@ Every plugin is passed an <a title="Exceptionless Plugin Contect" href="https://
 * ****Resolver
 **** The ExceptionlessClient\`s dependency resolver. This is useful for resolving other dependencies at runtime that were not requested via constructor injection.
 
-### Exceptionless Plugin Example &#8211; Add System Uptime to Feature Usages
+### Exceptionless Plugin Example - Add System Uptime to Feature Usages
 
 The <a title="Exceptionless System Uptime Plugin Example" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Samples/SampleConsole/Plugins/SystemUptimePlugin.cs" target="_blank">following system uptime plugin</a> derives from IEventPlugin and places the system uptime into every feature usage event as extended data when the plugin’s Run(context) method is called.
 

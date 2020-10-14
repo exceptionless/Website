@@ -41,12 +41,12 @@ When we set out to build Exceptionless, we went through hundreds of possible fea
 * You fixed a bug in one spot, only to find out that it was happening in several other places as well
 * There might be errors here or there, but they probably aren't affecting very many users _(hint: they probably are)_.
 * You or your team are making a lot of changes in the next sprint, and you really want to make sure you know when a bug gets introduced
-* _and the list goes on&#8230;_
+* _and the list goes on..._
 
 #### And of course, we're here to help!
 
 If you have any issues or questions, just let us know! You can [contact us here on the website](/contact/ "Contact Us"), or via the support button on your Exceptionless dashboard.
 
 <div class="signup center">
-  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Try It for <strong>FREE</strong></a>
+  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Try It for **FREE**</a>
 </div>

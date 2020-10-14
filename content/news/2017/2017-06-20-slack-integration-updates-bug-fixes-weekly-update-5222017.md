@@ -1,6 +1,6 @@
 ---
 id: 15666
-title: Slack Integration Updates and Bug Fixes &#8211; Weekly Update 5/22/2017
+title: Slack Integration Updates and Bug Fixes - Weekly Update 5/22/2017
 date: 2017-06-20
 tags: [ "bugs", "notifications", "slack"]
 ---

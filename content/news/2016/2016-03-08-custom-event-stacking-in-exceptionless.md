@@ -5,7 +5,7 @@ date: 2016-03-08
 ---
 <img loading="lazy" class="alignright size-full wp-image-14180" src="/assets/custom-event-stacking-graphicl.png" alt="custom event stacking with exceptionless" width="260" height="260" data-id="14180" srcset="/assets/custom-event-stacking-graphicl.png 260w, /assets/custom-event-stacking-graphicl-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Sometimes you just need things to be your way.
 
-We get it&#8230; your morning coffee, folded towels, and how events stack (group) in your event reporting application should be controllable and customizable.
+We get it... your morning coffee, folded towels, and how events stack (group) in your event reporting application should be controllable and customizable.
 
 Well, thanks to a great suggestion by <a href="https://github.com/adamzolotarev" target="_blank">@adamzolotarev</a>, now they are! Well, the events, at least.<!--more-->
 
@@ -19,7 +19,7 @@ To facilitate this need, we created `SetManualStackingKey`, which both .NET and 
 
 Adding your own custom stacking to events in Exceptionless is super easy. Below are examples for both .NET and JavaScript.
 
-In these examples, we are using `setManualStackingKey` and naming the custom stack &#8220;MyCustomStackingKey&#8221;.
+In these examples, we are using `setManualStackingKey` and naming the custom stack "MyCustomStackingKey".
 
 So, any events you use the below for will be a part of the custom stack, and all other events, exceptiones, logs, feature usages, etc will still be stacked automatically, like normal, by the app.
 

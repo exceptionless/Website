@@ -3,12 +3,12 @@ id: 16231
 title: Event Tracking and Logging Software
 date: 2018-06-02
 ---
-<img loading="lazy" data-id="16233"  src="/assets/event-tracking-logging-software-1024x538.jpg" alt="" width="940" height="494" class="aligncenter size-large wp-image-16233" srcset="/assets/event-tracking-logging-software-1024x538.jpg 1024w, /assets/event-tracking-logging-software-300x158.jpg 300w, /assets/event-tracking-logging-software-768x403.jpg 768w, /assets/event-tracking-logging-software.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />  
+<img loading="lazy" data-id="16233"  src="/assets/event-tracking-logging-software-1024x538.jpg" alt="" width="940" height="494" class="aligncenter size-large wp-image-16233" srcset="/assets/event-tracking-logging-software-1024x538.jpg 1024w, /assets/event-tracking-logging-software-300x158.jpg 300w, /assets/event-tracking-logging-software-768x403.jpg 768w, /assets/event-tracking-logging-software.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
 Whether you’re developing a quick module, application, or full blown, go-to-market product, you’re going to need some form of event logging throughout the development process. It can be done without, but you’ll be making your job multiple magnitudes more difficult and losing valuable man hours that could be put towards making your product better instead of just not breaking.<!--more-->
 
 ## WHAT IS EVENT LOGGING?
 
-Event logging provides a detailed record of events, bugs, and custom triggers that occur in your application, environment, or product. The information collected gives you a wealth of data to both forensically troubleshoot a bug after it’s occurred as well as proactively to prevent future errors. 
+Event logging provides a detailed record of events, bugs, and custom triggers that occur in your application, environment, or product. The information collected gives you a wealth of data to both forensically troubleshoot a bug after it’s occurred as well as proactively to prevent future errors.
 
 This now service is now an invaluable resource to increase your development team’s efficiency and productivity as well as increasing visibility of what goes on behind the scenes in your development environment. On top of that, it also helps maximize application uptime and operation by minimizing the long-term effects of bugs and unwanted events.
 
@@ -18,7 +18,7 @@ Individual raw event logs are too dense and unwieldy to be reviewed. If you were
 
 ### FAST AND EASY REPORTING
 
-The great thing about event tracking is that it’s running around the clock. When you and your team aren’t in the office, it’s keeping a watchful eye on your project and collecting data 24/7. It collects data from all sources across your development environment and all of this data is funneled to your dashboard for real-time reporting and criteria based sorting. This allows you to both find the event you’re looking for and quickly dive into its potential causes. 
+The great thing about event tracking is that it’s running around the clock. When you and your team aren’t in the office, it’s keeping a watchful eye on your project and collecting data 24/7. It collects data from all sources across your development environment and all of this data is funneled to your dashboard for real-time reporting and criteria based sorting. This allows you to both find the event you’re looking for and quickly dive into its potential causes.
 
 ### INTELLIGENT EVENT GROUPING
 
@@ -32,7 +32,7 @@ Event tracking software makes it so a bug that once took a week to find can be f
 
 ### EVENT LOGGING SOFTWARE PAYS FOR ITSELF
 
-Your developers’ time is valuable, and expensive. Even though it’s important, having them blindly diving down rabbit holes to chase bugs and other events can be incredibly costly and not productive. Not every project has a big budget and you may have to work faster and more efficiently to wrap it up without going over budget. While an event logging software may sound like an additional expense, the amount of time you save troubleshooting and fixing bugs will easily cover the cost. And the great thing is, the more you use it, the more you save. 
+Your developers’ time is valuable, and expensive. Even though it’s important, having them blindly diving down rabbit holes to chase bugs and other events can be incredibly costly and not productive. Not every project has a big budget and you may have to work faster and more efficiently to wrap it up without going over budget. While an event logging software may sound like an additional expense, the amount of time you save troubleshooting and fixing bugs will easily cover the cost. And the great thing is, the more you use it, the more you save.
 
 ### USER FRIENDLY DASHBOARD
 

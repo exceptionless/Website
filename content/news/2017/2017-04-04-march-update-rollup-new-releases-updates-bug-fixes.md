@@ -1,6 +1,6 @@
 ---
 id: 15448
-title: March Update Rollup &#8211; New Releases, Updates, Bug fixes, and more!
+title: March Update Rollup - New Releases, Updates, Bug fixes, and more!
 date: 2017-04-04
 ---
 
@@ -22,13 +22,13 @@ Let's get to it!<!--more-->
 
 * Blake attended [Elastic{ON}](https://www.elastic.co/elasticon/conf/2017/sf) and talked to product teams about issues we've been running into, as well as the future of Elasticsearch.
 * **Foundatio**
-    * [Released Version 5.0 of Foundatio](https://github.com/exceptionless/Foundatio/releases/tag/v5.0.0)
-    * We also modified an existing PowerShell script that updates existing projects to the VS2017 project format.
-    * And, of course, we added some more documentation!
+  * [Released Version 5.0 of Foundatio](https://github.com/exceptionless/Foundatio/releases/tag/v5.0.0)
+  * We also modified an existing PowerShell script that updates existing projects to the VS2017 project format.
+  * And, of course, we added some more documentation!
 * **Foundatio Repositories**
-    * Updated the RabbitMQ queues to use the delayed message exchange
-    * Broke the IMessageBus.Subscribe API surface by changing the signature to SubscribeAsync
-    * Added a marker interface when patching documents
+  * Updated the RabbitMQ queues to use the delayed message exchange
+  * Broke the IMessageBus.Subscribe API surface by changing the signature to SubscribeAsync
+  * Added a marker interface when patching documents
 
 [Watch the 3/13/2017 update video](https://youtu.be/G-faYRV7-qI?list=PLGHP7IVwFs_81fZTMgF7Dm5e0Ax4YvW_V)
 
@@ -37,19 +37,19 @@ Let's get to it!<!--more-->
 ### Released Exceptionless 4.0.1, Performance improvements, Bug fixes, Exceptionless.NET udpates, Foundatio Amazon SQS queues and CloudWatch metrics pull requests, Foundatio reindexing improvements
 
 * **Exceptionless**
-    * [Released Exceptionless version 4.0.1](https://github.com/exceptionless/Exceptionless/releases/tag/v4.0.1)
-    * We upgraded to the latest Foundatio and Repositories builds, which brings in some performance improvements and bug fixes.
-    * Visual Studio 2017 is now a requirement to debug any Exceptionless project.
-    * Various bug fixes
+  * [Released Exceptionless version 4.0.1](https://github.com/exceptionless/Exceptionless/releases/tag/v4.0.1)
+  * We upgraded to the latest Foundatio and Repositories builds, which brings in some performance improvements and bug fixes.
+  * Visual Studio 2017 is now a requirement to debug any Exceptionless project.
+  * Various bug fixes
 * **Exceptionless.Net**
-    * Upgraded to VS2017 project format and fixed an asp.net core bug.
-    * All nightly builds for all of our nuget packages can now be found on [myget](https://www.myget.org/gallery/exceptionless).
+  * Upgraded to VS2017 project format and fixed an asp.net core bug.
+  * All nightly builds for all of our nuget packages can now be found on [myget](https://www.myget.org/gallery/exceptionless).
 * **Foundatio**
-    * New pull request for Amazon SQS queues and CloudWatch metrics
-    * We also had some more documentation contributions!
+  * New pull request for Amazon SQS queues and CloudWatch metrics
+  * We also had some more documentation contributions!
 * **Foundatio Repositories**
-    * We made some improvements around reindexing.
-    * Then we also fixed a few various bugs
+  * We made some improvements around reindexing.
+  * Then we also fixed a few various bugs
 
 [Watch the 3/20/2017 update video](https://youtu.be/B9gVzFmBzyY?list=PLGHP7IVwFs_81fZTMgF7Dm5e0Ax4YvW_V)
 
@@ -70,5 +70,3 @@ Let's get to it!<!--more-->
 <p style="text-align: center;">
   <a href="/category/live-coding/">Watch more Live Code Demos</a>
 </p>
-
-

@@ -1,6 +1,6 @@
 ---
 id: 13720
-title: Exceptionless 3.1 Released! If You Thought It was Fast Before&#8230;
+title: Exceptionless 3.1 Released! If You Thought It was Fast Before...
 date: 2015-10-28
 tags: [ ".NET"]
 ---

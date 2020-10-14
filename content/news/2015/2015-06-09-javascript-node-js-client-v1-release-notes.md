@@ -18,13 +18,13 @@ tags: [ "node.js"]
     * Server side settings
     * Data exclusions
     * Plugins
-    * and more&#8230;
+    * and more...
 * Includes first class integration for third party libraries like <a href="https://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://expressjs.com/" target="_blank">Express</a>
 
 <div class="signup center">
   <a class="btn btn-large btn-primary" href="https://github.com/exceptionless/Exceptionless.javascript">Start Using it Today</a>
 </div>
 
-## Usage, Examples, and more&#8230;
+## Usage, Examples, and more...
 
 Everything you need to get up and running (including contributing/developing) can be found on the <a href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub repo</a>. Javascript, Express, TypeScript, SystemJS, and RequireJS examples <a href="https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example" target="_blank">can be found in the example folder</a>. As always, you can contact us via an in-app message for help, or <a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">submit an issue on GitHub</a> with bugs, feedback, etc. We're here to make sure you get things working properly so you can take full advantage of Exceptionless!

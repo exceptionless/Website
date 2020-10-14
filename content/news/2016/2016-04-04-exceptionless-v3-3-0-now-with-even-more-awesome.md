@@ -1,6 +1,6 @@
 ---
 id: 14268
-title: Exceptionless V3.3.0 Release &#8211; Now with Even More Awesome
+title: Exceptionless V3.3.0 Release - Now with Even More Awesome
 date: 2016-04-04
 ---
 <img loading="lazy" class="aligncenter size-full wp-image-14271" style="margin-bottom: 20px;" src="/assets/Exceptionless3-3-0-release-notes.jpg" alt="Exceptionless 3.3.0 Release Notes" width="708" height="250" data-id="14271" srcset="/assets/Exceptionless3-3-0-release-notes.jpg 708w, /assets/Exceptionless3-3-0-release-notes-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
@@ -46,4 +46,4 @@ Well, only if you're a self hoster. Everyone else will experience all of these a
 
 ## In Conclusion
 
-You can find a complete comparison changelog over on <a href="https://github.com/exceptionless/Exceptionless/compare/v3.2.1...v3.3.0" target="_blank">GitHub</a>, where you can also submit any issues, etc if you run across anything. Please also let us know what you think of the changes by commenting below, pinging us on social media, or simply sending Blake a <a href="http://www.ruindays.com/products/spring-loaded-glitter-bomb" target="_blank">glitter bomb</a> _(site/link not endorsed in any way, lol &#8211; first one I found!)_.
+You can find a complete comparison changelog over on <a href="https://github.com/exceptionless/Exceptionless/compare/v3.2.1...v3.3.0" target="_blank">GitHub</a>, where you can also submit any issues, etc if you run across anything. Please also let us know what you think of the changes by commenting below, pinging us on social media, or simply sending Blake a <a href="http://www.ruindays.com/products/spring-loaded-glitter-bomb" target="_blank">glitter bomb</a> _(site/link not endorsed in any way, lol - first one I found!)_.

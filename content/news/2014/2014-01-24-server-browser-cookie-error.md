@@ -1,5 +1,5 @@
 ---
-title: Catching a Server-Side Browser Cookie Support Error &#8211; Case Study
+title: Catching a Server-Side Browser Cookie Support Error - Case Study
 date: 2014-01-24
 tags: [ "Case Study"]
 ---
@@ -21,11 +21,11 @@ Because the team wasn't using IE10 regularly yet for testing actual logged-in us
 
 Luckily, Exceptionless reported the customers' errors and the team was able to take notice of the recurring bug within days, rather than weeks or months.
 
-### Turns out&#8230; the problem was server-side!
+### Turns out... the problem was server-side!
 
 After the error was reported in the Exceptionless Dashboard, the team was able to use the attached details to trace the root of the issue back to the server's definitions of which browsers support modern cookie encryption.
 
-All the server needed was a **routine update** that had not been performed! Bam &#8211; fixed.
+All the server needed was a **routine update** that had not been performed! Bam - fixed.
 
 ### Another bug bites the dust
 

@@ -1,6 +1,6 @@
 ---
 id: 15963
-title: Exceptionless.NET 4.1 Release &#8211; .NET Standard 2.0 &#038; Microsoft.Extensions.Logging Support, and more!
+title: Exceptionless.NET 4.1 Release - .NET Standard 2.0 &#038; Microsoft.Extensions.Logging Support, and more!
 date: 2017-11-07
 ---
 <img loading="lazy" class="aligncenter size-large wp-image-15970" style="margin-bottom: 20px;" src="/assets/exceptionless-net-4-1-release-1024x538.jpg" alt="Exceptionless.NET 4.1 Release" width="940" height="494" data-id="15970" srcset="/assets/exceptionless-net-4-1-release-1024x538.jpg 1024w, /assets/exceptionless-net-4-1-release-300x158.jpg 300w, /assets/exceptionless-net-4-1-release-768x403.jpg 768w, /assets/exceptionless-net-4-1-release.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />

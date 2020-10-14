@@ -8,7 +8,7 @@ tags: [ "javascript", "react"]
 
 Recently, we released [Exceptionless.JavaScript 1.5](/javascript-client-v1-5-release-details-notes/). The major update for the release was the addition of universal JavaScript (React Universal) support! More details below. The key is that we can now run in server side node apps, or in the browser, with a single script and do the right thing!
 
-> TL;DR: Isomorphism is the functional aspect of seamlessly switching between client- and server-side rendering without losing state. Universal is a term used to emphasize the fact that a particular piece of JavaScript code is able to run in multiple environments. &#8211; [Gert Hengeveld, Isomorphism vs Universal JavaScript](https://medium.com/@ghengeveld/isomorphism-vs-universal-javascript-4b47fb481beb)
+> TL;DR: Isomorphism is the functional aspect of seamlessly switching between client- and server-side rendering without losing state. Universal is a term used to emphasize the fact that a particular piece of JavaScript code is able to run in multiple environments. - [Gert Hengeveld, Isomorphism vs Universal JavaScript](https://medium.com/@ghengeveld/isomorphism-vs-universal-javascript-4b47fb481beb)
 
 <!--more-->
 

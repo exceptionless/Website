@@ -1,6 +1,6 @@
 ---
 id: 12509
-title: Bulk Actions Sneak Peak in Exceptionless 2.0 &#8211; Video
+title: Bulk Actions Sneak Peak in Exceptionless 2.0 - Video
 date: 2014-12-12
 ---
 <img loading="lazy" class="alignright size-medium wp-image-12510" style="margin-left: 15px;" src="/assets/exceptionless-bulk-actions.gif" alt="Exceptionless Bulk Actions" width="300" height="150" data-id="12510" />You know you want it! Bulk edit actions, that is. The ability to select multiple exceptions or occurrences of a single exception and do with them as you please, all at once. Well, they're coming, and today we've got a sneak peak!

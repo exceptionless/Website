@@ -1,6 +1,6 @@
 ---
 id: 3441
-title: New Support for NancyFX &#8211; Thanks Luisrudge!
+title: New Support for NancyFX - Thanks Luisrudge!
 date: 2014-03-05
 tags: [ "open source"]
 ---
@@ -14,7 +14,7 @@ As a token of our appreciation, Luis received a free year of hosting! Thanks aga
 
 ## What's NancyFX?
 
-> &#8220;Nancy is a lightweight, low-ceremony, framework for building HTTP based services on .Net and Mono. The goal of the framework is to stay out of the way as much as possible and provide a super-duper-happy-path to all interactions.&#8221;
+> "Nancy is a lightweight, low-ceremony, framework for building HTTP based services on .Net and Mono. The goal of the framework is to stay out of the way as much as possible and provide a super-duper-happy-path to all interactions."
 
 * Buit from the ground up (not simply a DSL on another framework)
 * Removed underlying framework limitations and feature hacks
@@ -23,10 +23,10 @@ As a token of our appreciation, Luis received a free year of hosting! Thanks aga
 * Super lightweight action declarations for GET, HEAD, PUT, POST, DELETE, OPTIONS and PATCH requests
 * View engine integration for Spark, Razor, dotLiquid, SuperSimpleViewEngine, and others
 * Request path matching with advanced parameter capabilities, plus the ability to replace the path matching strategy with custom implementations for your needs
-* Easy response syntax, enabling you to return things like int, string, HttpStatusCode and Action elements without having to explicitly cast or wrap your response &#8211; you just return it and Nancy will do the work for you
+* Easy response syntax, enabling you to return things like int, string, HttpStatusCode and Action elements without having to explicitly cast or wrap your response - you just return it and Nancy will do the work for you
 * A powerful, light-weight, testing framework to help you verify the behavior of your application
 * Content negotiation
-* And more&#8230;
+* And more...
 
 Visit the <a title="NancyFX Website" href="http://nancyfx.org/" target="_blank">website</a> or check out the <a title="NancyFX on GitHub" href="https://github.com/NancyFx/Nancy" target="_blank">GitHub Repo</a> for more information.
 

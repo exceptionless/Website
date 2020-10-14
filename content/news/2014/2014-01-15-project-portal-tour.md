@@ -22,7 +22,7 @@ This is a great place to glimpse your exceptions by total, unique, new, or per h
 * Adjust the date range
 * Show/Hide hidden errors
 * Show/Hide fixed errors
-* Show/Hide &#8220;Not Found&#8221; errors<figure id="attachment_1340" class="thumbnail wp-caption alignleft" style="width: 150px">
+* Show/Hide "Not Found" errors<figure id="attachment_1340" class="thumbnail wp-caption alignleft" style="width: 150px">
 
 [<img loading="lazy" class="size-thumbnail wp-image-1340" src="/assets/dashboard-home-150x150.jpg" alt="Exceptionless Dashboard" width="150" height="150" data-id="1340" />](/assets/dashboard-home.jpg)<figcaption class="caption wp-caption-text">Portal Admin Dashboard</figcaption></figure> <figure id="attachment_1209" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="size-thumbnail wp-image-1209 " title="Exceptionless Date Range Selector" src="/assets/date-range-150x150.jpg" alt="Exceptionless Date Range Selector" width="150" height="150" data-id="1209" srcset="/assets/date-range-150x150.jpg 150w, /assets/date-range-300x300.jpg 300w, /assets/date-range.jpg 350w" sizes="(max-width: 150px) 100vw, 150px" />](/assets/date-range.jpg)<figcaption class="caption wp-caption-text">Show/Hide Errors & Select Date Range</figcaption></figure>
 
@@ -59,7 +59,7 @@ If you click into any error, Exceptionless will show you the error stack, which 
 
 **Before we do that, though,** I'd like to point out another major feature of the error stack page..
 
-Above and to the right of the graph are two buttons: &#8220;Mark Fixed&#8221; and &#8220;Options&#8221;. Mark fixed is exactly what it sounds like, and if you click on the &#8220;Options&#8221; button it drops down with the following choices:
+Above and to the right of the graph are two buttons: "Mark Fixed" and "Options". Mark fixed is exactly what it sounds like, and if you click on the "Options" button it drops down with the following choices:
 
 * Hide from reports
 * Promote to external
@@ -104,6 +104,6 @@ Naturally, you can manager your projects, organizations, and account, but we als
 
 In short, the tool offers extremely helpful insights into the world of your web application's bugs. Whether internal or customer-facing, knowing when, where, and how many exceptions are being generated makes it easier for you to track them down and squash them. And when you've fixed it, regression notifications are there to let you know if it rears its ugly head again.
 
-Still not convinced? Give it a try &#8211; [sign up today, for free](https://be.exceptionless.io/signup "Sign up for Exceptionless").
+Still not convinced? Give it a try - [sign up today, for free](https://be.exceptionless.io/signup "Sign up for Exceptionless").
 
 

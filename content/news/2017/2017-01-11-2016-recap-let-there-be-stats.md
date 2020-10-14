@@ -1,6 +1,6 @@
 ---
 id: 15168
-title: 2016 Recap &#8211; Let there be STATS!
+title: 2016 Recap - Let there be STATS!
 date: 2017-01-11
 ---
 [<img loading="lazy" class="aligncenter wp-image-15174 size-large" src="/assets/2016-in-review-1024x538.jpg" alt="Exceptionless 2016 in review" width="940" height="494" data-id="15174" srcset="/assets/2016-in-review-1024x538.jpg 1024w, /assets/2016-in-review-300x158.jpg 300w, /assets/2016-in-review-768x403.jpg 768w, /assets/2016-in-review.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](/2016-recap-let-stats/)
@@ -46,7 +46,7 @@ Judging by the traffic to these posts and updates, they're all worth a read. Che
 * [Sending Log Messages to Exceptionless](/sending-log-messages-to-exceptionless/)
 * [A Better Approach to Running Azure WebJobs](/better-approach-running-azure-webjobs/)
 * [Simple App Deployment with Azure Continuous Deployment and GitHub](/simple-app-deployment-azure-continuous-deployment-github/)
-* [Exceptionless.NET 4.0 &#8211; .NET Core and ASP.NET Core Support!](/exceptionless-4-0-net-core-asp-net-core-support/)
+* [Exceptionless.NET 4.0 - .NET Core and ASP.NET Core Support!](/exceptionless-4-0-net-core-asp-net-core-support/)
 * [Exceptionless API Usage and Overview](/exceptionless-api-usage-and-overview/)
 
 ## Notable Changes / Milestones
@@ -57,7 +57,7 @@ We changed the server licensing to use the Apache license. Now, every Exceptionl
 
 ### Session Tracking & Management
 
-The ability to track and automatically manage a users session was added, giving you visibility into how long and what a user did while they were using your product. This also answers the question, &#8220;what did my users do leading up to this exception?&#8221; [Read more here.](/track-view-user-session-data-exceptionless/)
+The ability to track and automatically manage a users session was added, giving you visibility into how long and what a user did while they were using your product. This also answers the question, "what did my users do leading up to this exception?" [Read more here.](/track-view-user-session-data-exceptionless/)
 
 ### Fixed by Version
 
@@ -78,7 +78,7 @@ Like we mentioned above, we've done a ton of work to ensure we can move to Elast
 * Making it easier to self host
 * Getting one step closer to server being able to run cross-platform
 
-We have been doing QA on the Elasticsearch 5 migration since the end of the year and it is currently still in progress &#8211; coming soon!
+We have been doing QA on the Elasticsearch 5 migration since the end of the year and it is currently still in progress - coming soon!
 
 ### Open Source ALL the Things
 
@@ -98,7 +98,7 @@ We open sourced two major new libraries this year:
 * Made it even easier to self host.
 * Massive [improvements to Foundatio](/foundatio-featured-net-blog-version-4-0-release/) (100% Async, new implementations)
 
-## Onward to 2017 &#8211; Stay Tuned for a Roadmap!
+## Onward to 2017 - Stay Tuned for a Roadmap!
 
 We've got big things coming up, like Exceptionless 5.0 with Elasticsearch 5, which should boost performance gains like 80% faster indexing, lower memory usage, and native reindexing support! No slowing down over here, so stay tuned and enjoy the ride.
 

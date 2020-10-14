@@ -1,6 +1,6 @@
 ---
 id: 9591
-title: Job System Enhancements &#8211; Version 2's Got Em!
+title: Job System Enhancements - Version 2's Got Em!
 date: 2014-07-29
 tags: [ "new features"]
 ---

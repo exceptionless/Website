@@ -66,7 +66,7 @@ We've implemented an a**utomatic recurring check for updated configuration setti
 A few notes:
 
 * Each configuration check **does not** count towards your account's plan limits.
-* No user information will be sent &#8211; only the current configuration version.
+* No user information will be sent - only the current configuration version.
 * Nothing will be retrieved if no settings have been changed.
 
 The automatic recurring configuration settings check **can be disable** by calling:
@@ -93,11 +93,11 @@ For example, if I wanted to ignore any event with a `value` property of `2` I co
 
 ### JavaScript Client Passing Settings Bug
 
-[@csantero](https://github.com/csantero) fixed an issue with passing settings to a new isntance of ExceptionlessClient &#8211; thanks!
+[@csantero](https://github.com/csantero) fixed an issue with passing settings to a new isntance of ExceptionlessClient - thanks!
 
 ### Improved Stacking of Angular Response Errors in JavaScript Client
 
-^^^ Nothing much to say here &#8211; the header says it all!
+^^^ Nothing much to say here - the header says it all!
 
 ## Feedback
 

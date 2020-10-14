@@ -1,6 +1,6 @@
 ---
 id: 15547
-title: Weekly Update for 4/24/17 &#8211; Blake Speaking @ North Dallas .NET and more!
+title: Weekly Update for 4/24/17 - Blake Speaking @ North Dallas .NET and more!
 date: 2017-05-10
 tags: [ ".NET", "email", "Foundatio"]
 ---

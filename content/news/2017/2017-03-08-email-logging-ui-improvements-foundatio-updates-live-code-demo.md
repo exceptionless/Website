@@ -1,6 +1,6 @@
 ---
 id: 15368
-title: Email Logging, UI Improvements, Foundatio Updates, and more &#8211; Live Code Demo
+title: Email Logging, UI Improvements, Foundatio Updates, and more - Live Code Demo
 date: 2017-03-08
 tags: [ ".NET"]
 ---

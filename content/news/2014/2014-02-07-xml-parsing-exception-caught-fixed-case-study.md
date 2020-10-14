@@ -1,12 +1,12 @@
 ---
 id: 2601
-title: XML Parsing Exception Caught and Fixed &#8211; Case Study
+title: XML Parsing Exception Caught and Fixed - Case Study
 date: 2014-02-07
 tags: [ "email", "notifications"]
 ---
 This is yet another story of an elusive bug that, without a proper error reporting service, would have gone un-noticed for a very long time.
 
-When third-party software and services interact with your code, in any way, you have to be wary that their data may be different from yours. In this instance, our client was parsing some XML that included an unfriendly cookie name. Lets see what happened next&#8230;<!--more-->
+When third-party software and services interact with your code, in any way, you have to be wary that their data may be different from yours. In this instance, our client was parsing some XML that included an unfriendly cookie name. Lets see what happened next...<!--more-->
 
 <img loading="lazy" class="aligncenter size-full wp-image-2603" alt=".NET Exception Dashboard" src="/assets/apexExceptionsRandom.png" width="878" height="248" data-id="2603" srcset="/assets/apexExceptionsRandom.png 878w, /assets/apexExceptionsRandom-300x84.png 300w" sizes="(max-width: 878px) 100vw, 878px" />
 
@@ -14,7 +14,7 @@ When third-party software and services interact with your code, in any way, you 
 
 <a title="Listrak" href="http://www.listrak.com/" target="_blank">Listrak</a> is a pretty cool company that provides, among other things, a robust email marketing, shopping cart abandonment, and welcome series suite of tools.
 
-One of their cookies uses a &#8220;$&#8221; in it's name ($ListrakFoo or similar). When the client's XML Config packages were executed, that $ was causing an XML parsing exception.
+One of their cookies uses a "$" in it's name ($ListrakFoo or similar). When the client's XML Config packages were executed, that $ was causing an XML parsing exception.
 
 ### That's not customer facing. What's the big deal?
 
@@ -28,7 +28,7 @@ Along with the sheer number of occurrences, it was also noticeably slowing the s
 
 ### The fix
 
-The fix was relatively simple. The client now checks for &#8220;$&#8221; in cookie names within the affected method and just doesn't handle them.
+The fix was relatively simple. The client now checks for "$" in cookie names within the affected method and just doesn't handle them.
 
 **Tracking errors like this is what we're all about.** There are hundreds of thousands, probably even millions, of bugs out there _right now _that throw exceptions every day but manage to remain hidden in the shadows of code written by professional developers.
 

@@ -11,13 +11,13 @@ You can try and track these little annoyances manually, like some kind of an ani
 
 ## WHAT IS BUG TRACKING?
 
-At its core, bug tracking is when a developer tracks, logs, and resolves a bug or issue that caused their software to not perform as intended. This could be as simple as a missing semicolon or trailing slash or as complicated as a vulnerability in your back end. 
+At its core, bug tracking is when a developer tracks, logs, and resolves a bug or issue that caused their software to not perform as intended. This could be as simple as a missing semicolon or trailing slash or as complicated as a vulnerability in your back end.
 
 In the old days of yesteryear, there weren’t any (good) bug tracking software platforms so developer had to exhaustively QA test their code before publishing and even then, they couldn’t catch everything. Bugs sometimes went to production undetected and they relied on users to report issues so they could investigate them manually later. As you can imagine, this was an incredibly time consuming and tedious process that ate up far too much time and resources that could have been spent developing the next great feature to propel sales.
 
 ### IMPORTANCE OF BUG TRACKING
 
-At the risk of sounding pretentious, Kurt Vonnegut said that “Everyone wants to build and nobody wants to do maintenance.” Whether we like it or not, we can’t always build the next big feature or streamline the functionality of our platform. Sometimes we have to hunt down elusive bugs and do maintenance to keep our code clean and keep a solid foundation so we can keep building. 
+At the risk of sounding pretentious, Kurt Vonnegut said that “Everyone wants to build and nobody wants to do maintenance.” Whether we like it or not, we can’t always build the next big feature or streamline the functionality of our platform. Sometimes we have to hunt down elusive bugs and do maintenance to keep our code clean and keep a solid foundation so we can keep building.
 
 Ignoring or intentionally leaving bugs to multiply in the code can damage your company’s reputation (and revenue) if one of these errors affects your customers’ ability to do their job or compromises their information. It will save everyone involved a ton of time, money, and headache if you simply implement a bug tracking software from the get go. Your code will stay clean and you’ll stop losing users, leads, and customers. It’s a win / win for everyone.
 
@@ -37,7 +37,7 @@ Bugs can happen anywhere at anytime and if you aren’t watching, they can go un
 
 ### DETAILED BUG REPORTS
 
-Once a bug has been discovered and tracked, there’s no need to attempt to replicate the issue. A detailed report is automatically created that intelligently organizes important information to help resolve the bug. 
+Once a bug has been discovered and tracked, there’s no need to attempt to replicate the issue. A detailed report is automatically created that intelligently organizes important information to help resolve the bug.
 
 Curious about what else is captured in our reports? Check out the full write up on our [detailed error reports](/whats-included-exceptionless-detailed-error-reports/).
 

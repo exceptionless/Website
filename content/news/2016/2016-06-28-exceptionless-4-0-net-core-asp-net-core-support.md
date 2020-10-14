@@ -1,6 +1,6 @@
 ---
 id: 14531
-title: Exceptionless.NET 4.0 &#8211; .NET Core and ASP.NET Core Support!
+title: Exceptionless.NET 4.0 - .NET Core and ASP.NET Core Support!
 date: 2016-06-28
 ---
 That's right folks, with the release of Exceptionless.NET 4.0 you can now build .NET applications with Exceptionless on Linux, MacOS, and Windows!

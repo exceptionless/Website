@@ -26,6 +26,6 @@ Developing infrastructure takes time, and we would rather be developing the code
 
 In the future, we would like to become an Azure partner and be listed as one of the approved store add-ons. We're not there yet, because we've got to go through the application process, etc, etc, but it's in the works!
 
-> &#8220;Azure is an open and flexible cloud platform that enables you to quickly build, deploy and manage applications across a global network of Microsoft-managed datacenters. You can build applications using any language, tool or framework. And you can integrate your public cloud applications with your existing IT environment.&#8221; &#8211; Microsoft Azure
+> "Azure is an open and flexible cloud platform that enables you to quickly build, deploy and manage applications across a global network of Microsoft-managed datacenters. You can build applications using any language, tool or framework. And you can integrate your public cloud applications with your existing IT environment." - Microsoft Azure
 
 We are happy with the move and think it means great things for the future of Exceptionless. We hope our users appreciate the speed and responsiveness, and can see the improvements in service.

@@ -21,7 +21,7 @@ After a year or so of managing Exceptionless on colocation boxes in a Dallas dat
 
 We knew there had to be a better way.
 
-### Two Steps Forward&#8230;
+### Two Steps Forward...
 
 Soon, we decided to split the UI and Server apps so we could deploy and work on them independently. This also meant they could scale independently and one change to either wouldn’t cause the whole site to go down when deploying. Splitting the two helped a lot, but it **added more work** as we now had to manage two Octopus Deploy projects. So, we started looking at the <a href="https://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control/" target="_blank">Continuous Deployment in Azure</a>.
 
@@ -53,7 +53,7 @@ Here are the details on our solution for simple app deployment using GitHub and 
 
 This works really well because you can see the entire history of your build artifacts and browse their contents. Plus, GitHub hosts it for free!
 
-We found that we could <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L71" target="_blank">format the commit message with a specific format</a> that GitHub could understand and parse into different links. We can click on the &#8220;Commit:&#8221; part of the message to link to the actual commit that is building to see exactly has changed.
+We found that we could <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L71" target="_blank">format the commit message with a specific format</a> that GitHub could understand and parse into different links. We can click on the "Commit:" part of the message to link to the actual commit that is building to see exactly has changed.
 
 <a href="/assets/github-build-history-artifacts.jpg" rel="attachment wp-att-14204"><img loading="lazy" class="aligncenter size-large wp-image-14204" src="/assets/github-build-history-artifacts-1024x380.jpg" alt="github build history artifacts" width="940" height="349" data-id="14204" srcset="/assets/github-build-history-artifacts-1024x380.jpg 1024w, /assets/github-build-history-artifacts-300x111.jpg 300w, /assets/github-build-history-artifacts-768x285.jpg 768w, /assets/github-build-history-artifacts.jpg 1402w" sizes="(max-width: 940px) 100vw, 940px" /></a>
 

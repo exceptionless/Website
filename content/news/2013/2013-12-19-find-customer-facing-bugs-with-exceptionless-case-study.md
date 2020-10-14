@@ -1,6 +1,6 @@
 ---
 id: 427
-title: Find Customer Facing Bugs with Exceptionless &#8211; Case Study
+title: Find Customer Facing Bugs with Exceptionless - Case Study
 date: 2013-12-19
 tags: [ ".NET", "asp.net", "Case Study"]
 ---
@@ -12,9 +12,9 @@ Because of the e-commerce development environment being used, this issue would n
 
 ### What customers were experiencing
 
-> &#8220;After a site upgrade, **every page** of the site was crashing if the customer had been previously logged in.&#8221; &#8211; ApexCCTV
+> "After a site upgrade, **every page** of the site was crashing if the customer had been previously logged in." - ApexCCTV
 
-So, if a user had selected the &#8220;keep me logged in&#8221; box the last time they logged in, prior to the update, nothing was working for them.
+So, if a user had selected the "keep me logged in" box the last time they logged in, prior to the update, nothing was working for them.
 
 ### The cause
 
@@ -22,6 +22,6 @@ When a customer logs in, a secure cookie for that user is created behind the sce
 
 ### The fix
 
-Exceptionless logged and reported the error, and the fix was easy &#8211; simply change the cookie name so that users were forced to get a fresh cookie the next time they visited the site. Bam, done! Users could then happly log in and buy <a title="Security Cameras" href="http://www.apexcctv.com" target="_blank">security cameras</a> without any issues.
+Exceptionless logged and reported the error, and the fix was easy - simply change the cookie name so that users were forced to get a fresh cookie the next time they visited the site. Bam, done! Users could then happly log in and buy <a title="Security Cameras" href="http://www.apexcctv.com" target="_blank">security cameras</a> without any issues.
 
 There could be, and a lot of the times are, errors like this in any .NET project, and using a real-time exception reporting tool like Exceptionless can really be an asset, saving time, money, and customers.

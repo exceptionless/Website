@@ -1,6 +1,6 @@
 ---
 id: 15565
-title: Collect Project Level Usage Stats, UI Updates, Foundatio Updates &#8211; Weekly Video 5/8/2017
+title: Collect Project Level Usage Stats, UI Updates, Foundatio Updates - Weekly Video 5/8/2017
 date: 2017-05-16
 tags: [ "elasticsearch", "email", "notifications", "statistics", "usage"]
 ---

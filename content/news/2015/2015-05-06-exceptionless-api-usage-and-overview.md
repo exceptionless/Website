@@ -13,7 +13,7 @@ Lets take a closer look at the API, how to use it, and some quick examples of wh
 
 ### Accessing the API
 
-To access the Exceptionless API, visit <a title="Exceptionless API" href="https://api.exceptionless.io" target="_blank">https://api.exceptionless.io</a> and click on the &#8220;API Documentation&#8221; link to be taken to the API documentation.
+To access the Exceptionless API, visit <a title="Exceptionless API" href="https://api.exceptionless.io" target="_blank">https://api.exceptionless.io</a> and click on the "API Documentation" link to be taken to the API documentation.
 
 ### Get Your User Scoped Token
 
@@ -31,7 +31,7 @@ Click “Try it out!” and generate your token. Take note of the response messa
 
 You can see from the response that it returned our token from the request url above. Take your generated token and put it in the “api_key” field at the top of the page and click “Explore.” This authorizes you via bearer authentication, authenticates you to the rest api, and allows you to call controller actions.<figure id="attachment_13102" class="thumbnail wp-caption aligncenter" style="width: 300px">
 
-[<img loading="lazy" class="size-medium wp-image-13102" src="/assets/02add-token-refresh-page-300x50.png" alt="Add Exceptionless User Scoped Token " width="300" height="50" data-id="13102" srcset="/assets/02add-token-refresh-page-300x50.png 300w, /assets/02add-token-refresh-page.png 307w" sizes="(max-width: 300px) 100vw, 300px" />](/_site/assets/02add-token-refresh-page.png)<figcaption class="caption wp-caption-text">Add your token in the api_key field at top of page and click &#8220;Explore&#8221;</figcaption></figure>
+[<img loading="lazy" class="size-medium wp-image-13102" src="/assets/02add-token-refresh-page-300x50.png" alt="Add Exceptionless User Scoped Token " width="300" height="50" data-id="13102" srcset="/assets/02add-token-refresh-page-300x50.png 300w, /assets/02add-token-refresh-page.png 307w" sizes="(max-width: 300px) 100vw, 300px" />](/_site/assets/02add-token-refresh-page.png)<figcaption class="caption wp-caption-text">Add your token in the api_key field at top of page and click "Explore"</figcaption></figure>
 
 ### Get a New Token
 
@@ -43,11 +43,11 @@ First, get your project ID from the Exceptionless Dashboard. It can be found in 
 
 Now, we’ll navigate to <a title="Exceptionless Create Token" href="https://api.exceptionless.io/docs/index#!/Token/Token_PostByProject" target="_blank">Tokens > POST /api/v2/projects/{projectId}/tokens</a>, enter our Project ID, and set up our token to include the user scope and a quick note.<figure id="attachment_13105" class="thumbnail wp-caption aligncenter" style="width: 300px">
 
-[<img loading="lazy" class="size-medium wp-image-13105" src="/assets/04get-new-token1-300x220.png" alt="Create Exceptionless Token" width="300" height="220" data-id="13105" srcset="/assets/04get-new-token1-300x220.png 300w, /assets/04get-new-token1.png 979w" sizes="(max-width: 300px) 100vw, 300px" />](/_site/assets/04get-new-token1.png)<figcaption class="caption wp-caption-text">Enter project ID and create a new token with scope &#8220;user.&#8221;</figcaption></figure>
+[<img loading="lazy" class="size-medium wp-image-13105" src="/assets/04get-new-token1-300x220.png" alt="Create Exceptionless Token" width="300" height="220" data-id="13105" srcset="/assets/04get-new-token1-300x220.png 300w, /assets/04get-new-token1.png 979w" sizes="(max-width: 300px) 100vw, 300px" />](/_site/assets/04get-new-token1.png)<figcaption class="caption wp-caption-text">Enter project ID and create a new token with scope "user."</figcaption></figure>
 
-Next, we'll click &#8220;Try it out!&#8221; and generate our new token id.<figure id="attachment_13106" class="thumbnail wp-caption aligncenter" style="width: 300px">
+Next, we'll click "Try it out!" and generate our new token id.<figure id="attachment_13106" class="thumbnail wp-caption aligncenter" style="width: 300px">
 
-[<img loading="lazy" class="size-medium wp-image-13106" src="/assets/04get-new-token2-300x146.png" alt="Get new Exceptionless Token ID" width="300" height="146" data-id="13106" srcset="/assets/04get-new-token2-300x146.png 300w, /assets/04get-new-token2.png 982w" sizes="(max-width: 300px) 100vw, 300px" />](/_site/assets/04get-new-token2.png)<figcaption class="caption wp-caption-text">Copy your new token id and paste it into the api_key field at the top of the page and click &#8220;Explore&#8221; again.</figcaption></figure>
+[<img loading="lazy" class="size-medium wp-image-13106" src="/assets/04get-new-token2-300x146.png" alt="Get new Exceptionless Token ID" width="300" height="146" data-id="13106" srcset="/assets/04get-new-token2-300x146.png 300w, /assets/04get-new-token2.png 982w" sizes="(max-width: 300px) 100vw, 300px" />](/_site/assets/04get-new-token2.png)<figcaption class="caption wp-caption-text">Copy your new token id and paste it into the api_key field at the top of the page and click "Explore" again.</figcaption></figure>
 
 Now, once again, copy this new token and place it in the “api_key” field at the top of the page and click “Explore.” Now everything we do will be authenticated to this new user token you’ve just created.
 

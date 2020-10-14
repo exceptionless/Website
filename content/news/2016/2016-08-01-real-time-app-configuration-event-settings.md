@@ -5,7 +5,7 @@ date: 2016-08-01
 ---
 <img loading="lazy" class="alignright size-full wp-image-14606" src="/assets/exceptionless-project-settings-header.png" alt="exceptionless-project-settings-header" width="260" height="260" data-id="14606" srcset="/assets/exceptionless-project-settings-header.png 260w, /assets/exceptionless-project-settings-header-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />
 
-## Bet You Didn't Know Exceptionless Could Do This&#8230;
+## Bet You Didn't Know Exceptionless Could Do This...
 
 Have you ever needed to **cut through the noise and just focus on one type of event** _(in real time)_, such as only error logs, to track down a bug?
 
@@ -19,23 +19,23 @@ Well, with our client configuration settings, **you can do all that, and more**,
 
 We'll talk details, below, but first lets look at a few scenarios where the above could be useful.
 
-### Scenario 1 &#8211; Way too many events!
+### Scenario 1 - Way too many events!
 
 Let's say you're on the small plan, and you've got a bunch of warning log events clogging your system that you know about and are working on, but they are pushing you over your plan limits.
 
-#BOOM &#8211; set a minimum log level of error, and Exceptionless won't report those warnings anymore and they won't count against your plan limits! This is a great way to get the most out of your Exceptionless plan.
+#BOOM - set a minimum log level of error, and Exceptionless won't report those warnings anymore and they won't count against your plan limits! This is a great way to get the most out of your Exceptionless plan.
 
-### Scenario 2 &#8211; This Authentication Issue is KILLING Me!
+### Scenario 2 - This Authentication Issue is KILLING Me!
 
 Maybe you're having major issues with an authentication bug, but you've already set minimum log levels to only include errors. Well, now you also want to see the trace values for those events without opening the flood gates for every event by removing your minimum log level.
 
-#NOPROBLEM &#8211; Just add a key for authentication that just lets trace events through!
+#NOPROBLEM - Just add a key for authentication that just lets trace events through!
 
-### Scenario 3 &#8211; You Said Something About Controlling My App's Features In Real Time?
+### Scenario 3 - You Said Something About Controlling My App's Features In Real Time?
 
 Yup! Our client configurations are basically just a key value pair dictionary, but what makes them powerful and helps them control **your** application's features is that they get updated in nearly real-time, meaning you can build settings, features, etc into your app that react to value changes, and if you change that configuration setting in Exceptionless, your app will react almost instantly!
 
-This can be super useful, especially if changing your app's settings would normally require you to deploy to production. No need &#8211; just use Exceptionless!
+This can be super useful, especially if changing your app's settings would normally require you to deploy to production. No need - just use Exceptionless!
 
 ## Primer: How Project Settings Work
 
@@ -55,7 +55,7 @@ If you do not want the configuration settings to update when idle, you can turn 
 
 Exceptionless client configurations are a dictionary of key value pairs that can be used to control the behavior of your app in real time by doing things like controlling data exclusions, protecting sensitive data, enabling and disable features, or disabling certain types of events (`error`, `usage`, `log`, `404`, or `session`).
 
-We also have some built in configuration key naming conventions (`@@EVENT_TYPE:SOURCE`) that the clients recognize for ignoring events based on event type and event source. Just replace `EVENT_TYPE` part with the event type (E.G., `error`, `log`&#8230;) and the `SOURCE` (E.G., exception type or log source) you'd like the setting to apply to. Next, specify key value of `false` to discard matching events client side. It's worth noting that  `log` event types can also accept a log level value (E.G., `Trace`, `Debug`, `Info`, `Warn`, `Error`, or `Fatal`).
+We also have some built in configuration key naming conventions (`@@EVENT_TYPE:SOURCE`) that the clients recognize for ignoring events based on event type and event source. Just replace `EVENT_TYPE` part with the event type (E.G., `error`, `log`...) and the `SOURCE` (E.G., exception type or log source) you'd like the setting to apply to. Next, specify key value of `false` to discard matching events client side. It's worth noting that  `log` event types can also accept a log level value (E.G., `Trace`, `Debug`, `Info`, `Warn`, `Error`, or `Fatal`).
 
 For example, we can use it to turn off all error events of type, lets say, `System.ArgumentNullException`, by using the key `@@error:System.ArgumentNullException` and the value `false`.
 
@@ -73,7 +73,7 @@ Here we already limited our log events to errors, but now we're troubleshooting 
 
 #### Scenario 3
 
-This is the cool one. Here you are wanting to, let's say, pass a value for a setting in your app that turns something on or off without having to re-deploy everything. This is super easy to accomplish all we need to do is create a setting which will control our feature! Let's assume we have have a feature flag to show a welcome screen. We will name this feature flag `enableWelcomeScreen` and create a new configuration setting respectively with a value of `true` (_You can change this value at any time_). These changes will be pushed based on the above &#8220;How Project Settings Work&#8221; section automatically, all we have to do is check the setting as shown below.
+This is the cool one. Here you are wanting to, let's say, pass a value for a setting in your app that turns something on or off without having to re-deploy everything. This is super easy to accomplish all we need to do is create a setting which will control our feature! Let's assume we have have a feature flag to show a welcome screen. We will name this feature flag `enableWelcomeScreen` and create a new configuration setting respectively with a value of `true` (_You can change this value at any time_). These changes will be pushed based on the above "How Project Settings Work" section automatically, all we have to do is check the setting as shown below.
 
 #### C#
 
@@ -106,13 +106,13 @@ For more details on client configuration, check out the [Client Configuration Pr
 
 If you go to Admin > Projects in Exceptionless, you can choose the project you would like to edit the settings for. Each project can have unique settings.
 
-The default tab is &#8220;General,&#8221; which simply houses the project name and attached organization. Nothing fancy here &#8211; pretty self explanatory.
+The default tab is "General," which simply houses the project name and attached organization. Nothing fancy here - pretty self explanatory.
 
 ### API Keys
 
 [<img loading="lazy" class="aligncenter size-medium wp-image-14601" src="/assets/api-keys-300x127.png" alt="exceptionless api keys" width="300" height="127" data-id="14601" srcset="/assets/api-keys-300x127.png 300w, /assets/api-keys.png 738w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/api-keys.png)
 
-This tab is where you can generate an API key for your project. Again, pretty self explanatory. Hit &#8220;New API Key&#8221; and one gets generated. For more details on API usage, check out the [API Usage documentation](https://github.com/exceptionless/Exceptionless/wiki/API-Usage) on GitHub.
+This tab is where you can generate an API key for your project. Again, pretty self explanatory. Hit "New API Key" and one gets generated. For more details on API usage, check out the [API Usage documentation](https://github.com/exceptionless/Exceptionless/wiki/API-Usage) on GitHub.
 
 ### Settings
 
@@ -140,9 +140,9 @@ If your code has shared utility methods that may generate a bunch of errors, thi
 
 #### Spam Detection
 
-Spam is the worst. So, we added a &#8220;Spam Detection&#8221; list of common user agents that should be ignored, which you can add to as you see fit. This eliminates a lot of noise, and can be customized to help trim even more depending on your application.
+Spam is the worst. So, we added a "Spam Detection" list of common user agents that should be ignored, which you can add to as you see fit. This eliminates a lot of noise, and can be customized to help trim even more depending on your application.
 
-Along with the comma delimited list of user agents to ignore, you can also tick the box that says &#8220;Reduce noise by automatically hiding high volumes of events coming from a single client IP address.&#8221; This can ward off large numbers of events being submitted by a spammer or attack on your app.
+Along with the comma delimited list of user agents to ignore, you can also tick the box that says "Reduce noise by automatically hiding high volumes of events coming from a single client IP address." This can ward off large numbers of events being submitted by a spammer or attack on your app.
 
 ##
 

@@ -56,5 +56,3 @@ We'd like to say thank you to the community, project sponsors, and the Elasticse
 ### Want to know what's coming next?
 
 [Check out the 2017 Roadmap](/2017-exceptionless-feature-functionality-and-enhancement-roadmap/) and let us know your thoughts on our planned development.
-
-

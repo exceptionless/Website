@@ -1,6 +1,6 @@
 ---
 id: 15586
-title: Email Notification Improvements &#8211; Walkthrough and Details
+title: Email Notification Improvements - Walkthrough and Details
 date: 2017-05-30
 tags: [ "email", "nodejs", "notifications", "zurb"]
 ---

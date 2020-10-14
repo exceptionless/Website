@@ -1,6 +1,6 @@
 ---
 id: 15515
-title: Weekly Update &#8211; Review of New Releases and More
+title: Weekly Update - Review of New Releases and More
 date: 2017-04-25
 tags: [ ".NET"]
 ---
@@ -16,7 +16,7 @@ In Exceptionless Core, we added support for [MailKit](https://github.com/jstedfa
 ### Foundatio Updates
 
 For [Foundatio](https://github.com/exceptionless/Foundatio), we updated the Azure storage copy implementation to copy server side, fixed an issue where FolderFileStorage wasn't behaving properly when renaming files that exist, and fixed a Redis cache client issue where deleting cache items by wild card was erroring out if there were no matching keys.
-&#8211; Updated the azure storage copy implementation to copy server side.
+- Updated the azure storage copy implementation to copy server side.
 
 ### Changes to Exceptionless.NET
 

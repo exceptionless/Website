@@ -33,9 +33,9 @@ To be extra careful with your data, using * allows you to specify wildcards that
 
 <img loading="lazy" class="aligncenter wp-image-13355 size-full" src="/_site/assets/data-exclusion-examples.png" alt="Exceptionless Security" width="520" height="44" data-id="13355" srcset="/assets/data-exclusion-examples.png 520w, /assets/data-exclusion-examples-300x25.png 300w" sizes="(max-width: 520px) 100vw, 520px" />
 
-One potential example is, let’s say, user addresses. Perhaps you have multiple user addresses that may get transmitted, and you want to exclude some or all of them. Maybe you have &#8220;HomeAddress&#8221; and &#8220;WorkAddress&#8221;.
+One potential example is, let’s say, user addresses. Perhaps you have multiple user addresses that may get transmitted, and you want to exclude some or all of them. Maybe you have "HomeAddress" and "WorkAddress".
 
-To exclude only &#8220;HomeAddress&#8221; data, you would just add `HomeAddress` as an exclusion. The same goes for &#8220;WorkAddress.&#8221;
+To exclude only "HomeAddress" data, you would just add `HomeAddress` as an exclusion. The same goes for "WorkAddress."
 
 To exclude both, you could either add `HomeAddress` and `WorkAddress`, separated by a comma, or you could use `*Address` if those were the only two fields that ended with “Address.” If those were the only fields that contained “Address” at all, you could use `*Address*`.
 

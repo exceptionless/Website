@@ -40,7 +40,7 @@ We've made huge improvements to Data Exclusions, which now check default data an
 ### Fixes
 
 **Startup()
-** `Startup()` was overriding configured dependencies &#8211; Fixed!
+** `Startup()` was overriding configured dependencies - Fixed!
 
 **Empty Errors
 ** We fixed a bug where you could have empty errors submitted with no stack trace info.

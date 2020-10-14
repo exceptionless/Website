@@ -10,7 +10,7 @@ As such, the Exceptionless <a title="Exceptionless NuGet Assembly Library" href
 
 We thought we would give everyone a quick tour, and at the same time perhaps provide a good resource and reference page.
 
-Don't forget, though &#8211; this page may be out-dated by the time you view it, so please <a title="Exceptionless NuGet Packages" href="https://www.nuget.org/profiles/exceptionless?showAllPackages=True" target="_blank">view our full library on NuGet</a>.<!--more-->
+Don't forget, though - this page may be out-dated by the time you view it, so please <a title="Exceptionless NuGet Packages" href="https://www.nuget.org/profiles/exceptionless?showAllPackages=True" target="_blank">view our full library on NuGet</a>.<!--more-->
 
 ## Exceptionless NuGet Clients
 

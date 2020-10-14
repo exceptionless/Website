@@ -1,6 +1,6 @@
 ---
 id: 15303
-title: Exceptionless 4.0 Enhancement Overview &#8211; Live Code Demo
+title: Exceptionless 4.0 Enhancement Overview - Live Code Demo
 date: 2017-02-15
 ---
 [<img loading="lazy" class="aligncenter wp-image-15304 size-large" style="margin-bottom: 20px;" src="/assets/exceptionless-4-enhancement-live-demo-1024x538.jpg" alt="Exceptionless 4 Enhancement Overview" width="940" height="494" data-id="15304" srcset="/assets/exceptionless-4-enhancement-live-demo-1024x538.jpg 1024w, /assets/exceptionless-4-enhancement-live-demo-300x158.jpg 300w, /assets/exceptionless-4-enhancement-live-demo-768x403.jpg 768w, /assets/exceptionless-4-enhancement-live-demo.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/videos/9WmaQ-exceptionless-weekly-demo-1-23-17)

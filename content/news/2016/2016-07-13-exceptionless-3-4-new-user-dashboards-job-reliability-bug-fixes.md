@@ -1,6 +1,6 @@
 ---
 id: 14571
-title: Exceptionless 3.4 &#8211; New User Dashboards, Job Reliability, and Bug Fixes
+title: Exceptionless 3.4 - New User Dashboards, Job Reliability, and Bug Fixes
 date: 2016-07-13
 ---
 [<img loading="lazy" class="alignright size-full wp-image-14573" src="/assets/exceptionless-3-4-header.png" alt="Exceptionless 3.4" width="260" height="260" data-id="14573" srcset="/header.png 260w, /assets/exceptionless-3-4/sizes="(max-width: 260px) 100vw, 260px" />](/assets/exceptionless-3-4-header.png)The latest Exceptionless release has several additions we think most of our users will find helpful. We sat down and worked on the UI, fixed some bugs, and spend a considerable amount of time improving reliability and efficiency of some of the primary pieces of the app.

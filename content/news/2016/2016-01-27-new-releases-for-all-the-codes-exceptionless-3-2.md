@@ -3,11 +3,11 @@ id: 14015
 title: New Releases for ALL the Codes! Exceptionless 3.2
 date: 2016-01-27
 ---
-<img loading="lazy" class="alignright size-full wp-image-14033" style="margin-left: 15px;" src="/assets/exceptionless-3-2-release-notes.png" alt="Exceptionless 3.2 Highlights" width="260" height="260" data-id="14033" srcset="/assets/exceptionless-3-2-release-notes.png 260w, /assets/exceptionless-3-2-release-notes-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That's right folks &#8211; we've gone and released Exceptionless 3.2, which includes releases for Exceptionless.NET, Exceptionless.JavaScript, and Exceptionless.UI! Awe yeah.
+<img loading="lazy" class="alignright size-full wp-image-14033" style="margin-left: 15px;" src="/assets/exceptionless-3-2-release-notes.png" alt="Exceptionless 3.2 Highlights" width="260" height="260" data-id="14033" srcset="/assets/exceptionless-3-2-release-notes.png 260w, /assets/exceptionless-3-2-release-notes-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That's right folks - we've gone and released Exceptionless 3.2, which includes releases for Exceptionless.NET, Exceptionless.JavaScript, and Exceptionless.UI! Awe yeah.
 
-We're kind of excited, in case you couldn't tell. Big stuff in here, like **session tracking** (#BOOM), licensing changes (less confusion &#8211; it's a good thing), and **posting via HTTP GET** (such easy, much wow)!
+We're kind of excited, in case you couldn't tell. Big stuff in here, like **session tracking** (#BOOM), licensing changes (less confusion - it's a good thing), and **posting via HTTP GET** (such easy, much wow)!
 
-Lets get into some of the details&#8230;<!--more-->
+Lets get into some of the details...<!--more-->
 
 ## Exceptionless 3.2.0
 
@@ -15,7 +15,7 @@ Lets get into some of the details&#8230;<!--more-->
 
 ### Sessions!
 
-**Track and automatically manage user sessions** for much more visibility into their user experience, how they interact with your app, and, of course, any errors or events that occur related to that user. This answers the age-old question, &#8220;What the hell was this guy doing when stuff blew up!?&#8221;
+**Track and automatically manage user sessions** for much more visibility into their user experience, how they interact with your app, and, of course, any errors or events that occur related to that user. This answers the age-old question, "What the hell was this guy doing when stuff blew up!?"
 
 <a href="/track-view-user-session-data-exceptionless/" target="_blank">Check out the User Sessions post for more details and instructions!</a>
 
@@ -30,7 +30,7 @@ Now it's even easier to **integrate with Exceptionless from any environment**, 
 
 ### License Change
 
-The server and all Exceptionless projects are now using the <a href="https://github.com/exceptionless/Exceptionless/blob/master/LICENSE.txt" target="_blank">Apache License</a>, so there should be much less confusion on how things are licensed moving forward. Boring stuff, we know&#8230; but important.
+The server and all Exceptionless projects are now using the <a href="https://github.com/exceptionless/Exceptionless/blob/master/LICENSE.txt" target="_blank">Apache License</a>, so there should be much less confusion on how things are licensed moving forward. Boring stuff, we know... but important.
 
 ### User Location
 

@@ -34,4 +34,4 @@ Instead of having to think of everything up front while we're building Exception
 
 ## We Hope You're as Stoked as We Are
 
-Search has been a long time coming for Exceptionless, and we're super excited to be able to provide a robust, thorough, scaleable solution that will cover 99.99% of possible use cases. Hang in there &#8211; we're coding it in as fast as we can!
+Search has been a long time coming for Exceptionless, and we're super excited to be able to provide a robust, thorough, scaleable solution that will cover 99.99% of possible use cases. Hang in there - we're coding it in as fast as we can!

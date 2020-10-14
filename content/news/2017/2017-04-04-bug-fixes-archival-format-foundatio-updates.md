@@ -1,6 +1,6 @@
 ---
 id: 15384
-title: Weekly Update &#8211; Bug Fixes, Archival Format Changes, and Foundatio Updates
+title: Weekly Update - Bug Fixes, Archival Format Changes, and Foundatio Updates
 date: 2017-04-04
 ---
 

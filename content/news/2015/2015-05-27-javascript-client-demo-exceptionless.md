@@ -1,6 +1,6 @@
 ---
 id: 13235
-title: JavaScript Client Demo &#8211; Exceptionless
+title: JavaScript Client Demo - Exceptionless
 date: 2015-05-27
 ---
 <img loading="lazy" class="aligncenter size-full wp-image-13237" src="/_site/assets/blog-header-javascript.jpg" alt="Exceptionless JavaScript Client" width="708" height="250" data-id="13237" srcset="/assets/blog-header-javascript.jpg 708w, /assets/blog-header-javascript-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
@@ -9,7 +9,7 @@ We're getting closer and closer to version 1.0 of our <a title="Exceptionless J
 
 If you're using Node.js, make sure to check out last week's blog post for <a title="Exceptionless Node.js Demo" href="/exceptionless-node-js-javascript-client-demo/" target="_blank">Node specific examples</a>. Otherwise, continue reading for Javascript examples.
 
-As you read and begin playing with the Exceptionless JavaScript client, please make note of any feedback, bugs, etc, and <a title="Exceptionless.JavaScript GitHub Repo" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">submit a GitHub issue</a> so we can fast track version 1.0 &#8211; we surely appreciate it!
+As you read and begin playing with the Exceptionless JavaScript client, please make note of any feedback, bugs, etc, and <a title="Exceptionless.JavaScript GitHub Repo" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">submit a GitHub issue</a> so we can fast track version 1.0 - we surely appreciate it!
 
 <!--more-->
 
@@ -82,7 +82,7 @@ client.submitEvent({ message = 'Low Fuel', type = 'racecar', source = 'Fuel Syst
 
 To manually send events other than the automatically reported unhandled exceptions, you can use our fluent <a title="Exceptionless.JavaScript Event Builder API" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/EventBuilder.ts" target="_blank">event builder API</a>.
 
-The below example demonstrates sending a new error, &#8220;test,&#8221; and setting the ReferenceID, Order and Quote properties, Tags, Geo, UserIdentity, and marking it as Critical.
+The below example demonstrates sending a new error, "test," and setting the ReferenceID, Order and Quote properties, Tags, Geo, UserIdentity, and marking it as Critical.
 
 <pre class="brush: jscript; title: ; notranslate" title="">var client = exceptionless.ExceptionlessClient.default;
 
@@ -127,7 +127,7 @@ A few screenshots of an individual event can be found below.<figure id="attachme
 
 We have put together an <a href="https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example" target="_blank">example</a> that you can use to get an idea of how everything works. It is available on the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example" target="_blank">GitHub Repo</a>.
 
-### To Get the Example Running&#8230;
+### To Get the Example Running...
 
   1. Clone or download the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example" target="_blank">GitHub Repo</a>
   2. Edit the HTML file in the root example folder and replace the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/example/index.html#L8" target="_blank">existing API Key</a> with yours. Also, comment out the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/example/index.html#L16" target="_blank">serverUrl</a>.

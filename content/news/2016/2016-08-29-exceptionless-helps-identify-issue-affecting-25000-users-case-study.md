@@ -1,6 +1,6 @@
 ---
 id: 14660
-title: Exceptionless Helps Identify Issue Affecting 25,000 Users &#8211; Case Study
+title: Exceptionless Helps Identify Issue Affecting 25,000 Users - Case Study
 date: 2016-08-29
 ---
 <img loading="lazy" class="alignright size-medium wp-image-14664" style="margin: 50px;" src="/assets/cevo-logo-300x60.png" alt="CEVO, Inc. Logo" width="200" height="40" data-id="14664" srcset="/assets/cevo-logo-300x60.png 300w, /assets/cevo-logo.png 584w" sizes="(max-width: 200px) 100vw, 200px" />Case study time!
@@ -11,19 +11,19 @@ In this case, the problem was major enough that the development team stopped usi
 
 Here's what Will Graham, [CEVO, Inc.](http://cevo.com/) developer, had to say when we asked him a few Exceptionless case study questions.<!--more-->
 
-## Exceptionless Case Study &#8211; CEVO, Inc.
+## Exceptionless Case Study - CEVO, Inc.
 
 ### What’s the number one customer-facing bug Exceptionless helped you squash?
 
-> &#8220;The issue was so prevalent we completely ditched WPF and rewrote our UI layer in GDI+/WinForms&#8221; &#8211; Will Graham, CEVO, Inc
+> "The issue was so prevalent we completely ditched WPF and rewrote our UI layer in GDI+/WinForms" - Will Graham, CEVO, Inc
 
 **Will:**
 
-Definitely crashes related to .NET Framework installation corruptions on end-user machines. While Exceptionless didn't (and can't) immediately point and say, &#8220;here's how to fix it&#8221;, it did shine light on an issue that was affecting approximately 5% of our 500,000 installed base. The issue was so prevalent we completely ditched WPF and rewrote our UI layer in GDI+/WinForms, but **Exceptionless gave us insight to see the problem and how many users were being affected**.
+Definitely crashes related to .NET Framework installation corruptions on end-user machines. While Exceptionless didn't (and can't) immediately point and say, "here's how to fix it", it did shine light on an issue that was affecting approximately 5% of our 500,000 installed base. The issue was so prevalent we completely ditched WPF and rewrote our UI layer in GDI+/WinForms, but **Exceptionless gave us insight to see the problem and how many users were being affected**.
 
 ### Were you surprised at the initial results of using Exceptionless for the first time? How many errors were you seeing?
 
-> &#8220;Exceptionless has changed our internal development process and how we approach code. Proper error handling and visibility is now a first-class priority for us and Exceptionless makes it super easy.&#8221; &#8211; Will Graham, CEVO, Inc
+> "Exceptionless has changed our internal development process and how we approach code. Proper error handling and visibility is now a first-class priority for us and Exceptionless makes it super easy." - Will Graham, CEVO, Inc
 
 **Will:**
 

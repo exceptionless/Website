@@ -19,12 +19,12 @@ We fixed a few minor bugs made a few improvements to the main platform. Check th
 * Improvements to posting events via GET.
 * Items can now be added and removed from project data (bug).
 * Users can log directly in to an existing account if they attempt to sign up with the same credentials now, rather than getting an error.
-* <a href="https://github.com/VikzSharma" target="_blank">@VikzSharma</a> fixed the &#8220;too many bad attempts&#8221; lockout feature. Thanks!
+* <a href="https://github.com/VikzSharma" target="_blank">@VikzSharma</a> fixed the "too many bad attempts" lockout feature. Thanks!
 * There is also a once-an-hour limit on user signups and email address changes thanks to @VikzSharma.
 
-**Upgrading:** Only self-hosters need to worry about upgrading &#8211; see details on the <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v3.2.1" target="_blank">full release notes.</a>
+**Upgrading:** Only self-hosters need to worry about upgrading - see details on the <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v3.2.1" target="_blank">full release notes.</a>
 
-## Exceptionless.NET 3.3.3 &#8211; 3.3.6
+## Exceptionless.NET 3.3.3 - 3.3.6
 
 We've pushed out several minor releases of the .NET client in the last few weeks. I'll cover the major stuff here, but you can view the <a href="https://github.com/exceptionless/Exceptionless.Net/releases" target="_blank">full release notes and get the latest source on GitHub</a>.
 
@@ -40,13 +40,13 @@ We've pushed out several minor releases of the .NET client in the last few weeks
 
 * New extension methods have been added for events, making it easier to set valid geo coordinates, tags, and more.
 * A few new variables and parameters have been added for session heartbeats and id setting. See release notes for details.
-* <a href="https://github.com/InlineAsm" target="_blank">@InlineASM</a> fixed an issue for geolocations that have different separators &#8211; thanks!
+* <a href="https://github.com/InlineAsm" target="_blank">@InlineASM</a> fixed an issue for geolocations that have different separators - thanks!
 
 ### 3.3.4
 
 * <a href="https://github.com/ahmettaha" target="_blank">@ahmettaha</a> added SubmitLog and CreateLog overloads without source parameters. Thanks!
 * `ExceptionlessClient.Default.Configuration.UseDebugLogger()` only worked in debug mode with client source, so we replaced it with `ExceptionlessClient.Default.Configuration.UseInMemoryLogger()`
-* The serializer wasn't always being passed through so it could get known event data helper methods, which was causing some silent failures &#8211; this has been fixed.
+* The serializer wasn't always being passed through so it could get known event data helper methods, which was causing some silent failures - this has been fixed.
 
 ### 3.3.3
 
@@ -71,7 +71,7 @@ We've pushed out several minor releases of the .NET client in the last few weeks
 
 There's nothing major to report with the UI, just a few tweaks.
 
-* The project settings pages has been reworked by adding the ability to specify user namespaces, and user agents that the clients will ignore. @VikzSharma also fixed an issue where the single page app could be clickjacked &#8211; thanks again!
+* The project settings pages has been reworked by adding the ability to specify user namespaces, and user agents that the clients will ignore. @VikzSharma also fixed an issue where the single page app could be clickjacked - thanks again!
 
 <a href="https://github.com/exceptionless/Exceptionless.UI/releases/tag/v2.3.1" target="_blank">Full release notes and latest release download.</a>
 

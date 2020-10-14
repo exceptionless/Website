@@ -9,7 +9,7 @@ That's where Exceptionless meets log messages.
 
 In Exceptionless 2.0, you can now send custom log messages to a Log Messages dashboard where they can be tracked and view just like exceptions and other events.
 
-Lets take a closer look&#8230;<!--more-->
+Lets take a closer look...<!--more-->
 
 ## How to Submit a Log Message to Exceptionless
 
@@ -26,7 +26,7 @@ That's your basic log message.
 
 #### **Getting fancier**, you can also specify the log source and log level.
 
-In the below example, &#8220;_typeof(MainWindow)__.FullName_&#8221; specifies the log source, and &#8220;_Info_&#8221; specifies the log level. If no log source is specified, the log messages will be stacked under a global log stack.
+In the below example, "_typeof(MainWindow)__.FullName_" specifies the log source, and "_Info_" specifies the log level. If no log source is specified, the log messages will be stacked under a global log stack.
 
 We recommend specifying one of the following log levels, all of which add a visual indicator to each log message (see below screenshot).
 
@@ -47,7 +47,7 @@ Here's a screenshot of what the visual indicators for the different types of log
 
 This is helpful wen you want to add contextual information, contact information, or a tag.
 
-In the below example, we will use the &#8220;_CreateLog_&#8221; method to add a tag to the log message.
+In the below example, we will use the "_CreateLog_" method to add a tag to the log message.
 
 <pre>using Exceptionless;
 ExceptionlessClient.Default.CreateLog(typeof(MainWindow).FullName, "Info log example", "Info").AddTags("Wpf").Submit();
@@ -107,7 +107,7 @@ This also allows you to quickly change what you want to log to. Maybe you want t
 
 To use the <a title="Exceptionless NLog Nuget Package" href="https://www.nuget.org/packages/exceptionless.nlog" target="_blank">NLog </a>or <a title="Exceptionless Log4net Nuget Package" href="https://www.nuget.org/packages/exceptionless.log4net" target="_blank">Log4net</a> clients, you’ll just need to bring down the nuget package and follow the detailed readme. You can also take a look at our <a title="Exceptionless NLog Log4net Logging Sample" href="https://github.com/exceptionless/Exceptionless.Net/tree/master/Source/Samples/SampleConsole" target="_blank">sample app</a>, which uses both frameworks.
 
-_<span style="color: #993300;"><strong>Note on performance: Use in-memory event storage for high volumes</strong></span>_
+_<span style="color: #993300;">**Note on performance: Use in-memory event storage for high volumes**</span>_
 
 _There are some performance considerations you should be aware of when you are logging very high numbers of log events and using our client. We've spent a lot of time to ensure Exceptionless doesn't degrade your applications performance. However, if you are logging thousands of messages a minute, you should use the in-memory event storage._
 

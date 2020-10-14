@@ -1,6 +1,6 @@
 ---
 id: 15494
-title: Exceptionless.NET client, core, UI,  releases &#8211; Bugs, Usability, Performance, Self Hosting
+title: Exceptionless.NET client, core, UI,  releases - Bugs, Usability, Performance, Self Hosting
 date: 2017-04-21
 tags: [ ".NET"]
 ---
@@ -8,13 +8,13 @@ tags: [ ".NET"]
 
 This past week we released Exceptionless 4.0.2 and Exceptionless.NET 4.0.3, consisting of maintenance updates that fixed several usability issues for self hosters, various performance, issues, bug fixes, and some general improvements.<!--more-->
 
-Below is a highlight of the release notes, and don't forget to let us know how we're doing or what can improve by following the relevant links to GitHub and posting an &#8220;issue.&#8221;
+Below is a highlight of the release notes, and don't forget to let us know how we're doing or what can improve by following the relevant links to GitHub and posting an "issue."
 
 Lastly, thanks to all of our contributors for helping us solve problems, add functionality, and improve Exceptionless!
 
 ## Exceptionless 4.0.2 Release Notes
 
-* Both [@caesay](https://github.com/caesay) and [@edwardmeng](https://github.com/edwardmeng) submitted pull requests and helped us solve an issue with sending emails (issue [#290](https://github.com/exceptionless/Exceptionless/issues/290)). [Mailkit](https://github.com/jstedfast/MailKit), a &#8220;cross-platform mail client library,&#8221; has now been integrated, adding &#8220;fully featured and RFC-compliant SMTP, POP3, and IMAP client implementations&#8221; into Exceptionless.
+* Both [@caesay](https://github.com/caesay) and [@edwardmeng](https://github.com/edwardmeng) submitted pull requests and helped us solve an issue with sending emails (issue [#290](https://github.com/exceptionless/Exceptionless/issues/290)). [Mailkit](https://github.com/jstedfast/MailKit), a "cross-platform mail client library," has now been integrated, adding "fully featured and RFC-compliant SMTP, POP3, and IMAP client implementations" into Exceptionless.
     * There were also a few issues with email when hosting in different environments, such as Azure Functions. In this case, all email settings must be stored in settings and not web.config. So, we moved the MailKit implementation to the insulation project and cleaned up the main mailer class, among a few other tweaks, to further improve email sending in the app. Thanks again caesay and edwardmeng!
     * **If you are self hosting**, please update the email settings in `appSettings`
 * Support for Azure Storage Queus has been added to the app.
@@ -42,7 +42,7 @@ You should only worry about upgrading if you are a self hoster. If this is the c
 
 * Fixed an issue where the ASP.NET Core 1.1 runtime was sometimes preventing clients from reporting any data.
 * Fixed an issue where exceptions that converted to 404's were not running the event exclusion logic.
-* Fixed an issue where the duplicate checker plugin could DOS itself if you had client logging enabled (disabled by default &#8211; only meant for diagnostic logging).
+* Fixed an issue where the duplicate checker plugin could DOS itself if you had client logging enabled (disabled by default - only meant for diagnostic logging).
 * Fixed an issue where the nlog logger wasn't setting event type.
 * Fixed an issue with package configuration of signed web packages.
 * Fixed an issue where adding our trace listener could blow up due to other invalid configured trace listeners.
@@ -62,7 +62,7 @@ Just update your NuGet packages. For more info, check out the [upgrade guide](ht
 
 ## Feedback Requested
 
-We **want** to know what you think about Exceptionless &#8211; what you think we should add, fix, streamline, improve, etc. Please let us know!
+We **want** to know what you think about Exceptionless - what you think we should add, fix, streamline, improve, etc. Please let us know!
 
 * [User Interface Feedback](https://github.com/exceptionless/Exceptionless.UI/issues/new)
 * [.NET Client Feedback](https://github.com/exceptionless/Exceptionless.Net/issues/new)

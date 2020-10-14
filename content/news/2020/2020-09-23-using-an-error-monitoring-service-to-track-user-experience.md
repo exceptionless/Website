@@ -24,7 +24,7 @@ Once you sign up, you'll be prompted to name your team and project. You'll also 
 
 You'll want to follow the documentation to set up your codebase to send errors appropriately to Exceptionless, but we will also need to think about how we are going to handle these UX errors.
 
-To do this, let's first think about some of the problems a user may face on a site and how we can handle them. A simple example that I can think of is what I'm going to call &#8220;Happy Path Slippage.&#8221; We build applications with a happy path in mind. It's how we test, naturally. We have to force ourselves to test outside of the happy path, so it's also important to monitor how often our users deviate from the happy path.
+To do this, let's first think about some of the problems a user may face on a site and how we can handle them. A simple example that I can think of is what I'm going to call "Happy Path Slippage." We build applications with a happy path in mind. It's how we test, naturally. We have to force ourselves to test outside of the happy path, so it's also important to monitor how often our users deviate from the happy path.
 
 Let's say we have a simple e-commerce application. The happy path, in this case, would be:
 

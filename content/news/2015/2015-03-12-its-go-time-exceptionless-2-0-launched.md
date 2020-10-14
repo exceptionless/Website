@@ -1,6 +1,6 @@
 ---
 id: 12749
-title: IT'S GO TIME &#8211; Exceptionless 2.0 Launched!
+title: IT'S GO TIME - Exceptionless 2.0 Launched!
 date: 2015-03-12
 ---
 <img loading="lazy" class="alignright size-full wp-image-12751" src="/assets/version-2.0-launched.png" alt="version-2.0-launched" width="174" height="155" data-id="12751" />Today, after much development and [weeks of live user testing and feedback](#preview), we have officially released Exceptionless 2.0 into the wild!
@@ -31,7 +31,7 @@ Follow these quick and easy steps below to update your Exceptionless client to 
 
 [<img loading="lazy" class="wp-image-12762 size-thumbnail" src="/assets/version-2-launch-screenshot-150x150.jpg" alt="Exceptionless 2.0 Screenshot" width="150" height="150" data-id="12762" />](/assets/version-2-launch-screenshot.jpg)<figcaption class="caption wp-caption-text">Version 2.0 Screenshot</figcaption></figure>
 
-Exceptionless 2.0 is faster, sleeker, mobile-friendly, more functional, includes all the below major improvements, and has countless smaller tweaks and changes we poured our heart and soul into. It's a whole new system &#8211; check it out!
+Exceptionless 2.0 is faster, sleeker, mobile-friendly, more functional, includes all the below major improvements, and has countless smaller tweaks and changes we poured our heart and soul into. It's a whole new system - check it out!
 
 * **Searching / Filtering**
     We’ve implemented Elasticsearch and you can search/filter ALL the things! Read more <a title="Exceptionless 2.0 Elasticsearch" href="/making-move-elastic-search-exceptionless-2-0/" target="_blank">here</a> and watch a quick demo video <a title="Exceptionless Search Filters" href="/filter-your-exceptions-video-demo/" target="_blank">here</a>.
@@ -55,7 +55,7 @@ Exceptionless 2.0 is faster, sleeker, mobile-friendly, more functional, includes
 ** Exceptionless 2.0 is a single page app (SPA) and is lightning fast. <a title="Exceptionless 2.0 AngularJS" href="/angularjs-exceptionless-2-0/" target="_blank">We’re using AngularJS</a> and we’re stoked to give our users a super quick experience!
 
 <li id="preview">
-  <strong>And more…<br /> </strong>Check out more new features, including source links, in our <a title="Exceptionless 2.0 Overview" href="/upcoming-exceptionless-version-2-0-overview-review/" target="_blank">Exceptionless 2.0 Overview article</a>. Includes details on: Event Based Reporting System, Simplified API, The Pluggable System, Client Rewrite, New Message Bus & Queuing, and Job System Enhancement.
+  **And more…<br /> **Check out more new features, including source links, in our <a title="Exceptionless 2.0 Overview" href="/upcoming-exceptionless-version-2-0-overview-review/" target="_blank">Exceptionless 2.0 Overview article</a>. Includes details on: Event Based Reporting System, Simplified API, The Pluggable System, Client Rewrite, New Message Bus & Queuing, and Job System Enhancement.
 </li>
 
 ## Live User Testing Review & Notes
@@ -64,7 +64,7 @@ Exceptionless 2.0 is faster, sleeker, mobile-friendly, more functional, includes
 
 We received some awesome feedback from many of our customers, made some UI/usability tweaks and improvements, and fixed a few minor bugs. We also added the ability to search custom fields, which is a pretty big deal for some.
 
-Naturally, we used Exceptionless 2.0 to log, report on, and gather data for the preview &#8211; and it worked amazingly! (shameless, but true, promotion)
+Naturally, we used Exceptionless 2.0 to log, report on, and gather data for the preview - and it worked amazingly! (shameless, but true, promotion)
 
 On average, we traced **200,000+ anonymous log messages** within the app **each day** from preview activity. That data allowed us to learn a lot more about the behavior of Exceptionless 2.0 in areas such as jobs and gave us additional insight into what was going on. We were able to use a combination of errors, logs, and feature usage metrics to track down and fix an issue with external logins, as well. Awesome!
 
@@ -74,4 +74,4 @@ Overall, we had no major surprises and were able to tweak and improve several pi
 
 ## Keep The Feedback Coming
 
-No software application is ever &#8220;done,&#8221; so make sure to keep the feedback coming. We've made a huge leap from Exceptionless 1.x, but we want to keep improving the system in all areas. **We love hearing from our users**, and respond to each email, in-app message, website form submission, etc. So, please, let us know what you think!
+No software application is ever "done," so make sure to keep the feedback coming. We've made a huge leap from Exceptionless 1.x, but we want to keep improving the system in all areas. **We love hearing from our users**, and respond to each email, in-app message, website form submission, etc. So, please, let us know what you think!

@@ -21,7 +21,7 @@ Please don't hesitate to give us any feedback you may have after watching the vi
 
 Everything is built on angularJS and talking to the REST api, so the UI itself is static, with no more server-rendered views.
 
-There are a few upfront differences &#8211; mainly the fact that we're using all the screen real estate now and everything is mobile responsive
+There are a few upfront differences - mainly the fact that we're using all the screen real estate now and everything is mobile responsive
 
 ### Navigation & Exception Types
 
@@ -31,7 +31,7 @@ As promised with version 2.0, we also have an all events section, which you can 
 
 ### Cross Project Views & Filtering
 
-If we move to the top navigation bar, we see that you can now view data across all projects or by individual projects &#8211; a highly requested feature. We then have a quick time period selector, and finally the new filtering system, which allows you to quickly filter your exceptions. We'll show off that feature in it's own video soon.
+If we move to the top navigation bar, we see that you can now view data across all projects or by individual projects - a highly requested feature. We then have a quick time period selector, and finally the new filtering system, which allows you to quickly filter your exceptions. We'll show off that feature in it's own video soon.
 
 ### Bulk Actions!
 

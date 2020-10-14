@@ -1,6 +1,6 @@
 ---
 id: 13930
-title: Elasticsearch Case Study &#8211; By Exceptionless
+title: Elasticsearch Case Study - By Exceptionless
 date: 2015-12-28
 tags: [ "Case Study"]
 ---
@@ -11,9 +11,9 @@ tags: [ "Case Study"]
 We've written about our use of Elasticsearch in numerous articles before, including:<!--more-->
 
 * [Making the Move to Elasticsearch for Exceptionless 2.0](/making-move-elastic-search-exceptionless-2-0/)
-* [Filter Your Exceptions in Version 2.0 &#8211; Video Demo](/filter-your-exceptions-video-demo/)
-* [Exceptionless V3.0 &#8211; Changes to the Build Process, Dependencies, and Self Hosting](/exceptionless-3-0-changes-to-build-process-dependencies-self-hosting/)
-* [Exceptionless 3.1 Released! If You Thought It was Fast Before&#8230;](/exceptionless-3-1-released-if-you-thought-it-was-fast-before/)
+* [Filter Your Exceptions in Version 2.0 - Video Demo](/filter-your-exceptions-video-demo/)
+* [Exceptionless V3.0 - Changes to the Build Process, Dependencies, and Self Hosting](/exceptionless-3-0-changes-to-build-process-dependencies-self-hosting/)
+* [Exceptionless 3.1 Released! If You Thought It was Fast Before...](/exceptionless-3-1-released-if-you-thought-it-was-fast-before/)
 
 **In the case study**, we discuss how Elasticsearch let us improve our real-time dashboard, work with time zones more easily, index data much faster, not have to worry so much about pre-aggregating data, maintain much less code, improve backup and restoration, shrink disk space usage, and, perhaps most importantly, drastically improve scalability.
 

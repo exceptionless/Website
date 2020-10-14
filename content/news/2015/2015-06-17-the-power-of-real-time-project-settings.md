@@ -4,7 +4,7 @@ title: The Power of Real-time Project Settings
 date: 2015-06-17
 tags: [ ".NET"]
 ---
-Did you know there are customizable server/client configuration values within your Exceptionless Project's settings? Well **now you do** &#8211; and knowing's half the battle!
+Did you know there are customizable server/client configuration values within your Exceptionless Project's settings? Well **now you do** - and knowing's half the battle!
 
 These project level settings are a dictionary of key value pairs (string key, string value). They are defined server-side and automatically pushed to the client when they are updated. Using this feature allows you to control what you send without redeploying your app, which we think is pretty cool!<!--more-->
 
@@ -23,9 +23,9 @@ Let's take a look at a JavaScript and .NET client usage example to get your rol
 
 [<img loading="lazy" class="alignright wp-image-13327 size-medium" style="margin-left: 15px; margin-bottom: 15px;" src="/assets/project-settings-page-300x209.png" alt="Exceptionless Client Configuration Settings" width="300" height="209" data-id="13327" srcset="/assets/project-settings-page-300x209.png 300w, /assets/project-settings-page.png 813w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/project-settings-page.png)
 
-Before we get started with more of an explanation and an example, we need to add a new key and value. To do so, we go to `Admin > Projects` in our Exceptionless Dashboard, select the project we are working on, then go to the &#8220;Settings&#8221; tab.
+Before we get started with more of an explanation and an example, we need to add a new key and value. To do so, we go to `Admin > Projects` in our Exceptionless Dashboard, select the project we are working on, then go to the "Settings" tab.
 
-This is where we can add a &#8220;New Client Configuration,&#8221; which simply consists of the key and value. For the example below, we'll add the (fictional) `enableLogSubmission` key and set it to `true`.
+This is where we can add a "New Client Configuration," which simply consists of the key and value. For the example below, we'll add the (fictional) `enableLogSubmission` key and set it to `true`.
 
 ## How it Works
 

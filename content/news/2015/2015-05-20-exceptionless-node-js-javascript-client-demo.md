@@ -65,7 +65,7 @@ client.submitEvent({ message = 'Low Fuel', type = 'racecar', source = 'Fuel Syst
 
 In addition to automatically sending all unhandled exceptions, you can also manually send events to Exceptionless using our fluent <a title="Exceptionless.JavaScript Event Builder API" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/EventBuilder.ts" target="_blank">event builder API</a>.
 
-The below example demonstrates sending a new error, &#8220;test,&#8221; and setting the ReferenceID, Order and Quote properties, Tags, Geo, UserIdentity, and marking it as Critical.
+The below example demonstrates sending a new error, "test," and setting the ReferenceID, Order and Quote properties, Tags, Geo, UserIdentity, and marking it as Critical.
 
 <pre class="brush: jscript; title: ; notranslate" title="">var client = require('exceptionless.node').ExceptionlessClient.default;
 

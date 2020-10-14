@@ -1,6 +1,6 @@
 ---
 id: 13427
-title: Introducing Foundatio &#8211; Pluggable Foundation Blocks for Building Distributed Apps
+title: Introducing Foundatio - Pluggable Foundation Blocks for Building Distributed Apps
 date: 2015-07-14
 tags: [ "open source"]
 ---
@@ -10,7 +10,7 @@ We tried an open source Redis cache client for caching, but it went commercial (
 
 So, naturally, we built our own!
 
-Meet <a href="https://github.com/exceptionless/Foundatio" target="_blank">Foundatio</a> &#8211; your key to painless, scalable development and testing for your app! Let's take a look at some examples, below.
+Meet <a href="https://github.com/exceptionless/Foundatio" target="_blank">Foundatio</a> - your key to painless, scalable development and testing for your app! Let's take a look at some examples, below.
 
 <div class="signup center">
   <a class="btn btn-large btn-primary" href="https://github.com/exceptionless/Foundatio" target="_blank">Try Foundatio Today</a>

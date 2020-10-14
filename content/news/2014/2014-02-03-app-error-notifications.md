@@ -14,14 +14,14 @@ We both know there's going to be _something_ that isn't completely right after 
 The Exceptionless platform provides a great [real-time dashboard](/project-portal-tour/ "Error Reporting Dashboard") view of your errors, but our email notifications allow you to be absolutely in touch with any errors that may be occurring within your application.
 
 <div class="signup center">
-  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Try It Out for <strong>FREE</strong></a>
+  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Try It Out for **FREE**</a>
 </div>
 
 ### Notification options
 
 There are several email notification options for your app's exceptions.
 
-To receive notifications, you need to turn them on under the &#8220;My Account&#8221; section, in the &#8220;Profile Information&#8221; tab. This option should be on by default. Then, you can view the below options under the individual project settings by clicking on the cog/gear icon next to the project name at the top of your dashboard.
+To receive notifications, you need to turn them on under the "My Account" section, in the "Profile Information" tab. This option should be on by default. Then, you can view the below options under the individual project settings by clicking on the cog/gear icon next to the project name at the top of your dashboard.
 
 <img loading="lazy" class="aligncenter size-full wp-image-2331" alt="Email Notification Settings" src="/assets/email-notification-settings.png" width="548" height="426" data-id="2331" srcset="/assets/email-notification-settings.png 548w, /assets/email-notification-settings-300x233.png 300w" sizes="(max-width: 548px) 100vw, 548px" />
 
@@ -43,10 +43,10 @@ _**Note:** _You can also turn notifications off for individual errors by going 
 
 ### Sit back and relax
 
-&#8230; until an error notification comes in, that is. Then you should probably fix it.
+... until an error notification comes in, that is. Then you should probably fix it.
 
 <div class="signup center">
-  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Try It Out for <strong>FREE</strong></a>
+  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Try It Out for **FREE**</a>
 </div>
 
 

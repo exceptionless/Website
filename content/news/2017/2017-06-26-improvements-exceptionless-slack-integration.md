@@ -15,7 +15,7 @@ We have been tweaking the recent Slack integration over the past month or so, an
 
 ### In Foundatio News
 
-A big shout out to [@pwelter34](https://github.com/pwelter34) for submitting a pull request that added support for [Serilog](https://serilog.net/) to [Foundatio](https://github.com/FoundatioFx) &#8211; Paul!
+A big shout out to [@pwelter34](https://github.com/pwelter34) for submitting a pull request that added support for [Serilog](https://serilog.net/) to [Foundatio](https://github.com/FoundatioFx) - Paul!
 
 <h2 style="text-align: center;">
   <a href="https://youtu.be/k4CMOk5lpVw">WATCH NOW</a>

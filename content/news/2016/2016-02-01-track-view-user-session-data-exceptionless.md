@@ -1,11 +1,11 @@
 ---
 id: 14045
-title: Track and View User Session Data &#8211; New Exceptionless Feature!
+title: Track and View User Session Data - New Exceptionless Feature!
 date: 2016-02-01
 ---
 <img loading="lazy" class="aligncenter size-large wp-image-14055" src="/assets/sessions-dashboard-header2-1024x411.png" alt="app user session logging" width="940" height="377" data-id="14055" srcset="/assets/sessions-dashboard-header2-1024x411.png 1024w, /assets/sessions-dashboard-header2-300x120.png 300w, /assets/sessions-dashboard-header2-768x308.png 768w, /assets/sessions-dashboard-header2.png 1824w" sizes="(max-width: 940px) 100vw, 940px" />
 
-To many, this feature may be the missing piece&#8230; that connection you've always wanted to make between users, bugs, exceptions, app events, etc. I'm talking about, of course, **user session tracking!**
+To many, this feature may be the missing piece... that connection you've always wanted to make between users, bugs, exceptions, app events, etc. I'm talking about, of course, **user session tracking!**
 
 That's right, you can now use Exceptionless to track users as they use your app, which of course will come in super handy when you want to know exactly what they did to stumble upon or cause an error or trigger an event.
 
@@ -17,13 +17,13 @@ Continue reading to learn more about sessions and how you can enable them for yo
 
 First, you must have a paid (premium) Exceptionless plan to report on sessions if you are hosting with us. This is mainly because of the added resource requirements the feature puts on our infrastructure. We think it's definitely worth it, though!
 
-Sessions can be searched/filtered like all other events &#8211; they are just an event type like exceptions or logs.
+Sessions can be searched/filtered like all other events - they are just an event type like exceptions or logs.
 
 ## What's in a User Session Event?
 
 Each user session records how long they were active and what they did. For instance, the average user session on be.exceptionless.io the first week we monitored it using the feature was two hours.
 
-With that, each user session event has a &#8220;Session Events&#8221; tab that displays all the relevant events that occurred during that session and allows you to see exactly what that user did. This is especially helpful, of course, if that session lead to an exception or noteworthy event in your app.
+With that, each user session event has a "Session Events" tab that displays all the relevant events that occurred during that session and allows you to see exactly what that user did. This is especially helpful, of course, if that session lead to an exception or noteworthy event in your app.
 
 <p style="text-align: center;">
   <a href="/assets/sessions-event-tab-user-footsteps.jpg" rel="attachment wp-att-14046"><img loading="lazy" class="aligncenter size-medium wp-image-14046" src="/assets/sessions-event-tab-user-footsteps-300x142.jpg" alt="App User Session Reporting" width="300" height="142" data-id="14046" srcset="/assets/sessions-event-tab-user-footsteps-300x142.jpg 300w, /assets/sessions-event-tab-user-footsteps-768x364.jpg 768w, /assets/sessions-event-tab-user-footsteps.jpg 815w" sizes="(max-width: 300px) 100vw, 300px" /></a>
@@ -60,7 +60,7 @@ ExceptionlessClient.Default.Configuration.SetUserIdentity("UNIQUE_ID_OR_EMAIL_AD
 
 Once the user is set on the config object, it will be applied to all future events.
 
-**Please Note:** In WinForms and WPF applications, a plugin will automatically set the default user to the `<strong>Environment.UserName</strong>` if the default user hasn't been already set. Likewise, if you are in a web environment, we will set the default user to the request principal's identity if the default user hasn't already been set.
+**Please Note:** In WinForms and WPF applications, a plugin will automatically set the default user to the `**Environment.UserName**` if the default user hasn't been already set. Likewise, if you are in a web environment, we will set the default user to the request principal's identity if the default user hasn't already been set.
 
 If you are using WinForms, WPF, or a Borwser App, you can enable sessions by calling the `EnableSessions` extension method.
 
@@ -77,7 +77,7 @@ ExceptionlessClient.Default.Configuration.UseSessions();</pre>
 
 Sessions are created in two different ways. Either the client can send a session start event, or we can create it automatically on the server side when an event is processed.
 
-We have a <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Plugins/EventProcessor/Default/70_AutoSessionPlugin.cs#L29" target="_blank">server-side plugin</a> that runs as part of our pipeline process for every event &#8211; its sole purpose is to manage sessions by using a hash on the user's identity as a lookup for the session id.
+We have a <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Plugins/EventProcessor/Default/70_AutoSessionPlugin.cs#L29" target="_blank">server-side plugin</a> that runs as part of our pipeline process for every event - its sole purpose is to manage sessions by using a hash on the user's identity as a lookup for the session id.
 
 If the session doesnt' exist or the current event is a session event type, a new session id will be created. If we receive a `sessionend` event, we close that session and update the end time on the `sessionstart` event.
 

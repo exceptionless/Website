@@ -1,6 +1,6 @@
 ---
 id: 16744
-title: Exceptionless 5.0 Release &#8211; ASP.NET Core &#038; Localization Support, and more!
+title: Exceptionless 5.0 Release - ASP.NET Core &#038; Localization Support, and more!
 date: 2019-08-29
 ---
 <img loading="lazy" class="aligncenter size-full wp-image-16747" src="/assets/exceptionless-5.0-localization.png" alt="Exceptionless 5.0 Localization" width="737" height="634" data-id="16747" srcset="/assets/exceptionless-5.0-localization.png 737w, /assets/exceptionless-5.0-localization-300x258.png 300w" sizes="(max-width: 737px) 100vw, 737px" />
@@ -36,5 +36,3 @@ Check out the [official release notes](https://github.com/exceptionless/Exceptio
 ## How are we doing?
 
 As always, we want to know what you think! If you have questions, concerns, or any feedback, please [submit an issue over on the GitHub repo](https://github.com/exceptionless/Exceptionless/issues/new).
-
-

@@ -1,6 +1,6 @@
 ---
 id: 15350
-title: Duplicate Event Total Fix, Setting Min Log Levels, Foundatio Updates, and more &#8211; Live Code Demo
+title: Duplicate Event Total Fix, Setting Min Log Levels, Foundatio Updates, and more - Live Code Demo
 date: 2017-02-28
 ---
 [<img loading="lazy" class="aligncenter size-large wp-image-15351" style="margin-bottom: 20px;" src="/assets/170228-header-1024x538.jpg" alt="exceptionless duplicate event totals, min log levels, foundatio" width="940" height="494" data-id="15351" srcset="/assets/170228-header-1024x538.jpg 1024w, /assets/170228-header-300x158.jpg 300w, /assets/170228-header-768x403.jpg 768w, /assets/170228-header.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/bGgd4-exceptionless-weekly-demo-2-13-17/)

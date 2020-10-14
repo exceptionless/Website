@@ -7,7 +7,7 @@ tags: [ ".NET", "client", "email", "javascript"]
 
 Nothing too crazy going on in this week's update. A few tweaks to Exceptionless, Exceptionless.NET, and Exceptionless.JavaScript. Check out the details below, and don't forget to let us know how we're doing!<!--more-->
 
-## Weekly Code & Development Update &#8211; 4/17/2017
+## Weekly Code & Development Update - 4/17/2017
 
 ### Exceptionless Core Updates
 

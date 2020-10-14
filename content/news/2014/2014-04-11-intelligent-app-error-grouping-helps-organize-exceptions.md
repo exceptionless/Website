@@ -23,7 +23,7 @@ We couldn't just leave them with a huge list of individual error occurrences to 
 * User information
 * Environment information
 * Request details
-* and more&#8230;
+* and more...
 
 ### Drill down fast
 

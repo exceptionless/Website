@@ -1,6 +1,6 @@
 ---
 id: 15469
-title: Azure Functions, Email Client, Foundatio &#8211; 4/3/17 Weekly Update
+title: Azure Functions, Email Client, Foundatio - 4/3/17 Weekly Update
 date: 2017-04-10
 ---
 

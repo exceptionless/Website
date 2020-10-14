@@ -8,7 +8,7 @@ tags: [ ".NET"]
 
 During the [Exceptionless 4.0 Release](/exceptionless-4-0/), we covered a lot of enhancements and changes. In this week's Live Code Demo, Blake reviews the 4.0 release notes and talks through other tweaks and post-launch cleanup.<!--more-->
 
-## In this Live Code Demo Episode&#8230;
+## In this Live Code Demo Episode...
 
 * Exceptionless 4.0 has been released for a few weeks now, with ElasticSearch 5 running in production for even longer. Let's take another look at the release notes and talk through some notable topics.
 * We look at the self hosting & upgrading documentation, which has been updated for Exceptionless 4.0.

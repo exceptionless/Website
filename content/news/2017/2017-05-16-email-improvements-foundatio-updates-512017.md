@@ -1,6 +1,6 @@
 ---
 id: 15561
-title: Daily Summary Email Improvements, Foundatio Updates, and more &#8211; Weekly Update 5/1/2017
+title: Daily Summary Email Improvements, Foundatio Updates, and more - Weekly Update 5/1/2017
 date: 2017-05-16
 tags: [ "cache", "email"]
 ---

@@ -7,27 +7,27 @@ date: 2015-02-11
 
 We've made you wait, and everyone has done so quite patiently, but now it's officially time to check out V2.0 for yourself.
 
-We're super excited, but we also <span style="color: #ff0000;"><strong>need your help!</strong></span> At this point, we are asking for any and all <span style="color: #ff0000;"><strong>feedback</strong> </span>to help us tweak and refine and get things launched. Check out the details and instructions below, and make sure to send us thoughts, critiques, praise, and (of course) bug reports via <a title="Exceptionless GitHub Issues" href="https://github.com/exceptionless/Exceptionless/issues/new" target="_blank">GitHub Issues</a>.<!--more-->
+We're super excited, but we also <span style="color: #ff0000;">**need your help!**</span> At this point, we are asking for any and all <span style="color: #ff0000;">**feedback** </span>to help us tweak and refine and get things launched. Check out the details and instructions below, and make sure to send us thoughts, critiques, praise, and (of course) bug reports via <a title="Exceptionless GitHub Issues" href="https://github.com/exceptionless/Exceptionless/issues/new" target="_blank">GitHub Issues</a>.<!--more-->
 
 ## You Can Be.Exceptionless<figure id="attachment_12699" class="thumbnail wp-caption alignright" style="width: 300px">
 
 <a href="/assets/sandbox-preview.jpg" rel="attachment wp-att-12699"><img loading="lazy" class="wp-image-12699 size-medium" src="/assets/sandbox-preview-300x183.jpg" alt="Exceptionless 2.0 Dashboard Preview" width="300" height="183" data-id="12699" srcset="/assets/sandbox-preview-300x183.jpg 300w, /assets/sandbox-preview-1024x623.jpg 1024w, /assets/sandbox-preview.jpg 1280w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption class="caption wp-caption-text">Exceptionless 2.0 Dashboard Preview</figcaption></figure>
 
-**Simply&#8230;**
+**Simply...**
 
   1. Go to <a title="Exceptionless 2.0 Sandbox" href="https://be.exceptionless.io" target="_blank">https://be.exceptionless.io</a>
   2. Log in with your **existing** Exceptionless account
     _Some very recent accounts may not allow you to log in. If this is the case, please create new account for testing purposes._</p>
-      1. View your current data in the new system &#8211; play around with it!
+      1. View your current data in the new system - play around with it!
       2. (Optional, but Encouraged) Upgrade your client and start sending events to Exceptionless 2.0!
-        <span style="color: #800000;"><strong>Notice:</strong> <em>All new data sent to this sandbox preview will be lost when the final version of Exceptionless 2.0 goes live. You will have a gap in historical data. Also, existing clients (1.x) will still work against the 2.0 API when we go live.</em></span></p>
+        <span style="color: #800000;">**Notice:** <em>All new data sent to this sandbox preview will be lost when the final version of Exceptionless 2.0 goes live. You will have a gap in historical data. Also, existing clients (1.x) will still work against the 2.0 API when we go live.</em></span></p>
           1. Open the NuGet Package Manager dialog.
           2. Click on the Updates tab.
-          3. Select &#8220;Include Prerelease&#8221; from the dropdown.
+          3. Select "Include Prerelease" from the dropdown.
           4. Select the Exceptionless NuGet packages and click the Update button.
           5. **You should be good to go!
 ** If you need more info, view our <a title="Upgrading Exceptionless" href="http://docs.exceptionless.com/contents/upgrading/" target="_blank">upgrading documentation</a> or contact us via in-app support.
-  3. Provide feedback via <a title="Exceptionless Github Issues" href="https://github.com/exceptionless/Exceptionless/issues/new" target="_blank">GitHub Issues</a>. (good, bad, or ugly &#8211; we want it all)
+  3. Provide feedback via <a title="Exceptionless Github Issues" href="https://github.com/exceptionless/Exceptionless/issues/new" target="_blank">GitHub Issues</a>. (good, bad, or ugly - we want it all)
   4. Be Exceptionless!
 
 ### Documentation
@@ -64,7 +64,7 @@ We have covered many of these new features in previous update posts, but there a
 * **Faster than Ever!
 ** Exceptionless 2.0 is a single page app (SPA) and is lightning fast. <a title="Exceptionless 2.0 AngularJS" href="/angularjs-exceptionless-2-0/" target="_blank">We're using AngularJS</a> and we're stoked to give our users a super quick experience!
 
-* **And more&#8230;
+* **And more...
 ** Check out more new features, including source links, in our <a title="Exceptionless 2.0 Overview" href="/upcoming-exceptionless-version-2-0-overview-review/" target="_blank">Exceptionless 2.0 Overview article</a>. Includes details on: Event Based Reporting System, Simplified API, The Pluggable System, Client Rewrite, New Message Bus & Queuing, and Job System Enhancement.
 
 ## Help Us Make Exceptionless 2.0 Even Better

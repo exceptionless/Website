@@ -25,5 +25,5 @@ You can integrate **Exceptionless** into your application in a matter of seconds
 We believe that all app developers should strive to be **Exceptionless** and that’s why we are offering a FREE plan! It’s easy to get started, so what are you waiting for??
 
 <div class="signup center">
-  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Sign Up For <strong>FREE</strong> Now!</a>
+  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Sign Up For **FREE** Now!</a>
 </div>

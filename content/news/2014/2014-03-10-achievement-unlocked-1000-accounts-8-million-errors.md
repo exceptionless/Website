@@ -1,6 +1,6 @@
 ---
 id: 3783
-title: Achievement Unlocked &#8211; 1000 Accounts and Over 8,000,000 Errors Reported!
+title: Achievement Unlocked - 1000 Accounts and Over 8,000,000 Errors Reported!
 date: 2014-03-10
 tags: [ "announcement", "open source"]
 ---
@@ -16,7 +16,7 @@ We'd like to thank all of our users for using the service, providing feedback, a
 
 Also, we would specifically like to thank our beta testers that were with us from the beginning. You know who you are, and without you Exceptionless simply would not be the tool it is today.
 
-And, of course, we have to thank everyone that has contributed to and forked the project since [we went open source](/fork-us-exceptionless-goes-open-source/ "Exceptionless Goes Open Source") a few weeks ago. 39 forks, 124 <a title="Exceptionless on GitHub" href="https://github.com/exceptionless/Exceptionless" target="_blank">GitHub </a>stars, and a NancyFX client so far &#8211; not bad!
+And, of course, we have to thank everyone that has contributed to and forked the project since [we went open source](/fork-us-exceptionless-goes-open-source/ "Exceptionless Goes Open Source") a few weeks ago. 39 forks, 124 <a title="Exceptionless on GitHub" href="https://github.com/exceptionless/Exceptionless" target="_blank">GitHub </a>stars, and a NancyFX client so far - not bad!
 
 ## But Wait, There's More!
 

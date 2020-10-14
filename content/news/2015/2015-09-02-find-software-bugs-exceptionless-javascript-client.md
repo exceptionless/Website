@@ -29,7 +29,7 @@ The only **pre-requisite** is an <a href="https://be.exceptionless.io/signup" ta
   1. Download and extract the <a href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless JavaScript Client</a> from GitHub
   2. Log in to your <a href="https://be.exceptionless.io/" target="_blank">Exceptionless Dashboard</a> and get your project's API key (Admin > Projects > _Select Project_ > API Keys)
     * If you don't have a project, you'll need to create one by going to Admin > Projects > Add New Project
-  3. Open the extracted folder on your local machine and go to the &#8220;example&#8221; folder, then edit index.html.
+  3. Open the extracted folder on your local machine and go to the "example" folder, then edit index.html.
   4. Replace the API key in the exceptionless.js script tag with your own, and comment out the line with serverURL in it (not needed for demo).
   5. Open index.html in your browser and open your browser's developer tools console so we can see the events fire.
     * We've added quick-fire buttons to this page that automatically generate events for you to play around with for the purpose of this demo.

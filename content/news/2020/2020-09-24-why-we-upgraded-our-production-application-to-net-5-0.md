@@ -6,7 +6,7 @@ author: Justin Hunter
 ---
 For anyone who has built an application, you've probably built it on some library or framework that changes over time. To keep up, you have to upgrade your application. However, there are varying schools of thought around when you should upgrade. At [Exceptionless](https://exceptionless/), we like to be on the bleeding edge. As an open-source company, we feel a responsibility to the community to know and understand the open-source tools we use. As such, we have already upgraded Exceptionless to use .NET 5.0.
 
-To give you a little background, .NET 5.0 was [introduced in May of 2019](https://devblogs.microsoft.com/dotnet/introducing-net-5/). The announcement was a big one as Microsoft chose to drop the .NET Core distinction. Going forward, we will just see cross-platform support in the form of &#8220;.NET X.X&#8221;. The first release candidate for .NET 5.0 was [announced September 13, 2020](https://devblogs.microsoft.com/dotnet/announcing-net-5-0-rc-1/). We chose to upgrade and begin using .NET 5.0 immediately. That decision was driven by Microsoft's commitment to supporting production usage of the rc1 release. And as it turned out, the upgrade process was not too painful at all.
+To give you a little background, .NET 5.0 was [introduced in May of 2019](https://devblogs.microsoft.com/dotnet/introducing-net-5/). The announcement was a big one as Microsoft chose to drop the .NET Core distinction. Going forward, we will just see cross-platform support in the form of ".NET X.X". The first release candidate for .NET 5.0 was [announced September 13, 2020](https://devblogs.microsoft.com/dotnet/announcing-net-5-0-rc-1/). We chose to upgrade and begin using .NET 5.0 immediately. That decision was driven by Microsoft's commitment to supporting production usage of the rc1 release. And as it turned out, the upgrade process was not too painful at all.
 
 All in, the upgrade took about one hour and was a very small commit. You can actually [see the commit here](https://github.com/exceptionless/Exceptionless/commit/874f08e70a3ded2762f8d34df0378de38d7a3193). This is really a testament to the foundation we've built here combined with the long-running foundation Microsoft has built with the .NET framework. Exceptionless is no small application and yet we were able to upgrade to an early release candidate in order to capitalize on new capabilities. To highlight the scale of Exceptionless and the relatively minor impact the upgrade process had, let's take a look at some of our numbers.
 
@@ -47,11 +47,7 @@ Pattern matching in C# 9 is a feature we are particularly excited about. If you'
 
 Records are an exciting new feature in C# 9 as well. Data immutability is important, once again, for—you guessed it—performance. The way [Dave Brock puts it](https://daveabrock.com/2020/07/06/c-sharp-9-deep-dive-records) on his blog is apt:
 
-<blockquote class="wp-block-quote">
-  <p>
-    Immutable types reduce risk, are safer, and help to prevent a lot of nasty bugs that occur when you update your object.
-  </p>
-</blockquote>
+> Immutable types reduce risk, are safer, and help to prevent a lot of nasty bugs that occur when you update your object.
 
 Data records give us immutability in the form of a dedicated struct. Rather than extending the functionality of C#'s existing structs, records give us the ability to reach for a data-specific type that offers built-in immutability.
 
