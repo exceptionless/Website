@@ -6,8 +6,8 @@ body {
     background-attachment: fixed;
 }
 
-.margin-top {
-    margin-top: 30px;
+.home h1 {
+    font-size: 31.5px;
 }
 
 a, a.active, a:hover, a.hover, a.visited, a:visited, a.link, a:link{ color: #0088cc;}#wrap{ color: #333333; }
@@ -93,14 +93,5 @@ body, input, button, select, textarea, .search-query {font-family: Open Sans;}
 @media (min-width: 768px) {
     .span6.quote {
         font-size: 40px;
-    }
-}
-
-@media screen {
-    html { margin-top: 32px !important; }
-    * html body { margin-top: 32px !important; }
-    @media screen and ( max-width: 782px ) {
-        html { margin-top: 46px !important; }
-        * html body { margin-top: 46px !important; }
     }
 }
