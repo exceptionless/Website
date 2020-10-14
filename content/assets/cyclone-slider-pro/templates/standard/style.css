@@ -59,7 +59,7 @@
 .cycloneslider-template-standard .cycloneslider-prev,
 .cycloneslider-template-standard .cycloneslider-next{
 	position: absolute;
-	top: 250px;
+	top: 150px;
 	height: 36px;
 	width: 30px;
 	background: #555;
@@ -194,6 +194,7 @@
 }
 
 #sliderRow {
+	margin-top: 30px;
 	background:#F1F1F1;
 	border-bottom:1px solid #ddd;
 	min-height:320px;

@@ -6254,7 +6254,7 @@ h4 {
 .cycloneslider-prev, .cycloneslider-next {
     cursor: pointer;
     position: absolute;
-    top: 250px;
+    top: 150px;
     height: 36px;
     width: 30px;
     z-index: 160;
