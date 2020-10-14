@@ -1,8 +1,11 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const slugify = require('slugify')
+const slugify = require('slugify');
+const embedEverything = require("eleventy-plugin-embed-everything");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(embedEverything);
+
   eleventyConfig.addPassthroughCopy("content/assets");
   eleventyConfig.addPassthroughCopy("content/favicon.ico");
   eleventyConfig.addPassthroughCopy("content/**/*.jpg");

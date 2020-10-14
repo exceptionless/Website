@@ -25,19 +25,9 @@ We are a developer tool, and as such, performance is important. .NET 5.0 allows 
 
 The .NET team's focus on pushing the boundaries of garbage collection was an important factor for us. GC is such a critical component to performance, and it impacts almost everything within the framework. We were excited to see the [focus Microsoft put on continuing to improve performance](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/#gc) in this area and felt the gains were enough to really tilt us towards our production release of Exceptionless using .NET 5.0.
 
-As a quick, visual example, of other improvements, here's a table Ben Adams tweeted that gives us glimpse into the performance gains of .NET 5.0 over .NET 3.1: <figure class="wp-block-embed-twitter wp-block-embed is-type-rich is-provider-twitter">
+As a quick, visual example, of other improvements, here's a table Ben Adams tweeted that gives us glimpse into the performance gains of .NET 5.0 over .NET 3.1
 
-<div class="wp-block-embed__wrapper">
-  <div class="entry-content-asset">
-    <blockquote class="twitter-tweet" data-width="550" data-dnt="true">
-      <p lang="en" dir="ltr">
-        On <a href="https://twitter.com/TFBenchmarks?ref_src=twsrc%5Etfw">@TFBenchmarks</a> upgrading to .NET 5.0 (rc1)<br />(netcoreapp3.1 => net5.0)<br /><br />Middleware is now faster than Platform was, and Platform is now much faster <a href="https://twitter.com/hashtag/aspnetcore?src=hash&ref_src=twsrc%5Etfw">#aspnetcore</a> <a href="https://twitter.com/hashtag/dotnet?src=hash&ref_src=twsrc%5Etfw">#dotnet</a> <a href="https://t.co/93mmYhBYjw">pic.twitter.com/93mmYhBYjw</a>
-      </p>&mdash; Ben Adams #BLM (@ben_a_adams)
-
-      <a href="https://twitter.com/ben_a_adams/status/1306817978927902720?ref_src=twsrc%5Etfw">September 18, 2020</a>
-    </blockquote>
-  </div>
-</div></figure>
+https://twitter.com/ben_a_adams/status/1306817978927902720
 
 ## New C# Features
 
