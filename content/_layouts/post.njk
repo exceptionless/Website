@@ -1,4 +1,24 @@
 ---
-layout: content
+layout: default
 ---
 
+<div class="page-header margin-top">
+  <h1>Post</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+        <header>
+          <h1 class="entry-title">{{ title }}</h1>
+        </header>
+        <div class="entry-content">
+        
+          {{ content | safe }}
+                      
+        </div>
+      </article>
+    </div>
+  </div>
+</div>

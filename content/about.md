@@ -3,7 +3,7 @@ title: About Us
 layout: content-well
 ---
 
-![Exceptionless Logo](http://exceptionless.com/assets/exceptionless-logoBLK-300x75.png)
+![Exceptionless Logo](/assets/exceptionless-logoBLK-300x75.png)
 
 Exceptionless is a privately-held software company, established in 2013, specializing in the creation of software tools that help developers fight errors within their apps.
 
