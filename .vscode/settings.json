@@ -5,6 +5,7 @@
         "Foundatio",
         "Kubernetes",
         "Minio",
+        "OWIN",
         "Serilog",
         "Varorbc",
         "edwardmeng",

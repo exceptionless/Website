@@ -89,12 +89,12 @@ Here we have tons of important request info:
 * Process Name
 * Command Line
 * Client Information
-    * Install Date
-    * Version
-    * Platform
-    * Submission Method
-    * Application Starts
-    * Errors Submitted
+  * Install Date
+  * Version
+  * Platform
+  * Submission Method
+  * Application Starts
+  * Errors Submitted
 
 ## How Did We Do?
 

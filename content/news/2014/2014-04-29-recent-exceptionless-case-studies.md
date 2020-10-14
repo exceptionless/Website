@@ -25,9 +25,9 @@ Surveys are sometimes sent out to users, and we wanted to share a few recent res
 * What is the **number one internal bug** that Exceptionless has helped you track down? Can you give us a brief description of the bug and how you solved it?
 
 * **User 1:** N/A
-* **User 2:** "...a small number of situations where our code doesn’t correctly handle empty recordsets (that is, where, based on the specific query string parameters in the URL, no corresponding records are found in the database and the page is expecting that there will always be records to display)."
+* **User 2:** "...a small number of situations where our code doesn’t correctly handle empty record sets (that is, where, based on the specific query string parameters in the URL, no corresponding records are found in the database and the page is expecting that there will always be records to display)."
 
-* What is the **number one feature request** or change that you would like to see the Exceptionleass Team tackle?
+* What is the **number one feature request** or change that you would like to see the Exceptionless Team tackle?
 
 * **User 1:** "More options to filter dashboard by tags/versions/environment variables. Custom reporting, exporting to CSV file etc or other way to import them into TFS or similar."
 * **User 2:** "...my number one request is probably for additional information in daily summary emails and for a combined daily summary. Notification defaults and moving notification settings out of the project setup is probably a close second; or perhaps the ability to add comments when marking an issue as fixed would be my second highest feature request."

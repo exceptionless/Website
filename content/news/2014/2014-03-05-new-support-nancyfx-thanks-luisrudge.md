@@ -16,7 +16,7 @@ As a token of our appreciation, Luis received a free year of hosting! Thanks aga
 
 > "Nancy is a lightweight, low-ceremony, framework for building HTTP based services on .Net and Mono. The goal of the framework is to stay out of the way as much as possible and provide a super-duper-happy-path to all interactions."
 
-* Buit from the ground up (not simply a DSL on another framework)
+* Built from the ground up (not simply a DSL on another framework)
 * Removed underlying framework limitations and feature hacks
 * Removed need to reference assemblies you don't need, keeping things light
 * Ability to run anywhere, including ASP.NET/IIS, WCF, self hosted, and any OWIN out of the box

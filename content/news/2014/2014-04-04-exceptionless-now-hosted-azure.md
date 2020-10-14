@@ -16,7 +16,7 @@ We completed the move last week and, except for a few small hiccups that were qu
 
 ### Bring on the errors!
 
-As our user base continues to expand, the first priority is to continue providing the best service possible. Azure allows us to guarantee scaleability, and has already proven to be **much** faster and more responsive. We're ready for whatever you can throw at us.
+As our user base continues to expand, the first priority is to continue providing the best service possible. Azure allows us to guarantee scalability, and has already proven to be **much** faster and more responsive. We're ready for whatever you can throw at us.
 
 ### Focus
 
