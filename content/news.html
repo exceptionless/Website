@@ -9,13 +9,7 @@ pagination:
 {% for post in pagination.items %}
 <article class="post type-post status-publish format-standard">
     <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
-    <div style="margin-top: 10px; margin-bottom: 10px;">
-        <span>
-            {{ post.data.author }}
-        </span><br />
-        <hr />
-    </div>
-    {{ post.content }}
+    {{ post.templateContent | safe }}
 </article>
 {% endfor %}
 {% if pagination.pageLinks.length > 1 %}
