@@ -4,7 +4,7 @@ title: Exceptionless 1.5 Released!
 date: 2014-06-03
 tags: [ "bugs"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-8849" style="margin: 0 0 10px 20px;" src="/assets/img/news/version1.5.png" alt="Exceptionless Version 1.5" width="175" height="88" data-id="8849" />While we're [on the march to Exceptionless 2.0](/exceptionless-2-in-the-making/ "Exceptionless 2.0 – In the Making"), we're still making updates and fixing bugs on version 1. Today, we'd like to announce that Exceptionless 1.5 has been released, which includes several server changes and bug fixes, as well as major client code base optimization.
+![Exceptionless Version 1.5](/assets/img/news/version1.5.png)While we're [on the march to Exceptionless 2.0](/exceptionless-2-in-the-making/ "Exceptionless 2.0 – In the Making"), we're still making updates and fixing bugs on version 1. Today, we'd like to announce that Exceptionless 1.5 has been released, which includes several server changes and bug fixes, as well as major client code base optimization.
 
 Please **update your client to version 1.5** and take a look at the other changes and bug fixes, below. We've done quite a bit of work to notifications, added throttling to improve coverage on small and free plans, and improved performance in a few places.<!--more-->
 

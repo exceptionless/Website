@@ -3,7 +3,7 @@ id: 12474
 title: Filter Your Exceptions in Version 2.0 - Video Demo
 date: 2014-12-07
 ---
-<img loading="lazy" class="alignright size-medium wp-image-12475" style="margin-left: 15px;" src="/assets/img/news/tag-filter2-resized.gif" alt="ElasticSearch Exceptionless Filter Demo" width="300" height="150" data-id="12475" />If you've used Exceptionless, chances are a **search or filter system** would have helped you out more than once. We know, and we agree! That's why we've made it a priority with Exceptionless 2.0, which is coming very soon.
+![ElasticSearch Exceptionless Filter Demo](/assets/img/news/tag-filter2-resized.gif)If you've used Exceptionless, chances are a **search or filter system** would have helped you out more than once. We know, and we agree! That's why we've made it a priority with Exceptionless 2.0, which is coming very soon.
 
 To expand on our previous "[Exceptionless 2.0 User Interface FIRST LOOK](/exceptionless-2-0-user-interface-first-look/ "Exceptionless 2.0 User Interface FIRST LOOK")" article, we want to give everyone a little bit more of a look at the filtering system. This demo isn't anything super fancy, but it gives you a good idea of how easy and fast it will be to filter and search through your event data.
 

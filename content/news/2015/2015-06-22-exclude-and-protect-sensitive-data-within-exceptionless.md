@@ -3,7 +3,7 @@ id: 13353
 title: Exclude and Protect Sensitive Data within Exceptionless
 date: 2015-06-22
 ---
-<img loading="lazy" class="alignright wp-image-13354 size-full" src="/assets/img/news/data-exclusions.png" alt="Exceptionless Data Exclusions for Security" width="260" height="167" data-id="13354" />We realize you may have sensitive data that could potentially be transmitted within an Exceptionless error, event, log message, etc.
+![Exceptionless Data Exclusions for Security](/assets/img/news/data-exclusions.png)We realize you may have sensitive data that could potentially be transmitted within an Exceptionless error, event, log message, etc.
 
 In order to help make sure that information is not compromised, we have included a [simple comma delimited field for data exclusions](http://docs.exceptionless.com/contents/security/) on the Exceptionless Project Settings page where you can add field names that you would like to be excluded from any error or event that is reported.
 
@@ -31,7 +31,7 @@ To be extra careful with your data, using * allows you to specify wildcards that
 
 ### Example
 
-<img loading="lazy" class="aligncenter wp-image-13355 size-full" src="/_site/assets/img/news/data-exclusion-examples.png" alt="Exceptionless Security" width="520" height="44" data-id="13355" srcset="/assets/data-exclusion-examples.png 520w, /assets/data-exclusion-examples-300x25.png 300w" sizes="(max-width: 520px) 100vw, 520px" />
+![Exceptionless Security](/assets/img/news/data-exclusion-examples.png)
 
 One potential example is, let’s say, user addresses. Perhaps you have multiple user addresses that may get transmitted, and you want to exclude some or all of them. Maybe you have "HomeAddress" and "WorkAddress".
 

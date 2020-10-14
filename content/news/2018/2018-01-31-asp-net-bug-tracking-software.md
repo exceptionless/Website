@@ -3,7 +3,7 @@ id: 16098
 title: ASP.NET Bug Tracking Software
 date: 2018-01-31
 ---
-<img loading="lazy" data-id="16101"  src="/assets/img/news/asp-net-bug-tracking-software-platform-1024x538.jpg" alt="asp.net bug tracking software platform" width="940" height="494" class="aligncenter size-large wp-image-16101" srcset="/assets/asp-net-bug-tracking-software-platform-1024x538.jpg 1024w, /assets/asp-net-bug-tracking-software-platform-300x158.jpg 300w, /assets/asp-net-bug-tracking-software-platform-768x403.jpg 768w, /assets/asp-net-bug-tracking-software-platform.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+![asp.net bug tracking software platform](/assets/img/news/asp-net-bug-tracking-software-platform-1024x538.jpg)
 
 Bug tracking. Two words that you’ll never be able to escape as a developer. Our goal as developers is to always create a high quality product with pristine code, but let’s face it, nobody’s perfect and accidents happen. Bugs are going to pop up no matter how hard we work or how much we plan ahead. They’re an inevitable part of the job and the more complex your project becomes, the more likely unexpected bugs are to start popping up.<!--more-->
 

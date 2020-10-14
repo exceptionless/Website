@@ -4,7 +4,7 @@ title: Fork Us! Exceptionless Goes Open Source
 date: 2014-02-18
 tags: [ "open source"]
 ---
-**<img loading="lazy" class="alignright  wp-image-2845" alt="Octocat" src="/assets/img/news/Octocat-300x249.png" width="240" height="199" data-id="2845" srcset="/assets/Octocat-300x249.png 300w, /assets/Octocat.png 800w" sizes="(max-width: 240px) 100vw, 240px" />It's a big day at Exceptionless.**
+**<img loading="lazy" class="alignright  wp-image-2845" alt="Octocat" src="/assets/img/news/Octocat-300x249.png" width="240" height="199" data-id="2845" srcset="/assets/img/Octocat-300x249.png 300w, /assets/Octocat.png 800w" sizes="(max-width: 240px) 100vw, 240px" />It's a big day at Exceptionless.**
 
 We are super excited to announce that we are <a title="Exceptionless on GitHub" href="https://github.com/exceptionless/Exceptionless" target="_blank">open sourcing the Exceptionless code</a>! That's right, now you can hack on our real-time error reporting tool yourself.
 

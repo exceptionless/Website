@@ -3,7 +3,7 @@ id: 12695
 title: Exceptionless 2.0 Live Preview! Do You Want to Build a Sandbox?
 date: 2015-02-11
 ---
-<img loading="lazy" class="alignright size-full wp-image-12697" style="margin-left: 20px;" src="/assets/img/news/exceptionless-sandbox.png" alt="exceptionless-sandbox" width="174" height="155" data-id="12697" />Oh boy! We're ready for you guys to beat on Exceptionless 2.0 in a sandbox environment!
+![exceptionless-sandbox](/assets/img/news/exceptionless-sandbox.png)Oh boy! We're ready for you guys to beat on Exceptionless 2.0 in a sandbox environment!
 
 We've made you wait, and everyone has done so quite patiently, but now it's officially time to check out V2.0 for yourself.
 
@@ -11,7 +11,7 @@ We're super excited, but we also <span style="color: #ff0000;">**need your help
 
 ## You Can Be.Exceptionless<figure id="attachment_12699" class="thumbnail wp-caption alignright" style="width: 300px">
 
-<a href="/assets/img/news/sandbox-preview.jpg" rel="attachment wp-att-12699"><img loading="lazy" class="wp-image-12699 size-medium" src="/assets/sandbox-preview-300x183.jpg" alt="Exceptionless 2.0 Dashboard Preview" width="300" height="183" data-id="12699" srcset="/assets/sandbox-preview-300x183.jpg 300w, /assets/sandbox-preview-1024x623.jpg 1024w, /assets/sandbox-preview.jpg 1280w" sizes="(max-width: 300px) 100vw, 300px" /></a><figcaption class="caption wp-caption-text">Exceptionless 2.0 Dashboard Preview</figcaption></figure>
+<a href="/assets/img/news/sandbox-preview.jpg" rel="attachment wp-att-12699">![Exceptionless 2.0 Dashboard Preview](/assets/img/sandbox-preview-300x183.jpg)</a><figcaption class="caption wp-caption-text">Exceptionless 2.0 Dashboard Preview</figcaption></figure>
 
 **Simply...**
 

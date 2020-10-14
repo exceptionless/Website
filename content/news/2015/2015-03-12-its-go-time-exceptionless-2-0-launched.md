@@ -3,7 +3,7 @@ id: 12749
 title: IT'S GO TIME - Exceptionless 2.0 Launched!
 date: 2015-03-12
 ---
-<img loading="lazy" class="alignright size-full wp-image-12751" src="/assets/img/news/version-2.0-launched.png" alt="version-2.0-launched" width="174" height="155" data-id="12751" />Today, after much development and [weeks of live user testing and feedback](#preview), we have officially released Exceptionless 2.0 into the wild!
+![version-2.0-launched](/assets/img/news/version-2.0-launched.png)Today, after much development and [weeks of live user testing and feedback](#preview), we have officially released Exceptionless 2.0 into the wild!
 
 Users will notice a completely new interface and experience **numerous new features and improvements**, highlighted below. Existing users that <a title="Update Exceptionless Client to 2.0" href="http://docs.exceptionless.com/contents/upgrading/" target="_blank">update their clients</a> (not required) will experience improved client efficiency, the ability to send us logs, and more. We believe 2.0 will usher in a new era in event reporting and logging, becoming a true asset to developers everywhere.
 
@@ -29,7 +29,7 @@ Follow these quick and easy steps below to update your Exceptionless client to 
 
 ### Check out these awesome new and improved features<figure id="attachment_12762" class="thumbnail wp-caption alignright" style="width: 150px">
 
-[<img loading="lazy" class="wp-image-12762 size-thumbnail" src="/assets/img/news/version-2-launch-screenshot-150x150.jpg" alt="Exceptionless 2.0 Screenshot" width="150" height="150" data-id="12762" />](/assets/version-2-launch-screenshot.jpg)<figcaption class="caption wp-caption-text">Version 2.0 Screenshot</figcaption></figure>
+[![Exceptionless 2.0 Screenshot](/assets/img/news/version-2-launch-screenshot-150x150.jpg)](/assets/img/version-2-launch-screenshot.jpg)<figcaption class="caption wp-caption-text">Version 2.0 Screenshot</figcaption></figure>
 
 Exceptionless 2.0 is faster, sleeker, mobile-friendly, more functional, includes all the below major improvements, and has countless smaller tweaks and changes we poured our heart and soul into. It's a whole new system - check it out!
 

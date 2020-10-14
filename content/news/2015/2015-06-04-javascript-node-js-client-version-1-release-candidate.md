@@ -4,7 +4,7 @@ title: JavaScript &#038; Node.js Client Version 1 Release Candidate
 date: 2015-06-04
 tags: [ "javascript", "node.js"]
 ---
-<img loading="lazy" class="aligncenter wp-image-13283 size-full" src="/_site/assets/img/news/javascript-release-candidate.jpg" alt="Exceptionless JavaScript Client" width="708" height="250" data-id="13281" srcset="/assets/javascript-release-candidate.jpg 708w, /assets/javascript-release-candidate-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+![Exceptionless JavaScript Client](/assets/img/news/javascript-release-candidate.jpg)
 
 If you've been following along the last few weeks, you know we've been working hard to get the new <a href="/javascript-client-available-for-preview-testing/" target="_blank">JavaScript Client</a> up to speed and ready for a version 1 release.
 

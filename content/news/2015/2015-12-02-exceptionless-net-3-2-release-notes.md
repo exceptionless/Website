@@ -3,7 +3,7 @@ id: 13847
 title: Exceptionless.NET 3.2 Release Notes
 date: 2015-12-02
 ---
-<img loading="lazy" class="alignright wp-image-2978" style="margin-left: 15px;" src="/assets/img/news/exceptionless-logoBLK.png" alt="Exceptionless Logo" width="360" height="90" data-id="2978" srcset="/assets/exceptionless-logoBLK.png 1000w, /assets/exceptionless-logoBLK-300x75.png 300w" sizes="(max-width: 360px) 100vw, 360px" />The .NET Exceptionless client has received **several improvements** and **some bug fixes** in version 3.2. Details below!
+![Exceptionless Logo](/assets/img/news/exceptionless-logoBLK.png)The .NET Exceptionless client has received **several improvements** and **some bug fixes** in version 3.2. Details below!
 
 A special shout-out to <a href="https://github.com/airwareic" target="_blank">@airwareic</a>, <a href="https://github.com/srijken" target="_blank">@srijken</a>, <a href="https://github.com/xbelt" target="_blank">@xbelt</a>, and <a href="https://github.com/mgnslndh" target="_blank">@mgnslndh</a> for contributing and helping make this release happen. **You guys rock!**
 

@@ -4,7 +4,7 @@ title: JavaScript / Node.js Client V1 Release Notes
 date: 2015-06-09
 tags: [ "node.js"]
 ---
-<img loading="lazy" class="alignright size-medium wp-image-2978" style="margin-left: 20px;" src="/assets/img/news/exceptionless-logoBLK-300x75.png" alt="Exceptionless Logo" width="300" height="75" data-id="2978" srcset="/assets/exceptionless-logoBLK-300x75.png 300w, /assets/exceptionless-logoBLK.png 1000w" sizes="(max-width: 300px) 100vw, 300px" />Last week we announced the <a href="/javascript-node-js-client-version-1-release-candidate/" target="_blank">V1 release candidate</a> for the Exceptionless JavaScript/Node.js Client. This week we've got official release notes for you! Have a look.
+![Exceptionless Logo](/assets/img/news/exceptionless-logoBLK-300x75.png)Last week we announced the <a href="/javascript-node-js-client-version-1-release-candidate/" target="_blank">V1 release candidate</a> for the Exceptionless JavaScript/Node.js Client. This week we've got official release notes for you! Have a look.
 
 ## Release Notes
 

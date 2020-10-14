@@ -4,7 +4,7 @@ title: Exceptionless Case Study - Scientific Lab Equipment
 date: 2015-06-29
 tags: [ "Case Study"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-13383" src="/assets/img/news/blog-header-image-small-case-study.png" alt="blog-header-image-small-case-study" width="260" height="260" data-id="13383" srcset="/assets/blog-header-image-small-case-study.png 260w, /assets/blog-header-image-small-case-study-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />It's always great to hear back from our users, whether it's a simple "atta boy" or a full page's worth of feedback.
+![blog-header-image-small-case-study](/assets/img/news/blog-header-image-small-case-study.png)It's always great to hear back from our users, whether it's a simple "atta boy" or a full page's worth of feedback.
 
 Today we thought it would be nice to share a recent case study from one of our users that lives in the scientific laboratory and processing equipment space. Their company is a leading provider of stirring, mixing, and kneading machines, among other things, that are used by the pharmaceutical, chemical, food, paint, cosmetic, and plastics industries around the world. Neat!
 

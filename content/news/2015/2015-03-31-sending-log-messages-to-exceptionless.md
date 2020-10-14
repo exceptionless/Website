@@ -3,7 +3,7 @@ id: 12885
 title: Sending Log Messages to Exceptionless
 date: 2015-03-31
 ---
-<img loading="lazy" class="alignright wp-image-12886 size-full" style="margin-left: 15px;" src="/assets/img/news/log-messages.png" alt="Exceptionless Log Message Events" width="199" height="200" data-id="12886" srcset="/assets/log-messages.png 199w, /assets/log-messages-150x150.png 150w" sizes="(max-width: 199px) 100vw, 199px" />We're all about exceptions, but sometimes, as developers, we run into bugs that don't throw them but still cause major havoc in the system. There are also times we just need to record an event with a custom message to help track down bottlenecks, etc.
+![Exceptionless Log Message Events](/assets/img/news/log-messages.png)We're all about exceptions, but sometimes, as developers, we run into bugs that don't throw them but still cause major havoc in the system. There are also times we just need to record an event with a custom message to help track down bottlenecks, etc.
 
 That's where Exceptionless meets log messages.
 
@@ -41,7 +41,7 @@ We recommend specifying one of the following log levels, all of which add a vis
 
 Here's a screenshot of what the visual indicators for the different types of log levels look like.
 
-[<img loading="lazy" class="aligncenter wp-image-12887 size-full" src="/assets/img/news/log-messages-log-level.png" alt="Exceptionless Log Message Preview" width="813" height="537" data-id="12887" srcset="/assets/log-messages-log-level.png 813w, /assets/log-messages-log-level-300x198.png 300w" sizes="(max-width: 813px) 100vw, 813px" />](/assets/log-messages-log-level.png)
+[![Exceptionless Log Message Preview](/assets/img/news/log-messages-log-level.png)](/assets/log-messages-log-level.png)
 
 #### You can also add additional information using our fluent API.
 
@@ -125,7 +125,7 @@ The Log Messages Dashboard makes it easy to see log occurrences. You can keep tr
 
 For metrics, we have created an <a href="https://github.com/exceptionless/Foundatio" target="_blank">open source metrics library called Foundatio</a>. We use it for Exceptionless, and think you will find it extremely helpful as well. Check it out! We'll be posting an article on Foundatio soon, so check back.
 
-## [<img loading="lazy" class="aligncenter size-full wp-image-12889" src="/assets/img/news/log-messages-dashboard.png" alt="log-messages-dashboard" width="796" height="867" data-id="12889" srcset="/assets/log-messages-dashboard.png 796w, /assets/log-messages-dashboard-275x300.png 275w" sizes="(max-width: 796px) 100vw, 796px" />](/assets/log-messages-dashboard.png)
+## [![log-messages-dashboard](/assets/img/news/log-messages-dashboard.png)](/assets/log-messages-dashboard.png)
 How Are You Liking Exceptionless 2.0?
 
 We think we've added some pretty cool features to Exceptionless 2.0, including logging, but you are the ultimate judge. What's good? What's bad? What's missing? Let us know via a comment on the blog, social media, in-app, or however else you want to get in touch!

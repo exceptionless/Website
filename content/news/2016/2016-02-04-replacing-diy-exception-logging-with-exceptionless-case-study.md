@@ -3,7 +3,7 @@ id: 14069
 title: Replacing DIY Exception Logging with Exceptionless - Case Study
 date: 2016-02-04
 ---
-<a href="https://referralrock.com" rel="attachment wp-att-14073" target="_blank"><img loading="lazy" class="alignright size-full wp-image-14073" style="margin-left: 20px;" src="/assets/img/news/referral-rock-logo.png" alt="referral-rock-logo" width="222" height="108" data-id="14073" /></a>Today we bring you a case study from the founder of <a href="https://referralrock.com" target="_blank">Referral Rock</a> and serial entrepreneur, **Joshua Ho**.
+<a href="https://referralrock.com" rel="attachment wp-att-14073" target="_blank">![referral-rock-logo](/assets/img/news/referral-rock-logo.png)</a>Today we bring you a case study from the founder of <a href="https://referralrock.com" target="_blank">Referral Rock</a> and serial entrepreneur, **Joshua Ho**.
 
 Referral Rock is a referral platform for small businesses that Josh created after he "... **realized small businesses lacked the tools to <a href="https://referralrock.com/blog/referral-programs-101-everything-you-need-to-build-a-referral-marketing-program/" target="_blank">make a customer referral program work</a>.**" The app allows businesses to easily and effectively create, implement, and administer a rock-solid referral program to help grow their business.
 

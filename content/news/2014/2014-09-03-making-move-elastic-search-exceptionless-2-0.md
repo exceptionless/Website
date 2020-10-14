@@ -4,7 +4,7 @@ title: Making the Move to Elasticsearch for Exceptionless 2.0
 date: 2014-09-03
 tags: [ "new features"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-10110" style="margin-left: 15px;" src="/assets/img/news/Screenshot-2014-09-03-15.03.16.png" alt="Screenshot 2014-09-03 15.03.16" width="211" height="68" data-id="10110" />We know you've thought about it when using Exceptionless, and many developers have submitted formal requests. **Search**.
+![Screenshot 2014-09-03 15.03.16](/assets/img/news/Screenshot-2014-09-03-15.03.16.png)We know you've thought about it when using Exceptionless, and many developers have submitted formal requests. **Search**.
 
 You need it, and we want to provide it. That's why we've decided to integrate Elasticsearch into 2.0, and it's going to be awesome!
 

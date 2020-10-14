@@ -3,7 +3,7 @@ id: 13710
 title: Introducing Foundatio 3.0! Now with Async &#038; Increased Efficiency
 date: 2015-10-22
 ---
-<img loading="lazy" class="alignright size-full wp-image-13931" style="margin-left: 15px;" src="/assets/img/news/foundatio-blog-header-image-small.png" alt="Foundatio 3.0" width="260" height="260" data-id="13931" />Foundatio is a pluggable, scalable, painless, open source solution for caching, queues, locks, messaging, jobs, file storage, and metrics in your app.
+![Foundatio 3.0](/assets/img/news/foundatio-blog-header-image-small.png)Foundatio is a pluggable, scalable, painless, open source solution for caching, queues, locks, messaging, jobs, file storage, and metrics in your app.
 
 In Version 3.0, we've made several improvements, including, as promised in our <a href="/foundatio-pluggable-blocks-building-distributed-apps/" target="_blank">initial Foundatio blog post</a>, going full async.
 

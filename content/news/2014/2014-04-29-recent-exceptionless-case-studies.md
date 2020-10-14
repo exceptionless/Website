@@ -4,7 +4,7 @@ title: A Few Recent Exceptionless Case Studies
 date: 2014-04-29
 tags: [ "Case Study"]
 ---
-[<img loading="lazy" class=" wp-image-1226 alignright" style="margin-left: 20px; margin-right: 20px;" alt="Error Stack Dashboard" src="/assets/img/news/error-stack-300x264.jpg" width="180" height="158" data-id="1226" srcset="/assets/error-stack-300x264.jpg 300w, /assets/error-stack.jpg 800w" sizes="(max-width: 180px) 100vw, 180px" />](/assets/error-stack.jpg)
+[<img loading="lazy" class=" wp-image-1226 alignright" style="margin-left: 20px; margin-right: 20px;" alt="Error Stack Dashboard" src="/assets/img/news/error-stack-300x264.jpg" width="180" height="158" data-id="1226" srcset="/assets/img/error-stack-300x264.jpg 300w, /assets/error-stack.jpg 800w" sizes="(max-width: 180px) 100vw, 180px" />](/assets/error-stack.jpg)
 
 We like to know how Exceptionless is helping its users, and we love it when we get feedback! Every once in a while, we like to share a story or two so we can drive home the benefits of having a real-time exception logging service tied into code projects.
 

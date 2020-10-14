@@ -4,7 +4,7 @@ title: New Client Releases Focus on Sessions, Real Time Configuration, and Loggi
 date: 2016-05-19
 tags: [ ".NET"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-14451" src="/assets/img/news/net-3.5.0-js-1.4.0.png" alt="net-3.5.0-js-1.4.0" width="260" height="260" data-id="14451" srcset="/.png 260w, /assets/net-3.5.0-js-1.4./"(max-width: 260px) 100vw, 260px" />Exceptionless.NET v3.5.0 and Exceptionless.JavaScript v1.4.0 have been released and they are chock full of **new features and feature improvements!**
+![net-3.5.0-js-1.4.0](/assets/img/news/net-3.5.0-js-1.4.0.png)Exceptionless.NET v3.5.0 and Exceptionless.JavaScript v1.4.0 have been released and they are chock full of **new features and feature improvements!**
 
 There weren't a whole lot of bug fixes with these releases. Could it be that Exceptionless is working and we've squelched most of the bugs? We think so!
 

@@ -3,7 +3,7 @@ id: 13459
 title: Exceptionless V3.0 - Changes to the Build Process, Dependencies, and Self Hosting
 date: 2015-07-23
 ---
-<img loading="lazy" class="alignright size-full wp-image-13461" src="/assets/img/news/version-3-featured.png" alt="version-3-featured" width="260" height="260" data-id="13461" srcset="/assets/version-3-featured.png 260w, /assets/version-3-featured-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />Version 2.0 was a pretty big rewrite for us, and we're happy with how everything played out, but that doesn't mean we're done!
+![version-3-featured](/assets/img/news/version-3-featured.png)Version 2.0 was a pretty big rewrite for us, and we're happy with how everything played out, but that doesn't mean we're done!
 
 We've been working on 3.0, and it's ready.
 

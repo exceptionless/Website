@@ -3,7 +3,7 @@ id: 13715
 title: Exceptionless JavaScript Client V1.1.0 Release
 date: 2015-10-26
 ---
-<img loading="lazy" class="alignright size-medium wp-image-13683" src="/assets/img/news/blog-header-image-post2b-300x106.png" alt="Exceptionless JavaScript Client" width="300" height="106" data-id="13683" srcset="/assets/blog-header-image-post2b-300x106.png 300w, /assets/blog-header-image-post2b.png 708w" sizes="(max-width: 300px) 100vw, 300px" />We've been hard at work on several things here at Exceptionless, including a minor version release of our [JavaScript Client](https://github.com/exceptionless/Exceptionless.JavaScript)!
+![Exceptionless JavaScript Client](/assets/img/news/blog-header-image-post2b-300x106.png)We've been hard at work on several things here at Exceptionless, including a minor version release of our [JavaScript Client](https://github.com/exceptionless/Exceptionless.JavaScript)!
 
 Please see the details of this release below.
 

@@ -4,7 +4,7 @@ title: Universal JavaScript Support Added to Exceptionless.JavaScript
 date: 2017-08-30
 tags: [ "javascript", "react"]
 ---
-<img loading="lazy" class="aligncenter size-large wp-image-15833" src="/assets/img/news/universal-javascript-1024x538.jpg" alt="Exceptionless Universal JavaScript" width="940" height="494" data-id="15833" srcset="/assets/universal-javascript-1024x538.jpg 1024w, /assets/universal-javascript-300x158.jpg 300w, /assets/universal-javascript-768x403.jpg 768w, /assets/universal-javascript.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+![Exceptionless Universal JavaScript](/assets/img/news/universal-javascript-1024x538.jpg)
 
 Recently, we released [Exceptionless.JavaScript 1.5](/javascript-client-v1-5-release-details-notes/). The major update for the release was the addition of universal JavaScript (React Universal) support! More details below. The key is that we can now run in server side node apps, or in the browser, with a single script and do the right thing!
 

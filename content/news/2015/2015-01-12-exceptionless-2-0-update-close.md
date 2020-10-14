@@ -4,7 +4,7 @@ title: Exceptionless 2.0 Update - SO CLOSE!
 date: 2015-01-12
 tags: [ "new features"]
 ---
-<img loading="lazy" class="alignright size-medium wp-image-12627" style="margin-left: 15px; margin-top: 7px;" src="/assets/img/news/exceptionless-2.0-screenshot-300x171.png" alt="Exceptionless Error Logging Service" width="300" height="171" data-id="12627" srcset="/assets/exceptionless-2.0-screenshot-300x171.png 300w, /assets/exceptionless-2.0-screenshot.png 698w" sizes="(max-width: 300px) 100vw, 300px" />We know, we know... It's been a while since our last update. As so often is the case, the holidays took their toll on work and waists here at Exceptionless over the past few months. However, we're not slacking too bad. In fact, we've got a small update on Exceptionless 2.0 that proves it's hasn't been all turkey and naps!
+![Exceptionless Error Logging Service](/assets/img/news/exceptionless-2.0-screenshot-300x171.png)We know, we know... It's been a while since our last update. As so often is the case, the holidays took their toll on work and waists here at Exceptionless over the past few months. However, we're not slacking too bad. In fact, we've got a small update on Exceptionless 2.0 that proves it's hasn't been all turkey and naps!
 
 In general, the primary features and functionality of the new version are complete and we are in the testing, bug fix, and tweaking phase before we officially launch a production environment and begin orchestrating the process of data migration and rolling users over into the new system.<!--more-->
 

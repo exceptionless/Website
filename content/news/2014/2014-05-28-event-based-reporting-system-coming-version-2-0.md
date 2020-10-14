@@ -3,7 +3,7 @@ id: 8581
 title: Event Based Reporting System Coming in Version 2.0
 date: 2014-05-28
 ---
-[<img loading="lazy" class="alignright  wp-image-8584" src="/assets/img/news/errors-only.png" alt="Event Based Reporting System" width="128" height="123" data-id="8584" />](/assets/errors-only.png)We <a title="Exceptionless 2.0 – In the Making" href="/exceptionless-2-in-the-making/" target="_blank">hinted </a>that more details on the upcoming Exceptionless 2.0 release would get announced soon, and here we are! Lets dive in a bit further, shall we?
+[![Event Based Reporting System](/assets/img/news/errors-only.png)](/assets/img/errors-only.png)We <a title="Exceptionless 2.0 – In the Making" href="/exceptionless-2-in-the-making/" target="_blank">hinted </a>that more details on the upcoming Exceptionless 2.0 release would get announced soon, and here we are! Lets dive in a bit further, shall we?
 
 Many users have asked for ways to use Exceptionless to report additional types of events, rather than just errors. With version 2.0, we are moving to an event based system that will accommodate such requests.<!--more-->
 
@@ -11,7 +11,7 @@ Many users have asked for ways to use Exceptionless to report additional types o
 
 * The new system allows us to receive literally any data people want to send us instead of only allowing errors.
 * Event posts can be as simple as this:
-    [<img loading="lazy" class="alignnone wp-image-8588 size-full" style="margin-top: 20px; margin-bottom: 20px;" src="/assets/img/news/ex-curl.png" alt="Post Event Exceptionless" width="427" height="160" data-id="8588" srcset="/assets/ex-curl.png 427w, /assets/ex-curl-300x112.png 300w" sizes="(max-width: 427px) 100vw, 427px" />](/assets/ex-curl.png)
+    [![Post Event Exceptionless](/assets/img/news/ex-curl.png)](/assets/ex-curl.png)
 * You can send log messages or even entire log files.
 * Log messages can contain extended data objects just like errors can now.
 * You can post random JSON objects and the data within them will be treated as extended data.

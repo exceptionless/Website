@@ -4,7 +4,7 @@ title: Email Logging, UI Improvements, Foundatio Updates, and more - Live Code D
 date: 2017-03-08
 tags: [ ".NET"]
 ---
-[<img loading="lazy" class="aligncenter size-large wp-image-15370" style="margin-bottom: 20px;" src="/assets/img/news/live-code-demo-170308-1024x538.jpg" alt="Exceptionless live code demo 2/20/17" width="940" height="494" data-id="15370" srcset="/assets/live-code-demo-170308-1024x538.jpg 1024w, /assets/live-code-demo-170308-300x158.jpg 300w, /assets/live-code-demo-170308-768x403.jpg 768w, /assets/live-code-demo-170308.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/xAq0E-exceptionless-weekly-demo-2-20-17/)
+[![Exceptionless live code demo 2/20/17](/assets/img/news/live-code-demo-170308-1024x538.jpg)](https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/xAq0E-exceptionless-weekly-demo-2-20-17/)
 
 Watch out this week, Blake's on fire! We're talking email loggings, UI tweaks, Exceptionless.NET updates and fixes, Foundatio updates, and Foundatio.Repositories updates. Lot's going on, let's check it out in [this week's Live Code Demo](https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/xAq0E-exceptionless-weekly-demo-2-20-17/).<!--more-->
 

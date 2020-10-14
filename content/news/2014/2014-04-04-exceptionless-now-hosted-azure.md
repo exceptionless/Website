@@ -4,7 +4,7 @@ title: Exceptionless Now Hosted on Azure
 date: 2014-04-04
 tags: [ "azure"]
 ---
-[<img loading="lazy" class="alignright size-full wp-image-4531" style="margin: 10px;" alt="Microsoft Azure" src="/assets/img/news/logo1.png" width="165" height="21" data-id="4531" />](/assets/logo1.png)As usual, we've been working on ways to improve the Exceptionless service.
+[<img loading="lazy" class="alignright size-full wp-image-4531" style="margin: 10px;" alt="Microsoft Azure" src="/assets/img/news/logo1.png" width="165" height="21" data-id="4531" />](/assets/img/logo1.png)As usual, we've been working on ways to improve the Exceptionless service.
 
 Due to growing demand for our hosted error reporting plans, we decided to move everything to the Microsoft Azure Cloud platform.
 

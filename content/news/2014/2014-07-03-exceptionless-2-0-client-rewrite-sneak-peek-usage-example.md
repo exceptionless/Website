@@ -4,7 +4,7 @@ title: Exceptionless 2.0 Client Rewrite Sneak Peek Usage Example
 date: 2014-07-03
 tags: [ "announcement"]
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-9099" src="/assets/img/news/new-client-header.jpg" alt="new-client-header" width="708" height="250" data-id="9099" srcset="/jpg 708w, /assets/new-client-header/(max-width: 708px) 100vw, 708px" />
+![new-client-header](/assets/img/news/new-client-header.jpg)
 
 As Exceptionless 2.0 continues to become a reality, we thought we would give everyone a little taste of what you will be able to do with the new, rewritten client. Continue reading for a glimpse at the primary features, along with a complete usage example for adding extra data to events.
 
@@ -21,7 +21,7 @@ After you check it out, let us know if you have questions or suggestions. We're 
 
 ### Extended event data usage example
 
-<img loading="lazy" class="aligncenter size-large wp-image-9100" src="/assets/img/news/ex-client-1024x420.png" alt="Exceptionless Code Example" width="940" height="385" data-id="9100" srcset="/.png 1024w, /assets/ex-client-300x123/nt.png 1167w" sizes="(max-width: 94/
+<img loading="lazy" class="aligncenter size-large wp-image-9100" src="/assets/img/news/ex-client-1024x420.png" alt="Exceptionless Code Example" width="940" height="385" data-id="9100" srcset="/.png 1024w, /assets/img/ex-client-300x123/nt.png 1167w" sizes="(max-width: 94/
 
 **Lets break that example down**, line by line, shall we? Check out the <a title="Exceptionless 2.0 Client Source" href="https://github.com/exceptionless/Exceptionless/tree/master/Source/Clients" target="_blank">client source</a> if you want to take a look at the complete code.
 

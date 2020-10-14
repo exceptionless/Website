@@ -4,7 +4,7 @@ title: "Case Study: Server Expiration Error for Pre-Alpha Game Release"
 date: 2014-08-21
 tags: [ "Case Study"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-9759" style="margin-left: 15px;" src="/assets/img/news/game-post.jpg" alt="game-post" width="160" height="160" data-id="9759" srcset="/assets/game-post.jpg 160w, /assets/game-post-150x150.jpg 150w" sizes="(max-width: 160px) 100vw, 160px" />Today we've got a pretty cool case study that comes to us from a game development studio!
+![game-post](/assets/img/news/game-post.jpg)Today we've got a pretty cool case study that comes to us from a game development studio!
 
 We love to see Exceptionless being used by companies with interesting projects and development pipelines, and what's more interesting than gaming, multi-server, and multi-player environments?
 

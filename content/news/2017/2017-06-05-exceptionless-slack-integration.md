@@ -15,7 +15,7 @@ Watch the video above for an explanation of the integration, and see below on ho
 
 First, go into your project's settings in the Exceptionless app and click on the Integrations tab.
 
-[<img loading="lazy" class="aligncenter wp-image-15626 size-full" src="/assets/img/news/exceptionless-slack-setup.png" alt="" width="811" height="595" data-id="15626" srcset="/assets/exceptionless-slack-setup.png 811w, /assets/exceptionless-slack-setup-300x220.png 300w, /assets/exceptionless-slack-setup-768x563.png 768w" sizes="(max-width: 811px) 100vw, 811px" />](/assets/exceptionless-slack-setup.png)
+[![](/assets/img/news/exceptionless-slack-setup.png)](/assets/exceptionless-slack-setup.png)
 
 Then, click on "Add Slack Notifications" and log in to your slack team.
 
@@ -23,11 +23,11 @@ Once logged in, you will need to select the channel you want Exceptionless Notif
 
 Once authorized, you can then configure the different notification settings by going back to the Exceptionless app and into the project's integrations tab again.
 
-[<img loading="lazy" class="aligncenter size-full wp-image-15628" src="/assets/img/news/exceptionless-slack-settings.png" alt="" width="620" height="399" data-id="15628" srcset="/assets/exceptionless-slack-settings.png 620w, /assets/exceptionless-slack-settings-300x193.png 300w" sizes="(max-width: 620px) 100vw, 620px" />](/assets/exceptionless-slack-settings.png)
+[![](/assets/img/news/exceptionless-slack-settings.png)](/assets/exceptionless-slack-settings.png)
 
 Once integrated and configured, notifications will look something like the below screenshot, with the message, type of event, stack trace, links to actions, etc.
 
-[<img loading="lazy" class="aligncenter size-full wp-image-15629" src="/assets/img/news/exceptionless-slack-example.jpg" alt="Exceptionless Slack notification" width="533" height="920" data-id="15629" srcset="/assets/exceptionless-slack-example.jpg 533w, /assets/exceptionless-slack-example-174x300.jpg 174w" sizes="(max-width: 533px) 100vw, 533px" />](/assets/exceptionless-slack-example.jpg)
+[![Exceptionless Slack notification](/assets/img/news/exceptionless-slack-example.jpg)](/assets/exceptionless-slack-example.jpg)
 
 We're excited to keep improving notifications, and would love for you guys to test this out for us.
 
