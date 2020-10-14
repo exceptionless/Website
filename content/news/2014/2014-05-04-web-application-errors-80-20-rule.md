@@ -3,7 +3,7 @@ id: 6873
 title: Web Application Errors and the 80-20 Rule
 date: 2014-05-04
 ---
-[<img loading="lazy" class="alignright  wp-image-146" style="margin-left: 20px; margin-right: 20px;" alt="Most Frequent Errors" src="/assets/most-frequent-300x262.png" width="192" height="168" data-id="146" srcset="/assets/most-frequent-300x262.png 300w, /assets/most-frequent.png 715w" sizes="(max-width: 192px) 100vw, 192px" />](/assets/most-frequent.png)You know the 80-20 rule. The one marketers, managers, bigwigs, writers, speakers, and everyone else references to tell you what to focus on or why the widgets aren't selling like they should.
+[<img loading="lazy" class="alignright  wp-image-146" style="margin-left: 20px; margin-right: 20px;" alt="Most Frequent Errors" src="/assets/img/news/most-frequent-300x262.png" width="192" height="168" data-id="146" srcset="/assets/most-frequent-300x262.png 300w, /assets/most-frequent.png 715w" sizes="(max-width: 192px) 100vw, 192px" />](/assets/most-frequent.png)You know the 80-20 rule. The one marketers, managers, bigwigs, writers, speakers, and everyone else references to tell you what to focus on or why the widgets aren't selling like they should.
 
 Well, as painful as it might be to hear the rule applied to yet another scenario, we're here today to let you know that 80-20 can be applied, in many cases, to your code's exceptions as well. <!--more-->
 

@@ -4,7 +4,7 @@ title: Exceptionless 1.4 Released
 date: 2014-03-17
 tags: [ "open source"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-3971" style="margin-left: 20px; margin-right: 20px;" alt="Exceptionless Version 1.4" src="/assets/version1.4.png" width="175" height="88" data-id="3971" />Exceptionless 1.4 brings with it both server and client changes, a new client integration, some minor updates, and lots of bug fixes. Check out the changelog items below, and let us know if you have any questions.
+<img loading="lazy" class="alignright size-full wp-image-3971" style="margin-left: 20px; margin-right: 20px;" alt="Exceptionless Version 1.4" src="/assets/img/news/version1.4.png" width="175" height="88" data-id="3971" />Exceptionless 1.4 brings with it both server and client changes, a new client integration, some minor updates, and lots of bug fixes. Check out the changelog items below, and let us know if you have any questions.
 
 We want to extend our thanks again to the developers that have worked on the project since we [went open source](/fork-us-exceptionless-goes-open-source/ "Exceptionless Goes Open Source") a few weeks ago. See their contributions below, along with links to their GitHub profiles.
 <!--more-->

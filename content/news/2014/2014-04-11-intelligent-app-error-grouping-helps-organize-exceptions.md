@@ -4,7 +4,7 @@ title: Intelligent App Error Grouping Helps Organize Your Exceptions
 date: 2014-04-11
 tags: [ "dashboard"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-4831" alt="Exception Grouping Totals" src="/assets/thumbnail.png" width="164" height="120" data-id="4831" />Having a tool like Exceptionless to report and log your software's errors is great, but many of our clients experience thousands of instances of each error over various lengths of time, which can become overwhelming quickly.
+<img loading="lazy" class="alignright size-full wp-image-4831" alt="Exception Grouping Totals" src="/assets/img/news/thumbnail.png" width="164" height="120" data-id="4831" />Having a tool like Exceptionless to report and log your software's errors is great, but many of our clients experience thousands of instances of each error over various lengths of time, which can become overwhelming quickly.
 
 We couldn't just leave them with a huge list of individual error occurrences to drudge through, so we went through several different potential options until we devised the best way to group them.<!--more-->
 
@@ -40,7 +40,7 @@ With that mindset, we decided that there were two important error details that s
 
 When we group app errors by location and type, it allows us to report error instance counts, first occurrences, frequency of occurrence, and most recent occurrence on the dashboard.<figure id="attachment_4823" class="thumbnail wp-caption alignleft" style="width: 150px">
 
-[<img loading="lazy" class="size-thumbnail wp-image-4823 " alt="Grouping Error Dashboard" src="/assets/dashboard-home-150x150.png" width="150" height="150" data-id="4823" />](/assets/dashboard-home.png)<figcaption class="caption wp-caption-text">Exceptionless Dashboard</figcaption></figure> <figure id="attachment_4825" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="size-thumbnail wp-image-4825 " alt="Error Group Details" src="/assets/group-details-150x150.png" width="150" height="150" data-id="4825" />](/assets/group-details.png)<figcaption class="caption wp-caption-text">Error Group Details</figcaption></figure>
+[<img loading="lazy" class="size-thumbnail wp-image-4823 " alt="Grouping Error Dashboard" src="/assets/img/news/dashboard-home-150x150.png" width="150" height="150" data-id="4823" />](/assets/dashboard-home.png)<figcaption class="caption wp-caption-text">Exceptionless Dashboard</figcaption></figure> <figure id="attachment_4825" class="thumbnail wp-caption alignleft" style="width: 150px">[<img loading="lazy" class="size-thumbnail wp-image-4825 " alt="Error Group Details" src="/assets/group-details-150x150.png" width="150" height="150" data-id="4825" />](/assets/group-details.png)<figcaption class="caption wp-caption-text">Error Group Details</figcaption></figure>
 
 <div style="clear: both;">
 </div>

@@ -3,7 +3,7 @@ title: Catching a Server-Side Browser Cookie Support Error - Case Study
 date: 2014-01-24
 tags: [ "Case Study"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-1959" style="margin-left:10px;" alt="Internet Explorer Cookies" src="/assets/ie-cookies.jpg" width="250" height="220" data-id="1959" />As with every new release of software, things change. And, like we all expected, there wasn't an exception to that rule when Microsoft introduced Internet Explorer 10 into the mix.
+<img loading="lazy" class="alignright size-full wp-image-1959" style="margin-left:10px;" alt="Internet Explorer Cookies" src="/assets/img/news/ie-cookies.jpg" width="250" height="220" data-id="1959" />As with every new release of software, things change. And, like we all expected, there wasn't an exception to that rule when Microsoft introduced Internet Explorer 10 into the mix.
 
 Everyone coding for the web had the normal things to worry about, of course, like design formatting, speed, and support, but one of our clients experienced something that would have taken a long time to catch if they hadn't been using Exceptionless' **real-time error reporting**.<!--more-->
 

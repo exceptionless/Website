@@ -4,7 +4,7 @@ title: Find Software Bugs with the Exceptionless JavaScript Client in Minutes
 date: 2015-09-02
 tags: [ "javascript"]
 ---
-<img loading="lazy" class="aligncenter wp-image-13683 size-full" src="/assets/blog-header-image-post2b.png" alt="Exceptionless JavaScript Client" width="708" height="250" data-id="13679" srcset="/assets/blog-header-image-post2b.png 708w, /assets/blog-header-image-post2b-300x106.png 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter wp-image-13683 size-full" src="/assets/img/news/blog-header-image-post2b.png" alt="Exceptionless JavaScript Client" width="708" height="250" data-id="13679" srcset="/assets/blog-header-image-post2b.png 708w, /assets/blog-header-image-post2b-300x106.png 300w" sizes="(max-width: 708px) 100vw, 708px" />
 If you missed our <a href="/javascript-node-js-client-version-1-release-candidate/" target="_blank">JavaScript Client announcement</a>, this is a great chance to see just how **quick and easy** the client is to install and use! You can be finding those hard to track down bugs, errors, and exceptions, as well as tracking other events and log messages, in literally minutes.
 
 We've made it super easy to get up and running, as you'll see below. Take a look and let us know what you think!

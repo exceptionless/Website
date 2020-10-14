@@ -3,7 +3,7 @@ id: 9074
 title: Coming in Exceptionless 2.0 - A Pluggable System
 date: 2014-06-25
 ---
-<img loading="lazy" style="margin-bottom:20px;" class="aligncenter size-full wp-image-9075" src="/assets/pluggable-system.jpg" alt="Pluggable System" width="708" height="250" data-id="9075" srcset="/assets/pluggable-system.jpg 708w, /assets/pluggable-system-300x105.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" style="margin-bottom:20px;" class="aligncenter size-full wp-image-9075" src="/assets/img/news/pluggable-system.jpg" alt="Pluggable System" width="708" height="250" data-id="9075" srcset="/assets/pluggable-system.jpg 708w, /assets/pluggable-system-300x105.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 In the last Exceptionless 2.0 article, we announced the upcoming <a title="More from the Upcoming Exceptionless 2.0: Simplified API" href="/upcoming-exceptionless-2-0-simplified-api/" target="_blank">simplified API</a>. Today, we want to introduce another major piece of V2.0 - the **pluggable system**.
 

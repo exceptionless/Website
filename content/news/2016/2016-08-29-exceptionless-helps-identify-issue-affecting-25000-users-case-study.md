@@ -3,7 +3,7 @@ id: 14660
 title: Exceptionless Helps Identify Issue Affecting 25,000 Users - Case Study
 date: 2016-08-29
 ---
-<img loading="lazy" class="alignright size-medium wp-image-14664" style="margin: 50px;" src="/assets/cevo-logo-300x60.png" alt="CEVO, Inc. Logo" width="200" height="40" data-id="14664" srcset="/assets/cevo-logo-300x60.png 300w, /assets/cevo-logo.png 584w" sizes="(max-width: 200px) 100vw, 200px" />Case study time!
+<img loading="lazy" class="alignright size-medium wp-image-14664" style="margin: 50px;" src="/assets/img/news/cevo-logo-300x60.png" alt="CEVO, Inc. Logo" width="200" height="40" data-id="14664" srcset="/assets/cevo-logo-300x60.png 300w, /assets/cevo-logo.png 584w" sizes="(max-width: 200px) 100vw, 200px" />Case study time!
 
 Today we've got a great example of Exceptionless helping software developers identify major issues in their web applications affecting thousands of users.
 

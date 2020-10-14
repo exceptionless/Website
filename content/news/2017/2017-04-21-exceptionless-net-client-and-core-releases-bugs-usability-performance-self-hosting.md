@@ -4,7 +4,7 @@ title: Exceptionless.NET client, core, UI,  releases - Bugs, Usability, Performa
 date: 2017-04-21
 tags: [ ".NET"]
 ---
-<img loading="lazy" class="aligncenter wp-image-15502 size-large" src="/assets/new-releases-header3-1024x538.jpg" alt="" width="940" height="494" data-id="15497" srcset="/assets/new-releases-header3-1024x538.jpg 1024w, /assets/new-releases-header3-300x158.jpg 300w, /assets/new-releases-header3-768x403.jpg 768w, /assets/new-releases-header3.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+<img loading="lazy" class="aligncenter wp-image-15502 size-large" src="/assets/img/news/new-releases-header3-1024x538.jpg" alt="" width="940" height="494" data-id="15497" srcset="/assets/new-releases-header3-1024x538.jpg 1024w, /assets/new-releases-header3-300x158.jpg 300w, /assets/new-releases-header3-768x403.jpg 768w, /assets/new-releases-header3.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
 
 This past week we released Exceptionless 4.0.2 and Exceptionless.NET 4.0.3, consisting of maintenance updates that fixed several usability issues for self hosters, various performance, issues, bug fixes, and some general improvements.<!--more-->
 

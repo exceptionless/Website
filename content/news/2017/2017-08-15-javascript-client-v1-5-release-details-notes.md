@@ -4,7 +4,7 @@ title: JavaScript Client V1.5 Release Details &#038; Notes
 date: 2017-08-15
 tags: [ "javascript", "react"]
 ---
-##<img loading="lazy" class="aligncenter size-large wp-image-15828" src="/assets/js-client-1.5-release-1024x538.jpg" alt="exceptionless.javascript 1.5" width="940" height="494" data-id="15828" srcset="/assets/js-client-1.5-release-1024x538.jpg 1024w, /assets/js-client-1.5-release-300x158.jpg 300w, /assets/js-client-1.5-release-768x403.jpg 768w, /assets/js-client-1.5-release.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
+##<img loading="lazy" class="aligncenter size-large wp-image-15828" src="/assets/img/news/js-client-1.5-release-1024x538.jpg" alt="exceptionless.javascript 1.5" width="940" height="494" data-id="15828" srcset="/assets/js-client-1.5-release-1024x538.jpg 1024w, /assets/js-client-1.5-release-300x158.jpg 300w, /assets/js-client-1.5-release-768x403.jpg 768w, /assets/js-client-1.5-release.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />
 Exceptionless.JavaScript v1.5 Release Notes
 
 ### Unversal App Support

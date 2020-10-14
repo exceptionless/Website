@@ -3,7 +3,7 @@ id: 15197
 title: Upgrading from Elasticsearch 1.x to 5.x - Live Coding Session
 date: 2017-01-18
 ---
-<a href="https://www.liveedu.tv/niemyjski/videos/xAYyE-exceptionless-weekly-demo-1-9-17" target="_blank"><img loading="lazy" class="aligncenter size-large wp-image-15198" style="margin-bottom: 20px;" src="/assets/live-stream-1-elasticsearch-header-1024x538.jpg" alt="elasticsearch 1.x to 1.5 upgrade" width="940" height="494" data-id="15198" srcset="/assets/live-stream-1-elasticsearch-header-1024x538.jpg 1024w, /assets/live-stream-1-elasticsearch-header-300x158.jpg 300w, /assets/live-stream-1-elasticsearch-header-768x403.jpg 768w, /assets/live-stream-1-elasticsearch-header.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+<a href="https://www.liveedu.tv/niemyjski/videos/xAYyE-exceptionless-weekly-demo-1-9-17" target="_blank"><img loading="lazy" class="aligncenter size-large wp-image-15198" style="margin-bottom: 20px;" src="/assets/img/news/live-stream-1-elasticsearch-header-1024x538.jpg" alt="elasticsearch 1.x to 1.5 upgrade" width="940" height="494" data-id="15198" srcset="/assets/live-stream-1-elasticsearch-header-1024x538.jpg 1024w, /assets/live-stream-1-elasticsearch-header-300x158.jpg 300w, /assets/live-stream-1-elasticsearch-header-768x403.jpg 768w, /assets/live-stream-1-elasticsearch-header.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" /></a>
 
 ## New Weekly Coding Live Stream
 

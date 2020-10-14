@@ -3,7 +3,7 @@ id: 11240
 title: Client Side Technology the Exceptionless Team Uses
 date: 2014-10-02
 ---
-<img loading="lazy" class="alignright size-full wp-image-11241" src="/assets/colored-swoosh.png" alt="colored-swoosh" width="220" height="155" data-id="11241" />Last week we wrote up a whole list of <a title="Server Side Technology the Exceptionless Team Uses" href="/server-side-technology-exceptionless-team-uses/" target="_blank">server side technologies</a> that we use to build and maintain Exceptionless. This week, we're going to look at client side tools and services.
+<img loading="lazy" class="alignright size-full wp-image-11241" src="/assets/img/news/colored-swoosh.png" alt="colored-swoosh" width="220" height="155" data-id="11241" />Last week we wrote up a whole list of <a title="Server Side Technology the Exceptionless Team Uses" href="/server-side-technology-exceptionless-team-uses/" target="_blank">server side technologies</a> that we use to build and maintain Exceptionless. This week, we're going to look at client side tools and services.
 
 We're all about function around here, but we like to think that the app looks and feels pretty good, too! We hope you agree, and maybe you'll come across a thing or two you could use in the future to jazz up the user side of your projects.
 

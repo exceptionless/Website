@@ -4,7 +4,7 @@ title: "More from the Upcoming Exceptionless 2.0: Simplified API"
 date: 2014-06-12
 tags: [ "api"]
 ---
-<img loading="lazy" class="alignright wp-image-9032" src="/assets/v2-api.png" alt="Exceptionless 2.0 API Simplified" width="150" height="144" data-id="9032" />Since [going open source](/fork-us-exceptionless-goes-open-source/ "Fork Us! Exceptionless Goes Open Source"), we've wanted to simplify the API and make it easier to work with.
+<img loading="lazy" class="alignright wp-image-9032" src="/assets/img/news/v2-api.png" alt="Exceptionless 2.0 API Simplified" width="150" height="144" data-id="9032" />Since [going open source](/fork-us-exceptionless-goes-open-source/ "Fork Us! Exceptionless Goes Open Source"), we've wanted to simplify the API and make it easier to work with.
 
 We're taking the time to do it now, and it's going to be **awesome!**
 
@@ -12,7 +12,7 @@ Exceptionless 2.0, [coming soon](/exceptionless-2-in-the-making/ "Exceptionless 
 
 ## API Simplified
 
-* <a href="https://api.exceptionless.io/docs/index" target="_blank">New REST API documentation and samples site.<br /> </a>Take a look and let us know what you think![<img loading="lazy" class="aligncenter size-medium wp-image-9028" style="margin-top: 20px;" src="/assets/Screen-shot-2014-06-11-at-5.20.44-PM-300x225.png" alt="Exceptionless API Documentation" width="300" height="225" data-id="9028" srcset="/assets/Screen-shot-2014-06-11-at-5.20.44-PM-300x225.png 300w, /assets/Screen-shot-2014-06-11-at-5.20.44-PM-1024x770.png 1024w, /assets/Screen-shot-2014-06-11-at-5.20.44-PM.png 1262w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/Screen-shot-2014-06-11-at-5.20.44-PM.png)<a style="color: #4183c4;" href="http://docs.exceptionless.apiary.io/"><br /> </a>
+* <a href="https://api.exceptionless.io/docs/index" target="_blank">New REST API documentation and samples site.<br /> </a>Take a look and let us know what you think![<img loading="lazy" class="aligncenter size-medium wp-image-9028" style="margin-top: 20px;" src="/assets/img/news/Screen-shot-2014-06-11-at-5.20.44-PM-300x225.png" alt="Exceptionless API Documentation" width="300" height="225" data-id="9028" srcset="/assets/Screen-shot-2014-06-11-at-5.20.44-PM-300x225.png 300w, /assets/Screen-shot-2014-06-11-at-5.20.44-PM-1024x770.png 1024w, /assets/Screen-shot-2014-06-11-at-5.20.44-PM.png 1262w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/Screen-shot-2014-06-11-at-5.20.44-PM.png)<a style="color: #4183c4;" href="http://docs.exceptionless.apiary.io/"><br /> </a>
 * Event POSTs take the raw data and use a plugin system to interpret that data and translate them into events.
     * This allows us to take literally any data and turn it into events in the system.
     * The POST data is captured as a raw bytes and added immediately added to a queue for processing.

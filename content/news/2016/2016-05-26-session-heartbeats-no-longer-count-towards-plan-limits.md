@@ -3,7 +3,7 @@ id: 14471
 title: Session Heartbeats No Longer Count Towards Plan Limits
 date: 2016-05-26
 ---
-<img loading="lazy" class="alignright size-full wp-image-14475" style="margin-left: 15px;" src="/assets/session-tracking-revised.png" alt="session-tracking-revised" width="260" height="260" data-id="14475" srcset="/assets/session-tracking-revised.png 260w, /assets/session-tracking-revised-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That's right! We've re-imagined how session heartbeats and session end events should work on the back end and were able to make them much more efficient, allowing us to stop counting them toward user plan limits!
+<img loading="lazy" class="alignright size-full wp-image-14475" style="margin-left: 15px;" src="/assets/img/news/session-tracking-revised.png" alt="session-tracking-revised" width="260" height="260" data-id="14475" srcset="/assets/session-tracking-revised.png 260w, /assets/session-tracking-revised-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That's right! We've re-imagined how session heartbeats and session end events should work on the back end and were able to make them much more efficient, allowing us to stop counting them toward user plan limits!
 
 This blog post explains our original goals and implementation of these session events, and how we were able to retain the same functionality of the feature while limiting resource usage.
 

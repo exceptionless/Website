@@ -3,7 +3,7 @@ id: 13601
 title: Squash Bugs Faster &#038; Speed Up Development with Exceptionless
 date: 2015-08-27
 ---
-<img loading="lazy" class="aligncenter size-full wp-image-13638" src="/assets/blog-header-image-js-demo.jpg" alt="Developer Bug Tracking" width="708" height="250" data-id="13638" srcset="/assets/blog-header-image-js-demo.jpg 708w, /assets/blog-header-image-js-demo-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter size-full wp-image-13638" src="/assets/img/news/blog-header-image-js-demo.jpg" alt="Developer Bug Tracking" width="708" height="250" data-id="13638" srcset="/assets/blog-header-image-js-demo.jpg 708w, /assets/blog-header-image-js-demo-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 <h2 style="margin-top: 30px;">
   Calling All Developers!
@@ -27,7 +27,7 @@ date: 2015-08-27
 
 > “Exceptionless is **awesome**. I've **STOPPED** worrying about whether I'm losing customers to bugs I don't know about.” - Eric B.
 
-<img loading="lazy" class="aligncenter wp-image-13619 size-full" src="/assets/codesmith-client-logo-bar-left-short.png" alt="" width="585" height="97" data-id="13594" srcset="/assets/codesmith-client-logo-bar-left-short.png 585w, /assets/codesmith-client-logo-bar-left-short-300x50.png 300w" sizes="(max-width: 585px) 100vw, 585px" />
+<img loading="lazy" class="aligncenter wp-image-13619 size-full" src="/assets/img/news/codesmith-client-logo-bar-left-short.png" alt="" width="585" height="97" data-id="13594" srcset="/assets/codesmith-client-logo-bar-left-short.png 585w, /assets/codesmith-client-logo-bar-left-short-300x50.png 300w" sizes="(max-width: 585px) 100vw, 585px" />
 
 ## Up & Running In Minutes
 
@@ -36,7 +36,7 @@ This 1:37 video demonstrates how quick and easy it is to get the Exceptionless J
 <div class="videoWrapper">
 </div>
 
-<img loading="lazy" class="aligncenter wp-image-13620 size-full" style="margin-top: 20px;" src="/assets/codesmith-client-logo-bar-right-short.png" alt="" width="585" height="97" data-id="13593" srcset="/assets/codesmith-client-logo-bar-right-short.png 585w, /assets/codesmith-client-logo-bar-right-short-300x50.png 300w" sizes="(max-width: 585px) 100vw, 585px" />
+<img loading="lazy" class="aligncenter wp-image-13620 size-full" style="margin-top: 20px;" src="/assets/img/news/codesmith-client-logo-bar-right-short.png" alt="" width="585" height="97" data-id="13593" srcset="/assets/codesmith-client-logo-bar-right-short.png 585w, /assets/codesmith-client-logo-bar-right-short-300x50.png 300w" sizes="(max-width: 585px) 100vw, 585px" />
 
 ## **IT'S. THAT. EASY.**
 

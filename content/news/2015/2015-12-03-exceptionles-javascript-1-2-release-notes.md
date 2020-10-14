@@ -4,7 +4,7 @@ title: Exceptionless.JavaScript 1.2 Release Notes
 date: 2015-12-03
 tags: [ "javascript"]
 ---
-<img loading="lazy" class="alignright wp-image-13683 size-medium" style="margin-left: 15px;" src="/assets/blog-header-image-post2b-300x106.png" alt="Exceptionless JavaScript Client" width="300" height="106" data-id="13683" srcset="/assets/blog-header-image-post2b-300x106.png 300w, /assets/blog-header-image-post2b.png 708w" sizes="(max-width: 300px) 100vw, 300px" />We've got a quick release for the Exceptionless JavaScript Client that includes a few new additions to what it supports and a quick bug fix or two.
+<img loading="lazy" class="alignright wp-image-13683 size-medium" style="margin-left: 15px;" src="/assets/img/news/blog-header-image-post2b-300x106.png" alt="Exceptionless JavaScript Client" width="300" height="106" data-id="13683" srcset="/assets/blog-header-image-post2b-300x106.png 300w, /assets/blog-header-image-post2b.png 708w" sizes="(max-width: 300px) 100vw, 300px" />We've got a quick release for the Exceptionless JavaScript Client that includes a few new additions to what it supports and a quick bug fix or two.
 
 Shout out to <a href="https://github.com/frankebersoll" target="_blank">@frankebersoll</a> for his help!
 

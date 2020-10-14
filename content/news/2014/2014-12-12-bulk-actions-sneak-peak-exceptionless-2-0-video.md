@@ -3,7 +3,7 @@ id: 12509
 title: Bulk Actions Sneak Peak in Exceptionless 2.0 - Video
 date: 2014-12-12
 ---
-<img loading="lazy" class="alignright size-medium wp-image-12510" style="margin-left: 15px;" src="/assets/exceptionless-bulk-actions.gif" alt="Exceptionless Bulk Actions" width="300" height="150" data-id="12510" />You know you want it! Bulk edit actions, that is. The ability to select multiple exceptions or occurrences of a single exception and do with them as you please, all at once. Well, they're coming, and today we've got a sneak peak!
+<img loading="lazy" class="alignright size-medium wp-image-12510" style="margin-left: 15px;" src="/assets/img/news/exceptionless-bulk-actions.gif" alt="Exceptionless Bulk Actions" width="300" height="150" data-id="12510" />You know you want it! Bulk edit actions, that is. The ability to select multiple exceptions or occurrences of a single exception and do with them as you please, all at once. Well, they're coming, and today we've got a sneak peak!
 
 We're not changing the world here, but we're making yours a little more efficient. Maybe you want to remove sensitive instances of an error that contains certain data, or maybe you you've got some test errors that you don't want included in the total count, either way the new feature should help. Check it out and let us know what you think!<!--more-->
 

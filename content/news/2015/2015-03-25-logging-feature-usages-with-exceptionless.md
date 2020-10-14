@@ -3,7 +3,7 @@ id: 12849
 title: Logging Feature Usages with Exceptionless
 date: 2015-03-25
 ---
-<img loading="lazy" class="alignright size-full wp-image-12860" style="margin-left: 15px;" src="/assets/feature-usage.png" alt="Exceptionless Feature Usage" width="198" height="161" data-id="12860" />The ability to log feature usages is one of the many <a title="Exceptionless 2.0 Launch Article" href="/its-go-time-exceptionless-2-0-launched/" target="_blank" rel="noopener noreferrer">new... features... of Exceptionless 2.0</a>.
+<img loading="lazy" class="alignright size-full wp-image-12860" style="margin-left: 15px;" src="/assets/img/news/feature-usage.png" alt="Exceptionless Feature Usage" width="198" height="161" data-id="12860" />The ability to log feature usages is one of the many <a title="Exceptionless 2.0 Launch Article" href="/its-go-time-exceptionless-2-0-launched/" target="_blank" rel="noopener noreferrer">new... features... of Exceptionless 2.0</a>.
 
 If you want to know when a button is being clicked, or what users are doing certain tasks, feature usage logging will help you track and visualize each occurrence.
 
@@ -76,19 +76,19 @@ You can also submit a feature usage by posting JSON to our API. See details in o
 
 Feature usage logging makes it very easy to see how often a feature, such as logging into an account, is used over time. If usage of one type of login, for instances, is never used, there might be an issue or you could consider removing it (less code debt). Or, if one is used the majority of the time, maybe it should be first in the list. There are almost unlimited ways you can use feature usage data to improve user experience.
 
-[<img loading="lazy" class="aligncenter wp-image-12854 size-large" src="/assets/feature-usage-dashboard-1024x603.png" alt="Exceptionless Feature Usage Dashboard" width="940" height="554" data-id="12854" srcset="/assets/feature-usage-dashboard-1024x603.png 1024w, /assets/feature-usage-dashboard-300x177.png 300w, /assets/feature-usage-dashboard.png 1111w" sizes="(max-width: 940px) 100vw, 940px" />](/assets/feature-usage-dashboard.png)
+[<img loading="lazy" class="aligncenter wp-image-12854 size-large" src="/assets/img/news/feature-usage-dashboard-1024x603.png" alt="Exceptionless Feature Usage Dashboard" width="940" height="554" data-id="12854" srcset="/assets/feature-usage-dashboard-1024x603.png 1024w, /assets/feature-usage-dashboard-300x177.png 300w, /assets/feature-usage-dashboard.png 1111w" sizes="(max-width: 940px) 100vw, 940px" />](/assets/feature-usage-dashboard.png)
 
 If we click on the stack for the signup feature, it shows the tag list of the providers that have been used to signup (GitHub and Google, in this instance).
 
-[<img loading="lazy" class="aligncenter wp-image-12855 size-full" src="/assets/feature-usage-stack-tags.png" alt="Exceptionless Feature Usage Stack" width="901" height="498" data-id="12855" srcset="/assets/feature-usage-stack-tags.png 901w, /assets/feature-usage-stack-tags-300x166.png 300w" sizes="(max-width: 901px) 100vw, 901px" />](/assets/feature-usage-stack-tags.png)
+[<img loading="lazy" class="aligncenter wp-image-12855 size-full" src="/assets/img/news/feature-usage-stack-tags.png" alt="Exceptionless Feature Usage Stack" width="901" height="498" data-id="12855" srcset="/assets/feature-usage-stack-tags.png 901w, /assets/feature-usage-stack-tags-300x166.png 300w" sizes="(max-width: 901px) 100vw, 901px" />](/assets/feature-usage-stack-tags.png)
 
 You can even go further and filter by a tag to see exactly how people are logging into your system using the search filter. Example: "tag:GitHub"
 
-[<img loading="lazy" class="aligncenter wp-image-12856 size-full" src="/assets/feature-usage-tag-github.png" alt="Exceptionless Feature Usage Filtering Searching" width="903" height="681" data-id="12856" srcset="/assets/feature-usage-tag-github.png 903w, /assets/feature-usage-tag-github-300x226.png 300w" sizes="(max-width: 903px) 100vw, 903px" />](/assets/feature-usage-tag-github.png)
+[<img loading="lazy" class="aligncenter wp-image-12856 size-full" src="/assets/img/news/feature-usage-tag-github.png" alt="Exceptionless Feature Usage Filtering Searching" width="903" height="681" data-id="12856" srcset="/assets/feature-usage-tag-github.png 903w, /assets/feature-usage-tag-github-300x226.png 300w" sizes="(max-width: 903px) 100vw, 903px" />](/assets/feature-usage-tag-github.png)
 
 Regarding the SetUserIdentity example above, we can see that user information being appended to a feature usage occurrence if we visit the "Search" feature and view an occurrence.
 
-[<img loading="lazy" class="aligncenter wp-image-12858 size-full" src="/assets/feature-usage-searching-userID.png" alt="Exceptionless Feature Usage User Info" width="840" height="553" data-id="12858" srcset="/assets/feature-usage-searching-userID.png 840w, /assets/feature-usage-searching-userID-300x198.png 300w" sizes="(max-width: 840px) 100vw, 840px" />](/assets/feature-usage-searching-userID.png)
+[<img loading="lazy" class="aligncenter wp-image-12858 size-full" src="/assets/img/news/feature-usage-searching-userID.png" alt="Exceptionless Feature Usage User Info" width="840" height="553" data-id="12858" srcset="/assets/feature-usage-searching-userID.png 840w, /assets/feature-usage-searching-userID-300x198.png 300w" sizes="(max-width: 840px) 100vw, 840px" />](/assets/feature-usage-searching-userID.png)
 
 ## Cool Stuff, Right?
 

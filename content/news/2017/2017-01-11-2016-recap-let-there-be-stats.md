@@ -3,7 +3,7 @@ id: 15168
 title: 2016 Recap - Let there be STATS!
 date: 2017-01-11
 ---
-[<img loading="lazy" class="aligncenter wp-image-15174 size-large" src="/assets/2016-in-review-1024x538.jpg" alt="Exceptionless 2016 in review" width="940" height="494" data-id="15174" srcset="/assets/2016-in-review-1024x538.jpg 1024w, /assets/2016-in-review-300x158.jpg 300w, /assets/2016-in-review-768x403.jpg 768w, /assets/2016-in-review.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](/2016-recap-let-stats/)
+[<img loading="lazy" class="aligncenter wp-image-15174 size-large" src="/assets/img/news/2016-in-review-1024x538.jpg" alt="Exceptionless 2016 in review" width="940" height="494" data-id="15174" srcset="/assets/2016-in-review-1024x538.jpg 1024w, /assets/2016-in-review-300x158.jpg 300w, /assets/2016-in-review-768x403.jpg 768w, /assets/2016-in-review.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](/2016-recap-let-stats/)
 
 We were curious, so we thought we would put together some stats for 2016, along with and a recap of some of the notable changes and progression. Enjoy!
 

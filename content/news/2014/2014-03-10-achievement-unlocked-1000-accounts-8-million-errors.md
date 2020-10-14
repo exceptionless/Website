@@ -4,7 +4,7 @@ title: Achievement Unlocked - 1000 Accounts and Over 8,000,000 Errors Reported!
 date: 2014-03-10
 tags: [ "announcement", "open source"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-3789" style="margin-left: 20px; margin-right: 20px;" alt="8 million errors reported" src="/assets/8-million-errors.png" width="174" height="155" data-id="3789" />Just over six months ago, we launched Exceptionless with a mission to impact the coding community in a positive way. The goal was, and still is, to help developers find, track, and squash errors, ultimately creating better code for users.
+<img loading="lazy" class="alignright size-full wp-image-3789" style="margin-left: 20px; margin-right: 20px;" alt="8 million errors reported" src="/assets/img/news/8-million-errors.png" width="174" height="155" data-id="3789" />Just over six months ago, we launched Exceptionless with a mission to impact the coding community in a positive way. The goal was, and still is, to help developers find, track, and squash errors, ultimately creating better code for users.
 
 A few days ago we officially hit **1000 accounts**, and as of today Exceptionless has reported **8,562,499 errors**! We couldn't be more excited!<!--more-->
 

@@ -3,7 +3,7 @@ id: 15248
 title: Setting Up New Elasticsearch Cluster, Reindexing &#038; Mappings - Live Code Demo
 date: 2017-02-01
 ---
-[<img loading="lazy" class="aligncenter size-large wp-image-15250" src="/assets/170116-live-code-demo-1024x538.jpg" alt="" width="940" height="494" data-id="15250" srcset="/assets/170116-live-code-demo-1024x538.jpg 1024w, /assets/170116-live-code-demo-300x158.jpg 300w, /assets/170116-live-code-demo-768x403.jpg 768w, /assets/170116-live-code-demo.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/videos/k4JO7-exceptionless-weekly-demo-1-16-17)
+[<img loading="lazy" class="aligncenter size-large wp-image-15250" src="/assets/img/news/170116-live-code-demo-1024x538.jpg" alt="" width="940" height="494" data-id="15250" srcset="/assets/170116-live-code-demo-1024x538.jpg 1024w, /assets/170116-live-code-demo-300x158.jpg 300w, /assets/170116-live-code-demo-768x403.jpg 768w, /assets/170116-live-code-demo.jpg 1200w" sizes="(max-width: 940px) 100vw, 940px" />](https://www.liveedu.tv/niemyjski/videos/k4JO7-exceptionless-weekly-demo-1-16-17)
 
 ## Getting Ready for Exceptionless 4.0!
 

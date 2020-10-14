@@ -4,7 +4,7 @@ title: An Exceptionless NuGet Package Tour
 date: 2015-04-16
 tags: [ ".NET"]
 ---
-<img loading="lazy" class="alignright size-full wp-image-12970" style="margin-left: 20px;" src="/assets/nugetlogo.png" alt="Exceptionless NuGet Packages" width="228" height="75" data-id="12970" />Giving back to the development community is important to us over here at Exceptionless. <a title="Exceptionless on GitHub" href="https://github.com/exceptionless" target="_blank">We love open source!</a>
+<img loading="lazy" class="alignright size-full wp-image-12970" style="margin-left: 20px;" src="/assets/img/news/nugetlogo.png" alt="Exceptionless NuGet Packages" width="228" height="75" data-id="12970" />Giving back to the development community is important to us over here at Exceptionless. <a title="Exceptionless on GitHub" href="https://github.com/exceptionless" target="_blank">We love open source!</a>
 
 As such, the Exceptionless <a title="Exceptionless NuGet Assembly Library" href="https://www.nuget.org/profiles/exceptionless?showAllPackages=True" target="_blank">NuGet assembly library</a>, with 31 assemblies and over 176,000 package downloads, is ever growing and expanding right along with our <a title="Exceptionless GitHub Repos" href="https://github.com/exceptionless" target="_blank">GitHub repos</a>.
 

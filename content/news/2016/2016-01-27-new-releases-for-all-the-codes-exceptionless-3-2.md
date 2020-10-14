@@ -3,7 +3,7 @@ id: 14015
 title: New Releases for ALL the Codes! Exceptionless 3.2
 date: 2016-01-27
 ---
-<img loading="lazy" class="alignright size-full wp-image-14033" style="margin-left: 15px;" src="/assets/exceptionless-3-2-release-notes.png" alt="Exceptionless 3.2 Highlights" width="260" height="260" data-id="14033" srcset="/assets/exceptionless-3-2-release-notes.png 260w, /assets/exceptionless-3-2-release-notes-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That's right folks - we've gone and released Exceptionless 3.2, which includes releases for Exceptionless.NET, Exceptionless.JavaScript, and Exceptionless.UI! Awe yeah.
+<img loading="lazy" class="alignright size-full wp-image-14033" style="margin-left: 15px;" src="/assets/img/news/exceptionless-3-2-release-notes.png" alt="Exceptionless 3.2 Highlights" width="260" height="260" data-id="14033" srcset="/assets/exceptionless-3-2-release-notes.png 260w, /assets/exceptionless-3-2-release-notes-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That's right folks - we've gone and released Exceptionless 3.2, which includes releases for Exceptionless.NET, Exceptionless.JavaScript, and Exceptionless.UI! Awe yeah.
 
 We're kind of excited, in case you couldn't tell. Big stuff in here, like **session tracking** (#BOOM), licensing changes (less confusion - it's a good thing), and **posting via HTTP GET** (such easy, much wow)!
 
@@ -19,7 +19,7 @@ Lets get into some of the details...<!--more-->
 
 <a href="/track-view-user-session-data-exceptionless/" target="_blank">Check out the User Sessions post for more details and instructions!</a>
 
-[<img loading="lazy" class="alignleft wp-image-14027 size-large" style="width: 50%;" src="/assets/sessions-1024x662.png" alt="Exceptionless User Sessions" width="940" height="608" data-id="14027" srcset="/assets/sessions-1024x662.png 1024w, /assets/sessions-300x194.png 300w, /assets/sessions-768x496.png 768w, /assets/sessions.png 1038w" sizes="(max-width: 940px) 100vw, 940px" />](/assets/sessions.png)[<img loading="lazy" class="alignleft wp-image-14026 size-full" style="width: 50%;" src="/assets/sessions-2.png" alt="Exceptionless Event Sessions" width="815" height="386" data-id="14026" srcset="/assets/sessions-2.png 815w, /assets/sessions-2-300x142.png 300w, /assets/sessions-2-768x364.png 768w" sizes="(max-width: 815px) 100vw, 815px" />](/assets/sessions-2.png)
+[<img loading="lazy" class="alignleft wp-image-14027 size-large" style="width: 50%;" src="/assets/img/news/sessions-1024x662.png" alt="Exceptionless User Sessions" width="940" height="608" data-id="14027" srcset="/assets/sessions-1024x662.png 1024w, /assets/sessions-300x194.png 300w, /assets/sessions-768x496.png 768w, /assets/sessions.png 1038w" sizes="(max-width: 940px) 100vw, 940px" />](/assets/sessions.png)[<img loading="lazy" class="alignleft wp-image-14026 size-full" style="width: 50%;" src="/assets/sessions-2.png" alt="Exceptionless Event Sessions" width="815" height="386" data-id="14026" srcset="/assets/sessions-2.png 815w, /assets/sessions-2-300x142.png 300w, /assets/sessions-2-768x364.png 768w" sizes="(max-width: 815px) 100vw, 815px" />](/assets/sessions-2.png)
 
 <div style="clear: both;">
 </div>

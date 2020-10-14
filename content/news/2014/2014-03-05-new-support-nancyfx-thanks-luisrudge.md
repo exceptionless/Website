@@ -4,7 +4,7 @@ title: New Support for NancyFX - Thanks Luisrudge!
 date: 2014-03-05
 tags: [ "open source"]
 ---
-**<img loading="lazy" class="alignright  wp-image-3443" style="margin-left:20px;" alt="NancyFX Logo" src="/assets/logo.png" width="179" height="201" data-id="3443" />We've had our first substantial pull request!**
+**<img loading="lazy" class="alignright  wp-image-3443" style="margin-left:20px;" alt="NancyFX Logo" src="/assets/img/news/logo.png" width="179" height="201" data-id="3443" />We've had our first substantial pull request!**
 
 Luisrudge has become the first non-trivial contributor to the Exceptionless real-time error reporting project on GitHub, with his NancyFX integration.
 

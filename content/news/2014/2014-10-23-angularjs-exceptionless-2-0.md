@@ -4,7 +4,7 @@ title: AngularJS and Exceptionless 2.0
 date: 2014-10-23
 tags: [ "AngularJS", "javascript"]
 ---
-<img loading="lazy" class="alignright wp-image-11617" style="margin-left: 15px; margin-bottom: 15px; margin-top: 10px;" src="/assets/AngularJS-large-300x84.png" alt="Angular JS" width="248" height="70" data-id="11617" srcset="/assets/AngularJS-large-300x84.png 300w, /assets/AngularJS-large.png 383w" sizes="(max-width: 248px) 100vw, 248px" />As we plug away at Exceptionless 2.0, perfecting and future-proofing it, we wanted to stop and take the time to talk about AngularJS, how we are using it in version two, and what benefits we're going to get out of it.
+<img loading="lazy" class="alignright wp-image-11617" style="margin-left: 15px; margin-bottom: 15px; margin-top: 10px;" src="/assets/img/news/AngularJS-large-300x84.png" alt="Angular JS" width="248" height="70" data-id="11617" srcset="/assets/AngularJS-large-300x84.png 300w, /assets/AngularJS-large.png 383w" sizes="(max-width: 248px) 100vw, 248px" />As we plug away at Exceptionless 2.0, perfecting and future-proofing it, we wanted to stop and take the time to talk about AngularJS, how we are using it in version two, and what benefits we're going to get out of it.
 
 Naturally, we want to maintain all current functionality while supporting planned V2.0 features like search and filtering. We also want it to be static and use the REST API for everything. We're pretty determined to not cheat on that point. Then, thinking ahead, building it to support easily adding new features in the future is a huge priority.
 

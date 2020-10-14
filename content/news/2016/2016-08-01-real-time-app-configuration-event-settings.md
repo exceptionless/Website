@@ -3,7 +3,7 @@ id: 14599
 title: Real Time App Configuration and Event Settings with Exceptionless
 date: 2016-08-01
 ---
-<img loading="lazy" class="alignright size-full wp-image-14606" src="/assets/exceptionless-project-settings-header.png" alt="exceptionless-project-settings-header" width="260" height="260" data-id="14606" srcset="/assets/exceptionless-project-settings-header.png 260w, /assets/exceptionless-project-settings-header-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />
+<img loading="lazy" class="alignright size-full wp-image-14606" src="/assets/img/news/exceptionless-project-settings-header.png" alt="exceptionless-project-settings-header" width="260" height="260" data-id="14606" srcset="/assets/exceptionless-project-settings-header.png 260w, /assets/exceptionless-project-settings-header-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />
 
 ## Bet You Didn't Know Exceptionless Could Do This...
 
@@ -51,7 +51,7 @@ If you do not want the configuration settings to update when idle, you can turn 
 
 ## The Main Event: Client Configuration
 
-[<img loading="lazy" class="size-medium wp-image-14603 aligncenter" src="/assets/client-configuration-300x143.png" alt="client-configuration" width="300" height="143" data-id="14603" srcset="/assets/client-configuration-300x143.png 300w, /assets/client-configuration.png 736w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/client-configuration.png)
+[<img loading="lazy" class="size-medium wp-image-14603 aligncenter" src="/assets/img/news/client-configuration-300x143.png" alt="client-configuration" width="300" height="143" data-id="14603" srcset="/assets/client-configuration-300x143.png 300w, /assets/client-configuration.png 736w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/client-configuration.png)
 
 Exceptionless client configurations are a dictionary of key value pairs that can be used to control the behavior of your app in real time by doing things like controlling data exclusions, protecting sensitive data, enabling and disable features, or disabling certain types of events (`error`, `usage`, `log`, `404`, or `session`).
 
@@ -102,7 +102,7 @@ For more details on client configuration, check out the [Client Configuration Pr
 
 ### General
 
-[<img loading="lazy" class="aligncenter size-medium wp-image-14600" src="/assets/general-300x132.png" alt="general" width="300" height="132" data-id="14600" srcset="/assets/general-300x132.png 300w, /assets/general.png 739w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/general.png)
+[<img loading="lazy" class="aligncenter size-medium wp-image-14600" src="/assets/img/news/general-300x132.png" alt="general" width="300" height="132" data-id="14600" srcset="/assets/general-300x132.png 300w, /assets/general.png 739w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/general.png)
 
 If you go to Admin > Projects in Exceptionless, you can choose the project you would like to edit the settings for. Each project can have unique settings.
 
@@ -110,13 +110,13 @@ The default tab is "General," which simply houses the project name and attached 
 
 ### API Keys
 
-[<img loading="lazy" class="aligncenter size-medium wp-image-14601" src="/assets/api-keys-300x127.png" alt="exceptionless api keys" width="300" height="127" data-id="14601" srcset="/assets/api-keys-300x127.png 300w, /assets/api-keys.png 738w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/api-keys.png)
+[<img loading="lazy" class="aligncenter size-medium wp-image-14601" src="/assets/img/news/api-keys-300x127.png" alt="exceptionless api keys" width="300" height="127" data-id="14601" srcset="/assets/api-keys-300x127.png 300w, /assets/api-keys.png 738w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/api-keys.png)
 
 This tab is where you can generate an API key for your project. Again, pretty self explanatory. Hit "New API Key" and one gets generated. For more details on API usage, check out the [API Usage documentation](https://github.com/exceptionless/Exceptionless/wiki/API-Usage) on GitHub.
 
 ### Settings
 
-[<img loading="lazy" class="aligncenter size-medium wp-image-14602" src="/assets/settings-300x281.png" alt="exceptionless project settings" width="300" height="281" data-id="14602" srcset="/assets/settings-300x281.png 300w, /assets/settings.png 734w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/settings.png)
+[<img loading="lazy" class="aligncenter size-medium wp-image-14602" src="/assets/img/news/settings-300x281.png" alt="exceptionless project settings" width="300" height="281" data-id="14602" srcset="/assets/settings-300x281.png 300w, /assets/settings.png 734w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/settings.png)
 
 This is where you can set data exclusions, customize error stacking, and build in some spam detection to your project.
 
@@ -148,7 +148,7 @@ Along with the comma delimited list of user agents to ignore, you can also tick 
 
 #### Integrations
 
-[<img loading="lazy" class="aligncenter size-medium wp-image-14604" src="/assets/integrations-300x143.png" alt="exceptionless integrations" width="300" height="143" data-id="14604" srcset="/assets/integrations-300x143.png 300w, /assets/integrations.png 734w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/integrations.png)
+[<img loading="lazy" class="aligncenter size-medium wp-image-14604" src="/assets/img/news/integrations-300x143.png" alt="exceptionless integrations" width="300" height="143" data-id="14604" srcset="/assets/integrations-300x143.png 300w, /assets/integrations.png 734w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/integrations.png)
 
 Integrations with tools like Slack, Hipchat, JIRA, Basecamp, and others are very popular and can add a level of automated notifications, etc, to your workflow. So, on the integrations tab of your project's configuration you can create web hooks to integrate with your service or others as mentioned. Each web hook has a URL that it can call, and options for when it should be called. When a selected event occurs, a POST request is submitted with either event or stack data in JSON format. For more details and sample data, visit the [Exceptionless integrations documentation](https://github.com/exceptionless/Exceptionless/wiki/Integrations).
 

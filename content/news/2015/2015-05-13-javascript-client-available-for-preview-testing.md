@@ -3,7 +3,7 @@ id: 13175
 title: JavaScript Client Available for Preview &#038; Testing!
 date: 2015-05-13
 ---
-<img loading="lazy" class="aligncenter wp-image-13180 size-full" src="/_site/assets/javascript-client-header.jpg" alt="Exceptionless JavaScript Client" width="708" height="250" data-id="13180" srcset="/assets/javascript-client-header.jpg 708w, /assets/javascript-client-header-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
+<img loading="lazy" class="aligncenter wp-image-13180 size-full" src="/_site/assets/img/news/javascript-client-header.jpg" alt="Exceptionless JavaScript Client" width="708" height="250" data-id="13180" srcset="/assets/javascript-client-header.jpg 708w, /assets/javascript-client-header-300x106.jpg 300w" sizes="(max-width: 708px) 100vw, 708px" />
 
 That's right ladies and gentlemen, we've been working on a <a title="Exceptionless Javascript Client GitHub" href="https://github.com/exceptionless/Exceptionless.javascript" target="_blank">JavaScript client</a>, and it's ready to peak it's head out into the wild.
 

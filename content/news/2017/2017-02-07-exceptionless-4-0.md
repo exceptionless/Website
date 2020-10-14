@@ -3,7 +3,7 @@ id: 15275
 title: Exceptionless 4.0 is Here!
 date: 2017-02-07
 ---
-<img loading="lazy" class="alignright size-full wp-image-15281" style="margin-left: 15px;" src="/assets/exceptionless-4.png" alt="Exceptionless 4.0 Announcement" width="260" height="260" data-id="15281" srcset="/assets/exceptionless-4.png 260w, /assets/exceptionless-4-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That's right folks, Exceptionless 4.0 is here and we've got the full low-down on all the improvements, upgrades, and enhancements in this week's blog article, along with how to upgrade instructions for self hosters.
+<img loading="lazy" class="alignright size-full wp-image-15281" style="margin-left: 15px;" src="/assets/img/news/exceptionless-4.png" alt="Exceptionless 4.0 Announcement" width="260" height="260" data-id="15281" srcset="/assets/exceptionless-4.png 260w, /assets/exceptionless-4-150x150.png 150w" sizes="(max-width: 260px) 100vw, 260px" />That's right folks, Exceptionless 4.0 is here and we've got the full low-down on all the improvements, upgrades, and enhancements in this week's blog article, along with how to upgrade instructions for self hosters.
 
 The primary focus of version 4.0 was to add support for Elasticsearch 5. By migrating from Elasticsearch 1.7 to 5, we removed growing technical debt and benefited greatly in the process. Here is an overview of the benefits gained by migrating to Elasticsearch 5 in 4.0.0.<!--more-->
 

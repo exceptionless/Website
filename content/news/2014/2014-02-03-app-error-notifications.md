@@ -9,7 +9,7 @@ We both know there's going to be _something_ that isn't completely right after 
 
 ## Real-Time Error Notifications via Email
 
-<img loading="lazy" class="aligncenter size-full wp-image-147" alt="ASP.NET Error Notifications" src="/assets/notification.png" width="665" height="433" data-id="147" srcset="/assets/notification.png 665w, /assets/notification-300x195.png 300w" sizes="(max-width: 665px) 100vw, 665px" />
+<img loading="lazy" class="aligncenter size-full wp-image-147" alt="ASP.NET Error Notifications" src="/assets/img/news/notification.png" width="665" height="433" data-id="147" srcset="/assets/notification.png 665w, /assets/notification-300x195.png 300w" sizes="(max-width: 665px) 100vw, 665px" />
 
 The Exceptionless platform provides a great [real-time dashboard](/project-portal-tour/ "Error Reporting Dashboard") view of your errors, but our email notifications allow you to be absolutely in touch with any errors that may be occurring within your application.
 
@@ -23,7 +23,7 @@ There are several email notification options for your app's exceptions.
 
 To receive notifications, you need to turn them on under the "My Account" section, in the "Profile Information" tab. This option should be on by default. Then, you can view the below options under the individual project settings by clicking on the cog/gear icon next to the project name at the top of your dashboard.
 
-<img loading="lazy" class="aligncenter size-full wp-image-2331" alt="Email Notification Settings" src="/assets/email-notification-settings.png" width="548" height="426" data-id="2331" srcset="/assets/email-notification-settings.png 548w, /assets/email-notification-settings-300x233.png 300w" sizes="(max-width: 548px) 100vw, 548px" />
+<img loading="lazy" class="aligncenter size-full wp-image-2331" alt="Email Notification Settings" src="/assets/img/news/email-notification-settings.png" width="548" height="426" data-id="2331" srcset="/assets/email-notification-settings.png 548w, /assets/email-notification-settings-300x233.png 300w" sizes="(max-width: 548px) 100vw, 548px" />
 
 #### Lets take a look at the different options:
 
