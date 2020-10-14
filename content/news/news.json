@@ -1,5 +1,5 @@
 {
-  "layout": "post.njk",
+  "layout": "post",
   "author": "Exceptionless",
   "tags": ["posts"],
   "permalink": "{{ title | slug }}/"
