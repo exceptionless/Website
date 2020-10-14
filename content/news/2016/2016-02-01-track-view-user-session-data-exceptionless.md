@@ -49,29 +49,35 @@ For Exceptionless to track a user for your app, you need to send a user identity
 
 #### C#
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Exceptionless;
-ExceptionlessClient.Default.Configuration.SetUserIdentity("UNIQUE_ID_OR_EMAIL_ADDRESS", "Display Name");</pre>
-
-
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.Configuration.SetUserIdentity("UNIQUE_ID_OR_EMAIL_ADDRESS", "Display Name");
+```
 
 #### JavaScript
 
-<pre class="brush: jscript; title: ; notranslate" title="">exceptionless.ExceptionlessClient.default.config.setUserIdentity('UNIQUE_ID_OR_EMAIL_ADDRESS', 'Display Name');</pre>
+```js
+exceptionless.ExceptionlessClient.default.config.setUserIdentity('UNIQUE_ID_OR_EMAIL_ADDRESS', 'Display Name');
+```
 
 Once the user is set on the config object, it will be applied to all future events.
 
 **Please Note:** In WinForms and WPF applications, a plugin will automatically set the default user to the `**Environment.UserName**` if the default user hasn't been already set. Likewise, if you are in a web environment, we will set the default user to the request principal's identity if the default user hasn't already been set.
 
-If you are using WinForms, WPF, or a Borwser App, you can enable sessions by calling the `EnableSessions` extension method.
+If you are using WinForms, WPF, or a Browser App, you can enable sessions by calling the `EnableSessions` extension method.
 
 #### C#
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Exceptionless;
-ExceptionlessClient.Default.Configuration.UseSessions();</pre>
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.Configuration.UseSessions();
+```
 
 #### JavaScript
 
-<pre class="brush: jscript; title: ; notranslate" title="">exceptionless.ExceptionlessClient.default.config.useSessions();</pre>
+```js
+exceptionless.ExceptionlessClient.default.config.useSessions();
+```
 
 ## How do Sessions get Created?
 
@@ -99,18 +105,22 @@ Sure! You can send these events manually via our client API to start, update, or
 
 ### C#
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Exceptionless;
+```cs
+using Exceptionless;
 ExceptionlessClient.Default.SubmitSessionStart();
 ExceptionlessClient.Default.SubmitSessionHeartbeat();
-ExceptionlessClient.Default.SubmitSessionEnd();</pre>
+ExceptionlessClient.Default.SubmitSessionEnd();
+```
 
 <a href="https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Shared/Extensions/ClientExtensions.cs#L159-L205" target="_blank">Source</a>
 
 ### JavaScript
 
-<pre class="brush: jscript; title: ; notranslate" title="">exceptionless.ExceptionlessClient.default.submitSessionStart();
+```js
+exceptionless.ExceptionlessClient.default.submitSessionStart();
 exceptionless.ExceptionlessClient.default.submitSessionHeartbeat();
-exceptionless.ExceptionlessClient.default.submitSessionEnd();</pre>
+exceptionless.ExceptionlessClient.default.submitSessionEnd();
+```
 
 <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/ExceptionlessClient.ts#L96-L118" target="_blank">Source</a>
 

@@ -27,144 +27,163 @@ After you check it out, let us know if you have questions or suggestions. We're 
 
 **First, set your API key.**
 
-<pre>var client = new ExceptionlessClient(config =&gt; {
+```cs
+var client = new ExceptionlessClient(config => {
 config.ApiKey = "API_KEY_HERE";
-</pre>
+```
 
 * * *
 
 Then, send events to your own free Exceptionless server install.
 
-<pre>config.ServerUrl = "https://exceptionless.myorg.com";
-</pre>
+```cs
+config.ServerUrl = "https://exceptionless.myorg.com";
+```
 
 * * *
 
 Now, read config settings from attributes.
 
-<pre>config.ReadFromAttributes();
-</pre>
+```cs
+config.ReadFromAttributes();
+```
 
 * * *
 
 Read config settings from a config section in your app/web.config.
 
-<pre>config.ReadFromConfigSection();
-</pre>
+```cs
+config.ReadFromConfigSection();
+```
 
 * * *
 
 Store all client data including the offline queue in the store folder, by default isolated storage is used.
 
-<pre>config.UseFolderStorage("store");
-</pre>
+```cs
+config.UseFolderStorage("store");
+```
 
 * * *
 
 Exclude any form fields, cookies, query string parameters, and custom data properties containing "CreditCard".
 
-<pre>config.AddDataExclusions("CreditCard");
-</pre>
+```cs
+config.AddDataExclusions("CreditCard");
+```
 
 * * *
 
 Add the "SomeTag" to all events.
 
-<pre>config.DefaultTags.Add("SomeTag");
-</pre>
+```cs
+config.DefaultTags.Add("SomeTag");
+```
 
 * * *
 
 Add the "MyObject" custom data object to every event.
 
-<pre>config.DefaultData.Add("MyObject", new { MyProperty = "Value1" });
-</pre>
+```cs
+config.DefaultData.Add("MyObject", new { MyProperty = "Value1" });
+```
 
 * * *
 
 Add a custom event enrichment that will add a tag called "MyTag" to every event.
 
-<pre>config.AddEnrichment(ev =&gt; ev.Tags.Add("MyTag"));
-</pre>
+```cs
+config.AddEnrichment(ev => ev.Tags.Add("MyTag"));
+```
 
 * * *
 
 Register a custom log implementation that uses NLog.
 
-<pre>config.Resolver.Register(new NLogExceptionlessLog());
-</pre>
+```cs
+config.Resolver.Register(new NLogExceptionlessLog());
+```
 
 * * *
 
 The Startup method is specific for each platform and wires up to all relevant unhandled exception events so that they will be automatically sent to the server.
 
-<pre>client.Startup();
-</pre>
+```cs
+client.Startup();
+```
 
 * * *
 
 Manually catch and report an error with a custom tag on it.
 
-<pre>try {
-throw new ApplicationException("Boom!");
+```cs
+try {
+    throw new ApplicationException("Boom!");
 } catch (Exception ex) {
-ex.ToExceptionless().AddTags("MyTag").Submit();
+    ex.ToExceptionless().AddTags("MyTag").Submit();
 }
-</pre>
+```
 
 * * *
 
 Let users add their email address and a description of the error.
 
-<pre>client.UpdateUserEmailAndDescription(client.GetLastReferenceId(), "me@me.com", "It broke!");
-</pre>
+```cs
+client.UpdateUserEmailAndDescription(client.GetLastReferenceId(), "me@me.com", "It broke!");
+```
 
 * * *
 
 Create and submit a log message and add an extra "Order" object to the event.
 
-<pre>client.CreateLog("Order", "New order created.")
-.AddObject(new { Total = 14.95 }, name: "Order")
-.Submit();
-</pre>
+```cs
+client.CreateLog("Order", "New order created.")
+    .AddObject(new { Total = 14.95 }, name: "Order")
+    .Submit();
+```
 
 * * *
 
 Submit a feature usage event that will let you see how much certain features of your app are being used.
 
-<pre>client.SubmitFeatureUsage("FeatureA");
-</pre>
+```cs
+client.SubmitFeatureUsage("FeatureA");
+```
 
 * * *
 
 Submit a page not found event so you can keep track of your broken links and fix them.
 
-<pre>client.SubmitNotFound("/badpage");
-</pre>
+```cs
+client.SubmitNotFound("/badpage");
+```
 
 * * *
 
 Listen to all events being sent and cancel any errors that are "IgnoredType".
 
-<pre>client.SubmittingEvent += (sender, args) =&gt;
+```cs
+client.SubmittingEvent += (sender, args) =>
 args.Cancel = args.Event.IsError() && args.Event.GetError().Type.Contains("IgnoredType");
-</pre>
+```
 
 * * *
 
 Settings data is synced in real-time with the project settings in your Exceptionless project on the server.
 
-<pre>client.Configuration.Settings.Changed += (sender, args) =&gt;
+```cs
+client.Configuration.Settings.Changed += (sender, args) =>
 Trace.WriteLine(String.Format("Action: {0} Key: {1} Value: {2}", args.Action, args.Item.Key, args.Item.Value));
-</pre>
+```
 
 * * *
 
 You can use those settings to control behavior in your app.
 
-<pre>if (client.Configuration.Settings.GetBoolean("IncludeMyCustomData", false))
-Trace.WriteLine("Should include my custom data");
-</pre>
+```cs
+if (client.Configuration.Settings.GetBoolean("IncludeMyCustomData", false))
+    Trace.WriteLine("Should include my custom data");
+```
 
 ## That's All There Is To It!
 
@@ -178,5 +197,3 @@ As always, if you have any questions, comments, suggestions, or concerns, let us
 * [Event Based Reporting System](/event-based-reporting-system-coming-version-2-0/ "Event Based Reporting System Coming in Version 2.0")
 * [Simplified API](/upcoming-exceptionless-2-0-simplified-api/ "More from the Upcoming Exceptionless 2.0: Simplified API")
 * [A Pluggable System](/coming-exceptionless-2-0-pluggable-system/ "Coming in Exceptionless 2.0 – A Pluggable System")
-
-

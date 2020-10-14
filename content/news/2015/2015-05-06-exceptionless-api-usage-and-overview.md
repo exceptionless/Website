@@ -25,17 +25,17 @@ You can enter JSON into the model field, or you an click the yellow box on the 
 
 [![Exceptionless API Get User Scoped Token](/assets/img/news/01get-user-scope-token1-300x218.png)](/assets/01get-user-scope-token1.png)<figcaption class="caption wp-caption-text">Enter account credentials to get user scoped token.</figcaption></figure>
 
-Click “Try it out!” and generate your token. Take note of the response messages section above the button, as it details the possible codes that would be returned in the event of an error (e.g. 401 if the user name or email address was incorrect).<figure id="attachment_13101" class="thumbnail wp-caption aligncenter" style="width: 300px">
+Click "Try it out!" and generate your token. Take note of the response messages section above the button, as it details the possible codes that would be returned in the event of an error (e.g. 401 if the user name or email address was incorrect).<figure id="attachment_13101" class="thumbnail wp-caption aligncenter" style="width: 300px">
 
 [![Retrieve Exceptionless User Scoped Token](/assets/img/news/01get-user-scope-token2-300x105.png)](/assets/01get-user-scope-token2.png)<figcaption class="caption wp-caption-text">Copy your user scoped token that you just generated.</figcaption></figure>
 
-You can see from the response that it returned our token from the request url above. Take your generated token and put it in the “api_key” field at the top of the page and click “Explore.” This authorizes you via bearer authentication, authenticates you to the rest api, and allows you to call controller actions.<figure id="attachment_13102" class="thumbnail wp-caption aligncenter" style="width: 300px">
+You can see from the response that it returned our token from the request url above. Take your generated token and put it in the "api_key" field at the top of the page and click "Explore." This authorizes you via bearer authentication, authenticates you to the rest api, and allows you to call controller actions.<figure id="attachment_13102" class="thumbnail wp-caption aligncenter" style="width: 300px">
 
 [![Add Exceptionless User Scoped Token ](/assets/img/news/02add-token-refresh-page-300x50.png)](/assets/02add-token-refresh-page.png)<figcaption class="caption wp-caption-text">Add your token in the api_key field at top of page and click "Explore"</figcaption></figure>
 
 ### Get a New Token
 
-Now, we’ll get a new token for the project we want to work on and assign it a user role (scope) of “user.” We want to get a new user scoped token because we want to do more than just post events (client scoped tokens only allow you to post events), we want to retrieve them. Creating a new token also allows us to revoke the token later.
+Now, we’ll get a new token for the project we want to work on and assign it a user role (scope) of "user." We want to get a new user scoped token because we want to do more than just post events (client scoped tokens only allow you to post events), we want to retrieve them. Creating a new token also allows us to revoke the token later.
 
 First, get your project ID from the Exceptionless Dashboard. It can be found in the URL of that project’s dashboard.<figure id="attachment_13104" class="thumbnail wp-caption aligncenter" style="width: 300px">
 
@@ -49,7 +49,7 @@ Next, we'll click "Try it out!" and generate our new token id.<figure id="attach
 
 [![Get new Exceptionless Token ID](/assets/img/news/04get-new-token2-300x146.png)](/assets/04get-new-token2.png)<figcaption class="caption wp-caption-text">Copy your new token id and paste it into the api_key field at the top of the page and click "Explore" again.</figcaption></figure>
 
-Now, once again, copy this new token and place it in the “api_key” field at the top of the page and click “Explore.” Now everything we do will be authenticated to this new user token you’ve just created.
+Now, once again, copy this new token and place it in the "api_key" field at the top of the page and click "Explore." Now everything we do will be authenticated to this new user token you’ve just created.
 
 ### Posting an Event
 
@@ -59,9 +59,9 @@ First, navigate to <a title="Exceptionless API Post Event" href="https://api.exc
 
 [![Exceptionless API Post Event](/assets/img/news/05post-event1-300x204.png)](/assets/05post-event1.png)<figcaption class="caption wp-caption-text">Navigate to Event > POST /api/v{version}/events</figcaption></figure>
 
-You’ll see a few basic examples of events and some explanation of the resource in this panel. Make sure to give it a read. For this example, we’ll use a simple log event, with a brief message, and add a reference ID to it. _Note that you must also enter the current API version in the “version” field._
+You’ll see a few basic examples of events and some explanation of the resource in this panel. Make sure to give it a read. For this example, we’ll use a simple log event, with a brief message, and add a reference ID to it. _Note that you must also enter the current API version in the "version" field._
 
-When we click “Try it out!” and get a 202 response code, we know we’ve created an event.<figure id="attachment_13110" class="thumbnail wp-caption aligncenter" style="width: 300px">
+When we click "Try it out!" and get a 202 response code, we know we’ve created an event.<figure id="attachment_13110" class="thumbnail wp-caption aligncenter" style="width: 300px">
 
 [![Exceptionless API Created Event](/assets/05post-event2-e1430946143322-300x92.png)](/assets/05post-event2-e1430946143322.png)<figcaption class="caption wp-caption-text">Successful Event Creation</figcaption></figure>
 
@@ -89,7 +89,7 @@ Naturally, we can get all the organizations or projects associated with the curr
 
 #### Organizations
 
-Navigate to <a title="Exceptionless API Get Organizations" href="https://api.exceptionless.io/docs/index#!/Organization/Organization_Get" target="_blank">Organization > GET /api/v2/organizations</a> and click “Try it out!”<figure id="attachment_13118" class="thumbnail wp-caption alignleft" style="width: 300px">
+Navigate to <a title="Exceptionless API Get Organizations" href="https://api.exceptionless.io/docs/index#!/Organization/Organization_Get" target="_blank">Organization > GET /api/v2/organizations</a> and click "Try it out!"<figure id="attachment_13118" class="thumbnail wp-caption alignleft" style="width: 300px">
 
 [![Exceptionless API Get Organization Results](/assets/08get-organizations2-300x202.png)](/assets/08get-organizations2.png)<figcaption class="caption wp-caption-text">Get Organizations Results</figcaption></figure>
 
@@ -97,7 +97,7 @@ Navigate to <a title="Exceptionless API Get Organizations" href="https://api.exc
   Projects
 </h4>
 
-Navigate to <a title="Exceptionless API Get Projects" href="https://api.exceptionless.io/docs/index#!/Project/Project_Get" target="_blank">Project > GET /api/v2/projects</a> and click “Try it out!”<figure id="attachment_13121" class="thumbnail wp-caption alignleft" style="width: 300px">
+Navigate to <a title="Exceptionless API Get Projects" href="https://api.exceptionless.io/docs/index#!/Project/Project_Get" target="_blank">Project > GET /api/v2/projects</a> and click "Try it out!"<figure id="attachment_13121" class="thumbnail wp-caption alignleft" style="width: 300px">
 
 [![Exceptionless API Get Projects Results](/assets/09get-projects2-300x204.png)](/assets/09get-projects2.png)<figcaption class="caption wp-caption-text">Get Projects Results</figcaption></figure>
 
@@ -115,7 +115,7 @@ The api documentation uses bearer authentication to authenticate to the API. You
 
 Everything we’ve shown you today can be easily and cleanly accessed via a URL query string and your access token.
 
-For example, if we want to view our organizations, we simply navigate to https://api.exceptionless.io/api/v2/organizations, add the query string “?access_token={token}” and press enter to get the data.<figure id="attachment_13126" class="thumbnail wp-caption aligncenter" style="width: 300px">
+For example, if we want to view our organizations, we simply navigate to https://api.exceptionless.io/api/v2/organizations, add the query string "?access_token={token}" and press enter to get the data.<figure id="attachment_13126" class="thumbnail wp-caption aligncenter" style="width: 300px">
 
 [![Exceptionless Query String API Authentication](/assets/img/news/11-url-query-string-version-300x145.png)](/assets/11-url-query-string-version.png)<figcaption class="caption wp-caption-text">Query String API Authentication</figcaption></figure>
 

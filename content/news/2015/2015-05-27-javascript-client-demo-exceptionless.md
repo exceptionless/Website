@@ -24,7 +24,9 @@ We built our JavaScript client in <a title="TypeScript" href="https://github.co
   1. Install the package by running `bower install exceptionless`
   2. Add the Exceptionless script to your HTML page. We recommend placing the script at the top of the document to ensure Exceptionless picks up and reports the absolute most potential exceptions and events.
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;script src="bower_components/exceptionless/dist/exceptionless.min.js"&gt;&lt;/script&gt;</pre>
+```html
+<script src="bower_components/exceptionless/dist/exceptionless.min.js"></script>
+```
 
 ## Configuring the Client
 
@@ -35,22 +37,28 @@ _NOTE: The only required setting you need to configure is the client's apiKey._
 
 **1.** Configure the `apiKey` as part of the script tag. This method will be applied to all new instances of the ExceptionlessClient
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;script src="bower_components/exceptionless/dist/exceptionless.min.js?apiKey=API_KEY_HERE"&gt;&lt;/script&gt;</pre>
+```html
+<script src="bower_components/exceptionless/dist/exceptionless.min.js?apiKey=API_KEY_HERE"></script>
+```
 
 **2.** Set the `apiKey` on the default ExceptionlessClient instance.
 
-<pre class="brush: jscript; title: ; notranslate" title="">var client = exceptionless.ExceptionlessClient.default;
-client.config.apiKey = 'API_KEY_HERE';</pre>
+```js
+var client = exceptionless.ExceptionlessClient.default;
+client.config.apiKey = 'API_KEY_HERE';
+```
 
 **3.** Create a new instance of the ExceptionlessClient and specify the `apiKey` or <a title="Exceptionless.JavaScript Configuration Object" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/configuration/IConfigurationSettings.ts" target="_blank">configuration object</a>. _Note that the configuration object is optional._
 
-<pre class="brush: jscript; title: ; notranslate" title="">var client = new exceptionless.ExceptionlessClient('API_KEY_HERE'); // Required
+```js
+var client = new exceptionless.ExceptionlessClient('API_KEY_HERE'); // Required
 
 // or with a configuration object
 //var client = new exceptionless.ExceptionlessClient({
   //apiKey: 'API_KEY_HERE',
   //submissionBatchSize: 100
-//});</pre>
+//});
+```
 
 ## Sending Events
 
@@ -58,7 +66,8 @@ Unhandled exceptions will automatically be sent to your Exceptionless dashboard 
 
 ### Sending Log Messages, Feature Usages, etc
 
-<pre class="brush: jscript; title: ; notranslate" title="">var client = exceptionless.ExceptionlessClient.default;
+```js
+var client = exceptionless.ExceptionlessClient.default;
 
 client.submitLog('Logging made easy');
 
@@ -76,7 +85,8 @@ client.submitNotFound('/somepage');
 client.createNotFound('/somepage').addTags('Exceptionless').submit();
 
 // Submit a custom event type
-client.submitEvent({ message = 'Low Fuel', type = 'racecar', source = 'Fuel System' });</pre>
+client.submitEvent({ message = 'Low Fuel', type = 'racecar', source = 'Fuel System' });
+```
 
 ### Manually Sending Errors
 
@@ -84,7 +94,8 @@ To manually send events other than the automatically reported unhandled exceptio
 
 The below example demonstrates sending a new error, "test," and setting the ReferenceID, Order and Quote properties, Tags, Geo, UserIdentity, and marking it as Critical.
 
-<pre class="brush: jscript; title: ; notranslate" title="">var client = exceptionless.ExceptionlessClient.default;
+```js
+var client = exceptionless.ExceptionlessClient.default;
 
 try {
   throw new Error('test');
@@ -107,7 +118,8 @@ try {
     .setUserIdentity(user.Id, user.FullName)
     // Submit the event.
     .submit();
-}</pre>
+}
+```
 
 ## What Data is Collected?
 

@@ -17,7 +17,7 @@ In the old days of yesteryear, there weren’t any (good) bug tracking software 
 
 ### IMPORTANCE OF BUG TRACKING
 
-At the risk of sounding pretentious, Kurt Vonnegut said that “Everyone wants to build and nobody wants to do maintenance.” Whether we like it or not, we can’t always build the next big feature or streamline the functionality of our platform. Sometimes we have to hunt down elusive bugs and do maintenance to keep our code clean and keep a solid foundation so we can keep building.
+At the risk of sounding pretentious, Kurt Vonnegut said that "Everyone wants to build and nobody wants to do maintenance." Whether we like it or not, we can’t always build the next big feature or streamline the functionality of our platform. Sometimes we have to hunt down elusive bugs and do maintenance to keep our code clean and keep a solid foundation so we can keep building.
 
 Ignoring or intentionally leaving bugs to multiply in the code can damage your company’s reputation (and revenue) if one of these errors affects your customers’ ability to do their job or compromises their information. It will save everyone involved a ton of time, money, and headache if you simply implement a bug tracking software from the get go. Your code will stay clean and you’ll stop losing users, leads, and customers. It’s a win / win for everyone.
 

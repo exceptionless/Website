@@ -26,7 +26,7 @@ Below are small examples of what is possible with Foundatio caching, queues, loc
 
 ### Caching
 
-Foundatio provides four cache implementations, all derived from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Caching/ICacheClient.cs" target="_blank"><code>ICacheClient</code> interface</a>, that save you expensive operations when creating or getting data by allowing you to store and access the data super fast.
+Foundatio provides four cache implementations, all derived from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Caching/ICacheClient.cs" target="_blank">`ICacheClient` interface</a>, that save you expensive operations when creating or getting data by allowing you to store and access the data super fast.
 
 These implementations include <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Caching/InMemoryCacheClient.cs" target="_blank">InMemoryCacheClient</a>, <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Caching/HybridCacheClient.cs" target="_blank">HybridCacheClient</a>, <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Redis/Cache/RedisCacheClient.cs" target="_blank">RedisCacheClient</a>, and <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Redis/Cache/RedisHybridCacheClient.cs" target="_blank">RedisHybridCacheClient</a>. Learn more about each in the <a href="https://github.com/exceptionless/Foundatio#caching" target="_blank">Foundatio Readme Caching section</a>.
 
@@ -34,22 +34,24 @@ For Exceptionless, we use RedisHybridCacheClient to cache users, organizations
 
 #### Foundatio Caching Sample
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Foundatio.Caching;
+```cs
+using Foundatio.Caching;
 
 ICacheClient cache = new InMemoryCacheClient();
 cache.Set("test", 1);
-var value = cache.Get&lt;int&gt;("test");
-</pre>
+var value = cache.Get<int>("test");
+```
 
 ### Queues
 
-Foundatio includes three queue implementations, each derived from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Queues/IQueue.cs" target="_blank"><code>IQueue</code> interface</a>, for First In, First Out (FIFO) message delivery. These include <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Queues/InMemoryQueue.cs" target="_blank">InMemoryQueue</a>, <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Redis/Queues/RedisQueue.cs" target="_blank">RedisQueue</a>, and <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Azure/Queues/ServiceBusQueue.cs" target="_blank">ServiceBusQueue</a>. Read more in the <a href="https://github.com/exceptionless/Foundatio#queues" target="_blank">queues section of the readme</a>.
+Foundatio includes three queue implementations, each derived from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Queues/IQueue.cs" target="_blank">`IQueue` interface</a>, for First In, First Out (FIFO) message delivery. These include <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Queues/InMemoryQueue.cs" target="_blank">InMemoryQueue</a>, <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Redis/Queues/RedisQueue.cs" target="_blank">RedisQueue</a>, and <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Azure/Queues/ServiceBusQueue.cs" target="_blank">ServiceBusQueue</a>. Read more in the <a href="https://github.com/exceptionless/Foundatio#queues" target="_blank">queues section of the readme</a>.
 
 <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/Controllers/EventController.cs#L420-L428" target="_blank">We use queues</a>, along with Foundatio Storage (below) to queue events for Exceptionless. Using both allows us to keep payloads small and limit system load.
 
 #### Foundatio Queue Example
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Foundatio.Queues;
+```cs
+using Foundatio.Queues;
 
 IQueue queue = new InMemoryQueue();
 
@@ -58,17 +60,18 @@ Data = "Hello"
 });
 
 var workItem = queue.Dequeue(TimeSpan.Zero);
-</pre>
+```
 
 ### Locks
 
-To ensure any resource is only accessed by one consumer at any one time, use one of the two Foundatio Locks implementations, each derived from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Lock/ILockProvider.cs" target="_blank"><code>ILockProvider</code> interface</a>. These implementations include <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Lock/CacheLockProvider.cs" target="_blank">CacheLockProvider</a> and <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Lock/ThrottlingLockProvider.cs" target="_blank">ThrottlingLockProvider</a>. These providers take an `ICacheClient`, ensuring code locks across machines. <a href="https://github.com/exceptionless/Foundatio#locks" target="_blank">Read more on the repo</a>.
+To ensure any resource is only accessed by one consumer at any one time, use one of the two Foundatio Locks implementations, each derived from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Lock/ILockProvider.cs" target="_blank">`ILockProvider` interface</a>. These implementations include <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Lock/CacheLockProvider.cs" target="_blank">CacheLockProvider</a> and <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Lock/ThrottlingLockProvider.cs" target="_blank">ThrottlingLockProvider</a>. These providers take an `ICacheClient`, ensuring code locks across machines. <a href="https://github.com/exceptionless/Foundatio#locks" target="_blank">Read more on the repo</a>.
 
 We use locks to only run single instances of jobs (below), and more.
 
 #### Foundatio Locks Sample
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Foundatio.Lock;
+```cs
+using Foundatio.Lock;
 
 ILockProvider locker = new CacheLockProvider(new InMemoryCacheClient());
 
@@ -79,22 +82,23 @@ using (locker) {
     // ...
   }
 }
-</pre>
+```
 
 ### Messaging
 
-Derived from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Messaging/IMessageBus.cs" target="_blank"><code>IMessageBus</code> interface</a>, our three message bus implementations let you publish and subscribe to messages within your application. Use the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Messaging/InMemoryMessageBus.cs" target="_blank">InMemoryMessageBus</a>, <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Redis/Messaging/RedisMessageBus.cs" target="_blank">RedisMessageBus</a>,or <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Azure/Messaging/ServiceBusMessageBus.cs" target="_blank">ServiceBusMessageBus</a> implementations based on your needs. <a href="https://github.com/exceptionless/Foundatio#messaging" target="_blank">Read more about each implementation on GitHub</a>.
+Derived from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Messaging/IMessageBus.cs" target="_blank">`IMessageBus` interface</a>, our three message bus implementations let you publish and subscribe to messages within your application. Use the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Messaging/InMemoryMessageBus.cs" target="_blank">InMemoryMessageBus</a>, <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Redis/Messaging/RedisMessageBus.cs" target="_blank">RedisMessageBus</a>,or <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Azure/Messaging/ServiceBusMessageBus.cs" target="_blank">ServiceBusMessageBus</a> implementations based on your needs. <a href="https://github.com/exceptionless/Foundatio#messaging" target="_blank">Read more about each implementation on GitHub</a>.
 
 <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/Hubs/MessageBusHub.cs#L25-L32" target="_blank">Exceptionless utilizes the message bus</a> extensively to pass messages such as events being created, stacks being changed, etc, throughout the system.
 
 #### Foundatio Messaging Example
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Foundatio.Messaging;
+```cs
+using Foundatio.Messaging;
 
 IMessageBus messageBus = new InMemoryMessageBus();
 
 using (messageBus) {
-  messageBus.Subscribe&lt;SimpleMessageA&gt;(msg =&gt; {
+  messageBus.Subscribe<SimpleMessageA>(msg => {
     // Got message
   });
 
@@ -102,22 +106,23 @@ using (messageBus) {
       Data = "Hello"
   });
 }
-</pre>
+```
 
 ### Jobs
 
-Run jobs by calling `Run()` or passing it to the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Jobs/JobRunner.cs" target="_blank"><code>JobRunner</code> class</a>, which allows you to easily run jobs as Azure Web Jobs. All jobs are required to derive from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Jobs/JobBase.cs" target="_blank"><code>JobBase</code> class</a>.
+Run jobs by calling `Run()` or passing it to the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Jobs/JobRunner.cs" target="_blank">`JobRunner` class</a>, which allows you to easily run jobs as Azure Web Jobs. All jobs are required to derive from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Jobs/JobBase.cs" target="_blank">`JobBase` class</a>.
 
 Around here, <a href="https://github.com/exceptionless/Exceptionless/tree/master/Source/Core/Jobs" target="_blank">we use the jobs feature</a> for processing events, sending mail messages, and more. Some jobs, such as our <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Jobs/DailySummaryJob.cs#L41-L43" target="_blank">DailySummaryJob</a>, which we only want to run once, also use locks (above) to only run one instance.
 
 #### Foundatio Jobs Sample
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Foundatio.Jobs;
+```cs
+using Foundatio.Jobs;
 
 public class HelloWorldJob : JobBase {
   public int RunCount { get; set; }
 
-  protected override Task&lt;JobResult&gt; RunInternalAsync(CancellationToken token) {
+  protected override Task<JobResult> RunInternalAsync(CancellationToken token) {
     RunCount++;
 
     return Task.FromResult(JobResult.Success);
@@ -127,38 +132,40 @@ public class HelloWorldJob : JobBase {
 var job = new HelloWorldJob();
 job.Run(); // job.RunCount = 1;
 job.RunContinuous(iterationLimit: 2); // job.RunCount = 3;
-job.RunContinuous(token: new CancellationTokenSource(TimeSpan.FromMilliseconds(10)).Token); // job.RunCount &gt; 10;
-</pre>
+job.RunContinuous(token: new CancellationTokenSource(TimeSpan.FromMilliseconds(10)).Token); // job.RunCount > 10;
+```
 
 `Job.exe -t "MyLib.HelloWorldJob,MyLib"`
 
 ### File Storage
 
-Derived from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Storage/IFileStorage.cs" target="_blank"><code>IFileStorage</code> interface</a>, we offer three file storage implementations, including <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Storage/InMemoryFileStorage.cs" target="_blank">InMemoryFileStorage</a>, <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Storage/FolderFileStorage.cs" target="_blank">FolderFileStorage</a>, and <a href="https://github.com/exceptionless/Foundatio/blob/master/src/AzureStorage/Storage/AzureFileStorage.cs" target="_blank">AzureFileStorage</a>. Read more on each in the <a href="https://github.com/exceptionless/Foundatio#file-storage" target="_blank">ReadMe</a>. _Using all `IFileStorage` implementations as singletons is recommended._
+Derived from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Storage/IFileStorage.cs" target="_blank">`IFileStorage` interface</a>, we offer three file storage implementations, including <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Storage/InMemoryFileStorage.cs" target="_blank">InMemoryFileStorage</a>, <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Storage/FolderFileStorage.cs" target="_blank">FolderFileStorage</a>, and <a href="https://github.com/exceptionless/Foundatio/blob/master/src/AzureStorage/Storage/AzureFileStorage.cs" target="_blank">AzureFileStorage</a>. Read more on each in the <a href="https://github.com/exceptionless/Foundatio#file-storage" target="_blank">ReadMe</a>. _Using all `IFileStorage` implementations as singletons is recommended._
 
 File storage is used by Exceptionless in conjunction with queues (above), among other things.
 
 #### Foundatio File Storage Example
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Foundatio.Storage;
+```cs
+using Foundatio.Storage;
 
 IFileStorage storage = new InMemoryFileStorage();
 storage.SaveFile("test.txt", "test");
 string content = storage.GetFileContents("test.txt")
-</pre>
+```
 
 ### Metrics
 
-Our three metric implementations derive from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Metrics/IMetricsClient.cs" target="_blank"><code>IMetricsClient</code> interface</a> and include <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Metrics/InMemoryMetricsClient.cs" target="_blank">InMemoryMetricsClient</a>, <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Metrics/StatsDMetricsClient.cs" target="_blank">StatsDMetricsClient</a>, and <a href="https://github.com/exceptionless/Foundatio/blob/master/src/MetricsNET/MetricsNETClient.cs" target="_blank">MetricsNETClient</a>. <a href="https://github.com/exceptionless/Foundatio#metrics" target="_blank">Get the details on the repo</a>. _Note that these implementations should be used as singletons._
+Our three metric implementations derive from the <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Metrics/IMetricsClient.cs" target="_blank">`IMetricsClient` interface</a> and include <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Metrics/InMemoryMetricsClient.cs" target="_blank">InMemoryMetricsClient</a>, <a href="https://github.com/exceptionless/Foundatio/blob/master/src/Core/Metrics/StatsDMetricsClient.cs" target="_blank">StatsDMetricsClient</a>, and <a href="https://github.com/exceptionless/Foundatio/blob/master/src/MetricsNET/MetricsNETClient.cs" target="_blank">MetricsNETClient</a>. <a href="https://github.com/exceptionless/Foundatio#metrics" target="_blank">Get the details on the repo</a>. _Note that these implementations should be used as singletons._
 
 Metrics are used throughout the Exceptionless system to provide insight into how the system is working and get external alerts if events are not processing or report how much load is on the current system.
 
 #### Foundatio Metrics Sample
 
-<pre class="brush: csharp; title: ; notranslate" title="">metrics.Counter("c1");
+```cs
+metrics.Counter("c1");
 metrics.Gauge("g1", 2.534);
 metrics.Timer("t1", 50788);
-</pre>
+```
 
 ## Development
 

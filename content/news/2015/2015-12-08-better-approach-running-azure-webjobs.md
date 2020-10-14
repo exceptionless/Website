@@ -40,29 +40,34 @@ This new approach also gave us a great deployment strategy, for free. Simply cop
 
 In this sample we'll just define a new class called HelloWorldJob that will hold our job that increments a counter and derives from JobBase. Please note that there are a few different base classes you can derive from based on your use case.
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Foundatio.Jobs;
+```cs
+using Foundatio.Jobs;
 
 public class HelloWorldJob : JobBase {
    public int RunCount { get; set; }
 
-   protected override Task&lt;JobResult&gt; RunInternalAsync(JobRunContext context) {
+   protected override Task<JobResult> RunInternalAsync(JobRunContext context) {
        RunCount++;
        return Task.FromResult(JobResult.Success);
    }
-}</pre>
+}
+```
 
 Now that we have our job defined we can run our job in process with a few different options:
 
-<pre class="brush: csharp; title: ; notranslate" title="">var job = new HelloWorldJob();
+```cs
+var job = new HelloWorldJob();
 await job.RunAsync(); // job.RunCount = 1;
 await job.RunContinuousAsync(iterationLimit: 2); // job.RunCount = 3;
-await job.RunContinuousAsync(cancellationToken: new CancellationTokenSource(TimeSpan.FromMilliseconds(10)).Token); // job.RunCount &gt; 10;</pre>
+await job.RunContinuousAsync(cancellationToken: new CancellationTokenSource(TimeSpan.FromMilliseconds(10)).Token); // job.RunCount > 10;
+```
 
 But our goal is to run this out of process in an Azure WebJob (this also works if you want to run this as a service or from the desktop).
 
 The first step is to create a new console application and reference the <a style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;" href="https://www.nuget.org/packages/Foundatio/">Foundatio NuGet Package</a> and the project that contains our HelloWorldJob. We are going to call our console application HelloWorldJob. Inside of the Program class, we'll update the main method to run our job.
 
-<pre class="brush: csharp; title: ; notranslate" title="">using System;
+```cs
+using System;
 using System.IO;
 using JobSample;
 using Foundatio.Jobs;
@@ -79,11 +84,12 @@ namespace HelloWorldJob {
             // Get a service provider so we can create an instance of our job.
             var serviceProvider = ServiceProvider.GetServiceProvider("JobSample.JobBootstrappedServiceProvider,JobSample");
 
-            var job = serviceProvider.GetService&lt;JobSample.HelloWorldJob&gt;();
+            var job = serviceProvider.GetService<JobSample.HelloWorldJob>();
             return new JobRunner(job, initialDelay: TimeSpan.FromSeconds(2), interval: TimeSpan.Zero).RunInConsole();
         }
     }
-}</pre>
+}
+```
 
 The last steps are to simply compile the project and deploy it to your Azure website!
 

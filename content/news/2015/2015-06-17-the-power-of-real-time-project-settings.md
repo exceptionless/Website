@@ -47,7 +47,8 @@ To control this we will be registering a new <a href="/how-to-add-a-plugin-to-af
 
 ### .NET Example
 
-<pre class="brush: csharp; title: ; notranslate" title="">ExceptionlessClient.Default.Configuration.AddPlugin("Conditionally cancel log submission", 100, context =&gt; {
+```cs
+ExceptionlessClient.Default.Configuration.AddPlugin("Conditionally cancel log submission", 100, context => {
     var enableLogSubmission = context.Client.Configuration.Settings.GetBoolean("enableLogSubmission", true);
 
     // only cancel event submission if it’s a log event and enableLogSubmission is false
@@ -55,7 +56,7 @@ To control this we will be registering a new <a href="/how-to-add-a-plugin-to-af
         context.Cancel = true;
     }
 });
-</pre>
+```
 
 You might notice that we are calling the `GetBoolean` method to check the `enableLogSubmission` key. This is a helper method that makes it easy to consume saved client configuration values. The first parameter defines the settings key (name). The second parameter is optional and **allows you to set a default value** if the key doesn’t exist in the settings or was unable to be converted to the proper type (e.g., a boolean).
 
@@ -79,7 +80,8 @@ Above, we used the `GetBoolean` helper method. In the .NET client, we have a few
 
 The same functionality above can also be achieved using our new [JavaScript Client](/javascript-node-js-client-v1-release-notes/).
 
-<pre class="brush: jscript; title: ; notranslate" title="">exceptionless.ExceptionlessClient.default.config.addPlugin('Conditionally cancel log submission', 100, function (context, next) {
+```js
+exceptionless.ExceptionlessClient.default.config.addPlugin('Conditionally cancel log submission', 100, function (context, next) {
     var enableLogSubmission = context.client.config.settings['enableLogSubmission'];
 
     // only cancel event submission if it’s a log event and
@@ -90,7 +92,7 @@ The same functionality above can also be achieved using our new [JavaScript Clie
 
     next();
 });
-</pre>
+```
 
 ## Subscribing to Setting Changes
 
@@ -98,19 +100,21 @@ If you would like to be notified when client configuration settings are changed,
 
 ### .NET
 
-<pre class="brush: csharp; title: ; notranslate" title="">ExceptionlessClient.Default.Configuration.Settings.Changed += SettingsOnChanged;
+```cs
+ExceptionlessClient.Default.Configuration.Settings.Changed += SettingsOnChanged;
 
-private void SettingsOnChanged(object sender, ChangedEventArgs&lt;KeyValuePair&lt;string, string&gt;&gt; args) {
+private void SettingsOnChanged(object sender, ChangedEventArgs<KeyValuePair<string, string>> args) {
    Console.WriteLine("The key {0} was {1}", args.Item.Key, args.Action);
 }
-</pre>
+```
 
 ### JavaScript
 
-<pre class="brush: jscript; title: ; notranslate" title="">exceptionless.SettingsManager.onChanged(function(configuration)  {
+```js
+exceptionless.SettingsManager.onChanged(function(configuration)  {
    // configuration.settings contains the new settings
 });
-</pre>
+```
 
 ## Any Questions?
 

@@ -20,7 +20,7 @@ You can exclude data from any of the following:
 
 ## Data Exclusion Wildcards
 
-To be extra careful with your data, using * allows you to specify wildcards that can be used to dictate “starts with,” “ends with,” or “contains.”
+To be extra careful with your data, using * allows you to specify wildcards that can be used to dictate "starts with," "ends with," or "contains."
 
 * `string*`
     Following the string with a wildcard removes any field that starts with the string from the event report.
@@ -37,7 +37,7 @@ One potential example is, let’s say, user addresses. Perhaps you have multiple
 
 To exclude only "HomeAddress" data, you would just add `HomeAddress` as an exclusion. The same goes for "WorkAddress."
 
-To exclude both, you could either add `HomeAddress` and `WorkAddress`, separated by a comma, or you could use `*Address` if those were the only two fields that ended with “Address.” If those were the only fields that contained “Address” at all, you could use `*Address*`.
+To exclude both, you could either add `HomeAddress` and `WorkAddress`, separated by a comma, or you could use `*Address` if those were the only two fields that ended with "Address." If those were the only fields that contained "Address" at all, you could use `*Address*`.
 
 It's easy stuff, but powerful enough to be aware of and use where possible to ensure security.
 

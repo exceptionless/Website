@@ -25,20 +25,24 @@ So, any events you use the below for will be a part of the custom stack, and all
 
 ### .NET Custom Event Stack Example
 
-<pre class="brush: csharp; title: ; notranslate" title="">try {
+```cs
+try {
     throw new ApplicationException("Unable to create order from quote.");
 } catch (Exception ex) {
     ex.ToExceptionless().SetManualStackingKey("MyCustomStackingKey").Submit();
 }
-</pre>
+```
 
 Alternatively, you can set the stacking directly on an event (e.g., inside a plugin).
 
-<pre class="brush: csharp; title: ; notranslate" title="">event.SetManualStackingKey("MyCustomStackingKey");</pre>
+```cs
+event.SetManualStackingKey("MyCustomStackingKey");
+```
 
 ### JavaScript Custom Event Stack Example
 
-<pre class="brush: jscript; title: ; notranslate" title="">var client = exceptionless.ExceptionlessClient.default;
+```js
+var client = exceptionless.ExceptionlessClient.default;
 // Node.Js
 // var client = require('exceptionless').ExceptionlessClient.default;
 
@@ -46,7 +50,8 @@ try {
   throw new Error('Unable to create order from quote.');
 } catch (error) {
   client.createException(error).setManualStackingKey('MyCustomStackingKey').submit();
-}</pre>
+}
+```
 
 ## How Do We Stack Up?
 

@@ -27,12 +27,16 @@ Since this is a default plugin, we can enable this behavior by calling the `UseR
 
 ### C# Example
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Exceptionless;
-ExceptionlessClient.Default.Configuration.UseReferenceIds();</pre>
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.Configuration.UseReferenceIds();
+```
 
 ### JavaScript Example
 
-<pre class="brush: jscript; title: ; notranslate" title="">exceptionless.ExceptionlessClient.default.config.useReferenceIds();</pre>
+```js
+exceptionless.ExceptionlessClient.default.config.useReferenceIds();
+```
 
 Please note that you can **create your own plugin** to create your very own Reference Id(s).
 
@@ -40,64 +44,73 @@ To **get the the last used Reference Id**, you can call the `GetLastReferenceId(
 
 #### C#
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Exceptionless;
+```cs
+using Exceptionless;
 // Get the last created Reference Id
-ExceptionlessClient.Default.GetLastReferenceId();</pre>
+ExceptionlessClient.Default.GetLastReferenceId();
+```
 
 #### JavaScript
 
-<pre class="brush: jscript; title: ; notranslate" title="">// Get the last created Reference Id
+```js
+// Get the last created Reference Id
 exceptionless.ExceptionlessClient.default.getLastReferenceId();
-</pre>
+```
 
 You might have noticed how easy it is to get or add Reference Id’s to your events automatically. This makes it a breeze to let your developers track down user-facing issues by displaying the Reference Id to your end users.
 
 We **display Reference Ids** to all of our end users anytime an error occurs in our ASP.NET WebAPI application. We accomplish this by adding a custom `<a href="http://www.asp.net/web-api/overview/error-handling/web-api-global-error-handling" target="_blank">IExceptionHandler</a>` and return a new <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/Utility/Handlers/ExceptionlessReferenceIdExceptionHandler.cs#L35-L51" target="_blank">error response to include the Reference Id</a> as shown below:
 
-<pre class="brush: csharp; title: ; notranslate" title="">public class ExceptionlessReferenceIdExceptionHandler : IExceptionHandler {
-	public Task HandleAsync(ExceptionHandlerContext context, CancellationToken cancellationToken) {
-		if (context == null)
-			throw new ArgumentNullException(nameof(context));
+```cs
+public class ExceptionlessReferenceIdExceptionHandler : IExceptionHandler {
+    public Task HandleAsync(ExceptionHandlerContext context, CancellationToken cancellationToken) {
+        if (context == null)
+            throw new ArgumentNullException(nameof(context));
 
-		var exceptionContext = context.ExceptionContext;
-		var request = exceptionContext.Request;
-		if (request == null)
-			throw new ArgumentException($"{typeof(ExceptionContext).Name}.{"Request"} must not be null", nameof(context));
+        var exceptionContext = context.ExceptionContext;
+        var request = exceptionContext.Request;
+        if (request == null)
+            throw new ArgumentException($"{typeof(ExceptionContext).Name}.{"Request"} must not be null", nameof(context));
 
-		context.Result = new ResponseMessageResult(CreateErrorResponse(request, exceptionContext.Exception, HttpStatusCode.InternalServerError));
-		return TaskHelper.Completed();
-	}
+        context.Result = new ResponseMessageResult(CreateErrorResponse(request, exceptionContext.Exception, HttpStatusCode.InternalServerError));
+        return TaskHelper.Completed();
+    }
 
-	private HttpResponseMessage CreateErrorResponse(HttpRequestMessage request, Exception ex, HttpStatusCode statusCode) {
-		HttpConfiguration configuration = request.GetConfiguration();
-		HttpError error = new HttpError(ex, request.ShouldIncludeErrorDetail());
+    private HttpResponseMessage CreateErrorResponse(HttpRequestMessage request, Exception ex, HttpStatusCode statusCode) {
+        HttpConfiguration configuration = request.GetConfiguration();
+        HttpError error = new HttpError(ex, request.ShouldIncludeErrorDetail());
 
-		string lastId = ExceptionlessClient.Default.GetLastReferenceId();
-		if (!String.IsNullOrEmpty(lastId))
-			error.Add("Reference", lastId);
+        string lastId = ExceptionlessClient.Default.GetLastReferenceId();
+        if (!String.IsNullOrEmpty(lastId))
+            error.Add("Reference", lastId);
 
-		// CreateErrorResponse should never fail, even if there is no configuration associated with the request
-		// In that case, use the default HttpConfiguration to con-neg the response media type
-		if (configuration == null) {
-			using (HttpConfiguration defaultConfig = new HttpConfiguration()) {
-				return request.CreateResponse(statusCode, error, defaultConfig);
-			}
-		}
+        // CreateErrorResponse should never fail, even if there is no configuration associated with the request
+        // In that case, use the default HttpConfiguration to con-neg the response media type
+        if (configuration == null) {
+            using (HttpConfiguration defaultConfig = new HttpConfiguration()) {
+                return request.CreateResponse(statusCode, error, defaultConfig);
+            }
+        }
 
-		return request.CreateResponse(statusCode, error, configuration);
-	}
-}</pre>
+        return request.CreateResponse(statusCode, error, configuration);
+    }
+}
+```
 
-The next step is to <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/AppBuilder.cs#L63" target="_blank">replace the existing <code>IExceptionFilter</code></a> with the one above.
+The next step is to <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/AppBuilder.cs#L63" target="_blank">replace the existing `IExceptionFilter`</a> with the one above.
 
-<pre class="brush: csharp; title: ; notranslate" title="">Config.Services.Replace(typeof(IExceptionHandler), new ExceptionlessReferenceIdExceptionHandler());</pre>
+```cs
+Config.Services.Replace(typeof(IExceptionHandler), new ExceptionlessReferenceIdExceptionHandler());
+```
 
 Finally, when an error occurs in your app, you’ll get a more user friendly error response that contains a Reference Id!
 
-<pre class="brush: csharp; title: ; notranslate" title="">{
-  "message": "An error has occurred.",
-  “reference”: “411085622e”
-}</pre>
+```cs
+{
+    "message": "An error has occurred.",
+    "reference": "411085622e"
+}
+```
 
 We’ve found that this allows consumers of our API to quickly contact us with a reference id and get up and running quickly!
 
@@ -105,10 +118,8 @@ We’ve found that this allows consumers of our API to quickly contact us with a
 
 You might be thinking: "Reference Ids are great, but what do I do with them now that I have one." Well, you can view the event that they reference on our site or via our API. This can be accomplished two different ways:
 
-* **Hotlinking
-** You can link directly to a submitted event by outputting a link in your UI or logs (e.g. https://be.exceptionless.io/event/by-ref/YOUR\_REFERENCE\_ID)
-* **Search
-** You can search via our api/ui with `reference:YOUR_REFERENCE_ID`
+* **Hotlinking**: You can link directly to a submitted event by outputting a link in your UI or logs (e.g. https://be.exceptionless.io/event/by-ref/YOUR\_REFERENCE\_ID)
+* **Search**: You can search via our api/ui with `reference:YOUR_REFERENCE_ID`
 
 ## Your Turn!
 

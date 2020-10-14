@@ -21,8 +21,10 @@ In the example below, we are going to submit a feature usage when any user signs
 
 **To submit the feature occurrence, you just need to call our api as follows:**
 
-<pre>using Exceptionless;
-ExceptionlessClient.Default.SubmitFeatureUsage("Signup");</pre>
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.SubmitFeatureUsage("Signup");
+```
 
 SubmitFeatureUsage creates a simple feature usage and submits it. To include more information, please use CreateFeatureUsage (example below).
 
@@ -34,15 +36,19 @@ You can also submit additional information with a feature usage using our fluent
 
 If, for instance, you wanted to indicate how a user signs up, you can add a tag to the feature usage occurrence. In the below example, we are tagging a feature usage that uses GitHub to sign up.
 
-<pre>using Exceptionless;
-ExceptionlessClient.Default.CreateFeatureUsage("Signup").AddTags("GitHub").Submit();</pre>
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.CreateFeatureUsage("Signup").AddTags("GitHub").Submit();
+```
 
 #### Example 3 - Who's Searching?
 
 As another example, maybe we want to log a feature usage when users search, and then set their identity.
 
-<pre>using Exceptionless;
-ExceptionlessClient.Default.CreateFeatureUsage("Searching").SetUserIdentity("John Smith");</pre>
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.CreateFeatureUsage("Searching").SetUserIdentity("John Smith");
+```
 
 #### What else can I add to a submission?
 
@@ -67,10 +73,12 @@ There are a number of additional pieces of data you can use for your event. The
 
 You can also submit a feature usage by posting JSON to our API. See details in our <a title="Exceptionless JSON Post API Documentation" href="https://api.exceptionless.io/docs/index#!/Event/Event_Post" target="_blank" rel="noopener noreferrer">API Documentation</a>. If you need an API key for simply posting events, you can find it in your <a title="Exceptionless" href="https://be.exceptionless.io" target="_blank" rel="noopener noreferrer">project settings</a>. Otherwise, please refer to the <a title="Exceptionless Auth Login API Documentation" href="https://api.exceptionless.io/docs/index.html#!/Auth/Auth_Login" target="_blank" rel="noopener noreferrer">auth login documentation</a> to get a user scoped api key.
 
-<pre>{
- "type": "usage",
- "source": "Signup"
- }</pre>
+```json
+{
+    "type": "usage",
+    "source": "Signup"
+}
+```
 
 ## The Dashboard
 

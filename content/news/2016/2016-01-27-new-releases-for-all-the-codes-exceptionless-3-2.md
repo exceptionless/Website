@@ -86,7 +86,9 @@ Check out the <a href="https://github.com/exceptionless/Exceptionless.UI/compare
 
 Users on desktop applications can now opt-in to sessions by setting a default user and calling the below:
 
-<pre class="brush: csharp; title: ; notranslate" title="">ExceptionlessClient.Default.Configuration.UseSessions()</pre>
+```cs
+ExceptionlessClient.Default.Configuration.UseSessions();
+```
 
 Also, module info was not being included in some error reports, which was incorrect. That has now been fixed.
 
@@ -98,6 +100,8 @@ The <a href="https://github.com/exceptionless/Exceptionless.Net/compare/v3.3.1..
 
 Besides integrating with the above, the only major change in the JavaScript client, like the .NET client, was that users can now op-in to sessions. To do so, set a default user and call the below:
 
-<pre class="brush: csharp; title: ; notranslate" title="">exceptionless.ExceptionlessClient.default.config.useSessions();</pre>
+```cs
+exceptionless.ExceptionlessClient.default.config.useSessions();
+```
 
 Check out the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/compare/v1.3.0...v1.3.1" target="_blank">full change log</a> for all the dirty details.

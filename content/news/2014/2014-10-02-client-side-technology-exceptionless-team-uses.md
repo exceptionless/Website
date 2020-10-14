@@ -17,7 +17,7 @@ Most of these are **free** services, so check them out!
 
 **JavaScript framework for building dynamic, awesome apps**
 
-<a title="AngularJS" href="https://angularjs.org/" target="_blank">AngularJS </a>is a structural framework for dynamic web apps. It lets you use HTML as your UI language and lets you extend HTML's syntax to define your application’s structure efficiently. Angular's data binding and dependency injection eliminates much of the “fluff” code needed and does this all in the browser.
+<a title="AngularJS" href="https://angularjs.org/" target="_blank">AngularJS </a>is a structural framework for dynamic web apps. It lets you use HTML as your UI language and lets you extend HTML's syntax to define your application’s structure efficiently. Angular's data binding and dependency injection eliminates much of the "fluff" code needed and does this all in the browser.
 
 ### Bootstrap
 

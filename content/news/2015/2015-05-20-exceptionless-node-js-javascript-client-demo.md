@@ -20,7 +20,9 @@ Our javascript client is built in <a title="TypeScript" href="https://github.com
   1. Install the package by running `npm install exceptionless --save-dev`
   2. Add the Exceptionless client to your app:
 
-<pre class="brush: jscript; title: ; notranslate" title="">var client = require('exceptionless.node').ExceptionlessClient.default;</pre>
+```js
+var client = require('exceptionless.node').ExceptionlessClient.default;
+```
 
 ## Configuring the Client
 
@@ -28,9 +30,10 @@ You can configure the Exceptionless client a few different ways for Node.js. The
 
 Set the `apiKey` on the default ExceptionlessClient instance.
 
-<pre class="brush: jscript; title: ; notranslate" title="">var client = require('exceptionless.node').ExceptionlessClient.default;
+```js
+var client = require('exceptionless.node').ExceptionlessClient.default;
 client.config.apiKey = 'API_KEY_HERE';
-</pre>
+```
 
 ## Sending Events
 
@@ -40,7 +43,8 @@ Make sure to check out the <a title="Exceptionless.JavaScript GitHub Repo" href=
 
 ### Sending Log Messages, Feature Usages, etc
 
-<pre class="brush: jscript; title: ; notranslate" title="">var client = require('exceptionless.node').ExceptionlessClient.default;
+```js
+var client = require('exceptionless.node').ExceptionlessClient.default;
 
 client.submitLog('Logging made easy');
 
@@ -59,7 +63,7 @@ client.createNotFound('/somepage').addTags('Exceptionless').submit();
 
 // Submit a custom event type
 client.submitEvent({ message = 'Low Fuel', type = 'racecar', source = 'Fuel System' });
-</pre>
+```
 
 ### Manually Sending Errors
 
@@ -67,7 +71,8 @@ In addition to automatically sending all unhandled exceptions, you can also man
 
 The below example demonstrates sending a new error, "test," and setting the ReferenceID, Order and Quote properties, Tags, Geo, UserIdentity, and marking it as Critical.
 
-<pre class="brush: jscript; title: ; notranslate" title="">var client = require('exceptionless.node').ExceptionlessClient.default;
+```js
+var client = require('exceptionless.node').ExceptionlessClient.default;
 
 try {
   throw new Error('test');
@@ -91,13 +96,14 @@ try {
     // Submit the event.
     .submit();
 }
-</pre>
+```
 
 ## Express.js Support
 
 If you are using <a title="Express.JS" href="http://expressjs.com/" target="_blank">Express.js</a> to develop a web application, you can add Exceptionless and start collecting unhandled errors and 404s very quickly. To start, just add the following middleware to the bottom of your middleware definitions.
 
-<pre class="brush: jscript; title: ; notranslate" title="">// This middleware processes any unhandled errors that may occur in your middleware.
+```js
+// This middleware processes any unhandled errors that may occur in your middleware.
 app.use(function(err, req, res, next) {
  client.createUnhandledException(err, 'express').addRequestInfo(req).submit();
  res.status(500).send('Something broke!');
@@ -108,7 +114,7 @@ app.use(function(req, res, next) {
  client.createNotFound(req.originalUrl).addRequestInfo(req).submit();
  res.status(404).send('Sorry cant find that!');
 });
-</pre>
+```
 
 ## What Data is Collected?
 

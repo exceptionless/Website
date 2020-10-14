@@ -37,10 +37,10 @@ That is the ideal flow, but we know users won't always follow that flow. However
 
 Let's start with the setup for product searches. Remember, we're going to use a GET request. You can read more of the Exceptionless documentation [here](https://api.exceptionless.io/docs/index.html), but the request is pretty simple. We will want to pass in an indicator that the event is a `productSearch` and what the product is. We can do that like this:
 
-<pre class="brush: plain; title: ; notranslate" title="">curl --location --request GET 'https://api.exceptionless.io/api/v2/events/submit/usage?source=productSearch&message=YOUR_PRODUCT' \
+```bash
+curl --location --request GET 'https://api.exceptionless.io/api/v2/events/submit/usage?source=productSearch&message=YOUR_PRODUCT' \
 --header 'Authorization: Bearer YOUR_API_KEY'
-
-</pre>
+```
 
 Feel free to add whatever product name you'd like in the query. Just replace `YOUR_PRODUCT` with the name of the product you'd like to track. You can run the cURL command from the command line or you can use it to build a real request you would use in your app. If we run that then take a look at our dashboard in Exceptionless, we can start to make use of the data.
 
@@ -52,10 +52,10 @@ Pretty cool! This alone starts to become useful. We can cut out a separate analy
 
 Remember, we want to track the funnel from search to checkout. So, let's send through another event representing a `cartAdd` when a user adds a product to their shopping cart. Here we are adding an extra parameter to also track how many of the product is added to the cart.
 
-<pre class="brush: plain; title: ; notranslate" title="">curl --location --request GET 'https://api.exceptionless.io/api/v2/events/submit/usage?source=cartAdd&value=QUANTITY_ADDED&message=YOUR_PRODUCT' \
+```bash
+curl --location --request GET 'https://api.exceptionless.io/api/v2/events/submit/usage?source=cartAdd&value=QUANTITY_ADDED&message=YOUR_PRODUCT' \
 --header 'Authorization: Bearer YOUR_API_KEY'
-
-</pre>
+```
 
 Exceptionless has real-time monitoring, so if you flip back to your dashboard after running the above command, you should already see the event in the list:<figure class="wp-block-image">
 
@@ -63,10 +63,10 @@ Exceptionless has real-time monitoring, so if you flip back to your dashboard af
 
 I think you're already seeing how easy this is, but let's round this out by adding a `checkout` event to track.
 
-<pre class="brush: plain; title: ; notranslate" title="">curl --location --request GET 'https://api.exceptionless.io/api/v2/events/submit/usage?source=checkout&message=YOUR_PRODUCT' \
+```bash
+curl --location --request GET 'https://api.exceptionless.io/api/v2/events/submit/usage?source=checkout&message=YOUR_PRODUCT' \
 --header 'Authorization: Bearer YOUR_API_KEY'
-
-</pre>
+```
 
 Again, your Exceptionless dashboard should update in real-time. This is starting to shape up! Now, let's dive into the events because right now we have the start of a nice funnel analysis, but we don't know yet what products were searched for, added to the cart, and checked out. The cool thing here is we can click into an event like `productSearch` for example and get detailed info.
 

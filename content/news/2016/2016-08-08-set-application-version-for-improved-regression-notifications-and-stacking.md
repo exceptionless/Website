@@ -19,12 +19,16 @@ Setting an application version in Exceptionless is easy. By default, we attemptÂ
 
 ### .NET Version Specification Example
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Exceptionless;
-ExceptionlessClient.Default.Configuration.SetVersion("1.2.3");</pre>
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.Configuration.SetVersion("1.2.3");
+```
 
 ### JavaScript/Node.JS Version Specification Example
 
-<pre class="brush: jscript; title: ; notranslate" title="">exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");</pre>
+```js
+exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
+```
 
 ## Fixed!
 

@@ -41,12 +41,16 @@ In order to assure you are getting value out of the user feature, you want to ma
 
 #### C#
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Exceptionless;
-ExceptionlessClient.Default.Configuration.SetUserIdentity("UNIQUE_ID_OR_EMAIL_ADDRESS", "Display Name");</pre>
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.Configuration.SetUserIdentity("UNIQUE_ID_OR_EMAIL_ADDRESS", "Display Name");
+```
 
 #### JavaScript
 
-<pre class="brush: jscript; title: ; notranslate" title="">exceptionless.ExceptionlessClient.default.config.setUserIdentity('UNIQUE_ID_OR_EMAIL_ADDRESS', 'Display Name');</pre>
+```js
+exceptionless.ExceptionlessClient.default.config.setUserIdentity('UNIQUE_ID_OR_EMAIL_ADDRESS', 'Display Name');
+```
 
 Once the user is set on the config object, it will be applied to all future events.
 
@@ -56,28 +60,31 @@ Once the user is set on the config object, it will be applied to all future even
 
 You can also manually set the user info on the event directly. This is intended for **multi-user processes (web applications)[.](http://www.businessinsider.com/slack-free-unlimited-plan-has-limits-2015-6) **For most MVC and WebAPI packages, the user will be set automatically based on the logged in principal, so you don't have to do anything.
 
-<pre class="brush: csharp; title: ; notranslate" title="">// Import the exceptionless namespace.
+```cs
+// Import the exceptionless namespace.
 using Exceptionless;
-
-ExceptionlessClient.Default.CreateFeatureUsage("MyFeature").SetUserIdentity(“123456789", “Blake Niemyjski").Submit();
-</pre>
+ExceptionlessClient.Default.CreateFeatureUsage("MyFeature").SetUserIdentity("123456789", "Blake Niemyjski").Submit();
+```
 
 ### JavaScript Example
 
 If you're using the JavaScript client, the entire session of the client will typically be for a single user, so you should be able to set it one time when they log in to your app.
 
-<pre class="brush: jscript; title: ; notranslate" title="">exceptionless.ExceptionlessClient.default.setUserIdentity("id", "friendly name")`
-</pre>
+```js
+exceptionless.ExceptionlessClient.default.setUserIdentity("id", "friendly name")`
+```
 
 Like with .NET, if you are running a multi-user process (Node.js), you'll need to set the user at the event level.
 
-<pre class="brush: jscript; title: ; notranslate" title="">// javascript
+```js
+// javascript
 var client = exceptionless.ExceptionlessClient.default;
+
 // Node.Js
 // var client = require('exceptionless').ExceptionlessClient.default;
 
 client.createFeatureUsage('MyFeature’).setUserIdentity('123456789', 'Blake Niemyjski').submit();
-</pre>
+```
 
 ## How Will You Use this Data
 

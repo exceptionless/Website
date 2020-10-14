@@ -45,13 +45,15 @@ Alternatively, you could use the <a href="https://github.com/exceptionless/Excep
 
 Please feel free to **take a look out our job** for a complete sample including logging and error handling:
 
-<pre class="brush: csharp; title: ; notranslate" title="">var client = new HttpClient();
+```cs
+var client = new HttpClient();
 var file = await client.GetAsync("http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz", context.CancellationToken);
 if (!file.IsSuccessStatusCode)
     throw new Exception("Unable to download GeoIP database.");
 
 using (GZipStream decompressionStream = new GZipStream(await file.Content.ReadAsStreamAsync(), CompressionMode.Decompress))
-    await _storage.SaveFileAsync("GeoLite2-City.mmdb”, decompressionStream, context.CancellationToken);</pre>
+    await _storage.SaveFileAsync("GeoLite2-City.mmdb", decompressionStream, context.CancellationToken);
+```
 
 ## Looking up a Physical Address from an IP Address
 
@@ -59,8 +61,9 @@ using (GZipStream decompressionStream = new GZipStream(await file.Content.ReadAs
 
 After we automate the database download, the next step involves loading the database in memory using the <a href="https://github.com/maxmind/GeoIP2-dotnet" target="_blank">open source library</a> provided by MaxMind and querying by the IP address. The code below will do very basic IP validation and lookup the records using the API.
 
-<pre class="brush: csharp; title: ; notranslate" title="">private DatabaseReader _database;
-public async Task&lt;GeoResult&gt; ResolveIpAsync(string ip, CancellationToken cancellationToken = new CancellationToken()) {
+```cs
+private DatabaseReader _database;
+public async Task<GeoResult> ResolveIpAsync(string ip, CancellationToken cancellationToken = new CancellationToken()) {
     if (String.IsNullOrWhiteSpace(ip) || (!ip.Contains(".") && !ip.Contains(":")))
         return null;
 
@@ -86,7 +89,7 @@ public async Task&lt;GeoResult&gt; ResolveIpAsync(string ip, CancellationToken c
     return null;
 }
 
-private async Task&lt;DatabaseReader&gt; GetDatabaseAsync(CancellationToken cancellationToken) {
+private async Task<DatabaseReader> GetDatabaseAsync(CancellationToken cancellationToken) {
     if (_database != null)
         return _database;
 
@@ -103,11 +106,14 @@ private async Task&lt;DatabaseReader&gt; GetDatabaseAsync(CancellationToken canc
     }
 
     return _database;
-}</pre>
+}
+```
 
 Then, just call the `ResolveIPAsync` method with an IP address to look up the location details.
 
-<pre class="brush: csharp; title: ; notranslate" title="">var location = await ResolveIPAsync(“YOUR_IP_ADDRESS_HERE”);</pre>
+```cs
+var location = await ResolveIPAsync("YOUR_IP_ADDRESS_HERE");
+```
 
 Feel free to take a look at `<a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Geo/MaxMindGeoIPService.cs" target="_blank">MaxMindGeoIPService</a>` for a complete sample that includes logging, error handling, caching of the results, and IP validation for higher lookup throughput. We’ve spent the time writing tests and optimizing it to ensure **its rock solid and works great**. So feel free to grab our <a href="https://github.com/exceptionless/Exceptionless/tree/master/Source/Core/Geo" target="_blank">IGeoIPService interfaces and models</a> and use them in your app.
 
@@ -123,7 +129,8 @@ Next, let’s write the code that will look up our location from a latitude and 
 
 Remember to get your free api key from Google before running the code below.
 
-<pre class="brush: csharp; title: ; notranslate" title="">public async Task&lt;GeoResult&gt; ReverseGeocodeAsync(double latitude, double longitude, CancellationToken cancellationToken = new CancellationToken()) {
+```cs
+public async Task<GeoResult> ReverseGeocodeAsync(double latitude, double longitude, CancellationToken cancellationToken = new CancellationToken()) {
     var geocoder = new GoogleGeocoder("YOUR_API_KEY");
     var addresses = await geocoder.ReverseGeocodeAsync(latitude, longitude, cancellationToken);
     var address = addresses.FirstOrDefault();
@@ -139,11 +146,13 @@ Remember to get your free api key from Google before running the code below.
         Longitude = longitude
     };
 }
-</pre>
+```
 
 Finally, just call the `ReverseGeocodeAsync` method with a latitude and longitude to look up the location details.
 
-<pre class="brush: csharp; title: ; notranslate" title="">var location = await ResolveGeocodeAsync(44.5241, -87.9056);</pre>
+```cs
+var location = await ResolveGeocodeAsync(44.5241, -87.9056);
+```
 
 ## Final Thoughts on Reverse Geocoding
 

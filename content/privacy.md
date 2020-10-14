@@ -17,7 +17,7 @@ We collect the e-mail addresses of those who communicate with us via e-mail or t
 
 * A cookie is a small amount of data, which often includes an anonymous unique identifier, that is sent to your browser from a web site’s computers and stored on your computer’s hard drive.
 * Cookies are required to use the Exceptionless service fully
-* When users choose the “remember me” option during log in, we use cookies to keep them logged in. This cookie is **not permanent**, it will expire after a fixed period of time.
+* When users choose the "remember me" option during log in, we use cookies to keep them logged in. This cookie is **not permanent**, it will expire after a fixed period of time.
 * If users do not select remember me, cookies are destroyed at the end of session (typically when the browser is closed)
 
 ## Data storage

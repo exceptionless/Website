@@ -17,30 +17,31 @@ Please note that before contributing to the Exceptionless project, you must read
 
 ## Text Guide
 
-  1. Log in to github
-  2. Install the <a href="https://windows.github.com/" title="GitHub Windows Client" target="_blank">GitHub Windows client</a>, if you want to use the GUI. If not, you can do the rest of the steps from command line.
-  3. Fork the <a href="https://github.com/exceptionless/Exceptionless" title="Exceptionless on GitHub" target="_blank">Exceptionless repository</a>
-  4. Clone the repo to your machine (Clone to Desktop)
-  5. Open your local repository you just cloned
-  6. Follow the "<a href="https://github.com/exceptionless/Exceptionless#getting-started" title="Exceptionless GitHub Getting Started" target="_blank">Getting Started</a>" section of github readme
-* Start StartBackendServers.bat file to start redis and mongodb
-* Open the Exceptionles solution in Visual Studio
-* Right click solution and select select "set startup projects"
-* Click on "Multiple startup projects"
-    * Locate Exceptionless.app and Exceptionless.SampleConsole and change them to "Start"
-    * Rebuild the solution to pull down the NuGet packages
-    * Start Debugging
-    * A console app and Internet explorer instance will start
-    * Go to the browser and create a (sample) account. This will create a sample organization and project.
-    * You will be redirected to the dashboard for the new project
-    * Go back to the console app and hit 1. A new error will be generated and your Exceptionless dashboard should reflect the error in real-time.</ul>
-    * Now, after you make any changes or updates, you will want to do a pull request.
-    * To do so, commit working, tested changes to the project.
-    * Then, sync the changes
-    * Go back to github and click on the green compare, review, or create a pull request icon.
-    * Review the updates and make sure the pull request includes the proper changes.
-    * Click "Create a Pull Request"
-    * Add any comments relevant to the pull request. Details are great!
-    * Click "Send Pull Request"
-    * The Exceptionless Team will review the request and merge it into the project, provide feedback, etc.</ol>
-    Please let us know if you have any questions. Happy coding!
+1. Log in to github
+2. Install the <a href="https://windows.github.com/" title="GitHub Windows Client" target="_blank">GitHub Windows client</a>, if you want to use the GUI. If not, you can do the rest of the steps from command line.
+3. Fork the <a href="https://github.com/exceptionless/Exceptionless" title="Exceptionless on GitHub" target="_blank">Exceptionless repository</a>
+4. Clone the repo to your machine (Clone to Desktop)
+5. Open your local repository you just cloned
+6. Follow the "<a href="https://github.com/exceptionless/Exceptionless#getting-started" title="Exceptionless GitHub Getting Started" target="_blank">Getting Started</a>" section of github readme.
+7. Start StartBackendServers.bat file to start redis and mongodb
+8. Open the Exceptionles solution in Visual Studio
+9. Right click solution and select select "set startup projects"
+10. Click on "Multiple startup projects"
+11. Locate Exceptionless.app and Exceptionless.SampleConsole and change them to "Start"
+12. Rebuild the solution to pull down the NuGet packages
+13. Start Debugging
+14. A console app and Internet explorer instance will start
+15. Go to the browser and create a (sample) account. This will create a sample organization and project.
+16. You will be redirected to the dashboard for the new project
+17. Go back to the console app and hit 1. A new error will be generated and your Exceptionless dashboard should reflect the error in real-time.
+18. Now, after you make any changes or updates, you will want to do a pull request.
+19. To do so, commit working, tested changes to the project.
+20. Then, sync the changes
+21. Go back to github and click on the green compare, review, or create a pull request icon.
+22. Review the updates and make sure the pull request includes the proper changes.
+23. Click "Create a Pull Request"
+24. Add any comments relevant to the pull request. Details are great!
+25. Click "Send Pull Request"
+26. The Exceptionless Team will review the request and merge it into the project, provide feedback, etc.
+
+Please let us know if you have any questions. Happy coding!

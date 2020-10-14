@@ -19,8 +19,10 @@ For this example, we are assuming that you have already created an account and i
 
 #### Let's submit a log message
 
-<pre>using Exceptionless;
-ExceptionlessClient.Default.SubmitLog("Application starting up");</pre>
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.SubmitLog("Application starting up");
+```
 
 That's your basic log message.
 
@@ -36,8 +38,9 @@ We recommend specifying one of the following log levels, all of which add a vis
 * Warn
 * Error
 
-<pre>ExceptionlessClient.Default.SubmitLog(typeof(MainWindow).FullName, "Info log example", "Info");
-</pre>
+```cs
+ExceptionlessClient.Default.SubmitLog(typeof(MainWindow).FullName, "Info log example", "Info");
+```
 
 Here's a screenshot of what the visual indicators for the different types of log levels look like.
 
@@ -49,9 +52,10 @@ This is helpful wen you want to add contextual information, contact information,
 
 In the below example, we will use the "_CreateLog_" method to add a tag to the log message.
 
-<pre>using Exceptionless;
+```cs
+using Exceptionless;
 ExceptionlessClient.Default.CreateLog(typeof(MainWindow).FullName, "Info log example", "Info").AddTags("Wpf").Submit();
-</pre>
+```
 
 There are a number of additional pieces of data you can use for your event. The below bullets include the current EventBuilder list, but we are always adding more that can be found on <a title="Exceptionless EventBuilder.cs" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Shared/EventBuilder.cs" target="_blank">GitHub</a>. Also, view more examples here on our <a title="Send Exceptionless Events" href="http://docs.exceptionless.com/contents/sendingevents/" target="_blank">Sending Events</a> page.
 
@@ -74,8 +78,10 @@ There are a number of additional pieces of data you can use for your event. The
 
 You can also submit a log message with an HTTP post to our <a title="Exceptionless Events Endpoint" href="https://api.exceptionless.io/docs/index#!/Event/Event_Post" target="_blank">events endpoint</a>.
 
-<pre>My log message
-My second log message.</pre>
+```txt
+My log message
+My second log message.
+```
 
 By default, any content that is submitted to the API post is a log message. The above example will be broken into two log messages because it automatically splits text content by the new line.
 
@@ -85,7 +91,8 @@ See details in our <a title="Exceptionless JSON Post API Documentation" href="ht
 
 Below is a JSON example of a log message, with source, message, and log level.
 
-<pre>{
+```json
+{
   "type": "log",
   "source": "WpfApplication3.MainWindow",
   "message": "Application started",
@@ -93,7 +100,7 @@ Below is a JSON example of a log message, with source, message, and log level.
     "@level": "Info",
   }
 }
-</pre>
+```
 
 ### Using NLog or Log4net Targets
 
@@ -111,13 +118,14 @@ _<span style="color: #993300;">**Note on performance: Use in-memory event storag
 
 _There are some performance considerations you should be aware of when you are logging very high numbers of log events and using our client. We've spent a lot of time to ensure Exceptionless doesn't degrade your applications performance. However, if you are logging thousands of messages a minute, you should use the in-memory event storage._
 
-<pre>using Exceptionless;
+```cs
+using Exceptionless;
 ExceptionlessClient.Default.Configuration.UseInMemoryStorage();
-</pre>
+```
 
 This tells the client not to serialize the log events to disk before sending and thus is much faster (the client doesn't need to serialize the event to disk and read it from disk before sending). This comes at the expense that if the application dies, you will lose any unsent events that were in memory. When you use the NLog or Log4net targets and specify the API key as part of the target configuration, we will automatically create a second client instance that uses in-memory storage only for log messages. This way, any logged exceptions or feature usages still use disk storage, while log messages use in-memory storage, allowing maximum performance.
 
-**Another Note: **We are also working on updating the <a title="Exceptionless Serilog Github Issue" href="https://github.com/serilog/serilog/issues/381" target="_blank">Serilog implementation</a>.
+**Another Note:** We are also working on updating the <a title="Exceptionless Serilog Github Issue" href="https://github.com/serilog/serilog/issues/381" target="_blank">Serilog implementation</a>.
 
 ## Log Messages Dashboard
 

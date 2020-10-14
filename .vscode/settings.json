@@ -3,12 +3,21 @@
         "Aliyun",
         "Burcham",
         "Foundatio",
+        "Geocode",
+        "Gmail",
         "Kubernetes",
+        "Lucene",
         "Minio",
         "OWIN",
+        "Reindexing",
         "Serilog",
         "Varorbc",
+        "Zurb",
+        "Zurb's",
+        "deduplicated",
         "edwardmeng",
-        "serializers"
+        "serializers",
+        "typeof",
+        "walkthrough"
     ]
 }

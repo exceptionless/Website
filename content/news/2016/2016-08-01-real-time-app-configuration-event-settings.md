@@ -77,26 +77,26 @@ This is the cool one. Here you are wanting to, let's say, pass a value for a se
 
 #### C#
 
-<pre class="brush: csharp; title: ; notranslate" title="">using Exceptionless;
+```cs
+using Exceptionless;
 // Check the configuration settings for our enableWelcomeScreen feature flag with a default value of false.
 if (ExceptionlessClient.Default.Configuration.Settings.GetBoolean("enableWelcomeScreen", false)) {
   // Show the welcome screen!
 }
-</pre>
+```
 
 #### JavaScript
 
-<pre class="brush: jscript; title: ; notranslate" title="">// Check the configuration settings for our enableWelcomeScreen feature flag
+```js
+// Check the configuration settings for our enableWelcomeScreen feature flag
 if (exceptionless.ExceptionlessClient.default.config.settings['enableWelcomeScreen'] === true) {
   // Show the welcome screen!
 }
-</pre>
+```
 
 Pretty cool, right!
 
 For more details on client configuration, check out the [Client Configuration Project Settings documentation](https://github.com/exceptionless/Exceptionless/wiki/Project-Settings#client-configuration). Specific usage examples can be found on the [.NET](https://github.com/exceptionless/Exceptionless.Net/wiki/Client-Configuration-Values) and [JavaScript/Node.js](https://github.com/exceptionless/Exceptionless.JavaScript/wiki/Client-Configuration-Values) documentation pages respectively.
-
-###
 
 ## Other Project Settings You Might Find Useful
 
@@ -143,8 +143,6 @@ If your code has shared utility methods that may generate a bunch of errors, thi
 Spam is the worst. So, we added a "Spam Detection" list of common user agents that should be ignored, which you can add to as you see fit. This eliminates a lot of noise, and can be customized to help trim even more depending on your application.
 
 Along with the comma delimited list of user agents to ignore, you can also tick the box that says "Reduce noise by automatically hiding high volumes of events coming from a single client IP address." This can ward off large numbers of events being submitted by a spammer or attack on your app.
-
-##
 
 #### Integrations
 

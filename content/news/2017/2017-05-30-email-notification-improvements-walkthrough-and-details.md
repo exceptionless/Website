@@ -20,7 +20,8 @@ These templates are stored as embedded resources so we can use them from any env
 
 We added [JSON-LD](https://json-ld.org/) support, to the emails to give us rich contextual actions, by starting with this [Google Developer tutorial](https://developers.google.com/gmail/markup/getting-started) and ended up with [the below implementation](https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.EmailTemplates/src/pages/event-notice.html#L75-L94). _It's worth noting that we had to go through their verification process for the actions to be enabled._
 
-<pre class="brush: jscript; title: ; notranslate" title="">&lt;script type="application/ld+json"&gt;
+```html
+<script type="application/ld+json">
 {
  "@context": "http://schema.org",
  "@type": "EmailMessage",
@@ -35,19 +36,16 @@ We added [JSON-LD](https://json-ld.org/) support, to the emails to give us rich
  "@type": "Organization",
  "name": "Exceptionless",
  "url": "https://exceptionless.com",
- "url/googlePlus": "https://plus.google.com/111513069275546127753",
  "logo": "https://be.exceptionless.io/img/exceptionless-48.png"
  }
 }
-&lt;/script&gt;
-</pre>
+</script>
+```
 
 We tested the emails in Outlook for Windows and Mac, Paper Cut, Gmail on Safari, and Apple Mail. Then, we used [Litmus](https://litmus.com) to test a wide range of clients before publishing and pushing everything live.
 
 ## Questions? Comments?
 
-We hope our buildout here can help other developers, and we would love to hear your feedback, questions, or comments either here on the blog or over on [GitHub](https://github.com/exceptionless/Exceptionless/issues)!
+We hope our build out here can help other developers, and we would love to hear your feedback, questions, or comments either here on the blog or over on [GitHub](https://github.com/exceptionless/Exceptionless/issues)!
 
 Code on.
-
-

@@ -40,7 +40,8 @@ Every plugin is passed an <a title="Exceptionless Plugin Contect" href="https://
 
 The <a title="Exceptionless System Uptime Plugin Example" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Samples/SampleConsole/Plugins/SystemUptimePlugin.cs" target="_blank">following system uptime plugin</a> derives from IEventPlugin and places the system uptime into every feature usage event as extended data when the plugin’s Run(context) method is called.
 
-<pre>using System;
+```cs
+using System;
 using System.Diagnostics;
 using Exceptionless.Plugins;
 using Exceptionless.Models;
@@ -65,7 +66,7 @@ namespace Exceptionless.SampleConsole.Plugins {
         }
     }
 }
-</pre>
+```
 
 **Output in Exceptionless:**
 
@@ -79,9 +80,10 @@ You might have noticed that there is a priority attribute with a value of 100. T
 
 To make sure your plugin runs first (if required), you can inspect the configuration's plugin property in Visual Studio while debugging.
 
-<pre>foreach (var plugin in Exceptionless.ExceptionlessClient.Default.Configuration.Plugins)
+```cs
+foreach (var plugin in Exceptionless.ExceptionlessClient.Default.Configuration.Plugins)
     Console.WriteLine(plugin);
-</pre>
+```
 
 [![Exceptionless Plugin Priority](/assets/img/news/exceptionless-plugin-priority.png)](/assets/exceptionless-plugin-priority.png)
 
@@ -91,9 +93,10 @@ Now that we've created the plugin, we’ll add it when our application starts up
 
 In most cases, we use the following overload to register plugins:
 
-<pre>using Exceptionless;
-ExceptionlessClient.Default.Configuration.AddPlugin&lt;SystemUptimePlugin&gt;();
-</pre>
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.Configuration.AddPlugin<SystemUptimePlugin>();
+```
 
 When you add a plugin by specifying the type, we inspect the type and try to find a PriorityAttribute. If we can’t find one, the default value of 0 will be used.
 
@@ -106,8 +109,9 @@ _Please note that we are specifying a key when adding the action plugin so we ca
 * **Priority**
 * **An action** that contains all of our logic to add the system uptime (or whatever your plugin does).
 
-<pre>using Exceptionless;
-ExceptionlessClient.Default.Configuration.AddPlugin("system-uptime", 100, context =&gt; {
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.Configuration.AddPlugin("system-uptime", 100, context => {
     // Only update feature usage events.
     if (context.Event.Type != Event.KnownTypes.FeatureUsage)
         return;
@@ -118,25 +122,27 @@ ExceptionlessClient.Default.Configuration.AddPlugin("system-uptime", 100, contex
          var uptime = TimeSpan.FromSeconds(pc.NextValue());
 
          // Store the system uptime as an extended property.
-         context.Event.SetProperty("&lt;wbr />System Uptime", String.Format("{0} Days {1} Hours {2} Minutes {3} Seconds", uptime.Days, uptime.Hours, uptime.Minutes, uptime.Seconds));
+         context.Event.SetProperty("<wbr />System Uptime", String.Format("{0} Days {1} Hours {2} Minutes {3} Seconds", uptime.Days, uptime.Hours, uptime.Minutes, uptime.Seconds));
 
      }
 });
-</pre>
+```
 
 ## Removing an Existing Plugin
 
 To remove a previously added plugin, you need to call one of the Exceptionless.ExceptionlessClient.Default.Configuration.RemovePlugin overloads.
 
-<pre>using Exceptionless;
-ExceptionlessClient.Default.Configuration.RemovePlugin&lt;SystemUptimePlugin&gt;();
-</pre>
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.Configuration.RemovePlugin<SystemUptimePlugin>();
+```
 
 If you registered your plugin via an action, you will need to remove the plugin with the key it was added with.
 
-<pre>using Exceptionless;
+```cs
+using Exceptionless;
 ExceptionlessClient.Default.Configuration.RemovePlugin("system-uptime");
-</pre>
+```
 
 ## How Can You Use Plugins?
 

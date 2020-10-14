@@ -10,7 +10,7 @@ Recently, a client contacted us and gave us a pretty incredible case study. He f
 
 > "This gave us a picture of just how many poorly written methods were leaking exceptions. The answer was, A LOT. So, even though these weren't customer facing, they were expensive and a good indicator of code quality. In just a couple of days, we were able to eliminate the majority of them completely." - Eric Burcham
 
-After speaking with Mr. Burcham further, he explained that while there were only about 12 individual bugs, the number of times that those bugs were occurring in different areas throughout the code (an ASP.NET eCommerce solution) was numerous. Luckily, he was able to use several mult-line find and replace actions to make all the changes relatively quickly and get things back on track.
+After speaking with Mr. Burcham further, he explained that while there were only about 12 individual bugs, the number of times that those bugs were occurring in different areas throughout the code (an ASP.NET eCommerce solution) was numerous. Luckily, he was able to use several multi-line find and replace actions to make all the changes relatively quickly and get things back on track.
 
 ## A brief code example
 
@@ -18,27 +18,29 @@ After speaking with Mr. Burcham further, he explained that while there were only
 
 Before using Exceptionless to generated exceptions, the catch blocks were empty.
 
-<pre>try
+```cs
+try
 {
-                // Do Something
+  // Do Something
 }
-catch { }</pre>
+catch { }
+```
 
 ### Using Exceptionless to generate an exception in the catch block
 
 By submitting an exception in the catch block, instead, their eyes were opened to thousands of daily exceptions.
 
-<pre>try
+```cs
+try
 {
-                // Do Something
+  // Do Something
 }
 catch(Exception ex)
 {
-                ex.ToExceptionless().Submit();
-}</pre>
+  ex.ToExceptionless().Submit();
+}
+```
 
-<h3>
-  But I can already throw an exception in my catch block...
-</h3>
+### But I can already throw an exception in my catch block...
 
 While you can throw an exception in a catch block normally with .NET, Eric was able to utilize Exceptionless' intelligent error grouping, notifications, and detailed reporting to pinpoint the problems and deal with them accordingly. Then, he was able to monitor the decline of occurrences and make sure that there were no regressions. That's pretty powerful, we think.

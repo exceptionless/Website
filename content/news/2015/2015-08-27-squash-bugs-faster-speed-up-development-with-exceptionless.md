@@ -25,7 +25,7 @@ date: 2015-08-27
   <span style="text-decoration: underline;">Now Serving...</span><br /> <span style="color: #777; font-size: 24px; line-height: 28px;">**5,000,000+ Events Per Month<br /> 2000+ Active Projects**</span>
 </p>
 
-> “Exceptionless is **awesome**. I've **STOPPED** worrying about whether I'm losing customers to bugs I don't know about.” - Eric B.
+> "Exceptionless is **awesome**. I've **STOPPED** worrying about whether I'm losing customers to bugs I don't know about." - Eric B.
 
 ![](/assets/img/news/codesmith-client-logo-bar-left-short.png)
 
@@ -40,7 +40,7 @@ This 1:37 video demonstrates how quick and easy it is to get the Exceptionless J
 
 ## **IT'S. THAT. EASY.**
 
-> “Exceptionless allows us to prioritize fixes smarter by showing frequently occurring errors. In real time!” - Ryan H.
+> "Exceptionless allows us to prioritize fixes smarter by showing frequently occurring errors. In real time!" - Ryan H.
 
 The only thing you need to get started is a <a href="https://be.exceptionless.io/signup" target="_blank">**free** Exceptionless account</a>, or you can even <a href="/self-hosting-exceptionless-free-and-fast/" target="_blank">host it yourself</a>! Once you have that, you can user the <a href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">JavaScript </a>or .<a href="https://github.com/exceptionless/Exceptionless.Net" target="_blank">NET</a> client to get started pushing events to your new dashboard.
 

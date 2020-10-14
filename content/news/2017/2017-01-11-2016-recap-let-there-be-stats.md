@@ -63,7 +63,7 @@ The ability to track and automatically manage a users session was added, giving 
 
 In 2016, we also added the ability to mark an event as fixed in a specific version of your app. [Read more here.](/set-application-version-for-improved-regression-notifications-and-stacking/)
 
-### Performance & Reliablity
+### Performance & Reliability
 
 We spent a lot of time this past year making massive performance and reliability improvements across the board. Tons of bugs got fixed along the way, and additions like bulk updates and deletes, along with optimized query generation got squeezed in there, too! One big factor here is that it has allowed us to move to Elasticsearch 5 _much_ quicker because all of these improvements allowed us to do things more generically throughout. Much less code to update/change!
 
@@ -87,12 +87,12 @@ We open sourced two major new libraries this year:
 * <a href="https://github.com/exceptionless/Foundatio.Repositories" target="_blank">Foundatio.Repositories</a>
     Foundatio.Repositories are generic repositories with an implementation for Elasticsearch
 * <a href="https://github.com/exceptionless/Foundatio.Parsers" target="_blank">Foundatio.Parsers</a>
-    Foundatio.Parsers are Lucene query parsers that allow you to validate or modify lucene queries with ease!
+    Foundatio.Parsers are Lucene query parsers that allow you to validate or modify Lucene queries with ease!
 
 ### Other Noteworthy Enhancements
 
 * Added [Geo location features](/add-reverse-geocoding-to-your-app/)
-* Added [Keybaord shortcuts](/exceptionless-keyboard-shortcuts/)
+* Added [Keyboard shortcuts](/exceptionless-keyboard-shortcuts/)
 * The [API is now 100% Async](/introducing-foundatio-3-0-async-efficiency/)
 * Had third-party security review conducted
 * Made it even easier to self host.

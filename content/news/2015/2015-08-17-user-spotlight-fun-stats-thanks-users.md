@@ -28,7 +28,7 @@ Visit the <a href="http://www.userreport.com/" target="_blank">User Report websi
 
 [![eMarketerLogo-black](/assets/img/news/eMarketerLogo-black-300x93.png)](http://www.emarketer.com/)Used by Facebook, MasterCard, and other large worldwide brands, <a href="http://www.emarketer.com/" target="_blank">eMarketer</a> provides insights into the digital marketing world by providing customers with the information they need to run their business effectively and efficiently online. This information includes industry-specific research, insights, and benchmarks.
 
-> “Exceptionless allows us to prioritize fixes smarter by showing frequently occurring errors. In real time!” - Ryan Hoffman, eMarketer
+> "Exceptionless allows us to prioritize fixes smarter by showing frequently occurring errors. In real time!" - Ryan Hoffman, eMarketer
 
 ### Actipro Software
 
