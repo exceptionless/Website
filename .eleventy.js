@@ -1,10 +1,13 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const slugify = require('slugify');
 const embedEverything = require("eleventy-plugin-embed-everything");
+const pluginSEO = require("eleventy-plugin-seo");
+const seoConfig = require("./_data/seo.json")
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(embedEverything);
+  eleventyConfig.addPlugin(pluginSEO, seoConfig);
 
   eleventyConfig.addPassthroughCopy("content/assets");
   eleventyConfig.addPassthroughCopy("content/favicon.ico");
@@ -45,7 +48,7 @@ module.exports = function(eleventyConfig) {
   });
 
   return {
-    templateFormats: ['html', 'md', 'njk'],
+    templateFormats: ['html', 'md', 'njk', 'json'],
 
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
