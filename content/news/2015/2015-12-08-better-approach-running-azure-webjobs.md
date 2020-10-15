@@ -1,6 +1,7 @@
 ---
 id: 13861
 title: A Better Approach to Running Azure WebJobs
+permalink: better-approach-running-azure-webjobs/
 date: 2015-12-08
 ---
 ![Azure Webjobs](/assets/img/news/jobs-blog-header-image.jpg)

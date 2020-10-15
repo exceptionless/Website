@@ -31,8 +31,7 @@ Getting your self hosted instance of Exceptionless up and running is super easy.
 
 Please note that you should review the requirements on the <a href="https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting" target="_blank">Self Hosting Documentation</a> page before installing your own instance.
 
-<div class="videoWrapper">
-</div>
+https://youtu.be/P01v289dR10
 
 ## We're Always Improving
 

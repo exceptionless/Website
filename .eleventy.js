@@ -1,12 +1,14 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const slugify = require('slugify');
 const embedEverything = require("eleventy-plugin-embed-everything");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginSEO = require("eleventy-plugin-seo");
-const seoConfig = require("./_data/seo.json")
+const seoConfig = require("./_data/seo.json");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(embedEverything);
+  eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginSEO, seoConfig);
 
   eleventyConfig.addPassthroughCopy("content/assets");
@@ -20,7 +22,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("slug", function(value) {
     return slugify(value, {
       replacement: '-',
-      remove: /[*+~.()'"!:@]/g,
+      remove: /[*+~()'"!:@]/g,
       lower: true,
       strict: true
     });

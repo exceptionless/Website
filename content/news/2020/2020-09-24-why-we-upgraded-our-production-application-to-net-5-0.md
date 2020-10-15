@@ -1,6 +1,7 @@
 ---
 id: 17557
 title: Why We Upgraded Our Production Application to .NET 5.0
+permalink: why-we-upgraded-our-production-application-to-net-5-0/
 date: 2020-09-24
 author: Justin Hunter
 ---

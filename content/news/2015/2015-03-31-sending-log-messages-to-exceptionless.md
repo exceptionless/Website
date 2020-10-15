@@ -78,7 +78,7 @@ There are a number of additional pieces of data you can use for your event. The
 
 You can also submit a log message with an HTTP post to our <a title="Exceptionless Events Endpoint" href="https://api.exceptionless.io/docs/index#!/Event/Event_Post" target="_blank">events endpoint</a>.
 
-```txt
+```
 My log message
 My second log message.
 ```
