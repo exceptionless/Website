@@ -27,7 +27,7 @@ Definitely crashes related to .NET Framework installation corruptions on end-use
 
 **Will:**
 
-Yes and no. **Error handling and tracking had always been more of an afterthought** &#8212; like, something is wrong, we need to look into it now. **We weren't aware of issues until after our users reported it** and filtering out the noise to find the signal of real issues was a time consuming process. Running on the Azure stack, we were **frustrated with the information provided** in the default diagnostics logging.
+Yes and no. **Error handling and tracking had always been more of an afterthought** - like, something is wrong, we need to look into it now. **We weren't aware of issues until after our users reported it** and filtering out the noise to find the signal of real issues was a time consuming process. Running on the Azure stack, we were **frustrated with the information provided** in the default diagnostics logging.
 
 **When we added Exceptionless, we knew we had problems** with our system, we just didn't know where and to what extent. To be honest, **Exceptionless has changed our internal development process** and how we approach code. Proper error handling and visibility is now a first-class priority for us and Exceptionless makes it super easy.
 

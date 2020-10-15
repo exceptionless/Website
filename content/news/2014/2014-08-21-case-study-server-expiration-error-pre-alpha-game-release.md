@@ -22,7 +22,7 @@ This user is working on a pre-alpha game that is, at the time of the feedback, o
 
 Because the game had such limited players, servers, and testing, it's tough to catch all the little bugs. Fortunately, Exceptionless was able to catch a potentially huge bug that would cause old versions of the servers that were still running to crash because of files being deleted by the new server development clean up scripts.
 
-> "If an old version was still running it would crash because its data-files got deleted. Since we're still in development mode there aren't enough people playing on our game servers to notice this exception &#8212; but we would have when going into alpha or beta test! Fortunately Exceptionless did notice and report this problem."
+> "If an old version was still running it would crash because its data-files got deleted. Since we're still in development mode there aren't enough people playing on our game servers to notice this exception - but we would have when going into alpha or beta test! Fortunately Exceptionless did notice and report this problem."
 
 We think that's pretty awesome, and not just because we're huge nerds!
 

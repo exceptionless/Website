@@ -1,6 +1,6 @@
 ---
 id: 13280
-title: JavaScript &#038; Node.js Client Version 1 Release Candidate
+title: JavaScript & Node.js Client Version 1 Release Candidate
 date: 2015-06-04
 tags: [ "javascript", "node.js"]
 ---

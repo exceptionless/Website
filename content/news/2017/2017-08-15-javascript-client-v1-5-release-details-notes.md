@@ -1,6 +1,6 @@
 ---
 id: 15827
-title: JavaScript Client V1.5 Release Details &#038; Notes
+title: JavaScript Client V1.5 Release Details & Notes
 date: 2017-08-15
 tags: [ "javascript", "react"]
 ---

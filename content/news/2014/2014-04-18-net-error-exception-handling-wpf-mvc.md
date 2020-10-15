@@ -1,6 +1,6 @@
 ---
 id: 5317
-title: Exception Handling &#038; Logging Tool for ASP.NET, Web API, WebForms, WPF, Console, MVC, and more
+title: Exception Handling & Logging Tool for ASP.NET, Web API, WebForms, WPF, Console, MVC, and more
 date: 2014-04-18
 tags: [ "asp.net"]
 ---

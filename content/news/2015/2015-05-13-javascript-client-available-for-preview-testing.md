@@ -1,6 +1,6 @@
 ---
 id: 13175
-title: JavaScript Client Available for Preview &#038; Testing!
+title: JavaScript Client Available for Preview & Testing!
 date: 2015-05-13
 ---
 ![Exceptionless JavaScript Client](/assets/img/news/javascript-client-header.jpg)

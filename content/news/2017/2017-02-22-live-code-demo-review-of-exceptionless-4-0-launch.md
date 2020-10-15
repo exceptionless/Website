@@ -1,6 +1,6 @@
 ---
 id: 15326
-title: Live Code Demo &#038; Review of Exceptionless 4.0 Launch
+title: Live Code Demo & Review of Exceptionless 4.0 Launch
 date: 2017-02-22
 tags: [ ".NET"]
 ---

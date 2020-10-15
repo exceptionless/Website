@@ -1,6 +1,6 @@
 ---
 id: 13601
-title: Squash Bugs Faster &#038; Speed Up Development with Exceptionless
+title: Squash Bugs Faster & Speed Up Development with Exceptionless
 date: 2015-08-27
 ---
 ![Developer Bug Tracking](/assets/img/news/blog-header-image-js-demo.jpg)

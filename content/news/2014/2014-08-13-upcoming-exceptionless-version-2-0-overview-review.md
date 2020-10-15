@@ -1,6 +1,6 @@
 ---
 id: 9706
-title: Upcoming Exceptionless Version 2.0 Overview &#038; Review
+title: Upcoming Exceptionless Version 2.0 Overview & Review
 date: 2014-08-13
 tags: [ "new features"]
 ---

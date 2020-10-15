@@ -1,6 +1,6 @@
 ---
 id: 15248
-title: Setting Up New Elasticsearch Cluster, Reindexing &#038; Mappings - Live Code Demo
+title: Setting Up New Elasticsearch Cluster, Reindexing & Mappings - Live Code Demo
 date: 2017-02-01
 ---
 [![](/assets/img/news/170116-live-code-demo-1024x538.jpg)](https://www.liveedu.tv/niemyjski/videos/k4JO7-exceptionless-weekly-demo-1-16-17)

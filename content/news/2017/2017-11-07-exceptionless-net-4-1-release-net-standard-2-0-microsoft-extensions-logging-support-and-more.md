@@ -1,6 +1,6 @@
 ---
 id: 15963
-title: Exceptionless.NET 4.1 Release - .NET Standard 2.0 &#038; Microsoft.Extensions.Logging Support, and more!
+title: Exceptionless.NET 4.1 Release - .NET Standard 2.0 & Microsoft.Extensions.Logging Support, and more!
 date: 2017-11-07
 ---
 ![Exceptionless.NET 4.1 Release](/assets/img/news/exceptionless-net-4-1-release-1024x538.jpg)

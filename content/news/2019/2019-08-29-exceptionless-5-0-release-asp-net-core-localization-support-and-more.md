@@ -1,6 +1,6 @@
 ---
 id: 16744
-title: Exceptionless 5.0 Release - ASP.NET Core &#038; Localization Support, and more!
+title: Exceptionless 5.0 Release - ASP.NET Core & Localization Support, and more!
 date: 2019-08-29
 ---
 ![Exceptionless 5.0 Localization](/assets/img/news/exceptionless-5.0-localization.png)

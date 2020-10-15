@@ -1,6 +1,6 @@
 ---
 id: 15916
-title: Slack Integration Update &#038; Recap
+title: Slack Integration Update & Recap
 date: 2017-10-06
 ---
 ![Exceptionless Slack Integration](/ft-img-1024x538.jpg)/
