@@ -5,5 +5,11 @@
       "serve": "/feed.xml",
       "statusCode": 301
     }
+  ],
+  "platformErrorOverrides": [
+    {
+      "errorType": "NotFound",
+      "serve": "/404.html"
+    }
   ]
 }
