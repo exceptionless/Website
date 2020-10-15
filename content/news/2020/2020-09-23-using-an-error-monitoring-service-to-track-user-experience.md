@@ -16,7 +16,7 @@ Let's take a look at how we can do this. There are plenty of logging services ou
 
 While self-hosting may be an attractive option (and one that I will surely write about ina future post), we're going to sign up for a free account using Exceptionless's hosted platform. To do so, go to [https://exceptionless.com](/) and click the Sign Up button in the top-right:<figure class="wp-block-image">
 
-[![Exceptionless home page](https://res.cloudinary.com/practicaldev/image/fetch/s--vr57dYkT--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/q55zt3ytzydt1ahqiyx8.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--vr57dYkT--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/q55zt3ytzydt1ahqiyx8.png)</figure>
+![Exceptionless home page](/assets/img/news/exceptionless_site.jpeg)</figure>
 
 Once you sign up, you'll be prompted to name your team and project. You'll also need to choose the language in which your project is written. I'm choosing NodeJS, but you can choose whatever language applies to you because I'll be referencing cURL commands to keep our solution as general-purpose and adaptable as possible. Once you've created a project, you will be provided an API Key. Hold on to that, we'll need to use it as a bearer token later.
 
@@ -46,7 +46,7 @@ Feel free to add whatever product name you'd like in the query. Just replace `YO
 
 The Exceptionless dashboard takes you to a handy chart of most frequent exceptions/errors. However, we're tracking User Experience issues tied to features in our application, so those events won't appear on the Exceptions dashboard. Instead, if you click the Features Usage link on the left navigation, then click Events, you should see your new `productSearch` event.<figure class="wp-block-image">
 
-[![Features Usage Dashboard Example](https://res.cloudinary.com/practicaldev/image/fetch/s--MsGu3Dvt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/xl6duukcca6gaudnk5sm.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--MsGu3Dvt--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/xl6duukcca6gaudnk5sm.png)</figure>
+![Features Usage Dashboard Example](/assets/img/news/dashboard_empty.png)</figure>
 
 Pretty cool! This alone starts to become useful. We can cut out a separate analytics tracking tool by using our error monitoring service (Exceptionless in this case) to track events outside the normal error reporting. But we can take it a step further.
 
@@ -59,7 +59,7 @@ curl --location --request GET 'https://api.exceptionless.io/api/v2/events/submit
 
 Exceptionless has real-time monitoring, so if you flip back to your dashboard after running the above command, you should already see the event in the list:<figure class="wp-block-image">
 
-[![Cart Add Example](https://res.cloudinary.com/practicaldev/image/fetch/s--HnB_sGzg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/4yysom04m8f8doqktrip.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--HnB_sGzg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/4yysom04m8f8doqktrip.png)</figure>
+![Cart Add Example](/assets/img/news/dashboard_evenets.png)</figure>
 
 I think you're already seeing how easy this is, but let's round this out by adding a `checkout` event to track.
 
@@ -72,13 +72,13 @@ Again, your Exceptionless dashboard should update in real-time. This is starting
 
 Go ahead and try it. Click on the event and you'll be taken to a dedicated Event Occurrence page.<figure class="wp-block-image">
 
-[![Event Occurrence Example](https://res.cloudinary.com/practicaldev/image/fetch/s--DZcBh5pq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/kinzwx1ee3lnmrdhd8ql.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--DZcBh5pq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/kinzwx1ee3lnmrdhd8ql.png)</figure>
+![Event Occurrence Example](/assets/img/news/event_occurence.png)</figure>
 
 This is useful information. Combined with our user experience funnel analysis, we can start to make product decisions. Just for fun, I want to show you what this could look like when leveraging the Most Frequent view.
 
 Again, we should click on the Features Usage link on the side navigation. This time, we'll choose the Most Frequent option. I've created a bunch of events so that we can see how useful the Most Frequent view can be.<figure class="wp-block-image">
 
-[![Funnel Example](https://res.cloudinary.com/practicaldev/image/fetch/s--UI_sv1sV--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/tx77krsijxyz9zudp25c.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--UI_sv1sV--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/tx77krsijxyz9zudp25c.png)</figure>
+![Funnel Example](/assets/img/news/funnel_example.png)</figure>
 
 Now we have the makings of a useful way of tracking the user experience right from within our error reporting tool. The benefit here is that we can use a single tool to help us with monitoring, bugs, event tracking, and user experience. [Exceptionless](/) makes this incredibly easy, is self-hostable, is open source, and if you choose the hosted option is very affordable.
 
