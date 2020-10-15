@@ -1,9 +1,8 @@
 {
   "routes": [
     {
-      "route": "/feed/",
-      "serve": "/feed.xml",
-      "statusCode": 301
+      "route": "/feed/ssss",
+      "serve": "/feed.xml"
     }
   ],
   "platformErrorOverrides": [
