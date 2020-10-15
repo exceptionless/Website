@@ -1,10 +1,4 @@
 {
-  "routes": [
-    {
-      "route": "/feed/*",
-      "serve": "/feed.xml"
-    }
-  ],
   "platformErrorOverrides": [
     {
       "errorType": "NotFound",
