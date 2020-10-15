@@ -55,17 +55,17 @@ This works really well because you can see the entire history of your build arti
 
 We found that we could <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L71" target="_blank">format the commit message with a specific format</a> that GitHub could understand and parse into different links. We can click on the "Commit:" part of the message to link to the actual commit that is building to see exactly has changed.
 
-<a href="/assets/img/news/github-build-history-artifacts.jpg" rel="attachment wp-att-14204">![github build history artifacts](/assets/img/github-build-history-artifacts-1024x380.jpg)</a>
+![github build history artifacts](/assets/img/news/github-build-history-artifacts-1024x380.jpg)
 
 We can then click on the build to see what artifacts changed.
 
-<a href="/assets/img/news/gitHube-build-history-details.jpg" rel="attachment wp-att-14205">![gitHub build history details](/assets/img/gitHube-build-history-details-1024x193.jpg)</a>
+![gitHub build history details](/assets/img/news/gitHube-build-history-details-1024x193.jpg)
 
 Another great thing about using Git to store your artifacts is that you can easily clone the artifacts to your local machine to see the exact files that are being used in a specific environment.
 
 The artifacts repository has branches to match the branches of our code repo so we have separate build artifacts for each branch. This also means that we can just merge the feature into master when we are done and that will cause the production website that is pointed to our master repository to automatically get updated. So, it’s as simple as merge your branch to master to promote a build to production.
 
-<a href="/assets/img/news/merge-branch-master-promote-build-production.jpg" rel="attachment wp-att-14206">![merge-branch-master promote build production](/assets/img/merge-branch-master-promote-build-production.jpg)</a>
+![merge-branch-master promote build production](/assets/img/news/merge-branch-master-promote-build-production.jpg)
 
 **One issue** with this approach is that the repo can get large because we are storing binary files that change on every build. We are looking into using [Git Large File Support](https://git-lfs.github.com/) to fix this issue.
 
@@ -87,7 +87,7 @@ For our .NET application, <a href="https://github.com/exceptionless/Exceptionles
 
 It will see when new artifact commits happen and automatically deploy the changes.
 
-<a href="/assets/img/news/azure-sees-new-artifact-commit-and-deploys.jpg" rel="attachment wp-att-14207">![azure sees new artifact commit and deploys](/assets/img/azure-sees-new-artifact-commit-and-deploys-1024x846.jpg)</a>
+![azure sees new artifact commit and deploys](/assets/img/news/azure-sees-new-artifact-commit-and-deploys-1024x846.jpg)
 
 Azure Continuous Deployment is another Git repository that we can easily view to see the history of deployments to each of our sites. It also allows us to easily roll back to previous versions.
 
@@ -95,7 +95,7 @@ Azure Continuous Deployment is another Git repository that we can easily view to
 
 Azure Websites makes this very easy.
 
-<a href="/assets/img/news/override-config-settings-environment-variables.jpg" rel="attachment wp-att-14208">![azure override config settings environment variables](/assets/img/override-config-settings-environment-variables-1024x497.jpg)</a>
+![azure override config settings environment variables](/assets/img/news/override-config-settings-environment-variables-1024x497.jpg)
 
 No production settings are stored in source control or artifacts repository.
 

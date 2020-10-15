@@ -11,7 +11,7 @@ We're super excited, but we also <span style="color: #ff0000;">**need your help
 
 ## You Can Be.Exceptionless<figure id="attachment_12699" class="thumbnail wp-caption alignright" style="width: 300px">
 
-<a href="/assets/img/news/sandbox-preview.jpg" rel="attachment wp-att-12699">![Exceptionless 2.0 Dashboard Preview](/assets/img/sandbox-preview-300x183.jpg)</a><figcaption class="caption wp-caption-text">Exceptionless 2.0 Dashboard Preview</figcaption></figure>
+![Exceptionless 2.0 Dashboard Preview](/assets/img/news/sandbox-preview-300x183.jpg)<figcaption class="caption wp-caption-text">Exceptionless 2.0 Dashboard Preview</figcaption></figure>
 
 **Simply...**
 

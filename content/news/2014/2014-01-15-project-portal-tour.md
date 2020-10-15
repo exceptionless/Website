@@ -11,6 +11,7 @@ Continue reading to learn more.<!--more-->
 ## The Dashboard
 
 ![Visual .NET Exception Graph](/assets/img/news/graph.jpg)
+
 The Exceptionless Dashboard features a quick overview of the exceptions for the currently selected project. It also updates in real-time, so you can watch exceptions roll in.
 
 This is a great place to glimpse your exceptions by total, unique, new, or per hour. The most frequent and most recent exceptions are also displayed here, along with a graph representing your total and unique exceptions. You can go directly to an error's details by clicking on it.
@@ -24,7 +25,7 @@ This is a great place to glimpse your exceptions by total, unique, new, or per h
 * Show/Hide fixed errors
 * Show/Hide "Not Found" errors<figure id="attachment_1340" class="thumbnail wp-caption alignleft" style="width: 150px">
 
-[![Exceptionless Date Range Selector](/assets/date-range-150x150.jpg)](/assets/date-range.jpg)<figcaption class="caption wp-caption-text">Show/Hide Errors & Select Date Range</figcaption></figure>
+![Exceptionless Date Range Selector](/assets/img/news/date-range-150x150.jpg)<figcaption class="caption wp-caption-text">Show/Hide Errors & Select Date Range</figcaption></figure>
 
 <div style="clear: both;">
 </div>
@@ -33,7 +34,7 @@ This is a great place to glimpse your exceptions by total, unique, new, or per h
 
 On the left side of the dashboard, you can select to view your Most Recent, Most Frequent, or New (first time) .NET exceptions.<figure id="attachment_1221" class="thumbnail wp-caption alignleft" style="width: 150px">
 
-[![New .NET Exceptions](/assets/new-150x150.jpg)](/assets/new.jpg)<figcaption class="caption wp-caption-text">New Errors</figcaption></figure>
+![New .NET Exceptions](/assets/img/news/new-150x150.jpg)<figcaption class="caption wp-caption-text">New Errors</figcaption></figure>
 
 <div style="clear: both;">
 </div>
@@ -48,9 +49,10 @@ Each of these reports lists the respective error type with a summary, the count,
 
 ## Lets Take a Look at Exception Details
 
-### Error Stack Page<figure id="attachment_1226" class="thumbnail wp-caption alignleft" style="width: 150px">
+### Error Stack Page
 
-[![Error Stack Options](/assets/exception-options-150x150.jpg)](/assets/exception-options.jpg)<figcaption class="caption wp-caption-text">Mark Fixed & Options</figcaption></figure>
+
+![Error Stack Options](/assets/img/news/exception-options-150x150.jpg)
 
 <div style="clear: both;">
 </div>
@@ -70,9 +72,9 @@ Above and to the right of the graph are two buttons: "Mark Fixed" and "Options".
 
 ### Individual Error Details
 
-After you click into an individual error instance, you will see the following tabs.<figure id="attachment_1230" class="thumbnail wp-caption alignleft" style="width: 125px">
+After you click into an individual error instance, you will see the following tabs.
 
-[![.NET Exception Environment Details](/assets/exception-details-environment-150x150.jpg)](/assets/exception-details-environment.jpg)<figcaption class="caption wp-caption-text">Env. Details</figcaption></figure>
+![.NET Exception Environment Details](/assets/img/news/exception-details-environment-150x150.jpg)
 
 <div style="clear: both;">
 </div>
@@ -95,9 +97,9 @@ Because you needed **all** the data, the environment tab displays time and date
 
 ## What Else Can I Do from the Admin?
 
-Naturally, you can manager your projects, organizations, and account, but we also have pretty handy feedback and support tools so you can let us know how we're doing! Your feedback and comments are important and provide direction to the code.<figure id="attachment_1246" class="thumbnail wp-caption alignleft" style="width: 150px">
+Naturally, you can manager your projects, organizations, and account, but we also have pretty handy feedback and support tools so you can let us know how we're doing! Your feedback and comments are important and provide direction to the code.
 
-[![Exceptionless Support](/assets/support-150x150.jpg)](/assets/support.jpg)<figcaption class="caption wp-caption-text">Get Support</figcaption></figure>
+![Exceptionless Support](/assets/img/news/support-150x150.jpg)
 
 <div style="clear: both;">
 </div>

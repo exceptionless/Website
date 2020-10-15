@@ -63,7 +63,7 @@ You’ll see a few basic examples of events and some explanation of the resource
 
 When we click "Try it out!" and get a 202 response code, we know we’ve created an event.<figure id="attachment_13110" class="thumbnail wp-caption aligncenter" style="width: 300px">
 
-[![Exceptionless API Created Event](/assets/05post-event2-e1430946143322-300x92.png)](/assets/05post-event2-e1430946143322.png)<figcaption class="caption wp-caption-text">Successful Event Creation</figcaption></figure>
+![Exceptionless API Created Event](/assets/img/news/05post-event2-e1430946143322-300x92.png)<figcaption class="caption wp-caption-text">Successful Event Creation</figcaption></figure>
 
 ### Get Event by Reference ID
 
@@ -91,7 +91,7 @@ Naturally, we can get all the organizations or projects associated with the curr
 
 Navigate to <a title="Exceptionless API Get Organizations" href="https://api.exceptionless.io/docs/index#!/Organization/Organization_Get" target="_blank">Organization > GET /api/v2/organizations</a> and click "Try it out!"<figure id="attachment_13118" class="thumbnail wp-caption alignleft" style="width: 300px">
 
-[![Exceptionless API Get Organization Results](/assets/08get-organizations2-300x202.png)](/assets/08get-organizations2.png)<figcaption class="caption wp-caption-text">Get Organizations Results</figcaption></figure>
+![Exceptionless API Get Organization Results](/assets/img/news/08get-organizations2-300x202.png)<figcaption class="caption wp-caption-text">Get Organizations Results</figcaption></figure>
 
 <h4 style="clear: both;">
   Projects
@@ -99,7 +99,7 @@ Navigate to <a title="Exceptionless API Get Organizations" href="https://api.exc
 
 Navigate to <a title="Exceptionless API Get Projects" href="https://api.exceptionless.io/docs/index#!/Project/Project_Get" target="_blank">Project > GET /api/v2/projects</a> and click "Try it out!"<figure id="attachment_13121" class="thumbnail wp-caption alignleft" style="width: 300px">
 
-[![Exceptionless API Get Projects Results](/assets/09get-projects2-300x204.png)](/assets/09get-projects2.png)<figcaption class="caption wp-caption-text">Get Projects Results</figcaption></figure>
+![Exceptionless API Get Projects Results](/assets/img/news/09get-projects2-300x204.png)<figcaption class="caption wp-caption-text">Get Projects Results</figcaption></figure>
 
 <h2 style="clear: both;">
   How to Authenticate to the API

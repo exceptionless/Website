@@ -131,7 +131,7 @@ Finishing off the Exceptionless JavaScript client features, every event also inc
 
 A few screenshots of an individual event can be found below.<figure id="attachment_13248" class="thumbnail wp-caption alignleft" style="width: 150px">
 
-[![Exceptionless Javascript Event Request Details](/assets/javascript-client-event-request-info-150x150.png)](/assets/javascript-client-event-request-info.png)<figcaption class="caption wp-caption-text">Request Details</figcaption></figure>
+![Exceptionless Javascript Event Request Details](/assets/img/news/javascript-client-event-request-info-150x150.png)<figcaption class="caption wp-caption-text">Request Details</figcaption></figure>
 
 <h2 style="clear: both;">
   Sample

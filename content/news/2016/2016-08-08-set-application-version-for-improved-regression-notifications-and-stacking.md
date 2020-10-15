@@ -34,7 +34,7 @@ exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
 
 Great! Now, when you mark an error stack as fixed and enter the version that you fixed it in, that event stack will have a `Fixed In [Version]` tag and will only regress if it occurs again in a later version of your app. If it does regress, the stack then gets the `REGRESSED` tag.<figure id="attachment_14647" class="thumbnail wp-caption aligncenter" style="width: 300px">
 
-[![Regressed](/assets/regressed-300x91.jpg)](/assets/regressed.jpg)<figcaption class="caption wp-caption-text">Regressed</figcaption></figure>
+[![Regressed](/assets/img/news/regressed-300x91.jpg)](/assets/regressed.jpg)<figcaption class="caption wp-caption-text">Regressed</figcaption></figure>
 
 If you would like to view fixed events, you can always use the `*` wildcard or `fixed:true` in search.
 

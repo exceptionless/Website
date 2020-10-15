@@ -19,15 +19,15 @@ As always, the filter still applies to the chosen time frame only.
 
 ### Before
 
-<a href="/assets/img/news/old1.png" rel="attachment wp-att-14241">![old1](/assets/img/old1.png)</a>
+![old1](/assets/img/news/old1.png)
 
-<a href="/assets/img/news/old2.png" rel="attachment wp-att-14242">![old2](/assets/img/old2.png)</a>
+![old2](/assets/img/news/old2.png)
 
 ### After
 
-<a href="/assets/img/news/new7.png" rel="attachment wp-att-14243">![new7](/assets/img/new7.png)</a>
+![new7](/assets/img/news/new7.png)
 
-<a href="/assets/img/news/old3.png" rel="attachment wp-att-14244">![old3](/assets/img/old3.png)</a>
+![old3](/assets/img/news/old3.png)
 
 ## Mobile Changes & Functionality
 
@@ -39,13 +39,13 @@ This setup should allow users to filter and find the events they seek much quick
 
 ### Before
 
-<a href="/assets/img/news/new2.png" rel="attachment wp-att-14245">![new2](/assets/img/new2.png)</a>
+![new2](/assets/img/news/new2.png)
 
 
 
 ### After
 
-<a href="/assets/img/news/new3.png" rel="attachment wp-att-14247">![new3](/assets/img/new3.png)</a>
+![new3](/assets/img/news/new3.png)
 
 ## Pretty Cool, Yeah?
 

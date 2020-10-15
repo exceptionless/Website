@@ -4,7 +4,7 @@ title: JavaScript Client V1.5 Release Details & Notes
 date: 2017-08-15
 tags: [ "javascript", "react"]
 ---
-##![exceptionless.javascript 1.5](/assets/img/news/js-client-1.5-release-1024x538.jpg)
+![exceptionless.javascript 1.5](/assets/img/news/js-client-1.5-release-1024x538.jpg)
 Exceptionless.JavaScript v1.5 Release Notes
 
 ### Unversal App Support

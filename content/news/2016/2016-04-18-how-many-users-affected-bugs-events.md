@@ -27,13 +27,13 @@ If you mouse over the percentage, you can see the number of users the percentage
 
 These numbers are dynamically calculated for your selected timeframe that you are currently viewing.
 
-<a href="/assets/img/news/dashboardv2-edited.png" rel="attachment wp-att-14353">![users affected by bug](/assets/img/dashboardv2-edited-1024x662.png)</a>
+![users affected by bug](/assets/img/news/dashboardv2-edited-1024x662.png)
 
 ### Most Users Dashboard
 
 Because the main dashboard shows you the most frequent events, not necessarily with the highest usage, **we thought it would be helpful to have a new dashboard that automatically sorts event stacks by the percentage of users affected,** letting you start at the top of an exception list, for example, and work your way down knowing you're always working on a bug, etc, that is affecting the highest percentage of users.
 
-<a href="/assets/img/news/dashboard-most-usersv2-edited.png" rel="attachment wp-att-14354">![user event dashboard](/assets/img/dashboard-most-usersv2-edited-1024x644.png)</a>
+![user event dashboard](/assets/img/news/dashboard-most-usersv2-edited-1024x644.png)
 
 ## Setting User Identity
 

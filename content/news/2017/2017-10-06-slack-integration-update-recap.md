@@ -3,7 +3,7 @@ id: 15916
 title: Slack Integration Update & Recap
 date: 2017-10-06
 ---
-![Exceptionless Slack Integration](/ft-img-1024x538.jpg)/
+![Exceptionless Slack Integration](/assets/img/news/slack-integration-ft-img-1024x538.jpg)/
 
 Since we first introduced Slack integration with the goal of further improving notifications in Exceptionless, we've come back around with updates, a few bug fixes, and wanted to give everyone a quick all-in-one overview of the feature!
 

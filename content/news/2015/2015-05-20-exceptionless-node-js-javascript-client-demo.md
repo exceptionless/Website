@@ -124,7 +124,7 @@ By default, we wire up to the processes' <a title="Exceptionless Uncaught Excep
 
 Each event contains environment and request information, as well, rounding out the complete list of Exceptionless features that we have made available via the JavaScript client, making it a great error and event reporting/logging solution for all your Node.js projects.<figure id="attachment_13200" class="thumbnail wp-caption alignleft" style="width: 150px">
 
-[![Exceptionless Node.js Event Environment Details](/assets/node-js-event-environment-details-150x150.png)](/assets/node-js-event-environment-details.png)<figcaption class="caption wp-caption-text">Environment Details</figcaption></figure>
+![Exceptionless Node.js Event Environment Details](/assets/img/news/node-js-event-environment-details-150x150.png)<figcaption class="caption wp-caption-text">Environment Details</figcaption></figure>
 
 <h2 style="clear: both;">
   Sample Express.js App

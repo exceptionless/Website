@@ -23,7 +23,7 @@ There are several email notification options for your app's exceptions.
 
 To receive notifications, you need to turn them on under the "My Account" section, in the "Profile Information" tab. This option should be on by default. Then, you can view the below options under the individual project settings by clicking on the cog/gear icon next to the project name at the top of your dashboard.
 
-<img loading="lazy" class="aligncenter size-full wp-image-2331" alt="Email Notification Settings" src="/assets/img/news/email-notification-settings.png" width="548" height="426" data-id="2331" srcset="/assets/img/email-notification-settings.png 548w, /assets/email-notification-settings-300x233.png 300w" sizes="(max-width: 548px) 100vw, 548px" />
+![Email Notification Settings](/assets/img/news/email-notification-settings.png)
 
 #### Lets take a look at the different options:
 

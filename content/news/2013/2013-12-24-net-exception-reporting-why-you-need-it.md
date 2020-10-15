@@ -10,7 +10,7 @@ What if you didn't have to worry about .NET exceptions going unnoticed anymore?<
 
 ## Enter real-time .NET exception reporting
 
-<img loading="lazy" class="alignright size-medium wp-image-148" style="margin: 10px; border: 1px solid #999;" alt="Exceptionless ASP.NET Error API" src="/assets/img/news/toexceptionless1-300x150.png" width="300" height="150" data-id="148" srcset="/assets/img/toexceptionless1-300x150.png 300w, /assets/toexceptionless1.png 560w" sizes="(max-width: 300px) 100vw, 300px" />
+![Exceptionless ASP.NET Error Reporting](/assets/img/news/toexceptionless1-300x150.png)
 
 What .NET developers needed was a tool that focused on error reporting by logging, grouping, and sending notifications. They needed flexibility through custom objects and a fluent API. They needed every error detail presented in a organized, readable manner. The even needed charts that clearly showed their progress in squashing the tens, hundreds, or thousands of daily exceptions that they didn't know they were occurring.
 
