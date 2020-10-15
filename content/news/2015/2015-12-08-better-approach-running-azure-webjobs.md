@@ -34,7 +34,7 @@ This new approach also gave us a great deployment strategy, for free. Simply cop
 
 [Foundatio Jobs](https://github.com/exceptionless/Foundatio#jobs) allows you to run a long running process (in process or out of process) with out worrying about it being terminated prematurely. By using Foundatio Jobs you gain all of the following features **without changing your job implementation**:
 
-* Run job in process
+* Run job in process
 * Run job out of process
 * Run job with a start up delay
 * Run job in an continuous loop with an optional interval delay.
