@@ -2,26 +2,18 @@
 permalink: feed.xml
 eleventyExcludeFromCollections: true
 layout:
-metadata:
-  title: "Exceptionless Blog"
-  subtitle: "All things Exceptionless, exceptions, stacks, and code."
-  url: "https://exceptionless.com/news"
-  feedUrl: "https://exceptionless.com/feed.xml"
-  author:
-    name: Exceptionless
-    email: team@exceptionless.com
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ metadata.title }}</title>
-  <subtitle>{{ metadata.subtitle }}</subtitle>
-  <link href="{{ metadata.feedUrl }}" rel="self"/>
-  <link href="{{ metadata.url }}"/>
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="https://exceptionless.com/feed.xml" rel="self"/>
+  <link href="https://exceptionless.com/news/"/>
   <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
-    <name>{{ metadata.author.name }}</name>
-    <email>{{ metadata.author.email }}</email>
+    <name>{{ site.author }}</name>
+    <email>team@exceptionless.com</email>
   </author>
   {%- for post in collections.posts %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}

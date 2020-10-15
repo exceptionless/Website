@@ -3,13 +3,13 @@ const slugify = require('slugify');
 const embedEverything = require("eleventy-plugin-embed-everything");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginSEO = require("eleventy-plugin-seo");
-const seoConfig = require("./_data/seo.json");
+const siteConfig = require("./content/_data/site.json");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(embedEverything);
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(pluginSEO, seoConfig);
+  eleventyConfig.addPlugin(pluginSEO, siteConfig);
 
   eleventyConfig.addPassthroughCopy("content/assets");
   eleventyConfig.addPassthroughCopy("content/favicon.ico");
@@ -58,6 +58,7 @@ module.exports = function(eleventyConfig) {
     dataTemplateEngine: 'njk',
     dir: {
       output: '_site',
+      data: "_data",
       input: 'content',
       includes: '_includes',
       layouts: '_layouts'
