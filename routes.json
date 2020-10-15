@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {
+      "route": "/feed/",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    }
+  ]
+}

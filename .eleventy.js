@@ -16,6 +16,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("content/**/*.jpg");
   eleventyConfig.addPassthroughCopy("content/**/*.png");
   eleventyConfig.addPassthroughCopy("content/**/*.gif");
+  eleventyConfig.addPassthroughCopy("routes.json");
 
   eleventyConfig.setDataDeepMerge(true);
 
