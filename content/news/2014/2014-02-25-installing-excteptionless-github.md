@@ -12,8 +12,7 @@ Please note that before contributing to the Exceptionless project, you must read
 
 ## GitHub Exceptionless Getting Started Video
 
-<div class="videoWrapper">
-</div>
+https://www.youtube.com/watch?v=wROzlVuBoDs
 
 ## Text Guide
 

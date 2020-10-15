@@ -7,8 +7,7 @@ date: 2014-12-12
 
 We're not changing the world here, but we're making yours a little more efficient. Maybe you want to remove sensitive instances of an error that contains certain data, or maybe you you've got some test errors that you don't want included in the total count, either way the new feature should help. Check it out and let us know what you think!<!--more-->
 
-<div class="videoWrapper">
-</div>
+https://youtu.be/pQXk3ayK8P8
 
 ## Exceptionless Bulk Actions Video Transcript
 

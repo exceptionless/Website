@@ -13,8 +13,7 @@ We've made it super easy to get up and running, as you'll see below. Take a look
 
 <!--more-->
 
-<div class="videoWrapper">
-</div>
+https://youtu.be/fNiJ0YolRPY
 
 <div class="signup center" style="margin-top: 30px;">
   <a class="btn btn-large btn-primary" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Try It Today</a>

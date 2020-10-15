@@ -33,8 +33,7 @@ date: 2015-08-27
 
 This 1:37 video demonstrates how quick and easy it is to get the Exceptionless JavaScript client up and running. Take a few minutes to integrate it with your project and **gain visibility you've never had before** on bugs, feature usages, and more!
 
-<div class="videoWrapper">
-</div>
+https://youtu.be/fNiJ0YolRPY
 
 ![](/assets/img/news/codesmith-client-logo-bar-right-short.png)
 

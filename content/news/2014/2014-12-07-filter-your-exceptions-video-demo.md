@@ -9,8 +9,7 @@ To expand on our previous "[Exceptionless 2.0 User Interface FIRST LOOK](/except
 
 As always, we are looking for feedback on the platform as we continue to draw nearer to launch, so feel free to leave us a comment or contact us and let us know what you think. We hope you like it!<!--more-->
 
-<div class="videoWrapper">
-</div>
+https://youtu.be/jIyAYeqHKAM
 
 ## Filter Demo Transcript
 
