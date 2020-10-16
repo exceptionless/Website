@@ -1,5 +1,4 @@
 ---
-id: 17558
 title: How to Self-Host Your Error Monitoring Service
 date: 2020-09-30
 author: Justin Hunter
