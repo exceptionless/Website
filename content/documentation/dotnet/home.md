@@ -1,3 +1,9 @@
+---
+title: Home
+tags: docs
+anchor: home
+---
+
 # Exceptionless .NET Client Documentation
 
 You can find .NET Client details and examples here. For other clients, visit the main [Exceptionless Documentation](https://github.com/exceptionless/Exceptionless/wiki) and go from there.
