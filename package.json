@@ -12,9 +12,11 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-rss": "^1.0.9",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.3",
     "eleventy-plugin-embed-everything": "^1.9.3",
-    "eleventy-plugin-seo": "^0.5.1"
+    "eleventy-plugin-seo": "^0.5.1",
+    "markdown-it-anchor": "^6.0.0"
   }
 }
