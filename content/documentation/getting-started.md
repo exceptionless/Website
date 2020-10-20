@@ -1,7 +1,6 @@
 ---
 title: Getting Started
 tags: docs
-anchor: getting-started
 eleventyNavigation:
   key: Documentaion
   title: Getting Started

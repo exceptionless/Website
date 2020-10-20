@@ -2,6 +2,9 @@
 title: API Usage
 tags: docs
 anchor: api-usage
+eleventyNavigation:
+  key: Documentaion
+  title: API Usage
 ---
 
 ## Exceptionless API Usage
