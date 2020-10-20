@@ -2,6 +2,9 @@
 title: Bulk Actions
 tags: docs
 anchor: bulk-actions
+eleventyNavigation:
+  key: Documentaion
+  title: Bulk Actions
 ---
 
 ## Exceptionless Bulk Actions

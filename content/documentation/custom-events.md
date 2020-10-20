@@ -2,6 +2,9 @@
 title: Custom Event Stacks
 tags: docs
 anchor: custom-events
+eleventyNavigation:
+  key: Documentaion
+  title: Custom Event Stacks
 ---
 # Custom Event Stacks  
 

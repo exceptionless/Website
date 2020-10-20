@@ -2,6 +2,9 @@
 title: Versioning
 tags: docs
 anchor: versioning
+eleventyNavigation:
+  key: Documentaion
+  title: Versioning
 ---
 
 # Versioning

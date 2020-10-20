@@ -2,6 +2,9 @@
 title: Security
 tags: docs
 anchor: security
+eleventyNavigation:
+  key: Documentaion
+  title: Security
 ---
 ## Exceptionless Security
 

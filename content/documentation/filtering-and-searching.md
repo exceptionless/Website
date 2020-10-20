@@ -2,6 +2,9 @@
 title: Filters & Search
 tags: docs
 anchor: filtering-and-searching
+eleventyNavigation:
+  key: Documentaion
+  title: Filtering & Search
 ---
 
 ## Filtering and Searching within the Exceptionless Dashboard

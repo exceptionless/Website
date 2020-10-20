@@ -2,6 +2,9 @@
 title: Self Hosting
 tags: docs
 anchor: self-hosting
+eleventyNavigation:
+  key: Documentaion
+  title: Self Hosting
 ---
 
 # Self Hosting Exceptionless

@@ -5,25 +5,24 @@ layout: default
 <div class="page-header margin-top">
   <h1>Documentation</h1>
 </div>
+<div>
+<div class='flex-container'>
+  <nav id='docs-nav'>
+    <ul>    
+      <li>{{ collections.docs | eleventyNavigation | eleventyNavigationToHtml | safe }}</li>
+    </ul>
+  </nav>
 
 
-<nav id='docs-nav'>
-  <ul>
-    {% for post in collections.docs %}
-    <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
-    {% endfor %}
-  </ul>
-</nav>
-
-
-<div id="main-docs" class="container" role="document">
-  <div id="content" class="row-fluid">
-    <div id="main" class="span12" role="main">
-      <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
-        <div class="entry-content">
-          {{ content | safe }}
-        </div>
-      </article>
+  <div id="main-docs" class="container" role="document">
+    <div id="content" class="row-fluid">
+      <div id="main" class="span12" role="main">
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <div class="entry-content">
+            {{ content | safe }}
+          </div>
+        </article>
+      </div>
     </div>
   </div>
 </div>

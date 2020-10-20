@@ -2,6 +2,9 @@
 title: Integrations
 tags: docs
 anchor: integrations
+eleventyNavigation:
+  key: Documentaion
+  title: Integrations
 ---
 
 ## Integrations

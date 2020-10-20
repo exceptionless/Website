@@ -2,6 +2,9 @@
 title: Project Settings
 tags: docs
 anchor: project-settings
+eleventyNavigation:
+  key: Documentaion
+  title: Project Settings
 ---
 ## Exceptionless Project Settings
 

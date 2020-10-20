@@ -2,6 +2,9 @@
 title: Email Notifications
 tags: docs
 anchor: email-notifications
+eleventyNavigation:
+  key: Documentaion
+  title: Email Notifications
 ---
 
 ## Get Real Time Event Notifications via Email

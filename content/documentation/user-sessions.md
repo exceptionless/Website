@@ -2,6 +2,9 @@
 title: User Sessions
 tags: docs
 anchor: user-sessions
+eleventyNavigation:
+  key: Documentaion
+  title: User Sessions
 ---
 
 # User Sessions  

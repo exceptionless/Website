@@ -1,7 +1,9 @@
 ---
-title: Home
+title: .Net Client
 tags: docs
-anchor: home
+anchor: client-configuration
+eleventyNavigation:
+  key: .Net Client
 ---
 
 # Exceptionless .NET Client Documentation

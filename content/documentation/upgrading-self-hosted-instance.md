@@ -2,6 +2,9 @@
 title: Upgrading
 tags: docs
 anchor: upgrading
+eleventyNavigation:
+  key: Documentaion
+  title: Upgrading
 ---
 
 # Upgrading Self Hosted Instance

@@ -2,6 +2,9 @@
 title: Comparison
 tags: docs
 anchor: comparison
+eleventyNavigation:
+  key: Documentaion
+  title: Comparison
 ---
 
 # Comparing Exceptionless

@@ -2,6 +2,10 @@
 title: .Net Client Configuration
 tags: docs
 anchor: client-configuration
+eleventyNavigation:
+  key: client-configuration
+  parent: .Net Client
+  title: .Net Client Configuration
 ---
 
 ## Exceptionless .NET Client Configuration

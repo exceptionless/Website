@@ -24,17 +24,20 @@ body, input, button, select, textarea, .search-query {font-family: Open Sans;}
 	margin-top: 20px;
 }
 
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 250px;
+}
+
 #docs-nav {
-    position: fixed;
-    left: 10px;
+    height: 100%;
     width: 25%;
     padding-left: 20px;
     margin-bottom: 200px;
     z-index: 1024;
-    top:140px;
-    bottom: 0;
-    overflow-y: scroll;
-    margin-bottom: 200px;
+    top:140px;    
 }
 
 #docs-nav ul li {
@@ -46,7 +49,7 @@ body, input, button, select, textarea, .search-query {font-family: Open Sans;}
 #main-docs {
     width: 72%;
     margin-right: 1.5%;
-    margin-left: 26.5%;
+    margin-top: 50px;
 }
 
 @media (min-width: 768px) {

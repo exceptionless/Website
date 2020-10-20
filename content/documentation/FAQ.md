@@ -2,6 +2,9 @@
 title: FAQ
 tags: docs
 anchor: faq
+eleventyNavigation:
+  key: Documentaion
+  title: FAQ
 ---
 
 ## Exceptionless FAQs
