@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("content/**/*.png");
   eleventyConfig.addPassthroughCopy("content/**/*.gif");
   eleventyConfig.addPassthroughCopy("routes.json");
-  eleventyConfig.addPassthroughCopy("_redirects");
+  eleventyConfig.addPassthroughCopy("content/_redirects");
 
   eleventyConfig.setDataDeepMerge(true);
 
