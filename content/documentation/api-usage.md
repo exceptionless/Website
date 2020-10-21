@@ -12,6 +12,7 @@ eleventyNavigation:
 Our API utilizes Swagger and Swashbuckle to automatically generate, update, and display documentation (which means it works automatically on self-hosted environments), is a great resource for our users that want to get their hands dirty and use Exceptionless data to roll their own tools, dashboards, etc.
 
 ## Index
+
 * Setup
  * [Accessing the API](https://github.com/exceptionless/Exceptionless/wiki/API-Usage#1-accessing-the-api)
  * [Get Your User Scoped Token](https://github.com/exceptionless/Exceptionless/wiki/API-Usage#2-get-your-user-scoped-token)
