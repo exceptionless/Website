@@ -1,6 +1,5 @@
 {
   "layout": "post",
   "author": "Exceptionless",
-  "tags": ["posts"],
-  "permalink": "{{ title | slug }}/"
+  "tags": ["posts"]
 }

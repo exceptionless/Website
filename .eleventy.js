@@ -18,7 +18,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("content/**/*.jpg");
   eleventyConfig.addPassthroughCopy("content/**/*.png");
   eleventyConfig.addPassthroughCopy("content/**/*.gif");
-  eleventyConfig.addPassthroughCopy("routes.json");
   eleventyConfig.addPassthroughCopy("content/_redirects");
 
   eleventyConfig.setDataDeepMerge(true);
@@ -42,7 +41,6 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addNunjucksFilter("json", function (value) {
-    debugger;
     if (!value) return "";
 
     const getCircularReplacer = () => {
@@ -58,7 +56,7 @@ module.exports = function (eleventyConfig) {
       };
     };
 
-    return JSON.stringify(obj, getCircularReplacer(), 4);
+    return JSON.stringify(value, getCircularReplacer(), 4);
   });
 
   return {

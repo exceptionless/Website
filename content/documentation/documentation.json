@@ -1,6 +1,0 @@
-{
-  "layout": "documentation",
-  "author": "Exceptionless",
-  "tags": ["docs"],
-  "permalink": "{{ title | slug }}/"
-}
