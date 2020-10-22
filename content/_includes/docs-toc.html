@@ -1,11 +1,4 @@
-<div class="elv-toc">
-
-<details open>
-	<summary class="btn-primary benchnine rainbow-active rainbow-active-noanim">Menu</summary>
-	{%- if eleventyNavigation -%}
-		{%- set navKey = eleventyNavigation.key -%}
-	{%- endif -%}
-	{{ collections.docs | eleventyNavigation | eleventyNavigationToHtml({ activeKey: navKey, listClass: 'elv-toc-list', activeListItemClass: 'elv-toc-active' }) | safe }}
-</details>
-
-</div>
+{%- if eleventyNavigation -%}
+	{%- set navKey = eleventyNavigation.key -%}
+{%- endif -%}
+{{ collections.docs | eleventyNavigation | eleventyNavigationToHtml({ activeKey: navKey, listClass: 'toc-list', activeListItemClass: 'toc-active' }) | safe }}

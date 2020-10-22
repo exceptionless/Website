@@ -52,6 +52,46 @@ body, input, button, select, textarea, .search-query {font-family: Open Sans;}
     margin-top: 50px;
 }
 
+.toc-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 0 2.5em;
+    list-style: none;
+}
+
+.toc-list ul {
+    padding: 0 0 .75em 0;
+    margin: 0;
+    list-style: none;
+}
+
+.toc-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.toc-list>li>a {
+    color: #222;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: .25em;
+}
+
+.toc-list a:not(:hover) {
+    text-decoration: none;
+}
+
+.toc-list a {
+    display: block;
+}
+
+.toc summary, .toc-list a {
+    padding: .15em .25em;
+}
+
 @media (min-width: 768px) {
     .row-fluid .span6.smaller {
         width: 46% !important;

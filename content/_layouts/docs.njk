@@ -8,9 +8,11 @@ layout: default
 
 <div id="wrap" class="container" role="document">
   <div id="content" class="row-fluid">
-    {% include "docs-toc.html" %}
-
-    {{ content | safe }}
-
+    <div class="toc well span3">
+      {% include "docs-toc.html" %}
+    </div>
+    <div class="well span9">
+      {{ content | safe }}
+    </div>
   </div>
 </div>
