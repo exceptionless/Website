@@ -103,7 +103,7 @@ body, input, button, select, textarea, .search-query {font-family: Open Sans;}
     padding: .15em .25em;
 }
 
-.toc .toc-active {
+.toc-list li.toc-active > a {
     background-color: #f1f1f1;
 }
 
