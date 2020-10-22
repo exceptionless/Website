@@ -1,6 +1,6 @@
 ---
 title: Self Hosting
-order: 14
+order: 15
 ---
 
 # Self Hosting Exceptionless
@@ -141,5 +141,3 @@ Please see the [Upgrading](Upgrading) for details on how to upgrade to the curre
 If you are having issues please try the following to resolve the issues. If this doesn't work please open an issue or contact us on [slack](https://slack.exceptionless.com).
 * Make sure you are running the latest release by visiting our [releases page](https://github.com/exceptionless/Exceptionless/releases). You can verify the version you are currently running by accessing the status page [`http://localhost/api/v2/about`](http://localhost/api/v2/about).
 * You can also enable detailed logging by updating the `Serilog__MinimumLevel__Default` config map value to `Debug`.
-
-#### Click [here](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting-Previous-Versions) if you are looking for documentation on self hosting older versions of Exceptionless.

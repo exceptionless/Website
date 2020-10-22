@@ -1,5 +1,5 @@
 ---
-title: .Net Client Configuration
+title: Configuration
 ---
 
 ## Exceptionless .NET Client Configuration

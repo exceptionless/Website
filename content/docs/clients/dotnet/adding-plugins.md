@@ -13,7 +13,6 @@ A plugin is a client-side addin that is run **every time** you submit an event.
 * [Removing an Existing Plugin](#removing-an-existing-plugin)
 
 ***
-***
 
 ## Create a New Plugin
 

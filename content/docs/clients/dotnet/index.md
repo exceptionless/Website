@@ -1,5 +1,5 @@
 ---
-title: .Net Client
+title: .NET Client
 ---
 
 # Exceptionless .NET Client Documentation

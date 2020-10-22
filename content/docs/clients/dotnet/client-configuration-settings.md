@@ -1,5 +1,5 @@
 ---
-title: Client Configuration Settings
+title: Settings
 ---
 
 ## Adding Plugins with the Exceptionless .NET Client
@@ -12,7 +12,6 @@ A plugin is a client-side addin that is run **every time** you submit an event.
 * [Adding the Plugin to Your App](#adding-the-plugin-to-your-app)
 * [Removing an Existing Plugin](#removing-an-existing-plugin)
 
-***
 ***
 
 ## Create a New Plugin

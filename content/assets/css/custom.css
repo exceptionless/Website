@@ -73,11 +73,22 @@ body, input, button, select, textarea, .search-query {font-family: Open Sans;}
     padding: 0;
 }
 
-.toc-list>li>a {
-    color: #222;
+.toc-list a {
+    color: #78B001 !important;
     font-weight: 600;
     border-bottom: 1px solid #ddd;
     margin-bottom: .25em;
+}
+
+.toc-list a:only-child {
+    color:#777 !important;
+    font-weight: 400;
+    border-bottom: none;
+}
+
+.toc-list ul ul {
+    padding-bottom: 0;
+    padding-left: .625rem;
 }
 
 .toc-list a:not(:hover) {
@@ -90,6 +101,13 @@ body, input, button, select, textarea, .search-query {font-family: Open Sans;}
 
 .toc summary, .toc-list a {
     padding: .15em .25em;
+}
+
+.docs > h1:first-child {
+    border-bottom: 1px solid #ddd;
+    margin-top: 0;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
