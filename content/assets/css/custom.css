@@ -110,6 +110,11 @@ body, input, button, select, textarea, .search-query {font-family: Open Sans;}
     margin-bottom: 20px;
 }
 
+#responsive-menu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 @media (min-width: 768px) {
     .row-fluid .span6.smaller {
         width: 46% !important;
@@ -119,5 +124,22 @@ body, input, button, select, textarea, .search-query {font-family: Open Sans;}
 @media (min-width: 768px) {
     .span6.quote {
         font-size: 40px;
+    }
+
+    #responsive-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .visible-toc {
+        display: none!important;
+    }
+
+    .hidden-toc {
+        display: block!important;
+    }
+    #responsive-menu {
+        display: block;
     }
 }

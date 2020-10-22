@@ -7,8 +7,9 @@ layout: default
 </div>
 
 <div id="wrap" class="container" role="document">
+  <div id="responsive-menu"><button class='btn btn-primary' onclick='handleMenu()'>Table of Contents</button></div>
   <div id="content" class="row-fluid">
-    <div class="toc well span3">
+    <div class="toc well span3 visible-toc">
       {% include "docs-toc.html" %}
     </div>
     <div class="well span9 docs">
@@ -17,3 +18,11 @@ layout: default
     </div>
   </div>
 </div>
+
+<script>
+    function handleMenu() {
+        const menu = document.querySelector('.toc');
+        menu.classList.toggle('hidden-toc');
+        menu.classList.toggle('visible-toc');
+    }
+</script>
