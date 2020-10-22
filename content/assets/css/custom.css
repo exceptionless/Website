@@ -114,6 +114,15 @@ body, input, button, select, textarea, .search-query {font-family: Open Sans;}
     margin-bottom: 20px;
 }
 
+a.deeplink {
+    color: #f1f1f1 !important;
+    font-size: 20px;
+}
+
+a.deeplink:hover {
+    color: #9c9c9c !important;
+}
+
 #responsive-menu {
     text-align: center;
     margin-bottom: 20px;

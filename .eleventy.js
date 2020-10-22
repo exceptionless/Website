@@ -22,14 +22,125 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setDataDeepMerge(true);
 
-  const markdownIt = require("markdown-it");
+  // ------------------------------------------------------------------------
+  // Markdown plugins
+  // ------------------------------------------------------------------------
 
-  // create a new markdown-it instance with the plugin
-  const markdownItAnchor = require("markdown-it-anchor");
-  const markdownLib = markdownIt({ html: false }).use(markdownItAnchor);
+  const markdownIt = require('markdown-it');
 
-  // replace the default markdown-it instance
-  eleventyConfig.setLibrary("md", markdownLib);
+  const markdownItOptions = {
+    html: true,
+    breaks: true,
+    linkify: true,
+    replaceLink: function (link, env) {
+      let newLink = link;
+      newLink = newLink.replace(/.md$/, '/');
+
+      if (newLink.startsWith('http://')
+        || newLink.startsWith('https://')
+        || newLink.startsWith('/')
+        || newLink.startsWith('#')
+        || newLink.startsWith('mailto:'))
+        return newLink;
+      
+      if (newLink.startsWith('./'))
+        return newLink.replace(/^\./, '..');
+
+      return '../' + newLink;
+    }
+  };
+
+  const markdownItFootnote = require('markdown-it-footnote');
+
+  const markdownItAnchor = require('markdown-it-anchor');
+
+  const markdownItAnchorOptions = {
+    permalink: true,
+    permalinkClass: 'deeplink',
+    permalinkSymbol: '&#35;',
+    level: [2, 3, 4],
+    slugify: function (s) {
+      return slugify(s, {
+        replacement: "-",
+        remove: /[*+~()'"!:@]/g,
+        lower: true,
+        strict: true,
+      });
+    },
+  };
+
+  const markdownItAttributes = require('markdown-it-attrs');
+
+  const markdownItSpan = require('markdown-it-bracketed-spans');
+
+  const markdownItAlerts = require('markdown-it-alerts');
+
+  const markdownItAbbr = require('markdown-it-abbr');
+
+  const markdownItReplaceLink = require('markdown-it-replace-link');
+
+  function getHeadingLevel(tagName) {
+    if (tagName[0].toLowerCase() === 'h') {
+      tagName = tagName.slice(1);
+    }
+
+    return parseInt(tagName, 10);
+  }
+
+  function markdownItHeadingLevel(md, options) {
+    var firstLevel = options.firstLevel;
+
+    if (typeof firstLevel === 'string') {
+      firstLevel = getHeadingLevel(firstLevel);
+    }
+
+    if (!firstLevel || isNaN(firstLevel)) {
+      return;
+    }
+
+    var levelOffset = firstLevel - 1;
+    if (levelOffset < 1 || levelOffset > 6) {
+      return;
+    }
+
+    md.core.ruler.push('adjust-heading-levels', function (state) {
+      var tokens = state.tokens;
+      for (var i = 0; i < tokens.length; i++) {
+        if (tokens[i].type !== 'heading_close') {
+          continue;
+        }
+
+        var headingOpen = tokens[i - 2];
+        var headingClose = tokens[i];
+
+        var currentLevel = getHeadingLevel(headingOpen.tag);
+        var tagName = 'h' + Math.min(currentLevel + levelOffset, 6);
+
+        headingOpen.tag = tagName;
+        headingClose.tag = tagName;
+      }
+    });
+  }
+
+  const md = markdownIt(markdownItOptions)
+    .disable('code')
+    .use(markdownItHeadingLevel, { firstLevel: 2 })
+    .use(markdownItFootnote)
+    .use(markdownItAnchor, markdownItAnchorOptions)
+    .use(markdownItAttributes)
+    .use(markdownItSpan)
+    .use(markdownItAbbr)
+    .use(markdownItReplaceLink)
+    .use(markdownItAlerts);
+
+  md.renderer.rules.table_open = function(tokens, idx) {
+    return '<table class="table">';
+  };
+  eleventyConfig.setLibrary('md', md);
+
+  eleventyConfig.addFilter('markdownify', (markdownString) =>
+    md.render(markdownString)
+  );
 
   eleventyConfig.addFilter("slug", function (value) {
     return slugify(value, {

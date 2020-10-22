@@ -4,8 +4,11 @@
   "description": "Exceptionless website",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "dev": "npx @11ty/eleventy --serve"
+    "clean": "npx del-cli --force ./_site",
+    "generate": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "build": "npx npm-run-all clean generate",
+    "dev": "npx npm-run-all clean serve"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,12 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.3",
     "eleventy-plugin-embed-everything": "^1.9.3",
     "eleventy-plugin-seo": "^0.5.1",
-    "markdown-it-anchor": "^6.0.0"
+    "markdown-it-abbr": "^1.0.4",
+    "markdown-it-alerts": "^0.1.0",
+    "markdown-it-anchor": "^6.0.0",
+    "markdown-it-attrs": "^3.0.3",
+    "markdown-it-bracketed-spans": "^1.0.1",
+    "markdown-it-footnote": "^3.0.2",
+    "markdown-it-replace-link": "^1.1.0"
   }
 }

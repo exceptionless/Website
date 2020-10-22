@@ -1,7 +1,6 @@
 {
     "recommendations": [
-        "davidanson.vscode-markdownlint",
-        "sissel.shopify-liquid",
+        "yzhang.markdown-all-in-one",
         "douglaszaltron.nunjucks-vscode-extensionpack"
     ]
 }
