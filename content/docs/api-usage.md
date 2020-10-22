@@ -1,5 +1,6 @@
 ---
 title: API Usage
+order: 4
 ---
 
 ## Exceptionless API Usage

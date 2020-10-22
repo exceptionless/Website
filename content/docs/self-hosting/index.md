@@ -1,5 +1,6 @@
 ---
 title: Self Hosting
+order: 14
 ---
 
 # Self Hosting Exceptionless

@@ -58,12 +58,12 @@ body, input, button, select, textarea, .search-query {font-family: Open Sans;}
     justify-content: space-between;
     padding-left: 0;
     padding-right: 0;
-    margin: 0 0 2.5em;
+    margin: 0 0;
     list-style: none;
 }
 
 .toc-list ul {
-    padding: 0 0 .75em 0;
+    padding: 0 0;
     margin: 0;
     list-style: none;
 }

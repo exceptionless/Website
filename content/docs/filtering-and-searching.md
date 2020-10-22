@@ -1,5 +1,6 @@
 ---
 title: Filters & Search
+order: 5
 ---
 
 ## Filtering and Searching within the Exceptionless Dashboard

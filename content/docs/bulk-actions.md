@@ -1,5 +1,6 @@
 ---
 title: Bulk Actions
+order: 7
 ---
 
 ## Exceptionless Bulk Actions

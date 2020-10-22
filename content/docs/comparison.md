@@ -1,5 +1,6 @@
 ---
 title: Comparison
+order: 15
 ---
 
 # Comparing Exceptionless

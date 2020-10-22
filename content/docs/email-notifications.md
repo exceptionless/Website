@@ -1,5 +1,6 @@
 ---
 title: Email Notifications
+order: 6
 ---
 
 ## Get Real Time Event Notifications via Email

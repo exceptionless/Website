@@ -1,5 +1,6 @@
 ---
 title: Integrations
+order: 12
 ---
 
 ## Integrations

@@ -1,5 +1,6 @@
 ---
 title: Project Settings
+order: 2
 ---
 ## Exceptionless Project Settings
 
