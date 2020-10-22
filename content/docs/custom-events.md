@@ -2,8 +2,6 @@
 title: Custom Event Stacks
 order: 11
 ---
-# Custom Event Stacks  
-
 We try to group events into intuitive stacks, but sometimes you might want to create your own for organization, reporting, troubleshooting, etc.
 
 We created `SetManualStackingKey` to facilitate this need.

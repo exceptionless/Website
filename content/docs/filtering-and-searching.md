@@ -1,12 +1,7 @@
 ---
-title: Filters & Search
+title: Filtering & Searching
 order: 5
 ---
-
-## Filtering and Searching within the Exceptionless Dashboard
-
-## Index
-
 * [Filter by Organization & Project](https://github.com/exceptionless/Exceptionless/wiki/Filtering-Searching#filter-by-organization--project)
 * [Filter by Time Frame](https://github.com/exceptionless/Exceptionless/wiki/Filtering-Searching#filter-by-time-frame)
 * [Filter / Search by Specific Criteria](https://github.com/exceptionless/Exceptionless/wiki/Filtering-Searching#filter--search-by-specific-criteria)
@@ -18,9 +13,6 @@ order: 5
    * [Ranges](https://github.com/exceptionless/Exceptionless/wiki/Filtering-Searching#ranges)
    * [Custom Extended Data](https://github.com/exceptionless/Exceptionless/wiki/Filtering-Searching#custom-extended-data)
 * [Demo Video](https://github.com/exceptionless/Exceptionless/wiki/Filtering-Searching#demo-video)
-
-***
-***
 
 ## Filter by Organization & Project
 
@@ -128,7 +120,6 @@ All simple data types (`string`, `boolean`, `date`, `number`) that are stored in
 
 **Example:** Lets assume that our events extended data contains a property called `Age` with a value of `18`. To search for this value our query would be `data.age:18`.
 
-***
 ***
 
 ## Demo Video

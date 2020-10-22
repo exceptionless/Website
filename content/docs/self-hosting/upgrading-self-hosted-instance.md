@@ -1,9 +1,6 @@
 ---
 title: Upgrading
 ---
-
-# Upgrading Self Hosted Instance
-
 **Please ensure that you have created backups before upgrading!** 
 
 **If you are upgrading from v1 or [v2](https://github.com/exceptionless/Exceptionless/releases/tag/v2.0.0) you will need to upgrade to [v3.0](https://github.com/exceptionless/Exceptionless/releases/tag/v3.0.0) before upgrading to the latest release.**

@@ -1,9 +1,6 @@
 ---
 title: .NET Client
 ---
-
-# Exceptionless .NET Client Documentation
-
 You can find .NET Client details and examples here. For other clients, visit the main [Exceptionless Documentation](https://github.com/exceptionless/Exceptionless/wiki) and go from there.
 
 The .NET client supports ASP.NET, [MVC](https://www.nuget.org/packages/Exceptionless.Mvc/), [Web API](https://www.nuget.org/packages/Exceptionless.WebApi/), [WPF](https://www.nuget.org/packages/Exceptionless.Wpf/), WinForms, and Console / Services.

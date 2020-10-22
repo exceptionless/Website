@@ -2,8 +2,6 @@
 title: Security
 order: 3
 ---
-## Exceptionless Security
-
 Exceptionless follows industry best practices and uses SSL out of the box to be as secure as possible. We provide you with the tools to take your information security to the next level.
 
 ### Data Exclusions

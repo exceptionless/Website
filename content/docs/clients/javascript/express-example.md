@@ -1,8 +1,6 @@
 ---
 title: Express Example
 ---
-## Exceptionless Express.js Example for the JavaScript / Node.js Client
-
 Add Exceptionless to your Express.js project and start collecting unhandled errors and 404s quickly.
 
 To start, just add the following middleware to the bottom of your middleware definitions.

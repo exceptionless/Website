@@ -1,9 +1,6 @@
 ---
 title: Sending Events
 ---
-
-## Sending Events with the .NET Exceptionless Client
-
 Once [[configured|configuration]], Exceptionless will automatically send any unhandled exceptions that happen in your application. The sections below will show you how to send us different event types as well as customize the data that is sent in.
 
 You may also want to send us **log messages**, **feature usages** or other kinds of events. You can do this very easily with our fluent api. Find examples, below.
@@ -16,7 +13,6 @@ You may also want to send us **log messages**, **feature usages** or other kinds
 * [Modifying Unhandled Exception Reports](#modifying-unhandled-exception-reports)
 * [Using NLog or Log4net Targets](#using-nlog-or-log4net-targets)
 
-***
 ***
 
 ### Log Messages, Feature Usages, 404, and Custom Event Types

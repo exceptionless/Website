@@ -2,8 +2,6 @@
 title: User Sessions
 order: 10
 ---
-
-# User Sessions  
 With user session tracking, you can easily see what a user is doing that leads up to an event occurrence, or just see how they are using your app.
 
 Each session has a list of events (feature usages, exceptions, log messages, etc) that the user triggered. Each can be clicked on to drill down.

@@ -2,9 +2,6 @@
 title: Versioning
 order: 8
 ---
-
-# Versioning
-
 You can mark error stacks fixed and they won't show up or notify you until they regress!
 
 ## How does this work?

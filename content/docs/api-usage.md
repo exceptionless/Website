@@ -2,9 +2,6 @@
 title: API Usage
 order: 4
 ---
-
-## Exceptionless API Usage
-
 Our API utilizes Swagger and Swashbuckle to automatically generate, update, and display documentation (which means it works automatically on self-hosted environments), is a great resource for our users that want to get their hands dirty and use Exceptionless data to roll their own tools, dashboards, etc.
 
 ## Index
@@ -23,7 +20,6 @@ Our API utilizes Swagger and Swashbuckle to automatically generate, update, and 
    * [Bearer Authentication](https://github.com/exceptionless/Exceptionless/wiki/API-Usage#bearer-authentication)
     * [Authenticate via Query String](https://github.com/exceptionless/Exceptionless/wiki/API-Usage#authenticate-via-query-string)
 
-***
 ***
 
 ## Setup
@@ -65,7 +61,6 @@ Now you have to get a new token for the project you want to work on and assign i
 
 4 - Copy this new token and click the `Authorize` button at the top of the site. Then enter your newly generated token and put it in the `access_token` field at the top of the page and click `Authorize` and close the modal. This authorizes you via bearer authentication, authenticates you to the rest api, and allows you to call controller actions.
 
-***
 ***
 
 ## Usage

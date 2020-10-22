@@ -1,8 +1,6 @@
 ---
 title: Self Hosting Options
 ---
-## Self Hosted Options using the Exceptionless JavaScript / Node.js Client
-
 The Exceptionless client can also be configured to send data to your self hosted instance. This is configured by setting the `serverUrl` setting to point to your Exceptionless instance.
 
 ### JavaScript

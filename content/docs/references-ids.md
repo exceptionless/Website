@@ -2,8 +2,6 @@
 title: Reference Ids
 order: 9
 ---
-# Reference Ids
-
 Reference Ids are unique identifiers that let you look up a submitted event. This is important because _event Ids are not created until after an event is processed, so there's no other way to look up an event_.
 
 Reference Ids are also used to help deduplicate events on the server side.

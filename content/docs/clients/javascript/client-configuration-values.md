@@ -1,8 +1,6 @@
 ---
 title: Client Configuration Values
 ---
-## Index
-
 * [About](#about)
 * [Usage Example](#usage-example)
 * [.NET Helpers](#net-helpers)

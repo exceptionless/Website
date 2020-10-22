@@ -2,12 +2,7 @@
 title: Comparison
 order: 14
 ---
-
-# Comparing Exceptionless
-
-# Features
-
-Feature Title | Exceptionless | Application Insights | Elmah | Raygun
+Feature | Exceptionless | Application Insights | Elmah | Raygun
 ---|---|---|---|---
 Open Source | X |  | X |
 Free Self Hosting | X |  | X | 

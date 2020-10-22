@@ -1,8 +1,6 @@
 ---
 title: JavaScript Example
 ---
-## Exceptionless JavaScript Client Example / Sample
-
 We have put together an example for the JavaScript client that you can use to get an idea of how everything works. It is [available on the GitHub Repo](https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example).
 
 ### To Get the Example Running…

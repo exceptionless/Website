@@ -1,9 +1,7 @@
 ---
-title: Email Notifications
+title: Notifications
 order: 6
 ---
-
-## Get Real Time Event Notifications via Email
 
 To turn on email notifications, go to "My Account" in your dashboard, then click on the "Notifications" tab.
 

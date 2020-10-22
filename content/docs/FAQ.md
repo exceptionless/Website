@@ -2,10 +2,6 @@
 title: FAQ
 order: 13
 ---
-
-## Exceptionless FAQs
-
-## Index
 * [Will Exceptionless slow my application down?](#q%3A-will-exceptionless-slow-my-application-down%3F)
 * [Why is my organization throttled?](#q%3A-why-is-my-organization-throttled%3F)
 * [What happens if the organization plan limit is reached?](#q%3A-what-happens-if-the-organization-plan-limit-is-reached%3F)
@@ -16,7 +12,6 @@ order: 13
 * [Is there a minimum version of .NET you need to be targeting to use the Exceptionless client.](#q%3A-is-there-a-minimum-version-of-net-you-need-to-be-targeting-to-use-the-exceptionless-client%3F)
 * [Can I use Exceptionless under medium trust?](#q%3A-can-i-use-exceptionless-under-medium-trust%3F)
 
-***
 ***
 
 ### Q: Will Exceptionless slow my application down?

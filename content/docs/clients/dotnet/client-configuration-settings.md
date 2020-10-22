@@ -1,9 +1,6 @@
 ---
 title: Settings
 ---
-
-## Adding Plugins with the Exceptionless .NET Client
-
 A plugin is a client-side addin that is run **every time** you submit an event.
 
 ## Index

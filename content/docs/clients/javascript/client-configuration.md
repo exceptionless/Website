@@ -1,10 +1,6 @@
 ---
-title: JavaScript Client Configuration
+title: Configuration
 ---
-
-## Exceptionless JavaScript / Node.js Client Configuration
-
-## Index
 * [Installation](#installation)
   * [JavaScript](#javascript)
   * [Node.js](#nodejs)
@@ -14,7 +10,6 @@ title: JavaScript Client Configuration
   * [General Data Protection Regulation](#general-data-protection-regulation)
 * [Versioning](#versioning)
 
-***
 ***
 
 ## Installation

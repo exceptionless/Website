@@ -1,9 +1,6 @@
 ---
 title: JavaScript Client
 ---
-
-# Exceptionless JavaScript Client Documentation
-
 You can find JavaScript Client details and examples here. For other clients, visit the main [Exceptionless Documentation](https://github.com/exceptionless/Exceptionless/wiki) and go from there.
 
 The JavaScript client supports Node.js and JavaScript.

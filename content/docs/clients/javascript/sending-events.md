@@ -1,9 +1,6 @@
 ---
 title: Sending Events
 ---
-
-## Sending Events with the Exceptionless JavaScript / Node.js Client
-
 Once configured, Exceptionless automatically sends unhandled exceptions that happen in your application. To send different event types, as well as customize the data that is sent, continue reading.
 
 You can send us log messages, feature usages, or other kinds of events easily with our fluent api.

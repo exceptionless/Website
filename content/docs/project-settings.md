@@ -2,8 +2,6 @@
 title: Project Settings
 order: 2
 ---
-## Exceptionless Project Settings
-
 * [Data Exclusions](#data-exclusions)
 * [Error Stacking](#error-stacking)
 * [Spam Detection](#spam-detection)
