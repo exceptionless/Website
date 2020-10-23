@@ -7,12 +7,12 @@ Shows all the different markdown formatting options available for writing docs a
 General markdown-it formatting: <https://markdown-it.github.io/>
 
 - [Footnote](#footnote)
-- [anchor links](#anchor-links)
-- [attrs {.text-center}](#attrs-text-center)
-- [bracketed spans](#bracketed-spans)
-- [alerts](#alerts)
-- [abbreviations](#abbreviations)
-- [tables](#tables)
+- [Anchor Links](#anchor-links)
+- [Attrs {.text-center}](#attrs-text-center)
+- [Bracketed Spans](#bracketed-spans)
+- [Alerts](#alerts)
+- [Abbreviations](#abbreviations)
+- [Tables](#tables)
 
 ## Footnote
 
@@ -27,33 +27,41 @@ Here is a footnote reference,[^1] and another.[^longnote]
     Subsequent paragraphs are indented to show that they
 belong to the previous footnote.
 
-## anchor links
+## Anchor Links
 
 <https://github.com/valeriangalliat/markdown-it-anchor>
 
 [Link to footnote section](#footnote)
 
-## attrs {.text-center}
+## Attrs {.text-center}
 
 <https://github.com/arve0/markdown-it-attrs>
 
 paragraph {.text-center}
 
-## bracketed spans
+## Bracketed Spans
 
 <https://github.com/mb21/markdown-it-bracketed-spans>
 
 paragraph with [a warning span]{.text-warning}
 
-## alerts
+## Alerts
 
 <https://github.com/nunof07/markdown-it-alerts>
 
-::: success
-Hello world! [Link](#).
+::: danger
+Danger danger danger! [Link](#).
 :::
 
-## abbreviations
+::: info
+Information information information! [Link](#).
+:::
+
+::: success
+Success success success! [Link](#).
+:::
+
+## Abbreviations
 
 <https://github.com/markdown-it/markdown-it-abbr>
 
@@ -62,7 +70,7 @@ Hello world! [Link](#).
 The HTML specification
 is maintained by the W3C.
 
-## tables
+## Tables
 
 | Feature                        | Exceptionless | Application Insights | Elmah | Raygun |
 | :----------------------------- | :-----------: | :------------------: | :---: | :----: |
