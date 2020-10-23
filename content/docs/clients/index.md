@@ -3,5 +3,5 @@ title: Clients
 order: 16
 ---
 
-- .NET
-- JavaScript
+- [.NET](dotnet/index.md)
+- [JavaScript](javascript/index.md)

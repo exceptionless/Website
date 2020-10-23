@@ -6,25 +6,27 @@ With user session tracking, you can easily see what a user is doing that leads u
 
 Each session has a list of events (feature usages, exceptions, log messages, etc) that the user triggered. Each can be clicked on to drill down.
 
-![Exceptionless User Session Events](/assets/img/docs/sessions-event-tab-user-footsteps.jpg)
+![Exceptionless User Session Events](img/sessions-event-tab-user-footsteps.jpg)
 
 Browser and environment information, along with any other data that persists throughout the user session is stored as well.
 
 Once you set up session tracking, you can find the report under Reports > Sessions, or click on the unique session id in any event's overview tab.
 
-![Exceptionless Sessions Report](/assets/img/docs/dashboard-nav.jpg)
+![Exceptionless Sessions Report](img/dashboard-nav.jpg)
 
 ## Turn On Session Tracking
 
 Set a default user identity via the following client methods to send the user ID for each event. Once set, it will be applied for all future events.
 
-### C# Example
+### C# Set User Identity Example
+
 ```csharp
 using Exceptionless;
 ExceptionlessClient.Default.Configuration.SetUserIdentity("UNIQUE_ID_OR_EMAIL_ADDRESS", "Display Name");
 ```
 
-### Javascript Example
+### Javascript Set User Identity Example
+
 ```javascript
 exceptionless.ExceptionlessClient.default.config.setUserIdentity('UNIQUE_ID_OR_EMAIL_ADDRESS', 'Display Name');
 ```
@@ -33,13 +35,15 @@ exceptionless.ExceptionlessClient.default.config.setUserIdentity('UNIQUE_ID_OR_E
 
 **If you are using WinForms, WPF, or a Browser App**, you can enable sessions by calling the `UseSessions` extension method.
 
-### C# Example
+### C# Use Sessions Example
+
 ```csharp
 using Exceptionless;
 ExceptionlessClient.Default.Configuration.UseSessions();
 ```
 
-### Javascript Example
+### Javascript Use Sessions Example
+
 ```javascript
 exceptionless.ExceptionlessClient.default.config.useSessions();
 ```
@@ -48,7 +52,8 @@ exceptionless.ExceptionlessClient.default.config.useSessions();
 
 You can use our client API to start, update, or end a session. Just remember, a user identity must be set.
 
-### C# Example
+### C# Submit Session Events Example
+
 ```csharp
 using Exceptionless;
 ExceptionlessClient.Default.SubmitSessionStart();
@@ -56,7 +61,8 @@ ExceptionlessClient.Default.SubmitSessionHeartbeat();
 ExceptionlessClient.Default.SubmitSessionEnd();
 ```
 
-### Javascript Example
+### Javascript Submit Session Events Example
+
 ```javascript
 exceptionless.ExceptionlessClient.default.submitSessionStart();
 exceptionless.ExceptionlessClient.default.submitSessionHeartbeat();

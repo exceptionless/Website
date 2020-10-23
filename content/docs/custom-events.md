@@ -10,7 +10,8 @@ We created `SetManualStackingKey` to facilitate this need.
 
 In the below examples, we use `SetManualStackingKey` and are naming the custom stack "MyCustomStackingKey".
 
-### C# Example
+## C# Example
+
 ```csharp
 try {
     throw new ApplicationException("Unable to create order from quote.");
@@ -25,12 +26,13 @@ Or, you can set the stacking directly on an event (e.g., inside a plugin).
 event.SetManualStackingKey("MyCustomStackingKey");
 ```
 
-### JavaScript Example
+## JavaScript Example
+
 ```javascript
 var client = exceptionless.ExceptionlessClient.default;
 // Node.Js
 // var client = require('exceptionless').ExceptionlessClient.default;
- 
+
 try {
   throw new Error('Unable to create order from quote.');
 } catch (error) {

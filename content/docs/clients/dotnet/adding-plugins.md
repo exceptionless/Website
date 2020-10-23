@@ -5,9 +5,14 @@ A plugin is a client-side addin that is run **every time** you submit an event.
 
 ## Index
 
-* [Create a New Plugin](#create-a-new-plugin)
-* [Adding the Plugin to Your App](#adding-the-plugin-to-your-app)
-* [Removing an Existing Plugin](#removing-an-existing-plugin)
+- [Index](#index)
+- [Create a New Plugin](#create-a-new-plugin)
+  - [Plugin Example](#plugin-example)
+    - [Add System Uptime to Feature Usages](#add-system-uptime-to-feature-usages)
+    - [Output](#output)
+  - [Plugin Priority](#plugin-priority)
+- [Adding the Plugin to Your App](#adding-the-plugin-to-your-app)
+- [Removing an Existing Plugin](#removing-an-existing-plugin)
 
 ***
 
@@ -26,6 +31,7 @@ Every plugin is passed an [EventPluginContext](https://github.com/exceptionless/
 ### Plugin Example
 
 #### Add System Uptime to Feature Usages
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -53,10 +59,13 @@ namespace Exceptionless.SampleConsole.Plugins {
     }
 }
 ```
+
 #### Output
+
 ![Exceptionless Plugin Screenshot](http://exceptionless.com/assets/exceptionless-plugin-system-uptime.png)
 
 ### Plugin Priority
+
 The plugin priority determines the order the plugin runs (lowest to highest, then by order added). All plugins shipped with the client have a starting priority of 10 and increment by multiples of 10. For your addin to run first, give it a priority lower than 10 (e.g., 0-5). To have it run last, give it a priority higher than 100. **If a priority is not specified, it defaults to 0.**
 
 ***
@@ -66,13 +75,14 @@ The plugin priority determines the order the plugin runs (lowest to highest, the
 Start by calling one of the `Exceptionless.ExceptionlessClient.Default.Configuration.AddPlugin()` overloads. This will typically be the following:
 
 ```csharp
-using Exceptionless;            
+using Exceptionless;
 ExceptionlessClient.Default.Configuration.AddPlugin<SystemUptimePlugin>();
 ```
 
 Passing a `System.Action<EventPluginContext>` to AddPlugin can also be used to add a plugin. _Note we specify a key so we can remove the plugin later. If you won't be removing the plugin, you can omit the first argument._
 
 **AddPlugin is passed three arguments:**
+
 * Unique Plugin Key (to remove later, if applicable)
 * Priority
 * Action (logic)
@@ -108,6 +118,7 @@ ExceptionlessClient.Default.Configuration.RemovePlugin<SystemUptimePlugin>();
 ```
 
 If it was registered via an action, you have to remove it via the key you added it with.
+
 ```csharp
 using Exceptionless;
 ExceptionlessClient.Default.Configuration.RemovePlugin("system-uptime");

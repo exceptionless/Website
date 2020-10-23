@@ -1,11 +1,12 @@
 ---
 title: Upgrading
 ---
-**Please ensure that you have created backups before upgrading!** 
+**Please ensure that you have created backups before upgrading!**
 
 **If you are upgrading from v1 or [v2](https://github.com/exceptionless/Exceptionless/releases/tag/v2.0.0) you will need to upgrade to [v3.0](https://github.com/exceptionless/Exceptionless/releases/tag/v3.0.0) before upgrading to the latest release.**
 
 ## Upgrading from v6 to v7
+
 A migration job will need to be run as there are several in place data migrations that need to be applied. The migrations will add new index mappings for soft delete support as well as stack status and populate various stack fields with data.
 
 1. You'll need to run an out of process `Migration` job. In order to do this you'll need to update configuration to ensure it's pointing to your Elasticsearch (e.g., `EX_ConnectionStrings__Elasticsearch` environment variable/connection string) and Redis instances.
@@ -14,7 +15,9 @@ A migration job will need to be run as there are several in place data migration
 4. Scale back up and you should be good to go.
 
 ## Upgrading from v5 to v6
+
 Version 6 added support for Elasticsearch 7, which requires a complete data migration from Elasticsearch 5.x. This tutorial assumes you have docker/Kubernetes installed and have followed the [setup guide](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting).
+
 1. Create a new Elasticsearch 7 cluster or modify your existing `docker-compose` file to also include our Elasticsearch 7.x image (There will need to be two Elasticsearch docker instances (5.x and 7.x). Please note that we've included the Elasticsearch major version number in the data path of the docker data path, this allows you to run two versions side by side without losing the data.
 2. Add a new environment variable or config map setting for `EX_ElasticsearchToMigrate` with the value of the `EX_Elasticsearch` 5.x connection string.
 3. Add your existing Elasticsearch instance to `reindex.remote.whitelist` in Elasticsearch 7's `elasticsearch.yml`. Make sure you include the port as well, for example `reindex.remote.whitelist: 127.0.0.1:9200`.
@@ -26,23 +29,24 @@ Version 6 added support for Elasticsearch 7, which requires a complete data migr
 ## Upgrading from v4 to v5
 
 We now only provide official docker images as release artifacts. This tutorial assumes you have docker/Kubernetes installed and have followed the [setup guide](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting).
+
 1. We now can run on linux or windows as we are running on ASP.NET Core! As a result we've completely redone the configuration. For the most part we've prefixed configuration with `EX_` and simplified it as much as possible. I'd recommend taking a look at your previous configuration settings and then read over the following [configuration document](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting#configuration) to migrate your settings.
 2. Please note that no Elasticsearch changes are required. You can continue to use your existing Elasticsearch cluster. You just need to update the connection string by following step 1.
 3. Please note that the UI and API no longer run on the same port as they are now two different docker images. You may need to update your server url accordingly in your client applications.
 
-
 ## Upgrading from v3 to v4
+
 This process requires you to setup and configure a new Elasticsearch 5 instance and reindex your existing Elasticsearch 1.x data into the Elasticsearch 5 instance using [external reindexing](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html). This tutorial assumes you have Elasticsearch 5 Kibana instance installed and configured.
 
 1. Edit the Elasticsearch 5's `elasticsearch.yml` configuration file.
-    1. Add the `reindex.remote.whitelist: 10.0.0.9:9200` setting with a value that contains the IP address or hostname of the 1.x server. This allows you to reindex the 1.x data into your new 5.x instance. 
-    2. Temporarily comment out (with a leading `#`) the following line: `#action.auto_create_index: .security,.monitoring*,.watches,.triggered_watches,.watcher-history*` 
+    1. Add the `reindex.remote.whitelist: 10.0.0.9:9200` setting with a value that contains the IP address or hostname of the 1.x server. This allows you to reindex the 1.x data into your new 5.x instance.
+    2. Temporarily comment out (with a leading `#`) the following line: `#action.auto_create_index: .security,.monitoring*,.watches,.triggered_watches,.watcher-history*`
     3. Restart the elasticsearch service.
 2. Open Kibana (E.G., [http://localhost:5601](http://localhost:5601)) and execute the following scripts to reindex your data.
 
-   1. Create Organization Index with the correct mappings:
-   
-```
+### Create Organization Index with the correct mappings:
+
+```json
 PUT organizations-v1
 {
   "settings": {
@@ -318,9 +322,11 @@ PUT organizations-v1
     }
   }
 }
-   ```
-   2. Reindex Organization data from 1.x into 5.x **Please make sure you update the host name**:
-   ```
+```
+
+### Reindex Organization data from 1.x into 5.x **Please make sure you update the host name**:
+
+```json
 POST _reindex
 {
   "source": {
@@ -338,9 +344,11 @@ POST _reindex
     "lang": "painless"
   }
 }
-   ```
-   3. Create Stack Index with the correct mappings:
-   ```
+```
+
+### Create Stack Index with the correct mappings:
+
+```json
 PUT stacks-v1
 {
   "settings": {
@@ -425,9 +433,11 @@ PUT stacks-v1
     }
   }
 }
-   ```
-   4. Reindex Stack data from 1.x into 5.x **Please make sure you update the host name**:
-   ```
+```
+
+### Reindex Stack data from 1.x into 5.x **Please make sure you update the host name**:
+
+```json
 POST _reindex
 {
   "source": {
@@ -441,9 +451,11 @@ POST _reindex
     "op_type": "create"
   }
 }
-   ```
-   5. Create Event Template so daily indexes can be created with the correct mappings:
-   ```
+```
+
+### Create Event Template so daily indexes can be created with the correct mappings:
+
+```json
 PUT _template/events-v1
 {
   "template": "events-v1-*",
@@ -1012,9 +1024,11 @@ PUT _template/events-v1
       }
   }
 }
-   ```
-   6. Reindex Event data from 1.x into 5.x **Please make sure you update the host name**:
-   ```
+```
+
+### Reindex Event data from 1.x into 5.x **Please make sure you update the host name**:
+
+```json
 POST _reindex
 {
   "source": {
@@ -1032,13 +1046,16 @@ POST _reindex
     "inline": "ctx._index = 'events-v1-' + DateTimeFormatter.ofPattern('yyyy.MM.dd').format(OffsetDateTime.parse(ctx._source.date).toInstant().atZone(ZoneOffset.UTC)); if (ctx._source.updated_utc == null) { ctx._source.updated_utc = ctx._source.created_utc; } if (ctx._source.is_deleted == null) { ctx._source.is_deleted = false; } if (!ctx.containsKey('data') || !(ctx.data.containsKey('@error') || ctx.data.containsKey('@simple_error'))) return null;def types = [];def messages = [];def codes = [];def err = ctx.data.containsKey('@error') ? ctx.data['@error'] : ctx.data['@simple_error'];def curr = err;while (curr != null) { if (curr.containsKey('type'))  types.add(curr.type); if (curr.containsKey('message'))  messages.add(curr.message); if (curr.containsKey('code'))  codes.add(curr.code); curr = curr.inner;}if (ctx.error == null) ctx.error = new HashMap();ctx.error.type = types;ctx.error.message = messages;ctx.error.code = codes;"
   }
 }
-   ```
-   7. Delete the previous Event Template:
-   ```
+```
+
+### Delete the previous Event Template:
+
+```json
 DELETE _template/events-v1
-   ```
+```
 
 ## Upgrading from v2 to v3
+
 _Please note that upgrading from [v2](https://github.com/exceptionless/Exceptionless/releases/tag/v2.0.0) to [v3](https://github.com/exceptionless/Exceptionless/releases/tag/v3.0.0) requires that `Redis` is installed and configured._
 
 1. Download and extract the [v3](https://github.com/exceptionless/Exceptionless/releases/tag/v3.0.0) release to a temp folder.
@@ -1048,12 +1065,15 @@ _Please note that upgrading from [v2](https://github.com/exceptionless/Exception
        ```xml
        <add name="Migration:MongoConnectionString" connectionString="mongodb://localhost/exceptionless" />
        ```
+
 3. Open the terminal and run the following jobs to migrate data from previous major versions of Exceptionless. `Jobs.exe` can be found in the `\wwwroot\App_Data\JobRunner\` folder.
-```
+
+```powershell
 Job.exe -t "Exceptionless.EventMigration.OrganizationMigrationJob, Exceptionless.EventMigration" -s "Exceptionless.Core.Jobs.JobBootstrapper, Exceptionless.Core"
 ```
 
 ## Upgrading from v1 to v3
+
 _Please note that upgrading from v1 to [v3](https://github.com/exceptionless/Exceptionless/releases/tag/v3.0.0) requires that `Redis` is installed and configured._
 
 1. Download and extract the [v3](https://github.com/exceptionless/Exceptionless/releases/tag/v3.0.0) release to a temp folder.
@@ -1063,8 +1083,10 @@ _Please note that upgrading from v1 to [v3](https://github.com/exceptionless/Exc
        ```xml
        <add name="Migration:MongoConnectionString" connectionString="mongodb://localhost/exceptionless" />
        ```
+
 3. Open the terminal and run the following jobs to migrate data from previous major versions of Exceptionless. `Jobs.exe` can be found in the `\wwwroot\App_Data\JobRunner\` folder.
-```
+
+```powershell
 Job.exe -t "Exceptionless.EventMigration.StackMigrationJob, Exceptionless.EventMigration" -s "Exceptionless.Core.Jobs.JobBootstrapper, Exceptionless.Core"
 Job.exe -t "Exceptionless.EventMigration.QueueEventMigrationsJob, Exceptionless.EventMigration" -s "Exceptionless.Core.Jobs.JobBootstrapper, Exceptionless.Core"
 Job.exe -t "Exceptionless.EventMigration.EventMigrationJob, Exceptionless.EventMigration" -c -s "Exceptionless.Core.Jobs.JobBootstrapper, Exceptionless.Core"

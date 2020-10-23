@@ -10,11 +10,12 @@ order: 12
 
 Below is a sample MVC Controller implementation of how you could consume this data. Your implementation will obviously vary based on your development stack.
 
-    [HttpPost]
-    public void Integration()
-    {
-        Stream request = Request.InputStream;
-        request.Seek(0, System.IO.SeekOrigin.Begin);
-        string json = new StreamReader(request).ReadToEnd(); 
-    }
-    
+```csharp
+[HttpPost]
+public void Integration()
+{
+    Stream request = Request.InputStream;
+    request.Seek(0, System.IO.SeekOrigin.Begin);
+    string json = new StreamReader(request).ReadToEnd(); 
+}
+```
