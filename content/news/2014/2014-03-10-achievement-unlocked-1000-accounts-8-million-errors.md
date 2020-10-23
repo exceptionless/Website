@@ -24,7 +24,7 @@ They say there's no sleep for the wicked, so we're feverishly working on a few m
 
 * Moving to Azure for faster, more robust, scaleable hosting
 * Simplifying the API to make it easier for new clients to be implemented and improve metric reporting
-* Javascript client
+* JavaScript client
 
 That's just the tip of the iceberg, of course. The to-do list is ever-growing, but we've got to start somewhere.
 

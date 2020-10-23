@@ -6,7 +6,7 @@ Please read this guide when upgrading from any version of Exceptionless. Upgradi
 
 If you run into any issues after upgrading the NuGet packages please take a look at the sections below.
 
-1. Ensure you have the latest version of the [NuGet Package manager installed](https://dist.nuget.org/index.html). 
+1. Ensure you have the latest version of the [NuGet Package manager installed](https://dist.nuget.org/index.html).
   * If you are using Visual Studio 2012/2013 version **2.12+ is required**.
   * If you are using Visual Studio 2015 than version **3.5+ is required**. 
 2. Open the NuGet Package Manager dialog.
@@ -32,7 +32,6 @@ Please read this guide when upgrading from Exceptionless 3.x. The Exceptionless 
 
 Please read this guide when upgrading from Exceptionless 2.x. The Exceptionless latest client has a few breaking changes from 2.x client that users should be aware of when upgrading. Please follow the guide below **after upgrading your NuGet packages from version 2.x to the latest version**.
 
-### Advanced
 The following changes affect a very small portion of users.
 
 Renamed Enrichments to Plugins. The following changes will need to be made if you were using enrichments:
@@ -43,39 +42,44 @@ Renamed Enrichments to Plugins. The following changes will need to be made if yo
 * `EventPluginContext.Data` property has been renamed to `EventPluginContext.ContextData`
 * `EventSubmittingEventArgs.EnrichmentContextData` property has been renamed to `EventSubmittingEventArgs.PluginContextData`
 
-***
-
 ## Upgrading from Exceptionless 1.x
 
 Please read this guide when upgrading from Exceptionless 1.x. The Exceptionless latest client has a few breaking changes from 1.x client that users should be aware of when upgrading. Please follow the guide below after upgrading your NuGet packages from version 1.x to the latest version.
 
-### Signed Packages
-If you require a strong named NuGet package please remove the existing NuGet package and install the signed NuGet version. Example: Remove `Exceptionless` NuGet package and install the `Exceptionless.Signed` NuGet package.
-### ExceptionlessClient API Changes
+## Signed Packages
 
-#### Methods
+If you require a strong named NuGet package please remove the existing NuGet package and install the signed NuGet version. Example: Remove `Exceptionless` NuGet package and install the `Exceptionless.Signed` NuGet package.
+
+## ExceptionlessClient API Changes
+
 `ExceptionlessClient.Current.GetLastErrorId()` has been renamed to `ExceptionlessClient.Default.GetLastReferenceId()`. _NOTE: To have a reference id automatically generated, you must call `ExceptionlessClient.Default.Configuration.UseReferenceIds()`_
-##### Advanced
+
 The following changes affect a very small portion of users.
 
 1. `client.Create(Exception)` has been renamed to `client.CreateEvent()`.
-1. `client.CreateError(Exception)` has been renamed to `client.CreateException(Exception)`. _NOTE: This now submits the exception._
-1. `client.SubmitError(Error)` has been renamed to `client.SubmitEvent(Event)`.
-1. `client.SubmitError(Exception)` and `client.Submit(Exception)` has been renamed to `client.SubmitException(Exception)`.
-1. `client.ProcessUnhandledException(Exception)` has been renamed to `client.SubmitUnhandledException(Exception)`.
-1. `client.SubmitPatch(string id, object patch)` has been removed.
-1. `client.SuspendProcessing()` has been moved to `client.Configuration.Resolver.GetEventQueue().SuspendProcessing()`.
-1. `client.UpdateConfiguration()` has been moved to `Exceptionless.Configuration.SettingsManager.UpdateSettings(client.Configuration)`.
+2. `client.CreateError(Exception)` has been renamed to `client.CreateException(Exception)`. _NOTE: This now submits the exception._
+3. `client.SubmitError(Error)` has been renamed to `client.SubmitEvent(Event)`.
+4. `client.SubmitError(Exception)` and `client.Submit(Exception)` has been renamed to `client.SubmitException(Exception)`.
+5. `client.ProcessUnhandledException(Exception)` has been renamed to `client.SubmitUnhandledException(Exception)`.
+6. `client.SubmitPatch(string id, object patch)` has been removed.
+7. `client.SuspendProcessing()` has been moved to `client.Configuration.Resolver.GetEventQueue().SuspendProcessing()`.
+8. `client.UpdateConfiguration()` has been moved to `Exceptionless.Configuration.SettingsManager.UpdateSettings(client.Configuration)`.
+
 #### Properties
+
 `ExceptionlessClient.Current` has been deprecated and replaced with `ExceptionlessClient.Default`.
+
 ##### Advanced
+
 The following changes affect a very small portion of users.
 
 1. `ErrorBuilder` has been renamed to `EventBuilder`.
 1. `client.Tags` has been moved to `client.Configuration.DefaultTags`.
 1. `IExceptionlessPlugin` has been replaced with `IEventPlugin`. _NOTE: Plugins can be registered via `client.Configuration.AddPlugin<IEventPlugin>();`_
 1. `client.Configuration["MySetting"]` has been moved to `client.Configuration.Settings["MySetting"]`.
+
 #### Events
+
 1event EventHandler<UnhandledExceptionReportingEventArgs> UnhandledExceptionReporting1 has been removed and replaced with 1event EventHandler<EventSubmittingEventArgs> SubmittingEvent1. You’ll need to wire up to 1SubmittingEvent1 and check the 1IsUnhandledError1 property.
 
 ##### Advanced

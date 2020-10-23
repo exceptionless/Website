@@ -7,7 +7,7 @@ date: 2015-05-27
 
 We're getting closer and closer to version 1.0 of our <a title="Exceptionless JavaScript Client" href="/javascript-client-available-for-preview-testing/" target="_blank">JavaScript client</a>, and we wanted to give everyone a demo of installation, configuration, and usage.
 
-If you're using Node.js, make sure to check out last week's blog post for <a title="Exceptionless Node.js Demo" href="/exceptionless-node-js-javascript-client-demo/" target="_blank">Node specific examples</a>. Otherwise, continue reading for Javascript examples.
+If you're using Node.js, make sure to check out last week's blog post for <a title="Exceptionless Node.js Demo" href="/exceptionless-node-js-javascript-client-demo/" target="_blank">Node specific examples</a>. Otherwise, continue reading for JavaScript examples.
 
 As you read and begin playing with the Exceptionless JavaScript client, please make note of any feedback, bugs, etc, and <a title="Exceptionless.JavaScript GitHub Repo" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">submit a GitHub issue</a> so we can fast track version 1.0 - we surely appreciate it!
 
@@ -30,7 +30,7 @@ We built our JavaScript client in <a title="TypeScript" href="https://github.co
 
 ## Configuring the Client
 
-Configuration of the Exceptionless JavaScript client can be accomplished a variety of ways. We list the common ways below, but make sure to check the <a title="Exceptionless Javascript Client GitHub Page" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub repo</a> for the most up to date documentation if you run into any problems using this example code.
+Configuration of the Exceptionless JavaScript client can be accomplished a variety of ways. We list the common ways below, but make sure to check the <a title="Exceptionless JavaScript Client GitHub Page" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub repo</a> for the most up to date documentation if you run into any problems using this example code.
 _NOTE: The only required setting you need to configure is the client's apiKey._
 
 ### Configuration Options
@@ -131,7 +131,7 @@ Finishing off the Exceptionless JavaScript client features, every event also inc
 
 A few screenshots of an individual event can be found below.<figure id="attachment_13248" class="thumbnail wp-caption alignleft" style="width: 150px">
 
-![Exceptionless Javascript Event Request Details](/assets/img/news/javascript-client-event-request-info-150x150.png)<figcaption class="caption wp-caption-text">Request Details</figcaption></figure>
+![Exceptionless JavaScript Event Request Details](/assets/img/news/javascript-client-event-request-info-150x150.png)<figcaption class="caption wp-caption-text">Request Details</figcaption></figure>
 
 <h2 style="clear: both;">
   Sample

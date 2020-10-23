@@ -25,7 +25,7 @@ using Exceptionless;
 ExceptionlessClient.Default.Configuration.SetUserIdentity("UNIQUE_ID_OR_EMAIL_ADDRESS", "Display Name");
 ```
 
-### Javascript Set User Identity Example
+### JavaScript Set User Identity Example
 
 ```javascript
 exceptionless.ExceptionlessClient.default.config.setUserIdentity('UNIQUE_ID_OR_EMAIL_ADDRESS', 'Display Name');
@@ -42,7 +42,7 @@ using Exceptionless;
 ExceptionlessClient.Default.Configuration.UseSessions();
 ```
 
-### Javascript Use Sessions Example
+### JavaScript Use Sessions Example
 
 ```javascript
 exceptionless.ExceptionlessClient.default.config.useSessions();
@@ -61,7 +61,7 @@ ExceptionlessClient.Default.SubmitSessionHeartbeat();
 ExceptionlessClient.Default.SubmitSessionEnd();
 ```
 
-### Javascript Submit Session Events Example
+### JavaScript Submit Session Events Example
 
 ```javascript
 exceptionless.ExceptionlessClient.default.submitSessionStart();

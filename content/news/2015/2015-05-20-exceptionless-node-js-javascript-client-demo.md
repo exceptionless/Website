@@ -3,7 +3,7 @@ id: 13194
 title: Exceptionless Node.js JavaScript Client Demo
 date: 2015-05-20
 ---
-![Exceptionless Node.js Javascript Client](/assets/img/news/node-js-header.jpg)
+![Exceptionless Node.js JavaScript Client](/assets/img/news/node-js-header.jpg)
 
 Last week we announced our full featured <a title="Exceptionless JavaScript Client" href="/javascript-client-available-for-preview-testing/" target="_blank">JavaScript client</a>, and we're super excited about releasing a version 1.0 soon.
 
@@ -26,7 +26,7 @@ var client = require('exceptionless.node').ExceptionlessClient.default;
 
 ## Configuring the Client
 
-You can configure the Exceptionless client a few different ways for Node.js. The below is the most common way, but for more configuration options and documentation, visit the <a title="Exceptionless Javascript Client GitHub Page" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub repo</a>. _NOTE: The only required setting you need to configure is the client's apiKey._
+You can configure the Exceptionless client a few different ways for Node.js. The below is the most common way, but for more configuration options and documentation, visit the <a title="Exceptionless JavaScript Client GitHub Page" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub repo</a>. _NOTE: The only required setting you need to configure is the client's apiKey._
 
 Set the `apiKey` on the default ExceptionlessClient instance.
 
@@ -135,7 +135,7 @@ We have built a quick<a title="Exceptionless Express.js Sample App" href="https:
 **Run the sample app by following the steps below:**
 
   1. Install [Node.js](https://nodejs.org/)
-  2. <a title="Exceptionless Javascript Client GitHub" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Clone or download our repository from GitHub</a>.
+  2. <a title="Exceptionless JavaScript Client GitHub" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Clone or download our repository from GitHub</a>.
   3. Navigate to the example\express folder via the command line (e.g., cd example\express)
   4. Run npm install
   5. Open app.js in your favorite text editor and set the <a title="Exceptionless.JavaScript Sample App apiKey and serverUrl" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/example/express/app.js#L5-L6" target="_blank">apiKey</a>..

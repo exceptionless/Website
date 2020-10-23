@@ -12,7 +12,7 @@ Are you looking for a comprehensive tool that handles logging, reporting, groupi
 
 Exceptionless is for developers and dev teams that want to have enhanced visibility of errors, track down bugs faster, tighten up code, and produce a better overall product for the end user.
 
-Currently, the platform is .NET based and has client support for ASP.NET, Web API, WebForms, WPF, Console, MFC, and NancyFX. Soon, we will support clients for Javascript, PHP, Ruby on Rails, Java, Python, and more. Developers are welcome to <a title="Exceptionless on GitHub" href="https://github.com/exceptionless/Exceptionless" target="_blank">work on supporting other technologies</a>, as well. **Contributors receive free hosting credits!**
+Currently, the platform is .NET based and has client support for ASP.NET, Web API, WebForms, WPF, Console, MFC, and NancyFX. Soon, we will support clients for JavaScript, PHP, Ruby on Rails, Java, Python, and more. Developers are welcome to <a title="Exceptionless on GitHub" href="https://github.com/exceptionless/Exceptionless" target="_blank">work on supporting other technologies</a>, as well. **Contributors receive free hosting credits!**
 
 ## Take the Tour
 

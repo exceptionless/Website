@@ -1,21 +1,20 @@
 ---
 title: Sending Events
 ---
-Once [[configured|configuration]], Exceptionless will automatically send any unhandled exceptions that happen in your application. The sections below will show you how to send us different event types as well as customize the data that is sent in.
+Once [configured](client-configuration.md), Exceptionless will automatically send any unhandled exceptions that happen in your application. The sections below will show you how to send us different event types as well as customize the data that is sent in.
 
 You may also want to send us **log messages**, **feature usages** or other kinds of events. You can do this very easily with our fluent api. Find examples, below.
 
-## Index
-
-* [Log Messages, Feature Usages, 404, and Custom Event Types](#log-messages-feature-usages-404-and-custom-event-types)
-* [Manually Sending Errors](#manually-sending-errors)
-* [Sending Additional Information](#sending-additional-information)
-* [Modifying Unhandled Exception Reports](#modifying-unhandled-exception-reports)
-* [Using NLog or Log4net Targets](#using-nlog-or-log4net-targets)
+- [Log Messages, Feature Usages, 404, and Custom Event Types](#log-messages-feature-usages-404-and-custom-event-types)
+- [Manually Sending Errors](#manually-sending-errors)
+- [Sending Additional Information](#sending-additional-information)
+- [Modifying Unhandled Exception Reports](#modifying-unhandled-exception-reports)
+- [Using NLog or Log4net Targets](#using-nlog-or-log4net-targets)
 
 ***
 
-### Log Messages, Feature Usages, 404, and Custom Event Types
+## Log Messages, Feature Usages, 404, and Custom Event Types
+
 ```csharp
 // Import the exceptionless namespace.
 using Exceptionless;
@@ -40,10 +39,10 @@ ExceptionlessClient.Default.CreateNotFound("/somepage").AddTags("Exceptionless")
 ExceptionlessClient.Default.SubmitEvent(new Event { Message = "Low Fuel", Type = "racecar", Source = "Fuel System" });
 ```
 
-***
+## Manually Sending Errors
 
-### Manually Sending Errors
 In addition to automatically sending all unhandled exceptions, you may want to manually send exceptions to the service. You can do so by importing the Exceptionless namespace and using code like this:
+
 ```csharp
 try {
     throw new ApplicationException(Guid.NewGuid().ToString());
@@ -52,10 +51,10 @@ try {
 }
 ```
 
-***
+## Sending Additional Information
 
-### Sending Additional Information
 You can easily include additional information in your error reports using our fluent event builder API.
+
 ```csharp
 try {
     throw new ApplicationException("Unable to create order from quote.");
@@ -83,10 +82,10 @@ try {
 }
 ```
 
-***
+## Modifying Unhandled Exception Reports
 
-### Modifying Unhandled Exception Reports
 You can get notified, add additional information or ignore unhandled exceptions by wiring up to the `SubmittingEvent` event.
+
 ```csharp
 // Wire up to this event in somewhere in your application's startup code.
 ExceptionlessClient.Default.SubmittingEvent += OnSubmittingEvent;
@@ -112,14 +111,14 @@ private void OnSubmittingEvent(object sender, EventSubmittingEventArgs e) {
         e.Cancel = true;
         return;
     }
-    
+
     // Ignore any exceptions that were not thrown by our code.
     var handledNamespaces = new List<string> { "Exceptionless" };
     if (!error.StackTrace.Select(s => s.DeclaringNamespace).Distinct().Any(ns => handledNamespaces.Any(ns.Contains))) {
         e.Cancel = true;
         return;
     }
-    
+
     // Add some additional data to the report.
     e.Event.AddObject(order, "Order", excludedPropertyNames: new [] { "CreditCardNumber" }, maxDepth: 2);
     e.Event.Tags.Add("Order");
@@ -128,9 +127,8 @@ private void OnSubmittingEvent(object sender, EventSubmittingEventArgs e) {
 }
 ```
 
-***
+## Using NLog or Log4net Targets
 
-### Using NLog or Log4net Targets
 Using major logging frameworks like NLog or Log4net gives you more granular control over what's logged.
 
 To use the [NLog](https://www.nuget.org/packages/exceptionless.nlog) or [Log4net](https://www.nuget.org/packages/exceptionless.log4net) clients, bring down the nuget package and follow the detailed readme. You can also take a look at our [sample app](https://github.com/exceptionless/Exceptionless.Net/tree/master/samples/Exceptionless.SampleConsole), which uses both frameworks.
