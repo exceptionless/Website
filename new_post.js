@@ -22,12 +22,12 @@ program.option('-t, --title <title>', 'Post title');
     const markdownTitle = `${year}-${month}-${day}-${titleSplit}.md`
   
     exec(`
-      cat <<EOF >./content/news/${year}/${markdownTitle}
-      ---
-      title: ${program.title}
-      date: ${year}-${month}-${day}
-      draft: true
-      ---
+cat <<EOF >./content/news/${year}/${markdownTitle}
+---
+title: ${program.title}
+date: ${year}-${month}-${day}
+draft: true
+---
     `, (err, stdout, stderr) => {
       if(err) {
         console.log(err);
