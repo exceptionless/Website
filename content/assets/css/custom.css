@@ -138,6 +138,10 @@ a.deeplink:hover {
     color: #721c24 !important;
 }
 
+#content a.alert-link {
+    text-decoration: underline;
+}
+
 .alert-info {
     background-color: #d9edf7;
     border-color: #bce8f1;
