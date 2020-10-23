@@ -7,10 +7,12 @@ pagination:
 ---
 
 {% for post in pagination.items %}
+{% if post.data.draft != true %}
 <article class="post type-post status-publish format-standard">
     <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
     {{ post.templateContent | safe }}
 </article>
+{% endif %}
 {% endfor %}
 {% if pagination.pageLinks.length > 1 %}
 <nav class="post-nav">
