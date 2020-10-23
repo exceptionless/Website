@@ -34,8 +34,11 @@ module.exports = function (eleventyConfig) {
     linkify: true,
     replaceLink: function (link, env) {
       let newLink = link;
-      newLink = newLink.replace(/.md$/, '/');
-
+      newLink = newLink.replace(/index.md$/, '').replace(/.md$/, '/');
+      
+      if (env.page.inputPath.endsWith('index.md'))
+        return newLink;
+      
       if (newLink.startsWith('http://')
         || newLink.startsWith('https://')
         || newLink.startsWith('/')
