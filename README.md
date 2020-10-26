@@ -10,5 +10,5 @@ You can manually create a new markdown file for your posts and ensure the front 
 
 The title should be wrapped in quotes like this: 
 
-`node new_post.js -t "This is a Test Post"`
+`npm run new-post "This is a Test Post"`
 
