@@ -2,7 +2,6 @@
 title: Introducing Exceptionless 7
 date: 2020-10-23
 author: Justin Hunter
-draft: false
 ---
 Feedback and community support is the key to growing a successful open-source company, and you all have provided us some of the best feedback possible. With your feedback, we just released one of our biggest improvements yet. This release includes changes on both the application interface and the core functionality. We wanted to highlight some of the main improvements and why we did it.
 

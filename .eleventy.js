@@ -41,12 +41,12 @@ module.exports = function (eleventyConfig) {
         || link.startsWith('mailto:'))
         return link;
       
-      let dir = path.dirname(env.page.filePathStem);
-      let fullyQualifiedPath = dir + '/' + link;
+      let dir = path.dirname(env.page?.filePathStem ?? '');
+      let fullPath = dir + '/' + link;
       
-      fullyQualifiedPath = fullyQualifiedPath.replace(/index.md$/, '').replace(/.md$/, '/');
+      fullPath = fullPath.replace(/index.md$/, '').replace(/.md$/, '/');
       
-      return fullyQualifiedPath;
+      return fullPath;
     }
   };
 
