@@ -1,5 +1,6 @@
 ---
 title: Configuration
+order: 1
 ---
 The following sections will walk you through configuring Exceptionless to fit your specific requirements. The sections below assume that you already have an Exceptionless Api Key. You can find your Exceptionless Api Key by clicking on your project in the project list. Next, click on the `Api Keys` tab to see your projects Api Keys.
 

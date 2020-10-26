@@ -5,6 +5,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginSEO = require("eleventy-plugin-seo");
 const siteConfig = require("./content/_data/site.json");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const path = require('path');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -33,23 +34,17 @@ module.exports = function (eleventyConfig) {
     breaks: true,
     linkify: true,
     replaceLink: function (link, env) {
-      let newLink = link;
-      newLink = newLink.replace(/index.md$/, '').replace(/.md$/, '/');
+      if (link.startsWith('http://')
+        || link.startsWith('https://')
+        || link.startsWith('/')
+        || link.startsWith('#')
+        || link.startsWith('mailto:'))
+        return link;
       
-      if (env.page.inputPath.endsWith('index.md'))
-        return newLink;
+      let dir = path.dirname(env.page.filePathStem);
+      let fullyQualifiedPath = dir + '/' + link;
       
-      if (newLink.startsWith('http://')
-        || newLink.startsWith('https://')
-        || newLink.startsWith('/')
-        || newLink.startsWith('#')
-        || newLink.startsWith('mailto:'))
-        return newLink;
-      
-      if (newLink.startsWith('./'))
-        return newLink.replace(/^\./, '..');
-
-      return '../' + newLink;
+      return fullyQualifiedPath;
     }
   };
 
