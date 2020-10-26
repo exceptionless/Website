@@ -2,7 +2,7 @@
 title: Introducing Exceptionless 7
 date: 2020-10-23
 author: Justin Hunter
-draft: true
+draft: false
 ---
 Feedback and community support is the key to growing a successful open-source company, and you all have provided us some of the best feedback possible. With your feedback, we just released one of our biggest improvements yet. This release includes changes on both the application interface and the core functionality. We wanted to highlight some of the main improvements and why we did it.
 
@@ -15,7 +15,7 @@ Feedback and community support is the key to growing a successful open-source co
 This improvement is more than just visual. We heard the feedback from you loud and clear. There are stacks you don't want to track, but filtering them out on your end is difficult. For that reason, we are introducing the "Discarded" status. If you mark a stack with this status, it will not be tracked in your dashboards and, more importantly, **it won't count against your plan limits** 🎉.
 
 
-![bulk actions example](./bulk_actions.png)
+![actions example](./status.png)
 
 
 As part of this improvement, we also consolidated statuses. Operations that were duplicative or didn't make sense were removed or combined. 
