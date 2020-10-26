@@ -44,6 +44,8 @@ module.exports = function (eleventyConfig) {
       let dir = path.dirname(env.page.filePathStem);
       let fullyQualifiedPath = dir + '/' + link;
       
+      fullyQualifiedPath = fullyQualifiedPath.replace(/index.md$/, '').replace(/.md$/, '/');
+      
       return fullyQualifiedPath;
     }
   };
