@@ -10,11 +10,11 @@ New UI updates and default log level selections are here!
 
 We recognize that every application is different. Every developer is different. Being able to easily customize the data captured through Exceptionless is an important part of our mission. This is why in v7.0.5, we have updated the user interface to support default log level selections. 
 
-![Log Level Settings](./log_level.png)
+![Log Level Settings](/assets/img/news/log_level.png)
 
 As you can see in the image above, the current example default is "Warn." You can override that default on the Stacks page any time you'd like. But if you want to customize that default log level from the start and have it apply across the board, you can do so on your settings page. 
 
-![Set Default Log Level on the Settings Page](./setting.png)
+![Set Default Log Level on the Settings Page](/assets/img/news/setting.png)
 
 ### Why Do Log Levels Matter
 

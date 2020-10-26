@@ -9,13 +9,13 @@ Feedback and community support is the key to growing a successful open-source co
 # New Statuses
 
 
-![new statuses](./statuses.png)
+![new statuses](/assets/img/news/status.png)
 
 
 This improvement is more than just visual. We heard the feedback from you loud and clear. There are stacks you don't want to track, but filtering them out on your end is difficult. For that reason, we are introducing the "Discarded" status. If you mark a stack with this status, it will not be tracked in your dashboards and, more importantly, **it won't count against your plan limits** 🎉.
 
 
-![actions example](./status.png)
+![actions example](/assets/img/news/status.png)
 
 
 As part of this improvement, we also consolidated statuses. Operations that were duplicative or didn't make sense were removed or combined. 
@@ -27,7 +27,7 @@ Adding a status means your dashboards will be updated in real-time with these st
 
 All dashboards now have a both high level stats and a timeline view by default. This gives you better information at a glance and allows you to go deeper with your stacks and events as needed. 
 
-![example dashboard](./dashboard.png)
+![example dashboard](/assets/img/news/dashboard_7_0.png)
 
 
 You'll also notice we've renamed some of our stats labels to make things a little more clear.  
@@ -36,7 +36,7 @@ You'll also notice we've renamed some of our stats labels to make things a littl
 
 We've made some minor adjustments to navigation icons, spacing, and more to make the experience in Exceptionless better as you move throughout the application.  
 
-![example navigation](./navigation.png)
+![example navigation](/assets/img/news/navigation.png)
 
 # We want to hear from you
 
