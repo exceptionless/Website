@@ -26,8 +26,8 @@ You can also **turn off the automatic updating of configuration settings when id
 
 ## Clients
 
-- [.NET](clients/dotnet/client-configuration-settings.md#updating-client-configuration-settings)
-- [JavaScript / Node.js](clients/javascript/client-configuration-values.md#updating-client-configuration-settings)
+- [.NET](clients/dotnet/)
+- [JavaScript / Node.js](clients/javascript/)
 
 ![Exceptionless Project Settings](img/project-settings.png)
 
@@ -59,8 +59,6 @@ A comma delimited list of common method names that should not be used as stackin
 You can also specify a comma delimited list of user agents that should be ignored client side. This list supports wildcards and by default covers a vast major of bots. This helps reduce lots of noise.
 
 ## Client Configuration
-
-![Exceptionless Client Configurations](img/client-configuration.png)
 
 Custom client configuration values allow you to control the behavior of your app in real time. They are a dictionary of key value pairs (string key, string value). Usage examples include controlling data exclusions to protecting sensitive data and or enabling/disabling features.
 

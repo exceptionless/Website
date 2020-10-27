@@ -8,7 +8,7 @@
     "generate": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
     "build": "npx npm-run-all clean generate",
-    "dev": "npx npm-run-all clean serve", 
+    "dev": "npx npm-run-all clean serve",
     "new-post": "node new_post.js -t"
   },
   "keywords": [],

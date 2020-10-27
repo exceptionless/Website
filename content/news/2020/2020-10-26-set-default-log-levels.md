@@ -4,9 +4,21 @@ date: 2020-10-26
 draft: true
 ---
 
-## New Default Log Level Settings
+## Customize Your Log Levels on the Fly
 
-New UI updates and default log level selections are here!
+Imagine this scenario. You're debugging your application. You KNOW there is a problem, but your logs aren't showing you anything helpful. You've bounced your head off your desk at least 34 times. Then it hits you! 
+
+
+You've configured your error monitoring service to only capture FATAL errors, but this error is surely some other level. Your log level settings need to be updated. 
+
+
+The good news is you've figured out what the problem is (at least what the problem is that's keeping you from debugging the real problem). The bad news is you now have to update your applications code to ensure the right log levels are being passed through to your error monitoring service. You have to save your code, re-deploy, then start re-testing. 
+
+
+That's a pretty terrible experience, but fortunately, it's one that Exceptionless has solved for you. 
+
+
+You can customize the log levels Exceptionless will track for you. ON. THE. FLY. You don't have to touch your code. Instead, should you run into the problem above, you can change your default log level and it will be applied immediately. Any new events coming through that match the level you set will now be stacked up and tracked for you. 
 
 We recognize that every application is different. Every developer is different. Being able to easily customize the data captured through Exceptionless is an important part of our mission. This is why in v7.0.5, we have updated the user interface to support default log level selections.
 
