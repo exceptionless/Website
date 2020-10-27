@@ -8,6 +8,15 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const path = require('path');
 
 module.exports = function (eleventyConfig) {
+  if(!process.env.ELEVENTY_PRODUCTION) {
+		eleventyConfig.setQuietMode(true);
+	}
+
+	eleventyConfig.setBrowserSyncConfig({
+		ui: false,
+		ghostMode: false
+  });
+  
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(embedEverything);
   eleventyConfig.addPlugin(syntaxHighlight);
