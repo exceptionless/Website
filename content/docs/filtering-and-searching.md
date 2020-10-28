@@ -2,9 +2,9 @@
 title: Filtering & Searching
 order: 5
 ---
-- [Filter by Organization & Project](#filter-by-organization--project)
+- [Filter by Organization & Project](#filter-by-organization-and-project)
 - [Filter by Time Frame](#filter-by-time-frame)
-- [Filter / Search by Specific Criteria](#filter--search-by-specific-criteria)
+- [Filter / Search by Specific Criteria](#filter-search-by-specific-criteria)
 - [Searchable Fields & Requirements](#searchable-fields--requirements)
 - [Multiple Queries](#multiple-queries)
 - [Wild Cards](#wild-cards)

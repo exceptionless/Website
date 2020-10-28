@@ -16,7 +16,7 @@ A migration job will need to be run as there are several in place data migration
 
 ## Upgrading from v5 to v6
 
-Version 6 added support for Elasticsearch 7, which requires a complete data migration from Elasticsearch 5.x. This tutorial assumes you have docker/Kubernetes installed and have followed the [setup guide](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting).
+Version 6 added support for Elasticsearch 7, which requires a complete data migration from Elasticsearch 5.x. This tutorial assumes you have docker/Kubernetes installed and have followed the [setup guide](../self-hosting/).
 
 1. Create a new Elasticsearch 7 cluster or modify your existing `docker-compose` file to also include our Elasticsearch 7.x image (There will need to be two Elasticsearch docker instances (5.x and 7.x). Please note that we've included the Elasticsearch major version number in the data path of the docker data path, this allows you to run two versions side by side without losing the data.
 2. Add a new environment variable or config map setting for `EX_ElasticsearchToMigrate` with the value of the `EX_Elasticsearch` 5.x connection string.

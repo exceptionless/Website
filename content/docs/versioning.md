@@ -28,13 +28,9 @@ When you mark a stack as fixed, the following meta data is recorded on the stack
 
 > **NOTE:** If you are using a **four-part version number** (E.G., `1.2.3.4`), you'll need to enter it as `1.2.3-4`. We will automatically handle this conversion when processing events.
 
-![Exceptionless Versioning Fixed](img/fixed.jpeg)
-
 Next, all stack event occurrences are marked as fixed and will be hidden from all dashboards. You can show fixed events in dashboards by updating the search box with `*` or `fixed:true`.
 
 This meta data is then inspected when an matching event is processed to determine if the stack and all occurrences should be regressed (_marked not fixed_). There are two scenarios where a stack will be marked as regressed:
 
 1. If no fixed in version is specified, any occurrence with a date newer than the date the stack was marked as fixed.
 2. If a fixed in version is specified, any occurrence that has a newer version specified (Example: `1.0.0` > `1.0.0-beta`).
-
-![Exceptionless Regressed](img/regressed.jpeg)

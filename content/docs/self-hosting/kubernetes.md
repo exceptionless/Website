@@ -14,7 +14,7 @@ Please note that we recommend you use Kubernetes for running in production.
 
 1. Follow the steps [here](https://github.com/exceptionless/Exceptionless/blob/master/k8s/ex-setup.ps1) for how to create it in AKS
 2. View the configuration settings below for more information on configuring Exceptionless.
-3. [Configure your clients](../clients/dotnet/client-configuration.md#self-hosted-options) to send errors to your website.
+3. [Configure your clients](../clients/) to send errors to your website.
 
 Now, you can create a local account, organization, and project and send events to it.
 
