@@ -1,7 +1,8 @@
 ---
 title: Sending Events
+order: 2
 ---
-Once [configured](client-configuration.md), Exceptionless will automatically send any unhandled exceptions that happen in your application. The sections below will show you how to send us different event types as well as customize the data that is sent in.
+Once [configured](configuration.md), Exceptionless will automatically send any unhandled exceptions that happen in your application. The sections below will show you how to send us different event types as well as customize the data that is sent in.
 
 You may also want to send us **log messages**, **feature usages** or other kinds of events. You can do this very easily with our fluent api. Find examples, below.
 

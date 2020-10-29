@@ -1,6 +1,6 @@
 ---
-title: TEMP - Markdown Formatting Demo
-order: 1
+title: Markdown Formatting Demo
+eleventyExcludeFromCollections: true
 ---
 Shows all the different markdown formatting options available for writing docs and blog posts
 

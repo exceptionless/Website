@@ -1,5 +1,5 @@
 ---
-title: Custom Event Stacks
+title: Manual Stacking
 order: 11
 ---
 We try to group events into intuitive stacks, but sometimes you might want to create your own for organization, reporting, troubleshooting, etc.

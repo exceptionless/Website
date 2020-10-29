@@ -1,12 +1,13 @@
 ---
-title: Trouble Shooting
+title: Troubleshooting
+order: 7
 ---
 
 If your events aren’t being sent to the server there are a few things that you can try to diagnose the issue.
 
 ## Update Your Client
 
-Please make sure that you are using the [latest version of the client](upgrading-client.md).
+Please make sure that you are using the [latest version of the client](upgrading.md).
 
 ## Ensure the Queue has Time to Process
 
@@ -30,7 +31,9 @@ If you are behind a proxy or firewall, please ensure that you can connect to <ht
 
 Your proxy settings should be picked up automatically by the Exceptionless client, but you can also try manually configuring the settings by adding a section to your app/web.config file.
 
-**NOTE: Some clients may not support proxies. Proxies are not supported in Portable Class Libraries (PCL). If you are only using the `Exceptionless` portable class library package, then proxies will not work.**
+::: info
+Some clients may not support proxies. Proxies are not supported in Portable Class Libraries (PCL). If you are only using the `Exceptionless` portable class library package, then proxies will not work.**
+:::
 
 ```xml
 <system.net>

@@ -1,19 +1,15 @@
 ---
-title: Settings
+title: Plugins
+order: 5
 ---
 A plugin is a client-side addin that is run **every time** you submit an event.
 
-## Index
-
-- [Index](#index)
 - [Create a New Plugin](#create-a-new-plugin)
 - [Add System Uptime to Feature Usages](#add-system-uptime-to-feature-usages)
   - [Output](#output)
 - [Plugin Priority](#plugin-priority)
 - [Adding the Plugin to Your App](#adding-the-plugin-to-your-app)
 - [Removing an Existing Plugin](#removing-an-existing-plugin)
-
-***
 
 ## Create a New Plugin
 
@@ -59,7 +55,7 @@ namespace Exceptionless.SampleConsole.Plugins {
 
 ### Output
 
-![Exceptionless Plugin Screenshot](http://exceptionless.com/assets/exceptionless-plugin-system-uptime.png)
+![Exceptionless Plugin Screenshot](../../../assets/img/news/exceptionless-plugin-system-uptime.png)
 
 ## Plugin Priority
 
