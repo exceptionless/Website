@@ -1,5 +1,6 @@
 ---
 title: Sending Events
+order: 3
 ---
 Once configured, Exceptionless automatically sends unhandled exceptions that happen in your application. To send different event types, as well as customize the data that is sent, continue reading.
 

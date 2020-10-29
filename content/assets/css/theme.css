@@ -6049,6 +6049,9 @@ div#content {
 #footer-wrapper {
     margin-top: -269px;
     clear: both;
+    position: absolute;
+    width: 100%;
+    z-index: 1024;
 }
 
 .type-post h1 {

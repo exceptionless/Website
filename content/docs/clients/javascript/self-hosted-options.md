@@ -1,5 +1,6 @@
 ---
 title: Self Hosting Options
+order: 4
 ---
 The Exceptionless client can also be configured to send data to your self hosted instance. This is configured by setting the `serverUrl` setting to point to your Exceptionless instance.
 

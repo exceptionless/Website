@@ -1,5 +1,6 @@
 ---
 title: Client Configuration Values
+order: 2
 ---
 - [About](#about)
 - [Usage Example](#usage-example)

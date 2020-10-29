@@ -1,5 +1,6 @@
 ---
 title: Configuration
+order: 1
 ---
 * [Installation](#installation)
   * [JavaScript](#javascript)
