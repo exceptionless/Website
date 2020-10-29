@@ -27,7 +27,7 @@ The below example demonstrates **how we would turn on or off log event submissio
 
 First, we add a (completely arbitrary for this example) `enableLogSubmission` client configuration value key with value `true` in the Project's Settings in the Exceptionless dashboard.
 
-![Exceptionless Client Configuration Value](https://camo.githubusercontent.com/8899b8a64c5b30ea58bb30ffc8a3d0f063e3293b/687474703a2f2f657863657074696f6e6c6573732e636f6d2f6173736574732f70726f6a6563742d73657474696e67732d706167652e706e67)
+![Exceptionless Client Configuration Value](../../../assets/img/docs/client-configuration.png)
 
 Then, we register a new client side plugin that runs each time an event is created. If our key (`enableLogSubmission`) is set to false and the event type is set to log, we will discard the event.
 
@@ -60,7 +60,7 @@ We have a few helpers to convert string configuration values to different system
 
 ## Updating Client Configuration settings
 
-![Exceptionless Client Configuration Settings](https://exceptionless.com/assets/client-configuration.png)
+![Exceptionless Client Configuration Settings](../../../assets/img/docs/client-configuration.png)
 
 All project settings are synced to the client in almost real time. When an event is submitted to Exceptionless we send down a response header with the current configuration version. If a newer version is available we will immediately retrieve and apply the latest configuration.
 
