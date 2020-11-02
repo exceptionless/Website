@@ -1,7 +1,7 @@
 ---
 title: Comparing Monitoring Services
 date: 2020-10-29
-draft: true
+draft: false
 ---
 
 Error monitoring is vital to the success of any application. Console logs only get you so far. Once your app is out in the wild, asking your customers to open up the developer tools window and inspect it for errors is a deal-breaker. This is where error monitoring services come in. Let's take a look at three different services: 
@@ -43,7 +43,7 @@ One big differentiator for Sentry is its focus on providing services for a wide 
 
 # Exceptionless  
 
-[Exceptionless](https://exceptionless.com) has been around the longest of the three services reviewed here. Created as a software offering from the parent company [CodeSmith Tools](https://www.codesmithtools.com/), Exceptionless was established in 2004 and is privately held. It is positioned as a tool to help first and a product second. This is why one of Exceptionless's main focuses is the open-source community. 
+[Exceptionless](https://exceptionless.com) has been around the longest of the three services reviewed here. Created as a software offering from the parent company [CodeSmith Tools](https://www.codesmithtools.com/), Exceptionless was established in 2010 and is privately held. It is positioned as a tool to help first and a product second. This is why one of Exceptionless's main focuses is the open-source community. 
 
 Exceptionless lets developers capture logs, events, and errors. However, Exceptionless's real differentiator is its real-time delivery mechanisms. Rather than costly code deployments to change your error monitoring configurations, Exceptionless allows you to make changes from their user interface and those changes will apply instantly in your application. This is key when it becomes clear that additional errors need to be surfaced quickly. 
 
