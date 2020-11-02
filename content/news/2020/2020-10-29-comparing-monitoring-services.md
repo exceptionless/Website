@@ -14,7 +14,7 @@ Each service, generally speaking, handles errors and logging for your applicatio
 
 # Log Rocket  
 
-[Log Rocket](https://logrocket.com) was founded in 2015 and is an error monitoring service that focuses on replaying the events that led up to the error. While some services focus on digging into the error details themselves, Log Rocket uses HTML from the user's session to reconstruct a video of what the user experienced. 
+[Log Rocket](https://logrocket.com) was founded in 2015 and is an error monitoring service that focuses on replaying the events that led up to the error. While some services focus on digging into the error details themselves, Log Rocket uses HTML from the user's session to reconstruct a playback of what the user experienced. 
 
 > What LogRocket does is we capture a recording in real time of all the user activity so the developer on the other end can replay exactly what went wrong and troubleshoot issues faster.
 
