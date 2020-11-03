@@ -15,3 +15,4 @@ Entering `Password*` will remove any field that **starts with** `Password` from 
 Entering `*Password` will remove any field that **ends with** `Password` from the report.
 Entering `*Password*` will remove any field that **contains** `Password` from the report.
 
+[See more on data exclusions here](project-settings/#data-exclusions).
