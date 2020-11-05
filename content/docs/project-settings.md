@@ -57,6 +57,8 @@ A comma delimited list of field names that should be removed from any error repo
 - Entering `*Password` will remove any field that **ends with** `Password` from the report.
 - Entering `*Password*` will remove any field that **contains** `Password` from the report.
 
+---
+
 ## Error Stacking
 
 You can also control how errors are stacked by specifying user namespaces (if you application code utilizes namespaces) or common methods (in all apps) to ignore. Let's take a look at how each works. 
@@ -73,9 +75,21 @@ Slightly different from your namespace definitions above, defining common method
 
 You can set this up on the project settings page in the Settings tab. Simply supply a comma delimited list of common method names that should not be used as stacking targets. 
 
+---
+
 ## Spam Detection
 
-You can also specify a comma delimited list of user agents that should be ignored client side. This list supports wildcards and by default covers a vast major of bots. This helps reduce lots of noise.
+Spam detection allows you to prevent noise from being tracked. Bots crawling your site or app can contribute to stacks that you simply do not want to see or track. We make it easy to filter these out. 
+
+On your project settings page, click the Settings tab and scroll down to the Spam Detection section. There, you can also specify a comma delimited list of user agents that should be ignored client side. This list supports wildcards and by default covers a vast major of bots. 
+
+**Automatic Spam Detection**
+
+![Automatice Spam Filtering](img/Spam_Detection.png)
+
+We also provide you with a simple tool to automatically detect spam from a single IP address sending in a high volume of activity. Click the checkbox, and we will do the rest.
+
+---
 
 ## Client Configuration
 
@@ -121,3 +135,7 @@ We have also added some additional known values to support **minimum log levels*
 
 - [.NET](clients/dotnet/client-configuration-settings.md)
 - [JavaScript / Node.js](clients/javascript/client-configuration-values.md)
+
+---
+
+[Next > Security](security) {.text-right}

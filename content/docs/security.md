@@ -2,11 +2,11 @@
 title: Security
 order: 3
 ---
-Exceptionless follows industry best practices and uses SSL out of the box to be as secure as possible. We provide you with the tools to take your information security to the next level.
+Exceptionless follows industry best practices and uses SSL out of the box to be as secure as possible. We also provide you with the tools to take your information security to the next level. These tools include Data Exlusions. To accommodate various data protection laws, Exceptionless allows you to prevent the transmission of specified pieces of information through Data Exclusions.
 
 ### Data Exclusions
 
-A comma delimited list of field names that should be removed from any error report data (e.g., extended data properties, form fields, cookies and query parameters). Data Exclusions can be configured on the project settings page. You can also specify a field name with wildcards `*` to specify starts with, ends with, or contains just to be extra safe.
+These exclusions are simply a comma delimited list of field names that should be removed from any error report data (e.g., extended data properties, form fields, cookies and query parameters). Data Exclusions can be configured on the project settings page. You can also specify a field name with wildcards `*` to specify starts with, ends with, or contains just to be extra safe.
 
 #### Example usage:
 
