@@ -1,6 +1,6 @@
 ---
 title: Sending Events
-order: 2
+order: 3
 ---
 Once [configured](configuration.md), Exceptionless will automatically send any unhandled exceptions that happen in your application. The sections below will show you how to send us different event types as well as customize the data that is sent in.
 

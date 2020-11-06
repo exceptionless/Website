@@ -6,6 +6,7 @@ title: .NET Client
 ## Topics
 
 * [Configuration](configuration.md)
+* [Client Configuration Values](client-configuration-values.md)
 * [Sending Events](sending-events.md)
 * [Supported Platforms](supported-platforms.md)
 * [Settings](settings.md)

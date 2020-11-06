@@ -1,6 +1,6 @@
 ---
 title: Upgrading
-order: 8
+order: 9
 ---
 
 - [Upgrading from Exceptionless 3.x](#upgrading-from-exceptionless-3x)

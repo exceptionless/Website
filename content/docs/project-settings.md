@@ -133,7 +133,7 @@ We have also added some additional known values to support **minimum log levels*
 
 ## Using Client Configuration Settings
 
-- [.NET](clients/dotnet/client-configuration-settings.md)
+- [.NET](clients/dotnet/client-configuration-values.md)
 - [JavaScript / Node.js](clients/javascript/client-configuration-values.md)
 
 ---

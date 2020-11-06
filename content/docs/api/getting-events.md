@@ -3,18 +3,161 @@ title: Getting Events
 order: 4
 ---
 
-## Get Event by Reference ID
+There may be times where you need to access the events you've sent through to Exceptionless without going through the Exceptionless UI. For those situations, you can use the API to fetch events. You can specify events across your organization or specific to a project. Let's take a look at the options. 
 
-If we want to get the event we just created by it’s reference_id, we can navigate to `Event` > `GET /api/v2/events/by-ref/{referenceId}`, enter that reference ID, and get back the details of the event.
+*Note: organization-level requests require your [Scoped User Token](api-getting-started) while projects-specific requests can use your [Project Token](project-tokens).*
 
-![Get By Reference ID](../img/06-get-by-reference-ID2.png)
+### Get Count of All Events
 
-## Get Event via Search Filter
+GET `api/v2/events/count` 
 
-Another example of getting an event may include using the reference ID or another search filter we just created and getting all by a reference filter. You can use any search filter in the filter parameter.
+```
+curl --location --request GET 'https://api.exceptionless.com/api/v2/events/count' \
+--header 'Authorization: Bearer YOUR_SCOPED_USER_TOKEN'
+``` 
 
-To do so, navigate to `Event` > `GET /api/v2/events` and use the reference term to filter events by the reference ID.
+The response will look like this: 
 
-![Get By Filter](../img/07-get-all-filter-reference.png)
+```
+{
+    "total": 74
+}
+```
 
-![Get By Filter 2](../img/07-get-all-filter-reference2.png)
+### Get Count of All Events For a Single Project  
+
+Remember, you can get your Project ID in the UI when logged in or by [following the instructions here](project-tokens/#get-projects).  
+
+GET `api/v2/projects/YOUR_PROJECT_ID/events/count` 
+
+```
+curl --location --request GET 'https://api.exceptionless.com/api/v2/projects/YOUR_PROJECT_ID/events/count' \
+--header 'Authorization: Bearer YOUR_PROJECT_TOKEN'
+```
+
+The response will be just like the global event search: 
+
+```
+{
+    "total": 74
+}
+```
+
+### Get All Events For Organization 
+
+GET `api/v2/events`  
+
+```
+curl --location --request GET 'https://api.exceptionless.com/api/v2/events' \
+--header 'Authorization: Bearer YOUR_SCOPED_USER_TOKEN'
+```
+
+The default results returned will be pagninated and limited to 10 results per page. However, you can configure the results limit and a bunch of other properties for your search through query string parameters. The full options [are listed here](https://api.exceptionless.io/docs/index.html).
+
+Your response will look like this: 
+
+```
+[
+  {
+    "type": "string",
+    "source": "string",
+    "date": "2020-11-06T13:57:46.773Z",
+    "tags": [
+      "string"
+    ],
+    "message": "string",
+    "geo": "string",
+    "value": 0,
+    "count": 0,
+    "data": {},
+    "referenceId": "string",
+    "id": "string",
+    "organizationId": "string",
+    "projectId": "string",
+    "stackId": "string",
+    "isFirstOccurrence": true,
+    "createdUtc": "2020-11-06T13:57:46.773Z",
+    "idx": {}
+  }
+]
+```
+
+### Get All Events For a Project  
+
+Similar to getting all events or your organization, you can get all events for a project. You have the same query string filtering capabilities with this request, but we'll keep the example simple. 
+
+GET `api/v2/projects/YOUR_PROJECT_ID/events`  
+
+```
+curl --location --request GET 'https://api.exceptionless.com/api/v2/projects/YOUR_PROJECT_ID/events' \
+--header 'Authorization: Bearer YOUR_PROJECT_TOKEN'
+```
+
+Again, the response will look like this: 
+
+```
+[
+  {
+    "type": "string",
+    "source": "string",
+    "date": "2020-11-06T13:57:46.773Z",
+    "tags": [
+      "string"
+    ],
+    "message": "string",
+    "geo": "string",
+    "value": 0,
+    "count": 0,
+    "data": {},
+    "referenceId": "string",
+    "id": "string",
+    "organizationId": "string",
+    "projectId": "string",
+    "stackId": "string",
+    "isFirstOccurrence": true,
+    "createdUtc": "2020-11-06T13:57:46.773Z",
+    "idx": {}
+  }
+]
+```
+
+### Getting an Event by ID  
+
+You can get the details of a single event by passing in the ID for the event. 
+
+GET `api/v2/events/YOUR_EVENT_ID`
+
+```
+curl --location --request GET 'https://api.exceptionless.com/api/v2/events/YOUR_EVENT_ID' \
+--header 'Authorization: Bearer YOUR_PROJECT_TOKEN'
+```
+
+The response will be a single object with the details of the event like this: 
+
+```
+{
+  "type": "string",
+  "source": "string",
+  "date": "2020-11-06T14:02:45.101Z",
+  "tags": [
+    "string"
+  ],
+  "message": "string",
+  "geo": "string",
+  "value": 0,
+  "count": 0,
+  "data": {},
+  "referenceId": "string",
+  "id": "string",
+  "organizationId": "string",
+  "projectId": "string",
+  "stackId": "string",
+  "isFirstOccurrence": true,
+  "createdUtc": "2020-11-06T14:02:45.101Z",
+  "idx": {}
+}
+```
+
+---
+
+[Next > Clients](../clients) {.text-right}

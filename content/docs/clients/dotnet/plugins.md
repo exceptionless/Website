@@ -1,6 +1,6 @@
 ---
 title: Plugins
-order: 5
+order: 6
 ---
 A plugin is a client-side addin that is run **every time** you submit an event.
 
