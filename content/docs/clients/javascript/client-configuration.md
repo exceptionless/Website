@@ -167,3 +167,6 @@ exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
 var exceptionless = require('exceptionless');
 exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
 ```
+--- 
+
+[Next > Client Configuration Values](client-configuration-values) {.text-right}

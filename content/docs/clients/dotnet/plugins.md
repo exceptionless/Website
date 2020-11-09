@@ -112,3 +112,7 @@ If it was registered via an action, you have to remove it via the key you added 
 using Exceptionless;
 ExceptionlessClient.Default.Configuration.RemovePlugin("system-uptime");
 ```
+
+--- 
+
+[Next > Private Information](private-information) {.text-right}

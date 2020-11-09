@@ -66,3 +66,7 @@ exceptionless.SettingsManager.onChanged(function(configuration) {
    // configuration.settings contains the new settings
 });
 ```
+
+---  
+
+[Next > Sending Events](sending-events) {.text-right}

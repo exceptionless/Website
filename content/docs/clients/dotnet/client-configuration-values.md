@@ -83,3 +83,7 @@ private void SettingsOnChanged(object sender, ChangedEventArgs<KeyValuePair<stri
    Console.WriteLine("The key {0} was {1}", args.Item.Key, args.Action);
 }
 ```
+
+--- 
+
+[Next > Sending Events](sending-events) {.text-right}

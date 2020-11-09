@@ -144,3 +144,6 @@ The Exceptionless client can also be configured to send data to your self hosted
 using Exceptionless.Configuration;
 [assembly: Exceptionless("YOUR_API_KEY", ServerUrl = "http://localhost")]
 ```
+
+---
+[Next > Client Configuration Values](client-configuration-values) {.text-right}

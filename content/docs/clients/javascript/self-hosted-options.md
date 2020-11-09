@@ -20,3 +20,6 @@ You can set the `serverUrl` on the default ExceptionlessClient instance.
 var client = require('exceptionless.node').ExceptionlessClient.default;
 client.config.serverUrl = 'http://localhost:50000';
 ```
+---
+
+[Next > Troubleshooting](troubleshooting) {.text-right}

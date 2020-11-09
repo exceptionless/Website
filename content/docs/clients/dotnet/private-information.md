@@ -37,3 +37,7 @@ ExceptionlessClient.Default.Configuration.IncludePostData = false;
 // Include Query String information, please note that DataExclusions are applied to all Query String keys when enabled.
 ExceptionlessClient.Default.Configuration.IncludeQueryString = false;
 ```
+
+---
+
+[Next > Troubleshooting](troubleshooting) {.text-right}

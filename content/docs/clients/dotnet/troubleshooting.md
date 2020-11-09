@@ -71,3 +71,7 @@ ExceptionlessClient.Default.Configuration.UseFileLogger("C:\\exceptionless.log")
 ## Debugging Source Code
 
 You can also debug the Exceptionless NuGet packages by configuring the Visual Studio source server integration. Please follow the [Symbol Source documentation](http://tripleemcoder.com/2015/10/04/moving-to-the-new-symbolsource-engine/) on configuring Visual Studio.
+
+--- 
+
+[Next > Upgrading](upgrading) {.text-right}

@@ -42,3 +42,7 @@ client.config.useDebugLogger();
 
 ## Debugging Source Code
 You can also debug the Exceptionless source code by using the unmagnified version and set breakpoints in your browsers developer tools.
+
+--- 
+
+[Next > JavaScript Example](javascript-example) {.text-right}

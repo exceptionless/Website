@@ -170,3 +170,7 @@ You can have the Exceptionless client automatically add specific tags to every r
 using Exceptionless;
 ExceptionlessClient.Default.Configuration.DefaultTags.Add("Tag1");
 ```
+
+--- 
+
+[Next > Plugins](plugins) {.text-right}

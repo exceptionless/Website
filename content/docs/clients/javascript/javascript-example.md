@@ -2,14 +2,65 @@
 title: JavaScript Example
 order: 6
 ---
-We have put together an example for the JavaScript client that you can use to get an idea of how everything works. It is [available on the GitHub Repo](https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example).
+We have put together an example for the JavaScript client that you can use to get an idea of how everything works. It is [available on the GitHub Repo](https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example). You can clone the repository and run the code as is or you can use the below example as a starting point. 
 
-### To Get the Example Running…
-1. Clone or download the [GitHub Repo](https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example)
-1. Edit the HTML file in the root example folder and replace the [existing API Key](https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/example/index.html#L8) with yours. Also, comment out the [serverUrl](https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/example/index.html#L16).
-1. Open the HTML file in your browser
-1. Open the console so that you can see the debug messages that the example generates
-1. Click the buttons on the page to submit an event
+Here's the full code with script tags in an `html` file: 
 
-### Troubleshooting
-Calling `client.config.useDebugLogger();` to enable debug logging is recommend and will output messages to the console regarding what the client is doing. Please contact us by creating an issue on GitHub if you need help or have any feedback regarding the JavaScript client.
+``` html
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>Exceptionless Test</title>
+</head>
+  <body>
+    <button onclick='throwError()'>Throw Exception</button>
+    <button onclick='logEvent()'>Log Event</button>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/exceptionless@1.6.3/dist/exceptionless.min.js"></script>
+    <script type="text/javascript" src="math.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript">
+      var client = exceptionless.ExceptionlessClient.default;
+      client.config.useDebugLogger();
+      client.config.useLocalStorage();
+      // client.config.serverUrl = 'http://localhost:50000'; // For self-hosted solutions
+      client.config.updateSettingsWhenIdleInterval = 15000;
+      client.config.setUserIdentity('12345678', 'Blake');
+      client.config.useSessions();
+
+      // set some default data
+      client.config.defaultData['SampleUser'] = {
+        id:1,
+        name: 'Blake',
+        password: '123456',
+        passwordResetToken: 'a reset token',
+        myPasswordValue: '123456',
+        myPassword: '123456',
+        customValue: 'Password',
+        value: {
+          Password: '123456'
+        }
+      };
+
+      client.config.defaultTags.push('Example', 'JavaScript');
+
+      function throwError() {
+        try {
+          throw new Error("This is broken")
+        } catch(e) {
+          client.submitException(e);
+        }
+      }
+
+      function logEvent() {
+        client.submitLog('Logging made easy');
+      }
+    </script> 
+  </body>
+</html>
+```
+
+---  
+
+[Next > ExpressJS Example](express-example) {.text-right}

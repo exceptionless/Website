@@ -85,3 +85,7 @@ If you are having issues please try the following to resolve the issues. If this
 
 * Make sure you are running the latest release by visiting our [releases page](https://github.com/exceptionless/Exceptionless/releases). You can verify the version you are currently running by accessing the status page [`http://localhost/api/v2/about`](http://localhost/api/v2/about).
 * You can also enable detailed logging by updating the `Serilog__MinimumLevel__Default` config map value to `Debug`.
+
+---
+
+[Next > Upgrading](upgrading-self-hosted-instance) {.text-right}

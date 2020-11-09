@@ -38,3 +38,7 @@ We have built a quick [Angular sample app](https://github.com/exceptionless/Exce
 ### Troubleshooting
 
 We recommend enabling debug logging by calling `$ExceptionlessClient.config.useDebugLogger();`. This will output messages to the console regarding what the client is doing. Please contact us by creating an issue on GitHub if you need assistance or have any feedback for the project.
+
+---  
+
+[Next > RequireJS Example](require-js-example) {.text-right}

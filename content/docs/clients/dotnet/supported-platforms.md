@@ -46,3 +46,7 @@ Log4net appender that sends log entries to Exceptionless.
 ## [Serilog.Sinks.ExceptionLess](https://www.nuget.org/packages/Serilog.Sinks.ExceptionLess/)
 
 Serilog sink that sends log entries to Exceptionless.
+
+--- 
+
+[Next > Settings](settings) {.text-right}

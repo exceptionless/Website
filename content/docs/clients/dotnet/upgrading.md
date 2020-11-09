@@ -18,3 +18,7 @@ order: 9
 - `client.Configuration.AddEnrichment<IEventEnrichment>();` has been renamed to `client.Configuration.AddPlugin<IEventPlugin>();`
 - `EventPluginContext.Data` property has been renamed to `EventPluginContext.ContextData`
 - `EventSubmittingEventArgs.EnrichmentContextData` property has been renamed to `EventSubmittingEventArgs.PluginContextData`
+
+---  
+
+[Next > JavaScript Client](../javascript) {.text-right}

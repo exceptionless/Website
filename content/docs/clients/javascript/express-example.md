@@ -39,3 +39,7 @@ We have built a quick [Express.js sample app](https://github.com/exceptionless/E
 ### Troubleshooting
 
 We recommend enabling debug logging by calling `client.config.useDebugLogger();`. This will output messages to the console regarding what the client is doing. Please contact us by creating an issue on GitHub if you need assistance or have any feedback for the project.
+
+--- 
+
+[Next > Angular Example](angular-example) {.text-right}

@@ -141,3 +141,7 @@ If you are logging thousands of messages a minute, you should use the in-memory 
 using Exceptionless;
 ExceptionlessClient.Default.Configuration.UseInMemoryStorage();
 ```
+
+---  
+
+[Next > Supported Platforms](supported-platforms) {.text-right}
