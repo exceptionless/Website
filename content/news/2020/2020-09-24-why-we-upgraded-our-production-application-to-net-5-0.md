@@ -5,7 +5,11 @@ date: 2020-09-24
 author: Justin Hunter
 ---
 
-**Update: Microsoft has officially released .NET 5.0** 
+---
+
+> ## Update: Microsoft has [officially released .NET 5.0!](https://devblogs.microsoft.com/dotnet/announcing-net-5-0/)
+
+---
 
 For anyone who has built an application, you've probably built it on some library or framework that changes over time. To keep up, you have to upgrade your application. However, there are varying schools of thought around when you should upgrade. At [Exceptionless](https://exceptionless/), we like to be on the bleeding edge. As an open-source company, we feel a responsibility to the community to know and understand the open-source tools we use. As such, we have already upgraded Exceptionless to use .NET 5.0.
 
