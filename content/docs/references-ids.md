@@ -109,3 +109,7 @@ Link directly to an event by outputting a link in your UI or log files, like
 `https://be.exceptionless.io/event/by-ref/YOUR_REFERENCE_ID)`
 
 Or you can search via the api/ui with `reference:YOUR_REFERENCE_ID`
+
+---
+
+[Next > User Sessions](user-sessions) {.text-right}

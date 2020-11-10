@@ -126,3 +126,7 @@ All simple data types (`string`, `boolean`, `date`, `number`) that are stored in
 ## Demo Video
 
 <http://www.youtube.com/watch?v=ed8uEVs3IO0>
+
+---
+
+[Next > Notifications](notifications) {.text-right}

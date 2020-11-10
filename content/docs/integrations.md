@@ -1,6 +1,6 @@
 ---
 title: Integrations
-order: 12
+order: 13
 ---
 1. Go to Admin - Projects - Edit - Integrations - Add Web Hook
 2. Enter a URL for your integration and an event for which it should fire.
@@ -19,3 +19,7 @@ public void Integration()
     string json = new StreamReader(request).ReadToEnd(); 
 }
 ```
+
+---
+
+[Next > FAQ](FAQ) {.text-right}

@@ -39,3 +39,7 @@ try {
   client.createException(error).setManualStackingKey('MyCustomStackingKey').submit();
 }
 ```
+
+---
+
+[Next > Default Log Levels](setting-default-log-levels) {.text-right}

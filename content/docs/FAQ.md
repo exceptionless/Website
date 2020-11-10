@@ -1,6 +1,6 @@
 ---
 title: FAQ
-order: 13
+order: 14
 ---
 - [Will Exceptionless slow my application down?](#will-exceptionless-slow-my-application-down)
 - [Why is my organization throttled?](#why-is-my-organization-throttled)
@@ -65,3 +65,7 @@ Yes, your application needs to be targeting .NET 4.5 or newer.
 ## Can I use Exceptionless under medium trust?
 
 Yes, you will need to set the requirePermission attribute to false in the exceptionless config section. This attribute allows the exceptionless client to read the exceptionless config settings. When you are running in medium trust, unhandled exceptions will not be caught. This means that you must submit exceptions to Exceptionless manually.
+
+---
+
+[Next > Comparison](comparison) {.text-right}

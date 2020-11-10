@@ -34,3 +34,7 @@ This meta data is then inspected when an matching event is processed to determin
 
 1. If no fixed in version is specified, any occurrence with a date newer than the date the stack was marked as fixed.
 2. If a fixed in version is specified, any occurrence that has a newer version specified (Example: `1.0.0` > `1.0.0-beta`).
+
+---
+
+[Next > Reference Ids](references-ids) {.text-right}

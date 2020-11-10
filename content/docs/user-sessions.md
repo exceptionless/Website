@@ -72,3 +72,7 @@ exceptionless.ExceptionlessClient.default.submitSessionEnd();
 ## Disable Heartbeat
 
 If you would like to disable the near real-time session tracking heartbeat that goes out ever 30 seconds, you can pass `false` as an argument to the `UseSessions()` method.
+
+---
+
+[Next > Manual Stacking](manual-stacking) {.text-right}
