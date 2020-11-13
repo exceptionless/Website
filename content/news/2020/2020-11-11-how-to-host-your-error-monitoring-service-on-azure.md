@@ -78,4 +78,67 @@ With all of this complete, we should be ready to install dependencies!
 
 ## Installing Dependencies  
 
+The first thing we need to do is update our Linux instance. To do that, simply run the following command: 
+
+`sudo apt-get update` 
+
+Next, we're going to install dependencies for Docker, which we will use to help us self-host Exceptionless. 
+
+```
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+```
+
+Now, we need to add Docker's official GPG key. [Per their docs](https://docs.docker.com/engine/install/ubuntu/), we should run: 
+
+`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
+
+We should verify the fingerprint for the GPG key by running the following: 
+
+`sudo apt-key fingerprint 0EBFCD88` 
+
+The next step requires us to know the architecture our VM is running on. You can confirm this by running the following command: 
+
+`dpkg --print-architecture`  
+
+You should be running on an amd64 machine. But just to be safe, we'll include the instructions for amd64, armhf, and arm64.
+
+**amd64**
+
+```
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```
+
+**armhf**  
+
+```
+sudo add-apt-repository \
+   "deb [arch=armhf] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```
+
+**arm64**  
+
+```
+sudo add-apt-repository \
+   "deb [arch=arm64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```
+
+Now, we'll need to run our update command again and then move on to installing the Docker engine. 
+
+`sudo apt-get update` 
+
+To install the engine, run: 
+
+`sudo apt-get install docker-ce docker-ce-cli containerd.io`
 
