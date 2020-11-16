@@ -1,5 +1,5 @@
 ---
-title: How To Host Your Error Monitoring Service on Azure
+title: Self Hosted Error Monitoring on Azure
 date: 2020-11-11
 draft: true
 ---
@@ -141,4 +141,40 @@ Now, we'll need to run our update command again and then move on to installing t
 To install the engine, run: 
 
 `sudo apt-get install docker-ce docker-ce-cli containerd.io`
+
+Let's make sure Docker was installed successfully. Run the following to test a Docker image: 
+
+`sudo docker run hello-world` 
+
+If you see the results "Hello from Docker!" you're good to go.
+
+## Running Exceptionless 
+
+There are [three options for running a self-hosted Exceptionless instance](https://exceptionless.com/docs/self-hosting/). The first option is for testing only and will delete data between restarts. The second option retains data on disk between restarts. The third option retains data and enables email notifications. 
+
+We're going to skip the first option and email alerts and setup is a bit more advanced than this tutorial cares to go. So, we will go with the second option. 
+
+Per the Exceptionless documentation, this set up: 
+
+> ...runs a simple version of Exceptionless with data persisted between runs in a sub-directory of the current directory called esdata. It uses an embedded single node Elasticsearch cluster and does not have backups. It is recommended that you create your own Elasticsearch cluster for production deployments of Exceptionless.
+
+While it may be recommended that we run our own Elasticsearch cluster, we're not going to do that in this tutorial. 
+
+So, let's get it going!
+
+Run the following command: 
+
+```
+sudo docker run --rm -it -p 5000:80 \
+    -v $(pwd)/esdata:/usr/share/elasticsearch/data \
+    exceptionless/exceptionless:latest
+```
+
+After some initial installation, you should see a constant log output indicating that Exceptionless is running. Congratulations, the first big hurdle has been overcome! 
+
+Now, we need to figure out how to access our instance from the outside world. It's cool to see it running in our VM, but we don't want to SSH in when we want to send events, right? Let's take care of that now. 
+
+## Opening Ports 
+
+
 

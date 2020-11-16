@@ -1,6 +1,6 @@
 ---
 title: Angular Example
-order: 8
+order: 7
 ---
 Exceptionless will automatically capture any unhandled errors that are thrown. However, angular errors are sent through an [`$exceptionHandler` service](https://docs.angularjs.org/api/ng/service/$exceptionHandler). To fully integrate with angular we need to add an [Exceptionless integration for Angular](https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/dist/integrations/angular.js)! Doing so will cause Exceptionless to start collecting unhandled Angular errors, 404s, and $log messages quickly.
 

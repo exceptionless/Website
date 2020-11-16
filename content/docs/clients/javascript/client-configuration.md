@@ -167,6 +167,27 @@ exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
 var exceptionless = require('exceptionless');
 exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
 ```
+
+## Self Hosted Options
+
+The Exceptionless client can also be configured to send data to your self hosted instance. This is configured by setting the `serverUrl` setting to point to your Exceptionless instance.
+
+### JavaScript
+
+You can set the `serverUrl` on the default ExceptionlessClient instance.
+
+```javascript
+exceptionless.ExceptionlessClient.default.config.serverUrl = 'http://localhost:50000';
+```
+
+### Node.js
+
+You can set the `serverUrl` on the default ExceptionlessClient instance.
+
+```javascript
+var client = require('exceptionless.node').ExceptionlessClient.default;
+client
+```
 --- 
 
 [Next > Client Configuration Values](client-configuration-values) {.text-right}

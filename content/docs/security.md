@@ -1,6 +1,6 @@
 ---
 title: Security
-order: 3
+order: 15
 ---
 Exceptionless follows industry best practices and uses SSL out of the box to be as secure as possible. We also provide you with the tools to take your information security to the next level. These tools include Data Exlusions. To accommodate various data protection laws, Exceptionless allows you to prevent the transmission of specified pieces of information through Data Exclusions.
 

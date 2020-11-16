@@ -1,6 +1,6 @@
 ---
 title: RequireJS Example
-order: 9
+order: 8
 ---
 [The example/sample can be found here](https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example/RequireJS).
 

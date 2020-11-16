@@ -1,6 +1,6 @@
 ---
 title: Filtering & Searching
-order: 5
+order: 4
 ---
 - [Filter by Organization & Project](#filter-by-organization-and-project)
 - [Filter by Time Frame](#filter-by-time-frame)
