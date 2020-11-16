@@ -17,6 +17,19 @@ Exceptionless provides you the tools to track errors, logs, and events while gui
 
 We have put together comprehensive documentation to help you get started with a self-hosted Exceptionless instance. You can [find that documentation here](self-hosting). 
 
+## Sending Your First Event 
+
+Once you've singed up for an account and created a project, you can start receiving events. Let's take a look at sending a simple event to Exceptionless. 
+
+POST `api/v2/events` 
+
+```
+curl --location --request POST 'https://api.exceptionless.com/api/v2/events' \
+--header 'Authorization: Bearer YOUR_PROJECT_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{ "type": "error", "date":"2030-01-01T12:00:00.0000000-05:00", "@simple_error": { "message": "Simple Exception", "type": "System.Exception", "stack_trace": " at Client.Tests.ExceptionlessClientTests.CanSubmitSimpleException() in ExceptionlessClientTests.cs:line 77" } }'
+```
+
 ---
 
 You've got your account created, now what? Let's get your project set up and then we can dive into some best practice and ways to enhance your use of Exceptionless.
