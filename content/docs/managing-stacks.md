@@ -7,7 +7,7 @@ Perhaps the most important thing you'll do in Exceptionless is manage your stack
 
 Exceptionless will automatically group events into stacks and when you first sign in, you'll be taken to your dashboard on the Most Frequent view. 
 
-![Most Frequent view of stacks on dashboard](img/Most_frequent.png)
+![Most Frequent view of stacks on dashboard](img/Most_Frequent.png)
 
 Click on a stack you'd like to manage (We recommend you start with the most frequent event because that's probably pretty annoying for your customers 😉). Clicking on a stack will take you to a detailed view that includes important information such as how many times the event occurred, the number of users impacted, and the first and last occurences of the event. 
 
