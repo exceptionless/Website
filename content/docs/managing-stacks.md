@@ -28,3 +28,16 @@ Marking the status of a stack will control your [filtering](filtering-and-search
 Beyond statuses, you have options to further control your stacks. 
 
 ![Options Examples](img/Options.png)
+
+Marking a stack with "Future Occurences are Critical" will automatically tag all subsequent events that come into that stack with the critical tag and will make them more prominent for you to review. 
+
+The "Promote to External" option allows you to send the stack details to an external source that you've configured through webhooks in the [Integrations](integrations) section. This can help you automate issue tracking and project management. 
+
+Adding a "Reference Link" allows you to supply to a link from an external source. This is helpful when a customer files a Github issue, for example. You can link to Github or to a Slack conversation, or anywhere, really. 
+
+Managing your stacks is the core focus within Exceptionless, and we try to automate as much as possible for you. However, it is possible to manually stack events, allowing you some of the same management tools outlined here. 
+
+---
+
+[Next > Manual Stacking](manual-stacking) {.text-right}
+

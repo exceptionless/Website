@@ -1,6 +1,6 @@
 ---
 title: Manual Stacking
-order: 11
+order: 3
 ---
 We try to group events into intuitive stacks, but sometimes you might want to create your own for organization, reporting, troubleshooting, etc.
 

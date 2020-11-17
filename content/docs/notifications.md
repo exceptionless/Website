@@ -1,6 +1,6 @@
 ---
 title: Notifications
-order: 6
+order: 11
 ---
 
 To turn on email notifications, go to "My Account" in your dashboard, then click on the "Notifications" tab.
