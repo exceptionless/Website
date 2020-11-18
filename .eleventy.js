@@ -6,6 +6,7 @@ const pluginSEO = require("eleventy-plugin-seo");
 const siteConfig = require("./content/_data/site.json");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const path = require('path');
+const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 module.exports = function (eleventyConfig) {
   if(!process.env.ELEVENTY_PRODUCTION) {
@@ -22,6 +23,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginSEO, siteConfig);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(sitemap, {
+    sitemap: {
+      hostname: "https://exceptionless.com",
+    },
+  });
 
   eleventyConfig.addPassthroughCopy("content/assets");
   eleventyConfig.addPassthroughCopy("content/favicon.ico");
