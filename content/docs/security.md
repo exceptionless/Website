@@ -1,6 +1,6 @@
 ---
 title: Security
-order: 15
+order: 16
 ---
 Exceptionless follows industry best practices and uses SSL out of the box to be as secure as possible. We also provide you with the tools to take your information security to the next level. These tools include Data Exlusions. To accommodate various data protection laws, Exceptionless allows you to prevent the transmission of specified pieces of information through Data Exclusions.
 
@@ -19,4 +19,4 @@ Entering `*Password*` will remove any field that **contains** `Password` from th
 
 ---
 
-[Next > Filtering & Searching](filtering-and-searching) {.text-right}
+[Next > API Usage](api) {.text-right}

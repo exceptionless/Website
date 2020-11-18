@@ -36,4 +36,4 @@ You've got your account created, now what? Let's get your project set up and the
 
 ---
 
-[Next > Project Settings](project-settings) {.text-right}
+[Next > Managing Stacks](managing-stacks) {.text-right}

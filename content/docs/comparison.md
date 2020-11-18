@@ -1,6 +1,6 @@
 ---
 title: Comparison
-order: 16
+order: 15
 ---
 | Feature                        | Exceptionless | Application Insights | Elmah | Raygun |
 | :----------------------------- | :-----------: | :------------------: | :---: | :----: |
@@ -39,4 +39,4 @@ order: 16
 
 ---
 
-[Next > API Usage](api) {.text-right}
+[Next > Security](security) {.text-right}

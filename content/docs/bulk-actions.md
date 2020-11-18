@@ -1,6 +1,6 @@
 ---
 title: Bulk Actions
-order: 7
+order: 5
 ---
 Bulk Actions is the ability to select multiple exceptions or occurrences of a single exception and do with them as you please, all at once. Simply select multiple occurrences, click the "Bulk Actions" button below the list, and choose your action.
 
@@ -12,4 +12,4 @@ Bulk Actions is the ability to select multiple exceptions or occurrences of a si
 
 ---
 
-[Next > Versioning](versioning) {.text-right}
+[Next > Project Settings](project-settings) {.text-right}

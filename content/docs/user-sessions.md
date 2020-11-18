@@ -75,4 +75,4 @@ If you would like to disable the near real-time session tracking heartbeat that 
 
 ---
 
-[Next > Manual Stacking](manual-stacking) {.text-right}
+[Next > Notifications](notifications) {.text-right}

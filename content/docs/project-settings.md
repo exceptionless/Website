@@ -1,6 +1,6 @@
 ---
 title: Project Settings
-order: 2
+order: 6
 ---
 
 Exceptionless is different from most error monitoring services in that it provides you with real-time updates. That includes updates from your Exceptionless project settings to your client. What does that mean? 
@@ -138,4 +138,4 @@ We have also added some additional known values to support **minimum log levels*
 
 ---
 
-[Next > Filtering & Search](filtering-and-search) {.text-right}
+[Next > Versioning](versioning) {.text-right}

@@ -1,6 +1,6 @@
 ---
 title: API Usage
-order: 15
+order: 17
 ---
 
 Our [API](https://api.exceptionless.io) utilizes Swagger and Swashbuckle to automatically generate, update, and display documentation (which means it works without any work on your end when you are self-hosting). It is a great resource for our users that want to get their hands dirty and use Exceptionless data to roll their own tools, dashboards, etc.

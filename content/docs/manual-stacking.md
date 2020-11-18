@@ -42,4 +42,4 @@ try {
 
 ---
 
-[Next > Default Log Levels](setting-default-log-levels) {.text-right}
+[Next > Filtering & Searching](filtering-and-searching) {.text-right}

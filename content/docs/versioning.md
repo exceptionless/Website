@@ -1,6 +1,6 @@
 ---
 title: Versioning
-order: 8
+order: 7
 ---
 You can mark error stacks fixed and they won't show up or notify you until they regress!
 

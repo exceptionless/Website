@@ -1,6 +1,6 @@
 ---
 title: Filtering & Searching
-order: 5
+order: 4
 ---
 - [Filter by Organization & Project](#filter-by-organization-and-project)
 - [Filter by Time Frame](#filter-by-time-frame)
@@ -129,4 +129,4 @@ All simple data types (`string`, `boolean`, `date`, `number`) that are stored in
 
 ---
 
-[Next > Notifications](notifications) {.text-right}
+[Next > Bulk Actions](bulk-actions) {.text-right}

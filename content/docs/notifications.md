@@ -11,4 +11,4 @@ Once your'e in there, you can select the project you want to edit notifications 
 
 ---
 
-[Next > Bulk Actions](bulk-actions) {.text-right}
+[Next > Log Levels](setting-log-levels) {.text-right}

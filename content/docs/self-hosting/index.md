@@ -1,6 +1,6 @@
 ---
 title: Self Hosting
-order: 17
+order: 19
 ---
 If you would like to test Exceptionless locally, please follow this section.
 
