@@ -16,7 +16,7 @@ Let's take a look at an example.
 POST `/api/v2/auth/login`  
 
 ```
-curl --location --request POST 'https://api.exceptionless.com/api/v2/auth/login' \
+curl --location --request POST "https://api.exceptionless.com/api/v2/auth/login" \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "email": YOUR_EMAIL,

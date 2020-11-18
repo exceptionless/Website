@@ -20,7 +20,7 @@ Messages are arbitrary peices of information that can mean or relate to anything
 POST `api/v2/events`  
 
 ```
-curl --location --request POST 'https://api.exceptionless.com/api/v2/events' \
+curl --location --request POST "https://api.exceptionless.com/api/v2/events" \
 --header 'Authorization: Bearer YOUR_PROJECT_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{ "message": "Exceptionless is amazing!" }'
@@ -36,7 +36,7 @@ Logs will generally have a little more information associated with them than mes
 POST `api/v2/events` 
 
 ```
-curl --location --request POST 'https://api.exceptionless.com/api/v2/events' \
+curl --location --request POST "https://api.exceptionless.com/api/v2/events" \
 --header 'Authorization: Bearer YOUR_PROJECT_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{ "type": "log", "message": "Exceptionless is amazing!", "date":"2030-01-01T12:00:00.0000000-05:00", "@user":{ "identity":"123456789", "name": "Test User" } }'
@@ -51,7 +51,7 @@ Errors will generally be the most comprehensive events you send through to Excep
 POST `api/v2/events` 
 
 ```
-curl --location --request POST 'https://api.exceptionless.com/api/v2/events' \
+curl --location --request POST "https://api.exceptionless.com/api/v2/events" \
 --header 'Authorization: Bearer YOUR_PROJECT_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{ "type": "error", "date":"2030-01-01T12:00:00.0000000-05:00", "@simple_error": { "message": "Simple Exception", "type": "System.Exception", "stack_trace": " at Client.Tests.ExceptionlessClientTests.CanSubmitSimpleException() in ExceptionlessClientTests.cs:line 77" } }'

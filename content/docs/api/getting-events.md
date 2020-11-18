@@ -12,7 +12,7 @@ There may be times where you need to access the events you've sent through to Ex
 GET `api/v2/events/count` 
 
 ```
-curl --location --request GET 'https://api.exceptionless.com/api/v2/events/count' \
+curl --location --request GET "https://api.exceptionless.com/api/v2/events/count" \
 --header 'Authorization: Bearer YOUR_SCOPED_USER_TOKEN'
 ``` 
 
@@ -31,7 +31,7 @@ Remember, you can get your Project ID in the UI when logged in or by [following 
 GET `api/v2/projects/YOUR_PROJECT_ID/events/count` 
 
 ```
-curl --location --request GET 'https://api.exceptionless.com/api/v2/projects/YOUR_PROJECT_ID/events/count' \
+curl --location --request GET "https://api.exceptionless.com/api/v2/projects/YOUR_PROJECT_ID/events/count" \
 --header 'Authorization: Bearer YOUR_PROJECT_TOKEN'
 ```
 

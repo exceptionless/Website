@@ -12,7 +12,7 @@ However, you can programmatically generate these tokens as well. Let's use the [
 GET `api/v2/projects`  
 
 ```
-curl --location --request GET 'https://api.exceptionless.com/api/v2/projects' \
+curl --location --request GET "https://api.exceptionless.com/api/v2/projects" \
 --header 'Authorization: Bearer YOUR_USER_SCOPED_TOKEN'
 ```
 
@@ -43,7 +43,7 @@ You'll need the `id` field from this response to generate your new project-speci
 POST `api/v2/projects/PROJECT_ID`  
 
 ```
-curl --location --request POST 'https://api.exceptionless.com/api/v2/projects/YOUR_PROJECT_ID/tokens' \
+curl --location --request POST "https://api.exceptionless.com/api/v2/projects/YOUR_PROJECT_ID/tokens" \
 --header 'Authorization: Bearer YOUR_USER_SCOPED_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{

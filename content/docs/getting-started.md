@@ -24,7 +24,7 @@ Once you've singed up for an account and created a project, you can start receiv
 POST `api/v2/events` 
 
 ```
-curl --location --request POST 'https://api.exceptionless.com/api/v2/events' \
+curl --location --request POST "https://api.exceptionless.com/api/v2/events" \
 --header 'Authorization: Bearer YOUR_PROJECT_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{ "type": "error", "date":"2030-01-01T12:00:00.0000000-05:00", "@simple_error": { "message": "Simple Exception", "type": "System.Exception", "stack_trace": " at Client.Tests.ExceptionlessClientTests.CanSubmitSimpleException() in ExceptionlessClientTests.cs:line 77" } }'
