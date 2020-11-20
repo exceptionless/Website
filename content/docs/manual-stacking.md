@@ -2,9 +2,9 @@
 title: Manual Stacking
 order: 3
 ---
-We try to group events into intuitive stacks, but sometimes you might want to create your own for organization, reporting, troubleshooting, etc.
+We try to group events into intuitive stacks, but sometimes you might want to create your own for organization, reporting, troubleshooting, etc. A good example use case might be when you are introducing a new feature. The errors or events you send to Exceptionless may ultimately look like or be the same as events linked to other features in your applications. However, you might want to see the events triggered by use of this new feature stacked together. 
 
-We created `SetManualStackingKey` to facilitate this need.
+How might we do this? You can use the `SetManualStackingKey` method to facilitate this need.
 
 ## Creating Custom Stacks
 
