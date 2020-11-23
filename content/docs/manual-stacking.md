@@ -8,7 +8,28 @@ How might we do this? You can use the `SetManualStackingKey` method to facilitat
 
 ## Creating Custom Stacks
 
-In the below examples, we use `SetManualStackingKey` and are naming the custom stack "MyCustomStackingKey".
+In the below examples, we use `SetManualStackingKey` and are naming the custom stack "MyCustomStackingKey" and setting the value to "ANOTHER FEATURE. What this does is it ensures that any events, regarless of the type or reason for the event, will be grouped together. 
+
+![Example manual stacking on dashboard](img/Manual_Key.png)
+
+In the example above, the events grouped under "My stack title" use custom stacking keys to group them together. Let's see how you would do this in practice. 
+
+## cURL Example
+
+```
+curl --location --request POST 'https://api.exceptionless.com/api/v2/events' \
+--header 'Authorization: Bearer XUlBBdgFxAlmCsAZHDFTIacXpzYuZDuqDzzFYMlR' \
+--header 'Content-Type: application/json' \
+--data-raw '{   "type": "error", 
+    "date":"2030-01-01T12:00:00.0000000-05:00", 
+    "title": "NEW FEATURE WORK", 
+    "@simple_error": { 
+        "message": "Weird Exception", 
+        "type": "System.Exception", 
+        "stack_trace": " at Client.Tests.ExceptionlessClientTests.CanSubmitSimpleException() in ExceptionlessClientTests cs:line 99" 
+    },
+    "@stack": { "title": "My stack title", "signature_data": { "mystackingkey": "ANOTHER FEATURE" }}
+```
 
 ## C# Example
 
@@ -39,6 +60,14 @@ try {
   client.createException(error).setManualStackingKey('MyCustomStackingKey').submit();
 }
 ```
+
+## When Should You Use This
+
+Custom, manual stacking is certainly an advanced feature. We have tried to make your experience fantastic without needing this functionality, but sometimes, there's no avoiding it. So, let's think about some times when you might want to use manual stacking: 
+
+* Critical Functionality - if you have a piece of your app that you need see all errors for quickly, manual stacking would be perfect. 
+* Logs - we tend to think of stacks as errors, but they don't have to be, and you can easily use manual stacking to group logs for other purposes.  
+* Notifications - manual stacking makes it easy to set up [notifications](notifications) for errors or events that happen from a specific source that you define. 
 
 ---
 
