@@ -24,7 +24,3 @@ Deserialization wasn't working properly with binary serializers, but the issue h
 <h2 style="text-align: center;">
   <a href="https://youtu.be/bqhdaFdgr4M">WATCH NOW</a>
 </h2>
-
-<p style="text-align: center;">
-  <a href="/category/weekly-updates/">Watch more Live Code Demos</a>
-</p>

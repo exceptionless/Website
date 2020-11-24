@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
   const markdownItOptions = {
     html: true,
     breaks: true,
-    linkify: true,
+    linkify: false,
     replaceLink: function (link, env) {
       if (link.startsWith('http://')
         || link.startsWith('https://')

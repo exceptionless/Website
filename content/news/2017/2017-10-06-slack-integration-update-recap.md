@@ -11,7 +11,7 @@ Thanks to everyone that has provided feedback, bug reports, and suggestions. If 
 
 Along the way, we have run into **incoming webhook issues**, some **usability/setup workflow updates** that needed to be made to make the process more usable, and, among other things, **incorrectly created action URLs** that weren't being handled correctly with rate limiting.
 
-We'll cover **setting up Slack integration with Exceptionless** below, but you can also review the [original post](/exceptionless-slack-integration/) and [weekly update video](https://youtu.be/U9GbYqWK1ik), the [first bug fix update](/slack-integration-updates-bug-fixes-weekly-update-5222017/) and [video](https://youtu.be/WtHj9e4M9zU), and the most recent [Slack integration improvement update](/improvements-exceptionless-slack-integration/) and [video](https://youtu.be/k4CMOk5lpVw).
+We'll cover **setting up Slack integration with Exceptionless** below, but you can also review the [original post](/news/2017/2017-06-05-exceptionless-slack-integration/) and [weekly update video](https://youtu.be/U9GbYqWK1ik), the [first bug fix update](/news/2017/2017-06-20-slack-integration-updates-bug-fixes-weekly-update-5222017) and [video](https://youtu.be/WtHj9e4M9zU), and the most recent [Slack integration improvement update](/news/2017/2017-06-26-improvements-exceptionless-slack-integration) and [video](https://youtu.be/k4CMOk5lpVw).
 
 ## Setting up Slack Notifications for Exceptionless
 
@@ -25,11 +25,7 @@ Once logged in, you will need to select the channel you want Exceptionless Notif
 
 Once authorized, you can then configure the different notification settings by going back to the Exceptionless app and into the project's integrations tab again.
 
-[![](/k-settings.png)](/assets/img/exceptionless-slack-settings.png)/
-
 Once integrated and configured, notifications will look something like the below screenshot, with the message, type of event, stack trace, links to actions, etc.
-
-[![Exceptionless Slack notification](/k-example.jpg)](/assets/img/exceptionless-slack-example.jpg)/
 
 We're excited to keep improving notifications, and would love for you guys to continue testing and providing feedback! What else would you like to see happening with notifications? What are we doing right, and wrong?
 

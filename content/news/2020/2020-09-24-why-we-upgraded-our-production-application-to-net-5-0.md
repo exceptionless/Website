@@ -11,7 +11,7 @@ author: Justin Hunter
 
 ---
 
-For anyone who has built an application, you've probably built it on some library or framework that changes over time. To keep up, you have to upgrade your application. However, there are varying schools of thought around when you should upgrade. At [Exceptionless](https://exceptionless/), we like to be on the bleeding edge. As an open-source company, we feel a responsibility to the community to know and understand the open-source tools we use. As such, we have already upgraded Exceptionless to use .NET 5.0.
+For anyone who has built an application, you've probably built it on some library or framework that changes over time. To keep up, you have to upgrade your application. However, there are varying schools of thought around when you should upgrade. At [Exceptionless](https://exceptionless.com/), we like to be on the bleeding edge. As an open-source company, we feel a responsibility to the community to know and understand the open-source tools we use. As such, we have already upgraded Exceptionless to use .NET 5.0.
 
 To give you a little background, .NET 5.0 was [introduced in May of 2019](https://devblogs.microsoft.com/dotnet/introducing-net-5/). The announcement was a big one as Microsoft chose to drop the .NET Core distinction. Going forward, we will just see cross-platform support in the form of ".NET X.X". The first release candidate for .NET 5.0 was [announced September 13, 2020](https://devblogs.microsoft.com/dotnet/announcing-net-5-0-rc-1/). We chose to upgrade and begin using .NET 5.0 immediately. That decision was driven by Microsoft's commitment to supporting production usage of the rc1 release. And as it turned out, the upgrade process was not too painful at all.
 

@@ -5,7 +5,7 @@ date: 2017-04-25
 tags: [ ".NET"]
 ---
 
-Last week we [announced release notes](/exceptionless-net-client-and-core-releases-bugs-usability-performance-self-hosting/) for Exceptionless 4.0.2, Exceptionless.NET 4.0.3, and Exceptionless.UI 2.6.2. In our weekly update this week, we review some of those changes/updates, Foundatio changes, and more. Check it out!<!--more-->
+Last week we [announced release notes](/news/2017/2017-04-21-exceptionless-net-client-and-core-releases-bugs-usability-performance-self-hosting/) for Exceptionless 4.0.2, Exceptionless.NET 4.0.3, and Exceptionless.UI 2.6.2. In our weekly update this week, we review some of those changes/updates, Foundatio changes, and more. Check it out!<!--more-->
 
 ## Exceptionless Live Stream Update 4/13/17
 
@@ -20,7 +20,7 @@ For [Foundatio](https://github.com/exceptionless/Foundatio), we updated the Azur
 
 ### Changes to Exceptionless.NET
 
-For the .NET client, we merged in changes to csproj and released version 4.0.3. Make sure to [check out the release notes](/exceptionless-net-client-and-core-releases-bugs-usability-performance-self-hosting/) and upgrade!
+For the .NET client, we merged in changes to csproj and released version 4.0.3. Make sure to [check out the release notes](/news/2017/2017-04-21-exceptionless-net-client-and-core-releases-bugs-usability-performance-self-hosting/) and upgrade!
 
 ### Updates to Exceptionless.UI
 

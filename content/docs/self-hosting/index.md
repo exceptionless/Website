@@ -2,72 +2,15 @@
 title: Self Hosting
 order: 19
 ---
-If you would like to test Exceptionless locally, please follow this section.
 
-## Requirements
+Exceptionless can be self-hosted by either manually running the source code for the server and the frontend or by using our simply Docker image. 
 
-* [Docker](https://www.docker.com)
+You can also use Kubernetes while self-hosting Exceptionless. We'll cover both topics in the following pages. 
 
-## Testing Setup
-
-Runs Exceptionless without persisting data between runs. Good for checking out Exceptionless for the first time and testing.
-
-```bash
-docker run --rm -it -p 5000:80 exceptionless/exceptionless:latest
-```
-
-## Simple Setup
-
-Runs a very simple non-production setup for Exceptionless with data persisted between runs in a sub-directory of the current directory called `esdata`. It uses an embedded single node Elasticsearch cluster and does not have backups. It is recommended that you create your own Elasticsearch cluster for production deployments of Exceptionless.
-
-On Linux:
-
-```bash
-docker run --rm -it -p 5000:80 \
-    -v $(pwd)/esdata:/usr/share/elasticsearch/data \
-    exceptionless/exceptionless:latest
-```
-
-On PowerShell:
-
-```powershell
-docker run --rm -it -p 5000:80 `
-    -v ${PWD}/esdata:/usr/share/elasticsearch/data `
-    exceptionless/exceptionless:latest
-```
-
-## Simple Setup w/SSL Support and SMTP
-
-Runs a very simple non-production setup for Exceptionless with data persisted between runs in a sub-directory of the current directory called `esdata`. It uses an embedded single node Elasticsearch cluster and does not have backups. It is recommended that you create your own Elasticsearch cluster for production deployments of Exceptionless.
-
-On Linux:
-
-```bash
-docker run --rm -it -p 5000:80 -p 5001:443 \
-    -e EX_ConnectionStrings__Email=smtps://user:password@smtp.host.com:587 \
-    -e ASPNETCORE_URLS="https://+;http://+" \
-    -e ASPNETCORE_HTTPS_PORT=5001 \
-    -e ASPNETCORE_Kestrel__Certificates__Default__Password="password" \
-    -e ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx \
-    -v ~/.aspnet/https:/https/ \
-    -v $(PWD)/esdata:/usr/share/elasticsearch/data \
-    exceptionless/exceptionless:latest
-```
-
-On PowerShell:
-
-```powershell
-docker run --rm -it -p 5000:80 -p 5001:443 `
-    -e EX_ConnectionStrings__Email=smtps://user:password@smtp.host.com:587 `
-    -e ASPNETCORE_URLS="https://+;http://+" `
-    -e ASPNETCORE_HTTPS_PORT=5001 `
-    -e ASPNETCORE_Kestrel__Certificates__Default__Password="password" `
-    -e ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx `
-    -v ~/.aspnet/https:/https/ `
-    -v ${PWD}/esdata:/usr/share/elasticsearch/data `
-    exceptionless/exceptionless:latest
-```
+* [Docker](docker) 
+* [Kubernetes](kubernetes) 
+* [Upgrading](upgrading-self-hosted-instance)
 
 ---
 
-[Next > Kubernetes](kubernetes) {.text-right}
+[Next > Docker](docker) {.text-right}

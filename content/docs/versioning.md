@@ -14,7 +14,7 @@ An application version will try and be resolved if possible, but it's a good ide
 
 ## Choose your Client
 
-* [.NET](clients/dotnet/client-configuration.md)
+* [.NET](clients/dotnet/)
 * [JavaScript / Node.js](clients/javascript/client-configuration.md)
 
 ## What does mark fixed do?

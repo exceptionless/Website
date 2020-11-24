@@ -1,5 +1,6 @@
 ---
 title: Upgrading
+order: 22
 ---
 **Please ensure that you have created backups before upgrading!**
 

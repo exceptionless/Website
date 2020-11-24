@@ -15,7 +15,7 @@ Watch the video above for an explanation of the integration, and see below on ho
 
 First, go into your project's settings in the Exceptionless app and click on the Integrations tab.
 
-[![](/assets/img/news/exceptionless-slack-setup.png)](/assets/exceptionless-slack-setup.png)
+![](/assets/img/news/exceptionless-slack-setup.png)(/assets/img/news/exceptionless-slack-setup.png)
 
 Then, click on "Add Slack Notifications" and log in to your slack team.
 
@@ -23,11 +23,11 @@ Once logged in, you will need to select the channel you want Exceptionless Notif
 
 Once authorized, you can then configure the different notification settings by going back to the Exceptionless app and into the project's integrations tab again.
 
-[![](/assets/img/news/exceptionless-slack-settings.png)](/assets/exceptionless-slack-settings.png)
+![](/assets/img/news/exceptionless-slack-settings.png)(/assets/exceptionless-slack-settings.png)
 
 Once integrated and configured, notifications will look something like the below screenshot, with the message, type of event, stack trace, links to actions, etc.
 
-[![Exceptionless Slack notification](/assets/img/news/exceptionless-slack-example.jpg)](/assets/exceptionless-slack-example.jpg)
+![Exceptionless Slack notification](/assets/img/news/exceptionless-slack-example.jpg)(/assets/exceptionless-slack-example.jpg)
 
 We're excited to keep improving notifications, and would love for you guys to test this out for us.
 

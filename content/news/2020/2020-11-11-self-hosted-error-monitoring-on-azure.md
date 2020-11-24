@@ -178,3 +178,5 @@ Now, we need to figure out how to access our instance from the outside world. It
 
 If you remember, we didn't really lock down our ports when setting up our VM. We're going to make sure we can access port 5000 and lock everything else down. In reality, you'll probably want to put this all behind Nginx and only allow access to the port from specific IP addresses, but that's beyond the scope of this tutorial. 
 
+
+

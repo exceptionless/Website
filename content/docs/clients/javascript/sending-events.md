@@ -84,4 +84,4 @@ try {
 
 ---  
 
-[Next > Self-Hosted Options](self-hosted-options) {.text-right}
+[Next > Troubleshooting](troubleshooting) {.text-right}

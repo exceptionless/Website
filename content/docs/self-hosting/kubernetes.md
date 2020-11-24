@@ -1,5 +1,6 @@
 ---
 title: Kubernetes
+order: 21
 ---
 Please follow this section to set up Exceptionless in a Kubernetes environment. Please note this section is a work in progress, any contributions is greatly appreciated.
 
@@ -77,11 +78,11 @@ Please note the following:
 
 ## Upgrading
 
-Please see the [Upgrading](Upgrading) for details on how to upgrade to the current version.
+Please see the [Upgrading](upgrading-self-hosted-instance) for details on how to upgrade to the current version.
 
 ## Troubleshooting
 
-If you are having issues please try the following to resolve the issues. If this doesn't work please open an issue or contact us on [slack](https://slack.exceptionless.com).
+If you are having issues please try the following to resolve the issues. If this doesn't work please open an issue or contact us on [Discord](https://discord.gg/xv3sjurVwA).
 
 * Make sure you are running the latest release by visiting our [releases page](https://github.com/exceptionless/Exceptionless/releases). You can verify the version you are currently running by accessing the status page [`http://localhost/api/v2/about`](http://localhost/api/v2/about).
 * You can also enable detailed logging by updating the `Serilog__MinimumLevel__Default` config map value to `Debug`.
