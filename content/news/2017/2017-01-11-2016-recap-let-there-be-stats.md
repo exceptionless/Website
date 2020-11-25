@@ -43,25 +43,26 @@ We were curious, so we thought we would put together some stats for 2016, along 
 
 Judging by the traffic to these posts and updates, they're all worth a read. Check them out!
 
-* [Sending Log Messages to Exceptionless](/sending-log-messages-to-exceptionless/)
-* [A Better Approach to Running Azure WebJobs](/better-approach-running-azure-webjobs/)
-* [Simple App Deployment with Azure Continuous Deployment and GitHub](/simple-app-deployment-azure-continuous-deployment-github/)
-* [Exceptionless.NET 4.0 - .NET Core and ASP.NET Core Support!](/exceptionless-4-0-net-core-asp-net-core-support/)
-* [Exceptionless API Usage and Overview](/exceptionless-api-usage-and-overview/)
+* [Sending Log Messages to Exceptionless](/news/2015/2015-03-31-sending-log-messages-to-exceptionless)
+* [A Better Approach to Running Azure WebJobs](/news/2015/2015-12-08-better-approach-running-azure-webjobs)
+* [Simple App Deployment with Azure Continuous Deployment and GitHub](/news/2016/2016-03-16-simple-app-deployment-azure-continuous-deployment-github/)
+* [Exceptionless.NET 4.0 - .NET Core and ASP.NET Core Support!](/news/2016/2016-06-28-exceptionless-4-0-net-core-asp-net-core-support/)
+* [Exceptionless API Usage and Overview](/news/2015/2015-05-06-exceptionless-api-usage-and-overview/)
 
 ## Notable Changes / Milestones
 
 ### Server License Changes
 
-We changed the server licensing to use the Apache license. Now, every Exceptionless project is under the Apache license and there should be no more confusion on how it's licensed. [Read more here.](/new-releases-for-all-the-codes-exceptionless-3-2/)
+We changed the server licensing to use the Apache license. Now, every Exceptionless project is under the Apache license and there should be no more confusion on how it's licensed. [Read more here.](/news/2016/2016-01-27-new-releases-for-all-the-codes-exceptionless-3-2/)
+    
 
 ### Session Tracking & Management
 
-The ability to track and automatically manage a users session was added, giving you visibility into how long and what a user did while they were using your product. This also answers the question, "what did my users do leading up to this exception?" [Read more here.](/track-view-user-session-data-exceptionless/)
+The ability to track and automatically manage a users session was added, giving you visibility into how long and what a user did while they were using your product. This also answers the question, "what did my users do leading up to this exception?" [Read more here.](/news/2016/2016-02-01-track-view-user-session-data-exceptionless/)
 
 ### Fixed by Version
 
-In 2016, we also added the ability to mark an event as fixed in a specific version of your app. [Read more here.](/set-application-version-for-improved-regression-notifications-and-stacking/)
+In 2016, we also added the ability to mark an event as fixed in a specific version of your app. [Read more here.](/news/2016/2016-08-08-set-application-version-for-improved-regression-notifications-and-stacking/)
 
 ### Performance & Reliability
 
@@ -91,12 +92,13 @@ We open sourced two major new libraries this year:
 
 ### Other Noteworthy Enhancements
 
-* Added [Geo location features](/add-reverse-geocoding-to-your-app/)
+* Added [Geo location features](/news/2016/2016-02-10-add-reverse-geocoding-to-your-app/)
+    
 * Added [Keyboard shortcuts](/exceptionless-keyboard-shortcuts/)
-* The [API is now 100% Async](/introducing-foundatio-3-0-async-efficiency/)
+* The [API is now 100% Async](/news/2015/2015-10-22-introducing-foundatio-3-0-async-efficiency/)
 * Had third-party security review conducted
 * Made it even easier to self host.
-* Massive [improvements to Foundatio](/foundatio-featured-net-blog-version-4-0-release/) (100% Async, new implementations)
+* Massive [improvements to Foundatio](/news/2016/2016-04-07-foundatio-featured-net-blog-version-4-0-release/) (100% Async, new implementations)
 
 ## Onward to 2017 - Stay Tuned for a Roadmap!
 

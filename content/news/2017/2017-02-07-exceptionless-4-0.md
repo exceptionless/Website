@@ -47,7 +47,7 @@ Also, please take a look at the [change log](https://github.com/exceptionless/Ex
 
 ## Always Improving
 
-We’re always striving to improve the efficiency of Exceptionless and all of our projects. If you see any room for improvement or have any comments when using anything from us, please send us an in-app message, [submit a GitHub issue](https://github.com/exceptionless/Exceptionless/issues) or [contact us](/contact/) on the website.
+We’re always striving to improve the efficiency of Exceptionless and all of our projects. If you see any room for improvement or have any comments when using anything from us, please send us an in-app message, [submit a GitHub issue](https://github.com/exceptionless/Exceptionless/issues) or [contact us](/) on the website.
 
 ## And Lastly, Thanks!
 

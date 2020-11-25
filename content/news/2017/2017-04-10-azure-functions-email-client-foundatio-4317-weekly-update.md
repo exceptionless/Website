@@ -4,7 +4,7 @@ title: Azure Functions, Email Client, Foundatio - 4/3/17 Weekly Update
 date: 2017-04-10
 ---
 
-Q2 2017 is here already, whether we are ready for it or not! [In March, we released several new updates to Exceptionless and Foundatio](/march-update-rollup-new-releases-updates-bug-fixes/), so our first update in April isn't crazy, but here we go!<!--more-->
+Q2 2017 is here already, whether we are ready for it or not! [In March, we released several new updates to Exceptionless and Foundatio](/news/2017/2017-04-04-march-update-rollup-new-releases-updates-bug-fixes/), so our first update in April isn't crazy, but here we go!<!--more-->
 
 ## Exceptionless Updates
 
@@ -18,7 +18,3 @@ Q2 2017 is here already, whether we are ready for it or not! [In March, we relea
 <h2 style="text-align: center;">
   <a href="https://youtu.be/ShnXh4Mgx4U?list=PLGHP7IVwFs_81fZTMgF7Dm5e0Ax4YvW_V">WATCH NOW</a>
 </h2>
-
-<p style="text-align: center;">
-  <a href="/category/live-coding/">Watch more Live Code Demos</a>
-</p>

@@ -51,7 +51,7 @@ If you do not want the configuration settings to update when idle, you can turn 
 
 ## The Main Event: Client Configuration
 
-[![client-configuration](/assets/img/news/client-configuration-300x143.png)](/assets/client-configuration.png)
+![client-configuration](/assets/img/news/client-configuration-300x143.png)
 
 Exceptionless client configurations are a dictionary of key value pairs that can be used to control the behavior of your app in real time by doing things like controlling data exclusions, protecting sensitive data, enabling and disable features, or disabling certain types of events (`error`, `usage`, `log`, `404`, or `session`).
 
@@ -102,7 +102,7 @@ For more details on client configuration, check out the [Client Configuration Pr
 
 ### General
 
-[![general](/assets/img/news/general-300x132.png)](/assets/general.png)
+![general](/assets/img/news/general-300x132.png)
 
 If you go to Admin > Projects in Exceptionless, you can choose the project you would like to edit the settings for. Each project can have unique settings.
 
@@ -110,13 +110,13 @@ The default tab is "General," which simply houses the project name and attached 
 
 ### API Keys
 
-[![exceptionless api keys](/assets/img/news/api-keys-300x127.png)](/assets/api-keys.png)
+![exceptionless api keys](/assets/img/news/api-keys-300x127.png)
 
 This tab is where you can generate an API key for your project. Again, pretty self explanatory. Hit "New API Key" and one gets generated. For more details on API usage, check out the [API Usage documentation](https://github.com/exceptionless/Exceptionless/wiki/API-Usage) on GitHub.
 
 ### Settings
 
-[![exceptionless project settings](/assets/img/news/settings-300x281.png)](/assets/settings.png)
+![exceptionless project settings](/assets/img/news/settings-300x281.png)
 
 This is where you can set data exclusions, customize error stacking, and build in some spam detection to your project.
 
@@ -146,7 +146,7 @@ Along with the comma delimited list of user agents to ignore, you can also tick 
 
 #### Integrations
 
-[![exceptionless integrations](/assets/img/news/integrations-300x143.png)](/assets/integrations.png)
+![exceptionless integrations](/assets/img/news/integrations-300x143.png)
 
 Integrations with tools like Slack, Hipchat, JIRA, Basecamp, and others are very popular and can add a level of automated notifications, etc, to your workflow. So, on the integrations tab of your project's configuration you can create web hooks to integrate with your service or others as mentioned. Each web hook has a URL that it can call, and options for when it should be called. When a selected event occurs, a POST request is submitted with either event or stack data in JSON format. For more details and sample data, visit the [Exceptionless integrations documentation](https://github.com/exceptionless/Exceptionless/wiki/Integrations).
 

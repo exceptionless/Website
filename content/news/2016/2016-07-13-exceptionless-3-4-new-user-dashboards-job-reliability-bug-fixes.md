@@ -3,7 +3,9 @@ id: 14571
 title: Exceptionless 3.4 - New User Dashboards, Job Reliability, and Bug Fixes
 date: 2016-07-13
 ---
-[![Exceptionless 3.4](/assets/img/news/exceptionless-3-4-header.png)](/assets/exceptionless-3-4-header.png)The latest Exceptionless release has several additions we think most of our users will find helpful. We sat down and worked on the UI, fixed some bugs, and spend a considerable amount of time improving reliability and efficiency of some of the primary pieces of the app.
+![Exceptionless 3.4](/assets/img/news/exceptionless-3-4-header.png)(/assets/exceptionless-3-4-header.png)
+
+The latest Exceptionless release has several additions we think most of our users will find helpful. We sat down and worked on the UI, fixed some bugs, and spend a considerable amount of time improving reliability and efficiency of some of the primary pieces of the app.
 
 If you're a self hoster, you'll need to [upgrade your existing install](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting#upgrading), but if you're hosting with us there is no action required on your part to experiences the Exceptionless 3.4.
 
@@ -39,7 +41,7 @@ We made several reliability and performance enhancements to queue and job proces
 
 ### Heartbeat API Endpoints
 
-Previously we had [worked on making heartbeat events efficient](/session-heartbeats-no-longer-count-towards-plan-limits/) so we didn't have to count them toward event quotas, and with this release we've added new API Endpoints that allow clients to submit those heartbeats cheaply.
+Previously we had [worked on making heartbeat events efficient](/news/2016/2016-05-26-session-heartbeats-no-longer-count-towards-plan-limits/) so we didn't have to count them toward event quotas, and with this release we've added new API Endpoints that allow clients to submit those heartbeats cheaply.
 
 ### Active Directory Authentication
 

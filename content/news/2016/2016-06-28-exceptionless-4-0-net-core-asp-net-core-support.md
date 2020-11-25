@@ -9,7 +9,7 @@ We've added .NET Core, ASP.NET Core, and .NET Standard 1.2+ support.
 
 We know many of you have been waiting for this, and it's been a long time coming, but we sat down, put in the hours, and made it happen for you guys!
 
-[![Exceptionless on Mac OSX](/assets/img/news/Screen-Shot-2016-06-28-at-3.08.17-PM.png)](/assets/Screen-Shot-2016-06-28-at-3.08.17-PM.png)
+![Exceptionless on Mac OSX](/assets/img/news/Screen-Shot-2016-06-28-at-3.08.17-PM.png)(/assets/Screen-Shot-2016-06-28-at-3.08.17-PM.png)
 
 <!--more-->The NuGet package now supports .NET Standard 1.2+, PCL Profile 151, and .NET 4.5.
 

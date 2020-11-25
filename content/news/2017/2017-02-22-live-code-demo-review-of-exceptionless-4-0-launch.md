@@ -6,7 +6,7 @@ tags: [ ".NET"]
 ---
 [![](/assets/img/news/170221-live-code-review-header-1024x538.jpg)](https://www.liveedu.tv/niemyjski/videos/bG9BO-exceptionless-weekly-demo-2-6-17-3)
 
-During the [Exceptionless 4.0 Release](/exceptionless-4-0/), we covered a lot of enhancements and changes. In this week's Live Code Demo, Blake reviews the 4.0 release notes and talks through other tweaks and post-launch cleanup.<!--more-->
+During the [Exceptionless 4.0 Release](https://github.com/exceptionless/Exceptionless/releases/tag/v4.0.0), we covered a lot of enhancements and changes. In this week's Live Code Demo, Blake reviews the 4.0 release notes and talks through other tweaks and post-launch cleanup.<!--more-->
 
 ## In this Live Code Demo Episode...
 

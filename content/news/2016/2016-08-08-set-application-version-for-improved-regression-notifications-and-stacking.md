@@ -3,7 +3,7 @@ id: 14636
 title: Set Application Version for Improved Regression Notifications and Stacking
 date: 2016-08-08
 ---
-[![versioning](/assets/img/news/versioning-300x163.png)](/assets/versioning.png)Do you get annoyed and overwhelmed by event and error notifications?
+![versioning](/assets/img/news/versioning-300x163.png)(/assets/versioning.png)Do you get annoyed and overwhelmed by event and error notifications?
 
 You probably have more than one version of your application running, and often **older versions of your app may still be triggering events** that have been fixed in newer versions.
 
@@ -34,7 +34,7 @@ exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
 
 Great! Now, when you mark an error stack as fixed and enter the version that you fixed it in, that event stack will have a `Fixed In [Version]` tag and will only regress if it occurs again in a later version of your app. If it does regress, the stack then gets the `REGRESSED` tag.<figure id="attachment_14647" class="thumbnail wp-caption aligncenter" style="width: 300px">
 
-[![Regressed](/assets/img/news/regressed-300x91.jpg)](/assets/regressed.jpg)<figcaption class="caption wp-caption-text">Regressed</figcaption></figure>
+![Regressed](/assets/img/news/regressed-300x91.jpg)(/assets/regressed.jpg)<figcaption class="caption wp-caption-text">Regressed</figcaption></figure>
 
 If you would like to view fixed events, you can always use the `*` wildcard or `fixed:true` in search.
 
