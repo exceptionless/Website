@@ -19,7 +19,7 @@ These tedious and error-prone tasks that had to be completed just to get a job t
 
 <!--more-->
 
-**In Exceptionless 3.1** we focused on refining and improving jobs. To do so, we created a <a href="https://github.com/exceptionless/Exceptionless/tree/master/Source/Jobs" target="_blank" rel="noopener">new console application for each job</a> and specified settings in the code versus <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Jobs/EventPost/Program.cs#L16-L22" target="_blank" rel="noopener">error prone command line options as shown here</a>.
+**In Exceptionless 3.1** we focused on refining and improving jobs. To do so, we created a <a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Jobs" target="_blank" rel="noopener">new console application for each job</a> and specified settings in the code versus <a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Jobs/EventPostsJob.cs#L16-L22" target="_blank" rel="noopener">error prone command line options as shown here</a>.
 
 Now, with [Foundatio](/introducing-foundatio-3-0-async-efficiency/), our open source app building block solution used in Exceptionless, you just define a new [Job](https://github.com/exceptionless/Foundatio#jobs) that runs (via the run method) and you can use the [Foundatio Jobs API](https://github.com/exceptionless/Foundatio#jobs) to run the job in process, out of process, continuous, or one time without changing the implementation.
 
@@ -27,7 +27,7 @@ This new approach also gave us a great deployment strategy, for free. Simply cop
 
 ### Jobs (processes) running in Azure as an Azure web job
 
-[![Exceptionless Jobs and Processes](/assets/img/news/Jobs-1024x670.jpg)](/assets/Jobs.jpg)
+![Exceptionless Jobs and Processes](/assets/img/news/Jobs-1024x670.jpg)
 
 ### How you can implement a better Azure WebJob
 

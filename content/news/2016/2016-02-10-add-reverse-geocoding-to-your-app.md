@@ -115,9 +115,9 @@ Then, just call the `ResolveIPAsync` method with an IP address to look up the lo
 var location = await ResolveIPAsync("YOUR_IP_ADDRESS_HERE");
 ```
 
-Feel free to take a look at `<a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Geo/MaxMindGeoIPService.cs" target="_blank">MaxMindGeoIPService</a>` for a complete sample that includes logging, error handling, caching of the results, and IP validation for higher lookup throughput. We’ve spent the time writing tests and optimizing it to ensure **its rock solid and works great**. So feel free to grab our <a href="https://github.com/exceptionless/Exceptionless/tree/master/Source/Core/Geo" target="_blank">IGeoIPService interfaces and models</a> and use them in your app.
+Feel free to take a look at `<a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Geo/MaxMindGeoIPService.cs" target="_blank">MaxMindGeoIPService</a>` for a complete sample that includes logging, error handling, caching of the results, and IP validation for higher lookup throughput. We’ve spent the time writing tests and optimizing it to ensure **its rock solid and works great**. So feel free to grab our IGeoIPService interfaces and models and use them in your app.
 
-**It’s worth noting** that in our app, we use the IP address provided in the event. This could come from a server request or the actual machine's IP address. We also fall back to the <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/Controllers/EventController.cs#L617" target="_blank">API consumer's client IP address</a>.
+**It’s worth noting** that in our app, we use the IP address provided in the event. This could come from a server request or the actual machine's IP address. We also fall back to the API consumer's client IP address.
 
 ### Looking up a Physical Address from Geo Coordinates
 
@@ -125,7 +125,7 @@ As stated previously, every event submitted to Exceptionless has a geo property 
 
 After we decided on the library, we evaluated a few API/lookup services based on cost and accuracy. We ended up going with the <a href="https://developers.google.com/maps/documentation/geocoding/usage-limits" target="_blank">Google Maps GeoCoding API</a>. They offer 2500 free requests per day and are one of the most used location services in the world.
 
-Next, let’s write the code that will look up our location from a latitude and longitude. You can find our <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Insulation/Geo/GoogleGeocodeService.cs" target="_blank">complete example here</a>.
+Next, let’s write the code that will look up our location from a latitude and longitude. You can find our complete example here.
 
 Remember to get your free api key from Google before running the code below.
 

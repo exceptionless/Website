@@ -5,7 +5,7 @@ date: 2015-12-02
 ---
 ![Exceptionless Logo](/assets/img/news/exceptionless-logoBLK.png)The .NET Exceptionless client has received **several improvements** and **some bug fixes** in version 3.2. Details below!
 
-A special shout-out to <a href="https://github.com/airwareic" target="_blank">@airwareic</a>, <a href="https://github.com/srijken" target="_blank">@srijken</a>, <a href="https://github.com/xbelt" target="_blank">@xbelt</a>, and <a href="https://github.com/mgnslndh" target="_blank">@mgnslndh</a> for contributing and helping make this release happen. **You guys rock!**
+A special shout-out to @airwareic, <a href="https://github.com/srijken" target="_blank">@srijken</a>, <a href="https://github.com/xbelt" target="_blank">@xbelt</a>, and <a href="https://github.com/mgnslndh" target="_blank">@mgnslndh</a> for contributing and helping make this release happen. **You guys rock!**
 
 **Please download and update to the latest** <a href="https://github.com/exceptionless/Exceptionless.Net/releases/tag/v3.2.0" target="_blank">source here</a>, and you can view the full <a href="/why/" target="_blank">change log here</a>.<!--more-->
 

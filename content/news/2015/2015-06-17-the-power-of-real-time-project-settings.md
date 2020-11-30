@@ -21,7 +21,7 @@ Let's take a look at a JavaScript and .NET client usage example to get your rol
 
 ## Adding a New Client Configuration Value
 
-[![Exceptionless Client Configuration Settings](/assets/img/news/project-settings-page-300x209.png)](/assets/project-settings-page.png)
+![Exceptionless Client Configuration Settings](/assets/img/news/project-settings-page-300x209.png)
 
 Before we get started with more of an explanation and an example, we need to add a new key and value. To do so, we go to `Admin > Projects` in our Exceptionless Dashboard, select the project we are working on, then go to the "Settings" tab.
 
@@ -78,7 +78,7 @@ Above, we used the `GetBoolean` helper method. In the .NET client, we have a few
 
 ### JavaScript Example
 
-The same functionality above can also be achieved using our new [JavaScript Client](/javascript-node-js-client-v1-release-notes/).
+The same functionality above can also be achieved using our new [JavaScript Client](/news/2015/2015-06-09-javascript-node-js-client-v1-release-notes).
 
 ```js
 exceptionless.ExceptionlessClient.default.config.addPlugin('Conditionally cancel log submission', 100, function (context, next) {

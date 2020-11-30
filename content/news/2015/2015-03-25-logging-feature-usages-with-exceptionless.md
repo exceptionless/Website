@@ -84,19 +84,19 @@ You can also submit a feature usage by posting JSON to our API. See details in o
 
 Feature usage logging makes it very easy to see how often a feature, such as logging into an account, is used over time. If usage of one type of login, for instances, is never used, there might be an issue or you could consider removing it (less code debt). Or, if one is used the majority of the time, maybe it should be first in the list. There are almost unlimited ways you can use feature usage data to improve user experience.
 
-[![Exceptionless Feature Usage Dashboard](/assets/img/news/feature-usage-dashboard-1024x603.png)](/assets/feature-usage-dashboard.png)
+![Exceptionless Feature Usage Dashboard](/assets/img/news/feature-usage-dashboard-1024x603.png)
 
 If we click on the stack for the signup feature, it shows the tag list of the providers that have been used to signup (GitHub and Google, in this instance).
 
-[![Exceptionless Feature Usage Stack](/assets/img/news/feature-usage-stack-tags.png)](/assets/feature-usage-stack-tags.png)
+![Exceptionless Feature Usage Stack](/assets/img/news/feature-usage-stack-tags.png)
 
 You can even go further and filter by a tag to see exactly how people are logging into your system using the search filter. Example: "tag:GitHub"
 
-[![Exceptionless Feature Usage Filtering Searching](/assets/img/news/feature-usage-tag-github.png)](/assets/feature-usage-tag-github.png)
+![Exceptionless Feature Usage Filtering Searching](/assets/img/news/feature-usage-tag-github.png)
 
 Regarding the SetUserIdentity example above, we can see that user information being appended to a feature usage occurrence if we visit the "Search" feature and view an occurrence.
 
-[![Exceptionless Feature Usage User Info](/assets/img/news/feature-usage-searching-userID.png)](/assets/feature-usage-searching-userID.png)
+![Exceptionless Feature Usage User Info](/assets/img/news/feature-usage-searching-userID.png)
 
 ## Cool Stuff, Right?
 

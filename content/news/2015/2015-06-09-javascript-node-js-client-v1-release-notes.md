@@ -10,7 +10,7 @@ tags: [ "node.js"]
 
 * Client supports **JavaScript and Node** (Works everywhere)
 * Send your errors, logs or feature usages to your <a href="https://be.exceptionless.io/" target="_blank">Exceptionless dashboard</a>
-* **Supports various module formats** such as <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="_blank">es6</a> (<a href="https://github.com/systemjs/systemjs" target="_blank">SystemJS</a>/<a href="http://jspm.io/" target="_blank">jspm</a>), <a href="https://github.com/umdjs/umd" target="_blank">UMD</a>, <a href="http://requirejs.org/" target="_blank">RequireJS</a>, <a href="http://www.commonjs.org/" target="_blank">CommonJS</a>, or global
+* **Supports various module formats** such as <a href="http://www.ecma-international.org/ecma-262/6.0/" target="_blank">es6</a> (<a href="https://github.com/systemjs/systemjs" target="_blank">SystemJS</a>/<a href="http://jspm.io/" target="_blank">jspm</a>), <a href="https://github.com/umdjs/umd" target="_blank">UMD</a>, <a href="http://requirejs.org/" target="_blank">RequireJS</a>, <a href="http://www.commonjs.org/" target="_blank">CommonJS</a>, or global
 * We built the Exceptionless JavaScript/Nodes.js Client with the past and future browsers in mind. Everything is testable via components injected on startup (via dependency injection), which means you can **replace any component of the system to fit your specific needs**.
 * Client is a **full feature parity of our .NET clients**, including:
     * Support for custom objects

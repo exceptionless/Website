@@ -16,7 +16,9 @@ Watch the video below for a quick test drive, and read further down the page for
 
 ## Filter by Organization & Project
 
-[![Exceptionless Organizations and Projects](/assets/img/news/filter-by-project-organization-300x208.png)](/assets/filter-by-project-organization.png)By default, the dashboard loads up with all projects selected.
+![Exceptionless Organizations and Projects](/assets/img/news/filter-by-project-organization-300x208.png)
+
+By default, the dashboard loads up with all projects selected.
 
 To show only data from a specific organization or project within an organization, simply click on the "All Projects" drop down in the top left of the dashboard and select your organization or project.
 
@@ -26,7 +28,9 @@ To change it back to all projects, simply select the drop down again and click o
 
 ## Filter by Time Frame
 
-[![Exceptionles Time Frame Filters](/assets/img/news/filter-by-timeframe-300x205.png)](/assets/filter-by-timeframe.png)Exceptionless offers multiple preset time frame options, as well as the ability to customize the time frame down to the second.
+![Exceptionles Time Frame Filters](/assets/img/news/filter-by-timeframe-300x205.png)
+
+Exceptionless offers multiple preset time frame options, as well as the ability to customize the time frame down to the second.
 
 To select your time frame of choice, click on the calendar icon next to the project drop down on the top navigation bar of your dashboard.
 
@@ -38,7 +42,9 @@ Another way to control the data time frame is to simply select a period of time 
 
 ## Filter and Search by Specific Criteria
 
-[![Exceptionless Search Filter Feature](/assets/img/news/filter-by-search-filter-criteria-300x203.png)](/assets/filter-by-search-filter-criteria.png)Being able to search your errors and events by specific criteria is, perhaps, the largest improvement for version 2.0.
+![Exceptionless Search Filter Feature](/assets/img/news/filter-by-search-filter-criteria-300x203.png)
+
+Being able to search your errors and events by specific criteria is, perhaps, the largest improvement for version 2.0.
 
 By selecting the magnifying glass icon next to the calendar icon in the top navigation, you can enter <a title="Exceptionless Search Filter Documentation" href="http://docs.exceptionless.com/contents/search/" target="_blank">search criteria</a> and select whether you want the results to include fixed and/or hidden events/errors.
 

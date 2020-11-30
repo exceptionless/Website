@@ -29,7 +29,7 @@ Follow these quick and easy steps below to update your Exceptionless client to 
 
 ### Check out these awesome new and improved features<figure id="attachment_12762" class="thumbnail wp-caption alignright" style="width: 150px">
 
-[![Exceptionless 2.0 Screenshot](/assets/img/news/version-2-launch-screenshot-150x150.jpg)](/assets/img/version-2-launch-screenshot.jpg)<figcaption class="caption wp-caption-text">Version 2.0 Screenshot</figcaption></figure>
+![Exceptionless 2.0 Screenshot](/assets/img/news/version-2-launch-screenshot-150x150.jpg)
 
 Exceptionless 2.0 is faster, sleeker, mobile-friendly, more functional, includes all the below major improvements, and has countless smaller tweaks and changes we poured our heart and soul into. It's a whole new system - check it out!
 
@@ -49,13 +49,13 @@ Exceptionless 2.0 is faster, sleeker, mobile-friendly, more functional, includes
     For all your API needs, check out the <a title="Exceptionless API Documentation" href="https://api.exceptionless.io/docs/index" target="_blank">API Documentation</a>
 
 * **Bulk Actions
-** Select multiple events or instances of events and do with them as you please! <a title="Exceptionless 2.0 Bulk Actions" href="/bulk-actions-sneak-peak-exceptionless-2-0-video/" target="_blank">Watch the preview demo.</a>
+** Select multiple events or instances of events and do with them as you please! <a title="Exceptionless 2.0 Bulk Actions" href="/news/2014/2014-12-12-bulk-actions-sneak-peak-exceptionless-2-0-video" target="_blank">Watch the preview demo.</a>
 
 * **Faster than Ever!
-** Exceptionless 2.0 is a single page app (SPA) and is lightning fast. <a title="Exceptionless 2.0 AngularJS" href="/angularjs-exceptionless-2-0/" target="_blank">We’re using AngularJS</a> and we’re stoked to give our users a super quick experience!
+** Exceptionless 2.0 is a single page app (SPA) and is lightning fast. <a title="Exceptionless 2.0 AngularJS" href="/news/2014/2014-10-23-angularjs-exceptionless-2-0" target="_blank">We’re using AngularJS</a> and we’re stoked to give our users a super quick experience!
 
 <li id="preview">
-  **And more…<br /> **Check out more new features, including source links, in our <a title="Exceptionless 2.0 Overview" href="/upcoming-exceptionless-version-2-0-overview-review/" target="_blank">Exceptionless 2.0 Overview article</a>. Includes details on: Event Based Reporting System, Simplified API, The Pluggable System, Client Rewrite, New Message Bus & Queuing, and Job System Enhancement.
+  **And more…<br /> **Check out more new features, including source links, in our <a title="Exceptionless 2.0 Overview" href="/news/2014/2014-08-13-upcoming-exceptionless-version-2-0-overview-review" target="_blank">Exceptionless 2.0 Overview article</a>. Includes details on: Event Based Reporting System, Simplified API, The Pluggable System, Client Rewrite, New Message Bus & Queuing, and Job System Enhancement.
 </li>
 
 ## Live User Testing Review & Notes

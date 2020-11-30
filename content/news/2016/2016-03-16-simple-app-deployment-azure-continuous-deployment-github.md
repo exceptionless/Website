@@ -47,13 +47,11 @@ Here are the details on our solution for simple app deployment using GitHub and 
 
 ### 1. Use AppVeyor to build the app.
 
-<a href="https://github.com/exceptionless/Exceptionless/blob/master/appveyor.yml" target="_blank">Here's our code.</a>
-
 ### 2. Store build artifacts in a separate GitHub artifacts repository.
 
 This works really well because you can see the entire history of your build artifacts and browse their contents. Plus, GitHub hosts it for free!
 
-We found that we could <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L71" target="_blank">format the commit message with a specific format</a> that GitHub could understand and parse into different links. We can click on the "Commit:" part of the message to link to the actual commit that is building to see exactly has changed.
+We found that we could that GitHub could understand and parse into different links. We can click on the "Commit:" part of the message to link to the actual commit that is building to see exactly has changed.
 
 ![github build history artifacts](/assets/img/news/github-build-history-artifacts-1024x380.jpg)
 
@@ -71,7 +69,7 @@ The artifacts repository has branches to match the branches of our code repo so 
 
 ### 3. Automate pushing of artifacts to a secondary GitHub repository.
 
-For our .NET application, <a href="https://github.com/exceptionless/Exceptionless" target="_blank">Exceptionless</a>, we invoke a <a href="https://github.com/exceptionless/Exceptionless/blob/master/appveyor.yml#L46-L47" target="_blank">PowerShell script</a> on post build to clone and commit the changes to the <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1" target="_blank">Git artifacts repository</a>.
+For our .NET application, <a href="https://github.com/exceptionless/Exceptionless" target="_blank">Exceptionless</a>, we invoke a PowerShell script on post build to clone and commit the changes to the <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1" target="_blank">Git artifacts repository</a>.
 
   1. Our first step is to <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L10-L11" target="_blank">clone the existing build artifacts repo to an artifacts directory</a>.
   2. Next, we <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L20-L28" target="_blank">change to the same branch that we are currently building, if it doesn’t exist we create it</a>.
@@ -81,7 +79,7 @@ For our .NET application, <a href="https://github.com/exceptionless/Exceptionles
   6. Next, we <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L69-L78" target="_blank">push the artifacts to our GitHub artifacts repository</a>, which will then trigger Azure Continuous Deployment to pick up the changes.
   7. Finally, we <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L80-L87" target="_blank">create tag the artifacts repository</a> which points to the specific GitHub commit we are building in our main repository.
 
-**For our static <a href="https://github.com/exceptionless/Exceptionless.UI" target="_blank">Angular JavaScript app (UI)</a>,** we invoke a <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/Gruntfile.js#L51" target="_blank">Grunt publish task</a> from our <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/appveyor.yml#L20" target="_blank">post build event</a>. The publish task called into a <a href="https://github.com/tschaub/grunt-gh-pages" target="_blank">gh-pages</a> <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/grunt/task-configs/gh-pages.js" target="_blank">task</a> that publishes our built dist folder to the GitHub artifacts repository automatically.
+**For our static <a href="https://github.com/exceptionless/Exceptionless.UI" target="_blank">Angular JavaScript app (UI)</a>,** we invoke a <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/Gruntfile.js#L51" target="_blank">Grunt publish task</a> from our post build event. The publish task called into a <a href="https://github.com/tschaub/grunt-gh-pages" target="_blank">gh-pages</a> <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/grunt/task-configs/gh-pages.js" target="_blank">task</a> that publishes our built dist folder to the GitHub artifacts repository automatically.
 
 ### 4. Point Azure Continuous Deployment to the Artifacts Repository
 
@@ -99,17 +97,17 @@ Azure Websites makes this very easy.
 
 No production settings are stored in source control or artifacts repository.
 
-For our ASP.NET application, our <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Settings.cs" target="_blank">settings class</a> will look up named settings in the following order:
+For our ASP.NET application, our settings class will look up named settings in the following order:
 
   1. environment variables
   2. local config.json file
   3. app settings
 
-It will then fall back to a <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Utility/SettingsBase.cs#L59" target="_blank">default value</a> if no explicit settings are found.
+It will then fall back to a default value if no explicit settings are found.
 
 **Configuring our static Angular JavaScript app** is a bit more work since it can't look these settings up dynamically at runtime. So instead we add some code to our deployment process.
 
-* Azure automatically runs a <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/deploy.sh" target="_blank">deploy.sh</a> file after getting the artifacts via git deploy. It’s sole job is to run a <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/app_data/jobs/triggered/config/run.js" target="_blank">node script</a> that rewrites our <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/app.config.js" target="_blank">app.config.js</a> settings with settings defined in environment variables.
+* Azure automatically runs a <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/deploy.sh" target="_blank">deploy.sh</a> file after getting the artifacts via git deploy. It’s sole job is to run a node script that rewrites our <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/app.config.js" target="_blank">app.config.js</a> settings with settings defined in environment variables.
 
 ## Conclusion
 

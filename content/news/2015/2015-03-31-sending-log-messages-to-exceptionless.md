@@ -44,7 +44,7 @@ ExceptionlessClient.Default.SubmitLog(typeof(MainWindow).FullName, "Info log exa
 
 Here's a screenshot of what the visual indicators for the different types of log levels look like.
 
-[![Exceptionless Log Message Preview](/assets/img/news/log-messages-log-level.png)](/assets/log-messages-log-level.png)
+![Exceptionless Log Message Preview](/assets/img/news/log-messages-log-level.png)
 
 #### You can also add additional information using our fluent API.
 
@@ -133,9 +133,10 @@ The Log Messages Dashboard makes it easy to see log occurrences. You can keep tr
 
 For metrics, we have created an <a href="https://github.com/exceptionless/Foundatio" target="_blank">open source metrics library called Foundatio</a>. We use it for Exceptionless, and think you will find it extremely helpful as well. Check it out! We'll be posting an article on Foundatio soon, so check back.
 
-## [![log-messages-dashboard](/assets/img/news/log-messages-dashboard.png)](/assets/log-messages-dashboard.png)
+## ![log-messages-dashboard](/assets/img/news/log-messages-dashboard.png)
+
 How Are You Liking Exceptionless 2.0?
 
 We think we've added some pretty cool features to Exceptionless 2.0, including logging, but you are the ultimate judge. What's good? What's bad? What's missing? Let us know via a comment on the blog, social media, in-app, or however else you want to get in touch!
 
-If you're new to Exceptionless 2.0, make sure to [check out the launch article](/its-go-time-exceptionless-2-0-launched/ "Exceptionless 2.0 Launched") for more details on the new features and enhancements.
+If you're new to Exceptionless 2.0, make sure to [check out the launch article](/news/2015/2015-03-12-its-go-time-exceptionless-2-0-launched) for more details on the new features and enhancements.

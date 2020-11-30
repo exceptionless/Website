@@ -7,7 +7,7 @@ date: 2015-05-27
 
 We're getting closer and closer to version 1.0 of our <a title="Exceptionless JavaScript Client" href="/javascript-client-available-for-preview-testing/" target="_blank">JavaScript client</a>, and we wanted to give everyone a demo of installation, configuration, and usage.
 
-If you're using Node.js, make sure to check out last week's blog post for <a title="Exceptionless Node.js Demo" href="/exceptionless-node-js-javascript-client-demo/" target="_blank">Node specific examples</a>. Otherwise, continue reading for JavaScript examples.
+If you're using Node.js, make sure to check out last week's blog post for <a title="Exceptionless Node.js Demo" href="/news/2015/2015-05-20-exceptionless-node-js-javascript-client-demo" target="_blank">Node specific examples</a>. Otherwise, continue reading for JavaScript examples.
 
 As you read and begin playing with the Exceptionless JavaScript client, please make note of any feedback, bugs, etc, and <a title="Exceptionless.JavaScript GitHub Repo" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">submit a GitHub issue</a> so we can fast track version 1.0 - we surely appreciate it!
 
@@ -15,7 +15,7 @@ As you read and begin playing with the Exceptionless JavaScript client, please m
 
 ## How the JavaScript Client was Built
 
-We built our JavaScript client in <a title="TypeScript" href="https://github.com/Microsoft/TypeScript" target="_blank">typescript 1.5</a> transpiled it to es5. Our single client works with both <a title="Exceptionless.JavaScript Node.js Demo" href="/exceptionless-node-js-javascript-client-demo/" target="_blank">Node.js</a> and JavaScript due to dependency injection and a <a title="Universal Module Definition (UMD)" href="https://github.com/umdjs/umd" target="_blank">Universal Module Definition (UMD)</a>.
+We built our JavaScript client in <a title="TypeScript" href="https://github.com/Microsoft/TypeScript" target="_blank">typescript 1.5</a> transpiled it to es5. Our single client works with both <a title="Exceptionless.JavaScript Node.js Demo" href="/news/2015/2015-05-20-exceptionless-node-js-javascript-client-demo" target="_blank">Node.js</a> and JavaScript due to dependency injection and a <a title="Universal Module Definition (UMD)" href="https://github.com/umdjs/umd" target="_blank">Universal Module Definition (UMD)</a>.
 
 ## Installing the Exceptionless JavaScript Client
 

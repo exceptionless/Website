@@ -5,7 +5,7 @@ date: 2015-05-20
 ---
 ![Exceptionless Node.js JavaScript Client](/assets/img/news/node-js-header.jpg)
 
-Last week we announced our full featured <a title="Exceptionless JavaScript Client" href="/javascript-client-available-for-preview-testing/" target="_blank">JavaScript client</a>, and we're super excited about releasing a version 1.0 soon.
+Last week we announced our full featured <a title="Exceptionless JavaScript Client" href="/news/2015/2015-05-13-javascript-client-available-for-preview-testing" target="_blank">JavaScript client</a>, and we're super excited about releasing a version 1.0 soon.
 
 This week we'd like to put more details out there on the Node.js version of the JavaScript client, including installation, configuration, and usage. We've also set up an <a title="Exceptionless Express.js Sample App" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/example/express/app.js" target="_blank">Express.js sample app</a> that you can spin up locally to play with things.
 

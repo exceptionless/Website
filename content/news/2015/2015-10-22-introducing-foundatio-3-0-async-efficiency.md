@@ -5,7 +5,7 @@ date: 2015-10-22
 ---
 ![Foundatio 3.0](/assets/img/news/foundatio-blog-header-image-small.png)Foundatio is a pluggable, scalable, painless, open source solution for caching, queues, locks, messaging, jobs, file storage, and metrics in your app.
 
-In Version 3.0, we've made several improvements, including, as promised in our <a href="/foundatio-pluggable-blocks-building-distributed-apps/" target="_blank">initial Foundatio blog post</a>, going full async.
+In Version 3.0, we've made several improvements, including, as promised in our <a href="/news/2015/2015-07-14-foundatio-pluggable-blocks-building-distributed-apps" target="_blank">initial Foundatio blog post</a>, going full async.
 
 Take a closer look at the new enhancements, below, and <a href="https://github.com/exceptionless/Foundatio" target="_blank">head over to the GitHub repo</a> to try Foundatio today. We think you'll find it very handy.
 

@@ -85,7 +85,7 @@ foreach (var plugin in Exceptionless.ExceptionlessClient.Default.Configuration.P
     Console.WriteLine(plugin);
 ```
 
-[![Exceptionless Plugin Priority](/assets/img/news/exceptionless-plugin-priority.png)](/assets/exceptionless-plugin-priority.png)
+![Exceptionless Plugin Priority](/assets/img/news/exceptionless-plugin-priority.png)
 
 ## Adding the Plugin to Your App
 

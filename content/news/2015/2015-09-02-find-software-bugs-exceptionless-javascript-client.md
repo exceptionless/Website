@@ -5,7 +5,7 @@ date: 2015-09-02
 tags: [ "javascript"]
 ---
 ![Exceptionless JavaScript Client](/assets/img/news/blog-header-image-post2b.png)
-If you missed our <a href="/javascript-node-js-client-version-1-release-candidate/" target="_blank">JavaScript Client announcement</a>, this is a great chance to see just how **quick and easy** the client is to install and use! You can be finding those hard to track down bugs, errors, and exceptions, as well as tracking other events and log messages, in literally minutes.
+If you missed our <a href="/news/2015/2015-06-04-javascript-node-js-client-version-1-release-candidate" target="_blank">JavaScript Client announcement</a>, this is a great chance to see just how **quick and easy** the client is to install and use! You can be finding those hard to track down bugs, errors, and exceptions, as well as tracking other events and log messages, in literally minutes.
 
 We've made it super easy to get up and running, as you'll see below. Take a look and let us know what you think!
 

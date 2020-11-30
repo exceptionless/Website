@@ -20,23 +20,23 @@ We reduced the CPU and Memory load **across the entire app**. This allows the ap
 
 **Below**, we see the increase in performance from two examples. On the left, we see a reduction in CPU and Memory usage for a deployed web app instance. On the right is a visible reduction in CPU usage for an Elasticsearch node.
 
-[![cpu-memory-percentage-improvements](/assets/img/news/cpu-memory-percentage-improvements-e1446046152986-1024x343.png)](/assets/cpu-memory-percentage-improvements.png)
+![cpu-memory-percentage-improvements](/assets/img/news/cpu-memory-percentage-improvements-e1446046152986-1024x343.png)
 
 ### Elasticsearch Queries
 
 By profiling the Elasticsearch queries for efficiency and usage, we've been able to reduce the overall number we were running and improve the efficiency on the ones that still are.
 
-[![search-request-rate-improvements](/assets/img/news/search-request-rate-improvements-e1446046076483.png)](/assets/search-request-rate-improvements.png)
+![search-request-rate-improvements](/assets/img/news/search-request-rate-improvements-e1446046076483.png)
 
 ### Caching
 
 Caching efficiency has been improved by removing redundant components that were utilizing valuable resources. For example, we removed the SignalR Redis Backplane, which drastically decreased the number of calls to Redis. Overall, we've made the app smarter throughout regarding how we cache and retrieve data.
 
-[![cache-improvements-2](/assets/img/news/cache-improvements-2-e1446046201498-1024x346.png)](/assets/cache-improvements-2.png)
+![cache-improvements-2](/assets/img/news/cache-improvements-2-e1446046201498-1024x346.png)
 
 
 
-[![Caching-improvements](/assets/img/news/Caching-improvements-e1446046263253-300x224.png)](/assets/Caching-improvements-e1446046263253.png)
+![Caching-improvements](/assets/img/news/Caching-improvements-e1446046263253-300x224.png)
 
 
 

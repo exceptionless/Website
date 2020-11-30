@@ -59,7 +59,7 @@ exceptionless.ExceptionlessClient.default.getLastReferenceId();
 
 You might have noticed how easy it is to get or add Reference Id’s to your events automatically. This makes it a breeze to let your developers track down user-facing issues by displaying the Reference Id to your end users.
 
-We **display Reference Ids** to all of our end users anytime an error occurs in our ASP.NET WebAPI application. We accomplish this by adding a custom `<a href="http://www.asp.net/web-api/overview/error-handling/web-api-global-error-handling" target="_blank">IExceptionHandler</a>` and return a new <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/Utility/Handlers/ExceptionlessReferenceIdExceptionHandler.cs#L35-L51" target="_blank">error response to include the Reference Id</a> as shown below:
+We **display Reference Ids** to all of our end users anytime an error occurs in our ASP.NET WebAPI application. We accomplish this by adding a custom `<a href="http://www.asp.net/web-api/overview/error-handling/web-api-global-error-handling" target="_blank">IExceptionHandler</a>` and return a new error response to include the Reference Id as shown below:
 
 ```cs
 public class ExceptionlessReferenceIdExceptionHandler : IExceptionHandler {
@@ -97,7 +97,7 @@ public class ExceptionlessReferenceIdExceptionHandler : IExceptionHandler {
 }
 ```
 
-The next step is to <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/AppBuilder.cs#L63" target="_blank">replace the existing `IExceptionFilter`</a> with the one above.
+The next step is to replace the existing `IExceptionFilter` with the one above.
 
 ```cs
 Config.Services.Replace(typeof(IExceptionHandler), new ExceptionlessReferenceIdExceptionHandler());

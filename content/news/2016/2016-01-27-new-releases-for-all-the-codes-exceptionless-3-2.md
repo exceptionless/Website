@@ -19,7 +19,7 @@ Lets get into some of the details...<!--more-->
 
 <a href="/track-view-user-session-data-exceptionless/" target="_blank">Check out the User Sessions post for more details and instructions!</a>
 
-[![Exceptionless Event Sessions](/assets/img/news/sessions-2.png)](/assets/sessions-2.png)
+![Exceptionless Event Sessions](/assets/img/news/sessions-2.png)
 
 <div style="clear: both;">
 </div>

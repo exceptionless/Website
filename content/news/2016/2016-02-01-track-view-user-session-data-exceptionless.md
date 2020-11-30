@@ -83,7 +83,7 @@ exceptionless.ExceptionlessClient.default.config.useSessions();
 
 Sessions are created in two different ways. Either the client can send a session start event, or we can create it automatically on the server side when an event is processed.
 
-We have a <a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Plugins/EventProcessor/Default/70_AutoSessionPlugin.cs#L29" target="_blank">server-side plugin</a> that runs as part of our pipeline process for every event - its sole purpose is to manage sessions by using a hash on the user's identity as a lookup for the session id.
+We have a server-side plugin that runs as part of our pipeline process for every event - its sole purpose is to manage sessions by using a hash on the user's identity as a lookup for the session id.
 
 If the session doesnt' exist or the current event is a session event type, a new session id will be created. If we receive a `sessionend` event, we close that session and update the end time on the `sessionstart` event.
 
@@ -111,8 +111,6 @@ ExceptionlessClient.Default.SubmitSessionStart();
 ExceptionlessClient.Default.SubmitSessionHeartbeat();
 ExceptionlessClient.Default.SubmitSessionEnd();
 ```
-
-<a href="https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Shared/Extensions/ClientExtensions.cs#L159-L205" target="_blank">Source</a>
 
 ### JavaScript
 

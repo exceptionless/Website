@@ -16,7 +16,9 @@ As new features, demos, examples, and clients come online, expect to see them ad
 
 ### Primary Documentation (hub)
 
-[![github-primary-docs](/assets/img/news/github-primary-docs-150x150.png)](/assets/img/github-primary-docs.png)This documentation contains all the documentation and details/usage for the platform's features and dashboard/ui. That includes information on project settings, security, API usage, filtering & searching, email notifications, bulk actions, frequently asked questions, how to contribute to the project, and the basic requirements to run the platform.
+![github-primary-docs](/assets/img/news/github-primary-docs-150x150.png)
+
+This documentation contains all the documentation and details/usage for the platform's features and dashboard/ui. That includes information on project settings, security, API usage, filtering & searching, email notifications, bulk actions, frequently asked questions, how to contribute to the project, and the basic requirements to run the platform.
 
 And, of course, you can get to the documentation for the individual clients (below) from this primary site as well.
 
@@ -26,13 +28,17 @@ Basically, you can always start here and branch out to whatever client or featur
 
 ### .NET Client Documentation
 
-[![github-dotnet](/assets/img/news/github-dotnet-150x150.png)](/assets/img/github-dotnet.png)As you may have guessed, this documentation site resides within the Exceptionless.NET repo and contains .NET-specific info, examples, demos, and tutorials for different features. If you're a .NET user, this should be where you look for examples if you're just getting started or solutions to troubleshooting problems if you've run into a snag.
+![github-dotnet](/assets/img/news/github-dotnet-150x150.png)
+
+As you may have guessed, this documentation site resides within the Exceptionless.NET repo and contains .NET-specific info, examples, demos, and tutorials for different features. If you're a .NET user, this should be where you look for examples if you're just getting started or solutions to troubleshooting problems if you've run into a snag.
 
 <a href="https://github.com/exceptionless/Exceptionless.Net/wiki" target="_blank">View the .NET Docs</a>
 
 ### JavaScript / Node.js Client Documentation
 
-[![github-javascript](/assets/img/news/github-javascript-150x150.png)](/assets/img/github-javascript.png)The newest addition to Exceptionless, our JavaScript / Node.js client, needs a place for documentation too! Naturally, that place is within the Exceptionless.JavaScript repo! Here you'll find JavaScript-specific details, examples, and tutorials for things like configuring the cilent, sending events, self hosting, RequireJS, SystemJS, TypeScript, Express, and client configuration values.
+![github-javascript](/assets/img/news/github-javascript-150x150.png)
+
+The newest addition to Exceptionless, our JavaScript / Node.js client, needs a place for documentation too! Naturally, that place is within the Exceptionless.JavaScript repo! Here you'll find JavaScript-specific details, examples, and tutorials for things like configuring the cilent, sending events, self hosting, RequireJS, SystemJS, TypeScript, Express, and client configuration values.
 
 We really hope this helps users familiarize themselves with the JavaScript client and get the most benefit out of it. We know its flexibility will help a ton of developers get their apps in order.
 
