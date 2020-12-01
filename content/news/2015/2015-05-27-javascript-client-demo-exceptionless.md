@@ -9,7 +9,7 @@ We're getting closer and closer to version 1.0 of our <a title="Exceptionless J
 
 If you're using Node.js, make sure to check out last week's blog post for <a title="Exceptionless Node.js Demo" href="/news/2015/2015-05-20-exceptionless-node-js-javascript-client-demo" target="_blank">Node specific examples</a>. Otherwise, continue reading for JavaScript examples.
 
-As you read and begin playing with the Exceptionless JavaScript client, please make note of any feedback, bugs, etc, and <a title="Exceptionless.JavaScript GitHub Repo" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">submit a GitHub issue</a> so we can fast track version 1.0 - we surely appreciate it!
+As you read and begin playing with the Exceptionless JavaScript client, please make note of any feedback, bugs, etc, and <a title="Exceptionless.JavaScript GitHub Repo" href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">submit a GitHub issue</a> so we can fast track version 1.0 - we surely appreciate it!
 
 <!--more-->
 
@@ -151,10 +151,10 @@ We have put together an <a href="https://github.com/exceptionless/Exceptionless.
   Troubleshooting
 </h2>
 
-Calling `client.config.useDebugLogger();` to enable debug logging is recommend and will output messages to the console regarding what the client is doing. Please <a title="Exceptionless JavaScript Client Issues" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">contact us by creating an issue on GitHub</a> if you need help or have any feedback regarding the JavaScript client.
+Calling `client.config.useDebugLogger();` to enable debug logging is recommend and will output messages to the console regarding what the client is doing. Please <a title="Exceptionless JavaScript Client Issues" href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">contact us by creating an issue on GitHub</a> if you need help or have any feedback regarding the JavaScript client.
 
 ## Feedback
 
-As we move forward towards version 1.0 of our JavaScript client, we are looking for any and all feedback, so please don't hesitate to <a title="Exceptionless JavaScript Client Feedback" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">let us know what you think, report a bug, etc</a>.
+As we move forward towards version 1.0 of our JavaScript client, we are looking for any and all feedback, so please don't hesitate to <a title="Exceptionless JavaScript Client Feedback" href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">let us know what you think, report a bug, etc</a>.
 
 Happy coding!

@@ -7,7 +7,7 @@ date: 2015-10-22
 
 In Version 3.0, we've made several improvements, including, as promised in our <a href="/news/2015/2015-07-14-foundatio-pluggable-blocks-building-distributed-apps" target="_blank">initial Foundatio blog post</a>, going full async.
 
-Take a closer look at the new enhancements, below, and <a href="https://github.com/exceptionless/Foundatio" target="_blank">head over to the GitHub repo</a> to try Foundatio today. We think you'll find it very handy.
+Take a closer look at the new enhancements, below, and <a href="https://github.com/FoundatioFx/Foundatio" target="_blank">head over to the GitHub repo</a> to try Foundatio today. We think you'll find it very handy.
 
 For all our current users, you'll need to upgrade your <a href="https://www.nuget.org/packages?q=Foundatio" target="_blank">Foundatio NuGet package</a> and existing Foundatio code to use the async implementations/conventions. The update should be fairly straightforward - we haven't had or heard of any issues so far, including when upgrading Exceptionless.<!--more-->
 
@@ -35,8 +35,8 @@ Because we always want more speed out of our apps (and we know you do, too), we 
 
 ## Check It Out - Feedback Appreciated!
 
-We made many other improvements to ensure your apps run fast when using Foundatio, too many to be listed here. If you're already using it, just update your NuGet package to the latest version to take advantage of these improvements. If you're not using it yet, <a href="https://github.com/exceptionless/Foundatio" target="_blank">try it out</a>. It's worth a shot, we promise!
+We made many other improvements to ensure your apps run fast when using Foundatio, too many to be listed here. If you're already using it, just update your NuGet package to the latest version to take advantage of these improvements. If you're not using it yet, <a href="https://github.com/FoundatioFx/Foundatio" target="_blank">try it out</a>. It's worth a shot, we promise!
 
-Once you've given it a go, please let us know what you like, or what you hate, by posting a <a href="https://github.com/exceptionless/Foundatio/issues" target="_blank">issue on Foundatio's GitHub Repo</a>.
+Once you've given it a go, please let us know what you like, or what you hate, by posting a <a href="https://github.com/FoundatioFx/Foundatio/issues" target="_blank">issue on Foundatio's GitHub Repo</a>.
 
 Until next time, happy coding!

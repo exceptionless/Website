@@ -22,7 +22,7 @@ tags: [ "node.js"]
 * Includes first class integration for third party libraries like <a href="https://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://expressjs.com/" target="_blank">Express</a>
 
 <div class="signup center">
-  <a class="btn btn-large btn-primary" href="https://github.com/exceptionless/Exceptionless.javascript">Start Using it Today</a>
+  <a class="btn btn-large btn-primary" href="https://github.com/exceptionless/Exceptionless.JavaScript">Start Using it Today</a>
 </div>
 
 ## Usage, Examples, and more...

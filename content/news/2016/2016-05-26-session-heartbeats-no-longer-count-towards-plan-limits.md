@@ -31,7 +31,7 @@ We did some thinking (and coding), trying to determine the best way we could **p
 
 So, we created a new GET API endpoint `/api/v2/events/session/heartbeat` ([api source](https://api.exceptionless.io/docs/index#!/Event/Event_RecordHeartbeatAsync)) that takes a session id or user id and a flag if the session is closed. This API endpoint then sets a unique session cache key with the current time.
 
-Our existing `CloseInactiveSessionsJob.cs` was already periodically polling for open sessions to check for inactive sessions so it could automatically close them after a period of time if no session end event was sent, so we just updated this job to check for the unique session cache keys ([source](https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Jobs/CloseInactiveSessionsJob.cs#L43)) and get the last time a heartbeat was sent in or see if it was closed. It then takes the appropriate action and updates the session event.
+Our existing `CloseInactiveSessionsJob.cs` was already periodically polling for open sessions to check for inactive sessions so it could automatically close them after a period of time if no session end event was sent, so we just updated this job to check for the unique session cache keys ([source](hhttps://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Jobs/CloseInactiveSessionsJob.cs#L52)) and get the last time a heartbeat was sent in or see if it was closed. It then takes the appropriate action and updates the session event.
 
 Then we just updated the clients to call this new API endpoint when `client.Submit.SessionHeartbeat("id")` or `client.SubmitSessionEnd("id")` is called.
 

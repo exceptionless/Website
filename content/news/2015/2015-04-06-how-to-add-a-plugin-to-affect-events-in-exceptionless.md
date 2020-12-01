@@ -21,9 +21,9 @@ First, we are assuming that you have already created an account and installed a
 
 Before we create our first plugin, it’s important to keep in mind that **each plugin will run every time an event is submitted**. As such, you should ensure your plugins are fast and not super resource-intensive so your app remains as quick as possible.
 
-To create a plugin, you have to specify a System.Action<EventPluginContext>, or create a class that derives from <a title="Exceptionless IEventPlugin" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Shared/Plugins/IEventPlugin.cs" target="_blank">IEventPlugin</a>.
+To create a plugin, you have to specify a System.Action<EventPluginContext>, or create a class that derives from <a title="Exceptionless IEventPlugin" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/Plugins/IEventPlugin.cs" target="_blank">IEventPlugin</a>.
 
-Every plugin is passed an <a title="Exceptionless Plugin Contect" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Shared/Plugins/EventPluginContext.cs" target="_blank">EventPluginContext</a>, which contains all the valuable contextual information that your plugin may need via the following properties:
+Every plugin is passed an <a title="Exceptionless Plugin Contect" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/Plugins/EventPluginContext.cs" target="_blank">EventPluginContext</a>, which contains all the valuable contextual information that your plugin may need via the following properties:
 
 * **Client
 ** The ExceptionlessClient that created the event.

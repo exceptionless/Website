@@ -21,7 +21,7 @@ These tedious and error-prone tasks that had to be completed just to get a job t
 
 **In Exceptionless 3.1** we focused on refining and improving jobs. To do so, we created a <a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Jobs" target="_blank" rel="noopener">new console application for each job</a> and specified settings in the code versus <a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Jobs/EventPostsJob.cs#L16-L22" target="_blank" rel="noopener">error prone command line options as shown here</a>.
 
-Now, with [Foundatio](/introducing-foundatio-3-0-async-efficiency/), our open source app building block solution used in Exceptionless, you just define a new [Job](https://github.com/exceptionless/Foundatio#jobs) that runs (via the run method) and you can use the [Foundatio Jobs API](https://github.com/exceptionless/Foundatio#jobs) to run the job in process, out of process, continuous, or one time without changing the implementation.
+Now, with [Foundatio](/introducing-foundatio-3-0-async-efficiency/), our open source app building block solution used in Exceptionless, you just define a new [Job](https://github.com/FoundatioFx/Foundatio#jobs) that runs (via the run method) and you can use the [Foundatio Jobs API](https://github.com/FoundatioFx/Foundatio#jobs) to run the job in process, out of process, continuous, or one time without changing the implementation.
 
 This new approach also gave us a great deployment strategy, for free. Simply copy the job executable and bin folders and run it anywhere!
 
@@ -31,7 +31,7 @@ This new approach also gave us a great deployment strategy, for free. Simply cop
 
 ### How you can implement a better Azure WebJob
 
-[Foundatio Jobs](https://github.com/exceptionless/Foundatio#jobs) allows you to run a long running process (in process or out of process) with out worrying about it being terminated prematurely. By using Foundatio Jobs you gain all of the following features **without changing your job implementation**:
+[Foundatio Jobs](https://github.com/FoundatioFx/Foundatio#jobs) allows you to run a long running process (in process or out of process) with out worrying about it being terminated prematurely. By using Foundatio Jobs you gain all of the following features **without changing your job implementation**:
 
 * Run job in process
 * Run job out of process
@@ -95,4 +95,4 @@ The last steps are to simply compile the project and deploy it to your Azure web
 
 ### Questions?
 
-If you have any questions please feel free to contact us via our contact page, in app message, [GitHub issues](https://github.com/exceptionless/foundatio/issues) or our [chat room](https://gitter.im/exceptionless/Discuss).
+If you have any questions please feel free to contact us via our contact page, in app message, [GitHub issues](https://github.com/FoundatioFx/Foundatio/issues) or our [chat room](https://gitter.im/exceptionless/Discuss).

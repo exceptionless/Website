@@ -30,16 +30,16 @@ We were only showing the exception tab if there was an event type of error, prev
 
 * Attempted to track down issues where the redis queues would stop processing.
 * Worked with Microsoft to get our unit tests discoverable on the new csproject format.
-* Added new [Foundatio.Jobs commands package](https://github.com/exceptionless/Foundatio/commit/50dddaa52d3cc929a62d42b40f8d767e4f916545) that allows you to quickly discover and get command line help on your jobs.
+* Added new [Foundatio.Jobs commands package](https://github.com/FoundatioFx/Foundatio/commit/50dddaa52d3cc929a62d42b40f8d767e4f916545) that allows you to quickly discover and get command line help on your jobs.
 
-[View Repo](https://github.com/exceptionless/Foundatio)
+[View Repo](https://github.com/FoundatioFx/Foundatio)
 
 ## Foundatio.Repositories
 
 * Fixed various issues with running data migration scripts for the first time.
 * Fixed an issues with GetByIds where falling back to search wouldn't take into account multiple pages of results.
 
-[View Repo](https://github.com/exceptionless/Foundatio.Repositories)
+[View Repo](https://github.com/FoundatioFx/Foundatio.Repositories)
 
 <h2 style="text-align: center;">
   <a href="https://www.liveedu.tv/niemyjski/2qyKy-exceptionless-weekly-demo-2-20-17/xAq0E-exceptionless-weekly-demo-2-20-17/">WATCH NOW</a>

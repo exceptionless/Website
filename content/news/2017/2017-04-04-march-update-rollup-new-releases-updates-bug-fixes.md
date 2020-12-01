@@ -22,7 +22,7 @@ Let's get to it!<!--more-->
 
 * Blake attended [Elastic{ON}](https://www.elastic.co/elasticon/conf/2017/sf) and talked to product teams about issues we've been running into, as well as the future of Elasticsearch.
 * **Foundatio**
-  * [Released Version 5.0 of Foundatio](https://github.com/exceptionless/Foundatio/releases/tag/v5.0.0)
+  * [Released Version 5.0 of Foundatio](https://github.com/FoundatioFx/Foundatio/releases/tag/v5.0.0)
   * We also modified an existing PowerShell script that updates existing projects to the VS2017 project format.
   * And, of course, we added some more documentation!
 * **Foundatio Repositories**

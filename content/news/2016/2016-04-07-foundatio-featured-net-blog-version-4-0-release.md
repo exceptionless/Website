@@ -35,6 +35,6 @@ More tests have been added since the previous release, and we've fixed a few maj
 
 ## Upgrading to Foundatio 4.0
 
-If you're already using Foundatio, simply updated your NuGet package. If you're new and want to check it out, snag <a href="https://github.com/exceptionless/Foundatio" target="_blank">Foundatio over on GitHub</a>.
+If you're already using Foundatio, simply updated your NuGet package. If you're new and want to check it out, snag <a href="https://github.com/FoundatioFx/Foundatio" target="_blank">Foundatio over on GitHub</a>.
 
 And, as always, we're here to answer any questions or take any feedback you might have to offer!

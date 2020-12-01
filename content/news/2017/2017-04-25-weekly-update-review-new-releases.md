@@ -15,7 +15,7 @@ In Exceptionless Core, we added support for [MailKit](https://github.com/jstedfa
 
 ### Foundatio Updates
 
-For [Foundatio](https://github.com/exceptionless/Foundatio), we updated the Azure storage copy implementation to copy server side, fixed an issue where FolderFileStorage wasn't behaving properly when renaming files that exist, and fixed a Redis cache client issue where deleting cache items by wild card was erroring out if there were no matching keys.
+For [Foundatio](https://github.com/FoundatioFx/Foundatio), we updated the Azure storage copy implementation to copy server side, fixed an issue where FolderFileStorage wasn't behaving properly when renaming files that exist, and fixed a Redis cache client issue where deleting cache items by wild card was erroring out if there were no matching keys.
 - Updated the azure storage copy implementation to copy server side.
 
 ### Changes to Exceptionless.NET

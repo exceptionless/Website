@@ -9,7 +9,7 @@ Lets take a look at a few of the details surrounding these new systems we're bui
 
 ## Message Bus
 
-The new message bus allows us to publish and subscribe to messages across all our resources. We [subscribe to different types of messages to send SignalR notifications](https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/Hubs/MessageBusHub.cs) to the client.
+The new message bus allows us to publish and subscribe to messages across all our resources. We [subscribe to different types of messages to send SignalR notifications](https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Web/Hubs/MessageBusBroker.cs) to the client.
 
 ## Queueing
 

@@ -16,7 +16,7 @@ Details on the release changes can be found below.<!--more-->
 
 ### CPU & Memory
 
-We reduced the CPU and Memory load **across the entire app**. This allows the application to use fewer resources, meaning it has more time to process additional events, making everything faster. Between making Exceptionless and [Foundatio](https://github.com/exceptionless/Foundatio) 100% Async and these improvements, we've drastically increased the efficiency of the entire platform.
+We reduced the CPU and Memory load **across the entire app**. This allows the application to use fewer resources, meaning it has more time to process additional events, making everything faster. Between making Exceptionless and [Foundatio](https://github.com/FoundatioFx/Foundatio) 100% Async and these improvements, we've drastically increased the efficiency of the entire platform.
 
 **Below**, we see the increase in performance from two examples. On the left, we see a reduction in CPU and Memory usage for a deployed web app instance. On the right is a visible reduction in CPU usage for an Elasticsearch node.
 

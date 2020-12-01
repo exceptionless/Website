@@ -39,9 +39,9 @@ g with <a href="http://dev.maxmind.com/geoip/geoip2/geolite2/" target="_blank">G
 
 ## Automating the GeoIP Database Download
 
-We use our very own <a href="https://github.com/exceptionless/Foundatio#jobs" target="_blank">Foundatio Jobs</a> to download the most up-to-date database. Foundatio Jobs allows us to run the job in process or out of process on a schedule in Azure.
+We use our very own <a href="https://github.com/FoundatioFx/Foundatio#jobs" target="_blank">Foundatio Jobs</a> to download the most up-to-date database. Foundatio Jobs allows us to run the job in process or out of process on a schedule in Azure.
 
-Alternatively, you could use the <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/DownloadGeoIPDatabase.ps1" target="_blank">PowerShell script</a> we created for downloading the database.  `<a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Jobs/DownloadGeoIPDatabaseJob.cs" target="_blank">DownloadGeoIPDatabaseJob</a>` downloads the database over http and extracts the file contents to disk using <a href="https://github.com/exceptionless/Foundatio#file-storage" target="_blank">Foundatio Storage</a>.
+Alternatively, you could use the <a href="https://github.com/exceptionless/Exceptionless/blob/v3.5.1/Libraries/DownloadGeoIPDatabase.ps1" target="_blank">PowerShell script</a> we created for downloading the database.  `<a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Jobs/DownloadGeoIPDatabaseJob.cs" target="_blank">DownloadGeoIPDatabaseJob</a>` downloads the database over http and extracts the file contents to disk using <a href="https://github.com/FoundatioFx/Foundatio#file-storage" target="_blank">Foundatio Storage</a>.
 
 Please feel free to **take a look out our job** for a complete sample including logging and error handling:
 
@@ -115,7 +115,7 @@ Then, just call the `ResolveIPAsync` method with an IP address to look up the lo
 var location = await ResolveIPAsync("YOUR_IP_ADDRESS_HERE");
 ```
 
-Feel free to take a look at `<a href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Geo/MaxMindGeoIPService.cs" target="_blank">MaxMindGeoIPService</a>` for a complete sample that includes logging, error handling, caching of the results, and IP validation for higher lookup throughput. We’ve spent the time writing tests and optimizing it to ensure **its rock solid and works great**. So feel free to grab our IGeoIPService interfaces and models and use them in your app.
+Feel free to take a look at `<a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Insulation/Geo/MaxMindGeoIpService.cs" target="_blank">MaxMindGeoIPService</a>` for a complete sample that includes logging, error handling, caching of the results, and IP validation for higher lookup throughput. We’ve spent the time writing tests and optimizing it to ensure **its rock solid and works great**. So feel free to grab our IGeoIPService interfaces and models and use them in your app.
 
 **It’s worth noting** that in our app, we use the IP address provided in the event. This could come from a server request or the actual machine's IP address. We also fall back to the API consumer's client IP address.
 
@@ -156,7 +156,7 @@ var location = await ResolveGeocodeAsync(44.5241, -87.9056);
 
 ## Final Thoughts on Reverse Geocoding
 
-It took us a bit of work and research initially to get everything working flawlessly for location services. We hope you grab our code off of GitHub to **save yourself all that work**. Also, it’s worth noting that we use <a href="https://github.com/exceptionless/foundatio#caching" target="_blank">Foundatio Caching</a> to cache the results of location lookups. It drastically increased the performance and cut down on our limited number of requests to rate-limited third party services!
+It took us a bit of work and research initially to get everything working flawlessly for location services. We hope you grab our code off of GitHub to **save yourself all that work**. Also, it’s worth noting that we use <a href="https://github.com/FoundatioFx/Foundatio#caching" target="_blank">Foundatio Caching</a> to cache the results of location lookups. It drastically increased the performance and cut down on our limited number of requests to rate-limited third party services!
 
 We also queue work items to look up the geo location since that can be an expensive operation. So, please take this into consideration anytime you are interacting with a third party service.
 

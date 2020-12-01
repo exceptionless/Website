@@ -21,7 +21,7 @@ Upgrading to Elasticsearch 5 has been in the works for some time now, with early
 * Elasticsearch 5 is the latest version of [ElasticSearch](https://www.elastic.co/products) and brings in massive improvements to event indexing speed, reduced memory sizes, and much more.
 * The Elasticsearch libraries support .NET Core, bringing us one step closer to fulfilling a vision that includes cross-platform support.
 * Our new implementation is built on a new, faster Microsoft Azure and SSD storage infrastructure. This will greatly increase the indexing and searching performance,  reducing dashboard latencies, among other things.
-* With the power of <a href="https://github.com/exceptionless/Foundatio.Parsers" target="_blank">Foundatio.Parsers</a> project, we have gained the ability to consume generic aggregations and pivot/report on data any way our users like it.
+* With the power of <a href="https://github.com/FoundatioFx/Foundatio.Parsers" target="_blank">Foundatio.Parsers</a> project, we have gained the ability to consume generic aggregations and pivot/report on data any way our users like it.
 * This upgrade also makes it easier to self host through the use of containers. Our goal is to move the entire app to use containers, which will allow you to self host in seconds!
 * We will now be doing daily indexes for more performance, fine grained backups, and the ability to more quickly change our indexes.
 

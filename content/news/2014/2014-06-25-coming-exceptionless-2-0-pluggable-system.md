@@ -26,7 +26,7 @@ Plugins will allow customization and translation throughout the Exceptionless pl
   </li>
 </ul>
 
-[Source](https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Plugins/EventParser/IEventParserPlugin.cs)
+[Source](https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Plugins/EventParser/IEventParserPlugin.cs)
 
 ## <a class="anchor" style="color: #4183c4;" href="https://github.com/exceptionless/Exceptionless/wiki/Exceptionless-2.0-Overview#event-pipeline-source" name="user-content-event-pipeline-source"></a>Event Pipeline
 
@@ -45,7 +45,7 @@ Plugins will allow customization and translation throughout the Exceptionless pl
   </li>
 </ul>
 
-[Source](https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Plugins/EventPipeline/IEventPlugin.cs)
+[Source](https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Plugins/EventProcessor/IEventProcessorPlugin.cs)
 
 ## <a class="anchor" style="color: #4183c4;" href="https://github.com/exceptionless/Exceptionless/wiki/Exceptionless-2.0-Overview#formatting-source" name="user-content-formatting-source"></a>Formatting
 
@@ -67,7 +67,7 @@ Plugins will allow customization and translation throughout the Exceptionless pl
   </li>
 </ul>
 
-[Source](https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Plugins/Formatting/IFormattingPlugin.cs)
+[Source](https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Plugins/Formatting/IFormattingPlugin.cs)
 We believe building a pluggable exception reporting system and allowing third-party service and app access will create one of the most flexible, usable, and friendly solutions on the market.
 
 ### Coming Soon

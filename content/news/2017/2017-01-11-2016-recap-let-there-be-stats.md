@@ -54,7 +54,7 @@ Judging by the traffic to these posts and updates, they're all worth a read. Che
 ### Server License Changes
 
 We changed the server licensing to use the Apache license. Now, every Exceptionless project is under the Apache license and there should be no more confusion on how it's licensed. [Read more here.](/news/2016/2016-01-27-new-releases-for-all-the-codes-exceptionless-3-2/)
-    
+
 
 ### Session Tracking & Management
 
@@ -85,15 +85,15 @@ We have been doing QA on the Elasticsearch 5 migration since the end of the year
 
 We open sourced two major new libraries this year:
 
-* <a href="https://github.com/exceptionless/Foundatio.Repositories" target="_blank">Foundatio.Repositories</a>
+* <a href="https://github.com/FoundatioFx/Foundatio.Repositories" target="_blank">Foundatio.Repositories</a>
     Foundatio.Repositories are generic repositories with an implementation for Elasticsearch
-* <a href="https://github.com/exceptionless/Foundatio.Parsers" target="_blank">Foundatio.Parsers</a>
+* <a href="https://github.com/FoundatioFx/Foundatio.Parsers" target="_blank">Foundatio.Parsers</a>
     Foundatio.Parsers are Lucene query parsers that allow you to validate or modify Lucene queries with ease!
 
 ### Other Noteworthy Enhancements
 
 * Added [Geo location features](/news/2016/2016-02-10-add-reverse-geocoding-to-your-app/)
-    
+
 * Added [Keyboard shortcuts](/exceptionless-keyboard-shortcuts/)
 * The [API is now 100% Async](/news/2015/2015-10-22-introducing-foundatio-3-0-async-efficiency/)
 * Had third-party security review conducted

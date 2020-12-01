@@ -79,7 +79,7 @@ Passing a `System.Action<EventPluginContext>` to AddPlugin can also be used to a
 - Action (logic)
 
 ```csharp
-using Exceptionless;  
+using Exceptionless;
 ExceptionlessClient.Default.Configuration.AddPlugin("system-uptime", 100, context => {
     // Only update feature usage events.
     if (context.Event.Type != Event.KnownTypes.FeatureUsage)
@@ -113,6 +113,6 @@ using Exceptionless;
 ExceptionlessClient.Default.Configuration.RemovePlugin("system-uptime");
 ```
 
---- 
+---
 
 [Next > Private Information](private-information) {.text-right}

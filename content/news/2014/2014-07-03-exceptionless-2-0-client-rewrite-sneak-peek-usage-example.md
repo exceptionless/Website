@@ -23,7 +23,7 @@ After you check it out, let us know if you have questions or suggestions. We're 
 
 <img loading="lazy" class="aligncenter size-large wp-image-9100" src="/assets/img/news/ex-client-1024x420.png" alt="Exceptionless Code Example" width="940" height="385" data-id="9100" srcset="/.png 1024w, /assets/img/ex-client-300x123/nt.png 1167w" sizes="(max-width: 94/
 
-**Lets break that example down**, line by line, shall we? Check out the <a title="Exceptionless 2.0 Client Source" href="https://github.com/exceptionless/Exceptionless/tree/master/Source/Clients" target="_blank">client source</a> if you want to take a look at the complete code.
+**Lets break that example down**, line by line, shall we? Check out the <a title="Exceptionless 2.0 Client Source" href="https://github.com/exceptionless/Exceptionless.Net/tree/master/src" target="_blank">client source</a> if you want to take a look at the complete code.
 
 **First, set your API key.**
 

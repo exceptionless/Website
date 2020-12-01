@@ -145,10 +145,10 @@ We have built a quick<a title="Exceptionless Express.js Sample App" href="https:
 
 ## Troubleshooting
 
-We recommend enabling debug logging by calling `client.config.useDebugLogger();`. This will output messages to the console regarding what the client is doing. Please <a title="Exceptionless JavaScript Client Issues" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">contact us by creating an issue on GitHub</a> if you need assistance or have any feedback for the project.
+We recommend enabling debug logging by calling `client.config.useDebugLogger();`. This will output messages to the console regarding what the client is doing. Please <a title="Exceptionless JavaScript Client Issues" href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">contact us by creating an issue on GitHub</a> if you need assistance or have any feedback for the project.
 
 ## Feedback
 
-As we move forward towards version 1.0 of our JavaScript client, we are looking for any and all feedback, so please don't hesitate to <a title="Exceptionless JavaScript Client Feedback" href="https://github.com/exceptionless/Exceptionless.javascript/issues" target="_blank">let us know what you think, report a bug, etc</a>.
+As we move forward towards version 1.0 of our JavaScript client, we are looking for any and all feedback, so please don't hesitate to <a title="Exceptionless JavaScript Client Feedback" href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">let us know what you think, report a bug, etc</a>.
 
 Thanks!

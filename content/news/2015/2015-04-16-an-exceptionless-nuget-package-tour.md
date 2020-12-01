@@ -60,7 +60,7 @@ We also have signed versions of most assemblies on our <a title="Exceptionless 
 
 ## Foundatio by Exceptionless
 
-Foundatio (Requires .NET 4.5) is an open source library for building distributed applications that we built, use, and think you will find helpful. Foundatio provides in memory, redis, and azure implementations. This allows you to do development or testing using in-memory versions and switch them out for redis or azure implementations in production. This saves you time (setup and maintaining) and money (not paying for cloud resources) during development and testing! Foundatio source code can be found at <a title="Foiundatio Source Code on GitHub" href="https://github.com/exceptionless/Foundatio" target="_blank">https://github.com/exceptionless/Foundatio</a>.
+Foundatio (Requires .NET 4.5) is an open source library for building distributed applications that we built, use, and think you will find helpful. Foundatio provides in memory, redis, and azure implementations. This allows you to do development or testing using in-memory versions and switch them out for redis or azure implementations in production. This saves you time (setup and maintaining) and money (not paying for cloud resources) during development and testing! Foundatio source code can be found at <a title="Foiundatio Source Code on GitHub" href="https://github.com/FoundatioFx/Foundatio" target="_blank">https://github.com/FoundatioFx/Foundatio</a>.
 
 Exceptionless was built using Foundatio and utilizes implementations for caching, queues, locks, messaging, jobs, file storage, and metrics.
 
@@ -79,7 +79,7 @@ Contains the redis implementations of file storage. The azure packages are split
 ## Other
 
 <a title="Exceptionless Lucene Query Parser NuGet Package" href="https://www.nuget.org/packages/Exceptionless.LuceneQueryParser/" target="_blank">Exceptionless LuceneQueryParser</a>
-Lucene Query Parser is a lucene style query parser that is extensible and allows additional syntax features. We use this in <a title="Exceptionless Source Code" href="https://github.com/exceptionless/Exceptionless" target="_blank">Exceptionless</a> to <a title="Exceptionless Query Source Code" href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Core/Filter/QueryProcessorVisitor.cs" target="_blank">ensure the query is valid before executing it, check to see if you are trying to a basic or premium search query and much more</a>!
+Lucene Query Parser is a lucene style query parser that is extensible and allows additional syntax features. We use this in <a title="Exceptionless Source Code" href="https://github.com/exceptionless/Exceptionless" target="_blank">Exceptionless</a> to <a title="Exceptionless Query Source Code" href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Repositories/Queries/Validation/PersistentEventQueryValidator.cs" target="_blank">ensure the query is valid before executing it, check to see if you are trying to a basic or premium search query and much more</a>!
 Frameworks: .NET 4.5
 <a title="Exceptionless LuceneQueryParser Source on GitHub" href="https://github.com/exceptionless/Exceptionless.LuceneQueryParser" target="_blank">View Source</a>
 
