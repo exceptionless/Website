@@ -78,10 +78,10 @@ Contains the redis implementations of file storage. The azure packages are split
 
 ## Other
 
-<a title="Exceptionless Lucene Query Parser NuGet Package" href="https://www.nuget.org/packages/Exceptionless.LuceneQueryParser/" target="_blank">Exceptionless LuceneQueryParser</a>
+<a title="Exceptionless Lucene Query Parser NuGet Package" href="https://www.nuget.org/packages/Foundatio.Parsers.LuceneQueries/" target="_blank">Exceptionless LuceneQueryParser</a>
 Lucene Query Parser is a lucene style query parser that is extensible and allows additional syntax features. We use this in <a title="Exceptionless Source Code" href="https://github.com/exceptionless/Exceptionless" target="_blank">Exceptionless</a> to <a title="Exceptionless Query Source Code" href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Repositories/Queries/Validation/PersistentEventQueryValidator.cs" target="_blank">ensure the query is valid before executing it, check to see if you are trying to a basic or premium search query and much more</a>!
 Frameworks: .NET 4.5
-<a title="Exceptionless LuceneQueryParser Source on GitHub" href="https://github.com/exceptionless/Exceptionless.LuceneQueryParser" target="_blank">View Source</a>
+<a title="Exceptionless LuceneQueryParser Source on GitHub" href="https://github.com/FoundatioFx/Foundatio.Parsers" target="_blank">View Source</a>
 
 <a title="Exceptionless Random Data NuGet Package" href="https://www.nuget.org/packages/Exceptionless.RandomData/" target="_blank">Exceptionless RandomData</a>
 RandomData is a utility class for easily generating random data, making the creation of good unit test data a breeze.
