@@ -5,7 +5,7 @@ date: 2015-06-22
 ---
 ![Exceptionless Data Exclusions for Security](/assets/img/news/data-exclusions.png)We realize you may have sensitive data that could potentially be transmitted within an Exceptionless error, event, log message, etc.
 
-In order to help make sure that information is not compromised, we have included a [simple comma delimited field for data exclusions](http://docs.exceptionless.com/contents/security/) on the Exceptionless Project Settings page where you can add field names that you would like to be excluded from any error or event that is reported.
+In order to help make sure that information is not compromised, we have included a [simple comma delimited field for data exclusions](/docs/security) on the Exceptionless Project Settings page where you can add field names that you would like to be excluded from any error or event that is reported.
 
 Once set, the excluded field data is discarded at the client level and never hits our servers.<!--more-->
 

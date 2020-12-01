@@ -26,7 +26,7 @@ We're super excited, but we also <span style="color: #ff0000;">**need your help
           3. Select "Include Prerelease" from the dropdown.
           4. Select the Exceptionless NuGet packages and click the Update button.
           5. **You should be good to go!
-** If you need more info, view our <a title="Upgrading Exceptionless" href="http://docs.exceptionless.com/contents/upgrading/" target="_blank">upgrading documentation</a> or contact us via in-app support.
+** If you need more info, view our <a title="Upgrading Exceptionless" href="http://localhost:8080/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">upgrading documentation</a> or contact us via in-app support.
   3. Provide feedback via <a title="Exceptionless Github Issues" href="https://github.com/exceptionless/Exceptionless/issues/new" target="_blank">GitHub Issues</a>. (good, bad, or ugly - we want it all)
   4. Be Exceptionless!
 

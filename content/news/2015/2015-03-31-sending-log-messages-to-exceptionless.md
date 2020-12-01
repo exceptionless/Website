@@ -15,7 +15,7 @@ Lets take a closer look...<!--more-->
 
 ### Using the Client
 
-For this example, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="http://docs.exceptionless.com/contents/configuration/" target="_blank">configured</a> the Exceptionless 2.0 client. If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="http://docs.exceptionless.com/contents/upgrading/" target="_blank">upgrade</a> to send us log messages. Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/contact/" target="_blank">contact page</a> if you have any questions or need assistance in this area.
+For this example, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="http://docs.exceptionless.com/contents/configuration/" target="_blank">configured</a> the Exceptionless 2.0 client. If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">upgrade</a> to send us log messages. Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/contact/" target="_blank">contact page</a> if you have any questions or need assistance in this area.
 
 #### Let's submit a log message
 
@@ -57,7 +57,7 @@ using Exceptionless;
 ExceptionlessClient.Default.CreateLog(typeof(MainWindow).FullName, "Info log example", "Info").AddTags("Wpf").Submit();
 ```
 
-There are a number of additional pieces of data you can use for your event. The below bullets include the current EventBuilder list, but we are always adding more that can be found on <a title="Exceptionless EventBuilder.cs" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Shared/EventBuilder.cs" target="_blank">GitHub</a>. Also, view more examples here on our <a title="Send Exceptionless Events" href="http://docs.exceptionless.com/contents/sendingevents/" target="_blank">Sending Events</a> page.
+There are a number of additional pieces of data you can use for your event. The below bullets include the current EventBuilder list, but we are always adding more that can be found on <a title="Exceptionless EventBuilder.cs" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Shared/EventBuilder.cs" target="_blank">GitHub</a>. Also, view more examples here on our <a title="Send Exceptionless Events" href="/docs/api/posting-events/" target="_blank">Sending Events</a> page.
 
 * AddTags
 * SetProperty
@@ -106,13 +106,13 @@ Below is a JSON example of a log message, with source, message, and log level.
 
 We also have integrations with major logging frameworks. The benefits of using a logging framework is finer, more granular control over what is logged.
 
-For example, you can log only warnings or errors project-wide, but then enable trace level messages for a specific class. <a title="Exceptionless NLog Log Message Implementation" href="https://github.com/exceptionless/Exceptionless/blob/master/Source/Api/NLog.config#L31-L34" target="_blank">We do this on our project</a> to keep our system from getting filled up with noise that doesn't add any value unless there is an issue.
+For example, you can log only warnings or errors project-wide, but then enable trace level messages for a specific class. We do this to keep our system from getting filled up with noise that doesn't add any value unless there is an issue.
 
 This also allows you to quickly change what you want to log to. Maybe you want to turn off logging to Exceptionless, or log to Exceptionless and to disk.
 
 #### NLog or Log4net Usage
 
-To use the <a title="Exceptionless NLog Nuget Package" href="https://www.nuget.org/packages/exceptionless.nlog" target="_blank">NLog </a>or <a title="Exceptionless Log4net Nuget Package" href="https://www.nuget.org/packages/exceptionless.log4net" target="_blank">Log4net</a> clients, you’ll just need to bring down the nuget package and follow the detailed readme. You can also take a look at our <a title="Exceptionless NLog Log4net Logging Sample" href="https://github.com/exceptionless/Exceptionless.Net/tree/master/Source/Samples/SampleConsole" target="_blank">sample app</a>, which uses both frameworks.
+To use the <a title="Exceptionless NLog Nuget Package" href="https://www.nuget.org/packages/exceptionless.nlog" target="_blank">NLog </a>or <a title="Exceptionless Log4net Nuget Package" href="https://www.nuget.org/packages/exceptionless.log4net" target="_blank">Log4net</a> clients, you’ll just need to bring down the nuget package and follow the detailed readme. 
 
 _<span style="color: #993300;">**Note on performance: Use in-memory event storage for high volumes**</span>_
 

@@ -38,7 +38,7 @@ Every plugin is passed an <a title="Exceptionless Plugin Contect" href="https://
 
 ### Exceptionless Plugin Example - Add System Uptime to Feature Usages
 
-The <a title="Exceptionless System Uptime Plugin Example" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Samples/SampleConsole/Plugins/SystemUptimePlugin.cs" target="_blank">following system uptime plugin</a> derives from IEventPlugin and places the system uptime into every feature usage event as extended data when the plugin’s Run(context) method is called.
+The following system uptime plugin derives from IEventPlugin and places the system uptime into every feature usage event as extended data when the plugin’s Run(context) method is called.
 
 ```cs
 using System;

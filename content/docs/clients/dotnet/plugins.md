@@ -13,9 +13,9 @@ A plugin is a client-side addin that is run **every time** you submit an event.
 
 ## Create a New Plugin
 
-Specify a `System.Action<EventPluginContext>` or create a class that derives from [IEventPlugin](https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Shared/Plugins/IEventPlugin.cs) to create a plugin.
+Specify a `System.Action<EventPluginContext>` or create a class that derives from [IEventPlugin](https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/Plugins/IEventPlugin.cs) to create a plugin.
 
-Every plugin is passed an [EventPluginContext](https://github.com/exceptionless/Exceptionless.Net/blob/master/Source/Shared/Plugins/EventPluginContext.cs), which contains all the valuable contextual information that your plugin may need via the following properties:
+Every plugin is passed an [EventPluginContext](https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/Plugins/EventPluginContext.cs), which contains all the valuable contextual information that your plugin may need via the following properties:
 
 - Client
 - Event
