@@ -34,11 +34,7 @@ Caching efficiency has been improved by removing redundant components that were 
 
 ![cache-improvements-2](/assets/img/news/cache-improvements-2-e1446046201498-1024x346.png)
 
-
-
 ![Caching-improvements](/assets/img/news/Caching-improvements-e1446046263253-300x224.png)
-
-
 
 ### Long-running API Tasks
 

@@ -46,7 +46,7 @@ Exceptionless 2.0 is faster, sleeker, mobile-friendly, more functional, includes
 **** Including: <a title="Exceptionless.Portable" href="https://www.nuget.org/packages/exceptionless.portable" target="_blank">Exceptionless.Portable</a> for console apps and <a title="Exceptionless NLOG Client" href="http://www.nuget.org/packages/exceptionless.nlog" target="_blank">Exceptionless.NLog</a>, an nlog target that reports to Exceptionless
 
 * **Fully Documented API**
-    For all your API needs, check out the <a title="Exceptionless API Documentation" href="https://api.exceptionless.io/docs/index" target="_blank">API Documentation</a>
+    For all your API needs, check out the <a title="Exceptionless API Documentation" href="https://api.exceptionless.io/docs/index.html" target="_blank">API Documentation</a>
 
 * **Bulk Actions
 ** Select multiple events or instances of events and do with them as you please! <a title="Exceptionless 2.0 Bulk Actions" href="/news/2014/2014-12-12-bulk-actions-sneak-peak-exceptionless-2-0-video" target="_blank">Watch the preview demo.</a>

@@ -20,7 +20,7 @@ Check out the <a title="Exceptionless on GitHub" href="https://github.com/except
 
 You'll find instructions on getting started there, including setting up your hosting environment if you want to host things yourself. If you would rather host with us, we offer [easy and affordable plans](/pricing/).
 
-If you have a feature request or issue, let us know on the <a title="Exceptionless Feedback Forum" href="https://exceptionless.uservoice.com/" target="_blank">feedback forum</a>. We are **100% committed** to supporting the project.
+If you have a feature request or issue, let us know on the <a title="Exceptionless Issue Tracker" href="https://github.com/exceptionless/Exceptionless/issues" target="_blank">issue tracker</a>. We are **100% committed** to supporting the project.
 
 ## Why Open Source?
 

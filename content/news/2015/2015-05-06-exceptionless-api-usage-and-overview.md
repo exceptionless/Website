@@ -21,7 +21,7 @@ To access the Exceptionless API, visit <a title="Exceptionless API" href="https
 
 Tokens are used to access the api and have roles (scopes). When you authenticate via the login controller action, you are getting a token that impersonates your user so it has the same roles as your user account (e.g., client and user).
 
-#### <span style="text-decoration: underline;"><a title="Exceptionless API Auth" href="https://api.exceptionless.io/docs/index#!/Auth/Auth_Login" target="_blank">Go to Auth controller action</a></span> and enter your login credentials.
+#### <span style="text-decoration: underline;"><a title="Exceptionless API Auth" href="https://api.exceptionless.io/docs/index.html#!/Auth/Auth_Login" target="_blank">Go to Auth controller action</a></span> and enter your login credentials.
 
 You can enter JSON into the model field, or you an click the yellow box on the right to pre-populate the field with acceptable JSON fields. Just replace the values that you want to specify and remove the fields you don't need, like invite token.
 
@@ -43,7 +43,7 @@ First, get your project ID from the Exceptionless Dashboard. It can be found in 
 
 ![Get Exceptionless Project ID](/assets/img/news/03get-project-ID-300x141.png)
 
-Now, we’ll navigate to <a title="Exceptionless Create Token" href="https://api.exceptionless.io/docs/index#!/Token/Token_PostByProject" target="_blank">Tokens > POST /api/v2/projects/{projectId}/tokens</a>, enter our Project ID, and set up our token to include the user scope and a quick note.
+Now, we’ll navigate to <a title="Exceptionless Create Token" href="https://api.exceptionless.io/docs/index.html#!/Token/Token_PostByProject" target="_blank">Tokens > POST /api/v2/projects/{projectId}/tokens</a>, enter our Project ID, and set up our token to include the user scope and a quick note.
 
 ![Create Exceptionless Token](/assets/img/news/04get-new-token1-300x220.png)
 
@@ -57,7 +57,7 @@ Now, once again, copy this new token and place it in the "api_key" field at the 
 
 Now, lets post an event with a reference ID that we’ll use for a few other examples.
 
-First, navigate to <a title="Exceptionless API Post Event" href="https://api.exceptionless.io/docs/index#!/Event/Event_PostAsync" target="_blank">Event > POST /api/v{version}/events</a>
+First, navigate to <a title="Exceptionless API Post Event" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_PostAsync" target="_blank">Event > POST /api/v{version}/events</a>
 
 ![Exceptionless API Post Event](/assets/img/news/05post-event1-300x204.png)
 
@@ -69,7 +69,7 @@ When we click "Try it out!" and get a 202 response code, we know we’ve created
 
 ### Get Event by Reference ID
 
-If we want to get the event we just created by it’s reference_id, we can navigate to <a title="Get Exceptionless Event by ID" href="https://api.exceptionless.io/docs/index#!/Event/Event_GetByReferenceId" target="_blank">Event > GET /api/v2/events/by-ref/{referenceId}</a>, enter that reference ID, and get back the details of the event.
+If we want to get the event we just created by it’s reference_id, we can navigate to <a title="Get Exceptionless Event by ID" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_GetByReferenceId" target="_blank">Event > GET /api/v2/events/by-ref/{referenceId}</a>, enter that reference ID, and get back the details of the event.
 
 ![Get Exceptionless Event by ReferenceID](/assets/img/news/06-get-by-reference-ID2-300x271.png)
 
@@ -77,7 +77,7 @@ If we want to get the event we just created by it’s reference_id, we can navig
 
 Another example of getting an event may include using the reference ID or another search filter we just created and getting all by a reference filter. You can use any <a title="Exceptionless Search Filter Documentation" href="http://docs.exceptionless.com/contents/search/" target="_blank">search filter</a> in the filter parameter.
 
-To do so, navigate to <a title="Exceptionless API Get All" href="https://api.exceptionless.io/docs/index#!/Event/Event_Get" target="_blank">Event > GET /api/v2/events</a> and use the reference term to filter events by the reference ID.
+To do so, navigate to <a title="Exceptionless API Get All" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_Get" target="_blank">Event > GET /api/v2/events</a> and use the reference term to filter events by the reference ID.
 
 [![Exceptionless API Get All Filter Search](/assets/img/news/07-get-all-filter-reference-300x168.png)](/assets/07-get-all-filter-reference.png)
 
@@ -91,7 +91,7 @@ Naturally, we can get all the organizations or projects associated with the curr
 
 #### Organizations
 
-Navigate to <a title="Exceptionless API Get Organizations" href="https://api.exceptionless.io/docs/index#!/Organization/Organization_Get" target="_blank">Organization > GET /api/v2/organizations</a> and click "Try it out!"
+Navigate to <a title="Exceptionless API Get Organizations" href="https://api.exceptionless.io/docs/index.html#!/Organization/Organization_Get" target="_blank">Organization > GET /api/v2/organizations</a> and click "Try it out!"
 
 ![Exceptionless API Get Organization Results](/assets/img/news/08get-organizations2-300x202.png)
 
@@ -99,7 +99,7 @@ Navigate to <a title="Exceptionless API Get Organizations" href="https://api.exc
   Projects
 </h4>
 
-Navigate to <a title="Exceptionless API Get Projects" href="https://api.exceptionless.io/docs/index#!/Project/Project_Get" target="_blank">Project > GET /api/v2/projects</a> and click "Try it out!"
+Navigate to <a title="Exceptionless API Get Projects" href="https://api.exceptionless.io/docs/index.html#!/Project/Project_Get" target="_blank">Project > GET /api/v2/projects</a> and click "Try it out!"
 
 ![Exceptionless API Get Projects Results](/assets/img/news/09get-projects2-300x204.png)
 

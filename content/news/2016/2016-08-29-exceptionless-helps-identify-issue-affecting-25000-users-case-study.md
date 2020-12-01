@@ -47,4 +47,4 @@ I'm not a huge fan of the current dashboard. It's effective, but with the amount
 
 Thanks for your time, Will! We love to hear from our users, and we'll definitely take that dashboard feedback and see what we can do there to make it more useful.
 
-Do you have feedback on Exceptionless? Has it helped you find bugs and beat them into submission? Join us in the [Exceptionless Slack](https://exceptionless.slack.com) and let us know!
+Do you have feedback on Exceptionless? Has it helped you find bugs and beat them into submission? Join us in the [Exceptionless Discord](https://discord.gg/6HxgFCx) and let us know!

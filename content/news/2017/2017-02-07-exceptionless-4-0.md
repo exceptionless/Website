@@ -37,7 +37,7 @@ Our goal is to have everyone be able to setup and use Exceptionless in a matter 
 
 With Exceptionless 4.0.0, we continued to focus on finishing up backend improvements to both our [repositories](https://github.com/FoundatioFx/Foundatio.Repositories) and [parsers](https://github.com/FoundatioFx/Foundatio.Parsers) that we made in the 3.5 releases. We feel that **all the pieces are finally in place to allow us to do custom dashboards in the near future**, something we talk about in our [2017 Roadmap blog post](/2017-exceptionless-feature-functionality-and-enhancement-roadmap/).
 
-[Foundatio.Parsers](https://github.com/FoundatioFx/Foundatio.Parsers) now gives us the ability to define and validate custom aggregations using Lucene-style syntax. For example, lets say I want a date histogram that shows the min, max and average event value. I'd just need to pass `date:(date min:value max:value avg:value)` to the following endpoint: [`/api/v2/events/count?aggregations=date:(date min:value max:value avg:value)`](https://api.exceptionless.io/docs/index#!/Event/Event_GetCountAsync) to return aggregations across a time series!
+[Foundatio.Parsers](https://github.com/FoundatioFx/Foundatio.Parsers) now gives us the ability to define and validate custom aggregations using Lucene-style syntax. For example, lets say I want a date histogram that shows the min, max and average event value. I'd just need to pass `date:(date min:value max:value avg:value)` to the following endpoint: [`/api/v2/events/count?aggregations=date:(date min:value max:value avg:value)`](https://api.exceptionless.io/docs/index.html#!/Event/Event_GetCountAsync) to return aggregations across a time series!
 
 ## Upgrading to 4.0.0
 

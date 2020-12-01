@@ -57,7 +57,7 @@ Microsoft <a title="Azure" href="https://azure.microsoft.com" target="_blank" r
 ### Apiary
 
 **Api documentation**
-<a title="Apiary" href="http://apiary.io/" target="_blank" rel="noopener">Apiary</a> allows you to easily write a custom API blueprint for your project. Once created, you can share it with your teammates or customers to test. Once you have the perfect API mock, let your developers get to work. Check out the upcoming <a title="Exceptionless 2.0 Documentation" href="http://docs.exceptionless.apiary.io/" target="_blank" rel="noopener">Exceptionless 2.0 documentation</a>.
+<a title="Apiary" href="http://apiary.io/" target="_blank" rel="noopener">Apiary</a> allows you to easily write a custom API blueprint for your project. Once created, you can share it with your teammates or customers to test. Once you have the perfect API mock, let your developers get to work. Check out the upcoming <a title="Exceptionless 2.0 Documentation" href="https://api.exceptionless.io/docs/index.html" target="_blank" rel="noopener">Exceptionless 2.0 documentation</a>.
 
 ### Google Apps for Work
 

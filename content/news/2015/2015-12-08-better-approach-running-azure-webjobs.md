@@ -95,4 +95,4 @@ The last steps are to simply compile the project and deploy it to your Azure web
 
 ### Questions?
 
-If you have any questions please feel free to contact us via our contact page, in app message, [GitHub issues](https://github.com/FoundatioFx/Foundatio/issues) or our [chat room](https://gitter.im/exceptionless/Discuss).
+If you have any questions please feel free to contact us via our contact page, in app message, [GitHub issues](https://github.com/FoundatioFx/Foundatio/issues) or [Discord](https://discord.gg/6HxgFCx).

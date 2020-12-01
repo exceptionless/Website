@@ -34,7 +34,7 @@ We're super excited, but we also <span style="color: #ff0000;">**need your help
 
 * <a title="Exceptionless 2.0 Upgrade Instructions" href="http://docs.exceptionless.com/contents/upgrading/" target="_blank">How to Upgrade 1.x client to 2.0</a>
 * <a title="Search Terms" href="http://docs.exceptionless.com/contents/search/" target="_blank">Search Terms</a>
-* <a title="Exceptionless API Documentation" href="https://api.exceptionless.io/docs/index" target="_blank">Fully Documented API</a>
+* <a title="Exceptionless API Documentation" href="https://api.exceptionless.io/docs/index.html" target="_blank">Fully Documented API</a>
 
 ### Notes
 
@@ -57,7 +57,7 @@ We have covered many of these new features in previous update posts, but there a
 **** Including: <a title="Exceptionless.Portable" href="https://www.nuget.org/packages/exceptionless.portable" target="_blank">Exceptionless.Portable</a> for console apps and <a title="Exceptionless NLOG Client" href="http://www.nuget.org/packages/exceptionless.nlog" target="_blank">Exceptionless.NLog</a>, an nlog target that reports to Exceptionless
 
 * **Fully Documented API**
-    For all your API needs, check out the <a title="Exceptionless API Documentation" href="https://api.exceptionless.io/docs/index" target="_blank">API Documentation</a>
+    For all your API needs, check out the <a title="Exceptionless API Documentation" href="https://api.exceptionless.io/docs/index.html" target="_blank">API Documentation</a>
 * **Bulk Actions
 ** Select multiple events or instances of events and do with them as you please! <a title="Exceptionless 2.0 Bulk Actions" href="/bulk-actions-sneak-peak-exceptionless-2-0-video/" target="_blank">Watch the preview demo.</a>
 
