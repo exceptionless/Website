@@ -32,7 +32,7 @@ curl --location --request POST "https://api.exceptionless.com/api/v2/events" \
 
 ---
 
-You've got your account created, now what? Let's get your project set up and then we can dive into some best practice and ways to enhance your use of Exceptionless.
+You've got your account created, now what? Let's get a better understanding of how you manage events in Exceptionless and then we can dive into some best practice and ways to enhance your use.
 
 ---
 

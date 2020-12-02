@@ -179,7 +179,7 @@ exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
 
 ## Self Hosted Options
 
-The Exceptionless client can also be configured to send data to your self hosted instance. This is configured by setting the `serverUrl` setting to point to your Exceptionless instance.
+The Exceptionless client can also be configured to send data to your [self hosted instance](/docs/self-hosting/). This is configured by setting the `serverUrl` setting to point to your Exceptionless instance.
 
 ### JavaScript
 
