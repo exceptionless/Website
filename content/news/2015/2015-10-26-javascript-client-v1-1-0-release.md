@@ -11,8 +11,8 @@ Also, we would like to give a shout out to [@frankerbersoll](https://github.com/
 
 ## Exceptionless JavaScript Client V1.1.0 Release Notes
 
-* Improved readme and wiki. [[issue thread](https://github.com/exceptionless/Exceptionless.JavaScript/pull/31)] // _Credit: [@frankebersoll](https://github.com/frankebersoll)_
-* Bug Fix - Unhandled exceptiones in Node.js were not being capture. [[issue thread](https://github.com/exceptionless/Exceptionless.JavaScript/pull/30)] // _Credit: [@frankebersoll](https://github.com/frankebersoll)_
+* Improved readme and docs. [[issue thread](https://github.com/exceptionless/Exceptionless.JavaScript/pull/31)] // _Credit: [@frankebersoll](https://github.com/frankebersoll)_
+* Bug Fix - Unhandled exceptions in Node.js were not being capture. [[issue thread](https://github.com/exceptionless/Exceptionless.JavaScript/pull/30)] // _Credit: [@frankebersoll](https://github.com/frankebersoll)_
 * Bug Fix - Data exclusions were not always working. [[issue thread](https://github.com/exceptionless/Exceptionless.JavaScript/pull/28)] // _Credit: [@srijken](https://github.com/srijken)_
 * Bug Fix - Cancelled state wasn't properly passed through the SubmitEvent callback.
 * Temporarily disabled capturing of ajax errors [[issue thread](https://github.com/exceptionless/Exceptionless.JavaScript/issues/26)]

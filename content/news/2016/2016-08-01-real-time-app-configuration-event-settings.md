@@ -47,7 +47,7 @@ If the version hasn't changed, nothing is retrieved, **limiting data transfer,**
 
 ### Turning Off Automatic Updating
 
-If you do not want the configuration settings to update when idle, you can turn off automatic updates. To do so, please follow the respective [.NET](https://github.com/exceptionless/Exceptionless.Net/wiki/Client-Configuration-Values#updating-client-configuration-settings) or [JavaScript/Node.js](https://github.com/exceptionless/Exceptionless.JavaScript/wiki/Client-Configuration-Values#updating-client-configuration-settings) documentation.
+If you do not want the configuration settings to update when idle, you can turn off automatic updates. To do so, please follow the respective [.NET](/docs/clients/dotnet/client-configuration-values/#updating-client-configuration-settings) or [JavaScript/Node.js](/docs/clients/javascript/client-configuration-values/#updating-client-configuration-settings) documentation.
 
 ## The Main Event: Client Configuration
 
@@ -96,7 +96,7 @@ if (exceptionless.ExceptionlessClient.default.config.settings['enableWelcomeScre
 
 Pretty cool, right!
 
-For more details on client configuration, check out the [Client Configuration Project Settings documentation](https://github.com/exceptionless/Exceptionless/wiki/Project-Settings#client-configuration). Specific usage examples can be found on the [.NET](https://github.com/exceptionless/Exceptionless.Net/wiki/Client-Configuration-Values) and [JavaScript/Node.js](https://github.com/exceptionless/Exceptionless.JavaScript/wiki/Client-Configuration-Values) documentation pages respectively.
+For more details on client configuration, check out the [Client Configuration Project Settings documentation](/docs/project-settings/#client-configuration). Specific usage examples can be found on the [.NET](/docs/clients/dotnet/client-configuration-values/) and [JavaScript/Node.js](/docs/clients/javascript/client-configuration-values/) documentation pages respectively.
 
 ## Other Project Settings You Might Find Useful
 
@@ -112,7 +112,7 @@ The default tab is "General," which simply houses the project name and attached 
 
 ![exceptionless api keys](/assets/img/news/api-keys-300x127.png)
 
-This tab is where you can generate an API key for your project. Again, pretty self explanatory. Hit "New API Key" and one gets generated. For more details on API usage, check out the [API Usage documentation](https://github.com/exceptionless/Exceptionless/wiki/API-Usage) on GitHub.
+This tab is where you can generate an API key for your project. Again, pretty self explanatory. Hit "New API Key" and one gets generated. For more details on API usage, check out the [API Usage documentation](/docs/api/) on GitHub.
 
 ### Settings
 
@@ -148,7 +148,7 @@ Along with the comma delimited list of user agents to ignore, you can also tick 
 
 ![exceptionless integrations](/assets/img/news/integrations-300x143.png)
 
-Integrations with tools like Slack, Hipchat, JIRA, Basecamp, and others are very popular and can add a level of automated notifications, etc, to your workflow. So, on the integrations tab of your project's configuration you can create web hooks to integrate with your service or others as mentioned. Each web hook has a URL that it can call, and options for when it should be called. When a selected event occurs, a POST request is submitted with either event or stack data in JSON format. For more details and sample data, visit the [Exceptionless integrations documentation](https://github.com/exceptionless/Exceptionless/wiki/Integrations).
+Integrations with tools like Slack, HipChat, JIRA, Basecamp, and others are very popular and can add a level of automated notifications, etc, to your workflow. So, on the integrations tab of your project's configuration you can create web hooks to integrate with your service or others as mentioned. Each web hook has a URL that it can call, and options for when it should be called. When a selected event occurs, a POST request is submitted with either event or stack data in JSON format. For more details and sample data, visit the [Exceptionless integrations documentation](/docs/integrations/).
 
 ## That About Covers It!
 

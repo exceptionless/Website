@@ -7,7 +7,7 @@ date: 2016-07-13
 
 The latest Exceptionless release has several additions we think most of our users will find helpful. We sat down and worked on the UI, fixed some bugs, and spend a considerable amount of time improving reliability and efficiency of some of the primary pieces of the app.
 
-If you're a self hoster, you'll need to [upgrade your existing install](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting#upgrading), but if you're hosting with us there is no action required on your part to experiences the Exceptionless 3.4.
+If you're a self hoster, you'll need to [upgrade your existing install](/docs/self-hosting/upgrading-self-hosted-instance/), but if you're hosting with us there is no action required on your part to experiences the Exceptionless 3.4.
 
 For more information about this release, take a look below and/or review the [full release notes over on GitHub](https://github.com/exceptionless/Exceptionless/releases/tag/v3.4.0).<!--more-->
 
@@ -45,7 +45,7 @@ Previously we had [worked on making heartbeat events efficient](/news/2016/2016-
 
 ### Active Directory Authentication
 
-Support has been added for Active Directory Authentication. Thanks [@laughinggoose](https://github.com/laughinggoose)! To enable this feature, head over to the [Active Directory Authentication](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting#active-directory-authentication) documentation page on GitHub.
+Support has been added for Active Directory Authentication. Thanks [@laughinggoose](https://github.com/laughinggoose)! To enable this feature, head over to the [Active Directory Authentication](docs/self-hosting/kubernetes/#active-directory-authentication) documentation page on GitHub.
 
 ### Count
 

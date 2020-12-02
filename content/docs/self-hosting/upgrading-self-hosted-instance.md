@@ -29,9 +29,9 @@ Version 6 added support for Elasticsearch 7, which requires a complete data migr
 
 ## Upgrading from v4 to v5
 
-We now only provide official docker images as release artifacts. This tutorial assumes you have docker/Kubernetes installed and have followed the [setup guide](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting).
+We now only provide official docker images as release artifacts. This tutorial assumes you have docker/Kubernetes installed and have followed the [setup guide](/docs/self-hosting/).
 
-1. We now can run on linux or windows as we are running on ASP.NET Core! As a result we've completely redone the configuration. For the most part we've prefixed configuration with `EX_` and simplified it as much as possible. I'd recommend taking a look at your previous configuration settings and then read over the following [configuration document](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting#configuration) to migrate your settings.
+1. We now can run on linux or windows as we are running on ASP.NET Core! As a result we've completely redone the configuration. For the most part we've prefixed configuration with `EX_` and simplified it as much as possible. I'd recommend taking a look at your previous configuration settings and then read over the following [configuration document](/docs/self-hosting/kubernetes/#configuration) to migrate your settings.
 2. Please note that no Elasticsearch changes are required. You can continue to use your existing Elasticsearch cluster. You just need to update the connection string by following step 1.
 3. Please note that the UI and API no longer run on the same port as they are now two different docker images. You may need to update your server url accordingly in your client applications.
 

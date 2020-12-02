@@ -25,7 +25,7 @@ When the process in your command line finishes up, open your browser and navigat
 
 Go ahead and sign up for an account. Keep in mind, this is not a good production solution, but it's a great way to get started with a self-hosted error monitoring solution.
 
-Along with the front-end that we're looking at now, you also have a full Exceptionless server running. To prove it, let's run a simple cURL command.  
+Along with the front-end that we're looking at now, you also have a full Exceptionless server running. To prove it, let's run a simple cURL command.
 
 ```shell
 curl --location --request POST 'http://localhost:5000/api/v2/auth/login' \
@@ -40,7 +40,7 @@ Make sure to use the email and password you just signed up with. You should get 
 
 The problem here is the data you save in this run of your self-hosted Exceptionless instance will not be saved between runs. As soon as you shut down Docker and exit the application, your data will be deleted and you'll be starting from scratch. That's no fun. Let's fix it.
 
-Go ahead and shut down Exceptionless either by exiting in the command line or by going into your Docker Desktop Dashboard and clicking the stop button your Exceptionless instance. Once it's stopped, open up your command line again and run:  
+Go ahead and shut down Exceptionless either by exiting in the command line or by going into your Docker Desktop Dashboard and clicking the stop button your Exceptionless instance. Once it's stopped, open up your command line again and run:
 
 ```shell
 docker run --rm -it -p 5000:80 \
@@ -48,7 +48,7 @@ docker run --rm -it -p 5000:80 \
     exceptionless/exceptionless:latest
 ```
 
-If you're using PowerShell, you'll instead want to run:  
+If you're using PowerShell, you'll instead want to run:
 
 ```shell
 docker run --rm -it -p 5000:80 `
@@ -58,7 +58,7 @@ docker run --rm -it -p 5000:80 `
 
 Now, when you sign up at `http://localhost:5000`, your data will be persisted. You can start tracking errors locally and that data will be shown in your Exceptionless dashboard even after you shut down Docker/Exceptionless and restart it.
 
-Your homework: Try running this locally with SSL and SMTP enabled. It's just as simple as everything else we've done so far because Exceptionless has really taken the time to make sure the developer experience is top-notch. [Check out the instructions here](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting#simple-setup-wssl-support-and-smtp).
+Your homework: Try running this locally with SSL and SMTP enabled. It's just as simple as everything else we've done so far because Exceptionless has really taken the time to make sure the developer experience is top-notch. [Check out the instructions here](/docs/self-hosting/docker/#simple-setup-wssl-support-and-smtp).
 
 Error monitoring is incredibly important to both your customer's experience and your own sanity. To give yourself true control over error monitoring, you can choose a solution like Exceptionless, and as you've seen here, self-host it pretty easily. Of course, if you'd rather let Exceptionless take care of hosting, [that's covered too](https://exceptionless.com).
 

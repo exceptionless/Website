@@ -4,7 +4,7 @@ title: Exceptionless Documentation has Moved & Grown
 date: 2015-07-09
 tags: [ ".NET"]
 ---
-![Exceptionless-documentation-github](/assets/img/news/Exceptionless-documentation-github.png)The <a href="https://github.com/exceptionless/Exceptionless/wiki" target="_blank">Exceptionless documentation has moved to GitHub</a>!
+![Exceptionless-documentation-github](/assets/img/news/Exceptionless-documentation-github.png)The <a href="/docs/" target="_blank">Exceptionless documentation has moved to GitHub</a>!
 
 Over the past few weeks, we have taken all the existing documentation on the docs subdomain and migrated it over to the respective GitHub repo.
 
@@ -24,7 +24,7 @@ And, of course, you can get to the documentation for the individual clients (bel
 
 Basically, you can always start here and branch out to whatever client or feature you're looking for documentation for.
 
-<a href="https://github.com/exceptionless/Exceptionless/wiki" target="_blank">Check it out!</a>
+<a href="/docs/" target="_blank">Check it out!</a>
 
 ### .NET Client Documentation
 
@@ -32,18 +32,18 @@ Basically, you can always start here and branch out to whatever client or featur
 
 As you may have guessed, this documentation site resides within the Exceptionless.NET repo and contains .NET-specific info, examples, demos, and tutorials for different features. If you're a .NET user, this should be where you look for examples if you're just getting started or solutions to troubleshooting problems if you've run into a snag.
 
-<a href="https://github.com/exceptionless/Exceptionless.Net/wiki" target="_blank">View the .NET Docs</a>
+<a href="/docs/clients/dotnet/" target="_blank">View the .NET Docs</a>
 
 ### JavaScript / Node.js Client Documentation
 
 ![github-javascript](/assets/img/news/github-javascript-150x150.png)
 
-The newest addition to Exceptionless, our JavaScript / Node.js client, needs a place for documentation too! Naturally, that place is within the Exceptionless.JavaScript repo! Here you'll find JavaScript-specific details, examples, and tutorials for things like configuring the cilent, sending events, self hosting, RequireJS, SystemJS, TypeScript, Express, and client configuration values.
+The newest addition to Exceptionless, our JavaScript / Node.js client, needs a place for documentation too! Naturally, that place is within the Exceptionless.JavaScript repo! Here you'll find JavaScript-specific details, examples, and tutorials for things like configuring the client, sending events, self hosting, RequireJS, SystemJS, TypeScript, Express, and client configuration values.
 
 We really hope this helps users familiarize themselves with the JavaScript client and get the most benefit out of it. We know its flexibility will help a ton of developers get their apps in order.
+
+<a href="/docs/clients/javascript/" target="_blank">View the JavaScript Docs</a>
 
 ## You Can Contribute, Too!
 
 Do you know something that could use a better example, description, or tutorial? Have you put together something that would add value for other Exceptionless users if added to the documentation? Shoot any thoughts, examples, feedback, or requests our way and we'll make sure it gets handled properly.
-
-

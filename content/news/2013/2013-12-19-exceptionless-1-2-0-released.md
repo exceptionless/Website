@@ -23,6 +23,6 @@ Update your NuGet packages to take advantage of these improvements!
 * AddObject now serializes objects to a depth of 5 by default.
 * Fixed a couple bugs that may occur when multiple client instances are running on the same machine concurrently.
 * Fixed a bug with the ExceptionlessWcfHandleErrorAttribute where it wouldn't catch errors when aspNetCompatibilityEnabled was set to false.
-* The client now submits errors to [collector.exceptionless.com/api/v1/error](http://collector.exceptionless.com/api/v1/error).
+* The client now submits errors to [collector.exceptionless.com/api/v1/error](https://collector.exceptionless.com/api/v1/error).
 * Fixed a bug that would prevent the Windows Form client from showing the Crash Report dialog.
 * Fixed a bug where multiple HttpModule sections could be added by the NuGet installer.

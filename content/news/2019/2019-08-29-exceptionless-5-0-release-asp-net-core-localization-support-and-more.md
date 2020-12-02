@@ -29,7 +29,7 @@ More details, below:<!--more-->
 
 ## Upgrading to Exceptionless 5.0
 
-If you are using our hosted service, you do not need to upgrade anything on your end. If you are self hosting Exceptionless and upgrading from version 4 or 5, a little work is needed to get up and running using the new docker images and configuration. See our [upgrade guide](https://github.com/exceptionless/Exceptionless/wiki/Upgrading) for more information.
+If you are using our hosted service, you do not need to upgrade anything on your end. If you are self hosting Exceptionless and upgrading from version 4 or 5, a little work is needed to get up and running using the new docker images and configuration. See our [upgrade guide](/docs/self-hosting/upgrading-self-hosted-instance/) for more information.
 
 Check out the [official release notes](https://github.com/exceptionless/Exceptionless/releases/tag/v5.0.0) here, or view the [full changelog](https://github.com/exceptionless/Exceptionless/compare/v4.1.0...v5.0.0) if you are interested in a complete list of changes.
 

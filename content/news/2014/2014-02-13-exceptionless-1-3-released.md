@@ -55,7 +55,7 @@ Exceptionless 1.3 brings with it both server and client changes, including [open
       Adding binding redirects to the right version.
     </li>
     <li>
-      Data Exclusions now <a href="http://docs.exceptionless.com/contents/security/" target="_blank">support wildcards</a>.
+      Data Exclusions now <a href="/docs/security/" target="_blank">support wildcards</a>.
     </li>
   </ul>
 </div>

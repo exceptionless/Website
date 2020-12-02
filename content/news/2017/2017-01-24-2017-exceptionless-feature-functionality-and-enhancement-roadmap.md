@@ -29,7 +29,7 @@ Upgrading to Elasticsearch 5 has been in the works for some time now, with early
 
 We're always working on notifications, we've got <a href="https://github.com/exceptionless/Exceptionless/issues/177" target="_blank">several distinct changes we want to work on in 2017</a>. Here are a few of the important ones:
 
-* We will continue working on rich, rule based notifications for email, services like Slack and Hipchat, and more.
+* We will continue working on rich, rule based notifications for email, services like Slack and HipChat, and more.
 * Pausing notifications will soon be a thing!
 * You'll also be able to set up notifications based on the rate of events, so you can know when issues are ramping up or getting out of hand.
 * Lastly, you will be able to receive a periodic digest email based on activity.

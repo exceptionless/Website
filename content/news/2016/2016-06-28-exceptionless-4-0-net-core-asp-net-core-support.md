@@ -17,8 +17,8 @@ We know many of you have been waiting for this, and it's been a long time coming
 
 If .NET 4.0 is a requirement for your projects, you will need to continue using the Exceptionless.NET v3.5 NuGet Packages, which are not being deprecated.
 
-As a matter of housekeeping, we removed the `ExceptionlessClient.Current` property, which was replaced with `ExceptionlessClient.Default` in v2.0.0, and the configuration `EnableSSL` properties (also depracated in v2).
+As a matter of housekeeping, we removed the `ExceptionlessClient.Current` property, which was replaced with `ExceptionlessClient.Default` in v2.0.0, and the configuration `EnableSSL` properties (also deprecated in v2).
 
 ## Upgrading
 
-Updating the NuGet packages should be all you need to do if you are upgrading from Exceptionless.NET v2 or v3. Take a look at the [upgrade guide](https://github.com/exceptionless/Exceptionless.Net/wiki/Upgrading) if you have any questions.
+Updating the NuGet packages should be all you need to do if you are upgrading from Exceptionless.NET v2 or v3. Take a look at the [upgrade guide](/docs/clients/dotnet/upgrading/) if you have any questions.

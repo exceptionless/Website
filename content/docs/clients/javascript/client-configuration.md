@@ -28,7 +28,7 @@ order: 1
 
 ### Node.js
 
-1. Install the package by running `npm install exceptionless --save-dev`. 
+1. Install the package by running `npm install exceptionless --save-dev`.
 1. Add the Exceptionless client to your app:
 
 ```javascript
@@ -94,25 +94,29 @@ submissionBatchSize: 100
 });
 ```
 
-**NOTE**: creating new instances is good for sending custom events. **Automatic catching of errors uses default client**. Make sure you setup default client as well if you need automatic catching of unhandled errors. 
+**NOTE**: creating new instances is good for sending custom events. **Automatic catching of errors uses default client**. Make sure you setup default client as well if you need automatic catching of unhandled errors.
 
 
 ### General Data Protection Regulation
-By default the Exceptionless Client will report all available metadata which could include potential PII data. There are various ways to limit the scope of PII data collection. For example, one could use [Data Exclusions](https://github.com/exceptionless/Exceptionless/wiki/Security#data-exclusions) to remove sensitive values but it only applies to specific collection points such as `Cookie Keys`, `Form Data Keys`, `Query String Keys` and `Extra Exception properties`. Additional data may need to be removed for the GDPR like the collection of user names and IP Addresses. Shown below is several examples of how you can configure the client to remove this additional metadata.
+
+By default the Exceptionless Client will report all available metadata which could include potential PII data. There are various ways to limit the scope of PII data collection. For example, one could use [Data Exclusions](/docs/security/#data-exclusions) to remove sensitive values but it only applies to specific collection points such as `Cookie Keys`, `Form Data Keys`, `Query String Keys` and `Extra Exception properties`. Additional data may need to be removed for the GDPR like the collection of user names and IP Addresses. Shown below is several examples of how you can configure the client to remove this additional metadata.
 
 You have the option of finely tuning what is collected via individual setting options or you can disable the collection of all PII data by setting the `includePrivateInformation` to `false`.
 
 #### Query String
+
 ```javascript
 <script src="bower_components/exceptionless/dist/exceptionless.min.js?apiKey=API_KEY_HERE& includePrivateInformation=false"></script>
 ```
 
 #### JavaScript
+
 ```javascript
 exceptionless.ExceptionlessClient.default.config.includePrivateInformation = false;
 ```
 
 #### Node.js
+
 ```javascript
 var exceptionless = require('exceptionless');
 exceptionless.ExceptionlessClient.default.config.includePrivateInformation = false;
@@ -121,6 +125,7 @@ exceptionless.ExceptionlessClient.default.config.includePrivateInformation = fal
 If you wish to have a finer grained approach which allows you to use Data Exclusions while removing specific meta data collection you can do so via code. Please note if the below doesn't meet your needs you can always write a plugin.
 
 #### JavaScript
+
 ```javascript
 // Include the username if available.
 exceptionless.ExceptionlessClient.default.config.includeUserName = false;
@@ -137,6 +142,7 @@ exceptionless.ExceptionlessClient.default.config.includeQueryString = false;
 ```
 
 #### Node.js
+
 ```javascript
 var exceptionless = require('exceptionless');
 
@@ -155,14 +161,17 @@ exceptionless.ExceptionlessClient.default.config.includeQueryString = false;
 ```
 
 ## Versioning
-By specifying an application version you can [enable additional functionality](https://github.com/exceptionless/Exceptionless/wiki/Versioning). It's a good practice to specify an application version if possible using the code below.
+
+By specifying an application version you can [enable additional functionality](/docs/versioning/). It's a good practice to specify an application version if possible using the code below.
 
 ### JavaScript
+
 ```javascript
 exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
 ```
 
 ### Node.js
+
 ```javascript
 var exceptionless = require('exceptionless');
 exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
@@ -188,6 +197,7 @@ You can set the `serverUrl` on the default ExceptionlessClient instance.
 var client = require('exceptionless.node').ExceptionlessClient.default;
 client
 ```
---- 
+
+---
 
 [Next > Client Configuration Values](client-configuration-values) {.text-right}

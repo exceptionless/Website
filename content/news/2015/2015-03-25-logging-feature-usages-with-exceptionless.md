@@ -13,7 +13,7 @@ What you learn from logging these types of feature usages might surprise you, an
 
 ### Using the client
 
-For this example, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="https://github.com/exceptionless/Exceptionless.Net/wiki/Configuration" target="_blank" rel="noopener noreferrer">configured</a> the Exceptionless 2.0 client. If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="https://github.com/exceptionless/Exceptionless.Net/wiki/Upgrading" target="_blank" rel="noopener noreferrer">upgrade</a> to send us feature usage events. Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/contact/" target="_blank" rel="noopener noreferrer">contact page</a> if you have any questions or need assistance in this area.
+For this example, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="/docs/clients/dotnet/configuration/" target="_blank" rel="noopener noreferrer">configured</a> the Exceptionless 2.0 client. If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="/docs/clients/dotnet/upgrading/" target="_blank" rel="noopener noreferrer">upgrade</a> to send us feature usage events. Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/contact/" target="_blank" rel="noopener noreferrer">contact page</a> if you have any questions or need assistance in this area.
 
 #### Example 1 - Signup
 
@@ -52,7 +52,7 @@ ExceptionlessClient.Default.CreateFeatureUsage("Searching").SetUserIdentity("Joh
 
 #### What else can I add to a submission?
 
-There are a number of additional pieces of data you can use for your event. The below bullets include the current EventBuilder list, but we are always adding more that can be found on <a title="Exceptionless EventBuilder.cs" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/EventBuilder.cs" target="_blank" rel="noopener noreferrer">GitHub</a>. Also, view more examples here on our <a title="Send Exceptionless Events" href="https://github.com/exceptionless/Exceptionless.Net/wiki/Sending-Events" target="_blank" rel="noopener noreferrer">Sending Events</a> page.
+There are a number of additional pieces of data you can use for your event. The below bullets include the current EventBuilder list, but we are always adding more that can be found on <a title="Exceptionless EventBuilder.cs" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/EventBuilder.cs" target="_blank" rel="noopener noreferrer">GitHub</a>. Also, view more examples here on our <a title="Send Exceptionless Events" href="/docs/clients/dotnet/sending-events/" target="_blank" rel="noopener noreferrer">Sending Events</a> page.
 
 * AddTags
 * SetProperty

@@ -29,6 +29,6 @@ Once integrated and configured, notifications will look something like the below
 
 We're excited to keep improving notifications, and would love for you guys to continue testing and providing feedback! What else would you like to see happening with notifications? What are we doing right, and wrong?
 
-Integrations with other chat & productivity tools like Hipchat and Microsoft Teams are on our list, as well, so if you use these please ping us and let us know so we can gauge interest!
+Integrations with other chat & productivity tools like HipChat and Microsoft Teams are on our list, as well, so if you use these please ping us and let us know so we can gauge interest!
 
 Until next time, code on my friends.

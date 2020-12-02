@@ -8,7 +8,8 @@ order: 2
 - [Subscribing to Client Configuration Setting changes](#subscribing-to-client-configuration-setting-changes)
 
 ## About
-[Read about client configuration and view in-depth examples](https://github.com/exceptionless/Exceptionless/wiki/Project-Settings#client-configuration)
+
+[Read about client configuration and view in-depth examples](/docs/project-settings/#client-configuration)
 
 ## Usage Example
 
@@ -23,13 +24,13 @@ Then, we register a new client side plugin that runs each time an event is creat
 ```javascript
 exceptionless.ExceptionlessClient.default.config.addPlugin('Conditionally cancel log submission', 100, function (context, next) {
     var enableLogSubmission = context.client.config.settings['enableLogSubmission'];
- 
+
     // only cancel event submission if it’s a log event and
     // enableLogSubmission is set to a value and the value is not true.
     if (context.event.type === 'log' && (!!enableLogSubmission && enableLogSubmission !== 'true')) {
        context.cancelled = true;
     }
- 
+
     next();
 });
 ```
@@ -41,11 +42,11 @@ exceptionless.ExceptionlessClient.default.config.addPlugin('Conditionally cancel
 
 ![Exceptionless Client Configuration Settings](../../../assets/img/docs/client-configuration.png)
 
-All project settings are synced to the client in almost real time. When an event is submitted to Exceptionless we send down a response header with the current configuration version. If a newer version is available we will immediately retrieve and apply the latest configuration. 
+All project settings are synced to the client in almost real time. When an event is submitted to Exceptionless we send down a response header with the current configuration version. If a newer version is available we will immediately retrieve and apply the latest configuration.
 
-By default the client will check after `5 seconds` on client startup (*if no events are submitted on startup*) and then every `2 minutes` after the last event submission for updated configuration settings. 
-  * Checking for updated settings doesn't count towards plan limits. 
-  * Only the current configuration version is sent when checking for updated settings (no user information will ever be sent). 
+By default the client will check after `5 seconds` on client startup (*if no events are submitted on startup*) and then every `2 minutes` after the last event submission for updated configuration settings.
+  * Checking for updated settings doesn't count towards plan limits.
+  * Only the current configuration version is sent when checking for updated settings (no user information will ever be sent).
   * If the settings haven't changed, then no settings will be retrieved.
 
 You can also **turn off the automatic updating of configuration settings when idle** using the code below.
@@ -67,6 +68,6 @@ exceptionless.SettingsManager.onChanged(function(configuration) {
 });
 ```
 
----  
+---
 
 [Next > Sending Events](sending-events) {.text-right}

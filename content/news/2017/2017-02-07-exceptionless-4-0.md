@@ -41,7 +41,7 @@ With Exceptionless 4.0.0, we continued to focus on finishing up backend improvem
 
 ## Upgrading to 4.0.0
 
-The only users that need to worry about upgrading anything for this new release are self hosters. If you are self hosting Exceptionless, please review the [Self Hosting Documentation](https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting), which contains information about upgrading your existing install.
+The only users that need to worry about upgrading anything for this new release are self hosters. If you are self hosting Exceptionless, please review the [Self Hosting Documentation](/docs/self-hosting/), which contains information about upgrading your existing install.
 
 Also, please take a look at the [change log](https://github.com/exceptionless/Exceptionless/compare/v3.5.1...v4.0.0) for a full list of the changes.
 

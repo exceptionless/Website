@@ -5,7 +5,7 @@ date: 2015-03-12
 ---
 ![version-2.0-launched](/assets/img/news/version-2.0-launched.png)Today, after much development and [weeks of live user testing and feedback](#preview), we have officially released Exceptionless 2.0 into the wild!
 
-Users will notice a completely new interface and experience **numerous new features and improvements**, highlighted below. Existing users that <a title="Update Exceptionless Client to 2.0" href="http://docs.exceptionless.com/contents/upgrading/" target="_blank">update their clients</a> (not required) will experience improved client efficiency, the ability to send us logs, and more. We believe 2.0 will usher in a new era in event reporting and logging, becoming a true asset to developers everywhere.
+Users will notice a completely new interface and experience **numerous new features and improvements**, highlighted below. Existing users that <a title="Update Exceptionless Client to 2.0" href="/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">update their clients</a> (not required) will experience improved client efficiency, the ability to send us logs, and more. We believe 2.0 will usher in a new era in event reporting and logging, becoming a true asset to developers everywhere.
 
 Shipping 2.0 out to our amazing customers has us **overwhelmed with excitement**, and we can't wait to see all the new ways in which Exceptionless will be used to squash bugs and improve apps everywhere. Read on for more details on updating existing clients and all the new features and changes. **We know you'll love it.**
 
@@ -23,7 +23,7 @@ Follow these quick and easy steps below to update your Exceptionless client to 
   2. Click on the Updates tab.
   3. Select the Exceptionless NuGet packages and click the Update button.
   4. **You should be good to go!
-** If you need more info, view our <a title="Upgrading Exceptionless" href="http://docs.exceptionless.com/contents/upgrading/" target="_blank">updating documentation</a> or contact us via in-app support. We're always here to help if you have any questions!
+** If you need more info, view our <a title="Upgrading Exceptionless" href="/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">updating documentation</a> or contact us via in-app support. We're always here to help if you have any questions!
 
 ## Exceptionless 2.0 Feature Recap
 

@@ -69,6 +69,6 @@ Microsoft <a title="Azure" href="https://azure.microsoft.com" target="_blank" r
 **Video conferencing**
 <a title="Skype" href="http://www.skype.com" target="_blank" rel="noopener">Skype</a> is the most popular voice communication service in the world. Skype can be used to instant message, VoIP, Send files, or collaborate with your friends, family, or team members. They provide desktop applications as well as mobile applications.
 
-## What'd We Miss?
+## What did we miss?
 
 As always, if you use other services and tools that are worth checking out, let us know. We know they're out there!

@@ -9,65 +9,34 @@ In the last Exceptionless 2.0 article, we announced the upcoming <a title="More 
 
 Plugins will allow customization and translation throughout the Exceptionless platform, including integration with third-party services and more. Read on for more details about pluggable details such as event parsing, event pipeline, and formatting.<!--more-->
 
-## <a class="anchor" style="color: #4183c4;" href="https://github.com/exceptionless/Exceptionless/wiki/Exceptionless-2.0-Overview#event-parsing-source" name="user-content-event-parsing-source"></a>Event Parsing
+## Event Parsing
 
-<ul class="task-list">
-  <li>
-    Has access to the raw POST data as well as the content type and submission client info.
-  </li>
-  <li>
-    Used to translate that raw data into events.
-  </li>
-  <li>
-    Can easily create new plugins to support new data formats like system logs.
-  </li>
-  <li>
-    Can be used to support other JSON formats like adding support for clients made for other systems.
-  </li>
-</ul>
+* Has access to the raw POST data as well as the content type and submission client info.
+* Used to translate that raw data into events.
+* Can easily create new plugins to support new data formats like system logs.
+* Can be used to support other JSON formats like adding support for clients made for other systems.
 
 [Source](https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Plugins/EventParser/IEventParserPlugin.cs)
 
-## <a class="anchor" style="color: #4183c4;" href="https://github.com/exceptionless/Exceptionless/wiki/Exceptionless-2.0-Overview#event-pipeline-source" name="user-content-event-pipeline-source"></a>Event Pipeline
+## Event Processor
 
-<ul class="task-list">
-  <li>
-    Can be used to add new functionality to the system.
-  </li>
-  <li>
-    Gets called on startup, when an event is starting to be processed and when an event is done being processed.
-  </li>
-  <li>
-    Has access to settings from both the org and project level.
-  </li>
-  <li>
-    Can be used to create integrations for 3rd party services like HipChat, Trello, GitHub, Slack, etc.
-  </li>
-</ul>
+* Can be used to add new functionality to the system.
+* Gets called on startup, when an event is starting to be processed and when an event is done being processed.
+* Has access to settings from both the org and project level.
+* Can be used to create integrations for 3rd party services like HipChat, Trello, GitHub, Slack, etc.
 
 [Source](https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Plugins/EventProcessor/IEventProcessorPlugin.cs)
 
-## <a class="anchor" style="color: #4183c4;" href="https://github.com/exceptionless/Exceptionless/wiki/Exceptionless-2.0-Overview#formatting-source" name="user-content-formatting-source"></a>Formatting
+## Formatting
 
-<ul class="task-list">
-  <li>
-    Used to control how events are displayed in the system.
-  </li>
-  <li>
-    Controls the summary view of an event.
-  </li>
-  <li>
-    Controls the stack title.
-  </li>
-  <li>
-    Controls what notification emails look like.
-  </li>
-  <li>
-    Controls which view is used to display the details of an event.
-  </li>
-</ul>
+* Used to control how events are displayed in the system.
+* Controls the summary view of an event.
+* Controls the stack title.
+* Controls what notification emails look like.
+* Controls which view is used to display the details of an event.
 
 [Source](https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Plugins/Formatting/IFormattingPlugin.cs)
+
 We believe building a pluggable exception reporting system and allowing third-party service and app access will create one of the most flexible, usable, and friendly solutions on the market.
 
 ### Coming Soon

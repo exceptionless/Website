@@ -15,7 +15,7 @@ Lets take a closer look...<!--more-->
 
 ### Using the Client
 
-For this example, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="http://docs.exceptionless.com/contents/configuration/" target="_blank">configured</a> the Exceptionless 2.0 client. If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">upgrade</a> to send us log messages. Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/contact/" target="_blank">contact page</a> if you have any questions or need assistance in this area.
+For this example, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="/docs/clients/dotnet/configuration/" target="_blank">configured</a> the Exceptionless 2.0 client. If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">upgrade</a> to send us log messages. Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/contact/" target="_blank">contact page</a> if you have any questions or need assistance in this area.
 
 #### Let's submit a log message
 
@@ -112,7 +112,7 @@ This also allows you to quickly change what you want to log to. Maybe you want t
 
 #### NLog or Log4net Usage
 
-To use the <a title="Exceptionless NLog Nuget Package" href="https://www.nuget.org/packages/exceptionless.nlog" target="_blank">NLog </a>or <a title="Exceptionless Log4net Nuget Package" href="https://www.nuget.org/packages/exceptionless.log4net" target="_blank">Log4net</a> clients, you’ll just need to bring down the nuget package and follow the detailed readme.
+To use the <a title="Exceptionless NLog NuGet Package" href="https://www.nuget.org/packages/exceptionless.nlog" target="_blank">NLog </a>or <a title="Exceptionless Log4net NuGet Package" href="https://www.nuget.org/packages/exceptionless.log4net" target="_blank">Log4net</a> clients, you’ll just need to bring down the NuGet package and follow the detailed readme.
 
 _<span style="color: #993300;">**Note on performance: Use in-memory event storage for high volumes**</span>_
 

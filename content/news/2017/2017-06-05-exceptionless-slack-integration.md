@@ -31,7 +31,7 @@ Once integrated and configured, notifications will look something like the below
 
 We're excited to keep improving notifications, and would love for you guys to test this out for us.
 
-Integrations with other chat & productivity tools like Hipchat and Microsoft Teams are on our list, as well, so if you use these please ping us and let us know so we can gauge interest!
+Integrations with other chat & productivity tools like HipChat and Microsoft Teams are on our list, as well, so if you use these please ping us and let us know so we can gauge interest!
 
 <h2 style="text-align: center;">
   <a href="https://youtu.be/U9GbYqWK1ik">WATCH NOW</a>

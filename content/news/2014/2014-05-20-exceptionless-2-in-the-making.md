@@ -12,15 +12,15 @@ Exceptionless 2.0 will include many of the feature requests that have come in si
 
 Many users have asked for ways to use Exceptionless to report additional types of events, rather than just errors. With 2.0, we are moving to an event based system that will accommodate this.
 
-## <a href="https://github.com/exceptionless/Exceptionless/wiki/Exceptionless-2.0-Overview#api-simplified" name="user-content-api-simplified"></a>API Simplified
+## <a href="/news/2014/2014-06-12-upcoming-exceptionless-2-0-simplified-api/#api-simplified" name="user-content-api-simplified">API Simplified</a>
 
 Since [going open source](/fork-us-exceptionless-goes-open-source/ "Fork Us! Exceptionless Goes Open Source"), we've wanted to simplify the API and make it easier to work with. We're taking the time to do it now, and it's going to be **awesome.** Watch out!
 
-## <a href="https://github.com/exceptionless/Exceptionless/wiki/Exceptionless-2.0-Overview#pluggable-system" name="user-content-pluggable-system"></a>Pluggable System
+## <a href="/news/2014/2014-06-25-coming-exceptionless-2-0-pluggable-system/" name="user-content-pluggable-system">Pluggable System</a>
 
 Plugins will allow customization and translation throughout the Exceptionless platform, including integration with third-party services and more.
 
-### <span style="color: inherit; font-family: inherit; font-size: 31.5px;">Client Rewrite</span>
+## Client Rewrite
 
 The client is being re-written be highly simplified and extensible, opening up platform support and ease of functionality additions.
 

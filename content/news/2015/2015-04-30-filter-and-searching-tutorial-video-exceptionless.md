@@ -46,9 +46,9 @@ Another way to control the data time frame is to simply select a period of time 
 
 Being able to search your errors and events by specific criteria is, perhaps, the largest improvement for version 2.0.
 
-By selecting the magnifying glass icon next to the calendar icon in the top navigation, you can enter <a title="Exceptionless Search Filter Documentation" href="http://docs.exceptionless.com/contents/search/" target="_blank">search criteria</a> and select whether you want the results to include fixed and/or hidden events/errors.
+By selecting the magnifying glass icon next to the calendar icon in the top navigation, you can enter <a title="Exceptionless Search Filter Documentation" href="/docs/filtering-and-searching/" target="_blank">search criteria</a> and select whether you want the results to include fixed and/or hidden events/errors.
 
-You can filter by tag, ID, organization, project, stack, type, value, IP, architecture, user, and much much more. Some searches, such as ID, require a prefix ("id:") on the search, but others, such as error.message, can be entered as strings ("A NullReferenceException occurred"). View a complete list of searchable terms, examples, and FAQs on our <a title="Exceptionless Search Documentation" href="http://docs.exceptionless.com/contents/search/" target="_blank">Searching Documentation Page</a>.
+You can filter by tag, ID, organization, project, stack, type, value, IP, architecture, user, and much much more. Some searches, such as ID, require a prefix ("id:") on the search, but others, such as error.message, can be entered as strings ("A NullReferenceException occurred"). View a complete list of searchable terms, examples, and FAQs on our <a title="Exceptionless Search Documentation" href="/docs/filtering-and-searching/" target="_blank">Searching Documentation Page</a>.
 
 ## We're Always Improving - What Could be Better?
 

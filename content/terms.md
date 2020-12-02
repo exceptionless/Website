@@ -40,7 +40,7 @@ Modifications to the Service and Prices
 ---------------------------------------
 
 1. Exceptionless reserves the right at any time and from time to time to modify or discontinue, temporarily or permanently, the Service (or any part thereof) with or without notice.
-2. Prices of all Services, including but not limited to monthly subscription plan fees to the Service, are subject to change upon 30 days notice from us. Such notice may be provided at any time by posting the changes to the Exceptionless Site ([www.exceptionless.com](http://www.exceptionless.com/)) or the Service itself.
+2. Prices of all Services, including but not limited to monthly subscription plan fees to the Service, are subject to change upon 30 days notice from us. Such notice may be provided at any time by posting the changes to the Exceptionless Site ([exceptionless.com](https://exceptionless.com/)) or the Service itself.
 3. Exceptionless shall not be liable to you or to any third party for any modification, price change, suspension or discontinuance of the Service.
 
 Copyright and Content Ownership

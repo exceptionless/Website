@@ -43,7 +43,7 @@ Let's get to it!<!--more-->
   * Various bug fixes
 * **Exceptionless.Net**
   * Upgraded to VS2017 project format and fixed an asp.net core bug.
-  * All nightly builds for all of our nuget packages can now be found on [myget](https://www.myget.org/gallery/exceptionless).
+  * All nightly builds for all of our NuGet packages can now be found on [myget](https://www.myget.org/gallery/exceptionless).
 * **Foundatio**
   * New pull request for Amazon SQS queues and CloudWatch metrics
   * We also had some more documentation contributions!

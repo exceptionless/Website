@@ -14,7 +14,7 @@ When developing <a href="/exceptionless-3-0-changes-to-build-process-dependenci
 It is now possible to get a test environment up and running on your local machine in **only a few minutes**, and production environments can be set up very quickly as well.
 
 <div class="signup center">
-  <a class="btn btn-large btn-primary" href="https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting" target="_blank">Self Host Today!</a>
+  <a class="btn btn-large btn-primary" href="/docs/self-hosting/" target="_blank">Self Host Today!</a>
 </div>
 
 <p style="text-align: center;">
@@ -29,7 +29,7 @@ It is now possible to get a test environment up and running on your local machin
 
 Getting your self hosted instance of Exceptionless up and running is super easy. In the video below, Blake does the entire install on his local machine and is sending events to Exceptionless in **less than 2 minutes!**
 
-Please note that you should review the requirements on the <a href="https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting" target="_blank">Self Hosting Documentation</a> page before installing your own instance.
+Please note that you should review the requirements on the <a href="/docs/self-hosting/" target="_blank">Self Hosting Documentation</a> page before installing your own instance.
 
 https://youtu.be/P01v289dR10
 

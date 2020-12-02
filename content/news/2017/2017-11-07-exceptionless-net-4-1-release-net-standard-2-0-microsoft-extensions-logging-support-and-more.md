@@ -21,16 +21,14 @@ More details, below:<!--more-->
 ## Version 4.1 Bug Fixes
 
 * GetFiles has been replaced with the EnumerateFiles method to improve performance in FolderObjectStorage. Thanks [@edwardmeng](https://github.com/edwardmeng) for that contribution!
-* @edwardmeng also helped us improve diangnostic logging by including timestamps and log level. Thanks again!
+* @edwardmeng also helped us improve diagnostic logging by including timestamps and log level. Thanks again!
 
 ## Upgrading to Exceptionless.NET 4.1
 
-If you are using our hosted service, you do not need to upgrade anything on your end. If you are self hosting Exceptionless and upgrading from version 2 or 3, you should just have to update your NuGet packages. See our [upgrade guide](https://github.com/exceptionless/Exceptionless.Net/wiki/Upgrading) for more information.
+If you are using our hosted service, you do not need to upgrade anything on your end. If you are self hosting Exceptionless and upgrading from version 2 or 3, you should just have to update your NuGet packages. See our [upgrade guide](/docs/clients/dotnet/upgrading/) for more information.
 
 Check out the [official release notes](https://github.com/exceptionless/Exceptionless.Net/releases/tag/v4.1.0) here, or view the [full changelog](https://github.com/exceptionless/Exceptionless.Net/compare/v4.0.4...v4.1.0) if you are interested in a complete list of changes.
 
 ## How are we doing?
 
 As always, we want to know what you think! If you have questions, concerns, or any feedback, please [submit an issue over on the GitHub repo](https://github.com/exceptionless/Exceptionless.Net/issues/new).
-
-

@@ -15,15 +15,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-rss": "^1.0.9",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.3",
-    "eleventy-plugin-embed-everything": "^1.9.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
+    "eleventy-plugin-embed-everything": "^1.9.4",
     "eleventy-plugin-seo": "^0.5.1",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-alerts": "^0.1.0",
-    "markdown-it-anchor": "^6.0.0",
+    "markdown-it-anchor": "^6.0.1",
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-bracketed-spans": "^1.0.1",
     "markdown-it-footnote": "^3.0.2",
@@ -31,6 +31,6 @@
   },
   "dependencies": {
     "@quasibit/eleventy-plugin-sitemap": "^2.0.3",
-    "commander": "^6.1.0"
+    "commander": "^6.2.0"
   }
 }

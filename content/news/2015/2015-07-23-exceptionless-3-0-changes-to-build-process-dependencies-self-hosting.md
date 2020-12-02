@@ -27,7 +27,7 @@ With Exceptionless 3.0, we now have a single build artifact that contains bo the
 
 Another change to the configuration is that you now have the ability to set every Exceptionless API Setting via Environmental Variables.
 
-Check out the documentation wiki for <a href="https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting" target="_blank">detailed Self Hosting Configuration docs</a>.
+Check out the documentation for <a href="/docs/self-hosting/" target="_blank">detailed Self Hosting Configuration docs</a>.
 
 ## Simplified Build Process
 
@@ -39,7 +39,7 @@ Expect more on this topic from us soon. In the mean time, enjoy the simplified b
 
 ## Upgrading to 3.0
 
-The only users that need to worry about upgrading anything for this new release are self hosters. If you are self hosting Exceptionless, please review the <a href="https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting" target="_blank">Self Hosting Documentation</a>, which contains information about upgrading your existing install.
+The only users that need to worry about upgrading anything for this new release are self hosters. If you are self hosting Exceptionless, please review the <a href="/docs/self-hosting/" target="_blank">Self Hosting Documentation</a>, which contains information about upgrading your existing install.
 
 ## So What?
 

@@ -75,7 +75,7 @@ If we want to get the event we just created by it’s reference_id, we can navig
 
 ### Getting the Event via a Search Filter
 
-Another example of getting an event may include using the reference ID or another search filter we just created and getting all by a reference filter. You can use any <a title="Exceptionless Search Filter Documentation" href="http://docs.exceptionless.com/contents/search/" target="_blank">search filter</a> in the filter parameter.
+Another example of getting an event may include using the reference ID or another search filter we just created and getting all by a reference filter. You can use any <a title="Exceptionless Search Filter Documentation" href="/docs/filtering-and-searching/" target="_blank">search filter</a> in the filter parameter.
 
 To do so, navigate to <a title="Exceptionless API Get All" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_Get" target="_blank">Event > GET /api/v2/events</a> and use the reference term to filter events by the reference ID.
 

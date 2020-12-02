@@ -132,7 +132,7 @@ private void OnSubmittingEvent(object sender, EventSubmittingEventArgs e) {
 
 Using major logging frameworks like NLog or Log4net gives you more granular control over what's logged.
 
-To use the [NLog](https://www.nuget.org/packages/exceptionless.nlog) or [Log4net](https://www.nuget.org/packages/exceptionless.log4net) clients, bring down the nuget package and follow the detailed readme. You can also take a look at our [sample app](https://github.com/exceptionless/Exceptionless.Net/tree/master/samples/Exceptionless.SampleConsole), which uses both frameworks.
+To use the [NLog](https://www.nuget.org/packages/exceptionless.nlog) or [Log4net](https://www.nuget.org/packages/exceptionless.log4net) clients, bring down the NuGet package and follow the detailed readme. You can also take a look at our [sample app](https://github.com/exceptionless/Exceptionless.Net/tree/master/samples/Exceptionless.SampleConsole), which uses both frameworks.
 
 **Performance Note**
 If you are logging thousands of messages a minute, you should use the in-memory event storage (below). This way, the client won't serialize the log events to disk, thus is much faster. This does mean, however, that if the application dies you will lose unsent events in memory. When you use the NLog or Log4net targets and specify the API key as part of the target configuration, we will automatically create a second client instance that uses in-memory storage only for log messages. This way, any logged exceptions or feature usages still use disk storage, while log messages use in-memory storage, allowing maximum performance.
@@ -142,6 +142,6 @@ using Exceptionless;
 ExceptionlessClient.Default.Configuration.UseInMemoryStorage();
 ```
 
----  
+---
 
 [Next > Supported Platforms](supported-platforms) {.text-right}

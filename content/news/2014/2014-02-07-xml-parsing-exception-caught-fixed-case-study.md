@@ -30,12 +30,10 @@ Along with the sheer number of occurrences, it was also noticeably slowing the s
 
 The fix was relatively simple. The client now checks for "$" in cookie names within the affected method and just doesn't handle them.
 
-**Tracking errors like this is what we're all about.** There are hundreds of thousands, probably even millions, of bugs out there _right now _that throw exceptions every day but manage to remain hidden in the shadows of code written by professional developers.
+**Tracking errors like this is what we're all about.** There are hundreds of thousands, probably even millions, of bugs out there _right now_ that throw exceptions every day but manage to remain hidden in the shadows of code written by professional developers.
 
 It's not a sign of poor programming, it simply comes with the territory. You will have bugs, big and small, in every project you work on. The difference is, with Exceptionless, you can actually be aware of, and fix, them!
 
-Another bug bites the dust, thanks to help of Exceptionless' [real-time exception reporting](http://exceptionless.com "Real Time Exception Reporting")!
+Another bug bites the dust, thanks to help of Exceptionless' [real-time exception reporting](https://exceptionless.com "Real Time Exception Reporting")!
 
 Do you have a story where our software helped you track down and squash an elusive error? Let us know! We'll publish the details and link back to your app, if you like.
-
-

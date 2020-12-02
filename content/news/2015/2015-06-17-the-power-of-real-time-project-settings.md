@@ -4,13 +4,13 @@ title: The Power of Real-time Project Settings
 date: 2015-06-17
 tags: [ ".NET"]
 ---
-Did you know there are customizable server/client configuration values within your Exceptionless Project's settings? Well **now you do** - and knowing's half the battle!
+Did you know there are customizable server/client configuration values within your Exceptionless Project's settings? Well **now you do** - and knowing is half the battle!
 
 These project level settings are a dictionary of key value pairs (string key, string value). They are defined server-side and automatically pushed to the client when they are updated. Using this feature allows you to control what you send without redeploying your app, which we think is pretty cool!<!--more-->
 
 **You can use these client configuration settings for a variety of applications, including:**
 
-* Controlling <a href="http://docs.exceptionless.com/contents/security/" target="_blank">data exclusions</a> for protecting sensitive information
+* Controlling <a href="/docs/security/" target="_blank">data exclusions</a> for protecting sensitive information
 * Enabling / Disabling user signups
 * Turning logging on or off
 * Enabling analytics

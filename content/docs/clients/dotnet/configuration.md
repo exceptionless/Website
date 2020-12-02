@@ -82,7 +82,7 @@ Exceptionless can be configured using a config section in your web.config or app
 
 ## Versioning
 
-By specifying an application version you can [enable additional functionality](https://github.com/exceptionless/Exceptionless/wiki/Versioning). By default, an application version will try to be resolved from assembly attributes.  However, it's a good practice to specify an application version if possible using the code below.
+By specifying an application version you can [enable additional functionality](/docs/versioning/). By default, an application version will try to be resolved from assembly attributes.  However, it's a good practice to specify an application version if possible using the code below.
 
 ```csharp
 using Exceptionless;
@@ -130,7 +130,7 @@ using Exceptionless.Configuration;
 
 ## Self Hosted Options
 
-The Exceptionless client can also be configured to send data to your self hosted instance. This is configured by setting the `serverUrl` setting to point to your Exceptionless instance. 
+The Exceptionless client can also be configured to send data to your self hosted instance. This is configured by setting the `serverUrl` setting to point to your Exceptionless instance.
 
 ### Configuration file
 

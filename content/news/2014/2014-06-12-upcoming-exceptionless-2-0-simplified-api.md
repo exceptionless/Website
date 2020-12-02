@@ -14,9 +14,9 @@ Exceptionless 2.0, [coming soon](/exceptionless-2-in-the-making/ "Exceptionless 
 
 * <a href="https://api.exceptionless.io/docs/index.html" target="_blank">New REST API documentation and samples site.<br /> </a>Take a look and let us know what you think![![Exceptionless API Documentation](/assets/img/news/Screen-shot-2014-06-11-at-5.20.44-PM-300x225.png)](/assets/Screen-shot-2014-06-11-at-5.20.44-PM.png)<a style="color: #4183c4;" href="https://api.exceptionless.io/docs/index.html"><br /> </a>
 * Event POSTs take the raw data and use a plugin system to interpret that data and translate them into events.
-    * This allows us to take literally any data and turn it into events in the system.
-    * The POST data is captured as a raw bytes and added immediately added to a queue for processing.
-    * Plugins can easily be created to support new data formats like system logs.
+  * This allows us to take literally any data and turn it into events in the system.
+  * The POST data is captured as a raw bytes and added immediately added to a queue for processing.
+  * Plugins can easily be created to support new data formats like system logs.
 * This simplified API will make creating libraries for other platforms dead simple.
 * The API lives in a separate project and can be hosted on high-performance systems like the new Helios IIS host.
 * Makes it easy for us to migrate the UI to a SPA app.

@@ -42,7 +42,7 @@ A default list of bot wild card exclusions is now automatically set on new proje
 
 ### Time to Upgrade
 
-Well, only if you're a self hoster. Everyone else will experience all of these awesome improvements and bug fixes the next time they log in. If you are a self hoster, please review the <a href="https://github.com/exceptionless/Exceptionless/wiki/Self-Hosting" target="_blank">Self Hosting Docs</a> for info regarding upgrading your current Exceptionless install. Naturally, if you have any questions please let us know and we will get you taken care of.
+Well, only if you're a self hoster. Everyone else will experience all of these awesome improvements and bug fixes the next time they log in. If you are a self hoster, please review the <a href="/docs/self-hosting/" target="_blank">Self Hosting Docs</a> for info regarding upgrading your current Exceptionless install. Naturally, if you have any questions please let us know and we will get you taken care of.
 
 ## In Conclusion
 
