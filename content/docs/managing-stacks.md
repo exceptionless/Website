@@ -5,7 +5,9 @@ order: 2
 
 Perhaps the most important thing you'll do in Exceptionless is manage your stacks. Think of stacks as your todo list for error management. And like any good todo list, you can drill into a task for more details, mark the task complete, or set the task aside for a later date.
 
-Exceptionless will automatically group events into stacks and when you first sign in, you'll be taken to your dashboard on the Most Frequent view.
+But what is a stack, exactly? It's pretty simple, actually. A stack is an automatically ([or manually](manual-stacking.md)) grouped list of events. Events can be errors, messages, or logs. Exceptionless will try to automatically group the same events together while gathering as much information about them as possible (i.e. number of users effected, frequency of the event, last occurence). 
+
+Now, let's take a look at how you manage these stacks. When you first sign in, you'll be taken to your dashboard on the Most Frequent view. 
 
 ![Most Frequent view of stacks on dashboard](img/Most_Frequent.png)
 

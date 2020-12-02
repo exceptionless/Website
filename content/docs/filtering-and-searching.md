@@ -2,9 +2,9 @@
 title: Filtering & Searching
 order: 4
 ---
-- [Filter by Organization & Project](#filter-by-organization-and-project)
+- [Filter by Organization & Project](#filter-by-organization--project)
 - [Filter by Time Frame](#filter-by-time-frame)
-- [Filter / Search by Specific Criteria](#filter-search-by-specific-criteria)
+- [Filter / Search by Specific Criteria](#filter--search-by-specific-criteria)
 - [Searchable Fields & Requirements](#searchable-fields--requirements)
 - [Multiple Queries](#multiple-queries)
 - [Wild Cards](#wild-cards)
@@ -129,4 +129,4 @@ All simple data types (`string`, `boolean`, `date`, `number`) that are stored in
 
 ---
 
-[Next > Bulk Actions](bulk-actions) {.text-right}
+[Next > Bulk Actions](bulk-actions.md) {.text-right}

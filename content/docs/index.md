@@ -17,10 +17,10 @@ Companies from around the world trust Exceptionless to help them deliver an impr
 
 We've [written](../news) about error monitoring, .NET, JavaScript, and development as a whole. 
 
-* [Comparing Error Monitoring Services](../news/2020/2020-10-29-comparing-monitoring-services/)  
-* [Self-Hosting Your Error Monitoring Service](../news/2020/2020-09-30-how-to-self-host-your-error-monitoring-service/)  
-* [How Exceptionless Supports JavaScript Developers](../news/2017/2017-08-30-universal-javascript-support-added-exceptionless-javascript/)  
-* [Why We're Excited About .NET 5.0](../news/2020/2020-09-24-why-we-upgraded-our-production-application-to-net-5-0/)  
+* [Comparing Error Monitoring Services](../news/2020/2020-10-29-comparing-monitoring-services.md)  
+* [Self-Hosting Your Error Monitoring Service](../news/2020/2020-09-30-how-to-self-host-your-error-monitoring-service.md/)  
+* [How Exceptionless Supports JavaScript Developers](../news/2017/2017-08-30-universal-javascript-support-added-exceptionless-javascript.md/)  
+* [Why We're Excited About .NET 5.0](../news/2020/2020-09-24-why-we-upgraded-our-production-application-to-net-5-0.md/)  
 
 --- 
 
@@ -28,4 +28,4 @@ We've [written](../news) about error monitoring, .NET, JavaScript, and developme
 
 Let's jump right into the documentation and get you up and running. Navigate at your leisure on the left, or click through each section and read the entirety of our docs (if you're an over-acheiver).
 
-[Getting Started](getting-started) {.text-right}
+[Getting Started](getting-started.md) {.text-right}

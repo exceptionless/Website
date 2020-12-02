@@ -21,8 +21,8 @@ Now, let's take a look at the available settings for your projects. There are qu
 - [Data Exclusions](#data-exclusions)
   - [Example usage](#example-usage)
 - [Error Stacking](#error-stacking)
-- [User Namespaces](#user-namespaces)
-- [Common Methods](#common-methods)
+  - [User Namespaces](#user-namespaces)
+  - [Common Methods](#common-methods)
 - [Spam Detection](#spam-detection)
 - [Client Configuration](#client-configuration)
 - [Event Exclusions](#event-exclusions)
@@ -42,7 +42,7 @@ Each client wrapper has its own guide to help you get started. Visit either one 
 
 ## Data Exclusions
 
-Data can be excluded from your error reports by specifying the information you'd like excluded. This is especially important when you are dealing with sensitive information. For example, an error on log in might, by default, send a user's password to our server. You probably don't want that, so you can exclude that type of data from being sent. For more on how we handle security issues, check out our [security page](security).
+Data can be excluded from your error reports by specifying the information you'd like excluded. This is especially important when you are dealing with sensitive information. For example, an error on log in might, by default, send a user's password to our server. You probably don't want that, so you can exclude that type of data from being sent. For more on how we handle security issues, check out our [security page](security.md).
 
 To get started, go to your project settings page, click the Settings tab. 
 
@@ -138,4 +138,4 @@ We have also added some additional known values to support **minimum log levels*
 
 ---
 
-[Next > Versioning](versioning) {.text-right}
+[Next > Versioning](versioning.md) {.text-right}

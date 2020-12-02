@@ -12,4 +12,4 @@ Bulk Actions is the ability to select multiple exceptions or occurrences of a si
 
 ---
 
-[Next > Project Settings](project-settings) {.text-right}
+[Next > Project Settings](project-settings.md) {.text-right}

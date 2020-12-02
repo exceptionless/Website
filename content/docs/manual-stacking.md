@@ -67,8 +67,8 @@ Custom, manual stacking is certainly an advanced feature. We have tried to make 
 
 * Critical Functionality - if you have a piece of your app that you need see all errors for quickly, manual stacking would be perfect. 
 * Logs - we tend to think of stacks as errors, but they don't have to be, and you can easily use manual stacking to group logs for other purposes.  
-* Notifications - manual stacking makes it easy to set up [notifications](notifications) for errors or events that happen from a specific source that you define. 
+* Notifications - manual stacking makes it easy to set up [notifications](notifications.md) for errors or events that happen from a specific source that you define. 
 
 ---
 
-[Next > Filtering & Searching](filtering-and-searching) {.text-right}
+[Next > Filtering & Searching](filtering-and-searching.md) {.text-right}
