@@ -2,7 +2,7 @@
 title: Getting Started
 order: 1
 ---
-Exceptionless provides you the tools to track errors, logs, and events while guiding you toward actionable solutions. To get started, you'll want to decide if you are self-hosting Exceptionless or using our hosted version. If you choose to use our hosted version, you can get started for free. 
+Exceptionless provides you the tools to track errors, logs, and events while guiding you toward actionable solutions. To get started, you'll want to decide if you are self-hosting Exceptionless or using our hosted version. If you choose to use our hosted version, you can get started for free.
 
 ## Hosted Option
 
@@ -13,17 +13,17 @@ Exceptionless provides you the tools to track errors, logs, and events while gui
 5. Your application will now automatically send all unhandled errors to the Exceptionless service.
 6. You can also send handled errors, feature usage or log messages along with additional information ([see documentation for your specific client](clients/index.md)).
 
-## Self-Hosted Option 
+## Self-Hosted Option
 
-We have put together comprehensive documentation to help you get started with a self-hosted Exceptionless instance. You can [find that documentation here](self-hosting). 
+We have put together comprehensive documentation to help you get started with a self-hosted Exceptionless instance. You can [find that documentation here](self-hosting/index.md).
 
-## Sending Your First Event 
+## Sending Your First Event
 
-Once you've singed up for an account and created a project, you can start receiving events. Let's take a look at sending a simple event to Exceptionless. 
+Once you've singed up for an account and created a project, you can start receiving events. Let's take a look at sending a simple event to Exceptionless.
 
-POST `api/v2/events` 
+POST `api/v2/events`
 
-```
+```shell
 curl --location --request POST "https://api.exceptionless.com/api/v2/events" \
 --header 'Authorization: Bearer YOUR_PROJECT_TOKEN' \
 --header 'Content-Type: application/json' \
@@ -36,4 +36,4 @@ You've got your account created, now what? Let's get a better understanding of h
 
 ---
 
-[Next > Managing Stacks](managing-stacks) {.text-right}
+[Next > Managing Stacks](managing-stacks.md) {.text-right}
