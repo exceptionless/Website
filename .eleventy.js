@@ -49,11 +49,8 @@ module.exports = function (eleventyConfig) {
     breaks: true,
     linkify: false,
     replaceLink: function (link, env) {
-      if (link.startsWith('http://')
-        || link.startsWith('https://')
-        || link.startsWith('/')
-        || link.startsWith('#')
-        || link.startsWith('mailto:'))
+      const doNothing = ['http://', 'https://', '/', '#', 'mailto:'];
+      if (doNothing.some((protocol) => link.startsWith(protocol)))
         return link;
       
       let dir = path.dirname(env.page?.filePathStem ?? '');
