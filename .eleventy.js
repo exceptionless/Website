@@ -148,6 +148,21 @@ module.exports = function (eleventyConfig) {
   md.renderer.rules.table_open = function(tokens, idx) {
     return '<table class="table">';
   };
+
+  const m2j = require('markdown-to-json');
+  const glob = require('glob');
+  const options = {
+    minify: false,
+    width: 70,
+    outfile: './content/assets/index.json',
+    content: true
+  };
+  //  Read all markdown files
+  glob('./content/docs/**/*.md', function(er, files) {
+    m2j.parse(files, options);
+  });
+  
+
   eleventyConfig.setLibrary('md', md);
 
   eleventyConfig.addFilter('markdownify', (markdownString) =>

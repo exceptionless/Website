@@ -31,6 +31,8 @@
   },
   "dependencies": {
     "@quasibit/eleventy-plugin-sitemap": "^2.0.3",
-    "commander": "^6.2.0"
+    "commander": "^6.2.0",
+    "glob": "^7.1.6",
+    "markdown-to-json": "^0.5.4"
   }
 }
