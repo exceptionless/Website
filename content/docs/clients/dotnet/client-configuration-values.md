@@ -5,14 +5,15 @@ order: 2
 
 ## Index
 
-* [About](#about)
-* [Usage Example](#usage-example)
-* [.NET Helpers](#net-helpers)
-* [Updating Client Configuration settings](#updating-client-configuration-settings)
-* [Subscribing to Client Configuration Setting changes](#subscribing-to-client-configuration-setting-changes)
+- [Index](#index)
+- [About](#about)
+- [Usage Example](#usage-example)
+- [.NET Helpers](#net-helpers)
+- [Updating Client Configuration settings](#updating-client-configuration-settings)
+- [Subscribing to Client Configuration Setting changes](#subscribing-to-client-configuration-setting-changes)
 
 ## About
-[Read about client configuration and view in-depth examples](../../project-settings)
+[Read about client configuration and view in-depth examples](../../project-settings.md)
 
 ## Usage Example
 
@@ -86,4 +87,4 @@ private void SettingsOnChanged(object sender, ChangedEventArgs<KeyValuePair<stri
 
 --- 
 
-[Next > Sending Events](sending-events) {.text-right}
+[Next > Sending Events](sending-events.md) {.text-right}

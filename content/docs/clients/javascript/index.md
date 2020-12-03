@@ -6,9 +6,9 @@ JavaScript client details and examples here.
 ## Topics
 
 * [Client Configuration](client-configuration.md)
-* [Sending Events](../javascript/sending-events)
-* [Self Hosted Options](../javascript/self-hosted-options)
-* [Client Configuration Settings/Values](../javascript/client-configuration-values)
+* [Sending Events](../javascript/sending-events.md)
+* [Self Hosted Options](../javascript/self-hosted-options.md)
+* [Client Configuration Settings/Values](../javascript/client-configuration-values.md)
 
 ## Supported Platforms
 
@@ -21,6 +21,10 @@ JavaScript client details and examples here.
 
 ## Related Topics
 
-* [Reference Ids](../../references-ids)
-* [User Sessions](../../user-sessions)
+* [Reference Ids](../../references-ids.md)
+* [User Sessions](../../user-sessions.md)
 * [Manual Stacking](../../manual-stacking.md)
+
+---  
+
+[Next > Configuration](client-configuration.md) {.text-right}

@@ -38,4 +38,4 @@ For example, if we want to view our organizations, we simply navigate to <https:
 
 ---
 
-[Next > Getting Project Tokens](project-tokens) {.text-right}
+[Next > Getting Project Tokens](project-tokens.md) {.text-right}

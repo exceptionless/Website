@@ -11,4 +11,4 @@ Once you're in there, you can select the project you want to edit notifications 
 
 ---
 
-[Next > Log Levels](setting-log-levels) {.text-right}
+[Next > Log Levels](setting-log-levels.md) {.text-right}

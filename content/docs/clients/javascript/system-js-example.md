@@ -6,4 +6,4 @@ order: 9
 
 ---  
 
-[Next > Typescript Example](typescript-example) {.text-right}
+[Next > Typescript Example](typescript-example.md) {.text-right}

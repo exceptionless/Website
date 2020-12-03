@@ -5,7 +5,7 @@ order: 2
 
 You'll likely want your events associated with a specific project, and you may want to fetch data from a specific project. To ensure this, you need to generate a project-specific API key (or token). You can do this in the Exceptionless interface by clicking the All Projects link in the navigation header, then hover over the project name and click the gear icon. On the Settings page, you'll see a tab for API Keys. You can generate a token there. 
 
-However, you can programmatically generate these tokens as well. Let's use the [User Scoped Token](api-getting-started) you generated previously to get a list of projects.
+However, you can programmatically generate these tokens as well. Let's use the [User Scoped Token](api-getting-started.md) you generated previously to get a list of projects.
 
 ### Get Projects 
 
@@ -74,4 +74,4 @@ This `TOKEN` can now be used as your API key in Bearer authorization headers for
 
 ---
 
-[Next > Posting Events](posting-events) {.text-right}
+[Next > Posting Events](posting-events.md) {.text-right}

@@ -21,4 +21,4 @@ order: 9
 
 ---  
 
-[Next > JavaScript Client](../javascript) {.text-right}
+[Next > JavaScript Client](../javascript/index.md) {.text-right}

@@ -173,4 +173,4 @@ ExceptionlessClient.Default.Configuration.DefaultTags.Add("Tag1");
 
 --- 
 
-[Next > Plugins](plugins) {.text-right}
+[Next > Plugins](plugins.md) {.text-right}

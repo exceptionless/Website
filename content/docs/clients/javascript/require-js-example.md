@@ -6,4 +6,4 @@ order: 8
 
 ---  
 
-[Next > SystemJS Example](system-js-example) {.text-right}
+[Next > SystemJS Example](system-js-example.md) {.text-right}

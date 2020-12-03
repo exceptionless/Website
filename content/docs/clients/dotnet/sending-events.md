@@ -144,4 +144,4 @@ ExceptionlessClient.Default.Configuration.UseInMemoryStorage();
 
 ---
 
-[Next > Supported Platforms](supported-platforms) {.text-right}
+[Next > Supported Platforms](supported-platforms.md) {.text-right}

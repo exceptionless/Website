@@ -39,4 +39,4 @@ order: 15
 
 ---
 
-[Next > Security](security) {.text-right}
+[Next > Security](security.md) {.text-right}

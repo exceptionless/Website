@@ -9,7 +9,7 @@ order: 2
 
 ## About
 
-[Read about client configuration and view in-depth examples](/docs/project-settings/#client-configuration)
+[Read about client configuration and view in-depth examples](../../project-settings.md)
 
 ## Usage Example
 
@@ -70,4 +70,4 @@ exceptionless.SettingsManager.onChanged(function(configuration) {
 
 ---
 
-[Next > Sending Events](sending-events) {.text-right}
+[Next > Sending Events](sending-events.md) {.text-right}

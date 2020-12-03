@@ -13,4 +13,4 @@ You can also use Kubernetes while self-hosting Exceptionless. We'll cover both t
 
 ---
 
-[Next > Docker](docker) {.text-right}
+[Next > Docker](docker.md) {.text-right}

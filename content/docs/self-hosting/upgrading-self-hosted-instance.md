@@ -17,7 +17,7 @@ A migration job will need to be run as there are several in place data migration
 
 ## Upgrading from v5 to v6
 
-Version 6 added support for Elasticsearch 7, which requires a complete data migration from Elasticsearch 5.x. This tutorial assumes you have docker/Kubernetes installed and have followed the [setup guide](../self-hosting/).
+Version 6 added support for Elasticsearch 7, which requires a complete data migration from Elasticsearch 5.x. This tutorial assumes you have docker/Kubernetes installed and have followed the [setup guide](../self-hosting/index.md).
 
 1. Create a new Elasticsearch 7 cluster or modify your existing `docker-compose` file to also include our Elasticsearch 7.x image (There will need to be two Elasticsearch docker instances (5.x and 7.x). Please note that we've included the Elasticsearch major version number in the data path of the docker data path, this allows you to run two versions side by side without losing the data.
 2. Add a new environment variable or config map setting for `EX_ElasticsearchToMigrate` with the value of the `EX_Elasticsearch` 5.x connection string.
@@ -29,7 +29,7 @@ Version 6 added support for Elasticsearch 7, which requires a complete data migr
 
 ## Upgrading from v4 to v5
 
-We now only provide official docker images as release artifacts. This tutorial assumes you have docker/Kubernetes installed and have followed the [setup guide](/docs/self-hosting/).
+We now only provide official docker images as release artifacts. This tutorial assumes you have docker/Kubernetes installed and have followed the [setup guide](../self-hosting/index.md).
 
 1. We now can run on linux or windows as we are running on ASP.NET Core! As a result we've completely redone the configuration. For the most part we've prefixed configuration with `EX_` and simplified it as much as possible. I'd recommend taking a look at your previous configuration settings and then read over the following [configuration document](/docs/self-hosting/kubernetes/#configuration) to migrate your settings.
 2. Please note that no Elasticsearch changes are required. You can continue to use your existing Elasticsearch cluster. You just need to update the connection string by following step 1.

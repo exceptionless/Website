@@ -68,4 +68,4 @@ Yes, you will need to set the requirePermission attribute to false in the except
 
 ---
 
-[Next > Comparison](comparison) {.text-right}
+[Next > Comparison](comparison.md) {.text-right}

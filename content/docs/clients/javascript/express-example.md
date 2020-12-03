@@ -42,4 +42,4 @@ We recommend enabling debug logging by calling `client.config.useDebugLogger();`
 
 --- 
 
-[Next > Angular Example](angular-example) {.text-right}
+[Next > Angular Example](angular-example.md) {.text-right}

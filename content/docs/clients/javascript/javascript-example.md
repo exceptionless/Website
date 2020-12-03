@@ -6,4 +6,4 @@ We have put together an example for the JavaScript client that you can use to ge
 
 ---  
 
-[Next > ExpressJS Example](express-example) {.text-right}
+[Next > ExpressJS Example](express-example.md) {.text-right}

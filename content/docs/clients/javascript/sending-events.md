@@ -84,4 +84,4 @@ try {
 
 ---  
 
-[Next > Troubleshooting](troubleshooting) {.text-right}
+[Next > Troubleshooting](troubleshooting.md) {.text-right}

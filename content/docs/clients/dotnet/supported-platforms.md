@@ -49,4 +49,4 @@ Serilog sink that sends log entries to Exceptionless.
 
 --- 
 
-[Next > Settings](settings) {.text-right}
+[Next > Settings](settings.md) {.text-right}

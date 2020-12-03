@@ -2,14 +2,25 @@
 title: Configuration
 order: 1
 ---
-* [Installation](#installation)
-  * [JavaScript](#javascript)
-  * [Node.js](#nodejs)
-* [Configuration](#configuration)
-  * [JavaScript](#javascript-1)
-  * [Node.js](#nodejs-1)
-  * [General Data Protection Regulation](#general-data-protection-regulation)
-* [Versioning](#versioning)
+- [Installation](#installation)
+  - [JavaScript](#javascript)
+    - [Via Bower](#via-bower)
+  - [Node.js](#nodejs)
+- [Configuration](#configuration)
+  - [JavaScript](#javascript-1)
+  - [Node.js](#nodejs-1)
+  - [General Data Protection Regulation](#general-data-protection-regulation)
+    - [Query String](#query-string)
+    - [JavaScript](#javascript-2)
+    - [Node.js](#nodejs-2)
+    - [JavaScript](#javascript-3)
+    - [Node.js](#nodejs-3)
+- [Versioning](#versioning)
+  - [JavaScript](#javascript-4)
+  - [Node.js](#nodejs-4)
+- [Self Hosted Options](#self-hosted-options)
+  - [JavaScript](#javascript-5)
+  - [Node.js](#nodejs-5)
 
 ***
 
@@ -162,7 +173,7 @@ exceptionless.ExceptionlessClient.default.config.includeQueryString = false;
 
 ## Versioning
 
-By specifying an application version you can [enable additional functionality](/docs/versioning/). It's a good practice to specify an application version if possible using the code below.
+By specifying an application version you can [enable additional functionality](../../versioning.md). It's a good practice to specify an application version if possible using the code below.
 
 ### JavaScript
 
@@ -179,7 +190,7 @@ exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
 
 ## Self Hosted Options
 
-The Exceptionless client can also be configured to send data to your [self hosted instance](../../../docs/self-hosting/index.md). This is configured by setting the `serverUrl` setting to point to your Exceptionless instance.
+The Exceptionless client can also be configured to send data to your [self hosted instance](../../self-hosting/index.md). This is configured by setting the `serverUrl` setting to point to your Exceptionless instance.
 
 ### JavaScript
 

@@ -70,4 +70,4 @@ docker run --rm -it -p 5000:80 -p 5001:443 `
 
 ---
 
-[Next > Kubernetes](kubernetes) {.text-right}
+[Next > Kubernetes](kubernetes.md) {.text-right}

@@ -112,4 +112,4 @@ Or you can search via the api/ui with `reference:YOUR_REFERENCE_ID`
 
 ---
 
-[Next > User Sessions](user-sessions) {.text-right}
+[Next > User Sessions](user-sessions.md) {.text-right}

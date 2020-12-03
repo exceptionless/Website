@@ -22,4 +22,4 @@ public void Integration()
 
 ---
 
-[Next > FAQ](FAQ) {.text-right}
+[Next > FAQ](FAQ.md) {.text-right}

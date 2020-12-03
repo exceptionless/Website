@@ -74,4 +74,4 @@ You can also debug the Exceptionless NuGet packages by configuring the Visual St
 
 --- 
 
-[Next > Upgrading](upgrading) {.text-right}
+[Next > Upgrading](upgrading.md) {.text-right}

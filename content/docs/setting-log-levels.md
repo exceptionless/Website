@@ -13,4 +13,4 @@ You can change this at the project level or overide the setting on the Stacks pa
 
 ---
 
-[Next > Integrations](integrations) {.text-right}
+[Next > Integrations](integrations.md) {.text-right}

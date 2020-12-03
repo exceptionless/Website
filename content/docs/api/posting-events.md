@@ -63,4 +63,4 @@ Next up, we'll take a look at how we fetch events.
 
 ---
 
-[Next > Getting Events](getting-events) {.text-right}
+[Next > Getting Events](getting-events.md) {.text-right}

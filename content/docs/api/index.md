@@ -9,6 +9,6 @@ To view the full API documentation, visit <https://api.exceptionless.io> and cli
 
 ---
 
-[Next > Getting Started](api-getting-started) {.text-right}
+[Next > Getting Started](api-getting-started.md) {.text-right}
 
 

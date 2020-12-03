@@ -115,4 +115,4 @@ ExceptionlessClient.Default.Configuration.RemovePlugin("system-uptime");
 
 ---
 
-[Next > Private Information](private-information) {.text-right}
+[Next > Private Information](private-information.md) {.text-right}

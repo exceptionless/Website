@@ -19,4 +19,4 @@ Entering `*Password*` will remove any field that **contains** `Password` from th
 
 ---
 
-[Next > API Usage](api) {.text-right}
+[Next > API Usage](api/index.md) {.text-right}

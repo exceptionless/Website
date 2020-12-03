@@ -45,4 +45,4 @@ You can also debug the Exceptionless source code by using the unmagnified versio
 
 --- 
 
-[Next > JavaScript Example](javascript-example) {.text-right}
+[Next > JavaScript Example](javascript-example.md) {.text-right}

@@ -14,7 +14,7 @@ An application version will try and be resolved if possible, but it's a good ide
 
 ## Choose your Client
 
-* [.NET](clients/dotnet/)
+* [.NET](clients/dotnet/index.md)
 * [JavaScript / Node.js](clients/javascript/client-configuration.md)
 
 ## What does mark fixed do?
@@ -37,4 +37,4 @@ This meta data is then inspected when an matching event is processed to determin
 
 ---
 
-[Next > Reference Ids](references-ids) {.text-right}
+[Next > Reference Ids](references-ids.md) {.text-right}

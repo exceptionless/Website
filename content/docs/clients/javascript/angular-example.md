@@ -41,4 +41,4 @@ We recommend enabling debug logging by calling `$ExceptionlessClient.config.useD
 
 ---  
 
-[Next > RequireJS Example](require-js-example) {.text-right}
+[Next > RequireJS Example](require-js-example.md) {.text-right}

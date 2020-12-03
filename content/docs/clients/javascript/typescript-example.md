@@ -6,4 +6,4 @@ order: 10
 
 ---  
 
-[Next > Self-Hosting](../../self-hosting) {.text-right}
+[Next > Self-Hosting](../../self-hosting/index.md) {.text-right}

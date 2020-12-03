@@ -78,7 +78,7 @@ Please note the following:
 
 ## Upgrading
 
-Please see the [Upgrading](upgrading-self-hosted-instance) for details on how to upgrade to the current version.
+Please see the [Upgrading](upgrading-self-hosted-instance.md) for details on how to upgrade to the current version.
 
 ## Troubleshooting
 
@@ -89,4 +89,4 @@ If you are having issues please try the following to resolve the issues. If this
 
 ---
 
-[Next > Upgrading](upgrading-self-hosted-instance) {.text-right}
+[Next > Upgrading](upgrading-self-hosted-instance.md) {.text-right}

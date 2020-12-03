@@ -20,3 +20,7 @@ title: .NET Client
 * [Reference Ids](../../references-ids.md)
 * [User Sessions](../../user-sessions.md)
 * [Manual Stacking](../../manual-stacking.md)
+
+--- 
+
+[Next > Configuration](configuration.md) {.text-right}

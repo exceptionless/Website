@@ -160,4 +160,4 @@ The response will be a single object with the details of the event like this:
 
 ---
 
-[Next > Clients](../clients) {.text-right}
+[Next > Clients](../clients/index.md) {.text-right}

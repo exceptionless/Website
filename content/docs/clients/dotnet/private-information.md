@@ -19,7 +19,7 @@ You have the option of finely tuning what is collected via individual setting op
 ExceptionlessClient.Default.Configuration.IncludePrivateInformation = false;
 ```
 
-If you wish to have a finer grained approach which allows you to use Data Exclusions while removing specific meta data collection you can do so via code. Please note if the below doesn't meet your needs you can always [write a plugin](/docs/clients/dotnet/plugins/).
+If you wish to have a finer grained approach which allows you to use Data Exclusions while removing specific meta data collection you can do so via code. Please note if the below doesn't meet your needs you can always [write a plugin](../dotnet/plugins.md).
 
 ## Configuration
 
@@ -40,4 +40,4 @@ ExceptionlessClient.Default.Configuration.IncludeQueryString = false;
 
 ---
 
-[Next > Troubleshooting](troubleshooting) {.text-right}
+[Next > Troubleshooting](troubleshooting.md) {.text-right}
