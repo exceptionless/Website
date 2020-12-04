@@ -1,6 +1,6 @@
 ---
 title: FAQ
-order: 14
+order: 15
 ---
 - [Will Exceptionless slow my application down?](#will-exceptionless-slow-my-application-down)
 - [Why is my organization throttled?](#why-is-my-organization-throttled)

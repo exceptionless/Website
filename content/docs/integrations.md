@@ -1,6 +1,6 @@
 ---
 title: Integrations
-order: 13
+order: 14
 ---
 1. Go to Admin - Projects - Edit - Integrations - Add Web Hook
 2. Enter a URL for your integration and an event for which it should fire.
