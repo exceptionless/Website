@@ -12,16 +12,20 @@ Shout out to <a href="https://github.com/frankebersoll" target="_blank">@frankeb
 
 ## JavaScript Client v1.2 Notes
 
-**Errors**
-@frankebersoll added support for deduplicating JavaScript erros. Thanks!
+### Errors
 
-**Data Collection
-** Frank's back at it, adding support for collecting extra exception data that was already in the .NET client like module info, custom exception properties, and everything else that was already displayed in the UI when using the .NET client.
+@frankebersoll added support for deduplicating JavaScript errors. Thanks!
 
-**Node** **Info
-** Support for collecting Node module info has also been added (thanks again, @frankebersoll).
+### Data Collection
 
-**Bug Fix - Invalid States**
+Frank's back at it, adding support for collecting extra exception data that was already in the .NET client like module info, custom exception properties, and everything else that was already displayed in the UI when using the .NET client.
+
+### Node Info
+
+Support for collecting Node module info has also been added (thanks again, @frankebersoll).
+
+### Bug Fix - Invalid States
+
 An issue where Data Exclusions could cause events to be submitted in an invalid state has been fixed.
 
 ### As always, let us know if you have any questions or feedback!

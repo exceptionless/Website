@@ -17,7 +17,7 @@ These updates were all pushed with [Exceptionless.UI 2.5](https://github.com/ex
 
 ### Search Wildcard
 
-You can now use `*` to show **all **events in the search box. Woohoo!
+You can now use `*` to show **all** events in the search box. Woohoo!
 
 ### Most Users Dashboard
 
