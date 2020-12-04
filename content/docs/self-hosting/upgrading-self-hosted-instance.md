@@ -12,7 +12,9 @@ A migration job will need to be run as there are several in place data migration
 
 1. You'll need to run an out of process `Migration` job. In order to do this you'll need to update configuration to ensure it's pointing to your Elasticsearch (e.g., `EX_ConnectionStrings__Elasticsearch` environment variable/connection string) and Redis instances.
 2. Scale down existing Exceptionless apps and jobs.
-3. Start the Migration by running the `Migration` job. You can run it by opening the CLI and executing `dotnet Exceptionless.Job.dll Migration` or `kubectl apply -f migration-job.yaml` (if you are using Kubernetes).
+3. Start the `Migration` job.
+   1. For docker, you just need to pass the `Migration` argument to the `exceptionless/job` container image (e.g., `docker run exceptionless/job:latest Migration`). Please remember to pass any configuration settings (e.g., connection strings) to the migration job.
+   2. For Kubernetes, you can run [`kubectl apply -f manual-migration-job.yaml`](https://github.com/exceptionless/Exceptionless/blob/master/k8s/manual-migration-job.yaml). Please note that you may have to tweak namespaces and container image version.
 4. Scale back up and you should be good to go.
 
 ## Upgrading from v5 to v6
