@@ -1,7 +1,7 @@
 ---
 title: Why You Should be Practicing Exception Driven Development
 date: 2020-12-07
-draft: true
+draft: false
 ---
     
 You've heard of test-driven development. You've heard of behavior-driven development. Maybe you've even heard of acceptance-driven development. But you probably haven't heard much about exception-driven development. Let's take a look at what that type of development process is and why you should be practicing it. 
@@ -29,6 +29,10 @@ Bugs are a part of code. Some never get fixed. But the ones that need to be fixe
 Wait, what? 
 
 It's true. If your users have told you about bugs through email or Slack or Discord, you have already taken too long to resolve the issue. This is where the heart of exception-driven development comes in. You need to know about issues the second they arise. 
+
+You don't want to turn into this guy, right?
+
+![Picture of an angry cat acting as tech support](tech_support.png) {.text-center}
 
 Think about it this way. How many lines of code does your application have? Got that number in mind? Ok, now divide it by 1000. Take your resulting number and multiply it by 15. [That is possibly how many bugs](https://www.quora.com/What-is-the-average-ratio-of-bugs-to-a-line-of-code) you have in your software *right now*. Knowing this, don't you think it's important to try to find these bugs before your users have to tell you about them?  
 
