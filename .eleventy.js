@@ -159,6 +159,7 @@ module.exports = function (eleventyConfig) {
   };
   //  Read all markdown files
   glob('./content/docs/**/*.md', function(er, files) {
+    console.log(files);
     m2j.parse(files, options);
   });
   
