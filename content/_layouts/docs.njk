@@ -15,7 +15,7 @@ layout: default
     <div class="well span9 docs">
       <h3>Search Docs</h3>
       <input type='text' id='search-input' />
-      <button onclick='handleSearch()'>Search</button>
+      <button style='margin-top: -10px;' class='btn-primary' onclick='handleSearch()'>Search</button>
       <button onclick='clearSearch()' id='clear-button' style='display: none;'>Clear</button>
     </div>
     <div id='main-docs' class="well span9 docs">
@@ -23,10 +23,10 @@ layout: default
       {{ content | safe }}   
     </div>
     <div class="well span9 docs" id='search-results' style='display: none;'>
-      <h3>Here be the results</h3>
-      <ul id='results-ul'>
+      <h3>Search Results</h3>
+      <div id='results-ul'>
 
-      </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -38,7 +38,6 @@ layout: default
         menu.classList.toggle('visible-toc');
     }
     const handleSearch = async () => {
-      console.log("searching...");
       const docsContainer = document.getElementById('main-docs');
       docsContainer.style.display = 'none';
       const resultsContainer = document.getElementById('search-results');
@@ -58,12 +57,14 @@ layout: default
       const filtered = uniqueDocs.filter((doc) => doc.title.includes(searchTerm) || doc.content.includes(searchTerm));
       const ul = document.getElementById('results-ul');
       for(const item of filtered) {
-        const newItem = document.createElement('li');
+        const newItem = document.createElement('p');
         const anchor = document.createElement('a');
-        anchor.setAttribute('href', `${window.location.origin}/docs/${item.basename}`);
+        const path = item.path.split('./content/')[1].split('.')[0]
+        anchor.setAttribute('href', `${window.location.origin}/${path}`);
         anchor.innerText = item.title;
+
         newItem.appendChild(anchor);        
-        
+    
         ul.appendChild(newItem);
       }
     }

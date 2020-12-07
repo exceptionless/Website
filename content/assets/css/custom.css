@@ -167,6 +167,25 @@ a.deeplink:hover {
     line-height: 2em;
 }
 
+.btn-primary {
+    border-radius: 5px;
+    background-color: #6B991C;
+    background-image: -moz-linear-gradient(top,#73a818,#4c7701);
+    background-image: -ms-linear-gradient(top,#73a818,#4c7701);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#73A818),to(#4C7701));
+    background-image: -webkit-linear-gradient(top,#73A818,#4C7701);
+    background-image: -o-linear-gradient(top,#73a818,#4c7701);
+    background-image: linear-gradient(top,#73a818,#4c7701);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#73A818',endColorstr='#4C7701',GradientType=0);
+    border-color: #4C7701 #4C7701 #000;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    margin-left: 8px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+}
+
 @media (min-width: 768px) {
     .row-fluid .span6.smaller {
         width: 46% !important;
