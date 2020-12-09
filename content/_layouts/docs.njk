@@ -10,13 +10,11 @@ layout: default
   <div id="responsive-menu"><button class='btn btn-primary' onclick='handleMenu()'>Table of Contents</button></div>
   <div id="content" class="row-fluid">
     <div class="toc well span3 visible-toc">
+      <div style='display: flex; flex-direction: row; align-items: space-between; justify-content: space-between;'>
+        <input type='text' id='search-input' placeholder="Search docs" /><br/>        
+        <button style='width: 40% margin: auto; margin-left: 5px;' class='btn-primary' onclick='handleSearch()'>Search</button>
+      </div>
       {% include "docs-toc.html" %}
-    </div>
-    <div class="well span9 docs">
-      <h3>Search Docs</h3>
-      <input type='text' id='search-input' />
-      <button style='margin-top: -10px;' class='btn-primary' onclick='handleSearch()'>Search</button>
-      <button onclick='clearSearch()' id='clear-button' style='display: none;'>Clear</button>
     </div>
     <div id='main-docs' class="well span9 docs">
       <h1>{{ title }}</h1>
@@ -32,19 +30,33 @@ layout: default
 </div>
 
 <script>
-    function handleMenu() {
+    const ul = document.getElementById('results-ul');
+    let updatedWordsToDisplay = [];
+    const handleMenu = () => {
         const menu = document.querySelector('.toc');
         menu.classList.toggle('hidden-toc');
         menu.classList.toggle('visible-toc');
     }
+
+    const clearResults = async () => {
+      return new Promise((resolve) => {
+        updatedWordsToDisplay = [];        
+        if(ul) {
+          while (ul.firstChild) {
+          ul.removeChild(ul.firstChild);
+          }
+        }
+        resolve();
+      })
+    }
+
     const handleSearch = async () => {
+      await clearResults();
       const docsContainer = document.getElementById('main-docs');
       docsContainer.style.display = 'none';
       const resultsContainer = document.getElementById('search-results');
       resultsContainer.style.display = 'block';
       const searchTerm = document.getElementById('search-input').value;
-      const clearButton = document.getElementById('clear-button');
-      clearButton.style.display = 'block';
       const res = await fetch(`${window.location.origin}/assets/index.json`);
       const data = await res.json();
       const keys = Object.keys(data);
@@ -52,27 +64,50 @@ layout: default
       for(const key of keys) {
         docs.push(data[key]);
       }
+
       const uniqueDocs = [...new Set(docs)];
       
       const filtered = uniqueDocs.filter((doc) => doc.title.includes(searchTerm) || doc.content.includes(searchTerm));
-      const ul = document.getElementById('results-ul');
+
       for(const item of filtered) {
         const newItem = document.createElement('p');
         const anchor = document.createElement('a');
+        const summary = document.createElement('span');
         const path = item.path.split('./content/')[1].split('.')[0]
         anchor.setAttribute('href', `${window.location.origin}/${path}`);
+        anchor.style.cursor = 'pointer';
         anchor.innerText = item.title;
 
-        newItem.appendChild(anchor);        
-    
+        newItem.appendChild(anchor);   
+
+        const searchIndex = item.content.search(searchTerm);    
+
+        const searchArray = item.content.split(' ');
+        const searchArrayIndex = searchArray.indexOf(searchTerm);
+        
+        let previewText = "No preview available";
+        if(searchArrayIndex > -1) {
+          const wordsToDisplayArray = searchArray.slice(searchArrayIndex - 10, searchArrayIndex + 2);
+          for(const word of wordsToDisplayArray) {
+            if(word === searchTerm) {
+              updatedWordsToDisplay.push(`<mark>${word}</mark>`)
+            } else {
+              updatedWordsToDisplay.push(word);
+            }
+          }
+          previewHtml = `<p>...${updatedWordsToDisplay.join(' ')}...</p>`
+        }
+        summary.innerHTML = previewHtml;
+        newItem.appendChild(summary);
+
         ul.appendChild(newItem);
       }
     }
-    const clearSearch = () => {
-      const clearButton = document.getElementById('clear-button');
+
+    const clearSearch = async () => {      
+      await clearResults();
       const searchInput = document.getElementById('search-input');
-      searchInput.value = '';
-      clearButton.style.display = 'none';
+      searchInput.value = '';      
       const docsContainer = document.getElementById('main-docs');
       docsContainer.style.display = 'block';
       const resultsContainer = document.getElementById('search-results');
