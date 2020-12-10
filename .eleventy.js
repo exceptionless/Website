@@ -149,7 +149,7 @@ module.exports = function (eleventyConfig) {
     return '<table class="table">';
   };
 
-  const m2j = require('markdown-to-json');
+  const m2j = require('./m2json');
   const glob = require('glob');
   const options = {
     minify: false,
