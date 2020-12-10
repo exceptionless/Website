@@ -30,6 +30,13 @@ title: Search Results
 
 <script>
     document.addEventListener("DOMContentLoaded", async () => {
+      //  Listen for enter event
+      const search = document.getElementById('search-input')
+      search.addEventListener('keyup', ({key}) => {
+        if (key === "Enter") {
+          handleSearch();
+        }
+      })
       //  Get the search term from the url
       const parsedSearchTerm = decodeURI(window.location.href.split("=")[1]);
       const docsContainer = document.getElementById('main-docs');
