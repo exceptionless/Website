@@ -7,16 +7,16 @@ layout: default
 </div>
 
 <div id="wrap" class="container" role="document">
-  <div id="responsive-menu"><button class='btn btn-primary' onclick='handleMenu()'>Table of Contents</button></div>
+  <div id="responsive-menu"><button class="btn btn-primary" onclick="handleMenu()">Table of Contents</button></div>
   <div id="content" class="row-fluid">
     <div class="toc well span3 visible-toc">
-      <div style='display: flex; flex-direction: row; align-items: space-between; justify-content: space-between;'>
-        <input type='text' id='search-input' placeholder="Search docs" /><br/>        
-        <button style='width: 40% margin: auto; margin-left: 5px;' class='btn-primary' onclick='handleSearch()'>Search</button>
+      <div style="display: flex; flex-direction: row; align-items: space-between; justify-content: space-between;">
+        <input type="text" id="search-input" placeholder="Search docs" /><br/>        
+        <button style="width: 40% margin: auto; margin-left: 5px;" class="btn-primary" onclick="handleSearch()">Search</button>
       </div>
       {% include "docs-toc.html" %}
     </div>
-    <div id='main-docs' class="well span9 docs">
+    <div id="main-docs" class="well span9 docs">
       <h1>{{ title }}</h1>
       {{ content | safe }}   
     </div>
@@ -25,15 +25,15 @@ layout: default
 
 <script>
     document.addEventListener("DOMContentLoaded", async () => {
-      const search = document.getElementById('search-input')
-        search.addEventListener('keyup', ({key}) => {
+      const search = document.getElementById("search-input")
+        search.addEventListener("keyup", ({key}) => {
           if (key === "Enter") {
             handleSearch();
           }
         })
     })
     const handleSearch = async () => {
-      const searchTerm = document.getElementById('search-input').value;
+      const searchTerm = document.getElementById("search-input").value;
       const queryString = encodeURI(searchTerm)
       window.location.replace(`/search?term=${queryString}`);
     }
