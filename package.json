@@ -4,11 +4,11 @@
   "description": "Exceptionless website",
   "main": "index.js",
   "scripts": {
-    "clean": "npx del-cli --force ./_site",
+    "clean": "npx rimraf _site",
     "generate": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
-    "build": "npx npm-run-all clean generate",
-    "dev": "npx npm-run-all clean serve",
+    "build": "npm-run-all clean generate",
+    "dev": "npm-run-all clean serve",
     "new-post": "node new_post.js -t"
   },
   "keywords": [],
@@ -19,18 +19,22 @@
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-rss": "^1.0.9",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
+    "@quasibit/eleventy-plugin-sitemap": "^2.0.3",
+    "commander": "^6.2.0",
     "eleventy-plugin-embed-everything": "^1.9.4",
     "eleventy-plugin-seo": "^0.5.1",
+    "glob": "^7.1.6",
+    "lodash.truncate": "^4.4.2",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-alerts": "^0.1.0",
     "markdown-it-anchor": "^6.0.1",
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-bracketed-spans": "^1.0.1",
     "markdown-it-footnote": "^3.0.2",
-    "markdown-it-replace-link": "^1.1.0"
-  },
-  "dependencies": {
-    "@quasibit/eleventy-plugin-sitemap": "^2.0.3",
-    "commander": "^6.2.0"
+    "markdown-it-replace-link": "^1.1.0",
+    "moment": "^2.29.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "yaml-front-matter": "^4.1.0"
   }
 }
