@@ -1,6 +1,6 @@
 ---
 title: Settings
-order: 5
+order: 6
 ---
 - [About](#about)
 - [Usage Example](#usage-example)
