@@ -7,26 +7,22 @@ Let's take a look at how you might use Exceptionless within a DotNet Console App
 
 Start by adding the Exceptionless namespace like this: `using Exceptionless;`
 
-Next, remove everything from within the `Main` method. We'll replace it first with an if/else statement like this: 
+Next, remove everything from within the `Main` method. We'll explore four different ways to send events by simply adding the functionality into the `Main` method. If you'd like to jump to a specific example, click the subject below: 
 
-```
+* [Submit Log](#submit-log) 
+* [Submit Error](#submit-error) 
+* [Unhandled Exception](#unhandled-exception) 
+* [Default Client](#default-client)
+
+---
+
+## Submit Log
+
+First, let's take a look at how you might send a log event to Exceptionless: 
+
+```csharp
 static void Main(string[] args)
 {
-    if (args.Length != 1 || args[0] == "1")
-        SimpleClient();
-    else if (args[0] == "2")
-        SubmitError();
-    else if (args[0] == "3")
-        ReportUnhandledErrors();
-    else if (args[0] == "4")
-        UseDefaultInstance();
-}
-```
-
-We'll use each of the methods within `Main` to illustrate how to use Exceptionless in a Console App. First, let's start with the `SimpleClient` method. Set it up like this: 
-
-```
-static void SimpleClient() {
     // create a new Exceptionless client instance
     var client = new ExceptionlessClient("YOUR API KEY");
 
@@ -38,12 +34,17 @@ static void SimpleClient() {
 }
 ```
 
-Here, we are creating an instance of the Exceptionless .NET client and then we're submitting a simple log to our Exceptionless account. As noted in the code snippet, you must also include the `client.ProcessQueue();` call at the end when working with Console Apps. Without that, your Console App will exit before the log is sent. 
+Here, we are creating an instance of the Exceptionless .NET client and then we're submitting a simple log to our Exceptionless account. As noted in the code snippet, you must also include the `client.ProcessQueue();` call at the end when working with Console Apps. Without that, your Console App will exit before the log is sent. You can see this in action by running `dotnet run`. You'll need to go to your Exceptionless dashboard to see the event.
 
-Cool, so that was a log. Let's see what it's like sending an error. Create a new method called `SubmitError` like this: 
+---
 
-```
-static void SubmitError() {
+## Submit Error
+
+Cool, so that was a log. Let's see what it's like sending an error. Remove the code we had in the `Main` method and replace it with this: 
+
+```csharp
+static void Main(string[] args)
+{
     // create a new Exceptionless client instance
     var client = new ExceptionlessClient("YOUR API KEY");
 
@@ -61,12 +62,17 @@ static void SubmitError() {
 
 In this example, we are manually forcing an error. You can catch errors however you'd like in a real app and follow a similar pattern. Once the Exceptionless client is instantiated, we immediately throw an error. That error, of course, falls into the catch block where we submit it to Exceptionless with `client.SubmitException();`.
 
-Again, you'll want to make sure you include `client.ProcessQueue();` at the end to ensure the error is sent before your app exits. 
+Again, you'll want to make sure you include `client.ProcessQueue();` at the end to ensure the error is sent before your app exits. Execute `dotnet run` to see this work.
 
-Now, what if you want to catch errors that you didn't handle? We can do this by attaching the Exceptionless client to our app and reading in various configuration settings. Let's create a new method called `ReportUnhandledErrors` like this: 
+---
 
-```
-static void ReportUnhandledErrors() {
+## Unhandled Exception
+
+Now, what if you want to catch errors that you didn't handle? We can do this by attaching the Exceptionless client to our app and reading in various configuration settings. Let's replace the code in the `Main` method with this:
+
+```csharp
+static void Main(string[] args)
+{
     // create a new Exceptionless client instance
     var client = new ExceptionlessClient("YOUR API KEY");
 
@@ -80,10 +86,17 @@ static void ReportUnhandledErrors() {
 
 We still instantiate our Exceptionless client, but then we do one more thing. We connect it to our app with `client.Startup`. As noted, this allows Exceptionless to read configuration settings and plugins. It also allows us to automatically process the error before exit. This is important for unhandled errors because you don't know when they are going to happen and haven't handle them in a way that you can manually process the queue. 
 
-Finally, let's wite up a default Exceptionless client and see how we might submit events using that. Create a method called `UseDefaultInstance` like this: 
+To test this, execute `dotnet run` and check your Exceptionless dashboard.
 
-```
-static void UseDefaultInstance() {
+---
+
+## Default Client
+
+Finally, let's wite up a default Exceptionless client and see how we might submit events using that. Replace the code in the `Main` method with this: 
+
+```csharp
+static void Main() 
+{
     // configure the default instance
     ExceptionlessClient.Default.Startup("Your API Key");
 
@@ -97,7 +110,7 @@ static void UseDefaultInstance() {
 }
 ```
 
-In this example, we are leveraging the default Exceptionless client configuration which is nice because for then don't have to instantiate the client. This is done automatically with this line: `ExceptionlessClient.Default.Startup("Your API Key");`. With this, we can simply send the error to Exceptionless in our catch block. Normally, if you were going to use this method of sending events, you would set up your Exceptionless default client on app startup. In our case, that would mean defining it in the `Main` method. 
+In this example, we are leveraging the default Exceptionless client configuration which is nice because for then don't have to instantiate the client. This is done automatically with this line: `ExceptionlessClient.Default.Startup("Your API Key");`. With this, we can simply send the error to Exceptionless in our catch block. 
 
 --- 
 
