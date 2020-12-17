@@ -3,114 +3,53 @@ title: Console Apps Example
 order: 4
 ---
 
-Let's take a look at how you might use Exceptionless within a DotNet Console App. Let's build a very simple Console App as an example. You can use `dotnet new console` or you can create the project however you feel comfortable starting. Once the project is started, let's open up the `Program.cs` file and make some changes. 
+Console Apps in .NET have a unique requirement when it comes to Exceptionless compared to other applications. Because a console application is designed to exit upon code execution and because Exceptionless is designed to process events asynchronously via a queue, an event sent through a console app to Exceptionless won't process unless you take one of two specific steps. 
 
-Start by adding the Exceptionless namespace like this: `using Exceptionless;`
+First, let's get some configuration out of the way. To use Exceptionless, add the Exceptionless namespace like this: `using Exceptionless;` 
 
-Next, remove everything from within the `Main` method. We'll explore four different ways to send events by simply adding the functionality into the `Main` method. If you'd like to jump to a specific example, click the subject below: 
+Once you've done that, be sure to define the Exceptionless client: 
 
-* [Submit Log](#submit-log) 
-* [Submit Error](#submit-error) 
-* [Unhandled Exception](#unhandled-exception) 
-* [Default Client](#default-client)
+`var client = new ExceptionlessClient("YOUR API KEY");`  
 
----
+Now you can send events to Exceptionless like this: 
 
-## Submit Log
+`client.SubmitLog("Hello World!");` 
 
-First, let's take a look at how you might send a log event to Exceptionless: 
+Or you can capture exceptions like this: 
 
 ```csharp
-static void Main(string[] args)
-{
-    // create a new Exceptionless client instance
-    var client = new ExceptionlessClient("YOUR API KEY");
-
-    // submit a log event to the server
-    client.SubmitLog("Hello World!");
-
-    // NOTE: required in console apps that immediately exit since event submission normally happens on a timer in a background thread.
-    client.ProcessQueue();
+try {
+    throw new Exception("MyApp error");
+} catch (Exception ex) {
+    // submit the exception to the Exceptionless server
+    client.SubmitException(ex);
 }
 ```
 
-Here, we are creating an instance of the Exceptionless .NET client and then we're submitting a simple log to our Exceptionless account. As noted in the code snippet, you must also include the `client.ProcessQueue();` call at the end when working with Console Apps. Without that, your Console App will exit before the log is sent. You can see this in action by running `dotnet run`. You'll need to go to your Exceptionless dashboard to see the event.
+However, in these examples you will have to force the Exceptionless queue to process these events before the application exits. You can do that up front or you can do it at the end of execution. 
 
----
+To tell Exceptionless up front to process the events before the application exits, you can simple add `client.Startup();` after defining the Exceptionless client.
 
-## Submit Error
+Alternatively, you can call `client.processQueue();` at the end of your code's execution to ensure the Exceptionless queue is process before the app exits. 
 
-Cool, so that was a log. Let's see what it's like sending an error. Remove the code we had in the `Main` method and replace it with this: 
+There's one additional configuration option that doesn't require defining the client first. If you use the Exceptionless default client, it takes care of of most things for you. Simply load up the Exceptionless default client by calling `Startup` with your API Key, and you're ready to go: 
 
-```csharp
-static void Main(string[] args)
-{
-    // create a new Exceptionless client instance
-    var client = new ExceptionlessClient("YOUR API KEY");
+`ExceptionlessClient.Default.Startup("Your API Key");`
 
-    try {
-        throw new Exception("MyApp error");
-    } catch (Exception ex) {
-        // submit the exception to the Exceptionless server
-        client.SubmitException(ex);
-    }
-
-    // NOTE: required in console apps that immediately exit since event submission normally happens on a timer in a background thread.
-    client.ProcessQueue();
-}
-```
-
-In this example, we are manually forcing an error. You can catch errors however you'd like in a real app and follow a similar pattern. Once the Exceptionless client is instantiated, we immediately throw an error. That error, of course, falls into the catch block where we submit it to Exceptionless with `client.SubmitException();`.
-
-Again, you'll want to make sure you include `client.ProcessQueue();` at the end to ensure the error is sent before your app exits. Execute `dotnet run` to see this work.
-
----
-
-## Unhandled Exception
-
-Now, what if you want to catch errors that you didn't handle? We can do this by attaching the Exceptionless client to our app and reading in various configuration settings. Let's replace the code in the `Main` method with this:
+When you go this route, you can send exceptions to Exceptionless just by calling a `ToExceptionless()` method on the default Exceptionless client. It looks like this: 
 
 ```csharp
-static void Main(string[] args)
-{
-    // create a new Exceptionless client instance
-    var client = new ExceptionlessClient("YOUR API KEY");
+// configure the default instance
+ExceptionlessClient.Default.Startup("Your API Key");
 
-    // reads additional configuration settings, configures various plugins and wires up to platform specific exception handlers.
-    // also automatically calls ProcessQueue on process exit
-    client.Startup();
-
-    throw new Exception("MyApp unhandled error");
+try {
+    throw new Exception("MyApp ToExceptionless error");
+} catch (Exception ex) {
+    // use ToExceptionless extension method. Uses ExceptionlessClient.Default and requires it to be configured.
+    ex.ToExceptionless().Submit();
+    // don't forget to call Submit.
 }
 ```
-
-We still instantiate our Exceptionless client, but then we do one more thing. We connect it to our app with `client.Startup`. As noted, this allows Exceptionless to read configuration settings and plugins. It also allows us to automatically process the error before exit. This is important for unhandled errors because you don't know when they are going to happen and haven't handle them in a way that you can manually process the queue. 
-
-To test this, execute `dotnet run` and check your Exceptionless dashboard.
-
----
-
-## Default Client
-
-Finally, let's wite up a default Exceptionless client and see how we might submit events using that. Replace the code in the `Main` method with this: 
-
-```csharp
-static void Main() 
-{
-    // configure the default instance
-    ExceptionlessClient.Default.Startup("Your API Key");
-
-    try {
-        throw new Exception("MyApp ToExceptionless error");
-    } catch (Exception ex) {
-        // use ToExceptionless extension method. Uses ExceptionlessClient.Default and requires it to be configured.
-        ex.ToExceptionless().Submit();
-        // don't forget to call Submit.
-    }
-}
-```
-
-In this example, we are leveraging the default Exceptionless client configuration which is nice because for then don't have to instantiate the client. This is done automatically with this line: `ExceptionlessClient.Default.Startup("Your API Key");`. With this, we can simply send the error to Exceptionless in our catch block. 
 
 --- 
 
