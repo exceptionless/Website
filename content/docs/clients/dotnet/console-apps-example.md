@@ -3,9 +3,9 @@ title: Console Apps Example
 order: 4
 ---
 
-Console Apps in .NET have a unique requirement when it comes to Exceptionless compared to other applications. Because a console application is designed to exit upon code execution and because Exceptionless is designed to process events asynchronously via a queue, an event sent through a console app to Exceptionless won't process unless you take one of two specific steps. 
+Exceptionless runs in all types of .NET aplications. Let's take a look at how to get started with Exceptionless in a console application. First, we'll some configuration out of the way. 
 
-First, let's get some configuration out of the way. To use Exceptionless, add the Exceptionless namespace like this: `using Exceptionless;` 
+To use Exceptionless, add the Exceptionless namespace like this: `using Exceptionless;` 
 
 Once you've done that, be sure to define the Exceptionless client: 
 
@@ -26,11 +26,7 @@ try {
 }
 ```
 
-However, in these examples you will have to force the Exceptionless queue to process these events before the application exits. You can do that up front or you can do it at the end of execution. 
-
-To tell Exceptionless up front to process the events before the application exits, you can simple add `client.Startup();` after defining the Exceptionless client.
-
-Alternatively, you can call `client.processQueue();` at the end of your code's execution to ensure the Exceptionless queue is process before the app exits. 
+Because Exceptionless is designed to process events asynchronously in the background via a queue, you may need to make sure the event is processed before the app exits. If this is a requirement for your app, you can handle this situation by telling Exceptionless about it up front with `client.Startup();`, which means Exceptionless knows to force process any events in the queue before allowing the app to exit, or by calling `client.processQueue();` before your application exists. 
 
 There's one additional configuration option that doesn't require defining the client first. If you use the Exceptionless default client, it takes care of of most things for you. Simply load up the Exceptionless default client by calling `Startup` with your API Key, and you're ready to go: 
 
