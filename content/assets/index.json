@@ -127,6 +127,14 @@
     "basename": "upgrading",
     "path": "./content/docs/clients/dotnet/upgrading.md"
   },
+  "web-server-example": {
+    "title": "Web Server Example",
+    "order": 5,
+    "preview": "Exceptionless runs great in all sorts of environments. Let's take a …",
+    "content": "\n\nExceptionless runs great in all sorts of environments. Let's take a look at how you might set up Exceptionless to work with your .NET web server. \n\n",
+    "basename": "web-server-example",
+    "path": "./content/docs/clients/dotnet/web-server-example.md"
+  },
   "angular-example": {
     "title": "Angular Example",
     "order": 7,

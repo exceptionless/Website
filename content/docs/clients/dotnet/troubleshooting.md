@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-order: 8
+order: 10
 ---
 
 If your events aren’t being sent to the server there are a few things that you can try to diagnose the issue.

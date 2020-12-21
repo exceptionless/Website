@@ -1,6 +1,6 @@
 ---
 title: Supported Platforms
-order: 5
+order: 6
 ---
 
 ## [Exceptionless](https://www.nuget.org/packages/Exceptionless/)
