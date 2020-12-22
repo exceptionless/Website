@@ -12,9 +12,9 @@ The simples example of using Exceptionless in your web server is to include a tr
 ```csharp
 public ActionResult<IEnumerable<YourDto>> YourEndpointFunction()
 {
-    var client = new ExceptionlessClient("YOUR API KEY");
+    ExceptionlessClient.Default.Startup("Your API Key");
     try {
-        var userId = user.fetchUser();
+        var userId = user.FetchUser();
         return userId;
     } catch (Exception ex) {
         client.SubmitException(ex);
@@ -23,20 +23,17 @@ public ActionResult<IEnumerable<YourDto>> YourEndpointFunction()
 }
 ```
 
-Should the request to `fetchUser()` or whatever your method is happen to throw, the Exceptionless client will pick it up and send the exception to your dashboard. 
+Should the request to `FetchUser()` or whatever your method is happen to throw, the Exceptionless client will pick it up and send the exception to your dashboard. 
 
 Of course, Exceptionless is more than just error handling. You can leverage any of the Exceptionless event methods [documented here](sending-events.md) through the client interface. 
 
 Exceptionless can be configured as a generic host for your web server. In your `Startup.cs` file, you would include the following within the `ConfigureServices` method: 
 
 ```csharp
-services.AddLogging(b => b
-        .AddConfiguration(Configuration.GetSection("Logging"))
-        .AddDebug()
-        .AddConsole()
-        .AddExceptionless());
 services.AddHttpContextAccessor();
 ```
+
+By adding this helper method, Exceptionless is able to gather more information about the request including the API endpoint that threw the error, user-agent information, and more. 
 
 Then in your `Configure` method, you would add: 
 
@@ -59,8 +56,8 @@ This gives your server application access to any configuration you've set in you
 ```json
  "Exceptionless": {
     "ApiKey": "YOUR API KEY",
-    "ServerUrl": "http://localhost:50000", // This is only required if you are self-hosting
-    "DefaultData": { // This object indicates some metadata you'd like attached to every event sent to Exceptionless
+    "ServerUrl": "http://localhost:50000",
+    "DefaultData": {
         "JSON_OBJECT": "{ \"Name\": \"Alice\" }",
         "Boolean": true,
         "Number": 1,
@@ -72,6 +69,8 @@ This gives your server application access to any configuration you've set in you
     }  
 },
 ```
+
+You will only pass in the `ServerUrl` if you are self-hosting Exceptionless. You'll use this to point to your correct URL. The `DefaultData` is metadata you'd like associated with every event you send to Exceptionless. 
 
 With this configured, you can now call the Exceptionless client from anywhere in your server application without first defining the client. 
 
