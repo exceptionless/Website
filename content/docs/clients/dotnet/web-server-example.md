@@ -10,14 +10,14 @@ To get started, be sure to include the Exceptionless namespace wherever you plan
 The simples example of using Exceptionless in your web server is to include a try/catch block that leverages Exceptionless in the catch. It might look something like this: 
 
 ```csharp
-public ActionResult<IEnumerable<YourDto>> YourEndpointFunction()
+[HttpGet("{id}")]
+public ActionResult<User> GetUser(string id)
 {
-    ExceptionlessClient.Default.Startup("Your API Key");
     try {
-        var userId = user.FetchUser();
-        return userId;
+        var user = userService.GetUser(id);
+        return Ok(user);
     } catch (Exception ex) {
-        client.SubmitException(ex);
+        ex.ToExceptionless().SetProperty("UserId", id).Submit();
         return NotFound();
     }
 }
