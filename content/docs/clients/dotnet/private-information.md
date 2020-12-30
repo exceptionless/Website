@@ -1,6 +1,6 @@
 ---
 title: Private Information
-order: 7
+order: 9
 ---
 
 By default the Exceptionless Client will report all available metadata which could include potentially private data. There are various ways to limit the scope of data collection. For example, one could use [Data Exclusions](../../security.md) to remove sensitive values but it only applies to specific collection points such as `Cookie Keys`, `Form Data Keys`, `Query String Keys` and `Extra Exception properties`. Additional data may need to be removed like the collection of user names and IP Addresses. Shown below is several examples of how you can configure the client to remove this additional data.

@@ -3,6 +3,10 @@ title: Configuration
 order: 1
 ---
 
+There are a few ways to configure Exceptionless in your project. We'll cover them here or you can jump to app-specific examples: [Console App Example](console-apps-example.md), [Web Server Example](web-server-example.md).
+
+---
+
 - [ExceptionlessClient Configuration](#exceptionlessclient-configuration)
   - [Configuring With Code](#configuring-with-code)
   - [Configuring With Attributes](#configuring-with-attributes)
