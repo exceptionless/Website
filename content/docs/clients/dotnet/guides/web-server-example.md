@@ -1,13 +1,13 @@
 ---
 title: Web Server Example
-order: 5
+order: 2
 ---
 
 Exceptionless runs great in all sorts of environments. Let's take a look at how you might set up Exceptionless to work with your .NET web server. 
 
 To get started, be sure to include the Exceptionless namespace wherever you plan to use it. You can do that like this: `using Exceptionless;`
 
-The simples example of using Exceptionless in your web server is to include a try/catch block that leverages Exceptionless in the catch. It might look something like this: 
+The simplest example of using Exceptionless in your web server is to include a try/catch block that leverages Exceptionless in the catch. It might look something like this: 
 
 ```csharp
 [HttpGet("{id}")]
@@ -23,7 +23,7 @@ public ActionResult<User> GetUser(string id)
 }
 ```
 
-Should the request to `FetchUser()` or whatever your method is happen to throw, the Exceptionless client will pick it up and send the exception to your dashboard. 
+Should the request to `FetchUser()`, or whatever your method is, happen to throw, the Exceptionless client will pick it up and send the exception to your dashboard. 
 
 Of course, Exceptionless is more than just error handling. You can leverage any of the Exceptionless event methods [documented here](sending-events.md) through the client interface. 
 
@@ -78,4 +78,4 @@ This is just one example of one platform Exceptionless supports. But Exceptionle
 
 ---
 
-[Next > Supported Platforms](supported-platforms.md) {.text-right}
+[Next > Sending Events](../sending-events.md) {.text-right}
