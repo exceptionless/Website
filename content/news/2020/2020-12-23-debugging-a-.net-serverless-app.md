@@ -67,3 +67,28 @@ Now, if you checkout your Exceptionless account and go to the Exceptions dashboa
 There are three tabs on the details page. In the above screenshot, I have selected the "Environment" tab. You can see Exceptionless automatically captured info about the user's environment, which will be very useful in debugging. I blacked out my IP address because, you know, privacy. 
 
 Cool, so we created an exception. What about something a little more complex? 
+
+Let's say we want to track the usage of our new serverless function. We can do that pretty easily with Exceptionless. Let's change the current try/catch block to look like this: 
+
+```csharp
+try
+{
+  client.SubmitFeatureUsage("Serverless Function");
+  return new Response("Go Serverless v1.0! Your function executed successfully!", request);
+}
+catch (Exception ex)
+{
+  client.SubmitException(ex);
+  return new Response(ex.Message, request);
+}
+```
+
+Here we are sending a feature usage event to Exceptionless as soon as the serverless function is triggered. The nice thing about this is that it doesn't rely on any errors being thrown and the rest of your function can continue to execute. 
+
+In our dashboard, if we look at all event, we will see our feature usage event logged. 
+
+![Feature usage event example](featureUsage.png)
+
+## Conclusion
+
+These types of events (features, logs, errors) because especially useful in serverless environments. Often, default logging in a serverless environment is either non-existent or much more difficult to set up. By dropping [Exceptionless](https://exceptionless.com) into your serverless application, you can track just about anything you're interested in. 
