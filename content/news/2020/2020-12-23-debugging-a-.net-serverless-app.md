@@ -1,10 +1,12 @@
 ---
 title: Debugging a .NET Serverless App
-date: 2020-12-23
+date: 2021-01-05
 draft: true
 ---
 
 Serverless development has become the hot thing in tech. Renting time on a virtual machine only when you need it saves money and resources. However, there are many gotchas that can make working with serverless technology difficult if you're not prepared. One such gotcha is event handling. 
+
+Unlike a Web Server applications, events in a serverless function act very similarly to console applications. Take AWS Lambda, for example. A Lambda function is going to spin up, execute, and spin down as quickly as it can. You want this. This is one of the key selling points of serverless, and how developers can ultimately save money. However, this can lead to problems when trying to process asynchronous events. We'll cover how to solve that in this post. 
 
 Today, we're going to build a simple .NET Hello World serverless application and we're going to implement event handling to log errors and other events. We'll be using Amazon's lamba functions and the `sls` command line tool. If you don't have `sls` installed, you can follow the [install instructions here](https://www.serverless.com/framework/docs/providers/aws/guide/installation/). 
 
@@ -45,9 +47,15 @@ catch (Exception ex)
   client.SubmitException(ex);
   return new Response(ex.Message, request);
 }
+finally
+{
+  client.ProcessQueue();
+}
 ```
     
-Obviously, in the above example, we will not ever return a successful response, but you can imagine how you would use this code in a real-world example. Let's see how our test code works. 
+Obviously, in the above example, we will not ever return a successful response, but you can imagine how you would use this code in a real-world example. You'll note two things we are doing that are necessary for ensuring our Exceptionless code runs in the serverless function: `client.Startup()` and `client.ProcessQueue()`. We are telling function that we've started a process and we need to make sure that process finished before the function exits. 
+
+Let's see how our test code works. 
 
 Run `./build.sh` to build your serverless function. Once that's complete, run `sls invoke local -f hello` to invoke it. 
 
@@ -80,6 +88,10 @@ catch (Exception ex)
 {
   client.SubmitException(ex);
   return new Response(ex.Message, request);
+}
+finally
+{
+  client.ProccessQueue();
 }
 ```
 
