@@ -72,6 +72,14 @@
     "basename": "console-apps-example",
     "path": "./content/docs/clients/dotnet/guides/console-apps-example.md"
   },
+  "logging-with-generic-host": {
+    "title": "Web Server Example",
+    "order": 3,
+    "preview": "Microsoft provides a useful tool for logging events called …",
+    "content": "\n\nMicrosoft provides a useful tool for logging events called `Microsoft.Extensions.Logging`. You can read up on how logging works with .NET Core here, but we'll cover how to set up Exceptionless as a logging provider to be used as a generic host. \n\n",
+    "basename": "logging-with-generic-host",
+    "path": "./content/docs/clients/dotnet/guides/logging-with-generic-host.md"
+  },
   "web-server-example": {
     "title": "Web Server Example",
     "order": 2,
