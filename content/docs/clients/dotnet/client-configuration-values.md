@@ -1,6 +1,7 @@
 ---
 title: Client Configuration Values
-order: 2
+order: 3
+parent: .NET
 ---
 
 ## Index
@@ -87,4 +88,4 @@ private void SettingsOnChanged(object sender, ChangedEventArgs<KeyValuePair<stri
 
 --- 
 
-[Next > Sending Events](sending-events.md) {.text-right}
+[Next > Platform Guides](guides/index.md) {.text-right}

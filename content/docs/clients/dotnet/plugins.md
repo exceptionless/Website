@@ -1,6 +1,7 @@
 ---
 title: Plugins
 order: 8
+parent: .NET
 ---
 A plugin is a client-side addin that is run **every time** you submit an event.
 

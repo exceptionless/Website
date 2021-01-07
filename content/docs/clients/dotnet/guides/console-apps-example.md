@@ -1,6 +1,6 @@
 ---
 title: Console Apps Example
-order: 4
+order: 1
 ---
 
 Exceptionless runs in all types of .NET aplications. Let's take a look at how to get started with Exceptionless in a console application. First, we'll some configuration out of the way. 

@@ -1,6 +1,7 @@
 ---
 title: Upgrading
 order: 11
+parent: .NET
 ---
 
 - [Upgrading from Exceptionless 3.x](#upgrading-from-exceptionless-3x)

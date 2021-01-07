@@ -1,6 +1,7 @@
 ---
 title: Supported Platforms
-order: 6
+order: 5
+parent: .NET
 ---
 
 ## [Exceptionless](https://www.nuget.org/packages/Exceptionless/)

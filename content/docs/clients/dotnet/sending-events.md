@@ -1,6 +1,7 @@
 ---
 title: Sending Events
-order: 3
+order: 4
+parent: .NET
 ---
 Once [configured](configuration.md), Exceptionless will automatically send any unhandled exceptions that happen in your application. The sections below will show you how to send us different event types as well as customize the data that is sent in.
 
@@ -144,4 +145,4 @@ ExceptionlessClient.Default.Configuration.UseInMemoryStorage();
 
 ---
 
-[Next > Console App Example](console-apps-example.md) {.text-right}
+[Next > Supported Platforms](supported-platforms.md) {.text-right}

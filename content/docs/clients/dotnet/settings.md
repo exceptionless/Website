@@ -1,6 +1,7 @@
 ---
 title: Settings
 order: 7
+parent: .NET
 ---
 - [About](#about)
 - [Usage Example](#usage-example)
