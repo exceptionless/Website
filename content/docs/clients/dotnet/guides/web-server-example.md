@@ -78,4 +78,4 @@ This is just one example of one platform Exceptionless supports. But Exceptionle
 
 ---
 
-[Next > Sending Events](../sending-events.md) {.text-right}
+[Next > Logging With Generic Host](logging-with-generic-host.md) {.text-right}
