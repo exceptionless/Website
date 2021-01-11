@@ -168,6 +168,8 @@ finally
 
 Here we are sending a feature usage event to Exceptionless as soon as the serverless function is triggered and we're sure the input is not null. The nice thing about this is that it doesn't rely on any errors being thrown and the rest of your function can continue to execute. 
 
+Let's run our tests again. We should get the feature usage event as well as an additional error because, remember, one of our tests forces a null exception. 
+
 In our dashboard, if we look at all event, we will see our feature usage event logged. 
 
 ![Feature usage event example](featureUsage.png)
