@@ -1,6 +1,6 @@
 ---
 title: Debugging a .NET Serverless App
-date: 2021-01-05
+date: 2021-01-12
 draft: true
 ---
 
@@ -52,7 +52,7 @@ namespace MyFunction
         {
           c.ApiKey = "YOUR EXCEPTIONLESS API KEY";
         });
-      client.Startup();
+      using var _ = client.ProcessQueueDeferred();
       try
       {
         if (input == null)
@@ -66,10 +66,6 @@ namespace MyFunction
         client.SubmitException(ex);
         return ex.Message;
       }
-      finally
-      {
-        client.ProcessQueue();
-      }
     }
   }
 }
@@ -78,6 +74,8 @@ namespace MyFunction
 We've added the Exceptionless namespace, we've converted the function to take in a string and return a hello world string.
 
 To test error handling, we have set up a try/catch that will throw if no string is passed into our function. If that happens, we send the exception to Exceptionless. 
+
+Because we need to make sure events are sent to Exceptionless before the function ends, we are using the Exceptionless method `ProcessQueueDeferred()`. 
 
 Now, it's time to test. Fortunately, there's a super easy way to test our code before we deploy to AWS. In your root directory, find the `test` folder. Nested in that folder is a test file called `MyFunction.Test.cs`. We're going to edit this file a bit and run our tests from the command line. 
 
@@ -159,10 +157,6 @@ catch (Exception ex)
 {
   client.SubmitException(ex);
   return ex.Message;
-}
-finally
-{
-  client.ProcessQueue();
 }
 ```
 
