@@ -1,7 +1,7 @@
 ---
 title: Debugging a .NET Serverless App
 date: 2021-01-12
-draft: true
+draft: false
 ---
 
 Serverless development has become the hot thing in tech. Renting time on a virtual machine only when you need it saves money and resources. However, there are many gotchas that can make working with serverless technology difficult if you're not prepared. One such gotcha is event handling. 
@@ -52,7 +52,9 @@ namespace MyFunction
         {
           c.ApiKey = "YOUR EXCEPTIONLESS API KEY";
         });
+
       using var _ = client.ProcessQueueDeferred();
+
       try
       {
         if (input == null)
