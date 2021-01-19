@@ -127,7 +127,7 @@ import { ExceptionlessClient } from "exceptionless/dist/exceptionless";
 const defaultClient = ExceptionlessClient.default;
 defaultClient.config.apiKey = process.env.REACT_APP_EXCEPTIONLESS_API_KEY;
 
-export const useExceptionless = ({ config, useDefault }) => {
+export const useMonitoring = ({ config, useDefault }) => {
   const [client, setClient] = useState(defaultClient);
   useEffect(() => {
     if(useDefault) {
@@ -149,7 +149,7 @@ Ready to use this bad boy?
 
 We created a basic React app, so let's just make use of what comes out of the box. Open your `App.js` file, and import your new custom Hook. 
 
-`import { useExceptionless } from "./hooks/useExceptionless";`
+`import { useMonitoring } from "./hooks/useMonitoring";`
 
 You'll also need to import the built-in `useEffect` Hook from React: 
 
@@ -157,7 +157,7 @@ You'll also need to import the built-in `useEffect` Hook from React:
 
 Now, withing the main `App` function, you can use your new custom Hook: 
 
-`const exceptionlessClient = useExceptionless({ useDefault: true });`
+`const exceptionlessClient = useMonitoring({ useDefault: true });`
 
 How can we test this now? Well, let's make use of the `useEffect` function to throw an error as soon as the component mounts. 
 
@@ -198,10 +198,10 @@ But Exceptionless is more than just errors. Let's build a quick, more practical 
 In your `App.js` file, we're going to remove all the boilerplate and add some ugly buttons. No styling in this post. This is what your `App.js` file should look like now: 
 
 ```javascript
-import { useExceptionless } from "./hooks/useExceptionless";
+import { useMonitoring } from "./hooks/useMonitoring";
 
 function App() {
-  const exceptionlessClient = useExceptionless({ useDefault: true });
+  const exceptionlessClient = useMonitoring({ useDefault: true });
 
   const handleButtonClick = (planName) => {
     exceptionlessClient.submitFeatureUsage(planName);
