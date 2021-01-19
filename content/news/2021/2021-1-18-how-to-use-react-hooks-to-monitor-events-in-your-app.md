@@ -119,9 +119,14 @@ The final thing you need to do in your `useMonitoring` function is return the cl
 
 `return client;`
 
-Here's the whole, complete function: 
+Here's the whole, complete file: 
 
 ```javascript
+import { useState, useEffect } from 'react';
+import { ExceptionlessClient } from "exceptionless/dist/exceptionless";
+const defaultClient = ExceptionlessClient.default;
+defaultClient.config.apiKey = process.env.REACT_APP_EXCEPTIONLESS_API_KEY;
+
 export const useExceptionless = ({ config, useDefault }) => {
   const [client, setClient] = useState(defaultClient);
   useEffect(() => {
