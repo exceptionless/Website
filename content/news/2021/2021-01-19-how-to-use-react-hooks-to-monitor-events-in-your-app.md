@@ -4,7 +4,7 @@ date: 2021-01-19
 draft: false
 ---
 
-The [introduction of Hooks in React](https://reactjs.org/docs/hooks-intro.html) was a game-changer. Developers now had options when it came to creating stateful components. It used to be that if you had a stateful component, you'd have to use a class componenet, and if you had a presentational component, you could choose between a class or a function component. Now, with hook, state can be managed inside function components. But that's not all Hooks did for React developers. 
+The [introduction of Hooks in React](https://reactjs.org/docs/hooks-intro.html) was a game-changer. Developers now had options when it came to creating stateful components. It used to be that if you had a stateful component, you'd have to use a class component, and if you had a presentational component, you could choose between a class or a function component. Now, with hook, state can be managed inside function components. But that's not all Hooks did for React developers. 
 
 Hooks introduced a better way to reuse stateful functions. Today, we're going to explore how to build a custom React hook that will allow us to monitor events in our application. Those events can be errors, messages, feature usage, logs, or anything you want. There are plenty of error monitoring services out there, but we're going to make use of [Exceptionless](https://exceptionless.com) for three reasons: 
 
@@ -36,7 +36,7 @@ React's docs have the simplest definition of Hooks and I think it's worth callin
 
 > Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class. 
 
-The popularity of classes in JavaScript in general has oscilated greatly. However, within the React ecosystem, it was the ONLY option for creating components that could actually do *anything*. Because many JavaScript developers do not like and do not want to use classes, the option to write function components was a huge step forward. But outside of developer preferences, React Hooks open up new ways to write code in React apps, and hopefully help you reduce your code footprint in the process. 
+The popularity of classes in JavaScript in general has oscillated greatly. However, within the React ecosystem, it was the ONLY option for creating components that could actually do *anything*. Because many JavaScript developers do not like and do not want to use classes, the option to write function components was a huge step forward. But outside of developer preferences, React Hooks open up new ways to write code in React apps, and hopefully help you reduce your code footprint in the process. 
 
 Hooks introduced a new way to handle lifecycle events in React as well. Gone are the `componentDidMount` and `componentDidUpdate` methods. In is the simple and elegant `useEffect` function.
 
