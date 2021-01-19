@@ -1,7 +1,7 @@
 ---
 title: How to Use React Hooks to Monitor Events in Your App
-date: 2021-01-18
-draft: true
+date: 2021-01-19
+draft: false
 ---
 
 The [introduction of Hooks in React](https://reactjs.org/docs/hooks-intro.html) was a game-changer. Developers now had options when it came to creating stateful components. It used to be that if you had a stateful component, you'd have to use a class componenet, and if you had a presentational component, you could choose between a class or a function component. Now, with hook, state can be managed inside function components. But that's not all Hooks did for React developers. 
