@@ -172,4 +172,5 @@ In our dashboard, if we look at all event, we will see our feature usage event l
 
 ## Conclusion
 
-These types of events (features, logs, errors) because especially useful in serverless environments. Often, default logging in a serverless environment is either non-existent or much more difficult to set up. By dropping [Exceptionless](https://exceptionless.com) into your serverless application, you can track just about anything you're interested in. 
+These types of events (features, logs, errors) because especially useful in serverless environments. Often, default logging in a serverless environment is either non-existent or much more difficult to set up. By dropping [Exceptionless](https://exceptionless.com) into your serverless application, you can track just about anything you're interested in. If you'd like to see full examples of Exceptionless in Lambda functions, check out our examples [here](https://github.com/exceptionless/Exceptionless.Net/tree/master/samples/Exceptionless.SampleLambda) and [here](https://github.com/exceptionless/Exceptionless.Net/tree/master/samples/Exceptionless.SampleLambdaAspNetCore).
+
