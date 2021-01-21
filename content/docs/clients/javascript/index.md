@@ -1,5 +1,6 @@
 ---
 title: JavaScript Client
+key: JS
 ---
 
 The Exceptionless JavaScript client SDK makes it easy to report errors, log details, track feature usage and more. Be sure you have an Exceptionless account ([you can sign up here](/)) or that you are self-hosting a running instance of Exceptionless. 
