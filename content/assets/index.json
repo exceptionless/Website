@@ -182,8 +182,8 @@
   "react": {
     "title": "React Example",
     "order": 1,
-    "preview": "This is about React",
-    "content": "\nThis is about React",
+    "preview": "Exceptionless can be configured in just about any JavaScript …",
+    "content": "\n\nExceptionless can be configured in just about any JavaScript environment, but this section is dedicated to set up and use within the React framework. \n\n### Install \n\nTo install exceptionless, you can use npm or yarn: \n\nnpm - `npm install exceptionless`\n\nyarn - `npm add exceptionless`\n\n",
     "basename": "react",
     "path": "./content/docs/clients/javascript/guides/react.md"
   },

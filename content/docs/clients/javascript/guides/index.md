@@ -2,6 +2,7 @@
 title: JavaScript Framework Guides
 order: 3
 parent: JS
+key: JS Guides
 ---
 
 Exceptionless works with all popular JavaScript frameworks on both the front end and the backend including React, Angular, Typescript, Express, and Svelte. Below, you will find our guides for those frameworks. 
