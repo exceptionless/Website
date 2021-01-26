@@ -24,6 +24,8 @@ So, while Exceptionless might not change the world by itself with its sponsorshi
 
 ## Ben Adams 
 
+![Ben Admas Github Profile](./benadams.png)
+
 Ben has been working on open-source projects for years. He has nearly 2,000 contributions to .NET over the last five years. In fact, he is so prolific in his .NET contributions that everyone else with more contributions than him are Microsoft employees. It doesn't get more impressive than that. His projects have 2,600 Github stars (which, again, don't pay the bills 😉), he has over 20,000 commits, and he has contributed to 25 different projects. 
 
 It should be clear by now that Ben knows his stuff. Someone in addition to making all these open-source contributions, Ben also serves as the .NET Foundation Director. As mentioned before, Ben cares a whole lot about .NET, and so do we. So, this sponsorship makes perfect sense for us. 
