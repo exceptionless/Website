@@ -35,7 +35,7 @@ Ben has been working on open-source projects for years. He has thousands of cont
 
 It should be clear by now that Ben knows his stuff. As mentioned before, Ben cares a whole lot about .NET, and so do we. So, this sponsorship makes perfect sense for us. 
 
-For the gamers and the game developers, Ben has you covered too. He is the CTO of Illyriad Games which makes [Age of Ascent}(https://www.ageofascent.com/). Age of Ascent is a real-time MMO that puts players in the cockpits of fighter ships in space. As you might expect, the game's tech stack [makes heavy use of .NET](https://youtu.be/dqYlKkexth0) and other Microsoft-related services. 
+For the gamers and the game developers, Ben has you covered too. He is the CTO of Illyriad Games which makes [Age of Ascent](https://www.ageofascent.com/). Age of Ascent is a real-time MMO that puts players in the cockpits of fighter ships in space. As you might expect, the game's tech stack [makes heavy use of .NET](https://youtu.be/dqYlKkexth0) and other Microsoft-related services. 
 
 Other people recognize Ben's contributions too: 
 
