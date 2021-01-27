@@ -26,11 +26,28 @@ So, while Exceptionless might not change the world by itself with its sponsorshi
 
 ![Ben Admas Github Profile](./benadams.png)
 
-Ben has been working on open-source projects for years. He has nearly 2,000 contributions to .NET over the last five years. In fact, he is so prolific in his .NET contributions that everyone else with more contributions than him are Microsoft employees. It doesn't get more impressive than that. His projects have 2,600 Github stars (which, again, don't pay the bills 😉), he has over 20,000 commits, and he has contributed to 25 different projects. 
+Ben has been working on open-source projects for years. He has thousands of contributions across dozens of repositories. In fact, he is so prolific in his .NET contributions that everyone else with more contributions than him are Microsoft employees. It doesn't get more impressive than that. Here's a quick summary of Ben's open-source contributions: 
 
-It should be clear by now that Ben knows his stuff. Someone in addition to making all these open-source contributions, Ben also serves as the .NET Foundation Director. As mentioned before, Ben cares a whole lot about .NET, and so do we. So, this sponsorship makes perfect sense for us. 
+* His projects have 2,600 Github stars (which, again, don't pay the bills 😉)
+* He has over 20,000 commits
+* He has contributed to 25 different projects
+* He's opened over 1,500 pull requests
+
+It should be clear by now that Ben knows his stuff. Somehow, in addition to making all these open-source contributions, Ben also serves as the .NET Foundation Director. As mentioned before, Ben cares a whole lot about .NET, and so do we. So, this sponsorship makes perfect sense for us. 
 
 For the gamers and the game developers, Ben has you covered too. He is the CTO of Illyriad Games which makes [Age of Ascent}(https://www.ageofascent.com/). Age of Ascent is a real-time MMO that puts players in the cockpits of fighter ships in space. As you might expect, the game's tech stack [makes heavy use of .NET](https://youtu.be/dqYlKkexth0) and other Microsoft-related services. 
+
+Other people recognize Ben's contributions too: 
+
+> Since the beginning of the .NET Core journey we’ve had some amazing contributors but I seriously enjoy working with 
+@ben_a_adams!
+-[David Fowler](https://twitter.com/davidfowl/status/1353087429364879361)
+
+> There's smart, then there's crazy. Then there's Crazy Smart. That's Ben (and he's a lovely chap, too)!
+-[Rich Turner](https://twitter.com/bitcrazed/status/1354144181837414400)
+
+> If it wasn't for him the dotnet project would never took off as much as it did, since six years ago extreme performance optimizations were brushed off as not really needed. He single-handed restored everyone's faith in the project and that it still has a bright future. 
+-[Bartosz Adamczewski](https://twitter.com/badamczewski01/status/1353666677792272387)
 
 ## How Does Sponsorship Work?
 
