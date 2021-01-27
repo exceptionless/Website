@@ -46,8 +46,11 @@ Other people recognize Ben's contributions too:
 > There's smart, then there's crazy. Then there's Crazy Smart. That's Ben (and he's a lovely chap, too)!
 -[Rich Turner](https://twitter.com/bitcrazed/status/1354144181837414400)
 
-> If it wasn't for him the dotnet project would never took off as much as it did, since six years ago extreme performance optimizations were brushed off as not really needed. He single-handed restored everyone's faith in the project and that it still has a bright future. 
--[Bartosz Adamczewski](https://twitter.com/badamczewski01/status/1353666677792272387)
+> Junior .Net Developer
+Senior .Net Developer
+Ben Adams .Net Developer
+😁 😁 😁
+-[Marco Rossignoli](https://twitter.com/MarcoRossignoli/status/1166733777206468608)
 
 ## How Does Sponsorship Work?
 
