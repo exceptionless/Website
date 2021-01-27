@@ -1,7 +1,7 @@
 ---
 title: Saying Thanks to the Open Source Community Through Sponsorship
 date: 2021-01-26
-draft: true
+draft: false
 ---
     
 Exceptionless has always been committed to the open-source software ecosystem. In fact, [Exceptionless is entirely open-source](https://github.com/Exceptionless), and we try our best to make it easy for anyone to host their own instance of our software. Our main repository has nearly 2,000 stars on Github and has seen contributions from 26 different people. Across all our repositories, we've seen hundreds of issues opened, dozens of pull requests, and countless comments. And for all of that, we are so appreciative. But we wanted to show our appreciation by doing more than just saying thanks. 
