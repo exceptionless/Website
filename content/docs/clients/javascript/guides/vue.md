@@ -55,7 +55,7 @@ Start by creating a `store.js` file that looks like this:
 import { reactive, toRefs } from "vue";
 import { ExceptionlessClient } from "exceptionless/dist/exceptionless";
 const defaultClient = ExceptionlessClient.default;
-defaultClient.config.apiKey = "XUlBBdgFxAlmCsAZHDFTIacXpzYuZDuqDzzFYMlR";
+defaultClient.config.apiKey = "YOUR API KEY";
 
 const state = reactive({
     client: defaultClient
@@ -70,11 +70,19 @@ export default function useMonitoring() {
 
 Again, this is a very simple example that literally uses global state just for the Exceptionless client. You'd likely use it for more than that. 
 
-Now, to make use of our global state, just import it anywhere in your app like this: 
+Now, to make use of our global state, just import it anywhere in your app like you would call your `useMonitoring` method to get access to your state variables, and in this case get access to Exceptionless. 
 
-```javascript
+Since our example is making use of the default client, you could also simply import the Exceptionless default client into any script tag you have in your components like this: 
 
+```js
+import { ExceptionlessClient } from "exceptionless/dist/exceptionless";
+const defaultClient = ExceptionlessClient.default;
+defaultClient.config.apiKey = "YOUR API KEY";
 ```
+
+---  
+
+[Next > Express](express.md) {.text-right}
 
 
 
