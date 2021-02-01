@@ -82,7 +82,7 @@ defaultClient.config.apiKey = "YOUR API KEY";
 
 ---  
 
-[Next > Express](express.md) {.text-right}
+[Next > Angular](angular.md) {.text-right}
 
 
 
