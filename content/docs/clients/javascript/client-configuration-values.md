@@ -1,6 +1,7 @@
 ---
 title: Client Configuration Values
 order: 2
+parent: JS
 ---
 - [About](#about)
 - [Usage Example](#usage-example)

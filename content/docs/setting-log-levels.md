@@ -9,7 +9,7 @@ To configure your default log levels, go to your project settings page by clicki
 
 ![Log Level Settings](img/default_log_levels.png) 
 
-You can change this at the project level or overide the setting on the Stacks page. 
+You can change this at the project level or overide the setting on the Stacks page.
 
 ---
 

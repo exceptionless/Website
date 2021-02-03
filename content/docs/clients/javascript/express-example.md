@@ -1,6 +1,7 @@
 ---
 title: Express Example
-order: 6
+# parent: JS
+# order: 7
 ---
 Add Exceptionless to your Express.js project and start collecting unhandled errors and 404s quickly.
 

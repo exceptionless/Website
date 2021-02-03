@@ -1,6 +1,7 @@
 ---
 title: Configuration
 order: 1
+parent: JS
 ---
 - [Installation](#installation)
   - [JavaScript](#javascript)
