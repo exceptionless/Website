@@ -9,7 +9,44 @@ To configure your default log levels, go to your project settings page by clicki
 
 ![Log Level Settings](img/default_log_levels.png) 
 
-You can change this at the project level or overide the setting on the Stacks page.
+You can change this at the project level or overide the setting on the Stacks page. To override the global log level, click on "Log Messages" on the left side of your screen: 
+
+![Log Levels](./img/logleveldashboard.png)
+
+Next, you'll want to do one of two things: 
+<br/>
+
+### 1. Click on "New Stacks" and then click on the log stack you'd like to change.
+<br/>
+
+The new stacks tab is on the left under Log Messages: 
+
+![new stacks](./img/newstacks.png) 
+
+When you click that link, you can click on the log stack and it will take you to this page: 
+
+![log stack](./img/logstack.png)
+
+<br/>
+
+### 2. You can click on a log message event from the Log Messages -> Events dashboard or the All -> Events dashboard, then you can click on a particular log message and click Go To Stack. 
+<br/>
+If you click Events, you'll see all log events (or all events depending on the dashboard you've chosen): 
+
+![log message events](./img/logmessageevents.png)
+
+Then, click on the event and you'll be taken to a details page for that event where you will see a "Go To Stack" button: 
+
+![log details](./img/logdetails.png)
+
+<br />
+
+### Overriding Global Log Levels
+<br />
+
+Now, you can override the global log levels for your account. Simply click the log level dropdown, select the new log level setting you'd like to capture in your stacks, and events of the same type or above will be captured, but any log levels below the type selected will no longer be captured.
+
+![override](./img/override.png)
 
 ---
 
