@@ -48,6 +48,8 @@ Now, you can override the global log levels for your account. Simply click the l
 
 ![override](./img/override.png)
 
+As with Data Exclusions, updates to project level and global log level settings will be passed down to the Exceptionless client in near real-time. While the Exceptionless server will catch event that should not be included in your dashboard, the client will catch them based on your configuration and prevent them from ever being sent to the server. Read more about [Project Settings](project-settings.md) here.
+
 ---
 
 [Next > De-Duplication](deduplication.md) {.text-right}
