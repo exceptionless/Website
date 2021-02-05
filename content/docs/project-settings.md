@@ -99,6 +99,8 @@ To set up custom client configurations, click the All Projects drop down in the 
 
 ![Exceptionless Project Settings](img/project-settings.png)
 
+Once you have made changes to your Project Settings, the configuration values will only be read by your client if your client is aware of the configuration. This happens out of the box with the [Exceptionless .NET Client](clients/dotnet/index.md) and the [Exceptionless JS Client](clients/javascript/index.md). If you are building your own client or simply wrapping our API, you can still make use of these configuration values by reading them in periodically via a `GET` request to `/api/v2/projects/{id}/config`.
+
 ## Event Exclusions
 
 The Exceptionless clients have the ability to automatically discard events based on client configuration settings. We have a plugin that looks at the client configuration settings using a simple key name convention.

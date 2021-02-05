@@ -170,8 +170,6 @@
   },
   "express-example": {
     "title": "Express Example",
-    "parent": "JS",
-    "order": 7,
     "preview": "Add Exceptionless to your Express.js project and start collecting …",
     "content": "\nAdd Exceptionless to your Express.js project and start collecting unhandled errors and 404s quickly.\n\nTo start, just add the following middleware to the bottom of your middleware definitions.\n\n```javascript\n// This middleware processes any unhandled errors that may occur in your middleware.\napp.use(function(err, req, res, next) {\n client.createUnhandledException(err, 'express').addRequestInfo(req).submit();\n res.status(500).send('Something broke!');\n});\n \n// This middleware processes 404’s.\napp.use(function(req, res, next) {\n client.createNotFound(req.originalUrl).addRequestInfo(req).submit();\n res.status(404).send('Sorry cant find that!');\n});\n```\n\n## Sample Express.js App\n\nWe have built a quick [Express.js sample app](https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/example/express/app.js) you can play around with.\n\n**Run the sample app by following the steps below:**\n\n1. Install [Node.js](https://nodejs.org/)\n2. [Clone or download our repository from GitHub](https://github.com/exceptionless/Exceptionless.JavaScript).\n3. Run `npm install`. This steps is required because we reference the exceptionless package from the root dist folder.\n4. Navigate to the `example\\express` folder via the command line (e.g., cd example\\express)\n5. Run `npm install`\n6. Open app.js in your favorite text editor and set the [apiKey](https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/example/express/app.js#L5-L6).\n7. Run node app.js.\n8. Navigate to <http://localhost:3000> in your browser to view the express app.\n9. To create an error, navigate to <http://localhost:3000/boom>\n\n### Troubleshooting\n\nWe recommend enabling debug logging by calling `client.config.useDebugLogger();`. This will output messages to the console regarding what the client is doing. Please contact us by creating an issue on GitHub if you need assistance or have any feedback for the project.\n\n--- \n\n[Next > Angular Example](angular-example.md) {.text-right}",
     "basename": "express-example",
@@ -224,8 +222,6 @@
   },
   "javascript-example": {
     "title": "JavaScript Example",
-    "order": 6,
-    "parent": "JS",
     "preview": "We have put together an example for the JavaScript client that you …",
     "content": "\nWe have put together an example for the JavaScript client that you can use to get an idea of how everything works. It is [available on the GitHub Repo](https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example). You can clone the repository and run the code as is or you can use the repository example as a starting point. \n\n---  \n\n[Next > ExpressJS Example](express-example.md) {.text-right}",
     "basename": "javascript-example",
@@ -233,8 +229,6 @@
   },
   "require-js-example": {
     "title": "RequireJS Example",
-    "order": 8,
-    "parent": "JS",
     "preview": "[The example/sample can be found …",
     "content": "\n[The example/sample can be found here](https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example/RequireJS).\n\n---  \n\n[Next > SystemJS Example](system-js-example.md) {.text-right}",
     "basename": "require-js-example",
@@ -242,8 +236,6 @@
   },
   "system-js-example": {
     "title": "SystemJS Example",
-    "order": 9,
-    "parent": "JS",
     "preview": "[Example/sample can be found …",
     "content": "\n[Example/sample can be found here](https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example/SystemJS).\n\n---  \n\n[Next > Typescript Example](typescript-example.md) {.text-right}",
     "basename": "system-js-example",
@@ -251,8 +243,6 @@
   },
   "typescript-example": {
     "title": "Typescript Example",
-    "order": 10,
-    "parent": "JS",
     "preview": "[Example / Sample can be found …",
     "content": "\n[Example / Sample can be found here](https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example/TypeScript).\n\n---  \n\n[Next > Self-Hosting](../../self-hosting/index.md) {.text-right}",
     "basename": "typescript-example",
@@ -390,7 +380,7 @@
     "title": "Log Levels",
     "order": 12,
     "preview": "Setting log levels allows you to control the flow of data into your …",
-    "content": "\n\nSetting log levels allows you to control the flow of data into your Exceptionless account. This is important when you are trying to filter the signal from the noise. In most error monitoring services, you would need to manually configure what log levels are used to send events by customizing your code. With Exceptionless, you can update the log levels used right in the Exceptionless UI. \n\nTo configure your default log levels, go to your project settings page by clicking the project name dropdown in the top left of the header. Hover over your project name, then click the gear icon. Once on the project settings page, click the Settings tab. Here, you will see the default log level options. \n\n![Log Level Settings](img/default_log_levels.png) \n\nYou can change this at the project level or overide the setting on the Stacks page. \n\n---\n\n[Next > De-Duplication](deduplication.md) {.text-right}",
+    "content": "\n\nSetting log levels allows you to control the flow of data into your Exceptionless account. This is important when you are trying to filter the signal from the noise. In most error monitoring services, you would need to manually configure what log levels are used to send events by customizing your code. With Exceptionless, you can update the log levels used right in the Exceptionless UI. \n\nTo configure your default log levels, go to your project settings page by clicking the project name dropdown in the top left of the header. Hover over your project name, then click the gear icon. Once on the project settings page, click the Settings tab. Here, you will see the default log level options. \n\n![Log Level Settings](img/default_log_levels.png) \n\nYou can change this at the project level or overide the setting on the Stacks page. To override the global log level, click on \"Log Messages\" on the left side of your screen: \n\n![Log Levels](./img/logleveldashboard.png)\n\nNext, you'll want to do one of two things: \n<br/>\n\n### 1. Click on \"New Stacks\" and then click on the log stack you'd like to change.\n<br/>\n\nThe new stacks tab is on the left under Log Messages: \n\n![new stacks](./img/newstacks.png) \n\nWhen you click that link, you can click on the log stack and it will take you to this page: \n\n![log stack](./img/logstack.png)\n\n<br/>\n\n### 2. You can click on a log message event from the Log Messages -> Events dashboard or the All -> Events dashboard, then you can click on a particular log message and click Go To Stack. \n<br/>\nIf you click Events, you'll see all log events (or all events depending on the dashboard you've chosen): \n\n![log message events](./img/logmessageevents.png)\n\nThen, click on the event and you'll be taken to a details page for that event where you will see a \"Go To Stack\" button: \n\n![log details](./img/logdetails.png)\n\n<br />\n\n### Overriding Global Log Levels\n<br />\n\nNow, you can override the global log levels for your account. Simply click the log level dropdown, select the new log level setting you'd like to capture in your stacks, and events of the same type or above will be captured, but any log levels below the type selected will no longer be captured.\n\n![override](./img/override.png)\n\nAs with Data Exclusions, updates to project level and global log level settings will be passed down to the Exceptionless client in near real-time. While the Exceptionless server will catch event that should not be included in your dashboard, the client will catch them based on your configuration and prevent them from ever being sent to the server. Read more about [Project Settings](project-settings.md) here.\n\n---\n\n[Next > De-Duplication](deduplication.md) {.text-right}",
     "basename": "setting-log-levels",
     "path": "./content/docs/setting-log-levels.md"
   },
