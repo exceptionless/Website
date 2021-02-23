@@ -1,7 +1,7 @@
 ---
 title: How to Debug Electron Apps
 date: 2021-02-22
-draft: true
+draft: false
 ---
 
 Electron is a great framework that makes developing cross-platform desktop applications easy. If you're a JavaScript developer, it is probably the first thing you'll reach for when you decide to build a desktop application. I know I did. In building my first and second desktop applications, I used Electron. In that process, I learned some tricks to help the development process go a little smoother. One such trick is how to better debug issues that may arise in the packaged, production version of your Electron app that you won't see in development. 
@@ -21,6 +21,8 @@ const { ExceptionlessClient } = require("exceptionless")
 const client = ExceptionlessClient.default.config.apiKey = "YOUR API KEY"
 ```
 
+You can get your project API key in the Exceptionless project settings page. 
+
 Now, with the client configured, you can start using Exceptionless to log events. The cool thing is these don't need to just be errors. If you want to log when a particular function is called within your main Electron code, you can use `client.submitLog("Function called")` but with something more descriptive. By submitting log events for particular functions, you will know for sure the function is being called. Of course, you can and should also track errors. This is as simple as calling `client.submitException(error)` with your error. 
 
 This is all very abstract, though. So, let's look at a practical example. Let's say your Electron app is listening to some event in order to write some data to the computer's hard disk. We need a trigger to come from our "frontend" html/js code, and then we need to read that trigger and take some action. In Electron, we use `ipcMain` to listen for events from the frontend code. An example of this might look like: 
@@ -36,7 +38,7 @@ ipcMain.on("Save File", async (event, message) => {
 });
 ```
 
-Note I added a log event that is sent to Exceptionless in the try and I catch the error and send that to Exceptionless in the catch. The beauty of this is we know when the event is successful, which is comforting, but we also know when it fails and why. This is important, because a failure here would be a silent failure in your app. 
+I added a log event that is sent to Exceptionless in the try and I catch the error and send that to Exceptionless in the catch. The beauty of this is we know when the event is successful, which is comforting, but we also know when it fails and why. This is important, because a failure here would be a silent failure in your app. 
 
 Let's say the file path you think you're trying to write to does not exist after your Electron app is built and packaged (a common issue is that PATH variables exposed by default to applications can be different than what you use and have available in your development environment). If that path did not exist, the `writeFileSync` command would not work. You would have no idea why, and your users would only know it when they tried to fetch the file that should have been written. 
 
