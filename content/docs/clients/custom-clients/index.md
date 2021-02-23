@@ -3,15 +3,13 @@ title: Custom Exceptionless Clients
 key: Custom-Clients
 ---
 
-Exceptionless provides a [.NET Client](../dotnet/index.md) and a [JavaScript Client](../javascript/index.md) to make things convenient. However, we recognize that developer write code in all sorts of languages beyond .NET and JS. It is possible to use Exceptionless with any programming language. In fact, our API makes it really simple. However, to get the full power of Exceptionless's [real-time configuration](../../project-settings.md) capabilities, you may want to wrap the Exceptionless API in a custom client in the language of your choice. 
+Exceptionless provides a [.NET Client](../dotnet/index.md) and a [JavaScript Client](../javascript/index.md) to make things convenient. However, we recognize that developers write code in all sorts of languages beyond .NET and JS. It is possible to use Exceptionless with any programming language. In fact, our API makes it really simple. However, to get the full power of Exceptionless, you may want to create your own custom client in the language of your choice.
 
 This guide will not focus on any particular programming language, but will instead focus on the concepts necessary to successfully implement your custom client. Building a client in Exceptionless requires three main things: 
 
 1. Authentication 
 2. Understanding of the data models
 3. Usage of the correct API endpoints
-
-As a bonus, at the end of this document, we'll discuss how you might configure the real-time capabilities enabled by Exceptionless.
 
 ### Authentication
 
