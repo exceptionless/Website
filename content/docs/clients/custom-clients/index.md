@@ -95,7 +95,7 @@ The tags array takes string values only, and all tags will be visibile on the ev
 
 #### data
 
-This is the most flexible of the properties that you send into Exceptionless. It is a disctionary object containing key/value pairs of any bits of information you want. That said, there are some know keys that will help Exceptionless better display information in this data dictionary: 
+This is the most flexible of the properties that you send into Exceptionless. It is a dictionary object containing key/value pairs of any bits of information you want. That said, there are some know keys that will help Exceptionless better display information in this data dictionary: 
 
 `@error` - this indicates to Exceptionless that the event is an error. We will handle the event as such. 
 `@simple_error` - this, like @error, indicates that the event is in an error. However, a simple error is less complex and the event object itself fits more neatly into what we've defined here so far. 
