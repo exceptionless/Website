@@ -36,7 +36,7 @@ The response to this request will be an array of all of your projects that looks
 ]
 ```
 
-You'll need the `id` field from this response to generate your new project-specific token. Let's generate that now. In addition to using the project ID, we will also need to pass in scopes for the token. In this case, we are going to pass in the `user` scope which provides admin access to the project. 
+You'll need the `id` field from this response to generate your new project-specific token. Let's generate that now. In addition to using the project ID, we will also need to pass in scopes for the token. In this case, we are going to pass in the `client` scope which provides access to post events and read events, but doesn't provide full user-token access. [Read more about scopes here](./api-getting-started.md).
 
 ### Generate Project Token
 
@@ -48,7 +48,7 @@ curl --location --request POST "https://api.exceptionless.com/api/v2/projects/YO
 --header 'Content-Type: application/json' \
 --data-raw '{
     "scopes": [
-        "user"
+        "client"
     ]
 }'
 ```
