@@ -11,7 +11,7 @@ Events passed through to Exceptionless take three forms:
 * [Logs](#posting-logs)  
 * [Errors](#posting-events)  
 
-We'll explore how to send through events for each category. 
+We'll explore how to send through events for each category. First, it's important to remind you that you should not being user-scoped tokens for these API endpoints. If you have not yet generated a project token, [do so through the UI](../project-settings.md) or [follow the guide here to do so programmatically here](./project-tokens.md).
 
 ### Posting Messages
 

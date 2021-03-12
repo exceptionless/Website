@@ -18,6 +18,7 @@ You can also **turn off the automatic updating of configuration settings when id
 Now, let's take a look at the available settings for your projects. There are quite a few, so feel free to jump to the section that interests you below: 
 
 <!-- - [Clients](#clients) -->
+- [API Keys](#api-keys)
 - [Data Exclusions](#data-exclusions)
   - [Example usage](#example-usage)
 - [Error Stacking](#error-stacking)
@@ -39,6 +40,14 @@ Each client wrapper has its own guide to help you get started. Visit either one 
 
 - [.NET](clients/dotnet/)
 - [JavaScript / Node.js](clients/javascript/) -->
+
+## API Keys
+
+Before doing anything, you want to create an API Key for your project. This protects you and your team by ensuring you are using a revokable key. Instead of using a user-scoped key that would provide access to everything, a project-scoped key is limited to—you guessed it—a single project.
+
+To generate an API Key, go to your project settings page and click on the API Keys tab. There, you can click the New API Key button. 
+
+![exceptionless api keys](../docs/img/apikeys.png)
 
 ## Data Exclusions
 
