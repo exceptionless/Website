@@ -8,6 +8,7 @@ parent: JS
     - [Via Bower](#via-bower)
   - [Node.js](#nodejs)
 - [Configuration](#configuration)
+  - [Offline Storage](#offline-storage)
   - [JavaScript](#javascript-1)
   - [Node.js](#nodejs-1)
   - [General Data Protection Regulation](#general-data-protection-regulation)
@@ -51,7 +52,21 @@ var client = require('exceptionless').ExceptionlessClient.default;
 
 ## Configuration
 
-_NOTE: The only required setting that you need to configure is the client's `apiKey`._
+_NOTE: The only required setting that you need to configure is the client's `apiKey`._ However, many values may be important for your application. Specifically, you may want to consider persisting events to disk. 
+
+### Offline Storage
+
+By default, Exceptionless keeps events in memory. This means if the application exits before the event can be sent to the server, the event will not be sent on restart. This can be overcome by persisting events to disk.
+
+To persist events to disk for offline scenarios or to ensure no events are lost between application restarts, you will need to configure your Exceptionless client to know to store the events on disk and to know where to store them. You can simply pass in a configuration value that includes the storage path. When selecting a folder path, make sure that the identity the application is running under has full permissions to that folder.
+
+This can be done by setting the configuration value like this: 
+
+```javascript
+Exceptionless.config.useLocalStorage();
+```
+
+You just need to tell the client, no matter how you are accessing that client instance, to use persistent storage by calling `useLocalStorage()` on your client instance.
 
 ### JavaScript
 

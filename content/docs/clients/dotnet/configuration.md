@@ -96,7 +96,9 @@ ExceptionlessClient.Default.Configuration.SetVersion("1.2.3");
 
 ## Offline storage
 
-Events can also be persisted to disk for offline scenarios or to ensure no events are lost between application restarts. When selecting a folder path, make sure that the identity the application is running under has full permissions to that folder.
+By default, Exceptionless keeps events in memory. This means if the application exits before the event can be sent to the server, the event will not be sent on restart. This can be overcome by persisting events to disk.
+
+To persist events to disk for offline scenarios or to ensure no events are lost between application restarts, you will need to configure your Exceptionless client to know to store the events on disk and to know where to store them. You can simply pass in a configuration value that includes the storage path. When selecting a folder path, make sure that the identity the application is running under has full permissions to that folder.
 
 Please note that this adds a bit of overhead as events need to be serialized to disk on submission and is not recommended for high throughput logging scenarios.
 

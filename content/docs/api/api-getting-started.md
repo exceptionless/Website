@@ -7,7 +7,7 @@ Remember, you can refer to the full, self-updating, documentation [here](https:/
 
 ## Get Your User Scoped Token
 
-Before you can post project-specific events and make project-specific API requests, you'll need to first generate a user token which can then be used to generate tokens for your projects. 
+Before you can post project-specific events and make project-specific API requests, you'll need to first generate a user token which can then be used to generate tokens for your projects. It is incredibly important to protect user-scoped tokens as they act as the keys to the kingdom. **Never let anyone else access your user token**.
 
 *NOTE: If you signed up using an OAuth flow with Google or something else, you will need to create a local login to be able to use this endpoint.* 
 
