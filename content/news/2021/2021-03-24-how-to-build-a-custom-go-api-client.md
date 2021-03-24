@@ -1,7 +1,6 @@
 ---
 title: How to Build a Custom Go Client For a REST API
-date: 2021-03-22
-draft: true
+date: 2021-03-24
 ---
 
 ![Picture of gophers working](./go_gophers.jpg)
