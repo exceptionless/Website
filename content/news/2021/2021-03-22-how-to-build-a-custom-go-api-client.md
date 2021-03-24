@@ -8,7 +8,7 @@ draft: true
     
 [Exceptionless](https://exceptionless.com) is powered by a REST API. When you interact with the dashboard UI, when you use the .NET client, and when you use the JavaScript client, you are interacting with the REST API. It is well-documented, and it can be used without any client libraries. This paradigm makes it simple for developers to create their own wrappers around the API. In fact, we recently started work on building an official Go client for Exceptionless. Along the way, we learned some tips and tricks that may be helpful for others that want to build clients and SDKs in Go that wrap RESTful APIs. 
 
-First, a little about Go. Go is a statically typed language, built originally by the folks at Google. Go, while close in syntax to many other statically typed languages, differs in that it is no object oriented. Go is also very well suited for gRPC APIs, but that does not prevent it from being used with REST APIs, as we'll see here today. 
+First, a little about Go. [Go](https://golang.org/) is a statically typed language, built originally by the folks at Google. Go, while close in syntax to many other statically typed languages, differs in that it is no object oriented. Go is also very well suited for [gRPC APIs](https://www.programmableweb.com/news/what-grpc-api-and-how-does-it-work/analysis/2020/10/08), but that does not prevent it from being used with REST APIs, as we'll see here today. 
 
 ### Getting Started
 
