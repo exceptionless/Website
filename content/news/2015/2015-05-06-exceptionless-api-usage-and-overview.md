@@ -3,6 +3,8 @@ id: 13087
 title: Exceptionless API Usage and Overview
 date: 2015-05-06
 ---
+# THESE DOCS HAVE BEEN UPDATED. SEE THE [NEW DOCS HERE](../../docs/api/index.md).
+
 ![Exceptionless API](/assets/img/news/Screenshot-2015-05-06-16.26.42-300x220.png)
 
 So you've been using Exceptionless for a while, but you wish you had a different dashboard, or maybe you'd like to integrate event data into one of your apps. No problem, **just use the API!**
