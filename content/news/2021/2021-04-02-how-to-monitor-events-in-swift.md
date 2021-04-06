@@ -4,7 +4,7 @@ date: 2021-04-02
 draft: true
 ---
 
-Swift, best known as the programming language that enables iOS, iPadOS, and macOS developers to build apps, has been growing in popularity over the years. [As of February of 2020](https://www.zdnet.com/article/programming-language-popularity-apples-objective-c-tumbles-down-the-rankings/), it had leaped into the top-10 of most-popular programming languages. While Swift can be used for more than just Apple platform products, we're going to keep things simple today and focus on how to set up event monitoring with Swift in an iOS app. 
+Swift, best known as the programming language that enables iOS, iPadOS, and macOS developers to build apps, has been growing in popularity over the years. [As of February of 2020](https://www.zdnet.com/article/programming-language-popularity-apples-objective-c-tumbles-down-the-rankings/), it had leaped into the top-10 of most popular programming languages. While Swift can be used for more than just Apple platform products, we're going to keep things simple today and focus on how to set up event monitoring with Swift in an iOS app. 
 
 For this tutorial, we're going to be using [Exceptionless to collect events, so you'll need to sign up for a free account here](https://exceptionless.com). You're also going to need the following: 
 
@@ -93,7 +93,7 @@ Assuming all is working, we can move on to using Exceptionless!
 
 We're going to handle all of the event processing and posting through a single class. You may want to refactor into multiple classes in a production project, but this will get the point across, I think. 
 
-Let's create a new file. In file menu bar, click File, New, File, and be sure to choose a Swift file and not SwiftUI. Let's name the new file `Exceptionless.swift`. 
+Let's create a new file. In the file menu bar, click File, New, File, and be sure to choose a Swift file and not SwiftUI. Let's name the new file `Exceptionless.swift`. 
 
 Inside that file, we're going to create our `Exceptionless` class. Add the following so your file looks like this: 
 
@@ -186,7 +186,7 @@ private func logEvent(logEvent: String) {
 }
 ```
 
-Because the Exceptionless API takes JSON body payloads, we want to build our event into JSON. To do that, we first start with a dictionary. As you can see, we are creating an `eventDictionary` which is simply key value pairs in string format. We add in the date in ISO format so we know when our events happen. The actual event message is what we passed in all the way back from when we clicked the button. 
+Because the Exceptionless API takes JSON body payloads, we want to build our event into JSON. To do that, we first start with a dictionary. As you can see, we are creating an `eventDictionary` which is simply keyvalue pairs in string format. We add in the date in ISO format so we know when our events happen. The actual event message is what we passed in all the way back from when we clicked the button. 
 
 We take that dictionary and convert it to JSON with Swift's built-in `JSONSerialization` function. Before posting to the API, let's take a look at the output in the console and make sure we're happy with it. 
 
@@ -219,7 +219,7 @@ private func logError(errorEvent: String) {
 }
 ```
 
-You'll see this function is very similar to the `logEvent` function. However, we are nesting data in our JSON, so we need two disctionaries. We use one dictionary to house the "@simple_error" and another to house the entire event. In other words, nest the JSON version of our `errorDictionary` inside the JSON version of our `eventDictionary`.
+You'll see this function is very similar to the `logEvent` function. However, we are nesting data in our JSON, so we need two dictionaries. We use one dictionary to house the "@simple_error" and another to house the entire event. In other words, nest the JSON version of our `errorDictionary` inside the JSON version of our `eventDictionary`.
 
 Let's build and run the app and try both buttons. You should see the following printed out: 
 
@@ -234,4 +234,87 @@ Remember, if you haven't done so, you'll need to sign up for a [free Exceptionle
 
 ## Posting To The API
 
+When we post to the Exceptionless API, we are posting JSON data. In the examples above, we are printing the JSON string version of what we will ultimately push to the API. Let's see how it will look when actually posting to the API. 
 
+Within our Exceptionless class, let's create a new private function called `postToAPI`. 
+
+```swift
+private func postToApi(event: Data) {
+    let url = URL(string: "https://api.exceptionless.com/api/v2/events")!
+
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
+
+    // insert json data to the request
+    request.httpBody = event
+    request.setValue("application/json; charset=utf-8",
+         forHTTPHeaderField: "Content-Tye")
+    request.setValue("application/json; charset=utf-8",
+         forHTTPHeaderField: "Accept")
+    request.setValue("Bearer " + self.apiKey,
+         forHTTPHeaderField: "Authorization")
+
+    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        guard let data = data, error == nil else {
+            print(error?.localizedDescription ?? "No data")
+            return
+        }
+        let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+        if let responseJSON = responseJSON as? [String: Any] {
+            print(responseJSON)
+        }
+    }
+
+    task.resume()
+}
+```
+
+Walking through this new function, let's take a look at what's going on. First, we are setting the URL for our API request. This is a hardcoded value and probably not something you'd want to do in a production application. 
+
+Next, we are creating a new request and assigning values to the request. You'll note that our `postToAPI` function accepts a `Data` value argument called `event`. That is what we will be posting to the API and it represents the JSON version of the event we build when we click Log Event or Log Error. 
+
+Then, we set header values for our request. Take note, that we are assigning the `Authorization` value by using our Exceptionless API key. We'll need to get that key from Exceptionless before actually sending events. \
+
+Finally, we are posting the request using `URLSession`. 
+
+To actually call this function, we need to make two minor changes. First, back in your `ContentView.swift` file, we need to add our Exceptionless API key in where we left placeholder text. Again, this is not how you'd assign the API Key in a production app, but it's a simple example to get you going. 
+
+Now, back in the `Exceptionless.swift` file, let's update both the `logEvent` and `logError` functions. Instead of converting our event to a JSON string, we're going to leave it as JSON and pass it through to our `postToAPI` function like this: 
+
+```swift
+private func logEvent(logEvent: String) {
+    let now = Date()
+    let formatter = ISO8601DateFormatter()
+    let datetime = formatter.string(from: now)
+    let eventDictionary : [String: Any] = [ "type": "log", "message":logEvent, "date": datetime ]
+    let jsonData = (try? JSONSerialization.data(withJSONObject: eventDictionary, options: []))!
+    postToApi(event: jsonData)
+}
+```
+
+And here's the `logError` function: 
+
+```swift
+private func logError(errorEvent: String) {
+    let now = Date()
+    let formatter = ISO8601DateFormatter()
+    let datetime = formatter.string(from: now)
+    
+    let errorDictionary : [String: Any] = ["message": errorEvent, "type": "System.Exception"]
+    
+    let errorJson = (try? JSONSerialization.data(withJSONObject:errorDictionary))!
+    let errorJsonString = String(data: errorJson, encoding: String.Encoding.ascii)!
+    let eventDictionary : [String: Any] = [ "type": "error", "@simple_error":errorJsonString, "date": datetime ]
+    let jsonData = (try? JSONSerialization.data(withJSONObject: eventDictionary))!
+
+    postToApi(event: jsonData)
+}
+```
+
+Go ahead and build and run your app. Click the log event button and then the log error button. You won't see anything printed in the console, but if you go into your Exceptionless dashboard, you should see a new log and a new exception. 
+
+![Exceptionless dashboard](./example_swift_events.png)
+
+Congratulations! You just built a simple event monitoring service in native Swift code. You can extend this pretty easily thanks to the Exceptionless class and leverage it in a production application. 
+
+Swift is a fun language, but when using it to build mobile applications, it can be difficult to debug and track events. Exceptionless can help, and hopefully this tutorial shows how to implement such event tracking in SwiftUI and Swift. 
