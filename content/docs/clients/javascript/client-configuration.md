@@ -11,6 +11,9 @@ parent: JS
   - [Offline Storage](#offline-storage)
   - [JavaScript](#javascript-1)
   - [Node.js](#nodejs-1)
+  - [Extended Data](#extended-data)
+    - [Default Tags](#default-tags)
+    - [Default Data](#default-data)
   - [General Data Protection Regulation](#general-data-protection-regulation)
     - [Query String](#query-string)
     - [JavaScript](#javascript-2)
@@ -123,6 +126,23 @@ submissionBatchSize: 100
 
 **NOTE**: creating new instances is good for sending custom events. **Automatic catching of errors uses default client**. Make sure you setup default client as well if you need automatic catching of unhandled errors.
 
+### Extended Data
+You can include information that is set globally and provided with every event you send. There are two types of data that can be provided this way: Default Tags and Default Data. 
+
+#### Default Tags
+
+To add default tags to every request, you can configure your client like this: 
+
+```javascript
+exceptionless.ExceptionlessClient.default.config.defaultTags = ["Tag1", "Tag2"];
+```
+
+#### Default Data
+You can set up default data to be sent with every request very similarly to how you send default tags. You would do it like this: 
+
+```js
+exceptionless.ExceptionlessClient.default.config.defaultData["data"] = "My custom data";
+```
 
 ### General Data Protection Regulation
 
