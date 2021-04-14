@@ -13,6 +13,12 @@ There are a few ways to configure Exceptionless in your project. We'll cover the
   - [Configuring With Attributes](#configuring-with-attributes)
   - [Configuring With Environment Variables](#configuring-with-environment-variables)
   - [Using Web.config](#using-webconfig)
+  - [Available Configuration Options](#available-configuration-options)
+  - [ServerUrl](#serverurl)
+  - [IncludePrivateInformation](#includeprivateinformation)
+  - [Extended Data](#extended-data)
+  - [Default Tags](#default-tags)
+  - [Default Data](#default-data)
 - [Versioning](#versioning)
 - [Offline storage](#offline-storage)
   - [Configuration File](#configuration-file)
@@ -26,9 +32,11 @@ There are a few ways to configure Exceptionless in your project. We'll cover the
 
 ## ExceptionlessClient Configuration
 
-The examples below show the various ways (configuration file, attributes or code) that Exceptionless can be configured in your application.
+You have a few options for how you might configure your Exceptionless client. Here are some examples of how to do this. 
 
 ### Configuring With Code
+
+The examples below show the various ways (configuration file, attributes or code) that Exceptionless can be configured in your application.
 
 ```csharp
 using Exceptionless;
@@ -83,6 +91,77 @@ Exceptionless can be configured using a config section in your web.config or app
     ...
   </system.webServer>
 </configuration>
+```
+
+Now, before you can fully configure your Exceptionless client, it's important to know what options are available for you to configure. We'll cover that below. 
+
+### Available Configuration Options
+
+When initializing the Exceptionless client, you can set any of the following values: 
+
+* ServerUrl
+* IncludePrivateInformation
+* DefaultTags
+* DefaultData
+
+### ServerUrl
+
+The `ServerUrl` is used when you are self-hosting Exceptionless and need to point your client to your self-hosted server. This one is pretty self-explanatory. 
+
+### IncludePrivateInformation
+
+This is a boolean value that will automatically strip private info like credit card numbers and passwords from being sent in event handling. The default is `true`. However, you can set this value like this: 
+
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.Configuration.IncludePrivateInformation = false;
+```
+
+You can also set it in a global configuration file like this: 
+
+```xml
+<exceptionless apiKey="YOUR_API_KEY" includePrivateInformation="false" />
+```
+
+### Extended Data
+
+The next two properties that can be set when configuring the Exceptionless client can be considered features that extend your data. If you want to apply additional information to every single event that is fired, you would use one of these two settings. 
+
+### Default Tags
+
+Just as you are able to apply tags to individual events, you can set default tags that will apply to all events you submit. Configuring this is simple. Here's a quick example: 
+
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.Configuration.DefaultTags.Add("Tag1");
+```
+
+You can also set this up globally with a configuration file like this: 
+
+```xml
+<exceptionless apiKey="YOUR_API_KEY" tags="Tag1,Tag2" />
+```
+
+### Default Data
+
+When viewing your stacks and individual events, you can see additional information about the events on the Extended Data tab. Data found there is usually passed in by adding info to the data object in the event payload. Here's an example of how you might do that: 
+
+```cs
+using Exceptionless;
+ExceptionlessClient.Default.Configuration.DefaultData["Data1"] = "Exceptionless";
+```
+
+You can also configure this with a configuration file like this: 
+
+```xml
+<exceptionless apiKey="YOUR_API_KEY">
+    <data>
+      <add name="Data1" value="Exceptionless"/>
+      <add name="Data2" value="10"/>
+      <add name="Data3" value="true"/>
+      <add name="Data4" value="{ 'Property1': 'Exceptionless', 'Property2: 10, 'Property3': true }"/>
+    </data>
+</exceptionless>
 ```
 
 ## Versioning
