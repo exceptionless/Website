@@ -1,7 +1,7 @@
 ---
 title: Navigating The Exceptionless World of Go
-date: 2021-04-14
-draft: true
+date: 2021-04-19
+draft: false
 ---
     
 Go does not have the concept of exceptions. Welp, I guess [Exceptionless](https://exceptionless.com) doesn't apply. Let's pack it up and head home, everyone. 
