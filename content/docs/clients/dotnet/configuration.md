@@ -4,7 +4,7 @@ order: 1
 parent: .NET
 ---
 
-There are a few ways to configure Exceptionless in your project. We'll cover them here or you can jump to app-specific examples: [Console App Example](console-apps-example.md), [Web Server Example](web-server-example.md).
+There are a few ways to configure Exceptionless in your project. We'll cover them here or you can jump to app-specific examples: [Console App Example](guides/console-apps-example.md), [Web Server Example](guides/web-server-example.md).
 
 ---
 
