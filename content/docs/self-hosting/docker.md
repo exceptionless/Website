@@ -38,7 +38,7 @@ docker run --rm -it -p 5000:80 `
 
 ## Simple Setup w/SSL Support and SMTP
 
-Runs a very simple non-production setup for Exceptionless with data persisted between runs in a sub-directory of the current directory called `esdata`. It uses an embedded single node Elasticsearch cluster and does not have backups. It is recommended that you create your own Elasticsearch cluster for production deployments of Exceptionless.
+Runs a very simple non-production setup for Exceptionless with data persisted between runs in a sub-directory of the current directory called `esdata`. It uses an embedded single node Elasticsearch cluster and does not have backups. It is recommended that you create your own Elasticsearch cluster for production deployments of Exceptionless. In the SMTP password characters disallowed or reserved according to RFC-2396 (e.g. @:#/?+) need to be percent-encoded (e.g. # => %23).
 
 On Linux:
 
