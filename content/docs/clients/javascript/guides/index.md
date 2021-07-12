@@ -12,8 +12,8 @@ Exceptionless works with all popular JavaScript frameworks on both the front end
 * [Vue](vue.md)
 * [Express](express.md)
 
-Exceptionless should work anywhere JavaScript runs, but if you have specific frameworks you'd like to see covered, let us know or submit a pull request. Our documentation is [open-source and editable](https://github.com/exceptionless/Website/tree/master/content/docs). 
+Exceptionless should work anywhere JavaScript runs, but if you have specific frameworks you'd like to see covered, let us know or submit a pull request. Our documentation is [open-source and editable](https://github.com/exceptionless/Website/tree/master/content/docs).
 
----  
+---
 
 [Next > React Guide](react.md) {.text-right}

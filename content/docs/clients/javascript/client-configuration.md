@@ -4,144 +4,120 @@ order: 1
 parent: JS
 ---
 - [Installation](#installation)
-  - [JavaScript](#javascript)
-    - [Via Bower](#via-bower)
+  - [Browser](#browser)
   - [Node.js](#nodejs)
 - [Configuration](#configuration)
   - [Offline Storage](#offline-storage)
-  - [JavaScript](#javascript-1)
-  - [Node.js](#nodejs-1)
+  - [API Key](#api-key)
   - [Extended Data](#extended-data)
     - [Default Tags](#default-tags)
     - [Default Data](#default-data)
   - [General Data Protection Regulation](#general-data-protection-regulation)
-    - [Query String](#query-string)
-    - [JavaScript](#javascript-2)
-    - [Node.js](#nodejs-2)
-    - [JavaScript](#javascript-3)
-    - [Node.js](#nodejs-3)
 - [Versioning](#versioning)
-  - [JavaScript](#javascript-4)
-  - [Node.js](#nodejs-4)
 - [Self Hosted Options](#self-hosted-options)
-  - [JavaScript](#javascript-5)
-  - [Node.js](#nodejs-5)
 
 ***
 
 ## Installation
 
-### JavaScript
+### Browser
 
-#### Via Bower
+1. Install the package by running `npm install @exceptionless/browser --save`
+2. Add the Exceptionless client to your app:
 
-1. Install the package by running `bower install exceptionless`
-1. Add the script to your html page. We recommend placing this as the very first script.
+```js
+import { Exceptionless } from "@exceptionless/browser";
 
-```javascript
-<script src="bower_components/exceptionless/dist/exceptionless.min.js"></script>
+await Exceptionless.startup((c) => {
+  c.apiKey = "API_KEY_HERE";
+});
 ```
 
 ### Node.js
 
-1. Install the package by running `npm install exceptionless --save-dev`.
-1. Add the Exceptionless client to your app:
+1. Install the package by running `npm install @exceptionless/node --save`.
+2. Add the Exceptionless client to your app:
 
-```javascript
-var client = require('exceptionless').ExceptionlessClient.default;
+```js
+import { Exceptionless } from "@exceptionless/node";
+
+await Exceptionless.startup(c => {
+  c.apiKey = "API_KEY_HERE";
+});
 ```
 
 ***
 
 ## Configuration
 
-_NOTE: The only required setting that you need to configure is the client's `apiKey`._ However, many values may be important for your application. Specifically, you may want to consider persisting events to disk. 
+_NOTE: The only required setting that you need to configure is the client's `apiKey`._ However, many values may be important for your application. Specifically, you may want to consider persisting events to disk.
 
 ### Offline Storage
 
-By default, Exceptionless keeps events in memory. This means if the application exits before the event can be sent to the server, the event will not be sent on restart. This can be overcome by persisting events to disk.
+By default, Exceptionless keeps events in memory and stores server configuration to local storage if available. This means if the application exits before the event can be sent to the server, the event will not be sent on restart. This can be overcome by persisting events to disk as well.
 
-To persist events to disk for offline scenarios or to ensure no events are lost between application restarts, you will need to configure your Exceptionless client to know to store the events on disk and to know where to store them. You can simply pass in a configuration value that includes the storage path. When selecting a folder path, make sure that the identity the application is running under has full permissions to that folder.
+This can be done by setting the configuration value like this:
 
-This can be done by setting the configuration value like this: 
+```js
+import { Exceptionless } from "@exceptionless/browser";
 
-```javascript
-Exceptionless.config.useLocalStorage();
-```
-
-You just need to tell the client, no matter how you are accessing that client instance, to use persistent storage by calling `useLocalStorage()` on your client instance.
-
-### JavaScript
-
-1 - Configure the `apiKey` as part of the script tag. This will be applied to all new instances of the ExceptionlessClient
-
-```javascript
-<script src="bower_components/exceptionless/dist/exceptionless.min.js?apiKey=API_KEY_HERE"></script>
-```
-
-2 - Set the `apiKey` on the default ExceptionlessClient instance.
-
-```javascript
-exceptionless.ExceptionlessClient.default.config.apiKey = 'API_KEY_HERE';
-```
-
-3 - Create a new instance of the ExceptionlessClient and specify the `apiKey`, `serverUrl` or [configuration object](https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/configuration/IConfigurationSettings.ts).
-
-```javascript
-var client = new exceptionless.ExceptionlessClient('API_KEY_HERE');
-// or with a api key and server url.
-var client = new exceptionless.ExceptionlessClient('API_KEY_HERE', 'http://localhost:50000');
-// or with a configuration object
-var client = new exceptionless.ExceptionlessClient({
-apiKey: 'API_KEY_HERE',
-serverUrl: 'http://localhost:50000',
-submissionBatchSize: 100
+await Exceptionless.startup(c => {
+  c.usePersistedQueueStorage = true;
 });
 ```
 
-### Node.js
+### API Key
 
-1 - Set the `apiKey` on the default ExceptionlessClient instance.
+You can set the `apiKey` two different ways. The first is by passing it to the
+startup function. This is the recommended way if you have no other client
+configuration settings to configure.
 
-```javascript
-var client = require('exceptionless').ExceptionlessClient.default;
-client.config.apiKey = 'API_KEY_HERE';
+```js
+import { Exceptionless } from "@exceptionless/browser";
+
+await Exceptionless.startup("API_KEY_HERE");
 ```
 
-2 - Create a new instance of the ExceptionlessClient and specify the `apiKey`, `serverUrl` or [configuration object](https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/configuration/IConfigurationSettings.ts).
+The second way is to set it on the configuration instance passed to startup.
+This is the recommended way when configuring multiple settings.
 
-```javascript
-var exceptionless = require('exceptionless');
+```js
+import { Exceptionless } from "@exceptionless/browser";
 
-var client = new exceptionless.ExceptionlessClient('API_KEY_HERE');
-// or with a api key and server url.
-var client = new exceptionless.ExceptionlessClient('API_KEY_HERE', 'http://localhost:50000');
-// or with a configuration object
-var client = new exceptionless.ExceptionlessClient({
-apiKey: 'API_KEY_HERE',
-serverUrl: 'http://localhost:50000',
-submissionBatchSize: 100
+await Exceptionless.startup(c => {
+  c.apiKey: 'API_KEY_HERE',
+  c.serverUrl: 'http://localhost:50000'
 });
 ```
 
 **NOTE**: creating new instances is good for sending custom events. **Automatic catching of errors uses default client**. Make sure you setup default client as well if you need automatic catching of unhandled errors.
 
 ### Extended Data
-You can include information that is set globally and provided with every event you send. There are two types of data that can be provided this way: Default Tags and Default Data. 
+
+You can include information that is set globally and provided with every event you send. There are two types of data that can be provided this way: Default Tags and Default Data.
 
 #### Default Tags
 
-To add default tags to every request, you can configure your client like this: 
+To add default tags to every request, you can configure your client like this:
 
-```javascript
-exceptionless.ExceptionlessClient.default.config.defaultTags = ["Tag1", "Tag2"];
+```js
+import { Exceptionless } from "@exceptionless/browser";
+
+await Exceptionless.startup(c => {
+  c.defaultTags.push("Tag1", "Tag2");
+});
 ```
 
 #### Default Data
-You can set up default data to be sent with every request very similarly to how you send default tags. You would do it like this: 
+
+You can set up default data to be sent with every request very similarly to how you send default tags. You would do it like this:
 
 ```js
-exceptionless.ExceptionlessClient.default.config.defaultData["data"] = "My custom data";
+import { Exceptionless } from "@exceptionless/browser";
+
+await Exceptionless.startup(c => {
+  c.defaultData["data"] = "My custom data";
+});
 ```
 
 ### General Data Protection Regulation
@@ -150,101 +126,60 @@ By default the Exceptionless Client will report all available metadata which cou
 
 You have the option of finely tuning what is collected via individual setting options or you can disable the collection of all PII data by setting the `includePrivateInformation` to `false`.
 
-#### Query String
+```js
+import { Exceptionless } from "@exceptionless/browser";
 
-```javascript
-<script src="bower_components/exceptionless/dist/exceptionless.min.js?apiKey=API_KEY_HERE& includePrivateInformation=false"></script>
-```
-
-#### JavaScript
-
-```javascript
-exceptionless.ExceptionlessClient.default.config.includePrivateInformation = false;
-```
-
-#### Node.js
-
-```javascript
-var exceptionless = require('exceptionless');
-exceptionless.ExceptionlessClient.default.config.includePrivateInformation = false;
+await Exceptionless.startup(c => {
+  c.includePrivateInformation = false;
+});
 ```
 
 If you wish to have a finer grained approach which allows you to use Data Exclusions while removing specific meta data collection you can do so via code. Please note if the below doesn't meet your needs you can always write a plugin.
 
-#### JavaScript
+```js
+import { Exceptionless } from "@exceptionless/browser";
 
-```javascript
-// Include the username if available.
-exceptionless.ExceptionlessClient.default.config.includeUserName = false;
-// Include the MachineName in MachineInfo.
-exceptionless.ExceptionlessClient.default.config.includeMachineName = false;
-// Include Ip Addresses in MachineInfo and RequestInfo.
-exceptionless.ExceptionlessClient.default.config.includeIpAddress = false;
-// Include Cookies, please note that DataExclusions are applied to all Cookie keys when enabled.
-exceptionless.ExceptionlessClient.default.config.includeCookies = false;
-// Include Form/POST Data, please note that DataExclusions are only applied to Form data keys when enabled.
-exceptionless.ExceptionlessClient.default.config.includePostData = false;
-// Include Query String information, please note that DataExclusions are applied to all Query String keys when enabled.
-exceptionless.ExceptionlessClient.default.config.includeQueryString = false;
-```
-
-#### Node.js
-
-```javascript
-var exceptionless = require('exceptionless');
-
-// Include the username if available.
-exceptionless.ExceptionlessClient.default.config.includeUserName = false;
-// Include the MachineName in MachineInfo.
-exceptionless.ExceptionlessClient.default.config.includeMachineName = false;
-// Include Ip Addresses in MachineInfo and RequestInfo.
-exceptionless.ExceptionlessClient.default.config.includeIpAddress = false;
-// Include Cookies, please note that DataExclusions are applied to all Cookie keys when enabled.
-exceptionless.ExceptionlessClient.default.config.includeCookies = false;
-// Include Form/POST Data, please note that DataExclusions are only applied to Form data keys when enabled.
-exceptionless.ExceptionlessClient.default.config.includePostData = false;
-// Include Query String information, please note that DataExclusions are applied to all Query String keys when enabled.
-exceptionless.ExceptionlessClient.default.config.includeQueryString = false;
+await Exceptionless.startup(c => {
+  // Include the username if available.
+  c.includeUserName = false;
+  // Include the MachineName in MachineInfo.
+  c.includeMachineName = false;
+  // Include Ip Addresses in MachineInfo and RequestInfo.
+  c.includeIpAddress = false;
+  // Include Cookies, please note that DataExclusions are applied to all Cookie keys when enabled.
+  c.includeCookies = false;
+  // Include Form/POST Data, please note that DataExclusions are only applied to Form data keys when enabled.
+  c.includePostData = false;
+  // Include Query String information, please note that DataExclusions are applied to all Query String keys when enabled.
+  c.includeQueryString = false;
+});
 ```
 
 ## Versioning
 
 By specifying an application version you can [enable additional functionality](../../versioning.md). It's a good practice to specify an application version if possible using the code below.
 
-### JavaScript
+```js
+import { Exceptionless } from "@exceptionless/browser";
 
-```javascript
-exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
-```
-
-### Node.js
-
-```javascript
-var exceptionless = require('exceptionless');
-exceptionless.ExceptionlessClient.default.config.setVersion("1.2.3");
+await Exceptionless.startup(c => {
+  c.version = "1.2.3";
+});
 ```
 
 ## Self Hosted Options
 
 The Exceptionless client can also be configured to send data to your [self hosted instance](../../self-hosting/index.md). This is configured by setting the `serverUrl` setting to point to your Exceptionless instance.
 
-### JavaScript
+```js
+import { Exceptionless } from "@exceptionless/browser";
 
-You can set the `serverUrl` on the default ExceptionlessClient instance.
-
-```javascript
-exceptionless.ExceptionlessClient.default.config.serverUrl = 'http://localhost:50000';
+await Exceptionless.startup(c => {
+  c.apiKey: 'API_KEY_HERE',
+  c.serverUrl: 'http://localhost:50000'
+});
 ```
 
-### Node.js
-
-You can set the `serverUrl` on the default ExceptionlessClient instance.
-
-```javascript
-var client = require('exceptionless.node').ExceptionlessClient.default;
-client
-```
-
----
+***
 
 [Next > Client Configuration Values](client-configuration-values.md) {.text-right}

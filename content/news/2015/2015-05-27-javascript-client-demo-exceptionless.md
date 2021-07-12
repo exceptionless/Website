@@ -48,7 +48,7 @@ var client = exceptionless.ExceptionlessClient.default;
 client.config.apiKey = 'API_KEY_HERE';
 ```
 
-**3.** Create a new instance of the ExceptionlessClient and specify the `apiKey` or <a title="Exceptionless.JavaScript Configuration Object" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/configuration/IConfigurationSettings.ts" target="_blank">configuration object</a>. _Note that the configuration object is optional._
+**3.** Create a new instance of the ExceptionlessClient and specify the `apiKey` or <a title="Exceptionless.JavaScript Configuration Object" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.6.4/src/configuration/IConfigurationSettings.ts" target="_blank">configuration object</a>. _Note that the configuration object is optional._
 
 ```js
 var client = new exceptionless.ExceptionlessClient('API_KEY_HERE'); // Required
@@ -90,7 +90,7 @@ client.submitEvent({ message = 'Low Fuel', type = 'racecar', source = 'Fuel Syst
 
 ### Manually Sending Errors
 
-To manually send events other than the automatically reported unhandled exceptions, you can use our fluent <a title="Exceptionless.JavaScript Event Builder API" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/EventBuilder.ts" target="_blank">event builder API</a>.
+To manually send events other than the automatically reported unhandled exceptions, you can use our fluent <a title="Exceptionless.JavaScript Event Builder API" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.6.4/src/EventBuilder.ts" target="_blank">event builder API</a>.
 
 The below example demonstrates sending a new error, "test," and setting the ReferenceID, Order and Quote properties, Tags, Geo, UserIdentity, and marking it as Critical.
 
