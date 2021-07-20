@@ -23,9 +23,8 @@ ExceptionlessClient.Default.Configuration.UseReferenceIds();
 
 ## JavaScript Example
 
-```javascript
-exceptionless.ExceptionlessClient.default.config.useReferenceIds();
-```
+The JavaScript client will automatically manage reference ids.
+
 
 You can also create your own plugin to create your own Reference Ids.
 

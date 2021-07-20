@@ -120,7 +120,7 @@ exceptionless.ExceptionlessClient.default.submitSessionHeartbeat();
 exceptionless.ExceptionlessClient.default.submitSessionEnd();
 ```
 
-<a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/ExceptionlessClient.ts#L96-L118" target="_blank">Source</a>
+<a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.6.4/src/ExceptionlessClient.ts#L112-L128" target="_blank">Source</a>
 
 ## Tell Us What You Think
 

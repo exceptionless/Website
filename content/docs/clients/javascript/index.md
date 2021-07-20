@@ -3,7 +3,7 @@ title: JavaScript Client
 key: JS
 ---
 
-The Exceptionless JavaScript client SDK makes it easy to report errors, log details, track feature usage and more. Be sure you have an Exceptionless account ([you can sign up here](/)) or that you are self-hosting a running instance of Exceptionless. 
+The Exceptionless JavaScript client SDK makes it easy to report errors, log details, track feature usage and more. Be sure you have an Exceptionless account ([you can sign up here](/)) or that you are self-hosting a running instance of Exceptionless.
 
 ---
 
@@ -15,36 +15,34 @@ If you are looking for framework-specific guides, you can jump right to them bel
 
 ---
 
-To get started, you'll need to install the Exceptionless client. There are three main ways to do this: Yarn, npm, and CDN. 
+To get started, you'll need to install the Exceptionless client. There are two main ways to do this: npm and CDN.
 
-**Yarn**
+#### npm
 
-To install with Yarn, run: `yarn add exceptionless` 
+To install with npm, run: `npm install @exceptionless/node --save`
 
-**npm**  
+```js
+import { Exceptionless } from "@exceptionless/node";
 
-To install with npm, run: `npm install exceptionless`
-
-**CDN**  
-
-To install via a script tag referencing Exceptionless over a CDN, add the following before your closing `<body>` tag: 
-
-`<script src="https://cdn.jsdelivr.net/npm/exceptionless@1.6.4/dist/exceptionless.min.js"></script>`
-
-### Quick Start
-
-Once Exceptionless is installed, you can configure the client and start using it. Here's a basic configuration example to get you started: 
-
-```javascript
-import { ExceptionlessClient } from "exceptionless/dist/exceptionless";
-const config = {
-  apiKey: "YOUR EXCEPTIONLESS API KEY"
-}
-const client = new ExceptionlessClient(config);
-
-
+await Exceptionless.startup(c => {
+  c.apiKey: 'API_KEY_HERE'
+});
 ```
 
----  
+#### CDN
+
+To install via a script tag referencing Exceptionless over a CDN, add the following before your closing `<body>` tag:
+
+```html
+<script type="module">
+  import { Exceptionless } from "https://unpkg.com/@exceptionless/browser";
+
+  await Exceptionless.startup(c => {
+    c.apiKey: 'API_KEY_HERE'
+  });
+</script>
+```html
+
+---
 
 [Next > Configuration](client-configuration.md) {.text-right}

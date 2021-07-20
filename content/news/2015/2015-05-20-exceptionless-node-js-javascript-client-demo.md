@@ -67,7 +67,7 @@ client.submitEvent({ message = 'Low Fuel', type = 'racecar', source = 'Fuel Syst
 
 ### Manually Sending Errors
 
-In addition to automatically sending all unhandled exceptions, you can also manually send events to Exceptionless using our fluent <a title="Exceptionless.JavaScript Event Builder API" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/EventBuilder.ts" target="_blank">event builder API</a>.
+In addition to automatically sending all unhandled exceptions, you can also manually send events to Exceptionless using our fluent <a title="Exceptionless.JavaScript Event Builder API" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.6.4/src/EventBuilder.ts" target="_blank">event builder API</a>.
 
 The below example demonstrates sending a new error, "test," and setting the ReferenceID, Order and Quote properties, Tags, Geo, UserIdentity, and marking it as Critical.
 
@@ -120,7 +120,7 @@ app.use(function(req, res, next) {
 
 The JavaScript/Node.js client is full featured, will collect all the information our other clients collect, and has a fluent API as shown above.
 
-By default, we wire up to the processes' <a title="Exceptionless Uncaught Exception Handler" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/exceptionless.node.ts#L29-L31" target="_blank">uncaught exception handler</a> to automatically send any unhandled exceptions to your Exceptionless dashboard. We also submit a log message if your app doesn't shut down properly via inspecting the <a title="Exit Code" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/src/exceptionless.node.tsL33-L81" target="_blank">exit code</a>, which is very useful and lets you know what your app is doing. Additionally, any queued up events are processed and sent before your app closes.
+By default, we wire up to the processes' <a title="Exceptionless Uncaught Exception Handler" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.6.4/src/exceptionless.node.ts#L29-L31" target="_blank">uncaught exception handler</a> to automatically send any unhandled exceptions to your Exceptionless dashboard. We also submit a log message if your app doesn't shut down properly via inspecting the <a title="Exit Code" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.6.4/src/exceptionless.node.ts#L33-L81" target="_blank">exit code</a>, which is very useful and lets you know what your app is doing. Additionally, any queued up events are processed and sent before your app closes.
 
 Each event contains environment and request information, as well, rounding out the complete list of Exceptionless features that we have made available via the JavaScript client, making it a great error and event reporting/logging solution for all your Node.js projects.<figure id="attachment_13200" class="thumbnail wp-caption alignleft" style="width: 150px">
 
