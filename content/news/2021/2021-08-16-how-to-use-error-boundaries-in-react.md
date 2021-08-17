@@ -10,7 +10,7 @@ Fortunately, frontend devs are getting more and more tools to help them with err
 
 > In the past, JavaScript errors inside components used to corrupt React’s internal state and cause it to emit cryptic errors on next renders. These errors were always caused by an earlier error in the application code, but React did not provide a way to handle them gracefully in components, and could not recover from them. 
 
-That all changed with React 16. However, if you wanted to recover from a presentational layer error AND report it, there wasn't anything out of the box to help you. This is where [Exceptionless](https://exceptionless.com?utm_source=first_signup&utm_medium=blog&utm_campaign=error_boundary) (an open source error handling and monitoring tool) and React work really well together. 
+That all changed with React 16. However, if you wanted to recover from a presentational layer error AND report it, there wasn't anything out of the box to help you. This is where [Exceptionless](https://exceptionless.com?utm_source=first_signup&utm_medium=blog&utm_campaign=error_boundary) (an open-source error handling and monitoring tool) and React work really well together. 
 
 Let's run through a quick tutorial that creates a React app that does the following:  
 
@@ -40,7 +40,7 @@ This should get you set up with an app and the required package. Now, let's writ
 
 ## Creating an Error Boundary in React 
 
-The first thing we need to do is create an Error Boundary file. This will act as a wrapper component for the rest of our application. In `src` folder of your React application, create a new file called `ErrorBoundary.js`. This will allow us to render a fallback when we hit an error in our component. We'll use Exceptionless's built in Error Boundary to actually handle reporting the error. You'll see that soon, but let's focus on rendering the fallback for now. 
+The first thing we need to do is create an Error Boundary file. This will act as a wrapper component for the rest of our application. In `src` folder of your React application, create a new file called `ErrorBoundary.js`. This will allow us to render a fallback when we hit an error in our component. We'll use Exceptionless's built-in Error Boundary to actually handle reporting the error. You'll see that soon, but let's focus on rendering the fallback for now. 
 
 Inside your new file, add the following: 
 
@@ -201,4 +201,4 @@ You can click into your exceptions to get more details. In this case, we will se
 
 Error Boundaries in React are powerful tools in helping you debug and quickly fix your applications. You can see how quickly we set this up to not only render a fallback UI and to report to an error monitoring service. You could write even less code and only report the error if you wanted to, but I'll leave that up to you. 
 
-There are plenty of error monitoring services out there that you can plug this into, but if you're interested in an open-source solution, get started with [Exceptionless](https://exceptionless.com) today. 
+There are plenty of error monitoring services out there that you can plug this into, but if you're interested in an open-source solution, get started with [Exceptionless](https://exceptionless.com?utm_source=third_signup&utm_medium=blog&utm_campaign=error_boundary) today. 
