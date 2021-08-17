@@ -1,7 +1,7 @@
 ---
 title: How To Use Error Boundaries in React
-date: 2021-8-16
-draft: true
+date: 2021-08-16
+draft: false
 ---
 
 Backend engineers have all the tools. Nice error handling. Reporting. Metrics. What about us frontend devs? Sure, we can catch errors in our functions, but what about errors in our presentational code? Take React for example. Write some bad code in your function component and the whole app crashes. 
