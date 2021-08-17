@@ -102,9 +102,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 ```
 
@@ -143,7 +140,7 @@ You can see I've added `undefinedVariable` into the component. Because that vari
 
 ...an error message still. What gives?
 
-Well, in development mode, React is going to try to help you out by rendering the error on screen. If you refresh the page, you should see your fallback component render for a split-second before the error appears on screen. When this code is deployed to a production environment, the error won't be displayed on screen. You know this because you've seen your production React apps crash. We all have. It shows a white screen. That's it. Now, though, your app will show the falback screen. 
+Well, in development mode, React is going to try to help you out by rendering the error on screen. If you refresh the page, you should see your fallback component render for a split-second before the error appears on screen. When this code is deployed to a production environment, the error won't be displayed on screen. You know this because you've seen your production React apps crash. We all have. It shows a white screen. That's it. Now, though, your app will show the fallback screen. 
 
 Pretty cool!
 
@@ -151,5 +148,57 @@ Now, we need to make sure the error is reported back to our monitoring system. W
 
 ## Capturing Errors
 
+Now that we can display a message, Let's work on capturing the error and sending it to our reporting system—Exceptionless. 
 
+The Exceptionless React package includes an Error Boundary helper called `ExceptionlessErrorBoundary`. All we need to do is import this into our `index.js` and wrap our `App` component with it. You'll need to grab yourself an API key from your Exceptionless account for this. You can [follow this guide to do so](../../docs/api/api-getting-started.md). 
 
+Let's take a look at what the code looks like. This is what you should update your `index.js` file to look like:
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import {
+  Exceptionless, 
+  ExceptionlessErrorBoundary
+} from "@exceptionless/react";
+import ErrorBoundary from './ErrorBoundary';
+
+const startExceptionless = async () => {
+  await Exceptionless.startup((c) => {
+    c.apiKey = "YOUR API KEY";
+    c.useDebugLogger();
+
+    c.defaultTags.push("Example", "React");
+  });
+};
+
+startExceptionless();
+
+ReactDOM.render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <ExceptionlessErrorBoundary>
+        <App />
+      </ExceptionlessErrorBoundary>
+    </ErrorBoundary>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+reportWebVitals();
+```
+
+Now go back to your React app and re-load. You won't necessarily see it there, but the error event was sent to Exceptionless. Open up your Exceptionless dashboard and take a look at the Exceptions events: 
+
+![exception events with error boundary example](./ErrorBoundaryException.png)
+
+You can click into your exceptions to get more details. In this case, we will see what the variable was and the full stack trace for our React app. 
+
+## Wrapping Up
+
+Error Boundaries in React are powerful tools in helping you debug and quickly fix your applications. You can see how quickly we set this up to not only render a fallback UI and to report to an error monitoring service. You could write even less code and only report the error if you wanted to, but I'll leave that up to you. 
+
+There are plenty of error monitoring services out there that you can plug this into, but if you're interested in an open-source solution, get started with [Exceptionless](https://exceptionless.com) today. 
