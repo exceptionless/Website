@@ -13,19 +13,21 @@ program.option('-t, --title <title>', 'Post title');
   
     const date = new Date();
     const month = date.getMonth() + 1;
+    const twoDigitMonth = month.toString().length < 2 ? `0${month.toString()}` : month;
     const day = date.getDate();
+    const twoDigitDay = day.toString().length < 2 ? `0${day.toString()}` : day;
     const year = date.getFullYear();
   
     const titleForFile = program.title.toLowerCase();
     const titleSplit = titleForFile.split(' ').join('-');
   
-    const markdownTitle = `${year}-${month}-${day}-${titleSplit}.md`
+    const markdownTitle = `${year}-${twoDigitMonth}-${twoDigitDay}-${titleSplit}.md`
   
     exec(`
 cat <<EOF >./content/news/${year}/${markdownTitle}
 ---
 title: ${program.title}
-date: ${year}-${month}-${day}
+date: ${year}-${twoDigitMonth}-${twoDigitDay}
 draft: true
 ---
     `, (err, stdout, stderr) => {
