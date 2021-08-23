@@ -7,27 +7,20 @@ The Exceptionless JavaScript client SDK makes it easy to report errors, log deta
 
 ---
 
-If you are looking for framework-specific guides, you can jump right to them below.
+Full guides can be found below:
 
-* React
-* Vue
-* Svelte
+* [Browser (no framework)](guides/javascript-example.md)
+* [React](./guides/react-example.md)
+* [Node](./guides/node-example.md)
+* [Express](./guides/express-example.md)
 
 ---
 
-To get started, you'll need to install the Exceptionless client. There are two main ways to do this: npm and CDN.
+This quickstart focuses on the vanilla JavaScript implementation of Exceptionless. 
 
 #### npm
 
-To install with npm, run: `npm install @exceptionless/node --save`
-
-```js
-import { Exceptionless } from "@exceptionless/node";
-
-await Exceptionless.startup(c => {
-  c.apiKey: 'API_KEY_HERE'
-});
-```
+To install with npm, run: `npm install @exceptionless/browser`
 
 #### CDN
 
@@ -36,12 +29,33 @@ To install via a script tag referencing Exceptionless over a CDN, add the follow
 ```html
 <script type="module">
   import { Exceptionless } from "https://unpkg.com/@exceptionless/browser";
-
-  await Exceptionless.startup(c => {
-    c.apiKey: 'API_KEY_HERE'
-  });
 </script>
-```html
+```
+
+Next, you just need to call startup during your apps startup to automatically capture unhandled errors.
+
+```js
+import { Exceptionless } from "@exceptionless/browser";
+// Or import { Exceptionless } from "https://unpkg.com/@exceptionless/browser";
+
+await Exceptionless.startup((c) => {
+  c.apiKey = "API_KEY_HERE";
+  c.setUserIdentity("12345678", "Blake");
+
+  // set some default data
+   c.defaultData["mydata"] = {
+    myGreeting: "Hello World"
+  };
+
+  c.defaultTags.push("Example", "JavaScript", "Browser");
+});
+
+try {
+  throw new Error("test");
+} catch (error) {
+  await Exceptionless.submitException(error);
+}
+```
 
 ---
 

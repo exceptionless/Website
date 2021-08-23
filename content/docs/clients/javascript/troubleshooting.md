@@ -35,6 +35,10 @@ await Exceptionless.startup(c => {
 });
 ```
 
+## Check Your API Key
+
+By design, an invalid API key provided to the Exceptionless client is not going to crash your application. Be sure to check the log outputs as this information will tell you if you have provided an invalid key.
+
 ## Debugging Source Code
 
 You can also debug the Exceptionless source code by using the unmagnified version and set breakpoints in your browsers developer tools.
