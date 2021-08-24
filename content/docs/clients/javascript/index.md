@@ -18,19 +18,9 @@ Full guides can be found below:
 
 This quickstart focuses on the vanilla JavaScript implementation of Exceptionless. 
 
-#### npm
+## npm
 
 To install with npm, run: `npm install @exceptionless/browser`
-
-#### CDN
-
-To install via a script tag referencing Exceptionless over a CDN, add the following before your closing `<body>` tag:
-
-```html
-<script type="module">
-  import { Exceptionless } from "https://unpkg.com/@exceptionless/browser";
-</script>
-```
 
 Next, you just need to call startup during your apps startup to automatically capture unhandled errors.
 
@@ -39,15 +29,7 @@ import { Exceptionless } from "@exceptionless/browser";
 // Or import { Exceptionless } from "https://unpkg.com/@exceptionless/browser";
 
 await Exceptionless.startup((c) => {
-  c.apiKey = "API_KEY_HERE";
-  c.setUserIdentity("12345678", "Blake");
-
-  // set some default data
-   c.defaultData["mydata"] = {
-    myGreeting: "Hello World"
-  };
-
-  c.defaultTags.push("Example", "JavaScript", "Browser");
+  c.apiKey = "API_KEY_HERE";  
 });
 
 try {
@@ -57,6 +39,24 @@ try {
 }
 ```
 
+## CDN
+
+To install via a script tag referencing Exceptionless over a CDN, add the following before your closing `<body>` tag and call startup like so:
+
+```html
+<script type="module">
+  import { Exceptionless } from "https://unpkg.com/@exceptionless/browser";
+  await Exceptionless.startup((c) => {
+    c.apiKey = "API_KEY_HERE";    
+  });
+
+  try {
+    throw new Error("test");
+  } catch (error) {
+    await Exceptionless.submitException(error);
+  }
+</script>
+```
 ---
 
 [Next > Configuration](client-configuration.md) {.text-right}
