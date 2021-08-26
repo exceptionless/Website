@@ -26,11 +26,8 @@ Next, you just need to call startup during your apps startup to automatically ca
 
 ```js
 import { Exceptionless } from "@exceptionless/browser";
-// Or import { Exceptionless } from "https://unpkg.com/@exceptionless/browser";
 
-await Exceptionless.startup((c) => {
-  c.apiKey = "API_KEY_HERE";  
-});
+await Exceptionless.startup("API KEY HERE");
 
 try {
   throw new Error("test");
@@ -46,9 +43,7 @@ To install via a script tag referencing Exceptionless over a CDN, add the follow
 ```html
 <script type="module">
   import { Exceptionless } from "https://unpkg.com/@exceptionless/browser";
-  await Exceptionless.startup((c) => {
-    c.apiKey = "API_KEY_HERE";    
-  });
+  await Exceptionless.startup("API KEY HERE");
 
   try {
     throw new Error("test");

@@ -8,17 +8,15 @@ When working with Node.js in a non-server environment means you have to think ab
 ```js
 import { Exceptionless } from "@exceptionless/node";
 
-(async () => {
+await Exceptionless.startup("YOUR API KEY");
+
+const forceError = async () => {
   try {
-    await Exceptionless.startup((c) => {
-      c.apiKey = "YOUR API KEY";
-      c.defaultTags.push("Example", "Node");
-    });
     throw new Error("Whoops, I did it again.")
   } catch(e) {
     await Exceptionless.submitException(e);
   }
-})();
+}
 ```
 
 Exceptionless has some powerful tools to help catch unhandled errors, but with a non-server app, and specifically with an app where an unhandled error can cause the entire process to end, you need to try to handle everything. That is why in the above example, the startup function is wrapped in a try/catch. 
