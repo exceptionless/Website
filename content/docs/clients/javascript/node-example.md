@@ -18,10 +18,6 @@ const forceError = async () => {
   }
 }
 ```
-
-Exceptionless has some powerful tools to help catch unhandled errors, but with a non-server app, and specifically with an app where an unhandled error can cause the entire process to end, you need to try to handle everything. That is why in the above example, the startup function is wrapped in a try/catch. 
-
-If you do want your app to exit immediately after an error, you can send the error as seen above, and then add the following before you exit: `await Exceptionless.processQueue()`
 ---
 
 [Next > Express Example](express-example.md) {.text-right }
