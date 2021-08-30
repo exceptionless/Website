@@ -51,4 +51,4 @@ We recommend enabling debug logging by calling `Exceptionless.config.useDebugLog
 
 ---
 
-[Next > Angular Example](angular-example.md) {.text-right}
+[Next > Angular Example](react-example.md) {.text-right}
