@@ -24,3 +24,32 @@ npm init next-app next-js-exceptionless && cd next-js-exceptionless
 ```
 
 While we're here at the command line, let's install the newly updated JavaScript client for Exceptionless. 
+
+```
+npm install @exceptionless/node @exceptionless/react
+```
+
+Why are we installing the Node and React versions of Exceptionless? Well, because Next.js is a fullstack Node and React framework. We want to get the full featureset of Exceptionless in both environments. 
+
+Let's set up our error handling by creating a single helper file and function. The helper file can be called `events.js`. This can be placed at the root of the project. Let's write the function like this: 
+
+```js
+export const handleEvent = async (exceptionlessClient, type, event) => {
+  switch(type) {
+    case 'error': 
+      return await exceptionlessClient.submitException(event);
+    case 'log': 
+      return await exceptionlessClient.submitLog("app.logger", event.message, event.logLevel);
+    case 'feature': 
+      return await exceptionlessClient.submitFeatureUsage(event.featureName);
+    case 'custom':
+      return await exceptionlessClient.submitEvent({ message: event.message, type: event.type, source: event.source });
+    default: 
+      return await exceptionlessClient.submitException(event);
+  }
+}
+```
+
+This is a simple switch statement, but it covers most of our event handling use cases. We are passing in the Exceptionless client as an argument because depending on if the event is coming from Node or from the React side of the house, the client will be different. The methods on the client are the same though. 
+
+
