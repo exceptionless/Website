@@ -23,6 +23,7 @@ We collect the e-mail addresses of those who communicate with us via e-mail or t
 ## Data storage
 
 * Exceptionless uses third party vendors and hosting partners to provide the necessary hardware, software, networking, storage, and related technology required to run Exceptionless. Although Exceptionless owns the code, databases, and all rights to the Exceptionless application, you retain all rights to your data.
+* You can delete your personal data at any time by visiting the my account page and clicking the delete account button.
 
 ## Disclosure
 

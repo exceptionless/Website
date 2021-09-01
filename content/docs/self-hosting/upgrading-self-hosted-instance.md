@@ -6,6 +6,10 @@ order: 22
 
 **If you are upgrading from v1 or [v2](https://github.com/exceptionless/Exceptionless/releases/tag/v2.0.0) you will need to upgrade to [v3.0](https://github.com/exceptionless/Exceptionless/releases/tag/v3.0.0) before upgrading to the latest release.**
 
+## Upgrading from v7 to v7.1
+
+We made some changes to email configuration. Yoy wukk now be required to set the `EX_SmtpFrom` config map/environment variable in order to send email. The value should be in the following format: `"Exceptionless <noreply@YOUR_CUSTOM_DOMAIN_NAME>"`
+
 ## Upgrading from v6 to v7
 
 A migration job will need to be run as there are several in place data migrations that need to be applied. The migrations will add new index mappings for soft delete support as well as stack status and populate various stack fields with data.

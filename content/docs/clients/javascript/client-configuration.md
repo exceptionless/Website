@@ -22,7 +22,7 @@ parent: JS
 
 ### Browser
 
-1. Install the package by running `npm install @exceptionless/browser --save`
+1. Install the package by running `npm install @exceptionless/browser`
 2. Add the Exceptionless client to your app:
 
 ```js
@@ -35,7 +35,7 @@ await Exceptionless.startup((c) => {
 
 ### Node.js
 
-1. Install the package by running `npm install @exceptionless/node --save`.
+1. Install the package by running `npm install @exceptionless/node`.
 2. Add the Exceptionless client to your app:
 
 ```js
