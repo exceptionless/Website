@@ -3,8 +3,10 @@ title: Announcing The New Exceptionless JavaScript Client
 date: 2021-09-03
 draft: false
 ---
-    
-We have had a JavaScript client for several years, but it was quickly becoming out of date. To help address the issues with a fast-moving JavaScript landscape and to extend our JavaScript support, we have recently a completely rewritten client that supports multiple JavaScript frameworks. 
+
+![Exceptionless announcement](./Announcement.png)
+
+We have had a JavaScript client for several years, but it was quickly becoming out of date. To help address the issues with a fast-moving JavaScript landscape and to extend our JavaScript support, we have recently released a completely rewritten client that supports multiple JavaScript frameworks. 
 
 If you just want to dive into the documentation, [you can review that here](../../docs/clients/javascript/index.md). If you want the story behind the rewrite, let's talk about some of the challenges we wanted to solve. 
 
@@ -13,7 +15,13 @@ If you just want to dive into the documentation, [you can review that here](../.
 3. Have a little more code separation
 4. Provide a better developer experience
 
-We'll talk about each one of these points in a little more detail. 
+We'll talk about each one of these points in a little more detail. But first, let's dive into the architecture a bit. 
+
+![Exceptionless JS architecture diagram](./exceptionless.drawio.png)
+
+Everything starts with Exceptionless JS Core. From there, we extend into specific environment implementations. The Node.js environment has different requirements than tha browser environment. Framework-specific environments like React and Vue have different requirements than the browser environment. By starting with the Core JS implementation, we can extend in any direction to any framework. 
+
+Speaking of frameworks...
 
 ## Support for additional frameworks 
 
