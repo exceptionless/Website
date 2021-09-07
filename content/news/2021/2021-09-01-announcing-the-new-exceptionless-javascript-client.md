@@ -4,7 +4,7 @@ date: 2021-09-03
 draft: false
 ---
     
-We have had a JavaScript client for several years, but it was quickly becoming out of date. To help address the issues with a fast-moving JavaScript landscape and to extend our JavaScript support, we have recently a completely rewritten client that supports multiple JavaScript frameworks. 
+We have had a JavaScript client for several years, but it was quickly becoming out of date. To help address the issues with a fast-moving JavaScript landscape and to extend our JavaScript support, we have recently completely rewritten client that supports multiple JavaScript frameworks. 
 
 If you just want to dive into the documentation, [you can review that here](../../docs/clients/javascript/index.md). If you want the story behind the rewrite, let's talk about some of the challenges we wanted to solve. 
 
