@@ -1,10 +1,10 @@
 ---
 title: Announcing The New Exceptionless JavaScript Client
-date: 2021-09-03
+date: 2021-09-09
 draft: false
 ---
 
-![Exceptionless announcement](./Announcement.png)
+![Exceptionless announcement](./js_client_2_0_announcement.png)
 
 We have had a JavaScript client for several years, but it was quickly becoming out of date. To help address the issues with a fast-moving JavaScript landscape and to extend our JavaScript support, we have recently released a completely rewritten client that supports multiple JavaScript frameworks. 
 
