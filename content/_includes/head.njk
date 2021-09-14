@@ -2,7 +2,7 @@
     {%- set pageTitle = pageTitle if (pageTitle == site.title) else pageTitle + ' - ' + site.title %}
     {%- set pageUrl = site.url + page.url %}
     {%- set pageDescription = description or site.title or '' %}
-    {%- set pageImage = pageUrl + image or pageUrl + site.image %}
+    {%- set pageImage = site.url + '/' + eleventyNavigation.parent + '/' + image or pageUrl + site.image %}
     {%- set pageRobots = "noindex,follow" if (pagination.pageNumber > 0 and pagination.size > 0) else "index,follow"  %}
     {%- set pageAuthor = author or site.author -%}
     {%- set cardType = cardType or site.twitterCardType or 'summary' %}
@@ -12,6 +12,8 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <title>{{ pageTitle }}</title>
+
+    {{ eleventyNavigation | dump}}
 
     <meta name="description" content="{{ pageDescription }}">
     <meta name="robots" content="{{ pageRobots }}">
