@@ -2,8 +2,6 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const slugify = require("slugify");
 const embedEverything = require("eleventy-plugin-embed-everything");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginSEO = require("eleventy-plugin-seo");
-const siteConfig = require("./content/_data/site.json");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const path = require('path');
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
@@ -21,7 +19,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(embedEverything);
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(pluginSEO, siteConfig);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(sitemap, {
     sitemap: {

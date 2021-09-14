@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    {% seo "" %}
-    
-    <!-- google tag manager -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-433340-8');
-    </script>
-    <!-- end google tag manager -->
+    {% include "head.njk" %}
 
     <link rel="stylesheet" href="/assets/cyclone-slider-pro/templates/standard/style.css">
     <link rel="stylesheet" href="/assets/css/theme.css">
@@ -23,10 +9,8 @@
 
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
 
-    <link rel="alternate" type="application/rss+xml" title="Exceptionless Feed" href="/feed.xml">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href="/assets/css/prism.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/favicon.ico">
 
     <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
 
@@ -108,17 +92,7 @@
     </div>
 
     <script src="/assets/js/main.js"></script>
-
-    <!-- intercom -->
-    <script>
-    window.intercomSettings = {
-        app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
-    };
-    </script>
-
-    <script>
-    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-    </script>
-    <!-- end intercom -->
+    
+    {% include "intercom.njk" %}
   </body>
 </html>

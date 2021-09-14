@@ -3,5 +3,6 @@
   "description": "Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.",
   "url": "https://exceptionless.com",
   "author": "Exceptionless Team",
-  "twitter": "Exceptionless"
+  "twitter": "Exceptionless",
+  "analyticsId": "UA-433340-8"
 }

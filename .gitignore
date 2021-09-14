@@ -1,4 +1,4 @@
 node_modules/
 _site/
 .idea
-/content/assets/index.json
+content/assets/index.json
