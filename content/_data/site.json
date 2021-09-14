@@ -4,5 +4,6 @@
   "url": "https://exceptionless.com",
   "author": "Exceptionless Team",
   "twitter": "Exceptionless",
-  "analyticsId": "UA-433340-8"
+  "analyticsId": "UA-433340-8",
+  "intercomId": "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
 }

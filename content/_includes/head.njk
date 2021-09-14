@@ -1,34 +1,38 @@
     {%- set pageTitle = title or site.title or '' %}
+    {%- set pageTitle = pageTitle if (pageTitle == site.title) else pageTitle + ' - ' + site.title %}
+    {%- set pageUrl = site.url + page.url %}
     {%- set pageDescription = description or site.title or '' %}
-    {%- set pageImage = image or site.image %}
+    {%- set pageImage = pageUrl + image or pageUrl + site.image %}
     {%- set pageRobots = "noindex,follow" if (pagination.pageNumber > 0 and pagination.size > 0) else "index,follow"  %}
     {%- set pageAuthor = author or site.author -%}
-    {%- set cardType = cardType or site.twitterCardType or 'summary' -%}
+    {%- set cardType = cardType or site.twitterCardType or 'summary' %}
+    {%- set ogType = ogType or site.ogType or 'article' -%}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <title>{{ pageTitle }}</title>
 
+    {{ page | dump }}
+
     <meta name="description" content="{{ pageDescription }}">
     <meta name="robots" content="{{ pageRobots }}">
     <meta name="author" content="{{ pageAuthor }}">
 
-    <link rel="canonical" href="{{ page.url }}">
+    <link rel="canonical" href="{{ pageUrl }}">
 
     <!-- opengraph -->
     <meta property="og:title" content="{{ pageTitle }}">
-    <meta property="og:type" content="{{ ogtype }}">
-    {{ opengraph.type }}
-    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:type" content="{{ ogType }}">
+    <meta property="og:url" content="{{ pageUrl }}">
     <meta property="og:description" content="{{ pageDescription }}">
     {% if pageImage %}<meta property="og:image" content="{{ pageImage }}">{% endif %}
     <!-- end opengraph -->
 
     <!-- twitter -->
     <meta name="twitter:card" content="{{ cardType }}">
-    {% if site.twitter %}<meta name="twitter:site" content="@{{ site.twitter }}">{% endif %}
-    <meta name="twitter:url" content="{{ page.url }}">
+    {%- if site.twitter %}<meta name="twitter:site" content="@{{ site.twitter }}">{% endif %}
+    <meta name="twitter:url" content="{{ pageUrl }}">
     <meta name="twitter:title" content="{{ pageTitle }}">
     <meta name="twitter:description" content="{{ pageDescription }}">
     {% if pageImage %}<meta name="twitter:image" content="{{ pageImage }}">{% endif %}
