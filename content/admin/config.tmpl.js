@@ -45,6 +45,35 @@ export default (data, { url }) => {
     ],
   });
 
+  // Docs
+  config.collections.push({
+    label: "Docs",
+    name: "docs",
+    description: "Here you can create or edit docs",
+    folder: "content/docs",
+    preview: false,
+    create: true,
+    nested: {
+      depth: 100,
+    },
+    view_filters: [
+      {
+        label: "Drafts",
+        field: "draft",
+        pattern: true,
+      },
+    ],
+    fields: [
+      field("title"),
+      field("description"),
+      field("image", "image"),
+      field("date", "datetime"),
+      field("tags", "list"),
+      field("draft", "boolean"),
+      field("body", "markdown"),
+    ],
+  });
+
   const pageFields = [
     field("title"),
     field("url", "string"),
