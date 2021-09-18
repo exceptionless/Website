@@ -5,6 +5,7 @@ import terser from "https://deno.land/x/lume/plugins/terser.ts";
 import codeHighlight from "https://deno.land/x/lume/plugins/code_highlight.ts";
 import basePath from "https://deno.land/x/lume/plugins/base_path.ts";
 import slugifyUrls from "https://deno.land/x/lume/plugins/slugify_urls.ts";
+import resolveUrls from "https://deno.land/x/lume/plugins/resolve_urls.ts";
 import gpm from "https://deno.land/x/gpm@v0.2.0/mod.ts";
 
 const site = lume({
@@ -21,6 +22,7 @@ site
   .use(codeHighlight())
   .use(basePath())
   .use(slugifyUrls({ alphanumeric: false }))
+  .use(resolveUrls())
   .addEventListener(
     "beforeBuild",
     () => gpm(["oom-components/searcher"], "content/assets/js"),
