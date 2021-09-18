@@ -12,6 +12,7 @@ export default (data, { url }) => {
     },
     publish_mode: "editorial_workflow",
     media_folder: "content/assets/img",
+    public_folder: "assets/img",
     display_url: url("/"),
     collections: [],
   };
@@ -22,12 +23,9 @@ export default (data, { url }) => {
     label_singular: "Post",
     name: "posts",
     description: "Here you can create or edit your posts",
-    folder: "content/news",
+    folder: `content/news/${new Date().getFullYear()}`,
     preview: false,
     create: true,
-    nested: {
-      depth: 100,
-    },
     view_filters: [
       {
         label: "Drafts",
