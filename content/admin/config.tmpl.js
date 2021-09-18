@@ -90,7 +90,7 @@ export default (data, { url }) => {
 
   // Individual pages
   config.collections.push({
-    label: "pages",
+    label: "Pages",
     name: "pages",
     description: "Here you can edit your individual pages",
     preview: false,
