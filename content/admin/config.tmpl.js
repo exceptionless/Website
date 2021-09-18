@@ -21,7 +21,7 @@ export default (data, { url }) => {
     label: "Posts",
     name: "posts",
     description: "Here you can create or edit your posts",
-    folder: "news",
+    folder: "content/news",
     preview: false,
     create: true,
     nested: {
@@ -67,7 +67,7 @@ export default (data, { url }) => {
     preview: false,
     files: [
       {
-        label: "about",
+        label: "About",
         name: "about",
         file: "/about.md",
         fields: pageFields,
@@ -76,6 +76,18 @@ export default (data, { url }) => {
         label: "404",
         name: "404",
         file: "/404.md",
+        fields: pageFields,
+      },
+      {
+        label: "Privacy Policy",
+        name: "privacy",
+        file: "/privacy.md",
+        fields: pageFields,
+      },
+      {
+        label: "Terms",
+        name: "terms",
+        file: "/terms.md",
         fields: pageFields,
       },
     ],
