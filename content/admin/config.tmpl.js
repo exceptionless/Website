@@ -11,7 +11,7 @@ export default (data, { url }) => {
       open_authoring: true,
     },
     publish_mode: "editorial_workflow",
-    media_folder: "assets/img",
+    media_folder: "content/assets/img",
     display_url: url("/"),
     collections: [],
   };
@@ -98,25 +98,25 @@ export default (data, { url }) => {
       {
         label: "About",
         name: "about",
-        file: "/about.md",
+        file: "/content/about.md",
         fields: pageFields,
       },
       {
         label: "404",
         name: "404",
-        file: "/404.md",
+        file: "/content/404.md",
         fields: pageFields,
       },
       {
         label: "Privacy Policy",
         name: "privacy",
-        file: "/privacy.md",
+        file: "/content/privacy.md",
         fields: pageFields,
       },
       {
         label: "Terms",
         name: "terms",
-        file: "/terms.md",
+        file: "/content/terms.md",
         fields: pageFields,
       },
     ],
