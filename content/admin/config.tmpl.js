@@ -19,6 +19,7 @@ export default (data, { url }) => {
   // Posts
   config.collections.push({
     label: "Posts",
+    label_singular: "Post",
     name: "posts",
     description: "Here you can create or edit your posts",
     folder: "content/news",
@@ -48,14 +49,12 @@ export default (data, { url }) => {
   // Docs
   config.collections.push({
     label: "Docs",
+    label_singular: "Doc",
     name: "docs",
     description: "Here you can create or edit docs",
     folder: "content/docs",
     preview: false,
     create: true,
-    nested: {
-      depth: 100,
-    },
     view_filters: [
       {
         label: "Drafts",
