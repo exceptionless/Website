@@ -1,30 +1,31 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-		{
-			"type": "npm",
-			"script": "dev",
-			"problemMatcher": [],
-			"label": "npm: dev",
-			"detail": "npx @11ty/eleventy --serve"
-		},
-		{
-			"type": "npm",
-			"script": "build",
-			"group": {
+    {
+      "label": "Lume build",
+      "type": "shell",
+      "command": "lume",
+      "group": {
 				"isDefault": true,
 				"kind": "build"
 			},
-			"problemMatcher": [],
-			"label": "npm: build",
-			"detail": "npx @11ty/eleventy"
-		},
-		{
-			"type": "npm",
-			"script": "install",
-			"problemMatcher": [],
-			"label": "npm: install",
-			"detail": "install dependencies from package"
-		}
-	]
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Lume serve",
+      "type": "shell",
+      "command": "lume",
+      "args": [
+        "--serve"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
 }

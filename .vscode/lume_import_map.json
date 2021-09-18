@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "https://deno.land/x/lume/": "https:/cdn.jsdelivr.net/gh/lumeland/lume@520ef01ff133adaec5c99a162b7c30d244217069/"
+  }
+}

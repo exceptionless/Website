@@ -1,0 +1,33 @@
+name: Publish
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Deno environment
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      
+      - name: Install lume
+        run: |
+          deno run -A https://deno.land/x/lume/install.ts
+          lume upgrade --dev
+      
+      - name: Run lume
+        run: |
+          lume --location=https://exceptionless.github.io/website/
+
+      - name: Deploy
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          build_dir: _site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

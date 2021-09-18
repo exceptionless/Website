@@ -1,6 +1,10 @@
 ---
+layout: layouts/content-well.njk
 title: About Us
-layout: content-well
+templateClass: tmpl-post
+menu:
+  visible: true
+  order: 2
 ---
 
 ![Exceptionless Logo](/assets/img/exceptionless-logoBLK-300x75.png)

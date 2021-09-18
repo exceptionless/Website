@@ -1,0 +1,4 @@
+{%- if eleventyNavigation -%}
+	{%- set navKey = eleventyNavigation.key -%}
+{%- endif -%}
+{#{ collections.docs | eleventyNavigation | eleventyNavigationToHtml({ activeKey: navKey, listClass: 'toc-list', activeListItemClass: 'toc-active' }) | safe }#}

@@ -2,7 +2,8 @@
 id: 9027
 title: "More from the Upcoming Exceptionless 2.0: Simplified API"
 date: 2014-06-12
-tags: [ "api"]
+tags:
+  - api
 ---
 ![Exceptionless 2.0 API Simplified](/assets/img/news/v2-api.png)Since [going open source](/fork-us-exceptionless-goes-open-source/ "Fork Us! Exceptionless Goes Open Source"), we've wanted to simplify the API and make it easier to work with.
 

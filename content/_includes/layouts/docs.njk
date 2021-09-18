@@ -1,0 +1,46 @@
+---
+layout: layouts/default.njk
+---
+
+<div class="page-header margin-top">
+  <h1>Documentation</h1>
+</div>
+
+<div id="wrap" class="container" role="document">  
+  <div id="responsive-menu"><button class="btn btn-primary" onclick="handleMenu()">Table of Contents</button></div>
+  <div id="content" class="row-fluid">
+    <div class="toc well span3 visible-toc">
+      <div class="input-append">
+        <input class="span9" id="search-input" type="text" placeholder="Search docs...">
+        <button class="btn" type="button" onclick="handleSearch()">Go!</button>
+      </div>
+      {% include "templates/docs-toc.njk" %}
+    </div>
+    <div class="well span9 docs">
+      <h1>{{ title }}</h1>
+      {{ content | safe }}   
+    </div>
+  </div>
+</div>
+
+<script>
+    const handleMenu = () => {
+        const menu = document.querySelector(".toc");
+        menu.classList.toggle("hidden-toc");
+        menu.classList.toggle("visible-toc");
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const search = document.getElementById("search-input")
+        search.addEventListener("keyup", ({key}) => {
+          if (key === "Enter") {
+            handleSearch();
+          }
+        })
+    })
+    const handleSearch = async () => {
+      const searchTerm = document.getElementById("search-input").value;
+      const queryString = encodeURI(searchTerm)
+      window.location = `/search?term=${queryString}`;
+    }
+</script>

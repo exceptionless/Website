@@ -1,36 +1,8 @@
 {
-    "cSpell.words": [
-        "Aliyun",
-        "Burcham",
-        "Foundatio",
-        "Geocode",
-        "Gmail",
-        "Kibana",
-        "Kubernetes",
-        "Lucene",
-        "Minio",
-        "OWIN",
-        "Reindex",
-        "Reindexing",
-        "Serilog",
-        "Trello",
-        "Varorbc",
-        "Zurb",
-        "Zurb's",
-        "adamsitnik",
-        "angularjs",
-        "caesay",
-        "deduplicated",
-        "deduplicating",
-        "edwardmeng",
-        "eleventy",
-        "exceptionless",
-        "frankebersoll",
-        "kubectl",
-        "pluggable",
-        "serializers",
-        "srijken",
-        "typeof",
-        "walkthrough"
-    ]
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true,
+  "deno.suggest.imports.hosts": {
+    "https://cdn.skypack.dev": false
+  }
 }

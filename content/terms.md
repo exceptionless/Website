@@ -1,6 +1,6 @@
 ---
 title: Terms of Use
-layout: content-well
+layout: layouts/content-well.njk
 ---
 
 The Exceptionless Terms of Service are between Exceptionless ("we" or "Exceptionless") and the customer who orders the Exceptionless services ("you" or "Customer"). By using the Exceptionless web site or any service of Exceptionless (collectively, "Service"), you are agreeing to be bound by the following terms and conditions ("Terms of Service").

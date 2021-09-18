@@ -1,0 +1,39 @@
+---
+title: News
+layout: layouts/default.njk
+sitemap:
+  changefreq: daily
+  priority: 1.0
+pagination:
+    data: collections.posts
+    size: 10
+    reverse: true
+---
+
+{% for post in pagination.items %}
+{% if post.data.draft != true %}
+<article class="post type-post status-publish format-standard">
+    <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+    {{ post.templateContent | safe }}
+</article>
+{% endif %}
+{% endfor %}
+{% if pagination.pageLinks.length > 1 %}
+<nav class="post-nav">
+    <ul class="pager">
+        {% if pagination.previousPageLink %}
+        <li class="next"><a href="{{ pagination.previousPageHref | url }}">Newer Articles</a></li>
+        {% else %}
+        <li class="next"><span>Newer Articles</span></li>
+        {% endif %}
+
+        {% if pagination.nextPageLink %}
+        <li class="previous">
+            <a href="{{ pagination.nextPageHref | url }}">Older Articles</a>
+        </li>
+        {% else %}
+        <li class="previous"><span class="previous">Older Articles</span></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
