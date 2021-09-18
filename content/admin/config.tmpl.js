@@ -7,9 +7,10 @@ export default (data, { url }) => {
     backend: {
       name: "github",
       repo: "exceptionless/Website",
-      branch: "master",
+      branch: "feature/lume-conversion",
       open_authoring: true,
     },
+    publish_mode: "editorial_workflow",
     media_folder: "assets/img",
     display_url: url("/"),
     collections: [],
