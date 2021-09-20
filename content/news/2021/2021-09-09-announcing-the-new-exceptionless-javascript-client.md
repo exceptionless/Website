@@ -1,7 +1,9 @@
 ---
 title: Announcing The New Exceptionless JavaScript Client
 date: 2021-09-09
+image: js_client_2_0_announcement.png
 draft: false
+cardType: summary_large_image
 ---
 
 ![Exceptionless announcement](./js_client_2_0_announcement.png)
