@@ -2,7 +2,10 @@
   "deno.enable": true,
   "deno.lint": true,
   "deno.unstable": true,
+  "deno.importMap": ".vscode/lume_import_map.json",
   "deno.suggest.imports.hosts": {
-    "https://cdn.skypack.dev": false
+    "https://cdn.skypack.dev": true,
+    "https://cdn.jsdelivr.net": true,
+    "https://deno.land": true
   }
 }

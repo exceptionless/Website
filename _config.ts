@@ -10,7 +10,11 @@ import gpm from "https://deno.land/x/gpm@v0.2.0/mod.ts";
 
 const site = lume({
   location: new URL("https://exceptionless.com/"),
+  prettyUrls: true,
   src: "content",
+  server: {
+    open: true
+  }
 });
 
 site

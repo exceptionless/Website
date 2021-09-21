@@ -24,6 +24,8 @@ export default (data, { url }) => {
     name: "posts",
     description: "Here you can create or edit your posts",
     folder: `content/news/${new Date().getFullYear()}`,
+    media_folder: `content/news/${new Date().getFullYear()}`,
+    public_folder: `news/${new Date().getFullYear()}`,
     preview: false,
     create: true,
     view_filters: [

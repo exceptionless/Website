@@ -1,18 +1,9 @@
-<ul class="postList">
-  {% for post in postslist %}
-  <li class="postList-post">
-    <a href="{{ post.data.url }}" class="postList-title"{% if entry.data.url == url %} aria-current="page"{% endif %}>
-      {% if post.data.title %}
-        <strong>{{ post.data.title }}</strong>
-      {% else %}
-        <code>{{ post.url }}</code>
-      {% endif %}
-    </a>
-
-    <time class="postList-date" datetime="{{ post.data.date | date('DATETIME') }}">
-      {{ post.data.date | date('HUMAN_DATE') }}
-    </time>
-
+{% for post in postslist %}
+  {% if post.data.draft != true %}
+<article class="post type-post status-publish format-standard">
+    <h2><a href="{{ post.data.url | url }}">{{ post.data.title }}</a></h2>
+    {{ post.data.content | md | safe }}
+</article>
     {% for tag in post.data.tags %}
     {% for pageTag in search.pages("type=tag") %}
     {% if pageTag.data.tag == tag %}
@@ -20,6 +11,5 @@
     {% endif %}
     {% endfor %}
     {% endfor %}
-  </li>
+  {% endif %}
 {% endfor %}
-</ul>
