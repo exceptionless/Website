@@ -1,7 +1,7 @@
 ---
 title: Associate Users With Events To Track Event Impact
 date: 2021-09-20
-draft: true
+draft: false
 ---
 
 If you've ever used any error and event monitoring service, there has probably come a point where you are pulling out your hair trying to figure out if an issue is actually a major problem or if it's impacting just one user. [Exceptionless](https://exceptionless.com), an open-source event monitoring service, helps with this out of the box by making use of event stacks. But you can extend Exceptionless's functionality and automatically associate users with events. So, that one error that happens 15,000 times a day, maybe it's just a single user who wrote some bad code. 
@@ -27,8 +27,40 @@ In a real project, you'd customize this to your app's needs, but we're going to 
 ```
 npm i @exceptionless/node
 ```
+Let's take a moment to update our new Express project to use [ESM](https://nodejs.org/api/esm.html). Start by opening the `package.json` file. We need to add a line in there that says `"type": "module",`. You can place this right above the `"script"` line. 
 
-Now, back in your project, let's open up the `routes` folder and jump into the `users.js` file. You can see it comes with a single GET route that will list all users. Let's set up a very simple user mapping in this file. Above the route, add the following: 
+Then, open up your `app.js` file, and we need to convert our `require` statements to `import` statements. You'll also need to update the export at the bottom. Here's what the top of the file should look like: 
+
+```js
+import express from 'express';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
+
+import indexRouter from "./routes/index.js";
+import usersRouter from "./routes/users.js";
+```
+
+The export at the bottom should be updated to look like this: 
+
+```js
+export default app;
+```
+
+Now, we need to make similar changes to our `routes` files. Open up `routes/index.js` and change the `require` statement to `import` statement like this: 
+
+```js
+import express from 'express';
+```
+
+Then, change the export to look like this at the bottom: 
+
+```js
+export default router;
+```
+
+Do the same thing in `routes/users.js` and you'll be all set.
+
+Ok, now we can really dive in. In the `users.js` file, you can see it comes with a single GET route that will list all users. Let's set up a very simple user mapping in this file. Above the route, add the following: 
 
 ```js
 const users = [
@@ -183,7 +215,7 @@ Now, you should get a 200 response with the newly added resource. Ok, we have ou
 At the top of your file, require in Exceptionless: 
 
 ```js
-const { Exceptionless } = require("@exceptionless/node");
+import { Exceptionless } from "@exceptionless/node";
 Exceptionless.startup("YOUR API Key");
 ```
 
