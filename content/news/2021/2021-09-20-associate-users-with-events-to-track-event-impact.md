@@ -104,7 +104,7 @@ This middleware just checks to see if the key provided is a valid API Key. We co
 To test things out so far, let's update the existing GET route to use our middleware and to return a list of users. Change that route code to look like this: 
 
 ```js
-router.get('/', authentication, function(req, res, next) {
+router.get('/', authentication, async function(req, res, next) {
   const mappedUsers = users.map((u) => {return {
     name: u.user.name, 
     email: u.user.email, 
@@ -146,7 +146,7 @@ Now, you should get back an array of two users with their API keys removed. Perf
 Create a new endpoint in that same file that looks like this: 
 
 ```js
-router.post('/', authentication, function(req, res, next) {
+router.post('/', authentication, async function(req, res, next) {
   try {
     if(!validBody(req.body)) {
       throw "No user object provided";
@@ -216,7 +216,7 @@ At the top of your file, require in Exceptionless:
 
 ```js
 import { Exceptionless } from "@exceptionless/node";
-Exceptionless.startup("YOUR API Key");
+await Exceptionless.startup("YOUR API Key");
 ```
 
 You can get your API key by [following these instructions](../../docs/api/api-getting-started.md). 
@@ -225,7 +225,7 @@ Now, back in your POST endpoint, let's add the following to the catch:
 
 ```js
 ...
-Exceptionless.createException(error).setUserIdentity(res.locals.user).submit();
+await Exceptionless.createException(error).setUserIdentity(res.locals.user).submit();
 res.status(400).send(error);
 ```
 
@@ -247,5 +247,7 @@ Why is this type of data important? Because you can now start to track both erro
 ![Most users example](./most_users.png)
 
 These events, of course, do not have to be tied to errors. You can track the frequency users are clicking on certain buttons. You can track page views. You can track successful interactions. All of this is powerful information that can help you build a better product. 
+
+The source code for this simple server example is [in this gist](https://gist.github.com/polluterofminds/d055afc6be61d077e2f0871491a7c9ce).
 
 If you're ready to jump in, install [Exceptionless](https://exceptionless.com) into your own app, and start monitoring events with user data attached!
