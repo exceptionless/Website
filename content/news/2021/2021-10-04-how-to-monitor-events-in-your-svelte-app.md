@@ -39,5 +39,105 @@ Now, our last step before opening up a code editor is to install the new Excepti
 npm i @exceptionless/browser
 ```
 
+Now, you can fire up the app by running: 
 
+```
+npm run dev
+```
+
+Don't worry about how it looks, we're going to instead focus on how to capture events and errors in the app using Exceptionless. Let's dive into that!
+
+## Handling Events With Exceptionless
+
+Svelte, like other JavaScript frameworks, allows you to build apps through a collection of components. However, to keep this tutorial simple, we will keep everything in out `App.svelte` file. So, let's start there. Open your `exceptionless-svelte` project in your favorite code editor, then find the `App.svelte` file. 
+
+You'll notice that with Svelte, we have a normal-looking script tag at the top of the file and then some HTML. This is because there is no virtual DOM. We're really just dealing with templating, reactive state, and plain JavaScript—which is pretty fun. 
+
+Let's import Exceptionless at the top of our script tag, and then let's start Exceptionless up. 
+
+```js
+import { Exceptionless } from "@exceptionless/browser"
+export let name;
+const startExceptionless = async () => {
+await Exceptionless.startup("YOUR API KEY");
+}	
+startExceptionless();
+```
+
+Notice that we had to wrap our startup call in a function. This is because [Svelte doesn't yet support to-level awaits](https://github.com/sveltejs/svelte/issues/5501). If it did, we would simply call `await Exceptionless.startup("YOUR API KEY")`. 
+
+This `App.svelte` file doesn't have a lot going on, so let's change that. Let's make the name variable you see in our code above dynamic. We're not going to go deep into state/props with Svelte, but if you look in the `main.js` file, you'll see a prop variable called `name`. We also have that variable at the top of our `App.svelte` file. Changing it is as simple as assigning a new value. Which is exactly what we'll do. This is not the reactive way of handling state variables, so I encourage you to check out the docs [here](https://svelte.dev/tutorial/reactive-declarations). 
+
+So, first, in the HTML, between your `main` tags, change things to look like this: 
+
+```html
+<main>
+	<h1>Hello {name}!</h1>
+	<p>Type a new name below to change the name variable.</p>
+	<input on:change={handleChange} placeholder="new name" />
+</main>
+```
+
+Then in your `script` tag, add a `handleChange` function like this: 
+
+```js
+const handleChange = (e) => {
+  name = e.target.value;
+}
+```
+
+Save your code, then visit localhost:5000. Type a new name in the input field and you'll see Hello World change to Hello ${new name}. Very cool. But we came here to montior events and take names!
+
+Let's change our `handleChange` function to track that event with Exceptionless. This is a feature of our app, and Exceptionless includes a nice feature usage method in its JS client. We'll use that. 
+
+Change the `handleChange` function to look like this: 
+
+```js
+const handleChange = async (e) => {
+  name = e.target.value;
+  await Exceptionless.submitFeatureUsage("Name Change");
+}
+```
+
+We are submitting the name change event to Exceptionless and tracking it as a feature usage event called "Name Change". Let's take a look at how this looks in our Exceptionless dashboard. Log in again and click on the Feature Usages tab on the left. Then click on Most Frequest. Here you'll see your new Feature Usage events. 
+
+![Feature Usage](./feature_usage_dashboard.png)
+
+Pretty cool, huh! There's a lot more you can layer in, including user details. This is powerful when you want to see how often particular user cohorts use a particular feature. 
+
+Now, we can't talk about event monitoring without talking about errors, right? Let's see what error handling looks like in Exceptionless and Svelte. Let's first start by adding a button to our app and some code that will throw an error when that button is clicked. 
+
+Under the input element in your `main` html tags, add this button: 
+
+```html
+<div>
+  <button on:click={handleError}>Throw Error</button>
+</div>
+```
+
+Then in your script tag, add the `handleError` function: 
+
+```js
+const handleError = async () => {
+  try {
+  	throw new Error("You shouldn't be clicking that!");
+  } catch (error) {
+  	await Exceptionless.submitException(error);
+  }
+}
+```
+
+Go ahead and click the button. When you do so, nothing will happen. You can wire up your app to show some message if you want, but what we're really focused on is capturing the error in Exceptionless. Head over to your Exceptionless dashboard and click on Exceptions then Most Frequent. You should see something like this: 
+
+![Exception](./svelte_error.png)
+
+The beauty of this is you can click all the way through that exception and see the details of the error: 
+
+![error details](./stack%20trace.png)
+
+## Wrapping Up
+
+Exceptionless is a powerful, flexible, and open-source event monitoring service. It works well with any language, but with the new JavaScript client, it works especially well with JavaScript apps and frameworks. In just a few lines of code, we were able to automate the collection of feature usage data and send errors to our Exceptionless dashboard. 
+
+But it doesn't stop there. You can track just about anything you can imagine with [Exceptionless](https://exceptionless.com). Svelte plus Exceptionless work...uhhh...**exceptionionally** well together. Give them both a try today!
 
