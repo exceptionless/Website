@@ -57,7 +57,6 @@ Let's import Exceptionless at the top of our script tag, and then let's start Ex
 
 ```js
 import { Exceptionless } from "@exceptionless/browser"
-export let name;
 const startExceptionless = async () => {
 await Exceptionless.startup("YOUR API KEY");
 }	
@@ -111,21 +110,19 @@ Under the input element in your `main` html tags, add this button:
 
 ```html
 <div>
-  <button on:click={handleError}>Throw Error</button>
+  <button on:click={unhandledError}>Throw Error</button>
 </div>
 ```
 
-Then in your script tag, add the `handleError` function: 
+Then in your script tag, add the `unhandledError` function: 
 
 ```js
-const handleError = async () => {
-  try {
-  	throw new Error("You shouldn't be clicking that!");
-  } catch (error) {
-  	await Exceptionless.submitException(error);
-  }
+const unhandledError = async () => {
+  throw new Error("You shouldn't be clicking that!");
 }
 ```
+
+We aren't even doing anything to handle this error. What?! That's because Exceptionless will automatically send unhandled errors through so you can track them. 
 
 Go ahead and click the button. When you do so, nothing will happen. You can wire up your app to show some message if you want, but what we're really focused on is capturing the error in Exceptionless. Head over to your Exceptionless dashboard and click on Exceptions then Most Frequent. You should see something like this: 
 
@@ -134,6 +131,30 @@ Go ahead and click the button. When you do so, nothing will happen. You can wire
 The beauty of this is you can click all the way through that exception and see the details of the error: 
 
 ![error details](./stack%20trace.png)
+
+Now, what if you do want to handle errors and add in some additional context? Exceptionless has you covered. Create a new function called `handleError`: 
+
+```js
+const handleError = async () => {
+  try {
+    throw new Error("Handled error");
+  } catch(error) {
+    await Exceptionless.createException(error).addTags("handled").setUserDescription("joe@email.com", "power user").submit();
+  }
+}
+```
+
+You see in our catch we are adding a lot more info to the event. We are adding a tag letting us know this was a handled error (you would have much better tags, I'm sure). We are also adding a user with a description to the event. 
+
+Let's create a button in the app and test this: 
+
+```html
+<div>
+  <button on:click={handleError}>Handled Error</button>
+</div>
+```
+
+Now, when you click that and go back to Exceptionless, you'll see your event come through. When you click into the details, you'll see the tags and the user information. Pretty cool, huh?
 
 ## Wrapping Up
 
