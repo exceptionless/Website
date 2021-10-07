@@ -1,7 +1,7 @@
 ---
 title: How To Monitor Events in Your Svelte App
-date: 2021-10-04
-draft: true
+date: 2021-10-07
+draft: false
 ---
     
 It seems there is a new JavaScript framework launched everyday. And while that is largely true, some standout above the rest. When [Svelte](https://svelte.dev/) first came out, it would have been easy to write it off as "yet another JS framework." However, Svelte quickly found its community. It has passionate supporters, great contributors, and was recently [named the most-loved web framework](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-web-frameworks). 
@@ -57,10 +57,7 @@ Let's import Exceptionless at the top of our script tag, and then let's start Ex
 
 ```js
 import { Exceptionless } from "@exceptionless/browser"
-const startExceptionless = async () => {
-await Exceptionless.startup("YOUR API KEY");
-}	
-startExceptionless();
+Exceptionless.startup("YOUR API KEY");
 ```
 
 Notice that we had to wrap our startup call in a function. This is because [Svelte doesn't yet support to-level awaits](https://github.com/sveltejs/svelte/issues/5501). If it did, we would simply call `await Exceptionless.startup("YOUR API KEY")`. 
