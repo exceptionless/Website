@@ -2,7 +2,8 @@
 id: 10108
 title: Making the Move to Elasticsearch for Exceptionless 2.0
 date: 2014-09-03
-tags: [ "new features"]
+tags:
+  - new features
 ---
 ![Screenshot 2014-09-03 15.03.16](/assets/img/news/Screenshot-2014-09-03-15.03.16.png)We know you've thought about it when using Exceptionless, and many developers have submitted formal requests. **Search**.
 

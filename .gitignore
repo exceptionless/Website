@@ -1,4 +1,2 @@
-node_modules/
-_site/
-.idea
-content/assets/index.json
+.DS_Store
+_site

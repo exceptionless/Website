@@ -1,0 +1,33 @@
+---
+layout: layouts/default.njk
+---
+
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      {% if not draft %}
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">{{ title }}</h1>
+          </header>
+          <div class="entry-content">
+            {{ content | safe }}
+          </div>
+        </article>
+      {% else %}
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Page Not Found</h1>
+          </header>
+          <div class="entry-content">
+           
+          </div>
+        </article>
+      {% endif %}      
+    </div>
+  </div>
+</div>

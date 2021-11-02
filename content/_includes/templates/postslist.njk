@@ -1,0 +1,15 @@
+{% for post in postslist %}
+  {% if post.data.draft != true %}
+<article class="post type-post status-publish format-standard">
+    <h2><a href="{{ post.data.url | url }}">{{ post.data.title }}</a></h2>
+    {{ post.data.content | md | safe }}
+</article>
+    {% for tag in post.data.tags %}
+    {% for pageTag in search.pages("type=tag") %}
+    {% if pageTag.data.tag == tag %}
+    <a href="{{ pageTag.data.url  }}" class="tag">{{ tag }}</a>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}

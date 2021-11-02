@@ -1,13 +1,44 @@
 {
+  "version": "0.2.0",
   "configurations": [
     {
-      "type": "node",
       "request": "launch",
-      "name": "Launch 11ty",
-      "program": "${workspaceFolder}\\node_modules\\@11ty\\eleventy\\cmd.js",
+      "name": "Lume build",
+      "type": "pwa-node",
+      "program": "${workspaceFolder}/_config.ts",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "deno",
+      "runtimeArgs": [
+        "run",
+        "--unstable",
+        "--import-map=.vscode/lume_import_map.json",
+        "--inspect",
+        "--allow-all"
+      ],
+      "attachSimplePort": 9229
+    },
+    {
+      "request": "launch",
+      "name": "Lume serve",
+      "type": "pwa-node",
+      "program": "file://d:/Projects/Other/lume/cli.ts",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "deno",
+      "runtimeArgs": [
+        "run",
+        "--unstable",
+        "--import-map=.vscode/lume_import_map.json",
+        "--inspect",
+        "--allow-all",
+        "--reload"
+      ],
       "args": [
-        // "--output=C:\\Temp"
-      ]
+        "--serve"
+      ],
+      "attachSimplePort": 9229
     }
   ]
 }
+
+
+

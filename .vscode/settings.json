@@ -1,36 +1,11 @@
 {
-    "cSpell.words": [
-        "Aliyun",
-        "Burcham",
-        "Foundatio",
-        "Geocode",
-        "Gmail",
-        "Kibana",
-        "Kubernetes",
-        "Lucene",
-        "Minio",
-        "OWIN",
-        "Reindex",
-        "Reindexing",
-        "Serilog",
-        "Trello",
-        "Varorbc",
-        "Zurb",
-        "Zurb's",
-        "adamsitnik",
-        "angularjs",
-        "caesay",
-        "deduplicated",
-        "deduplicating",
-        "edwardmeng",
-        "eleventy",
-        "exceptionless",
-        "frankebersoll",
-        "kubectl",
-        "pluggable",
-        "serializers",
-        "srijken",
-        "typeof",
-        "walkthrough"
-    ]
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true,
+  "deno.importMap": ".vscode/lume_import_map.json",
+  "deno.suggest.imports.hosts": {
+    "https://cdn.skypack.dev": true,
+    "https://cdn.jsdelivr.net": true,
+    "https://deno.land": true
+  }
 }

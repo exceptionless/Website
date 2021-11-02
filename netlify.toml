@@ -1,0 +1,9 @@
+[build]
+  publish = "_site"
+  command = """
+    curl -fsSL https://deno.land/x/install/install.sh | sh && \
+    export PATH="/opt/buildhome/.deno/bin:$PATH" && \
+    deno run -A https://deno.land/x/lume/install.ts && \
+    lume upgrade --dev && \
+    lume --location=$DEPLOY_PRIME_URL \
+  """

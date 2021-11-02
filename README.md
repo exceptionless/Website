@@ -1,7 +1,5 @@
 ## Exceptionless Marketing Site  
 
-*Under Construction* 
-
 ## Creating New Posts  
 
 You can manually create a new markdown file for your posts and ensure the front matter is correct, or you can run the following command from within the project directory: 
