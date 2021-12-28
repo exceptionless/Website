@@ -15,7 +15,7 @@ const site = lume({
   server: {
     open: true
   }
-});
+}); 
 
 site
   .ignore("README.md")

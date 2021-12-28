@@ -1,7 +1,7 @@
 export const url = "/docs/index.json";
 export const renderOrder = 1000000;
 import lunr from 'https://cdn.skypack.dev/lunr?dts';
-import Search from "https://deno.land/x/lume/core/helpers/search.ts";
+import { Search } from "https://deno.land/x/lume/plugins/search.ts";
 import { Data } from "https://deno.land/x/lume/core.ts";
 
 export default function (data : Data, blah: any): string {
