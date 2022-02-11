@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Archive - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Archive - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Archive - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Archive</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+
+    <h1>Archive</h1>
+
+
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-05-06-exceptionless-api-usage-and-overview/">Exceptionless API Usage and Overview</a></h2>
+    <h1>THESE DOCS HAVE BEEN UPDATED. SEE THE <a href="/website/docs/api/">NEW DOCS HERE</a>.</h1>
+<p><img src="/website/assets/img/news/Screenshot-2015-05-06-16.26.42-300x220.png" alt="Exceptionless API"></p>
+<p>So you've been using Exceptionless for a while,&nbsp;but you wish you had a different dashboard, or maybe you'd like to integrate event data into one of your apps. No problem,&nbsp;<strong>just use the API!</strong></p>
+<p>Through our adventures while building Exceptionless, we've kept open source, automation, and ease of use in mind. With that,&nbsp;we think our API, which utilizes&nbsp;<a title="Swagger API Framework" href="http://swagger.io/" target="_blank">Swagger</a> and <a title="Swashbuckle" href="https://github.com/domaindrivendev/Swashbuckle" target="_blank">Swashbuckle</a> to&nbsp;automatically generate, update, and display documentation (which means it works automatically on self-hosted environments), is a great resource for our users that want to get their hands dirty and use Exceptionless data to roll their own tools, dashboards, etc.</p>
+<p>Lets take a closer look at the API, how to use it, and some quick examples of what can be done.<!--more--></p>
+<h2>Start Using the Exceptionless API</h2>
+<h3>Accessing the API</h3>
+<p>To access the Exceptionless API, visit&nbsp;<a title="Exceptionless API" href="https://api.exceptionless.io" target="_blank">https://api.exceptionless.io</a> and click on the "API Documentation" link to be taken to the API documentation.</p>
+<h3>Get&nbsp;Your User Scoped Token</h3>
+<p>Tokens are used to access the api and have roles (scopes). When you authenticate via the login controller action, you are getting a token that impersonates your user so it has the same roles as your user account (e.g., client and user).</p>
+<h4><span style="text-decoration: underline;"><a title="Exceptionless API Auth" href="https://api.exceptionless.io/docs/index.html#!/Auth/Auth_Login" target="_blank">Go to Auth controller action</a></span>&nbsp;and enter your login credentials.</h4>
+<p>You can enter JSON into the model field, or&nbsp;you an click the yellow box on the right to pre-populate the field with acceptable JSON&nbsp;fields. Just replace the values that you want to specify and remove the fields you don't need, like invite token.</p>
+<p><img src="/website/assets/img/news/01get-user-scope-token1-300x218.png" alt="Exceptionless API Get User Scoped Token"></p>
+<p>Click "Try it out!" and generate your token. Take note of the response messages section above the button, as it details the possible codes that would be returned in the event of an error (e.g. 401 if the user name or email address was incorrect).</p>
+<p><img src="/website/assets/img/news/01get-user-scope-token2-300x105.png" alt="Retrieve Exceptionless User Scoped Token"></p>
+<p>You can see from the response that it returned our token from the request url above. Take your generated token and put it in the "api_key" field at the top of the page and click "Explore." This authorizes you via bearer authentication, authenticates you to the rest api, and allows you to call controller actions.</p>
+<p><img src="/website/assets/img/news/02add-token-refresh-page-300x50.png" alt="Add Exceptionless User Scoped Token "></p>
+<h3>Get a New&nbsp;Token</h3>
+<p>Now, we’ll get a new token for the project we want to work on and assign it a user role (scope) of "user." We want to get a new user scoped token because we want to do more than just post events (client scoped tokens only allow you to post events), we want to retrieve them. Creating a new token also allows us to revoke the token later.</p>
+<p>First, get your project ID from the Exceptionless Dashboard. It can be found in the URL of that project’s dashboard.</p>
+<p><img src="/website/assets/img/news/03get-project-ID-300x141.png" alt="Get Exceptionless Project ID"></p>
+<p>Now, we’ll navigate to <a title="Exceptionless Create Token" href="https://api.exceptionless.io/docs/index.html#!/Token/Token_PostByProject" target="_blank">Tokens &gt; POST /api/v2/projects/{projectId}/tokens</a>, enter our Project ID, and set up our token to include the user scope and a quick note.</p>
+<p><img src="/website/assets/img/news/04get-new-token1-300x220.png" alt="Create Exceptionless Token"></p>
+<p>Next, we'll click "Try it out!" and generate our new token id.</p>
+<p><img src="/website/assets/img/news/04get-new-token2-300x146.png" alt="Get new Exceptionless Token ID"></p>
+<p>Now, once again, copy this new token and place it in the "api_key" field at the top of the page and click "Explore." Now everything we do will be authenticated to this new user token you’ve just created.</p>
+<h3>Posting an Event</h3>
+<p>Now, lets post an event with a reference ID that we’ll use for a few other examples.</p>
+<p>First, navigate to <a title="Exceptionless API Post Event" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_PostAsync" target="_blank">Event &gt; POST /api/v{version}/events</a></p>
+<p><img src="/website/assets/img/news/05post-event1-300x204.png" alt="Exceptionless API Post Event"></p>
+<p>You’ll see a few basic examples of events and some explanation of the resource in this panel. Make sure to give it a read. For this example, we’ll use a simple log event, with a brief message, and add a reference ID to it. <em>Note that you must also enter the current API version in the "version" field.</em></p>
+<p>When we click "Try it out!" and get a 202 response code, we know we’ve created an event.</p>
+<p><img src="/website/assets/img/news/05post-event2-e1430946143322-300x92.png" alt="Exceptionless API Created Event"></p>
+<h3>Get Event by Reference ID</h3>
+<p>If we want to get the event we just created by it’s reference_id, we can navigate to <a title="Get Exceptionless Event by ID" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_GetByReferenceId" target="_blank">Event &gt; GET /api/v2/events/by-ref/{referenceId}</a>, enter that reference ID, and get back the details of the event.</p>
+<p><img src="/website/assets/img/news/06-get-by-reference-ID2-300x271.png" alt="Get Exceptionless Event by ReferenceID"></p>
+<h3>Getting the Event via a Search Filter</h3>
+<p>Another example of getting an event may include using the reference ID or another search filter we just created and getting all by a reference filter. You can use any <a title="Exceptionless Search Filter Documentation" href="/website/docs/filtering-and-searching/" target="_blank">search filter</a> in the filter parameter.</p>
+<p>To do so, navigate to <a title="Exceptionless API Get All" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_Get" target="_blank">Event &gt; GET /api/v2/events</a> and use the reference term to filter events by the reference ID.</p>
+<p><a href="/website/assets/07-get-all-filter-reference.png"><img src="/website/assets/img/news/07-get-all-filter-reference-300x168.png" alt="Exceptionless API Get All Filter Search"></a></p>
+<p>Results</p>
+<p><img src="/website/assets/img/news/07-get-all-filter-reference2-300x183.png" alt="Exceptionless API Get Al Filter Search Results"></p>
+<h3>Get Organizations and Projects</h3>
+<p>Naturally, we can get all the organizations or projects associated with the current authorized token, as well.</p>
+<h4>Organizations</h4>
+<p>Navigate to <a title="Exceptionless API Get Organizations" href="https://api.exceptionless.io/docs/index.html#!/Organization/Organization_Get" target="_blank">Organization &gt; GET /api/v2/organizations</a> and click "Try it out!"</p>
+<p><img src="/website/assets/img/news/08get-organizations2-300x202.png" alt="Exceptionless API Get Organization Results"></p>
+<h4 style="clear: both;">
+  Projects
+</h4>
+<p>Navigate to <a title="Exceptionless API Get Projects" href="https://api.exceptionless.io/docs/index.html#!/Project/Project_Get" target="_blank">Project &gt; GET /api/v2/projects</a> and click "Try it out!"</p>
+<p><img src="/website/assets/img/news/09get-projects2-300x204.png" alt="Exceptionless API Get Projects Results"></p>
+<h2 style="clear: both;">
+  How to Authenticate to the API
+</h2>
+<h3>1. Bearer Authentication</h3>
+<p>The api documentation uses bearer authentication to authenticate to the API. You can do this in your apps too by specifying a bearer authorization header with your token as shown below.</p>
+<p><img src="/website/assets/img/news/10-bearer-auth-key-300x164.png" alt="Exceptionless Bearer Authentication"></p>
+<h3>2. Authenticate via the Query String</h3>
+<p>Everything we’ve shown you today can be easily and cleanly accessed via a URL query string and your access token.</p>
+<p>For example, if we want to view our organizations, we simply navigate to https://api.exceptionless.io/api/v2/organizations, add the query string "?access_token={token}" and press enter to get the data.</p>
+<p><img src="/website/assets/img/news/11-url-query-string-version-300x145.png" alt="Exceptionless Query String API Authentication"></p>
+<h2>Let Us Know What You Think!</h2>
+<p>We've tried to make the API as easy and intuitive to use as possible, but we're always open to feedback and comments, so please let us know what could be better, easier, faster, etc.</p>
+<p>And, of course, if you have any questions about the API, please leave a comment here, send us an in-app support message, or simply submit the website <a href="/website/contact/" title="Contact Exceptionless">contact form</a>.</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-04-30-filter-and-searching-tutorial-video-exceptionless/">Filter and Searching Tutorial Video - Exceptionless</a></h2>
+    <p><img src="/website/assets/img/news/filter-search.png" alt="Exceptionless Search Filtering">One of the most requested features from the beginning of Exceptionless 1.0 was a filtering and searching system. When we started developing Exceptionless 2.0, we knew it was one of the major features we wanted to include.</p>
+<p>We couldn't just throw in a string search and hope for the best. We had to build it in a way that let users perform basic and advanced filtering, easily, with fast and streamlined results.</p>
+<p><strong>Enter Exceptionless filtering and searching.</strong> You can filter by organization, project, multiple time frame selectors, and specific event variables (with modifiers).</p>
+<p>Watch the video below for a quick test drive, and read further down the page for more details and links!<!--more--></p>
+<h2>Exceptionless Filtering and Search Demo Video</h2>
+<h2>Filter by Organization &amp; Project</h2>
+<p><img src="/website/assets/img/news/filter-by-project-organization-300x208.png" alt="Exceptionless Organizations and Projects"></p>
+<p>By default, the dashboard loads up with all projects selected.</p>
+<p>To show only data from a specific organization or project within an organization, simply click on the "All Projects" drop down in the top left of the dashboard and select your organization or project.</p>
+<p>Whatever view you are in will then be transformed to display only data from that organization/project.</p>
+<p>To change it back to all projects, simply select the drop down again and click on "All Projects."</p>
+<h2>Filter by Time Frame</h2>
+<p><img src="/website/assets/img/news/filter-by-timeframe-300x205.png" alt="Exceptionles Time Frame Filters"></p>
+<p>Exceptionless offers multiple preset time frame options, as well as the ability to customize the time frame down to the second.</p>
+<p>To select your time frame of choice, click on the calendar icon next to the project drop down on the top navigation bar of your dashboard.</p>
+<p>Once there, you can select "Last Hour," "Last 24 Hours," "Last Week," "Last 30 Days," "All Time," or "Custom."</p>
+<p>Most of these options are pretty self explanatory, but if you click on "Custom," a popup will appear that lets you select the start and end date, as well as start and end hours, minutes, and seconds of those dates.</p>
+<p>Another way to control the data time frame is to simply select a period of time on the history graph itself by clicking, dragging, and releasing. This will automatically update the custom time frame points and refresh the data to match that period.</p>
+<h2>Filter and Search by Specific Criteria</h2>
+<p><img src="/website/assets/img/news/filter-by-search-filter-criteria-300x203.png" alt="Exceptionless Search Filter Feature"></p>
+<p>Being able to search your errors and events by specific criteria is, perhaps, the largest improvement for version 2.0.</p>
+<p>By selecting the magnifying glass icon next to the calendar icon in the top navigation, you can enter <a title="Exceptionless Search Filter Documentation" href="/website/docs/filtering-and-searching/" target="_blank">search criteria</a> and select whether you want the results to include fixed and/or hidden events/errors.</p>
+<p>You can filter by tag, ID, organization, project, stack, type, value, IP, architecture, user, and much much more. Some searches, such as ID, require a prefix ("id:") on the search, but others, such as error.message, can be entered as strings ("A NullReferenceException occurred"). View a complete list of searchable terms, examples, and FAQs on our <a title="Exceptionless Search Documentation" href="/website/docs/filtering-and-searching/" target="_blank">Searching Documentation Page</a>.</p>
+<h2>We're Always Improving - What Could be Better?</h2>
+<p>Please let us know what you think of the filtering and searching abilities by commenting here on the blog, sending us an in-app support message, or filling out our <a href="/website/contact/" title="Exceptionless Contact Form">contact form</a>. We're always looking for feedback, and genuinely want to know what you think!</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-04-16-an-exceptionless-nuget-package-tour/">An Exceptionless NuGet Package Tour</a></h2>
+    <p><img src="/website/assets/img/news/nugetlogo.png" alt="Exceptionless NuGet Packages">Giving back to the development community is important to us over here at Exceptionless. <a title="Exceptionless on GitHub" href="https://github.com/exceptionless" target="_blank">We love open source!</a></p>
+<p>As such, the Exceptionless&nbsp;<a title="Exceptionless NuGet Assembly Library" href="https://www.nuget.org/profiles/exceptionless?showAllPackages=True" target="_blank">NuGet assembly&nbsp;library</a>, with 31 assemblies&nbsp;and over 176,000 package downloads, is ever growing and expanding right along with our <a title="Exceptionless GitHub Repos" href="https://github.com/exceptionless" target="_blank">GitHub repos</a>.</p>
+<p>We thought we would give everyone a quick tour, and at the same time perhaps provide a good resource and reference page.</p>
+<p>Don't forget, though - this page may be out-dated by the time you view it, so please <a title="Exceptionless NuGet Packages" href="https://www.nuget.org/profiles/exceptionless?showAllPackages=True" target="_blank">view our full library on NuGet</a>.<!--more--></p>
+<h2>Exceptionless NuGet Clients</h2>
+<p>Exceptionless, our primary <a title="Exceptionless GitHub Repo" href="https://github.com/exceptionless/Exceptionless.net" target="_blank">open source</a> application, provides real-time error, feature, and log reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC apps (and more, soon!).</p>
+<p>Below you will find the NuGet&nbsp;assemblies&nbsp;for all the platforms we currently support.</p>
+<p><a title="Exceptionless.Portable NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Portable/" target="_blank">Exceptionless.Portable</a>
+Exceptionless client for portable (PCL) applications.&nbsp;This is the base library all the other implementations build on top of. It contains all the basic functionality that powers the Exceptionless clients! This library can be used on many different platforms. It’s worth noting that this is a very basic client and as such you won’t get all the bells and whistles as described <a title="Exeptionless Configuration Documentation" href="/website/docs/clients/dotnet/configuration/" target="_blank">here</a> in the PCL configuration section. For those bells and whistles, see the Exceptionless package, below.
+Frameworks:&nbsp;.NET 4, .NET 4.5, Silverlight 5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8</p>
+<p><a title="Exceptionless NuGet Package" href="https://www.nuget.org/packages/Exceptionless/" target="_blank">Exceptionless<br> </a>Exceptionless client for non visual (ie. Console and Services) applications.**&nbsp;**We recommend using this package if you are not using any other platform specific packages (E.G., Exceptionless.Mvc), as it provides all the bells and whistles that are missing in the portable package.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.Mvc NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Mvc/" target="_blank">Exceptionless.Mvc<br> </a>Exceptionless client for ASP.NET MVC 3+ applications.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.WebApi NuGet Package" href="https://www.nuget.org/packages/Exceptionless.WebApi/" target="_blank">Exceptionless.WebApi<br> </a>Exceptionless client for ASP.NET Web API applications.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.Web NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Web/" target="_blank">Exceptionless.Web<br> </a>Exceptionless client for ASP.NET WebForms applications.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.Nancy NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Nancy/" target="_blank">Exceptionless.Nancy<br> </a>Exceptionless client for <a title="NancyFX" href="http://nancyfx.org/" target="_blank">Nancy</a> applications.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.Wpf NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Wpf/" target="_blank">Exceptionless.Wpf</a>
+Exceptionless client for WPF applications.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.Windows NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Windows/" target="_blank">Exceptionless.Windows<br> </a>Exceptionless client for Windows&nbsp;Forms applications.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.NLog NuGet Package" href="https://www.nuget.org/packages/Exceptionless.NLog/" target="_blank">Exceptionless.NLog<br> </a>NLog target that sends log entries to Exceptionless.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.Log4net NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Log4net/" target="_blank">Exceptionless.Log4net<br> </a>Log4net appender that sends log entries to Exceptionless.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Serilog.Sinks.Exceptionless NuGet Package" href="https://www.nuget.org/packages/Serilog.Sinks.ExceptionLess/" target="_blank">Serilog.Sinks.ExceptionLess<br> </a>Serilog sink that sends log entries to Exceptionless.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5
+<a title="Exceptionless sink for Serilog Source Code" href="https://github.com/serilog/serilog-sinks-exceptionless" target="_blank">View Source</a></p>
+<h3>Signed&nbsp;Assemblies</h3>
+<p>We also have signed versions of most assemblies&nbsp;on our <a title="Exceptionless NuGet Profile" href="https://www.nuget.org/profiles/exceptionless?showAllPackages=True" target="_blank">NuGet Profile</a>.&nbsp;See MSDN for additional info on signing assemblies (<a title="Strong-Named Signed Assemblies" href="https://msdn.microsoft.com/en-us/library/wd40t7ad%28v=vs.110%29.aspx" target="_blank">Strong-Named Assemblies</a>).</p>
+<h2>Foundatio by Exceptionless</h2>
+<p>Foundatio (Requires .NET 4.5)&nbsp;is an open source library for building distributed applications that we built, use, and think you will find helpful. Foundatio provides in memory, redis, and azure implementations.&nbsp;This allows you to do development or testing using in-memory versions and switch them out for redis or azure implementations in production. This saves you time (setup and maintaining) and money (not paying for cloud resources) during development and testing!&nbsp;Foundatio source code can be found at <a title="Foiundatio Source Code on GitHub" href="https://github.com/FoundatioFx/Foundatio" target="_blank">https://github.com/FoundatioFx/Foundatio</a>.</p>
+<p>Exceptionless was built using Foundatio and utilizes implementations for caching, queues, locks, messaging, jobs, file storage, and metrics.</p>
+<p><a title="Foundatio Exceptionless NuGet Package" href="https://www.nuget.org/packages/Foundatio/" target="_blank">Foundatio</a>
+Foundatio consists of pluggable foundation blocks for building distributed apps, including caching, queues, locks, messaging, jobs, file storage, and metrics.</p>
+<p><a title="Foundatio Redis Implementations NuGet Package" href="https://www.nuget.org/packages/Foundatio.Redis/" target="_blank">Foundatio Redis Implementations</a>
+Contains the redis implementations of caching, queues, locks, messaging, jobs, file storage.</p>
+<p><a title="Foundatio Azure ServiceBus Implementations NuGet Package" href="https://www.nuget.org/packages/Foundatio.AzureServiceBus/" target="_blank">Foundatio Azure ServiceBus Implementations</a>
+Contains the redis implementations of queues and messaging. The azure packages are split into different packages so you don't have to take extra azure dependencies on things you don't need.</p>
+<p><a title="Foundatio Azure Storage Implementations NuGet Package" href="https://www.nuget.org/packages/Foundatio.AzureStorage/" target="_blank">Foundatio Azure Storage Implementations</a>
+Contains the redis implementations of file storage. The azure packages are split into different packages so you don't have to take extra azure dependencies on things you don't need.</p>
+<h2>Other</h2>
+<p><a title="Exceptionless Lucene Query Parser NuGet Package" href="https://www.nuget.org/packages/Foundatio.Parsers.LuceneQueries/" target="_blank">Exceptionless LuceneQueryParser</a>
+Lucene Query Parser is a lucene style query parser that is extensible and allows additional syntax features. We use this in <a title="Exceptionless Source Code" href="https://github.com/exceptionless/Exceptionless" target="_blank">Exceptionless</a> to&nbsp;<a title="Exceptionless Query Source Code" href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Repositories/Queries/Validation/PersistentEventQueryValidator.cs" target="_blank">ensure the query is valid before executing it, check to see if you are trying to a basic or premium search query and much more</a>!
+Frameworks: .NET 4.5
+<a title="Exceptionless LuceneQueryParser Source on GitHub" href="https://github.com/FoundatioFx/Foundatio.Parsers" target="_blank">View&nbsp;Source</a></p>
+<p><a title="Exceptionless Random Data NuGet Package" href="https://www.nuget.org/packages/Exceptionless.RandomData/" target="_blank">Exceptionless RandomData</a>
+RandomData is a utility class for easily generating random data, making the creation of good unit test data a breeze.
+Frameworks: .NET 4.0, .NET 4.5
+<a title="Exceptionless Random Data Source Code" href="https://github.com/exceptionless/Exceptionless.RandomData" target="_blank">View Source</a></p>
+<p><a title="Exceptionless Date Time Extensions NuGet Package" href="https://www.nuget.org/packages/Exceptionless.DateTimeExtensions/" target="_blank">Exceptionless DateTimeExtensions</a>
+This package includes DateTimeRange, Business Day, and various DateTime, DateTimeOffset, and TimeSpan extension methods.
+Frameworks: .NET 4.0, .NET 4.5, Windows 8, Windows Phone 8.1
+<a title="Exceptionless DateTimeExtensions Source Code on GitHub" href="https://github.com/exceptionless/Exceptionless.DateTimeExtensions" target="_blank">View Source</a></p>
+<h2>We'll Keep Building!</h2>
+<p>We don't plan on stopping anytime soon, and will continue writing assemblies&nbsp;to make life easier for developers everywhere. Naturally, we could always use your help, so <a title="Exceptionless GitHub" href="https://github.com/exceptionless" target="_blank">fork us on GitHub</a> if you feel like chipping in. We always appreciate our contributors!</p>
+<p>Otherwise, let us know what you think of Exceptionless, Foundatio, and all our other projects. Feedback is always welcomed and appreciated.</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/.net/" class="tag">.NET</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-04-06-how-to-add-a-plugin-to-affect-events-in-exceptionless/">How to Add a Plugin to Affect Events in Exceptionless</a></h2>
+    <p><img src="/website/assets/img/news/plugins-code-featured1.jpg" alt="Exceptionless Plugins">A plugin is a client-side addin that is run every time you submit an event.</p>
+<p>Plugins can be used to add or remove data from&nbsp;an event, or even allow you to cancel an event submission.</p>
+<p>Each client-specific implementation registers a plugin to provide client-specific information like request info, environmental info, etc. These abilities make plugins very powerful.</p>
+<p>Let's take a more in-depth look at Exceptionless Plugins and how they are used.</p>
+<!--more-->
+<h2>Pre-Reqs</h2>
+<p>First,&nbsp;we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="/website/docs/clients/dotnet/configuration/" target="_blank">configured</a> the latest version of the Exceptionless client (plugins require client v3 - released 4/6/2015). If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="/website/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">upgrade</a> to use plugins.&nbsp; Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/website/contact/" target="_blank">contact page</a> if you have any questions or need assistance in this area.</p>
+<h2>Creating a New Plugin</h2>
+<p>Before we create our first plugin, it’s important to keep in mind that <strong>each plugin will run every time an event is submitted</strong>. As such, you should ensure your plugins are fast and not super resource-intensive so your app remains as quick as possible.</p>
+<p>To&nbsp;create a plugin, you have to specify a System.Action<eventplugincontext>, or create a class that derives from&nbsp;<a title="Exceptionless IEventPlugin" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/Plugins/IEventPlugin.cs" target="_blank">IEventPlugin</a>.</eventplugincontext></p>
+<p>Every plugin is passed an <a title="Exceptionless Plugin Contect" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/Plugins/EventPluginContext.cs" target="_blank">EventPluginContext</a>, which contains all the valuable contextual information that your plugin may need via the following properties:</p>
+<ul>
+<li>**Client
+** The ExceptionlessClient that created the event.</li>
+<li>**Event
+** The target event.</li>
+<li>**ContextData
+** Allows plugins to access additional contextual data to allow them to add additional data to events.</li>
+<li>**Log
+** An ExceptionlessLog implementation that lets you write to the internal logger. This internal logger is used only when debugging the client.</li>
+<li>****Resolver
+**** The ExceptionlessClient`s dependency resolver. This is useful for resolving other dependencies at runtime that were not requested via constructor injection.</li>
+</ul>
+<h3>Exceptionless Plugin Example - Add System Uptime to Feature Usages</h3>
+<p>The following system uptime plugin derives from IEventPlugin and places the system uptime into every feature usage event as extended data when the plugin’s Run(context) method is called.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Diagnostics;
+<span class="hljs-keyword">using</span> Exceptionless.Plugins;
+<span class="hljs-keyword">using</span> Exceptionless.Models;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">Exceptionless.SampleConsole.Plugins</span> {
+    [<span class="hljs-meta">Priority(100)</span>]
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">SystemUptimePlugin</span> : <span class="hljs-title">IEventPlugin</span> {
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Run</span>(<span class="hljs-params">EventPluginContext context</span>)</span> {
+            <span class="hljs-comment">// Only update feature usage events.</span>
+            <span class="hljs-keyword">if</span> (context.Event.Type != Event.KnownTypes.FeatureUsage)
+                <span class="hljs-keyword">return</span>;
+
+            <span class="hljs-comment">// Get the system uptime</span>
+            <span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> pc = <span class="hljs-keyword">new</span> PerformanceCounter(<span class="hljs-string">"System"</span>, <span class="hljs-string">"System Up Time"</span>)) {
+                pc.NextValue();
+
+                <span class="hljs-keyword">var</span> uptime = TimeSpan.FromSeconds(pc.NextValue());
+
+                <span class="hljs-comment">// Store the system uptime as an extended property.</span>
+                context.Event.SetProperty(<span class="hljs-string">"System Uptime"</span>, String.Format(<span class="hljs-string">"{0} Days {1} Hours {2} Minutes {3} Seconds"</span>, uptime.Days, uptime.Hours, uptime.Minutes, uptime.Seconds));
+            }
+        }
+    }
+}
+</code></pre>
+<p><strong>Output in Exceptionless:</strong></p>
+<h4><a href="/website/assets/exceptionless-plugin-system-uptime.png"><img src="/website/assets/img/news/exceptionless-plugin-system-uptime.png" alt="Exceptionless Plugin System Uptime"></a></h4>
+<p><em>Note:</em>&nbsp;We kept the formatting of the uptime simple for the sake of this example, but we recommend&nbsp;using our <a title="Exceptionless Date Time Extensions Library" href="https://github.com/exceptionless/Exceptionless.DateTimeExtensions" target="_blank">open source&nbsp;DateTimeExtensions library</a> if you wish to format it in a really pretty manner.</p>
+<h4>Plugin Priority</h4>
+<p>You might have noticed that there is a priority attribute with a value of 100. The priority of a plugin determines the order that the plugin will run in (runs in order of lowest to highest, and then by order added). All plugins that ship as part of the client start with a priority of 10 and increment by multiples of 10. If you want your addin to run first, give it a low priority (e.g., 0, 1, 2, 3, 4, 5). If you want it to run last, give it a high priority (&gt;100). By default, if you don’t specify a priority, 0 will be used.</p>
+<p>To make sure your plugin runs first (if required), you can inspect the configuration's plugin property in Visual Studio while debugging.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">var</span> plugin <span class="hljs-keyword">in</span> Exceptionless.ExceptionlessClient.Default.Configuration.Plugins)
+    Console.WriteLine(plugin);
+</code></pre>
+<p><img src="/website/assets/img/news/exceptionless-plugin-priority.png" alt="Exceptionless Plugin Priority"></p>
+<h2>Adding the Plugin to Your App</h2>
+<p>Now that we've created the plugin, we’ll add it when our application starts up by calling one of the Exceptionless.ExceptionlessClient.Default.Configuration.AddPlugin() overloads.</p>
+<p>In most cases, we use the following overload to register plugins:</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.AddPlugin&lt;SystemUptimePlugin&gt;();
+</code></pre>
+<p>When you add a plugin by specifying the type, we inspect the type and try to find a PriorityAttribute. If we can’t find one, the default value of 0 will be used.</p>
+<p>You can also add a plugin by passing a System.Action<eventplugincontext> to AddPlugin.
+<em>Please note that we are specifying a key when adding the action plugin so we can remove it later. If you are not going to be removing your plugin, then you can omit the first argument.</em></eventplugincontext></p>
+<p><strong>We pass AddPlugin three arguments:</strong></p>
+<ul>
+<li><strong>A unique plugin key</strong> (which can be used to remove the plugin later)</li>
+<li><strong>Priority</strong></li>
+<li><strong>An action</strong> that contains all of our logic to add the system uptime (or whatever your plugin does).</li>
+</ul>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.AddPlugin(<span class="hljs-string">"system-uptime"</span>, <span class="hljs-number">100</span>, context =&gt; {
+    <span class="hljs-comment">// Only update feature usage events.</span>
+    <span class="hljs-keyword">if</span> (context.Event.Type != Event.KnownTypes.FeatureUsage)
+        <span class="hljs-keyword">return</span>;
+
+    <span class="hljs-comment">// Get the system uptime</span>
+    <span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> pc = <span class="hljs-keyword">new</span> PerformanceCounter(<span class="hljs-string">"System"</span>, <span class="hljs-string">"System Up Time"</span>)) {
+         pc.NextValue();
+         <span class="hljs-keyword">var</span> uptime = TimeSpan.FromSeconds(pc.NextValue());
+
+         <span class="hljs-comment">// Store the system uptime as an extended property.</span>
+         context.Event.SetProperty(<span class="hljs-string">"&lt;wbr /&gt;System Uptime"</span>, String.Format(<span class="hljs-string">"{0} Days {1} Hours {2} Minutes {3} Seconds"</span>, uptime.Days, uptime.Hours, uptime.Minutes, uptime.Seconds));
+
+     }
+});
+</code></pre>
+<h2>Removing an Existing Plugin</h2>
+<p>To remove a previously added plugin, you need to call one of the Exceptionless.ExceptionlessClient.Default.Configuration.RemovePlugin overloads.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.RemovePlugin&lt;SystemUptimePlugin&gt;();
+</code></pre>
+<p>If you registered your plugin via an action, you will need to remove the plugin with the key it was added with.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.RemovePlugin(<span class="hljs-string">"system-uptime"</span>);
+</code></pre>
+<h2>How Can&nbsp;You Use Plugins?</h2>
+<p>Can you think of ways that plugins can help your app? Are you already building some? Let us know what they are and how they help! Eventually, we plan on building a library of useful and common plugins that other developers can easily implement. The more help we've got, the faster that library will grow!</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-03-31-sending-log-messages-to-exceptionless/">Sending Log Messages to Exceptionless</a></h2>
+    <p><img src="/website/assets/img/news/log-messages.png" alt="Exceptionless Log Message Events">We're all about exceptions, but sometimes, as developers, we run into bugs that don't throw them but still cause major havoc in the system.&nbsp;There are also times we just need to record an event with a custom message to help track down bottlenecks, etc.</p>
+<p>That's where Exceptionless meets log messages.</p>
+<p>In Exceptionless 2.0, you can now send custom log messages to a Log Messages dashboard where they can be tracked and view just like exceptions and other events.</p>
+<p>Lets take a closer look...<!--more--></p>
+<h2>How to Submit a Log Message to Exceptionless</h2>
+<h3>Using the Client</h3>
+<p>For this example, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="/website/docs/clients/dotnet/configuration/" target="_blank">configured</a> the Exceptionless 2.0 client. If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="/website/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">upgrade</a> to send us log messages. Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/website/contact/" target="_blank">contact page</a> if you have any questions or need assistance in this area.</p>
+<h4>Let's submit a log message</h4>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.SubmitLog(<span class="hljs-string">"Application starting up"</span>);
+</code></pre>
+<p>That's your basic log message.</p>
+<h4><strong>Getting fancier</strong>, you can also specify the log source and log level.</h4>
+<p>In the below example, "<em>typeof(MainWindow)__.FullName</em>" specifies the log source, and "<em>Info</em>" specifies the log level. If no log source is specified, the log messages will be stacked under a global log stack.</p>
+<p>We recommend specifying one of the following log levels, all of which add&nbsp;a visual indicator to each log message (see below screenshot).</p>
+<ul>
+<li>Trace</li>
+<li>Debug</li>
+<li>Info</li>
+<li>Warn</li>
+<li>Error</li>
+</ul>
+<pre><code class="language-cs hljs language-csharp">ExceptionlessClient.Default.SubmitLog(<span class="hljs-keyword">typeof</span>(MainWindow).FullName, <span class="hljs-string">"Info log example"</span>, <span class="hljs-string">"Info"</span>);
+</code></pre>
+<p>Here's a screenshot of what the visual indicators for the different types of log levels look like.</p>
+<p><img src="/website/assets/img/news/log-messages-log-level.png" alt="Exceptionless Log Message Preview"></p>
+<h4>You can also add additional information using our fluent API.</h4>
+<p>This is helpful wen you want to add contextual information, contact information, or a tag.</p>
+<p>In the below example, we will use the "<em>CreateLog</em>" method to add a tag to the log message.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.CreateLog(<span class="hljs-keyword">typeof</span>(MainWindow).FullName, <span class="hljs-string">"Info log example"</span>, <span class="hljs-string">"Info"</span>).AddTags(<span class="hljs-string">"Wpf"</span>).Submit();
+</code></pre>
+<p>There are a number of additional pieces of data you can use for your event.&nbsp;The below bullets&nbsp;include the current EventBuilder list, but we are always adding more that can be found on <a title="Exceptionless EventBuilder.cs" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/EventBuilder.cs" target="_blank">GitHub</a>. Also, view more examples here on our <a title="Send Exceptionless Events" href="/website/docs/api/posting-events/" target="_blank">Sending Events</a> page.</p>
+<ul>
+<li>AddTags</li>
+<li>SetProperty</li>
+<li>AddObject</li>
+<li>MarkAsCritical</li>
+<li>SetUserIdentity</li>
+<li>SetUserDescription</li>
+<li>SetVersion</li>
+<li>SetSource</li>
+<li>SetSessionId</li>
+<li>SetReferenceId</li>
+<li>SetMessage</li>
+<li>SetGeo</li>
+<li>SetValue</li>
+<li>And more, depending on your client</li>
+</ul>
+<h3>Using the REST API</h3>
+<p>You can also submit a log message with an HTTP&nbsp;post to our <a title="Exceptionless Events Endpoint" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_Post" target="_blank">events endpoint</a>.</p>
+<pre><code>My log message
+My second log message.
+</code></pre>
+<p>By default, any content that is submitted to the API post is a log message. The above example will be broken into two log messages because it automatically splits text content by the new line.</p>
+<h4>You can submit a log message via JSON, too.</h4>
+<p>See details in our <a title="Exceptionless JSON Post API Documentation" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_Post" target="_blank">API Documentation</a>. If you need an API key for simply posting events, you can find it in your <a title="Exceptionless" href="https://be.exceptionless.io/" target="_blank">project settings</a>. Otherwise, please refer to the&nbsp;<a title="Exceptionless Auth Login API Documentation" href="https://api.exceptionless.io/docs/index.html#!/Auth/Auth_Login" target="_blank">auth login documentation</a>&nbsp;to get a user&nbsp;scoped api key.</p>
+<p>Below is a JSON example of a log message, with source, message, and log level.</p>
+<pre><code class="language-json hljs"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"log"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"source"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"WpfApplication3.MainWindow"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"message"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Application started"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"data"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"@level"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Info"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h3>Using NLog or Log4net Targets</h3>
+<p>We also have integrations with major logging frameworks. The benefits of using a logging framework is finer, more granular control over what is logged.</p>
+<p>For example, you can log only warnings or errors project-wide, but then enable trace level messages for a specific class. We do this to keep&nbsp;our system from getting filled up with noise that doesn't add any value unless there is an issue.</p>
+<p>This also allows you to quickly change what you want to log to. Maybe you want to turn off logging to Exceptionless, or log to Exceptionless and to disk.</p>
+<h4>NLog or Log4net Usage</h4>
+<p>To use the <a title="Exceptionless NLog NuGet Package" href="https://www.nuget.org/packages/exceptionless.nlog" target="_blank">NLog </a>or <a title="Exceptionless Log4net NuGet Package" href="https://www.nuget.org/packages/exceptionless.log4net" target="_blank">Log4net</a> clients, you’ll just need to bring down the NuGet package and follow the detailed readme.</p>
+<p><em><span style="color: #993300;"><strong>Note on performance: Use in-memory event storage for high volumes</strong></span></em></p>
+<p><em>There are some performance considerations you should be aware of when you are logging very high numbers&nbsp;of log events and using our client.&nbsp;We've&nbsp;spent a lot of time to ensure Exceptionless&nbsp;doesn't&nbsp;degrade your&nbsp;applications performance. However, if you are logging thousands of messages a minute, you should use the in-memory event storage.</em></p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.UseInMemoryStorage();
+</code></pre>
+<p>This tells the client not to serialize the log events to disk before sending and thus is much faster (the client doesn't need to serialize the event to disk and read it from disk before sending). This comes at the expense that if the application dies, you will lose any unsent events that were in memory. When you use the NLog or Log4net targets and specify the API&nbsp;key as part of the target configuration, we will automatically create a second&nbsp;client instance that uses in-memory storage only for log messages. This way, any logged exceptions or feature usages&nbsp;still use disk storage, while log messages use in-memory storage, allowing maximum performance.</p>
+<p><strong>Another Note:</strong> We are also working on updating the <a title="Exceptionless Serilog Github Issue" href="https://github.com/serilog/serilog/issues/381" target="_blank">Serilog implementation</a>.</p>
+<h2>Log Messages Dashboard</h2>
+<p>The Log Messages Dashboard makes it easy to see log occurrences. You can keep track of how active a component is, or how long code takes to execute using existing metrics.</p>
+<p>For metrics, we have created an <a href="https://github.com/FoundatioFx/Foundatio" target="_blank">open source&nbsp;metrics library called Foundatio</a>.&nbsp;We use it for Exceptionless, and think you will find it extremely helpful as well. Check it out! We'll be posting an article on Foundatio soon, so check back.</p>
+<h2><img src="/website/assets/img/news/log-messages-dashboard.png" alt="log-messages-dashboard"></h2>
+<p>How Are You Liking Exceptionless 2.0?</p>
+<p>We think we've added some pretty cool features to Exceptionless 2.0, including logging, but you are the ultimate judge. What's good? What's bad? What's missing? Let us know via a comment on the blog, social media, in-app, or however else you want to get in touch!</p>
+<p>If you're new to Exceptionless 2.0, make sure to <a href="/website/news/2015/2015-03-12-its-go-time-exceptionless-2-0-launched">check out the launch article</a> for more details on the new features and enhancements.</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-03-25-logging-feature-usages-with-exceptionless/">Logging Feature Usages with Exceptionless</a></h2>
+    <p><img src="/website/assets/img/news/feature-usage.png" alt="Exceptionless Feature Usage">The ability to log feature usages is one of the many <a title="Exceptionless 2.0 Launch Article" href="/website/its-go-time-exceptionless-2-0-launched/" target="_blank" rel="noopener noreferrer">new... features... of Exceptionless 2.0</a>.</p>
+<p>If you&nbsp;want to know when a button is being clicked, or what users are&nbsp;doing certain tasks, feature usage logging will help you track and visualize each occurrence.</p>
+<p>What you learn from logging these types of feature usages might surprise you, and at the very least you'll know more about how users interact with your system.<!--more--></p>
+<h2>How to Submit a Feature Usage</h2>
+<h3>Using the client</h3>
+<p>For this example, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="/website/docs/clients/dotnet/configuration/" target="_blank" rel="noopener noreferrer">configured</a> the Exceptionless 2.0 client. If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="/website/docs/clients/dotnet/upgrading/" target="_blank" rel="noopener noreferrer">upgrade</a> to send us feature usage events. Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/website/contact/" target="_blank" rel="noopener noreferrer">contact page</a> if you have any questions or need assistance in this area.</p>
+<h4>Example 1 - Signup</h4>
+<p>In the example below, we are going to submit a feature usage when any user signs up.</p>
+<p><strong>To submit the feature occurrence, you just need to call our api as follows:</strong></p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.SubmitFeatureUsage(<span class="hljs-string">"Signup"</span>);
+</code></pre>
+<p>SubmitFeatureUsage creates a simple feature usage and submits it. To include more information, please use CreateFeatureUsage (example below).</p>
+<h4>More detailed examples</h4>
+<p>You can also submit additional information with a feature usage using our fluent api. This is nice when you want to add contextual information, contact information, or a tag.</p>
+<h4>Example 2 - Signup with tags</h4>
+<p>If, for instance, you wanted to indicate how a user signs up, you can add a tag to the feature usage occurrence. In the below example, we are tagging a feature usage that uses GitHub to sign up.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.CreateFeatureUsage(<span class="hljs-string">"Signup"</span>).AddTags(<span class="hljs-string">"GitHub"</span>).Submit();
+</code></pre>
+<h4>Example 3 - Who's Searching?</h4>
+<p>As another example, maybe we want to log a feature usage when users search, and then set their identity.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.CreateFeatureUsage(<span class="hljs-string">"Searching"</span>).SetUserIdentity(<span class="hljs-string">"John Smith"</span>);
+</code></pre>
+<h4>What else can I add to a submission?</h4>
+<p>There are a number of additional pieces of data you can use for your event.&nbsp;The below bullets&nbsp;include the current EventBuilder list, but we are always adding more that can be found on <a title="Exceptionless EventBuilder.cs" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/EventBuilder.cs" target="_blank" rel="noopener noreferrer">GitHub</a>. Also, view more examples here on our <a title="Send Exceptionless Events" href="/website/docs/clients/dotnet/sending-events/" target="_blank" rel="noopener noreferrer">Sending Events</a> page.</p>
+<ul>
+<li>AddTags</li>
+<li>SetProperty</li>
+<li>AddObject</li>
+<li>MarkAsCritical</li>
+<li>SetUserIdentity</li>
+<li>SetUserDescription</li>
+<li>SetVersion</li>
+<li>SetSource</li>
+<li>SetSessionId</li>
+<li>SetReferenceId</li>
+<li>SetMessage</li>
+<li>SetGeo</li>
+<li>SetValue</li>
+<li>And more, depending on your client</li>
+</ul>
+<h3>Using the&nbsp;REST API</h3>
+<p>You can also submit a feature usage by posting JSON to our API. See details in our <a title="Exceptionless JSON Post API Documentation" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_Post" target="_blank" rel="noopener noreferrer">API Documentation</a>. If you need an API key for simply posting events, you can find it in your <a title="Exceptionless" href="https://be.exceptionless.io" target="_blank" rel="noopener noreferrer">project settings</a>. Otherwise, please refer to the&nbsp;<a title="Exceptionless Auth Login API Documentation" href="https://api.exceptionless.io/docs/index.html#!/Auth/Auth_Login" target="_blank" rel="noopener noreferrer">auth login documentation</a>&nbsp;to get a user&nbsp;scoped api key.</p>
+<pre><code class="language-json hljs"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"usage"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"source"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Signup"</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h2>The Dashboard</h2>
+<p>Feature usage logging&nbsp;makes it very easy to see how often&nbsp;a feature, such as logging into an account, is used over time. If usage of one type of login, for instances, is never used, there might be an issue or you could consider removing it (less code debt). Or, if one is used the majority of the time, maybe it should be first in the list. There are almost unlimited ways you can use feature usage data to improve user experience.</p>
+<p><img src="/website/assets/img/news/feature-usage-dashboard-1024x603.png" alt="Exceptionless Feature Usage Dashboard"></p>
+<p>If we&nbsp;click on the stack for the signup feature, it shows the tag list of the providers that have been used to signup (GitHub and Google, in this instance).</p>
+<p><img src="/website/assets/img/news/feature-usage-stack-tags.png" alt="Exceptionless Feature Usage Stack"></p>
+<p>You can even go further and filter by a tag to see exactly how people are logging into your system using the search filter. Example: "tag:GitHub"</p>
+<p><img src="/website/assets/img/news/feature-usage-tag-github.png" alt="Exceptionless Feature Usage Filtering Searching"></p>
+<p>Regarding the SetUserIdentity example above, we can see that user information being appended to a feature usage occurrence if we visit the "Search" feature and view an occurrence.</p>
+<p><img src="/website/assets/img/news/feature-usage-searching-userID.png" alt="Exceptionless Feature Usage User Info"></p>
+<h2>Cool Stuff, Right?</h2>
+<p>We think so, and we hope you do too. Either way, we're always looking for feedback, so let us know what you think via the comments below, an in app support message, or via the <a href="/website/contact/" title="Contact Exceptionless">contact page</a>.</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-03-12-its-go-time-exceptionless-2-0-launched/">IT'S GO TIME - Exceptionless 2.0 Launched!</a></h2>
+    <p><img src="/website/assets/img/news/version-2.0-launched.png" alt="version-2.0-launched">Today, after much development and <a href="#preview">weeks of live user testing&nbsp;and feedback</a>, we have officially released Exceptionless 2.0 into the wild!</p>
+<p>Users will notice a completely new interface and experience <strong>numerous&nbsp;new features and improvements</strong>, highlighted below. Existing users that <a title="Update Exceptionless Client to 2.0" href="/website/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">update their clients</a>&nbsp;(not required)&nbsp;will experience improved client efficiency, the ability to send us logs, and more.&nbsp;We believe 2.0 will usher in a new era in event reporting and logging, becoming a true asset to developers everywhere.</p>
+<p>Shipping 2.0&nbsp;out to our amazing customers has us <strong>overwhelmed with excitement</strong>, and we can't wait to see all the new ways in which Exceptionless will be used to squash bugs and improve apps everywhere. Read on for more details on updating existing clients&nbsp;and all the new features and changes.&nbsp;<strong>We know you'll love it.</strong></p>
+<div class="signup center">
+  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/" target="_blank">Check Out Exceptionless 2.0 Now!</a>
+</div>
+<!--more-->
+<h2>Updating Clients for Existing Users</h2>
+<p>Follow these quick and easy steps below to update your Exceptionless client&nbsp;to 2.0.</p>
+<ol>
+<li>Open the NuGet Package Manager dialog.</li>
+<li>Click on the Updates tab.</li>
+<li>Select the Exceptionless NuGet packages and click the Update button.</li>
+<li>**You should be good to go!
+** If you need more info, view our <a title="Upgrading Exceptionless" href="/website/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">updating documentation</a> or contact us via in-app support. We're always here to help if you have any questions!</li>
+</ol>
+<h2>Exceptionless 2.0 Feature Recap</h2>
+<h3>Check out these awesome new and improved features<figure id="attachment_12762" class="thumbnail wp-caption alignright" style="width: 150px"></figure></h3>
+<p><img src="/website/assets/img/news/version-2-launch-screenshot-150x150.jpg" alt="Exceptionless 2.0 Screenshot"></p>
+<p>Exceptionless 2.0 is faster, sleeker, mobile-friendly, more functional, includes all the below major improvements, and has countless smaller tweaks and changes we poured our heart and soul into. It's a whole new system - check it out!</p>
+<ul>
+<li>
+<p><strong>Searching / Filtering</strong>
+We’ve implemented Elasticsearch and you can search/filter ALL the things! Read more <a title="Exceptionless 2.0 Elasticsearch" href="/website/making-move-elastic-search-exceptionless-2-0/" target="_blank">here</a>&nbsp;and watch a quick demo video <a title="Exceptionless Search Filters" href="/website/filter-your-exceptions-video-demo/" target="_blank">here</a>.</p>
+</li>
+<li>
+<p><strong>Cross Organization Views</strong>
+You now have the ability to view all events across all organizations, a single organization, or a project.</p>
+</li>
+<li>
+<p><strong>PCL Support</strong>
+We’ve built in client support for <a title="Exceptionless.Portable" href="https://www.nuget.org/packages/exceptionless.portable" target="_blank">portable class libraries</a>!</p>
+</li>
+<li>
+<p>****New Clients!
+**** Including: <a title="Exceptionless.Portable" href="https://www.nuget.org/packages/exceptionless.portable" target="_blank">Exceptionless.Portable</a>&nbsp;for console apps and <a title="Exceptionless NLOG Client" href="http://www.nuget.org/packages/exceptionless.nlog" target="_blank">Exceptionless.NLog</a>, an nlog target that reports to Exceptionless</p>
+</li>
+<li>
+<p><strong>Fully Documented API</strong>
+For all your API needs, check out the <a title="Exceptionless API Documentation" href="https://api.exceptionless.io/docs/index.html" target="_blank">API Documentation</a></p>
+</li>
+<li>
+<p>**Bulk Actions
+** Select multiple events or instances of events and do with them as you please! <a title="Exceptionless 2.0 Bulk Actions" href="/website/news/2014/2014-12-12-bulk-actions-sneak-peak-exceptionless-2-0-video" target="_blank">Watch the preview demo.</a></p>
+</li>
+<li>
+<p>**Faster than Ever!
+** Exceptionless 2.0 is a single page app (SPA) and is lightning fast. <a title="Exceptionless 2.0 AngularJS" href="/website/news/2014/2014-10-23-angularjs-exceptionless-2-0" target="_blank">We’re using AngularJS</a>&nbsp;and we’re stoked to give our users a super quick experience!</p>
+</li>
+</ul>
+<li id="preview">
+  **And more…<br> **Check out more new features, including source links, in our <a title="Exceptionless 2.0 Overview" href="/website/news/2014/2014-08-13-upcoming-exceptionless-version-2-0-overview-review" target="_blank">Exceptionless 2.0 Overview article</a>. Includes details on: Event Based Reporting System, Simplified API, The Pluggable System, Client Rewrite, New Message Bus &amp; Queuing, and Job System Enhancement.
+</li>
+<h2>Live User Testing Review &amp; Notes</h2>
+<p><strong>Our live preview went great! Thank you EVERYONE that sent feedback and comments.</strong></p>
+<p>We received some awesome feedback from many of our customers, made some UI/usability tweaks and improvements, and fixed a few minor bugs.&nbsp;We also added the ability to search custom fields, which is a pretty big deal for some.</p>
+<p>Naturally, we used Exceptionless 2.0 to log, report on, and gather data for the preview - and it worked amazingly! (shameless, but true,&nbsp;promotion)</p>
+<p>On average, we traced <strong>200,000+ anonymous log messages</strong> within the app <strong>each day</strong> from preview activity. That data&nbsp;allowed us to learn a lot more about the behavior of Exceptionless 2.0 in areas such as jobs and gave us additional insight into what was going on. We were able to use a combination of errors, logs, and feature usage metrics to track down and fix an issue with external logins, as well. Awesome!</p>
+<p>The system also helped us track down and identify a performance issue that we were able to fix and improve.</p>
+<p>Overall, we had no major surprises and were able to tweak and improve several pieces of the app that we think will make it even more awesome.</p>
+<h2>Keep The Feedback Coming</h2>
+<p>No software application is ever "done," so make sure to keep the feedback coming. We've made a huge leap from Exceptionless 1.x, but we want to keep improving the system in all areas. <strong>We love hearing from our users</strong>, and respond to each email, in-app message, website form submission, etc. So, please, let us know what you think!</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-02-11-exceptionless-2-0-live-preview-want-build-sandbox/">Exceptionless 2.0 Live Preview! Do You Want to Build a Sandbox?</a></h2>
+    <p><img src="/website/assets/img/news/exceptionless-sandbox.png" alt="exceptionless-sandbox">Oh boy! We're ready for you guys to beat on Exceptionless 2.0 in a sandbox environment!</p>
+<p>We've made you wait, and everyone has done so quite patiently, but now it's officially time to check out V2.0 for yourself.</p>
+<p>We're super excited, but we also&nbsp;<span style="color: #ff0000;"><strong>need your help!</strong></span> At this point, we are asking for any and all&nbsp;<span style="color: #ff0000;"><strong>feedback</strong> </span>to help us tweak and refine and get things launched. Check out the details and instructions below, and make sure to send us&nbsp;thoughts, critiques, praise, and (of course) bug reports via <a title="Exceptionless GitHub Issues" href="https://github.com/exceptionless/Exceptionless/issues/new" target="_blank">GitHub Issues</a>.<!--more--></p>
+<h2>You Can Be.Exceptionless<figure id="attachment_12699" class="thumbnail wp-caption alignright" style="width: 300px"></figure></h2>
+<p><img src="/website/assets/img/news/sandbox-preview-300x183.jpg" alt="Exceptionless 2.0 Dashboard Preview"></p><figcaption class="caption wp-caption-text">Exceptionless 2.0 Dashboard Preview</figcaption><p></p>
+<p><strong>Simply...</strong></p>
+<ol>
+<li>Go to&nbsp;<a title="Exceptionless 2.0 Sandbox" href="https://be.exceptionless.io" target="_blank">https://be.exceptionless.io</a></li>
+<li>Log in with your <strong>existing</strong> Exceptionless account
+<em>Some very recent accounts may not allow you to log in. If this is the case, please create new account for testing purposes.</em><p></p>
+<ol>
+<li>View your current data in the new system - play around with it!</li>
+<li>(Optional, but Encouraged) Upgrade your client and start sending events to Exceptionless 2.0!
+<span style="color: #800000;"><strong>Notice:</strong>&nbsp;<em>All new data sent to this sandbox preview will be lost when the final version of Exceptionless 2.0 goes live. You will have a gap in historical data. Also, existing clients (1.x) will still work against the 2.0 API when we go live.</em></span><p></p>
+<ol>
+<li>Open the NuGet Package Manager dialog.</li>
+<li>Click on the Updates tab.</li>
+<li>Select "Include Prerelease" from the dropdown.</li>
+<li>Select the Exceptionless NuGet packages and click the Update button.</li>
+<li>**You should be good to go!
+** If you need more info, view our <a title="Upgrading Exceptionless" href="/website/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">upgrading documentation</a> or contact us via in-app support.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Provide feedback via <a title="Exceptionless Github Issues" href="https://github.com/exceptionless/Exceptionless/issues/new" target="_blank">GitHub Issues</a>. (good, bad, or ugly - we want it all)</li>
+<li>Be Exceptionless!</li>
+</ol>
+<h3>Documentation</h3>
+<ul>
+<li><a title="Exceptionless 2.0 Upgrade Instructions" href="/website/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">How to Upgrade 1.x client to 2.0</a></li>
+<li><a title="Search Terms" href="/website/docs/filtering-and-searching/" target="_blank">Search Terms</a></li>
+<li><a title="Exceptionless API Documentation" href="https://api.exceptionless.io/docs/index.html" target="_blank">Fully Documented API</a></li>
+</ul>
+<h3>Notes</h3>
+<p><span style="color: #800000;"><em>All events submitted to the 2.0 system may be reset at any time and will be reset before we go live (sandboxed). New events that are submitted, and any changes that happen in the 2.0 preview, will not be available in the 1.x system and will be lost once 2.0 goes live.&nbsp;Existing clients (1.x) will still work against the 2.0 API when we go live.</em></span></p>
+<h2>What Exceptionless 2.0 Offers</h2>
+<p>We have covered many of these new features in previous update posts, but there are a few new additions and tweaks we've thrown in since then, along with links to previous discussions.</p>
+<ul>
+<li>
+<p><strong>Searching / Filtering</strong>
+We've implemented Elasticsearch and you can search/filter ALL the things! Read more <a title="Exceptionless 2.0 Elasticsearch" href="/website/making-move-elastic-search-exceptionless-2-0/" target="_blank">here</a> and watch a quick demo video <a title="Exceptionless Search Filters" href="/website/filter-your-exceptions-video-demo/" target="_blank">here</a>.</p>
+</li>
+<li>
+<p><strong>Cross Organization Views</strong>
+You now have the ability to view all events across all organizations, a single organization, or a project.</p>
+</li>
+<li>
+<p><strong>PCL Support</strong>
+We've built in client support for <a title="Exceptionless.Portable" href="https://www.nuget.org/packages/exceptionless.portable" target="_blank">portable class libraries</a>!</p>
+</li>
+<li>
+<p>****New Clients!
+**** Including: <a title="Exceptionless.Portable" href="https://www.nuget.org/packages/exceptionless.portable" target="_blank">Exceptionless.Portable</a>&nbsp;for console apps and <a title="Exceptionless NLOG Client" href="http://www.nuget.org/packages/exceptionless.nlog" target="_blank">Exceptionless.NLog</a>, an nlog target that reports to Exceptionless</p>
+</li>
+<li>
+<p><strong>Fully Documented API</strong>
+For all your API needs, check out the <a title="Exceptionless API Documentation" href="https://api.exceptionless.io/docs/index.html" target="_blank">API Documentation</a></p>
+</li>
+<li>
+<p>**Bulk Actions
+** Select multiple events or instances of events and do with them as you please! <a title="Exceptionless 2.0 Bulk Actions" href="/website/bulk-actions-sneak-peak-exceptionless-2-0-video/" target="_blank">Watch the preview demo.</a></p>
+</li>
+<li>
+<p>**Faster than Ever!
+** Exceptionless 2.0 is a single page app (SPA) and is lightning fast. <a title="Exceptionless 2.0 AngularJS" href="/website/angularjs-exceptionless-2-0/" target="_blank">We're using AngularJS</a>&nbsp;and we're stoked to give our users a super quick experience!</p>
+</li>
+<li>
+<p>**And more...
+** Check out more new features, including source links, in our <a title="Exceptionless 2.0 Overview" href="/website/upcoming-exceptionless-version-2-0-overview-review/" target="_blank">Exceptionless 2.0 Overview article</a>. Includes details on: Event Based Reporting System, Simplified API, The Pluggable System, Client Rewrite, New Message Bus &amp; Queuing, and Job System Enhancement.</p>
+</li>
+</ul>
+<h2>Help Us Make Exceptionless 2.0 Even Better</h2>
+<p>We've asked a few times already in this post, but we have to ask, once again, for your <a href="https://github.com/exceptionless/Exceptionless/issues/new" target="_blank">feedback </a>on the V2.0 platform. Our users define Exceptionless, and to make it the absolute best we can, we rely on&nbsp;<strong>you</strong> to let us know what's good, what's bad, and what we shouldn't have even wasted the bytes on. So please, give it a go and use <a href="https://github.com/exceptionless/Exceptionless/issues/new" target="_blank">GitHub Issues</a>&nbsp;to give us your thoughts. We appreciate it more than you know. Thanks!</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-01-12-exceptionless-2-0-update-close/">Exceptionless 2.0 Update - SO CLOSE!</a></h2>
+    <p><img src="/website/assets/img/news/exceptionless-2.0-screenshot-300x171.png" alt="Exceptionless Error Logging Service">We know, we know... It's been a while since our last update. As so often is the case, the holidays took their toll on work and waists here at Exceptionless over the past few months. However, we're not slacking too bad.&nbsp;In fact, we've got a small update on Exceptionless 2.0 that proves it's hasn't been&nbsp;all turkey and naps!</p>
+<p>In general, the primary features and functionality of the new version are complete and we are in the testing, bug fix, and tweaking phase before we officially launch a production environment and begin orchestrating the process of data migration and rolling users over into the new system.<!--more--></p>
+<h2>Recent Changes &amp; Progress</h2>
+<p>We thought we would throw out some of the most recent stuff we've been working on. We're sure you'll approve!</p>
+<h3>Filter / Search</h3>
+<p>One of the main things we've been working hard to get right is the new filtering system. Since we put together our <a href="/website/filter-your-exceptions-video-demo/" title="Exceptionless Search Filter Feature">filter demo video</a>, we've added in the following searchable&nbsp;items:</p>
+<ul>
+<li>Exception Type</li>
+<li>IP Address</li>
+<li>Messages</li>
+<li>Machine Name</li>
+<li>User</li>
+<li>Codes</li>
+<li>URL Path</li>
+<li>and more!</li>
+</ul>
+<h3>Documentation</h3>
+<p>Another major feature we want to make sure is ready to go when we launch is the documentation. We aren't quite finished with the user documentation, but the <a href="/website/upcoming-exceptionless-2-0-simplified-api/" title="Exceptionless API Documentation">API documentation</a>&nbsp;has been updated and is current. Of course, we'll keep updating everything as development continues and will field any support related questions you may have.</p>
+<h3>Queue Processor</h3>
+<p>We've been bragging about how fast Exceptionless 2.0 will be, and we're not joking. We've been putting a lot of time recently into optimizing the queue processor so that it's not just fast, but <em><strong>really</strong></em> fast. You'll see!</p>
+<h3>Bots</h3>
+<p>Another little feature we've added is the ability to specify custom user agent strings to treat as bots. We're sure a few of you guys will find that handy.</p>
+<h2>Coming Soon. Not Tomorrow, but Soon.</h2>
+<p>As mentioned above, we're still working out some bugs and preparing to enter the production and migration phase. We'll be sure to keep everyone updated via the blog, social media, email, and in-app as we&nbsp;get closer to launch.</p>
+<p>Until next time, we hope everyone had a great holiday season and is enjoying a happy new year!</p>
+<h3>Previously, Re: Exceptionless 2.0</h3>
+<ul>
+<li><a href="/website/exceptionless-2-0-user-interface-first-look/" title="Exceptionless 2.0 First Look">Version 2.0 First Look</a></li>
+<li><a href="/website/filter-your-exceptions-video-demo/" title="Exceptionless 2.0 Filtering and Search Demo">Filtering Demo</a></li>
+<li><a href="/website/bulk-actions-sneak-peak-exceptionless-2-0-video/" title="Exceptionless Bulk Actions Demo">Bulk Actions Demo</a></li>
+</ul>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/new-features/" class="tag">new features</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2014/2014-12-12-bulk-actions-sneak-peak-exceptionless-2-0-video/">Bulk Actions Sneak Peak in Exceptionless 2.0 - Video</a></h2>
+    <p><img src="/website/assets/img/news/exceptionless-bulk-actions.gif" alt="Exceptionless Bulk Actions">You know you want it! Bulk edit actions, that is. The ability to select multiple exceptions or occurrences of a single exception and do with them as you please, all at once. Well, they're coming, and today we've got a sneak peak!</p>
+<p>We're not changing the world here, but we're making yours a little more efficient. Maybe you want to remove sensitive instances of an error that contains certain data, or maybe you you've got some test errors that you don't want included in the total count, either way the new feature should help. Check it out and let us know what you think!<!--more--></p>
+<p>https://youtu.be/pQXk3ayK8P8</p>
+<h2>Exceptionless Bulk Actions Video Transcript</h2>
+<p>Welcome to another sneak peak video for the upcoming Exceptionless 2.0. Today we'll be looking at the new bulk edit feature, one of many highly requested features we wanted to make sure we got into version 2.</p>
+<p>If we log in to our Exceptionless 2.0 dashboard, which you've hopefully checked out the overview of in a <a href="/website/exceptionless-2-0-user-interface-first-look/" title="Exceptionless 2.0 First Look Video">previous blog post and video</a>, we can see that there are now check boxes next to each exception, and if you click in to an individual exception, there is also a check box next to each occurrence of that exception.</p>
+<p>Going back to the dashboard, you can select one, multiple, or all visible exceptions. Then, after you've made your selections, you can mark all of them fixed or hidden, or you can delete them.</p>
+<p>Now, if we go into a specific exception, we can make all of the same selections, and then we can delete those specific occurrences of that exception.</p>
+<p>And that's a quick look at the new bulk edit feature of the soon-to-be Exceptionless 2.0. Please leave a comment on this video or blog post and let us know what you think or any questions you may have. Thanks for watching.</p>
+<h2>Thoughts?</h2>
+<p>Lets hear em! Thanks for watching.</p>
+<p>Check out the&nbsp;<a href="/website/exceptionless-2-0-user-interface-first-look/" title="Exceptionless 2.0 First Look">Exceptionless 2.0 First Look Video</a> and the <a href="/website/filter-your-exceptions-video-demo/" title="Exceptionless 2.0 Filtering Demo">new filtering system demo video</a>, if you haven't already.</p>
+</article>
+    
+  
+
+
+
+<hr>
+
+<nav class="post-navigation">
+  <ul>
+    <li>
+      <a href="/website/news/9/" rel="prev">← Previous</a>
+    </li>
+    
+
+    <li>
+      Page 10
+    </li>
+    <li>
+      <a href="/website/news/11/" rel="next">Next →</a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</div>
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

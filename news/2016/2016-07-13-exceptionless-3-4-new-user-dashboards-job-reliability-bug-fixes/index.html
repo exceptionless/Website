@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Exceptionless 3.4 - New User Dashboards, Job Reliability, and Bug Fixes - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Exceptionless 3.4 - New User Dashboards, Job Reliability, and Bug Fixes - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Exceptionless 3.4 - New User Dashboards, Job Reliability, and Bug Fixes - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Exceptionless 3.4 - New User Dashboards, Job Reliability, and Bug Fixes</h1>
+          </header>
+          <div class="entry-content">
+            <p><img src="/website/assets/img/news/exceptionless-3-4-header.png" alt="Exceptionless 3.4">(/assets/exceptionless-3-4-header.png)</p>
+<p>The latest Exceptionless release has several additions we think most of our users will find helpful. We sat down and worked on the UI, fixed some bugs, and spend a considerable amount of time improving reliability and efficiency of some of the primary pieces of the app.</p>
+<p>If you're a self hoster, you'll need to <a href="/website/docs/self-hosting/upgrading-self-hosted-instance/">upgrade your existing install</a>, but if you're hosting with us there is no action required on your part to experiences the Exceptionless 3.4.</p>
+<p>For more information about this release, take a look below and/or review the <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v3.4.0">full release notes over on GitHub</a>.<!--more--></p>
+<h2>UI Updates</h2>
+<p>These updates were all pushed with&nbsp;<a href="https://github.com/exceptionless/Exceptionless.UI/releases/tag/v2.5.0">Exceptionless.UI 2.5</a> a few days prior to this release of the main app. Enjoy!</p>
+<h3>Search Wildcard</h3>
+<p>You can now use <code>*</code>&nbsp;to show&nbsp;<strong>all</strong> events in the search box. Woohoo!</p>
+<h3>Most Users Dashboard</h3>
+<p>The new most users dashboard allows you a quick view of events sorted by the highest number of affected users. This is great for helping prioritize your work pipeline.</p>
+<p>Also,&nbsp;as an aside, we've added the users affected column to the dashboard. We know some of you guys will find that helpful.</p>
+<h3>New Keyboard Shortcuts</h3>
+<p>MacOS &amp; Linux keyboard shortcut support has been added, as well as additional shortcuts such as <code>C</code>&nbsp;to chat with support, <code>S</code>&nbsp;to focus the search bar, and <code>g</code>&nbsp;<code>a</code>&nbsp;to go to your account. Hit <code>SHIFT</code>&nbsp;+ <code>/</code>&nbsp;(also known as <code>?</code>&nbsp;) to access the keyboard shortcut list on any screen.</p>
+<p>As an aside here, there is also now a <code>&lt;/&gt;</code>&nbsp;button near the top of the event occurrence that lets you quickly copy the JSON to your clipboard with a click.</p>
+<h2>Other Updates</h2>
+<p>This is just a quick list of everything else we tweaked, updated, added, or fixed with the v2.4 release.</p>
+<h3>Performance &amp; Reliability</h3>
+<p>We made several reliability and performance enhancements to queue and job processing. A few specific examples include fixing auto-abandoned jobs and instances where batch events weren't being requeued.</p>
+<h3>Heartbeat API Endpoints</h3>
+<p>Previously we had <a href="/website/news/2016/2016-05-26-session-heartbeats-no-longer-count-towards-plan-limits/">worked on making heartbeat events efficient</a> so we didn't have to count them toward event quotas, and with this release we've added new API Endpoints that allow clients to submit those heartbeats cheaply.</p>
+<h3>Active Directory Authentication</h3>
+<p>Support has been added for Active Directory Authentication. Thanks <a href="https://github.com/laughinggoose">@laughinggoose</a>! To enable this feature, head over to the <a href="docs/self-hosting/kubernetes/#active-directory-authentication">Active Directory Authentication</a> documentation page on GitHub.</p>
+<h3>Count</h3>
+<p>This <code>Count</code> property was added to the event model that tracks deduplicated events and allows for some pretty cool metrics from here on out while avoiding the full cost of storing every event.</p>
+<h3>MaximumRetentionDays</h3>
+<p><code>MaximumRetentionDays</code>&nbsp;is pretty self explanatory. It controls the max retention perdiod for events, which allows the retention job and plans to be smarter about cleaning up old data.</p>
+<h3>Bugs</h3>
+<p>SignalR (web sockets) support wasn't always working in some hosting environments such as AWS, so we fixed a few bugs related to that.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>An In-Depth Look at the Exceptionless Project Portal - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="An In-Depth Look at the Exceptionless Project Portal - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="An In-Depth Look at the Exceptionless Project Portal - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">An In-Depth Look at the Exceptionless Project Portal</h1>
+          </header>
+          <div class="entry-content">
+            <p>We cover the basic features of the Exceptionless platform on our <a href="/website/tour/" title="Exceptionless Feature Tour">feature tour page</a>, but we wanted to give everyone a deeper look into all the information available via the web-based, real-time .NET error reporting admin area.</p>
+<p>Continue reading to learn more.<!--more--></p>
+<h2>The Dashboard</h2>
+<p><img src="/website/assets/img/news/graph.jpg" alt="Visual .NET Exception Graph"></p>
+<p>The Exceptionless Dashboard features a quick overview of the exceptions for the currently selected project. It also updates in real-time, so you can watch exceptions roll in.</p>
+<p>This is a great place to glimpse your exceptions by total, unique, new, or per hour. The most frequent and most recent exceptions are also displayed here, along with a graph representing your total and unique exceptions. You can go directly to an error's details by clicking on it.</p>
+<p><strong>At the top of the page, throughout the admin, you can:</strong></p>
+<ul>
+<li>Change the project you are currently viewing</li>
+<li>Go to that projects settings</li>
+<li>Adjust the date range</li>
+<li>Show/Hide hidden errors</li>
+<li>Show/Hide fixed errors</li>
+<li>Show/Hide "Not Found" errors<figure id="attachment_1340" class="thumbnail wp-caption alignleft" style="width: 150px"></figure></li>
+</ul>
+<p><img src="/website/assets/img/news/date-range-150x150.jpg" alt="Exceptionless Date Range Selector"></p><figcaption class="caption wp-caption-text">Show/Hide Errors &amp; Select Date Range</figcaption><p></p>
+<div style="clear: both;">
+</div>
+<h2>View Most Recent, Most Frequent, and New Exceptions</h2>
+<p>On the left side of the dashboard, you can select to view your Most Recent, Most Frequent, or New (first time) .NET exceptions.</p><figure id="attachment_1221" class="thumbnail wp-caption alignleft" style="width: 150px"><p></p>
+<p><img src="/website/assets/img/news/new-150x150.jpg" alt="New .NET Exceptions"></p><figcaption class="caption wp-caption-text">New Errors</figcaption></figure><p></p>
+<div style="clear: both;">
+</div>
+<h3>Most Recent</h3>
+<p>The most recent report lists your errors individually with the one that occurred last at the top. It also tells you exactly how long ago the error occurred. You can click into the exception to view details.</p>
+<h3>Most Frequent and New Exceptions</h3>
+<p>Each of these reports lists the respective error type with a summary, the count, when the error first happened, and the last occurrence. Most frequent is ordered by count, and new is ordered by most recent.</p>
+<h2>Lets Take a Look at Exception Details</h2>
+<h3>Error Stack Page</h3>
+<p><img src="/website/assets/img/news/exception-options-150x150.jpg" alt="Error Stack Options"></p>
+<div style="clear: both;">
+</div>
+<p>If you click into any error, Exceptionless will show you the error stack, which includes the number of occurrences, when it first happened, and the latest re-occurrence. You can adjust the date range on this page, like the rest, and you also get a nice graph of that error's occurrences over time. Each individual time the error triggered is listed below the graph, and you can click into each instance separately.</p>
+<p><strong>Before we do that, though,</strong>&nbsp;I'd like to point out another major feature of the error stack page..</p>
+<p>Above and to the right of the graph are two buttons: "Mark Fixed" and "Options". Mark fixed is exactly what it sounds like, and if you click on the "Options" button it drops down with the following choices:</p>
+<ul>
+<li>Hide from reports</li>
+<li>Promote to external</li>
+<li>Add reference link</li>
+<li>Disable notifications</li>
+<li>Future occurrences are critical</li>
+<li>Reset stats</li>
+</ul>
+<h3>Individual Error Details</h3>
+<p>After you click into an individual error instance, you will see the following tabs.</p>
+<p><img src="/website/assets/img/news/exception-details-environment-150x150.jpg" alt=".NET Exception Environment Details"></p>
+<div style="clear: both;">
+</div>
+<h4>Error Overview</h4>
+<p>This page shows you a quick overview of the error, including the stack trace. It includes the date and time, type, message, platform, URL, and referrer. You can also go to the previous or next occurrence.</p>
+<h4>Exception</h4>
+<p>This tab displays a few overview details, then gives you a list of loaded modules related to the error.</p>
+<h4>Request</h4>
+<p>The request view gives you the request details, including date and time, http method, url, referrer, client IP, user agent, browser, browser OS, device, and whether or not it's a known bot. You also get Post Data.</p>
+<h4>Environment</h4>
+<p>Because you needed&nbsp;<strong>all</strong> the data, the environment tab displays time and date, machine name, ip address, processor count, total, available, and process memory, OS name, OS version, architecture, runtime version, process ID, process name, and command line details. It also has client information, such as install date, version, platform, submission method, application starts, and errors submitted.</p>
+<h2>What Else Can I Do from the Admin?</h2>
+<p>Naturally, you can manager your projects, organizations, and account, but we also have pretty handy feedback and support tools so you can let us know how we're doing! Your feedback and comments are important and provide direction to the code.</p>
+<p><img src="/website/assets/img/news/support-150x150.jpg" alt="Exceptionless Support"></p>
+<div style="clear: both;">
+</div>
+<p>In short, the tool offers extremely helpful insights into the world of your web application's bugs. Whether internal or customer-facing, knowing when, where, and how many exceptions are being generated makes it easier for you to track them down and squash them. And when you've fixed it, regression notifications are there to let you know if it rears its ugly head again.</p>
+<p>Still not convinced? Give it a try - <a href="https://be.exceptionless.io/signup" title="Sign up for Exceptionless">sign up today, for free</a>.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

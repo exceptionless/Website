@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Plugins - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Plugins - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Plugins - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Documentation</h1>
+</div>
+
+<div id="wrap" class="container" role="document">  
+  <div id="responsive-menu"><button class="btn btn-primary" onclick="handleMenu()">Table of Contents</button></div>
+  <div id="content" class="row-fluid">
+    <div class="toc well span3 visible-toc">
+      <div class="input-append">
+        <input class="span9" id="search-input" type="text" placeholder="Search docs...">
+        <button class="btn" type="button" onclick="handleSearch()">Go!</button>
+      </div>
+      
+
+    </div>
+    <div class="well span9 docs">
+      <h1>Plugins</h1>
+      <p>A plugin is a client-side addin that is run <strong>every time</strong> you submit an event.</p>
+<ul>
+<li><a href="#create-a-new-plugin">Create a New Plugin</a></li>
+<li><a href="#add-system-uptime-to-feature-usages">Add System Uptime to Feature Usages</a>
+<ul>
+<li><a href="#output">Output</a></li>
+</ul>
+</li>
+<li><a href="#plugin-priority">Plugin Priority</a></li>
+<li><a href="#adding-the-plugin-to-your-app">Adding the Plugin to Your App</a></li>
+<li><a href="#removing-an-existing-plugin">Removing an Existing Plugin</a></li>
+</ul>
+<h2>Create a New Plugin</h2>
+<p>Specify a <code>System.Action&lt;EventPluginContext&gt;</code> or create a class that derives from <a href="https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/Plugins/IEventPlugin.cs">IEventPlugin</a> to create a plugin.</p>
+<p>Every plugin is passed an <a href="https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/Plugins/EventPluginContext.cs">EventPluginContext</a>, which contains all the valuable contextual information that your plugin may need via the following properties:</p>
+<ul>
+<li>Client</li>
+<li>Event</li>
+<li>ContextData</li>
+<li>Log</li>
+<li>Resolver</li>
+</ul>
+<h2>Add System Uptime to Feature Usages</h2>
+<pre><code class="language-csharp hljs"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Diagnostics;
+<span class="hljs-keyword">using</span> Exceptionless.Plugins;
+<span class="hljs-keyword">using</span> Exceptionless.Models;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">Exceptionless.SampleConsole.Plugins</span> {
+    [<span class="hljs-meta">Priority(100)</span>]
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">SystemUptimePlugin</span> : <span class="hljs-title">IEventPlugin</span> {
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Run</span>(<span class="hljs-params">EventPluginContext context</span>)</span> {
+            <span class="hljs-comment">// Only update feature usage events.</span>
+            <span class="hljs-keyword">if</span> (context.Event.Type != Event.KnownTypes.FeatureUsage)
+                <span class="hljs-keyword">return</span>;
+
+            <span class="hljs-comment">// Get the system uptime</span>
+            <span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> pc = <span class="hljs-keyword">new</span> PerformanceCounter(<span class="hljs-string">"System"</span>, <span class="hljs-string">"System Up Time"</span>)) {
+                pc.NextValue();
+
+                <span class="hljs-keyword">var</span> uptime = TimeSpan.FromSeconds(pc.NextValue());
+
+                <span class="hljs-comment">// Store the system uptime as an extended property.</span>
+                context.Event.SetProperty(<span class="hljs-string">"System Uptime"</span>, String.Format(<span class="hljs-string">"{0} Days {1} Hours {2} Minutes {3} Seconds"</span>, uptime.Days, uptime.Hours, uptime.Minutes, uptime.Seconds));
+            }
+        }
+    }
+}
+</code></pre>
+<h3>Output</h3>
+<p><img src="/website/assets/img/news/exceptionless-plugin-system-uptime.png" alt="Exceptionless Plugin Screenshot"></p>
+<h2>Plugin Priority</h2>
+<p>The plugin priority determines the order the plugin runs (lowest to highest, then by order added). All plugins shipped with the client have a starting priority of 10 and increment by multiples of 10. For your addin to run first, give it a priority lower than 10 (e.g., 0-5). To have it run last, give it a priority higher than 100. <strong>If a priority is not specified, it defaults to 0.</strong></p>
+<h2>Adding the Plugin to Your App</h2>
+<p>Start by calling one of the <code>Exceptionless.ExceptionlessClient.Default.Configuration.AddPlugin()</code> overloads. This will typically be the following:</p>
+<pre><code class="language-csharp hljs"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.AddPlugin&lt;SystemUptimePlugin&gt;();
+</code></pre>
+<p>Passing a <code>System.Action&lt;EventPluginContext&gt;</code> to AddPlugin can also be used to add a plugin. <em>Note we specify a key so we can remove the plugin later. If you won't be removing the plugin, you can omit the first argument.</em></p>
+<p><strong>AddPlugin is passed three arguments:</strong></p>
+<ul>
+<li>Unique Plugin Key (to remove later, if applicable)</li>
+<li>Priority</li>
+<li>Action (logic)</li>
+</ul>
+<pre><code class="language-csharp hljs"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.AddPlugin(<span class="hljs-string">"system-uptime"</span>, <span class="hljs-number">100</span>, context =&gt; {
+    <span class="hljs-comment">// Only update feature usage events.</span>
+    <span class="hljs-keyword">if</span> (context.Event.Type != Event.KnownTypes.FeatureUsage)
+        <span class="hljs-keyword">return</span>;
+
+    <span class="hljs-comment">// Get the system uptime</span>
+    <span class="hljs-keyword">using</span> (<span class="hljs-keyword">var</span> pc = <span class="hljs-keyword">new</span> PerformanceCounter(<span class="hljs-string">"System"</span>, <span class="hljs-string">"System Up Time"</span>)) {
+         pc.NextValue();
+         <span class="hljs-keyword">var</span> uptime = TimeSpan.FromSeconds(pc.NextValue());
+
+         <span class="hljs-comment">// Store the system uptime as an extended property.</span>
+         context.Event.SetProperty(<span class="hljs-string">"System Uptime"</span>, String.Format(<span class="hljs-string">"{0} Days {1} Hours {2} Minutes {3} Seconds"</span>, uptime.Days, uptime.Hours, uptime.Minutes, uptime.Seconds));
+
+     }
+});
+</code></pre>
+<h2>Removing an Existing Plugin</h2>
+<p>Call one of the <code>Exceptionless.ExceptionlessClient.Default.Configuration.RemovePlugin</code> overloads to remove a plugin.</p>
+<pre><code class="language-csharp hljs"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.RemovePlugin&lt;SystemUptimePlugin&gt;();
+</code></pre>
+<p>If it was registered via an action, you have to remove it via the key you added it with.</p>
+<pre><code class="language-csharp hljs"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.RemovePlugin(<span class="hljs-string">"system-uptime"</span>);
+</code></pre>
+<hr>
+<p class="text-right"><a href="/website/docs/clients/dotnet/private-information/">Next &gt; Private Information</a></p>
+   
+    </div>
+  </div>
+</div>
+
+<script>
+    const handleMenu = () => {
+        const menu = document.querySelector(".toc");
+        menu.classList.toggle("hidden-toc");
+        menu.classList.toggle("visible-toc");
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const search = document.getElementById("search-input")
+        search.addEventListener("keyup", ({key}) => {
+          if (key === "Enter") {
+            handleSearch();
+          }
+        })
+    })
+    const handleSearch = async () => {
+      const searchTerm = document.getElementById("search-input").value;
+      const queryString = encodeURI(searchTerm)
+      window.location = `/search?term=${queryString}`;
+    }
+</script>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

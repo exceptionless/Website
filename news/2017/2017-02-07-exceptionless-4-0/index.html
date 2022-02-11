@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Exceptionless 4.0 is Here! - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Exceptionless 4.0 is Here! - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Exceptionless 4.0 is Here! - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Exceptionless 4.0 is Here!</h1>
+          </header>
+          <div class="entry-content">
+            <p><img src="/website/assets/img/news/exceptionless-4.png" alt="Exceptionless 4.0 Announcement">That's right folks, Exceptionless 4.0 is here and we've got the full low-down on all the improvements, upgrades, and enhancements in this week's blog article, along with how to upgrade instructions for self hosters.</p>
+<p>The primary focus of version 4.0 was to add support for Elasticsearch 5. By migrating from Elasticsearch 1.7 to 5, we removed growing technical debt and benefited greatly in the process. Here is an overview of the benefits gained by migrating to Elasticsearch 5 in 4.0.0.<!--more--></p>
+<h2>Performance</h2>
+<p>Since&nbsp;we first migrated to Elasticsearch 1.x from MongoDB, we've learned a lot of hard lessons. With 4.0 and the upgrade to Elasticsearch 5, we took all those lessons and applied them to the new release and infrastructure setup. Here are some performance improvements and notes that came out of those implementations.</p>
+<ul>
+<li>
+<p>We've moved from monthly indexes to daily indexes. This change means that when you are filtering by the last 24 hours or last week, you are greatly reducing the amount of work Elasticsearch has to do to return the requested data.</p>
+</li>
+<li>
+<p>Because of this, the average use case will see between <strong>25% and 80% improvement to indexing</strong> throughput. This means that, with the same hardware, we can index the same documents much faster!</p>
+</li>
+<li>
+<p>We moved from Groovy scripts to Painless scripts, which are <strong>four times faster</strong>. By moving to Painless scripts, we also greatly simplified the burden of having to modify configuration files to enable scripting!</p>
+</li>
+<li>
+<p>Elasticsearch has added a lot of new data types since 1.7, and we are now taking advantage of them to <strong>reduce memory, storage and query costs.</strong> This means we can query the same data faster, using less memory doing it. We've also set up more sensible defaults to ensure we don't index very long strings.</p>
+</li>
+<li>
+<p>We've also made several performance and reliability improvements to snapshots (backups).</p>
+</li>
+</ul>
+<h2>Self Hosting improvements</h2>
+<p>Our goal is to have everyone be able to setup and use Exceptionless in a matter of minutes. One of the areas that had hendered a lot of self hosters in the past was forgetting to update the elasticsearch.yml file, which is no longer an issue with the migration to Painless scripts.&nbsp;If you're a self hoster, check out the</p>
+<ul>
+<li>
+<p>The move to using Painless scripts as part of bulk updates and ingest pipelines reduced the burden of having to modify configuration files to enable scripting! Long gone are the times where you would have to reset your setup because you missed a configuration step.</p>
+</li>
+<li>
+<p>We've also added various maintenance jobs that handle backups and restores automatically, so you don't have to worry about losing your data!</p>
+</li>
+<li>
+<p><strong>Future upgrades should be seamless</strong> as Elasticsearch now handles reindexing out of the box! Once you have migrated your data to Elasticsearch 5, we think future major upgrades will just be handled by the Exceptionless app itself!</p>
+</li>
+<li>
+<p>You can now also use <a href="https://hub.docker.com/_/elasticsearch">Docker</a> or <a href="https://github.com/elastic/azure-marketplace">Azure arm templates</a> to quickly set up a cluster. We really like this direction and will continue moving down this path, hopefully getting to the point where you can click a single button and have an Exceptionless production instance running locally!</p>
+</li>
+</ul>
+<h2>Dashboards</h2>
+<p>With Exceptionless 4.0.0, we continued to focus on finishing up backend improvements to both our <a href="https://github.com/FoundatioFx/Foundatio.Repositories">repositories</a> and <a href="https://github.com/FoundatioFx/Foundatio.Parsers">parsers</a> that we made in the 3.5 releases. We feel that <strong>all the pieces are finally in place to allow us to do custom dashboards in the near future</strong>, something we talk about in our <a href="/website/2017-exceptionless-feature-functionality-and-enhancement-roadmap/">2017 Roadmap blog post</a>.</p>
+<p><a href="https://github.com/FoundatioFx/Foundatio.Parsers">Foundatio.Parsers</a> now gives us the ability to define and validate custom aggregations using Lucene-style syntax. For example, lets say I want a date histogram that shows the min, max and average event value. I'd just need to pass <code>date:(date min:value max:value avg:value)</code> to the following endpoint: <a href="https://api.exceptionless.io/docs/index.html#!/Event/Event_GetCountAsync"><code>/api/v2/events/count?aggregations=date:(date min:value max:value avg:value)</code></a> to return aggregations across a time series!</p>
+<h2>Upgrading to 4.0.0</h2>
+<p>The only users that need to worry about upgrading anything for this new release are self hosters. If you are self hosting Exceptionless, please review the <a href="/website/docs/self-hosting/">Self Hosting Documentation</a>, which contains information about upgrading your existing install.</p>
+<p>Also, please take a look at the <a href="https://github.com/exceptionless/Exceptionless/compare/v3.5.1...v4.0.0">change log</a> for a full list of the changes.</p>
+<h2>Always Improving</h2>
+<p>We’re always striving to improve the efficiency of Exceptionless and all of our projects. If you see any room for improvement or have any comments when using anything from us, please send us an in-app message, <a href="https://github.com/exceptionless/Exceptionless/issues">submit a GitHub issue</a> or <a href="/website/">contact us</a> on the website.</p>
+<h2>And Lastly, Thanks!</h2>
+<p>We'd like to say thank you to the community, project sponsors, and the Elasticsearch team for helping us ship 4.0.0. You guys rock!</p>
+<h3>Want to know what's coming next?</h3>
+<p><a href="/website/2017-exceptionless-feature-functionality-and-enhancement-roadmap/">Check out the 2017 Roadmap</a> and let us know your thoughts on our planned development.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

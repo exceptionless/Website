@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Archive - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Archive - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Archive - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Archive</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+
+    <h1>Archive</h1>
+
+
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2014/2014-02-07-xml-parsing-exception-caught-fixed-case-study/">XML Parsing Exception Caught and Fixed - Case Study</a></h2>
+    <p>This is yet another story of an elusive bug that, without a proper error reporting service, would have gone un-noticed for a very long time.</p>
+<p>When third-party software and services interact with your code, in any way, you have to be wary that their data may be different from yours. In this instance, our client was parsing some XML that included an unfriendly cookie name. Lets see what happened next...<!--more--></p>
+<p><img src="/website/assets/img/news/apexExceptionsRandom.png" alt=".NET Exception Dashboard"></p>
+<h2>Killer Cookies</h2>
+<p><a title="Listrak" href="http://www.listrak.com/" target="_blank">Listrak</a> is a pretty cool company that provides, among other things, a robust email marketing, shopping cart abandonment, and welcome series suite of tools.</p>
+<p>One of their cookies uses a "$" in it's name ($ListrakFoo or similar). When the client's XML Config packages were executed, that $ was causing an XML parsing exception.</p>
+<h3>That's not customer facing. What's the big deal?</h3>
+<h4>37,000</h4>
+<p>While not directly customer facing, it was happening on almost every page of the website and occurred something like 37,000 times in the span of it's existence.</p>
+<h4>Sluggish</h4>
+<p>Along with the sheer number of occurrences, it was also noticeably slowing the site down.</p>
+<h3>The fix</h3>
+<p>The fix was relatively simple. The client now checks for "$" in cookie names within the affected method and just doesn't handle them.</p>
+<p><strong>Tracking errors like this is what we're all about.</strong> There are hundreds of thousands, probably even millions, of bugs out there <em>right now</em> that throw exceptions every day but manage to remain hidden in the shadows of code written by professional developers.</p>
+<p>It's not a sign of poor programming, it simply comes with the territory. You will have bugs, big and small, in every project you work on. The difference is, with Exceptionless, you can actually be aware of, and fix, them!</p>
+<p>Another bug bites the dust, thanks to help of Exceptionless' <a href="https://exceptionless.com" title="Real Time Exception Reporting">real-time exception reporting</a>!</p>
+<p>Do you have a story where our software helped you track down and squash an elusive error? Let us know! We'll publish the details and link back to your app, if you like.</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/email/" class="tag">email</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/notifications/" class="tag">notifications</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2014/2014-02-03-app-error-notifications/">Receive Error Notifications from Your App via Email</a></h2>
+    <p>Maybe you've got this awesome new web app that you're ready to go live with, or maybe you're working on a project that is already customer facing but you've got major new features rolling out and want to make sure all goes well.</p>
+<p>We both know there's going to be&nbsp;<em>something</em> that isn't completely right after launch. It might be a big bug stopping certain users from placing orders on your site, or it might be something that won't even affect your customers. It might be highly visible, or completely hidden from your view. Either way, you want to know when that error occurs and what the details are. That's where Exceptionless comes in.<!--more--></p>
+<h2>Real-Time Error Notifications via Email</h2>
+<img loading="lazy" class="aligncenter size-full wp-image-147" alt="ASP.NET Error Notifications" src="/website/assets/img/news/notification.png" width="665" height="433" data-id="147" srcset="/website/assets/img/notification.png 665w, /website/assets/notification-300x195.png 300w" sizes="(max-width: 665px) 100vw, 665px">
+<p>The Exceptionless platform provides a great <a href="/website/project-portal-tour/" title="Error Reporting Dashboard">real-time dashboard</a> view of your errors, but our email notifications allow you to be absolutely in touch with any errors that may be occurring within your application.</p>
+<div class="signup center">
+  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Try It Out for **FREE**</a>
+</div>
+<h3>Notification options</h3>
+<p>There are several email notification options for your app's exceptions.</p>
+<p>To receive notifications, you need to turn them on under the "My Account" section, in the "Profile Information" tab. This option should be on by default. Then, you can view the below options under the individual project settings by clicking on the cog/gear icon next to the project name at the top of your dashboard.</p>
+<p><img src="/website/assets/img/news/email-notification-settings.png" alt="Email Notification Settings"></p>
+<h4>Lets take a look at the different options:</h4>
+<ol>
+<li><strong>Daily Project Summary</strong>
+This is simply a summary of your project, including error counts, etc, that you can receive each day.</li>
+<li><strong>Critical Errors</strong>
+You can mark an individual error as critical, and then check this box to receive email notifications each time that error occurs.</li>
+<li><strong>Error Regressions</strong>
+If you have marked an error as fixed, you can check this to get an email notification if it ever rears it's ugly head again.</li>
+<li><strong>Error Occurrence Notification Frequency</strong>
+These are fairly self-explanatory. How often would you like to receive emails?<p></p>
+<ol>
+<li>All Occurrences</li>
+<li>New Only</li>
+<li>Never</li>
+</ol>
+</li>
+</ol>
+<p>_<strong>Note:</strong>&nbsp;_You can also turn notifications off for individual errors by going to Options&gt;&gt;Disable Notifications while inside a specific error.</p>
+<h3>Sit back and relax</h3>
+<p>... until an error notification comes in, that is. Then you should probably fix it.</p>
+<div class="signup center">
+  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Try It Out for **FREE**</a>
+</div>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/email/" class="tag">email</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/notifications/" class="tag">notifications</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2014/2014-01-24-server-browser-cookie-error/">Catching a Server-Side Browser Cookie Support Error - Case Study</a></h2>
+    <p><img loading="lazy" class="alignright size-full wp-image-1959" style="margin-left:10px;" alt="Internet Explorer Cookies" src="/website/assets/img/news/ie-cookies.jpg" width="250" height="220" data-id="1959">As with every new release of software, things change. And, like we all expected, there wasn't an exception to that rule when Microsoft introduced Internet Explorer 10 into the mix.</p>
+<p>Everyone coding for the web had the normal things to worry about, of course, like design formatting, speed, and support, but one of our clients experienced something that would have taken a long time to catch if they hadn't been using Exceptionless' <strong>real-time error reporting</strong>.<!--more--></p>
+<h2>Who Adopts New Versions of IE Right Away, Anyway?</h2>
+<p>Like many, the client's web team doesn't necessarily adopt the latest version of IE right away, much less use it as their main browser. Unfortunately, that leads to little immediate exposure to potential bugs.</p>
+<p>Lets explore how this came back to bite them, and how Exceptionless helped them treat the wound quickly.</p>
+<h3>A nasty customer-facing error</h3>
+<p>Users of the client's eCommerce platform that were already using IE10 were able to view and use the website fine, until they logged in. At that point, everything broke. They couldn't checkout, browse, or submit contact forms.</p>
+<p>Because the team wasn't using IE10 regularly yet for testing actual logged-in user transactions, <strong>they were clueless</strong>!</p>
+<p>Luckily, Exceptionless reported the customers' errors and the team was able to take notice of the recurring bug within days, rather than weeks or months.</p>
+<h3>Turns out... the problem was server-side!</h3>
+<p>After the error was reported in the Exceptionless Dashboard, the team was able to use the attached details to trace the root of the issue back to the server's definitions of which browsers support modern cookie encryption.</p>
+<p>All the server needed was a <strong>routine update</strong> that had not been performed! Bam - fixed.</p>
+<h3>Another bug bites the dust</h3>
+<p>We love to hear stories like this. Something so simple, yet so easy to overlook and cause serious customer-facing problems!</p>
+<p>Errors like this happen every day to hundreds, if not thousands, of small, medium, and large software teams across the world. We just want to help squash as many of them as we can!</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/case-study/" class="tag">Case Study</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2014/2014-01-15-project-portal-tour/">An In-Depth Look at the Exceptionless Project Portal</a></h2>
+    <p>We cover the basic features of the Exceptionless platform on our <a href="/website/tour/" title="Exceptionless Feature Tour">feature tour page</a>, but we wanted to give everyone a deeper look into all the information available via the web-based, real-time .NET error reporting admin area.</p>
+<p>Continue reading to learn more.<!--more--></p>
+<h2>The Dashboard</h2>
+<p><img src="/website/assets/img/news/graph.jpg" alt="Visual .NET Exception Graph"></p>
+<p>The Exceptionless Dashboard features a quick overview of the exceptions for the currently selected project. It also updates in real-time, so you can watch exceptions roll in.</p>
+<p>This is a great place to glimpse your exceptions by total, unique, new, or per hour. The most frequent and most recent exceptions are also displayed here, along with a graph representing your total and unique exceptions. You can go directly to an error's details by clicking on it.</p>
+<p><strong>At the top of the page, throughout the admin, you can:</strong></p>
+<ul>
+<li>Change the project you are currently viewing</li>
+<li>Go to that projects settings</li>
+<li>Adjust the date range</li>
+<li>Show/Hide hidden errors</li>
+<li>Show/Hide fixed errors</li>
+<li>Show/Hide "Not Found" errors<figure id="attachment_1340" class="thumbnail wp-caption alignleft" style="width: 150px"></figure></li>
+</ul>
+<p><img src="/website/assets/img/news/date-range-150x150.jpg" alt="Exceptionless Date Range Selector"></p><figcaption class="caption wp-caption-text">Show/Hide Errors &amp; Select Date Range</figcaption><p></p>
+<div style="clear: both;">
+</div>
+<h2>View Most Recent, Most Frequent, and New Exceptions</h2>
+<p>On the left side of the dashboard, you can select to view your Most Recent, Most Frequent, or New (first time) .NET exceptions.</p><figure id="attachment_1221" class="thumbnail wp-caption alignleft" style="width: 150px"><p></p>
+<p><img src="/website/assets/img/news/new-150x150.jpg" alt="New .NET Exceptions"></p><figcaption class="caption wp-caption-text">New Errors</figcaption></figure><p></p>
+<div style="clear: both;">
+</div>
+<h3>Most Recent</h3>
+<p>The most recent report lists your errors individually with the one that occurred last at the top. It also tells you exactly how long ago the error occurred. You can click into the exception to view details.</p>
+<h3>Most Frequent and New Exceptions</h3>
+<p>Each of these reports lists the respective error type with a summary, the count, when the error first happened, and the last occurrence. Most frequent is ordered by count, and new is ordered by most recent.</p>
+<h2>Lets Take a Look at Exception Details</h2>
+<h3>Error Stack Page</h3>
+<p><img src="/website/assets/img/news/exception-options-150x150.jpg" alt="Error Stack Options"></p>
+<div style="clear: both;">
+</div>
+<p>If you click into any error, Exceptionless will show you the error stack, which includes the number of occurrences, when it first happened, and the latest re-occurrence. You can adjust the date range on this page, like the rest, and you also get a nice graph of that error's occurrences over time. Each individual time the error triggered is listed below the graph, and you can click into each instance separately.</p>
+<p><strong>Before we do that, though,</strong>&nbsp;I'd like to point out another major feature of the error stack page..</p>
+<p>Above and to the right of the graph are two buttons: "Mark Fixed" and "Options". Mark fixed is exactly what it sounds like, and if you click on the "Options" button it drops down with the following choices:</p>
+<ul>
+<li>Hide from reports</li>
+<li>Promote to external</li>
+<li>Add reference link</li>
+<li>Disable notifications</li>
+<li>Future occurrences are critical</li>
+<li>Reset stats</li>
+</ul>
+<h3>Individual Error Details</h3>
+<p>After you click into an individual error instance, you will see the following tabs.</p>
+<p><img src="/website/assets/img/news/exception-details-environment-150x150.jpg" alt=".NET Exception Environment Details"></p>
+<div style="clear: both;">
+</div>
+<h4>Error Overview</h4>
+<p>This page shows you a quick overview of the error, including the stack trace. It includes the date and time, type, message, platform, URL, and referrer. You can also go to the previous or next occurrence.</p>
+<h4>Exception</h4>
+<p>This tab displays a few overview details, then gives you a list of loaded modules related to the error.</p>
+<h4>Request</h4>
+<p>The request view gives you the request details, including date and time, http method, url, referrer, client IP, user agent, browser, browser OS, device, and whether or not it's a known bot. You also get Post Data.</p>
+<h4>Environment</h4>
+<p>Because you needed&nbsp;<strong>all</strong> the data, the environment tab displays time and date, machine name, ip address, processor count, total, available, and process memory, OS name, OS version, architecture, runtime version, process ID, process name, and command line details. It also has client information, such as install date, version, platform, submission method, application starts, and errors submitted.</p>
+<h2>What Else Can I Do from the Admin?</h2>
+<p>Naturally, you can manager your projects, organizations, and account, but we also have pretty handy feedback and support tools so you can let us know how we're doing! Your feedback and comments are important and provide direction to the code.</p>
+<p><img src="/website/assets/img/news/support-150x150.jpg" alt="Exceptionless Support"></p>
+<div style="clear: both;">
+</div>
+<p>In short, the tool offers extremely helpful insights into the world of your web application's bugs. Whether internal or customer-facing, knowing when, where, and how many exceptions are being generated makes it easier for you to track them down and squash them. And when you've fixed it, regression notifications are there to let you know if it rears its ugly head again.</p>
+<p>Still not convinced? Give it a try - <a href="https://be.exceptionless.io/signup" title="Sign up for Exceptionless">sign up today, for free</a>.</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/.net/" class="tag">.NET</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/case-study/" class="tag">Case Study</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2014/2014-01-04-find-leaking-exceptions-eliminate-empty-catch-block/">Find Leaking Exceptions by Eliminating Empty Catch Blocks - Case Study</a></h2>
+    <h2>How a client eliminated 50+ exceptions/hour</h2>
+<p>Recently, a client contacted us and gave us a pretty incredible case study. He found a huge number of "leaking" exceptions by eliminating all of the empty catch statements in his ASP.NET code and sending an exception to Exceptionless instead. By doing so, he was able to track down about <strong>12 individual bugs</strong> and get rid of <strong>over 50 exceptions per hour</strong> by fixing them. That's <strong>1200+ exceptions per day</strong> - gone!<!--more--></p>
+<blockquote>
+<p>"This gave us a picture of just how many poorly written methods were leaking exceptions. The answer was, A LOT. So, even though these weren't customer facing, they were expensive and a good indicator of code quality. In just a couple of days, we were able to eliminate the majority of them completely." - Eric Burcham</p>
+</blockquote>
+<p>After speaking with Mr. Burcham further, he explained that while there were only about 12 individual bugs, the number of times that those bugs were occurring in different areas throughout the code (an ASP.NET eCommerce solution) was numerous. Luckily, he was able to use several multi-line find and replace actions to make all the changes relatively quickly and get things back on track.</p>
+<h2>A brief code example</h2>
+<h3>Empty .NET catch blocks</h3>
+<p>Before using Exceptionless to generated exceptions, the catch blocks were empty.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">try</span>
+{
+  <span class="hljs-comment">// Do Something</span>
+}
+<span class="hljs-keyword">catch</span> { }
+</code></pre>
+<h3>Using Exceptionless to generate an exception in the catch block</h3>
+<p>By submitting an exception in the catch block, instead, their eyes were opened to thousands of daily exceptions.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">try</span>
+{
+  <span class="hljs-comment">// Do Something</span>
+}
+<span class="hljs-keyword">catch</span>(Exception ex)
+{
+  ex.ToExceptionless().Submit();
+}
+</code></pre>
+<h3>But I can already throw an exception in my catch block...</h3>
+<p>While you can throw an exception in a catch block normally with .NET, Eric was able to utilize Exceptionless' intelligent error grouping, notifications, and detailed reporting to pinpoint the problems and deal with them accordingly. Then, he was able to monitor the decline of occurrences and make sure that there were no regressions. That's pretty powerful, we think.</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/.net/" class="tag">.NET</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/asp.net/" class="tag">asp.net</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2013/2013-12-24-net-exception-reporting-why-you-need-it/">.NET Exception Reporting and Why You Need It</a></h2>
+    <p>We have all worked on projects, large and small, where tiny, one-off bugs went unnoticed for <em>a while</em>&nbsp;before they were finally reported by a user or discovered by a developer. In some instances, these bugs probably affected the end-user's ability to use the service, purchase an item, etc, meaning that there was a direct impact on the bottom line.</p>
+<p>What if you didn't have to worry about .NET exceptions going unnoticed anymore?<!--more--></p>
+<h2>Enter real-time .NET exception reporting</h2>
+<p><img src="/website/assets/img/news/toexceptionless1-300x150.png" alt="Exceptionless ASP.NET Error Reporting"></p>
+<p>What .NET developers needed was a tool that focused on error reporting by logging, grouping, and sending notifications. They needed flexibility through custom objects and a fluent API. They needed every error detail presented in a organized, readable manner. The even needed charts that clearly showed their progress in squashing the tens, hundreds, or thousands of daily exceptions that they didn't know they were occurring.</p>
+<p>We needed all that, too, so <strong>we built a tool that does it all for us!</strong></p>
+<h3>What a .NET exception reporting tool has up its sleeves</h3>
+<p>When we set out to build Exceptionless, we went through hundreds of possible features, and even toyed with building a larger product that including other functionality, but in the end we decided we wanted it to do the following things really well.</p>
+<ul>
+<li>Send error <strong>notifications</strong></li>
+<li><strong>Group exceptions</strong> intelligently into stacks</li>
+<li><strong>Show top errors</strong>&nbsp;and allow them to be&nbsp;<strong>prioritized</strong></li>
+<li>Provide <strong>detailed error reports</strong>, including <strong>stacktrace</strong></li>
+<li>Have a&nbsp;<strong>dashboard</strong> with an immediate view of error statistics and trends</li>
+<li>Allow <strong>custom objects</strong> to be added to reports</li>
+<li>Allow <strong>unlimited users</strong> per organization</li>
+<li>Give developers a way to **mark exceptions critical, fixed, or&nbsp;**<strong>monitor for regressions</strong></li>
+<li>Provide <strong>real-time updates</strong>, as exceptions happen</li>
+<li><strong>Support offline usability</strong> in scenarios where the developer is traveling, etc</li>
+<li>Be able to be <strong>installed in less than 5 minutes</strong></li>
+</ul>
+<h3>Why Exceptionless is a must-try for .NET developers</h3>
+<p><strong>You should give it a shot if:</strong></p>
+<ul>
+<li>Finding that bug 2 weeks sooner could have saved you or your company a lot of money</li>
+<li>Customers were lost because of a bug on production that you couldn't see locally or in the development environment</li>
+<li>You fixed a bug in one spot, only to find out that it was happening in several other places as well</li>
+<li>There might be errors here or there, but they probably aren't affecting very many users <em>(hint: they probably are)</em>.</li>
+<li>You or your team are making a lot of changes in the next sprint, and you really want to make sure you know when a bug gets introduced</li>
+<li><em>and the list goes on...</em></li>
+</ul>
+<h4>And of course, we're here to help!</h4>
+<p>If you have any issues or questions, just let us know! You can <a href="/website/contact/" title="Contact Us">contact us here on the website</a>, or via the support button on your Exceptionless dashboard.</p>
+<div class="signup center">
+  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Try It for **FREE**</a>
+</div>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/.net/" class="tag">.NET</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/errors/" class="tag">errors</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2013/2013-12-19-find-customer-facing-bugs-with-exceptionless-case-study/">Find Customer Facing Bugs with Exceptionless - Case Study</a></h2>
+    <h2>The Power of .NET Error Reporting</h2>
+<p><img loading="lazy" class="alignright size-full wp-image-438" style="margin-left: 10px;" alt="ApexCCTV Logo" src="/website/assets/img/news/header-logoNew.png" width="182" height="96" data-id="438"> One of our long time customers, ApexCCTV, recently described how Exceptionless' .NET error reporting allowed them to find and squash a bug that was causing their website to be completely unusable by some customers.</p>
+<p>Because of the e-commerce development environment being used, this issue would not have been brought to their attention without the implementation of Exceptionless, making this a prime example of how powerful the tool is and what it can mean for all types of .NET web applications.<!--more--></p>
+<h3>What customers were experiencing</h3>
+<blockquote>
+<p>"After a site upgrade, <strong>every page</strong> of the site was crashing if the customer had been previously logged in." - ApexCCTV</p>
+</blockquote>
+<p>So, if a user had selected the "keep me logged in" box the last time they logged in, prior to the update, nothing was working for them.</p>
+<h3>The cause</h3>
+<p>When a customer logs in, a secure cookie for that user is created behind the scenes. The code update had changed the format of the cookie, but not the name, so when a user visited the site with the old cookie, the authentication was breaking. This was throwing errors and crashing the site for the customer, but because the development team clears cookies regularly, and no one had reported any issues, the exceptions were flying under the radar.</p>
+<h3>The fix</h3>
+<p>Exceptionless logged and reported the error, and the fix was easy - simply change the cookie name so that users were forced to get a fresh cookie the next time they visited the site. Bam, done! Users could then happly log in and buy <a title="Security Cameras" href="http://www.apexcctv.com" target="_blank">security cameras</a> without any issues.</p>
+<p>There could be, and a lot of the times are, errors like this in any .NET project, and using a real-time exception reporting tool like Exceptionless can really be an asset, saving time, money, and customers.</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/.net/" class="tag">.NET</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/asp.net/" class="tag">asp.net</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/case-study/" class="tag">Case Study</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2013/2013-12-19-exceptionless-1-2-0-released/">Exceptionless 1.2.0 Released</a></h2>
+    <h2>Server Features</h2>
+<ul>
+<li>Added ability to copy extended data to the clipboard.</li>
+<li>Added ability to copy stack traces to the clipboard. This is very useful when you have an obfuscated stack trace and wish to decode it.</li>
+<li>Added ability to purchase yearly billing plans.</li>
+<li>Added the ability to consume the rest api with an <code>apikey</code> query string parameter.</li>
+<li>We now show friendly error messages when an error occurs while downgrading or upgrading billing plans.</li>
+<li>Numerous improvements to the project configuration page.</li>
+<li>Numerous bug fixes and performance&nbsp;enhancements.</li>
+</ul>
+<h2>Client Features</h2>
+<p>Update your NuGet packages to take advantage of these improvements!</p>
+<ul>
+<li>Added support for MVC5 and Web API 2.0.</li>
+<li>Improved the detection and ignoring of duplicate errors to prevent them from being reported.</li>
+<li>The client now excludes dynamic assemblies from the modules error report section.</li>
+<li>AddObject now serializes objects to a depth of 5 by default.</li>
+<li>Fixed a couple bugs that may occur when multiple client instances are running on the same machine concurrently.</li>
+<li>Fixed a bug with the ExceptionlessWcfHandleErrorAttribute&nbsp;where it wouldn't catch errors when aspNetCompatibilityEnabled was set to false.</li>
+<li>The client now submits errors to&nbsp;<a href="https://collector.exceptionless.com/api/v1/error">collector.exceptionless.com/api/v1/error</a>.</li>
+<li>Fixed a bug that would prevent the Windows Form client from showing the Crash Report dialog.</li>
+<li>Fixed a bug where multiple HttpModule sections could be added by the NuGet installer.</li>
+</ul>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2013/2013-08-06-exceptionless-1-1-0-released/">Exceptionless 1.1.0 Released</a></h2>
+    <h2>Features</h2>
+<ul>
+<li>Added ability to visually select a custom date range, giving you the ability to investigate spikes.</li>
+<li>Added ability to add reference links to error stacks.</li>
+<li>Added web hook and Zapier support.</li>
+<li>Added daily summary notification.</li>
+<li>Added ability to filter out hidden and 404 errors.</li>
+<li>Added ability to promote stacks to external services.</li>
+<li>Added ability to add reference links to stacks.</li>
+<li>Added ExceptionlessWcfHandleErrorAttribute to Exceptionless.Web package.</li>
+<li>Minor visual improvements and fixes for mobile and desktop layouts.</li>
+<li>Numerous bug fixes and other enhancements.</li>
+</ul>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2013/2013-08-06-introducing-exceptionless/">Introducing Exceptionless</a></h2>
+    <p><strong><a href="/website/" title="What is Exceptionless?">Exceptionless</a></strong> is a new error reporting service that helps you answer important questions about the software that you build.</p>
+<ul>
+<li>Do you know when and how your app is failing?</li>
+<li>Are my users running into issues and walking away?</li>
+<li>What are the top issues that I should be fixing?</li>
+<li>What issues are affecting the most people and would give me the highest ROI when fixed?</li>
+<li>Is my app getting more or less stable with each release over time?</li>
+</ul>
+<p>The definition of the word exceptionless is: <strong>to be without exception</strong>. Our product provides real-time error reporting for your apps. It organizes the gathered information into simple actionable data that will help your app become exceptionless!</p>
+<p><img src="/website/assets/img/news/dashboard1.png" alt="Exceptionless Dashboard"></p>
+<p>You can integrate <strong>Exceptionless</strong> into your application in a matter of seconds and start getting the answer to all these questions right now! It’s simply a matter of adding our library and setting your sAPI key.</p>
+<p><strong>Exceptionless</strong> gives you a look at your application health and allows you to take a closer look at how oftern errors occur. You can dive into a specific error stack to get detailed information about an error. You can also mark an error as fixed or hide an error completely.</p>
+<p><img src="/website/assets/img/news/stack.png" alt="Exceptionless Error Stack"></p>
+<p>We believe that all app developers should strive to be <strong>Exceptionless</strong> and that’s why we are offering a FREE plan! It’s easy to get started, so what are you waiting for??</p>
+<div class="signup center">
+  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Sign Up For **FREE** Now!</a>
+</div>
+</article>
+    
+    
+    
+    <a href="/website/tags/asp.net/" class="tag">asp.net</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/errors/" class="tag">errors</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/exceptions/" class="tag">exceptions</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+
+
+<hr>
+
+<nav class="post-navigation">
+  <ul>
+    <li>
+      <a href="/website/news/13/" rel="prev">← Previous</a>
+    </li>
+    
+
+    <li>
+      Page 14
+    </li>
+  </ul>
+</nav>
+
+  </div>
+</div>
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

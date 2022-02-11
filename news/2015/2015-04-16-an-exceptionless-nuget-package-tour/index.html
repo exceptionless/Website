@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>An Exceptionless NuGet Package Tour - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="An Exceptionless NuGet Package Tour - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="An Exceptionless NuGet Package Tour - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">An Exceptionless NuGet Package Tour</h1>
+          </header>
+          <div class="entry-content">
+            <p><img src="/website/assets/img/news/nugetlogo.png" alt="Exceptionless NuGet Packages">Giving back to the development community is important to us over here at Exceptionless. <a title="Exceptionless on GitHub" href="https://github.com/exceptionless" target="_blank">We love open source!</a></p>
+<p>As such, the Exceptionless&nbsp;<a title="Exceptionless NuGet Assembly Library" href="https://www.nuget.org/profiles/exceptionless?showAllPackages=True" target="_blank">NuGet assembly&nbsp;library</a>, with 31 assemblies&nbsp;and over 176,000 package downloads, is ever growing and expanding right along with our <a title="Exceptionless GitHub Repos" href="https://github.com/exceptionless" target="_blank">GitHub repos</a>.</p>
+<p>We thought we would give everyone a quick tour, and at the same time perhaps provide a good resource and reference page.</p>
+<p>Don't forget, though - this page may be out-dated by the time you view it, so please <a title="Exceptionless NuGet Packages" href="https://www.nuget.org/profiles/exceptionless?showAllPackages=True" target="_blank">view our full library on NuGet</a>.<!--more--></p>
+<h2>Exceptionless NuGet Clients</h2>
+<p>Exceptionless, our primary <a title="Exceptionless GitHub Repo" href="https://github.com/exceptionless/Exceptionless.net" target="_blank">open source</a> application, provides real-time error, feature, and log reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC apps (and more, soon!).</p>
+<p>Below you will find the NuGet&nbsp;assemblies&nbsp;for all the platforms we currently support.</p>
+<p><a title="Exceptionless.Portable NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Portable/" target="_blank">Exceptionless.Portable</a>
+Exceptionless client for portable (PCL) applications.&nbsp;This is the base library all the other implementations build on top of. It contains all the basic functionality that powers the Exceptionless clients! This library can be used on many different platforms. It’s worth noting that this is a very basic client and as such you won’t get all the bells and whistles as described <a title="Exeptionless Configuration Documentation" href="/website/docs/clients/dotnet/configuration/" target="_blank">here</a> in the PCL configuration section. For those bells and whistles, see the Exceptionless package, below.
+Frameworks:&nbsp;.NET 4, .NET 4.5, Silverlight 5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8</p>
+<p><a title="Exceptionless NuGet Package" href="https://www.nuget.org/packages/Exceptionless/" target="_blank">Exceptionless<br> </a>Exceptionless client for non visual (ie. Console and Services) applications.**&nbsp;**We recommend using this package if you are not using any other platform specific packages (E.G., Exceptionless.Mvc), as it provides all the bells and whistles that are missing in the portable package.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.Mvc NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Mvc/" target="_blank">Exceptionless.Mvc<br> </a>Exceptionless client for ASP.NET MVC 3+ applications.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.WebApi NuGet Package" href="https://www.nuget.org/packages/Exceptionless.WebApi/" target="_blank">Exceptionless.WebApi<br> </a>Exceptionless client for ASP.NET Web API applications.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.Web NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Web/" target="_blank">Exceptionless.Web<br> </a>Exceptionless client for ASP.NET WebForms applications.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.Nancy NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Nancy/" target="_blank">Exceptionless.Nancy<br> </a>Exceptionless client for <a title="NancyFX" href="http://nancyfx.org/" target="_blank">Nancy</a> applications.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.Wpf NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Wpf/" target="_blank">Exceptionless.Wpf</a>
+Exceptionless client for WPF applications.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.Windows NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Windows/" target="_blank">Exceptionless.Windows<br> </a>Exceptionless client for Windows&nbsp;Forms applications.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.NLog NuGet Package" href="https://www.nuget.org/packages/Exceptionless.NLog/" target="_blank">Exceptionless.NLog<br> </a>NLog target that sends log entries to Exceptionless.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Exceptionless.Log4net NuGet Package" href="https://www.nuget.org/packages/Exceptionless.Log4net/" target="_blank">Exceptionless.Log4net<br> </a>Log4net appender that sends log entries to Exceptionless.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5</p>
+<p><a title="Serilog.Sinks.Exceptionless NuGet Package" href="https://www.nuget.org/packages/Serilog.Sinks.ExceptionLess/" target="_blank">Serilog.Sinks.ExceptionLess<br> </a>Serilog sink that sends log entries to Exceptionless.
+Frameworks:&nbsp;.NET 4.0, .NET 4.5
+<a title="Exceptionless sink for Serilog Source Code" href="https://github.com/serilog/serilog-sinks-exceptionless" target="_blank">View Source</a></p>
+<h3>Signed&nbsp;Assemblies</h3>
+<p>We also have signed versions of most assemblies&nbsp;on our <a title="Exceptionless NuGet Profile" href="https://www.nuget.org/profiles/exceptionless?showAllPackages=True" target="_blank">NuGet Profile</a>.&nbsp;See MSDN for additional info on signing assemblies (<a title="Strong-Named Signed Assemblies" href="https://msdn.microsoft.com/en-us/library/wd40t7ad%28v=vs.110%29.aspx" target="_blank">Strong-Named Assemblies</a>).</p>
+<h2>Foundatio by Exceptionless</h2>
+<p>Foundatio (Requires .NET 4.5)&nbsp;is an open source library for building distributed applications that we built, use, and think you will find helpful. Foundatio provides in memory, redis, and azure implementations.&nbsp;This allows you to do development or testing using in-memory versions and switch them out for redis or azure implementations in production. This saves you time (setup and maintaining) and money (not paying for cloud resources) during development and testing!&nbsp;Foundatio source code can be found at <a title="Foiundatio Source Code on GitHub" href="https://github.com/FoundatioFx/Foundatio" target="_blank">https://github.com/FoundatioFx/Foundatio</a>.</p>
+<p>Exceptionless was built using Foundatio and utilizes implementations for caching, queues, locks, messaging, jobs, file storage, and metrics.</p>
+<p><a title="Foundatio Exceptionless NuGet Package" href="https://www.nuget.org/packages/Foundatio/" target="_blank">Foundatio</a>
+Foundatio consists of pluggable foundation blocks for building distributed apps, including caching, queues, locks, messaging, jobs, file storage, and metrics.</p>
+<p><a title="Foundatio Redis Implementations NuGet Package" href="https://www.nuget.org/packages/Foundatio.Redis/" target="_blank">Foundatio Redis Implementations</a>
+Contains the redis implementations of caching, queues, locks, messaging, jobs, file storage.</p>
+<p><a title="Foundatio Azure ServiceBus Implementations NuGet Package" href="https://www.nuget.org/packages/Foundatio.AzureServiceBus/" target="_blank">Foundatio Azure ServiceBus Implementations</a>
+Contains the redis implementations of queues and messaging. The azure packages are split into different packages so you don't have to take extra azure dependencies on things you don't need.</p>
+<p><a title="Foundatio Azure Storage Implementations NuGet Package" href="https://www.nuget.org/packages/Foundatio.AzureStorage/" target="_blank">Foundatio Azure Storage Implementations</a>
+Contains the redis implementations of file storage. The azure packages are split into different packages so you don't have to take extra azure dependencies on things you don't need.</p>
+<h2>Other</h2>
+<p><a title="Exceptionless Lucene Query Parser NuGet Package" href="https://www.nuget.org/packages/Foundatio.Parsers.LuceneQueries/" target="_blank">Exceptionless LuceneQueryParser</a>
+Lucene Query Parser is a lucene style query parser that is extensible and allows additional syntax features. We use this in <a title="Exceptionless Source Code" href="https://github.com/exceptionless/Exceptionless" target="_blank">Exceptionless</a> to&nbsp;<a title="Exceptionless Query Source Code" href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Repositories/Queries/Validation/PersistentEventQueryValidator.cs" target="_blank">ensure the query is valid before executing it, check to see if you are trying to a basic or premium search query and much more</a>!
+Frameworks: .NET 4.5
+<a title="Exceptionless LuceneQueryParser Source on GitHub" href="https://github.com/FoundatioFx/Foundatio.Parsers" target="_blank">View&nbsp;Source</a></p>
+<p><a title="Exceptionless Random Data NuGet Package" href="https://www.nuget.org/packages/Exceptionless.RandomData/" target="_blank">Exceptionless RandomData</a>
+RandomData is a utility class for easily generating random data, making the creation of good unit test data a breeze.
+Frameworks: .NET 4.0, .NET 4.5
+<a title="Exceptionless Random Data Source Code" href="https://github.com/exceptionless/Exceptionless.RandomData" target="_blank">View Source</a></p>
+<p><a title="Exceptionless Date Time Extensions NuGet Package" href="https://www.nuget.org/packages/Exceptionless.DateTimeExtensions/" target="_blank">Exceptionless DateTimeExtensions</a>
+This package includes DateTimeRange, Business Day, and various DateTime, DateTimeOffset, and TimeSpan extension methods.
+Frameworks: .NET 4.0, .NET 4.5, Windows 8, Windows Phone 8.1
+<a title="Exceptionless DateTimeExtensions Source Code on GitHub" href="https://github.com/exceptionless/Exceptionless.DateTimeExtensions" target="_blank">View Source</a></p>
+<h2>We'll Keep Building!</h2>
+<p>We don't plan on stopping anytime soon, and will continue writing assemblies&nbsp;to make life easier for developers everywhere. Naturally, we could always use your help, so <a title="Exceptionless GitHub" href="https://github.com/exceptionless" target="_blank">fork us on GitHub</a> if you feel like chipping in. We always appreciate our contributors!</p>
+<p>Otherwise, let us know what you think of Exceptionless, Foundatio, and all our other projects. Feedback is always welcomed and appreciated.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

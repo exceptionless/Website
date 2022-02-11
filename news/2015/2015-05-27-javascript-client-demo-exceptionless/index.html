@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>JavaScript Client Demo - Exceptionless - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="JavaScript Client Demo - Exceptionless - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="JavaScript Client Demo - Exceptionless - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">JavaScript Client Demo - Exceptionless</h1>
+          </header>
+          <div class="entry-content">
+            <p><img src="/website/assets/img/news/blog-header-javascript.jpg" alt="Exceptionless JavaScript Client"></p>
+<p>We're getting closer and closer to version 1.0 of our&nbsp;<a title="Exceptionless JavaScript Client" href="/website/javascript-client-available-for-preview-testing/" target="_blank">JavaScript client</a>, and we wanted to give everyone a demo of installation, configuration, and usage.</p>
+<p>If you're using Node.js, make sure to check out last week's blog post for <a title="Exceptionless Node.js Demo" href="/website/news/2015/2015-05-20-exceptionless-node-js-javascript-client-demo" target="_blank">Node specific examples</a>. Otherwise, continue reading for JavaScript examples.</p>
+<p>As you read and begin playing with the Exceptionless JavaScript client, please make note of any feedback, bugs, etc, and <a title="Exceptionless.JavaScript GitHub Repo" href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">submit a GitHub issue</a> so we can fast track version 1.0 - we surely appreciate it!</p>
+<!--more-->
+<h2>How the JavaScript Client was Built</h2>
+<p>We built our JavaScript client&nbsp;in <a title="TypeScript" href="https://github.com/Microsoft/TypeScript" target="_blank">typescript 1.5</a>&nbsp;transpiled it to es5. Our&nbsp;single client works with both <a title="Exceptionless.JavaScript Node.js Demo" href="/website/news/2015/2015-05-20-exceptionless-node-js-javascript-client-demo" target="_blank">Node.js</a> and JavaScript due to dependency injection and a <a title="Universal Module Definition (UMD)" href="https://github.com/umdjs/umd" target="_blank">Universal Module Definition (UMD)</a>.</p>
+<h2>Installing the Exceptionless JavaScript Client</h2>
+<h3>Via Bower</h3>
+<ol>
+<li>Install the package by running <code>bower install exceptionless</code></li>
+<li>Add the Exceptionless&nbsp;script to your HTML page. We recommend placing the script at the top of the document to ensure Exceptionless picks up and reports the absolute most potential exceptions and events.</li>
+</ol>
+<pre><code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"bower_components/exceptionless/dist/exceptionless.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h2>Configuring the Client</h2>
+<p>Configuration of the Exceptionless JavaScript client can be accomplished a variety of ways. We list the common ways below, but make sure to check the&nbsp;<a title="Exceptionless JavaScript Client GitHub Page" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub repo</a>&nbsp;for the most up to date documentation if you run into any problems using this example code.
+<em>NOTE: The only required setting you need to configure is the client's apiKey.</em></p>
+<h3>Configuration Options</h3>
+<p><strong>1.</strong> Configure the&nbsp;<code>apiKey</code>&nbsp;as part of the script tag. This method&nbsp;will be applied to all new instances of the ExceptionlessClient</p>
+<pre><code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"bower_components/exceptionless/dist/exceptionless.min.js?apiKey=API_KEY_HERE"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p><strong>2.</strong>&nbsp;Set the&nbsp;<code>apiKey</code>&nbsp;on the default ExceptionlessClient instance.</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">var</span> client = exceptionless.<span class="hljs-property">ExceptionlessClient</span>.<span class="hljs-property">default</span>;
+client.<span class="hljs-property">config</span>.<span class="hljs-property">apiKey</span> = <span class="hljs-string">'API_KEY_HERE'</span>;
+</code></pre>
+<p><strong>3.</strong>&nbsp;Create a new instance of the ExceptionlessClient and specify the&nbsp;<code>apiKey</code> or <a title="Exceptionless.JavaScript Configuration Object" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.6.4/src/configuration/IConfigurationSettings.ts" target="_blank">configuration object</a>. <em>Note that the&nbsp;configuration object is optional.</em></p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">var</span> client = <span class="hljs-keyword">new</span> exceptionless.<span class="hljs-title class_">ExceptionlessClient</span>(<span class="hljs-string">'API_KEY_HERE'</span>); <span class="hljs-comment">// Required</span>
+
+<span class="hljs-comment">// or with a configuration object</span>
+<span class="hljs-comment">//var client = new exceptionless.ExceptionlessClient({</span>
+  <span class="hljs-comment">//apiKey: 'API_KEY_HERE',</span>
+  <span class="hljs-comment">//submissionBatchSize: 100</span>
+<span class="hljs-comment">//});</span>
+</code></pre>
+<h2>Sending Events</h2>
+<p>Unhandled exceptions will automatically be sent to your Exceptionless dashboard once the JavaScript client is configured properly. In order to send additional events, including log messages, feature usages, and more, you can use the code samples below and check the&nbsp;<a title="Exceptionless.JavaScript GitHub Repo" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub Repo</a> for the latest examples and documentation.</p>
+<h3>Sending Log Messages, Feature Usages, etc</h3>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">var</span> client = exceptionless.<span class="hljs-property">ExceptionlessClient</span>.<span class="hljs-property">default</span>;
+
+client.<span class="hljs-title function_">submitLog</span>(<span class="hljs-string">'Logging made easy'</span>);
+
+<span class="hljs-comment">// You can also specify the log source and log level.</span>
+<span class="hljs-comment">// We recommend specifying one of the following log levels: Trace, Debug, Info, Warn, Error</span>
+client.<span class="hljs-title function_">submitLog</span>(<span class="hljs-string">'app.logger'</span>, <span class="hljs-string">'This is so easy'</span>, <span class="hljs-string">'Info'</span>);
+client.<span class="hljs-title function_">createLog</span>(<span class="hljs-string">'app.logger'</span>, <span class="hljs-string">'This is so easy'</span>, <span class="hljs-string">'Info'</span>).<span class="hljs-title function_">addTags</span>(<span class="hljs-string">'Exceptionless'</span>).<span class="hljs-title function_">submit</span>();
+
+<span class="hljs-comment">// Submit feature usages</span>
+client.<span class="hljs-title function_">submitFeatureUsage</span>(<span class="hljs-string">'MyFeature'</span>);
+client.<span class="hljs-title function_">createFeatureUsage</span>(<span class="hljs-string">'MyFeature'</span>).<span class="hljs-title function_">addTags</span>(<span class="hljs-string">'Exceptionless'</span>).<span class="hljs-title function_">submit</span>();
+
+<span class="hljs-comment">// Submit a 404</span>
+client.<span class="hljs-title function_">submitNotFound</span>(<span class="hljs-string">'/somepage'</span>);
+client.<span class="hljs-title function_">createNotFound</span>(<span class="hljs-string">'/somepage'</span>).<span class="hljs-title function_">addTags</span>(<span class="hljs-string">'Exceptionless'</span>).<span class="hljs-title function_">submit</span>();
+
+<span class="hljs-comment">// Submit a custom event type</span>
+client.<span class="hljs-title function_">submitEvent</span>({ message = <span class="hljs-string">'Low Fuel'</span>, type = <span class="hljs-string">'racecar'</span>, source = <span class="hljs-string">'Fuel System'</span> });
+</code></pre>
+<h3>Manually Sending Errors</h3>
+<p>To manually send events other than the automatically reported unhandled exceptions, you can use our fluent <a title="Exceptionless.JavaScript Event Builder API" href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.6.4/src/EventBuilder.ts" target="_blank">event builder API</a>.</p>
+<p>The below example demonstrates sending a new error, "test," and setting the ReferenceID, Order and Quote properties, Tags, Geo, UserIdentity, and marking it as Critical.</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">var</span> client = exceptionless.<span class="hljs-property">ExceptionlessClient</span>.<span class="hljs-property">default</span>;
+
+<span class="hljs-keyword">try</span> {
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">'test'</span>);
+} <span class="hljs-keyword">catch</span> (error) {
+  client.<span class="hljs-title function_">createException</span>(error)
+    <span class="hljs-comment">// Set the reference id of the event so we can search for it later (reference:id).</span>
+    <span class="hljs-comment">// This will automatically be populated if you call client.config.useReferenceIds();</span>
+    .<span class="hljs-title function_">setReferenceId</span>(<span class="hljs-string">'random guid'</span>)
+    <span class="hljs-comment">// Add the order object (the ability to exclude specific fields will be coming in a future version).</span>
+    .<span class="hljs-title function_">setProperty</span>(<span class="hljs-string">"Order"</span>, order)
+    <span class="hljs-comment">// Set the quote number.</span>
+    .<span class="hljs-title function_">setProperty</span>(<span class="hljs-string">"Quote"</span>, <span class="hljs-number">123</span>)
+    <span class="hljs-comment">// Add an order tag.</span>
+    .<span class="hljs-title function_">addTags</span>(<span class="hljs-string">"Order"</span>)
+    <span class="hljs-comment">// Mark critical.</span>
+    .<span class="hljs-title function_">markAsCritical</span>()
+    <span class="hljs-comment">// Set the coordinates of the end user.</span>
+    .<span class="hljs-title function_">setGeo</span>(<span class="hljs-number">43.595089</span>, -<span class="hljs-number">88.444602</span>)
+    <span class="hljs-comment">// Set the user id that is in our system and provide a friendly name.</span>
+    .<span class="hljs-title function_">setUserIdentity</span>(user.<span class="hljs-property">Id</span>, user.<span class="hljs-property">FullName</span>)
+    <span class="hljs-comment">// Submit the event.</span>
+    .<span class="hljs-title function_">submit</span>();
+}
+</code></pre>
+<h2>What Data is Collected?</h2>
+<p>We built the JavaScript client to be full featured and allow you to report and log all the data our other clients do. It has a fluent API, as mentioned above, and&nbsp;is ready to rock and roll.</p>
+<p>We wire up to the window.onerror handler&nbsp;by default, in order to&nbsp;send unhandled exceptions to your Exceptionless dashboard automatically.</p>
+<p>Finishing off the Exceptionless JavaScript client features, every event also includes request information.</p>
+<p>A few screenshots of an individual event can be found below.</p><figure id="attachment_13248" class="thumbnail wp-caption alignleft" style="width: 150px"><p></p>
+<p><img src="/website/assets/img/news/javascript-client-event-request-info-150x150.png" alt="Exceptionless JavaScript Event Request Details"></p><figcaption class="caption wp-caption-text">Request Details</figcaption></figure><p></p>
+<h2 style="clear: both;">
+  Sample
+</h2>
+<p>We have put together an <a href="https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example" target="_blank">example</a> that you can use to get an idea of how everything works. It is available on the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example" target="_blank">GitHub Repo</a>.</p>
+<h3>To Get the Example Running...</h3>
+<ol>
+<li>Clone or download the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example" target="_blank">GitHub Repo</a></li>
+<li>Edit the HTML file in the root example folder and replace the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/example/index.html#L8" target="_blank">existing&nbsp;API Key</a> with yours. Also, comment out the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/example/index.html#L16" target="_blank">serverUrl</a>.</li>
+<li>Open the HTML file in your browser</li>
+<li>Open the console so that you can see the debug messages that the example generates</li>
+<li>Click the buttons on the page to submit an event</li>
+</ol>
+<h2 style="clear: both;">
+  Troubleshooting
+</h2>
+<p>Calling <code>client.config.useDebugLogger();</code>&nbsp;to enable debug logging is recommend and will output messages to the console regarding what the client is doing. Please <a title="Exceptionless JavaScript Client Issues" href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">contact us by creating an issue on GitHub</a> if you need help&nbsp;or have any feedback regarding the JavaScript client.</p>
+<h2>Feedback</h2>
+<p>As we move forward towards version 1.0 of our JavaScript client, we are looking for any and all feedback, so please don't hesitate to <a title="Exceptionless JavaScript Client Feedback" href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">let us know what you think, report a bug, etc</a>.</p>
+<p>Happy coding!</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

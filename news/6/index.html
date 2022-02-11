@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Archive - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Archive - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Archive - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Archive</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+
+    <h1>Archive</h1>
+
+
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2016/2016-07-13-exceptionless-3-4-new-user-dashboards-job-reliability-bug-fixes/">Exceptionless 3.4 - New User Dashboards, Job Reliability, and Bug Fixes</a></h2>
+    <p><img src="/website/assets/img/news/exceptionless-3-4-header.png" alt="Exceptionless 3.4">(/assets/exceptionless-3-4-header.png)</p>
+<p>The latest Exceptionless release has several additions we think most of our users will find helpful. We sat down and worked on the UI, fixed some bugs, and spend a considerable amount of time improving reliability and efficiency of some of the primary pieces of the app.</p>
+<p>If you're a self hoster, you'll need to <a href="/website/docs/self-hosting/upgrading-self-hosted-instance/">upgrade your existing install</a>, but if you're hosting with us there is no action required on your part to experiences the Exceptionless 3.4.</p>
+<p>For more information about this release, take a look below and/or review the <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v3.4.0">full release notes over on GitHub</a>.<!--more--></p>
+<h2>UI Updates</h2>
+<p>These updates were all pushed with&nbsp;<a href="https://github.com/exceptionless/Exceptionless.UI/releases/tag/v2.5.0">Exceptionless.UI 2.5</a> a few days prior to this release of the main app. Enjoy!</p>
+<h3>Search Wildcard</h3>
+<p>You can now use <code>*</code>&nbsp;to show&nbsp;<strong>all</strong> events in the search box. Woohoo!</p>
+<h3>Most Users Dashboard</h3>
+<p>The new most users dashboard allows you a quick view of events sorted by the highest number of affected users. This is great for helping prioritize your work pipeline.</p>
+<p>Also,&nbsp;as an aside, we've added the users affected column to the dashboard. We know some of you guys will find that helpful.</p>
+<h3>New Keyboard Shortcuts</h3>
+<p>MacOS &amp; Linux keyboard shortcut support has been added, as well as additional shortcuts such as <code>C</code>&nbsp;to chat with support, <code>S</code>&nbsp;to focus the search bar, and <code>g</code>&nbsp;<code>a</code>&nbsp;to go to your account. Hit <code>SHIFT</code>&nbsp;+ <code>/</code>&nbsp;(also known as <code>?</code>&nbsp;) to access the keyboard shortcut list on any screen.</p>
+<p>As an aside here, there is also now a <code>&lt;/&gt;</code>&nbsp;button near the top of the event occurrence that lets you quickly copy the JSON to your clipboard with a click.</p>
+<h2>Other Updates</h2>
+<p>This is just a quick list of everything else we tweaked, updated, added, or fixed with the v2.4 release.</p>
+<h3>Performance &amp; Reliability</h3>
+<p>We made several reliability and performance enhancements to queue and job processing. A few specific examples include fixing auto-abandoned jobs and instances where batch events weren't being requeued.</p>
+<h3>Heartbeat API Endpoints</h3>
+<p>Previously we had <a href="/website/news/2016/2016-05-26-session-heartbeats-no-longer-count-towards-plan-limits/">worked on making heartbeat events efficient</a> so we didn't have to count them toward event quotas, and with this release we've added new API Endpoints that allow clients to submit those heartbeats cheaply.</p>
+<h3>Active Directory Authentication</h3>
+<p>Support has been added for Active Directory Authentication. Thanks <a href="https://github.com/laughinggoose">@laughinggoose</a>! To enable this feature, head over to the <a href="docs/self-hosting/kubernetes/#active-directory-authentication">Active Directory Authentication</a> documentation page on GitHub.</p>
+<h3>Count</h3>
+<p>This <code>Count</code> property was added to the event model that tracks deduplicated events and allows for some pretty cool metrics from here on out while avoiding the full cost of storing every event.</p>
+<h3>MaximumRetentionDays</h3>
+<p><code>MaximumRetentionDays</code>&nbsp;is pretty self explanatory. It controls the max retention perdiod for events, which allows the retention job and plans to be smarter about cleaning up old data.</p>
+<h3>Bugs</h3>
+<p>SignalR (web sockets) support wasn't always working in some hosting environments such as AWS, so we fixed a few bugs related to that.</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2016/2016-06-28-exceptionless-4-0-net-core-asp-net-core-support/">Exceptionless.NET 4.0 - .NET Core and ASP.NET Core Support!</a></h2>
+    <p>That's right folks, with the release of Exceptionless.NET 4.0 you can now build .NET applications with Exceptionless on Linux, MacOS, and Windows!</p>
+<p>We've added .NET Core, ASP.NET Core, and .NET Standard 1.2+ support.</p>
+<p>We know many of you have been waiting for this, and it's been a long time coming, but we sat down, put in the hours, and made it happen for you guys!</p>
+<p><img src="/website/assets/img/news/Screen-Shot-2016-06-28-at-3.08.17-PM.png" alt="Exceptionless on Mac OSX">(/assets/Screen-Shot-2016-06-28-at-3.08.17-PM.png)</p>
+<!--more-->The NuGet package now supports .NET Standard 1.2+, PCL Profile 151, and .NET 4.5.
+<p><strong>To make upgrading easy</strong>, the <code>Exceptionless.Portable</code>&nbsp;NuGet package still exists and is dependent on the <code>Exceptionless</code>&nbsp;Package.</p>
+<p>If .NET 4.0 is a requirement for your projects, you will need to continue using the Exceptionless.NET v3.5 NuGet Packages, which are not being deprecated.</p>
+<p>As a matter of housekeeping, we removed the&nbsp;<code>ExceptionlessClient.Current</code>&nbsp;property, which was replaced with <code>ExceptionlessClient.Default</code>&nbsp;in v2.0.0, and the configuration <code>EnableSSL</code>&nbsp;properties (also deprecated in v2).</p>
+<h2>Upgrading</h2>
+<p>Updating the NuGet packages should be all you need to do if you are upgrading from Exceptionless.NET v2 or v3. Take a look at the <a href="/website/docs/clients/dotnet/upgrading/">upgrade guide</a> if you have any questions.</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2016/2016-05-26-session-heartbeats-no-longer-count-towards-plan-limits/">Session Heartbeats No Longer Count Towards Plan Limits</a></h2>
+    <p><img src="/website/assets/img/news/session-tracking-revised.png" alt="session-tracking-revised">That's right! We've re-imagined&nbsp;how session heartbeats and session end events should work on the back end and were able to make them much more efficient, allowing us to stop counting them toward user plan limits!</p>
+<p>This blog post explains our original goals and implementation of these session events, and how we were able to retain the same functionality of the feature while limiting resource usage.</p>
+<p>Our hope is that this will obviously make our users happy, but also that all the developers out there can benefit from our process and solution.<!--more--></p>
+<h2>Genesis: Exceptionless Session Tracking</h2>
+<p>In the beginning, we set out to create a sessions feature that allowed our users to submit a session start event and the session would be automatically updated by sending a session heartbeat event, as well as a session end event, respectively.</p>
+<p>These session heartbeats and session end events were meant to be&nbsp;session markers to show that a user was active or a session had ended.</p>
+<p>We wanted to <strong>leverage our existing infrastructure,</strong> and the easiest way to do so&nbsp;was to introduce new event types that we recognized. This meant that these events went through the client side plugins (extra work) and server side processing. As such, there was <strong>no way to tell these events apart from any other event</strong>.</p>
+<p>And because of that, they counted against user plan&nbsp;limits.</p>
+<h2>Noise</h2>
+<p>After releasing the sessions feature, <strong>it didn't take us long to notice that the heartbeats were noise</strong>. However, we knew that users wanted to see what their customers or users were doing while being active throughout the session, so we didn't remove them.</p>
+<p>We knew they were counting towards plan limits, causing some users to reach theirs quickly, and we knew they were adding noise, thus limiting the feature's&nbsp;value, but we also wanted to keep the feature alive because of the <em>potential</em> value offered. So, we had to react and make the entire feature more feasible, streamlined, and cheap.</p>
+<h2>Back to the Drawing Board</h2>
+<p>We did some thinking (and coding), trying to determine the best way we could <strong>provide end users with a great session tracking feature without over-taxing our system</strong> in the process, and we were able to come up with a solution!</p>
+<p>So, we created a new GET API endpoint <code>/api/v2/events/session/heartbeat</code>&nbsp;(<a href="https://api.exceptionless.io/docs/index.html#!/Event/Event_RecordHeartbeatAsync">api source</a>) that takes a session id or user id and a flag if the session is closed. This API endpoint then sets a unique session cache key with the current time.</p>
+<p>Our existing <code>CloseInactiveSessionsJob.cs</code>&nbsp;was already periodically polling for open sessions to check for inactive sessions so it could automatically close them after a period of time if no session end event was sent, so we just updated this job to check for the unique session cache keys (<a href="hhttps://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Jobs/CloseInactiveSessionsJob.cs#L52">source</a>) and get the last time a heartbeat was sent in or see if it was closed. It then takes the appropriate action and updates the session event.</p>
+<p>Then we just updated the clients to call this new API endpoint when <code>client.Submit.SessionHeartbeat("id")</code>&nbsp;or <code>client.SubmitSessionEnd("id")</code> is called.</p>
+<h2>Efficiency Achieved!</h2>
+<p>Our new solution gives us the ability to have clients send us session heartbeat and session end information very efficiently, which lets us provide a great session tracking feature <strong>without adding any additional cost</strong> to our plans!</p>
+<p>That's how we like to roll, and we hope you find value from the feature and our run down of the process we went through to get it to our users.</p>
+<h3>Don't Forget to Update&nbsp;Your Client</h3>
+<p>If you haven't already updated your client, please do so to start taking advantage of the free session events.</p>
+<p>And, as always, please let us know if you've got any feedback or questions. We'd love to hear from you!</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2016/2016-05-19-new-client-releases-focus-on-sessions-real-time-configuration-and-logging/">New Client Releases Focus on Sessions, Real Time Configuration, and Logging</a></h2>
+    <p><img src="/website/assets/img/news/net-3.5.0-js-1.4.0.png" alt="net-3.5.0-js-1.4.0">Exceptionless.NET v3.5.0 and Exceptionless.JavaScript v1.4.0 have been released and they are chock full of&nbsp;<strong>new features and feature improvements!</strong></p>
+<p>There weren't a whole lot of bug fixes with these releases. Could it be that Exceptionless is working and we've squelched&nbsp;most of the bugs? We think so!</p>
+<p>Notably, we focused on sessions, real time configuration, and logging, all of which we think you'll find super helpful.</p>
+<p>Read on for details.<!--more--></p>
+<h2>Exceptionless .NET Client V3.5.0 and JavaScript Client V1.4.0 Release Notes</h2>
+<h3>Session Heartbeats No Longer Count Towards Plan Limits!</h3>
+<p>We've updated Session Heartbeats and Session End events to be sent through an optimized API end point, and they will no longer count towards your plane's event limits.</p>
+<h3>Real Time Project Configuration Improvements</h3>
+<p>You can now exclude events by type and source, along with setting minimum log levels, <strong>in real time</strong>. So, for example, if you accidentally disable logging completely, you can <strong>simply update your settings</strong> and the updates will go into affect, restoring functionality!</p>
+<p>UI support will be expanded moving forward, but for the time being here is an example project configuration.</p>
+<h4>Source</h4>
+<p><strong>Key:</strong> <code>@@EVENT_TYPE:SOURCE&lt;br /&gt; </code></p>
+<p><strong>Value:</strong> <code>false</code></p>
+<p>Any event type or source can be used, and wildcards <code>*</code>&nbsp;are supported, so you can ignore whole event types and set the source to <code>*</code>.</p>
+<h4>Disable Submissions of Events with Type Name</h4>
+<p><strong>Key:</strong> <code>@@error:*MyCustomException</code></p>
+<p>**Value:&nbsp;**<code>false</code></p>
+<p>This configuration will disable submission of any error event with a stack trace containing an exception with a type name that ends with <code>MyCustomException</code>. You could also remove the wildcard and specify the full type name with the namespace.</p>
+<h4>Log Message Settings</h4>
+<p><strong>Key:</strong>&nbsp;<code>@@log:*</code></p>
+<p><strong>Value:</strong>&nbsp;<code>off</code></p>
+<p>Even though log types are special cased, they still accept rue or false values, so this example completely turns off log messages.</p>
+<p>Other known values are <code>Trace</code>, <code>Debug</code>, <code>Info</code>, <code>Warn</code>, <code>Error</code>, <code>Fatal</code>, and <code>Off</code>.</p>
+<h4>Minimum Log Level</h4>
+<p>**Key:&nbsp;**<code>@@log:MyNamespace.EventPostsJob</code></p>
+<p>**Value:&nbsp;**<code>Info</code></p>
+<p>This example is setting the minimum log level for <code>EventPostsJob</code>&nbsp;to <code>Info</code>.</p>
+<h3>Automatically Check for Updated Configuration Settings on Client Idle</h3>
+<p>We've implemented an a<strong>utomatic recurring check for updated configuration settings</strong> that occurs <strong>two minutes</strong> after the last event submission.</p>
+<p>A few notes:</p>
+<ul>
+<li>Each configuration check <strong>does not</strong> count towards your account's plan limits.</li>
+<li>No user information will be sent - only the current configuration version.</li>
+<li>Nothing will be retrieved if no settings have been changed.</li>
+</ul>
+<p>The automatic recurring configuration settings check <strong>can be disable</strong> by calling:</p>
+<h4>.NET</h4>
+<p><code>client.Configuration.UpdateSettingsWhenIdleInterval = TimeSpan.Zero;</code></p>
+<h4>JavaScript</h4>
+<p><code>client.config.updateSettingsWhenIdleInterval = -1;</code></p>
+<h3></h3>
+<h3>New Easy Way to Exclude Events from Being Submitted in .NET</h3>
+<p>You can now define a simple <code>Func&lt;Event,bool&gt;</code>&nbsp;callback to stop events from being submitted in the .NET client.</p>
+<p>For example, if I wanted to ignore any event with a <code>value</code> property of <code>2</code> I could use <code>client.Configuration.AddEventExclusion(e =&gt; e.Value.GetValueOrDefault() != 2);</code></p>
+<h3>Bug Fix for SettingsCollection Boolean Values Support in .NET Client</h3>
+<p><code>SettingsCollection.GetBoolean(name)</code>&nbsp;was not supporting ``&nbsp;or <code>1</code>&nbsp;as boolean values, but now it does. We are also now supporting <code>yes</code>&nbsp;and <code>no</code>&nbsp;as valid values.</p>
+<h3>JavaScript Client Passing Settings Bug</h3>
+<p><a href="https://github.com/csantero">@csantero</a> fixed an issue with passing settings to a new isntance of ExceptionlessClient - thanks!</p>
+<h3>Improved Stacking of Angular Response Errors in JavaScript Client</h3>
+<p>^^^ Nothing much to say here - the header says it all!</p>
+<h2>Feedback</h2>
+<p>We hope these new features and feature improvements help your Exceptionless experience, and we plan to continue to listen to user feedback and improve the system where improvements need to be made. To do that, though, we need to hear what you want out of the app. If you have a favorite feature request, or something that just bothers you, please let us know by dropping us a line on GitHub Issues under the appropriate repository, listed below, or just comment here and we'll figure it out!</p>
+<ul>
+<li><a href="https://github.com/exceptionless/Exceptionless.UI/issues/new">User Interface Feedback</a></li>
+<li><a href="https://github.com/exceptionless/Exceptionless.Net/issues/new">.NET Client Feedback</a></li>
+<li><a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues/new">JavaScript Client Feedback</a></li>
+<li><a href="https://github.com/exceptionless/exceptionless/issues/new">Exceptionless Feedback</a></li>
+</ul>
+<p>Thanks for reading and have an awesome day!</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/.net/" class="tag">.NET</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2016/2016-04-27-exceptionless-keyboard-shortcuts/">Exceptionless Keyboard Shortcuts</a></h2>
+    <p><img src="/website/assets/img/news/keyboard-shortcuts.png" alt="keyboard-shortcuts">Today we've got a quick article on one of the little known features of Exceptionless: keyboard shortcuts.</p>
+<p>In an effort to help you navigate Exceptionless event stacks better and troubleshoot faster, we've added keyboard shortcuts that lets you do things like go to the stack from an individual event occurrence, copy the event JSON, navigate to the previous event occurrence, etc.</p>
+<p>Let's take a look at all the quick shortcuts you can use to make your Exceptionless usage more efficient.<!--more--></p>
+<h2>Bringing Up the Shortcut List</h2>
+<p>To bring up the keyboard shortcuts available to each page, simply hold the shift key and hit the forward slash&nbsp;key (SHIFT + /, think ?). This will bring up an overlay showing you which shortcuts are available on that specific page.</p>
+<p>Don't see shortcuts available on a page? Don't freak out, there may just not be any. Feel free to suggest something that you think would save yourself and others time, though!</p>
+<h2>What Shortcuts Exist?</h2>
+<h3>Event Occurrences</h3>
+<p>If you hit SHIFT + / (?) on an event occurrence, you will see three or four new options, depending on whether you are on the first occurrence in the stack or not.</p>
+<ul>
+<li>
+<p>**Go to Stack
+** On any event occurrence, you can hit CTRL + UP to go to that event's stack quicker than finding the "Go To Stack" button and clicking.</p>
+</li>
+<li>
+<p>**Copy Event JSON to Clipboard
+** Hit CTRL + SHIFT&nbsp;+ C to copy that event's JSON data to your clipboard.</p>
+</li>
+<li>
+<p>**Previous Occurrence
+** CTRL + BACK (LEFT) will take you to the previous event occurrence.</p>
+</li>
+<li>
+<p>**Next Occurrence
+** And CTRL + FORWARD (RIGHT) will take you to the next occurrence of that event.</p>
+</li>
+</ul>
+<h3>Dashboards &amp; Stacks</h3>
+<p>On any dashboard or stack, SHIFT + / (?) brings up a simple overlay letting you know that ? will close the overlay and F1 will take you to the Exceptionless documentation on GitHub.</p>
+<p>We're open to suggestions for other dashboard or stack shortcuts, just let us know in the comments!</p>
+<h2>What Shortcuts Would You Use?</h2>
+<p>We'd love to get some community input here. What shortcuts do you think would be useful on which Exceptionless pages? Do you have something you do repeatedly on a dashboard or stack page that you think a keyboard shortcut might speed up or make more efficient? Let us know in the comments and we'll do our best to implement your ideas!</p>
+<p>Happy coding.</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2016/2016-04-18-how-many-users-affected-bugs-events/">Know How Many Users are Affected by Bugs and Events</a></h2>
+    <p><strong><img src="/website/assets/img/news/users-featured-image.png" alt="exceptionless user tracking">Prioritizing your bug fixes and development time</strong> in general can be a daunting task.</p>
+<p>Sometimes, as developers, <strong>we want to work on this shiny widget</strong> or this annoying bug, and we don't really have anything in our face telling us to <strong>quit focusing on our dreams</strong> and work on what matters to the bottom line.</p>
+<p>I can hear you over there: <strong>"But, my dreams are important!"</strong> Well, yes, but you don't get to have fun working on those until you've made your&nbsp;<strong>users</strong> happy by fixing the bugs that are affecting the majority of them or expanding on that feature that they are all using every single time they use your app.</p>
+<p>We've got something that will let you get those pesky tasks off your plate though, so you can move on to the fun stuff!</p>
+<!--more-->
+<h2>Who and How Bad Is It?</h2>
+<p>Our new "users" column and "Most Users" dashboard lets you <strong>know exactly what percentage of your users are being affected by events or using features</strong>. This allows you to prioritize the most important bugs or features to work on right away and potentially backlog things that only a few users are having issues with or using.</p>
+<p>Of course, you'll need to be sending at least a user id (and preferably a display name) for each user. We'll cover how to do that later in the article.</p>
+<h3>Percentage of Users&nbsp;Column</h3>
+<p>The new Users column on your Exceptionless dashboard displays a percentage value for each event stack that represents the number of users that have been affected by the event or, if it is a feature, that have used the feature.</p>
+<p>If you mouse over the percentage, you can see the number of users the percentage represents out of the total.</p>
+<p>These numbers are dynamically calculated for your selected timeframe that you are currently viewing.</p>
+<p><img src="/website/assets/img/news/dashboardv2-edited-1024x662.png" alt="users affected by bug"></p>
+<h3>Most Users Dashboard</h3>
+<p>Because the main dashboard shows you the most frequent events, not necessarily with the highest usage, <strong>we thought it would be helpful to have a new dashboard that automatically sorts event stacks by the percentage of users affected,</strong> letting you start at the top&nbsp;of an exception list, for example, and work your way down knowing you're always working on a bug, etc, that is affecting the highest percentage of users.</p>
+<p><img src="/website/assets/img/news/dashboard-most-usersv2-edited-1024x644.png" alt="user event dashboard"></p>
+<h2>Setting User Identity</h2>
+<p>In order to assure you are getting value out of the user feature, you want to make sure you are setting the user.&nbsp;For Exceptionless to track a user for your app, you need to send a user identity with each event. To do so, you need to set the default user identity via the following client methods:</p>
+<h4>C#</h4>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.SetUserIdentity(<span class="hljs-string">"UNIQUE_ID_OR_EMAIL_ADDRESS"</span>, <span class="hljs-string">"Display Name"</span>);
+</code></pre>
+<h4>JavaScript</h4>
+<pre><code class="language-js hljs language-javascript">exceptionless.<span class="hljs-property">ExceptionlessClient</span>.<span class="hljs-property">default</span>.<span class="hljs-property">config</span>.<span class="hljs-title function_">setUserIdentity</span>(<span class="hljs-string">'UNIQUE_ID_OR_EMAIL_ADDRESS'</span>, <span class="hljs-string">'Display Name'</span>);
+</code></pre>
+<p>Once the user is set on the config object, it will be applied to all future events.</p>
+<p><strong>Please Note:</strong> In WinForms and WPF applications, a plugin will automatically set the default user to the&nbsp;<code>**Environment.UserName**</code> if the default user hasn't been already set. Likewise, if you are in a web environment, we will set the default user to the request principal's identity if the default user hasn't already been set.</p>
+<h3>ASP.NET Example</h3>
+<p>You can also manually set the user info on the event directly. This is intended for **multi-user processes (web applications)<a href="http://www.businessinsider.com/slack-free-unlimited-plan-has-limits-2015-6">.</a>&nbsp;**For most MVC and WebAPI packages, the user will be set automatically based on the logged in principal, so you don't have to do anything.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-comment">// Import the exceptionless namespace.</span>
+<span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.CreateFeatureUsage(<span class="hljs-string">"MyFeature"</span>).SetUserIdentity(<span class="hljs-string">"123456789"</span>, <span class="hljs-string">"Blake Niemyjski"</span>).Submit();
+</code></pre>
+<h3>JavaScript&nbsp;Example</h3>
+<p>If you're using the JavaScript client, the entire session of the client will typically be for a single user, so you should be able to set it one time when they log in to your app.</p>
+<pre><code class="language-js hljs language-javascript">exceptionless.<span class="hljs-property">ExceptionlessClient</span>.<span class="hljs-property">default</span>.<span class="hljs-title function_">setUserIdentity</span>(<span class="hljs-string">"id"</span>, <span class="hljs-string">"friendly name"</span>)<span class="hljs-string">`
+</span></code></pre>
+<p>Like with .NET, if you are running a multi-user process (Node.js), you'll need to set the user at the event level.</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-comment">// javascript</span>
+<span class="hljs-keyword">var</span> client = exceptionless.<span class="hljs-property">ExceptionlessClient</span>.<span class="hljs-property">default</span>;
+
+<span class="hljs-comment">// Node.Js</span>
+<span class="hljs-comment">// var client = require('exceptionless').ExceptionlessClient.default;</span>
+
+client.<span class="hljs-title function_">createFeatureUsage</span>(<span class="hljs-string">'MyFeature’).setUserIdentity('</span><span class="hljs-number">123456789</span><span class="hljs-string">', '</span><span class="hljs-title class_">Blake</span> <span class="hljs-title class_">Niemyjski</span><span class="hljs-string">').submit();
+</span></code></pre>
+<h2>How Will You Use this Data</h2>
+<p>We are always interested in how our users use our features, and if our users feature helps our users help their users, well, that's a win win for our users and their users. Go users!</p>
+<p>Don't forget to stop by and let us know if you love or hate it, and of course let us know if you think we can improve on anything within Exceptionless.</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2016/2016-04-07-foundatio-featured-net-blog-version-4-0-release/">Foundatio Featured on .NET Blog + Version 4.0 Release!</a></h2>
+    <p><img src="/website/assets/img/news/foundatio-4.0.png" alt="Foundatio 4.0 release">We've continued to focus some of our attention on our pluggable app foundation&nbsp;block solution, Foundatio, and last week it got some attention from the Microsoft .NET Blog as well!</p>
+<p><a href="https://blogs.msdn.microsoft.com/dotnet/2016/03/29/the-week-in-net-3292016/" target="_blank">Foundatio featured as Project of the Week on .NET Blog</a></p>
+<p>We've also released V4.0, which has some new implementations, API changes, and, of course, bug fixes.</p>
+<p>Check out the details, below.<!--more--></p>
+<h2>Foundatio 4.0 Release Notes</h2>
+<h3>Implementations</h3>
+<p>We've got a few new implementations with this release, including Amazon S3 storage, Azure Service Bus queue (thanks <a href="https://github.com/jamie94bc" target="_blank">@jamie94bc!</a>), and Redis metrics client. Users should find those helpful.</p>
+<h3>API</h3>
+<p>The APIs have been drastically simplified for ease of use and straightforwardness, which should allow for easier creation of new implementations and consumption of existing ones.</p>
+<p>Once example of this simplification is that we've paired down jobs to having only one lock, instead of four.</p>
+<p>Logging has also seen huge improvements to make sure we are aligned with future API implementations, etc.</p>
+<h3>Bugs</h3>
+<p>More tests have been added since the previous release, and we've fixed a few major bugs as well.</p>
+<ul>
+<li>Deadlocks were occurring in a few areas, which is now remedied.</li>
+<li>Dropped connections are now automatically healed, while previously we were seeing some issues.</li>
+<li>Cached reference types can no longer be updated.</li>
+</ul>
+<h2>Upgrading to Foundatio 4.0</h2>
+<p>If you're already using Foundatio, simply updated your NuGet package. If you're new and want to check it out, snag <a href="https://github.com/FoundatioFx/Foundatio" target="_blank">Foundatio over on GitHub</a>.</p>
+<p>And, as always, we're here to answer any questions or take any feedback you might have to offer!</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2016/2016-04-04-exceptionless-v3-3-0-now-with-even-more-awesome/">Exceptionless V3.3.0 Release - Now with Even More Awesome</a></h2>
+    <p><img src="/website/assets/img/news/Exceptionless3-3-0-release-notes.jpg" alt="Exceptionless 3.3.0 Release Notes"></p>
+<p>We always work hard to keep improving Exceptionless, and this release is no different!</p>
+<p>Since the last release, we've put a lot of time into <a href="/website/news/2016/2016-03-24-filter-improvements-exceptionless-single-page-app/">making the filtering and searching more user friendly</a> and intuitive, improving the reliability of jobs, and of course fixing any bugs that you guys (or Exceptionless) have been able to find.</p>
+<p>Let's see what we've got going on, shall we?</p>
+<h2>What's Goin On?</h2>
+<h3>Filter / Search</h3>
+<p>For starters, as mentioned above, we relocated the search&nbsp;bar to exist on the top level of the UI, and the date picker filter now shows the current choice on the top level. Both icons were replaced, and we really think it's much more intuitive and efficient. You can read more and see examples over on the <a href="/website/news/2016/2016-03-24-filter-improvements-exceptionless-single-page-app/">dedicated blog post</a> we did last week.</p>
+<h3>New Stats API</h3>
+<p>You can now get a timeline or numbers for a comma delimited list of fields using the new stats API, which is pretty cool.</p>
+<h3>Session Management</h3>
+<p>Session management has been drastically improved by doing a few different things. For instance, inactive sessions are now closed faster, but they can be opened again if need be. We hid heartbeat events by default, too, and you can now specify manual sessions for desktop-based apps.</p>
+<h3>Manual Stacking</h3>
+<p>We introduced <a href="/website/docs/manual-stacking">custom event stacking</a> a few weeks ago, and <a href="https://github.com/adamzolotarev" target="_blank">@adamzolotarev</a>&nbsp;has added the ability to specify a manual stacking key on the client side with this release. Thanks Adam!</p>
+<h3>Discard events created from bots</h3>
+<p>A default list of bot wild card exclusions is now automatically set on new projects, so if you're upgrading, you now have the ability to run a maintenance job via the admin controller to set a default bot list. All events with user agents matching these&nbsp;wild cards will then be discarded on the client side.</p>
+<h3>Bugfixes!</h3>
+<ul>
+<li>Marking stacks as fixed or hidden was causing some significant slow down and sometimes wouldn't work at all. This has been remedied!</li>
+<li>Redis connection failures and lock timeouts were sometimes causing jobs to stop working or fail. We dug through and found what was causing that and fixed it as well.</li>
+<li>When the geo field contained a localized number, sometimes events were not being processed. This <a href="/website/news/2016/2016-02-10-add-reverse-geocoding-to-your-app/">localization</a> issue has been solved.</li>
+<li>And last but not least (well, maybe least), a seralization bug has been fixed that would cause query strings, cookies, and other extended data items to be transformed to lowercase&nbsp;and underscored.</li>
+</ul>
+<h3>Time to Upgrade</h3>
+<p>Well, only if you're a self hoster. Everyone else will experience all of these awesome improvements and bug fixes the next time they log in. If you are a self hoster, please review the <a href="/website/docs/self-hosting/" target="_blank">Self Hosting Docs</a>&nbsp;for info regarding upgrading your current Exceptionless install. Naturally, if you have any questions please let us know and we will get you taken care of.</p>
+<h2>In Conclusion</h2>
+<p>You can find a complete comparison changelog over on <a href="https://github.com/exceptionless/Exceptionless/compare/v3.2.1...v3.3.0" target="_blank">GitHub</a>, where you can also submit any issues, etc if you run across anything. Please also let us know what you think of the changes by commenting below, pinging us on social media, or simply sending Blake a <a href="http://www.ruindays.com/products/spring-loaded-glitter-bomb" target="_blank">glitter bomb</a>&nbsp;<em>(site/link not endorsed in any way, lol - first one I found!)</em>.</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2016/2016-03-24-filter-improvements-exceptionless-single-page-app/">Filter Improvements to the Exceptionless Single Page App</a></h2>
+    <p><img src="/website/assets/img/news/user-experience-search-filter-changes.png" alt="SPA filter search solutions">It's been a while since we introduced filtering and searching when we launched Exceptionless V2.0, so we decided recently that we wanted to take the feedback we've received and do a round of improvements to it.</p>
+<p>You may have already noticed the changes, but if not then the next time you log in you will see that the top bar has changed, giving you much quicker access to filtering and more upfront information.<!--more--></p>
+<h2>Filter Changes to the Desktop View</h2>
+<p>For the primary desktop view, we removed the magnifying glass icon in the top bar and simply filled the rest&nbsp;the bar with the filter (search) input box. This eliminates a click to get to the filtering system, and keeps it front and center at all times.</p>
+<p>One <strong>important note</strong>&nbsp;here is that if you want to show events that have been marked as fixed or hidden, you have to explicitly specify those filters, whereas previously those options were check boxes. So, you can use&nbsp;<code>hidden:false</code> or <code>hidden:true</code>, and <code>fixed:true</code> or <code>fixed:false</code> to view those events. Naturally, the default is false for both, showing events that have not been hidden or fixed. This means that in order to see both hidden and un-hidden events, you would need to use <code>hidden:false OR hidden:true</code>. Likewise, for fixed, you would need to use <code>fixed:true OR fixed:false</code>.</p>
+<p>You'll notice that the date/time filter has changed as well. Instead of an icon, we now display the current time frame being viewed, once again saving you a click and keeping things in front of you.</p>
+<p>As always, the filter still applies to the chosen time frame only.</p>
+<h3>Before</h3>
+<p><img src="/website/assets/img/news/old1.png" alt="old1"></p>
+<p><img src="/website/assets/img/news/old2.png" alt="old2"></p>
+<h3>After</h3>
+<p><img src="/website/assets/img/news/new7.png" alt="new7"></p>
+<p><img src="/website/assets/img/news/old3.png" alt="old3"></p>
+<h2>Mobile Changes &amp; Functionality</h2>
+<p>We also changed the user interface for smaller screens.</p>
+<p>Instead of the icons at the top of the screen, the time frame selector is now a major menu item in the mobile menu and displays the current selection with the filter/search field directly below it.</p>
+<p>This setup should allow users to filter and find the events they seek much quicker on mobile.</p>
+<h3>Before</h3>
+<p><img src="/website/assets/img/news/new2.png" alt="new2"></p>
+<h3>After</h3>
+<p><img src="/website/assets/img/news/new3.png" alt="new3"></p>
+<h2>Pretty Cool, Yeah?</h2>
+<p>We think it's a pretty nice improvement. We got feedback from several users and think making everything visible at the top level of the user interface is an important change that saves time and keeps you informed.</p>
+<p>If you've got any additional feedback, please don't hesitate to let us know. We are always looking for ways to improve, and we use Exceptionless every day too, so we are always interested in saving ourselves time and making things easier on our end!</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2016/2016-03-16-simple-app-deployment-azure-continuous-deployment-github/">Simple App Deployment with Azure Continuous Deployment and GitHub</a></h2>
+    <p><img src="/website/assets/img/news/cloud-icon.png" alt="simple app deployment">We’ve learned a lot about simple app deployment since we first started Exceptionless. We initially went with what everyone else was doing (Octopus Deploy), but over time we thought we could greatly simplify and automate it, letting us focus on what matters, improving the product!</p>
+<p>Through a lot of testing and iterations of our deployment process, we think we finally nailed it.</p>
+<p>As such, we’d like to share with the community how we use Microsoft Azure Continuous Deployment and GitHub for **awesomely simple deployments.&nbsp;**And, how you can too. See the details of implementing this deploy workflow later in the article, below.<!--more--></p>
+<h2>Exceptionless Deployment History</h2>
+<h3>In the Beginning</h3>
+<p>When we first started Exceptionless, we deployed it as a monolithic application, meaning the server and UI&nbsp;were&nbsp;one piece, or app. We used Octopus Deploy to deploy to a single IIS machine, which involved setting up a website and server for the Octopus Deploy service and configuring build agents, on each server we deployed to, that could deploy build artifacts.</p>
+<h3>The Move to Azure</h3>
+<p>After a year or so of managing Exceptionless on colocation boxes in a Dallas data center, we realized that <strong>we didn’t want to manage hardware anymore</strong> and we could scale easier on a managed service like Azure. So, we moved to Azure, where we&nbsp;had to set up a VM just to manage&nbsp;deployments with Octopus Deploy. There were also issues that we ran into with deploying to Azure WebSitThis was annoying, since every time we wanted to do a release we had to log in and tell the system to deploy to production.</p>
+<p>We knew there had to be a better way.</p>
+<h3>Two Steps Forward...</h3>
+<p>Soon, we decided to split the UI and Server apps so we could deploy and work on them independently. This also meant they could scale independently and one change to either wouldn’t cause the whole site to go down when deploying. Splitting the two&nbsp;helped a lot, but it <strong>added more work</strong> as we now had to manage two Octopus Deploy projects. So, we started looking at the <a href="https://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control/" target="_blank">Continuous Deployment in Azure</a>.</p>
+<h3>Aha! Eureka! Solution Time!</h3>
+<p>We researched further and found out that if we used <a href="https://github.com/nvie/gitflow" target="_blank">Git Flow</a> as a development workflow, we could ditch Octopus Deploy completely, remove that dependency, and just use Git push to manage our deployments.</p>
+<p>With Git Flow, you do all your work in feature branches and the <strong>master branch is always stable</strong>. This allows us to set up GitHub deployment on the master and deploy&nbsp;to Azure automatically, with no work required! So anytime we push to the GitHub master branch, it automatically deploys to production on Azure. That simple!</p>
+<h4>Here is the BASIC workflow:</h4>
+<ol>
+<li>We create a new feature branch, then work on that branch until it is completed and tested. Testing is done on the website that is currently pointed to the feature branch, which is separate from production.</li>
+<li>When we commit to any branch, our continuous integration (CI) server picks up the changes via a GitHub webhook, pulls them down, then builds the project.</li>
+<li>We then take all of the build artifacts and push them to a second GitHub repository using the same branch that the code was pushed to (for example, the master branch). This allows you to see exactly what artifacts change between releases (stateless too) and different branches.</li>
+<li>Those changes are then automatically pushed via Azure Git Deploy.</li>
+<li>Profit!</li>
+</ol>
+<p><strong>This is very slick!</strong> Since we push artifacts to the same branch they were built onto a build repository. We can then set up different environments that get auto deployed when we push to that branch. For example: When we are working on a feature,&nbsp;we commit to our branch. We can then set up a new website in Azure that&nbsp;pulls from the build server’s Git artifacts branch for that feature. This allows us to test and automate environments!</p>
+<h2>Detailed&nbsp;Continuous Deployment Setup</h2>
+<p>Here are the details on our solution for simple app deployment using GitHub and Azure.</p>
+<h3>1.&nbsp;Use AppVeyor to build the app.</h3>
+<h3>2. Store build artifacts in a separate GitHub artifacts repository.</h3>
+<p>This works really well because you can see the entire history of your build artifacts and browse their contents. Plus, GitHub hosts it for free!</p>
+<p>We found that we could that GitHub could understand and parse into different links. We can click on the "Commit:" part of the message to link to the actual commit that is building to see exactly has changed.</p>
+<p><img src="/website/assets/img/news/github-build-history-artifacts-1024x380.jpg" alt="github build history artifacts"></p>
+<p>We can then click on the build to see what artifacts changed.</p>
+<p><img src="/website/assets/img/news/gitHube-build-history-details-1024x193.jpg" alt="gitHub build history details"></p>
+<p>Another great thing about using Git to store your artifacts is that you can easily clone the artifacts to your local machine to see the exact files that are being used in a specific environment.</p>
+<p>The artifacts repository has branches to match the branches of our code repo so we have separate build artifacts for each branch. This also means that we can just merge the feature into master when we are done and that will cause the production website that is pointed to our master repository to automatically get updated. So, it’s as simple as merge your branch to master to promote a build to production.</p>
+<p><img src="/website/assets/img/news/merge-branch-master-promote-build-production.jpg" alt="merge-branch-master promote build production"></p>
+<p><strong>One issue</strong> with this approach is that the repo can get large because we are storing binary files that change on every build. We are looking into using <a href="https://git-lfs.github.com/">Git Large File Support</a> to fix this issue.</p>
+<h3>3.&nbsp;Automate pushing of artifacts to a secondary GitHub repository.</h3>
+<p>For our .NET application, <a href="https://github.com/exceptionless/Exceptionless" target="_blank">Exceptionless</a>, we invoke a PowerShell script on post build to clone and commit the changes to the <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1" target="_blank">Git artifacts repository</a>.</p>
+<ol>
+<li>Our first step is to <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L10-L11" target="_blank">clone the existing build artifacts repo to an artifacts directory</a>.</li>
+<li>Next, we <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L20-L28" target="_blank">change to the same branch that we are currently building, if it doesn’t exist we create it</a>.</li>
+<li>Then, we <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L35-L36" target="_blank">remove all existing files in the artifacts folder</a>. This ensures we don’t have any conflicts and we can see exactly what was added or removed.</li>
+<li>Next, we <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L38-L60" target="_blank">copy our build artifacts into the artifacts folder</a>. This allows us fine grained control over our artifacts.</li>
+<li>Next,&nbsp;we&nbsp;<a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L62-L67" target="_blank">try to&nbsp;commit all artifacts to the artifacts repository</a>. If there were no changes between the last build, then we exit.</li>
+<li>Next, we <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L69-L78" target="_blank">push the artifacts to our GitHub artifacts repository</a>, which will then trigger Azure Continuous Deployment to pick up the changes.</li>
+<li>Finally, we <a href="https://github.com/exceptionless/Exceptionless/blob/master/Libraries/Push-Artifacts.ps1#L80-L87" target="_blank">create tag the artifacts repository</a> which points to the specific GitHub commit we are building in our main repository.</li>
+</ol>
+<p><strong>For our static <a href="https://github.com/exceptionless/Exceptionless.UI" target="_blank">Angular JavaScript app (UI)</a>,</strong> we invoke a <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/Gruntfile.js#L51" target="_blank">Grunt publish task</a> from our post build event. The publish task called into a <a href="https://github.com/tschaub/grunt-gh-pages" target="_blank">gh-pages</a>&nbsp;<a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/grunt/task-configs/gh-pages.js" target="_blank">task</a>&nbsp;that&nbsp;publishes our built dist folder to the GitHub artifacts repository automatically.</p>
+<h3>4. Point Azure Continuous Deployment to the Artifacts Repository</h3>
+<p>It will see when new artifact commits happen and automatically deploy the changes.</p>
+<p><img src="/website/assets/img/news/azure-sees-new-artifact-commit-and-deploys-1024x846.jpg" alt="azure sees new artifact commit and deploys"></p>
+<p>Azure Continuous Deployment is another Git repository that we can easily view to see the history of deployments to each of our sites. It also allows us to easily roll back to previous versions.</p>
+<h3>5. Use Environment Variables to Override Config Settings Per Environment</h3>
+<p>Azure Websites makes this very easy.</p>
+<p><img src="/website/assets/img/news/override-config-settings-environment-variables-1024x497.jpg" alt="azure override config settings environment variables"></p>
+<p>No production settings are stored in source control or artifacts repository.</p>
+<p>For our ASP.NET application, our settings class will look up named settings in the following order:</p>
+<ol>
+<li>environment variables</li>
+<li>local config.json file</li>
+<li>app settings</li>
+</ol>
+<p>It will then fall back to a default value if no explicit settings are found.</p>
+<p><strong>Configuring our static Angular JavaScript app</strong> is a bit more work since it can't look these settings up dynamically at runtime. So instead we add some code to our deployment process.</p>
+<ul>
+<li>Azure automatically runs a <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/deploy.sh" target="_blank">deploy.sh</a> file after getting the artifacts via git deploy. It’s sole job is to run a node script that rewrites our <a href="https://github.com/exceptionless/Exceptionless.UI/blob/master/src/app.config.js" target="_blank">app.config.js</a> settings with settings defined in environment variables.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>You can create multiple Azure websites (think environments) that use Continuous Deployment and point them to multiple artifact branches to support different environments!</p>
+<p><strong>Pro Tip:</strong> We created a <a href="http://local-app.exceptionless.io">http://local-app.exceptionless.io</a> website for our spa website that’s pre-built and points to your localhost Exceptionless server. This allows us to do work on the server part without setting up or configuring a local instance of our spa app. Development made simple!</p>
+<p>We won't&nbsp;lie, it took some work to get here, but <strong>the good news is you can do this really easily too</strong>. Please feel free to steal our deployment scripts and modify them for your projects. And let us know if you have questions along the way!</p>
+</article>
+    
+  
+
+
+
+<hr>
+
+<nav class="post-navigation">
+  <ul>
+    <li>
+      <a href="/website/news/5/" rel="prev">← Previous</a>
+    </li>
+    
+
+    <li>
+      Page 6
+    </li>
+    <li>
+      <a href="/website/news/7/" rel="next">Next →</a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</div>
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

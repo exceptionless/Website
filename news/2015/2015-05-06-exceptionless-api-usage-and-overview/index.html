@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Exceptionless API Usage and Overview - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Exceptionless API Usage and Overview - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Exceptionless API Usage and Overview - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Exceptionless API Usage and Overview</h1>
+          </header>
+          <div class="entry-content">
+            <h1>THESE DOCS HAVE BEEN UPDATED. SEE THE <a href="/website/docs/api/">NEW DOCS HERE</a>.</h1>
+<p><img src="/website/assets/img/news/Screenshot-2015-05-06-16.26.42-300x220.png" alt="Exceptionless API"></p>
+<p>So you've been using Exceptionless for a while,&nbsp;but you wish you had a different dashboard, or maybe you'd like to integrate event data into one of your apps. No problem,&nbsp;<strong>just use the API!</strong></p>
+<p>Through our adventures while building Exceptionless, we've kept open source, automation, and ease of use in mind. With that,&nbsp;we think our API, which utilizes&nbsp;<a title="Swagger API Framework" href="http://swagger.io/" target="_blank">Swagger</a> and <a title="Swashbuckle" href="https://github.com/domaindrivendev/Swashbuckle" target="_blank">Swashbuckle</a> to&nbsp;automatically generate, update, and display documentation (which means it works automatically on self-hosted environments), is a great resource for our users that want to get their hands dirty and use Exceptionless data to roll their own tools, dashboards, etc.</p>
+<p>Lets take a closer look at the API, how to use it, and some quick examples of what can be done.<!--more--></p>
+<h2>Start Using the Exceptionless API</h2>
+<h3>Accessing the API</h3>
+<p>To access the Exceptionless API, visit&nbsp;<a title="Exceptionless API" href="https://api.exceptionless.io" target="_blank">https://api.exceptionless.io</a> and click on the "API Documentation" link to be taken to the API documentation.</p>
+<h3>Get&nbsp;Your User Scoped Token</h3>
+<p>Tokens are used to access the api and have roles (scopes). When you authenticate via the login controller action, you are getting a token that impersonates your user so it has the same roles as your user account (e.g., client and user).</p>
+<h4><span style="text-decoration: underline;"><a title="Exceptionless API Auth" href="https://api.exceptionless.io/docs/index.html#!/Auth/Auth_Login" target="_blank">Go to Auth controller action</a></span>&nbsp;and enter your login credentials.</h4>
+<p>You can enter JSON into the model field, or&nbsp;you an click the yellow box on the right to pre-populate the field with acceptable JSON&nbsp;fields. Just replace the values that you want to specify and remove the fields you don't need, like invite token.</p>
+<p><img src="/website/assets/img/news/01get-user-scope-token1-300x218.png" alt="Exceptionless API Get User Scoped Token"></p>
+<p>Click "Try it out!" and generate your token. Take note of the response messages section above the button, as it details the possible codes that would be returned in the event of an error (e.g. 401 if the user name or email address was incorrect).</p>
+<p><img src="/website/assets/img/news/01get-user-scope-token2-300x105.png" alt="Retrieve Exceptionless User Scoped Token"></p>
+<p>You can see from the response that it returned our token from the request url above. Take your generated token and put it in the "api_key" field at the top of the page and click "Explore." This authorizes you via bearer authentication, authenticates you to the rest api, and allows you to call controller actions.</p>
+<p><img src="/website/assets/img/news/02add-token-refresh-page-300x50.png" alt="Add Exceptionless User Scoped Token "></p>
+<h3>Get a New&nbsp;Token</h3>
+<p>Now, we’ll get a new token for the project we want to work on and assign it a user role (scope) of "user." We want to get a new user scoped token because we want to do more than just post events (client scoped tokens only allow you to post events), we want to retrieve them. Creating a new token also allows us to revoke the token later.</p>
+<p>First, get your project ID from the Exceptionless Dashboard. It can be found in the URL of that project’s dashboard.</p>
+<p><img src="/website/assets/img/news/03get-project-ID-300x141.png" alt="Get Exceptionless Project ID"></p>
+<p>Now, we’ll navigate to <a title="Exceptionless Create Token" href="https://api.exceptionless.io/docs/index.html#!/Token/Token_PostByProject" target="_blank">Tokens &gt; POST /api/v2/projects/{projectId}/tokens</a>, enter our Project ID, and set up our token to include the user scope and a quick note.</p>
+<p><img src="/website/assets/img/news/04get-new-token1-300x220.png" alt="Create Exceptionless Token"></p>
+<p>Next, we'll click "Try it out!" and generate our new token id.</p>
+<p><img src="/website/assets/img/news/04get-new-token2-300x146.png" alt="Get new Exceptionless Token ID"></p>
+<p>Now, once again, copy this new token and place it in the "api_key" field at the top of the page and click "Explore." Now everything we do will be authenticated to this new user token you’ve just created.</p>
+<h3>Posting an Event</h3>
+<p>Now, lets post an event with a reference ID that we’ll use for a few other examples.</p>
+<p>First, navigate to <a title="Exceptionless API Post Event" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_PostAsync" target="_blank">Event &gt; POST /api/v{version}/events</a></p>
+<p><img src="/website/assets/img/news/05post-event1-300x204.png" alt="Exceptionless API Post Event"></p>
+<p>You’ll see a few basic examples of events and some explanation of the resource in this panel. Make sure to give it a read. For this example, we’ll use a simple log event, with a brief message, and add a reference ID to it. <em>Note that you must also enter the current API version in the "version" field.</em></p>
+<p>When we click "Try it out!" and get a 202 response code, we know we’ve created an event.</p>
+<p><img src="/website/assets/img/news/05post-event2-e1430946143322-300x92.png" alt="Exceptionless API Created Event"></p>
+<h3>Get Event by Reference ID</h3>
+<p>If we want to get the event we just created by it’s reference_id, we can navigate to <a title="Get Exceptionless Event by ID" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_GetByReferenceId" target="_blank">Event &gt; GET /api/v2/events/by-ref/{referenceId}</a>, enter that reference ID, and get back the details of the event.</p>
+<p><img src="/website/assets/img/news/06-get-by-reference-ID2-300x271.png" alt="Get Exceptionless Event by ReferenceID"></p>
+<h3>Getting the Event via a Search Filter</h3>
+<p>Another example of getting an event may include using the reference ID or another search filter we just created and getting all by a reference filter. You can use any <a title="Exceptionless Search Filter Documentation" href="/website/docs/filtering-and-searching/" target="_blank">search filter</a> in the filter parameter.</p>
+<p>To do so, navigate to <a title="Exceptionless API Get All" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_Get" target="_blank">Event &gt; GET /api/v2/events</a> and use the reference term to filter events by the reference ID.</p>
+<p><a href="/website/assets/07-get-all-filter-reference.png"><img src="/website/assets/img/news/07-get-all-filter-reference-300x168.png" alt="Exceptionless API Get All Filter Search"></a></p>
+<p>Results</p>
+<p><img src="/website/assets/img/news/07-get-all-filter-reference2-300x183.png" alt="Exceptionless API Get Al Filter Search Results"></p>
+<h3>Get Organizations and Projects</h3>
+<p>Naturally, we can get all the organizations or projects associated with the current authorized token, as well.</p>
+<h4>Organizations</h4>
+<p>Navigate to <a title="Exceptionless API Get Organizations" href="https://api.exceptionless.io/docs/index.html#!/Organization/Organization_Get" target="_blank">Organization &gt; GET /api/v2/organizations</a> and click "Try it out!"</p>
+<p><img src="/website/assets/img/news/08get-organizations2-300x202.png" alt="Exceptionless API Get Organization Results"></p>
+<h4 style="clear: both;">
+  Projects
+</h4>
+<p>Navigate to <a title="Exceptionless API Get Projects" href="https://api.exceptionless.io/docs/index.html#!/Project/Project_Get" target="_blank">Project &gt; GET /api/v2/projects</a> and click "Try it out!"</p>
+<p><img src="/website/assets/img/news/09get-projects2-300x204.png" alt="Exceptionless API Get Projects Results"></p>
+<h2 style="clear: both;">
+  How to Authenticate to the API
+</h2>
+<h3>1. Bearer Authentication</h3>
+<p>The api documentation uses bearer authentication to authenticate to the API. You can do this in your apps too by specifying a bearer authorization header with your token as shown below.</p>
+<p><img src="/website/assets/img/news/10-bearer-auth-key-300x164.png" alt="Exceptionless Bearer Authentication"></p>
+<h3>2. Authenticate via the Query String</h3>
+<p>Everything we’ve shown you today can be easily and cleanly accessed via a URL query string and your access token.</p>
+<p>For example, if we want to view our organizations, we simply navigate to https://api.exceptionless.io/api/v2/organizations, add the query string "?access_token={token}" and press enter to get the data.</p>
+<p><img src="/website/assets/img/news/11-url-query-string-version-300x145.png" alt="Exceptionless Query String API Authentication"></p>
+<h2>Let Us Know What You Think!</h2>
+<p>We've tried to make the API as easy and intuitive to use as possible, but we're always open to feedback and comments, so please let us know what could be better, easier, faster, etc.</p>
+<p>And, of course, if you have any questions about the API, please leave a comment here, send us an in-app support message, or simply submit the website <a href="/website/contact/" title="Contact Exceptionless">contact form</a>.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

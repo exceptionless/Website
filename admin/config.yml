@@ -1,0 +1,124 @@
+backend:
+  name: github
+  repo: exceptionless/Website
+  branch: feature/lume-conversion
+  open_authoring: true
+publish_mode: editorial_workflow
+media_folder: content/assets/img
+public_folder: assets/img
+display_url: /website/
+collections:
+  - label: Posts
+    label_singular: Post
+    name: posts
+    description: Here you can create or edit your posts
+    folder: content/news/2022
+    media_folder: content/news/2022
+    public_folder: news/2022
+    preview: false
+    create: true
+    view_filters:
+      - label: Drafts
+        field: draft
+        pattern: true
+    fields:
+      - label: title
+        name: title
+        widget: string
+      - label: description
+        name: description
+        widget: string
+      - label: image
+        name: image
+        widget: image
+      - label: date
+        name: date
+        widget: datetime
+      - label: tags
+        name: tags
+        widget: list
+      - label: draft
+        name: draft
+        widget: boolean
+      - label: body
+        name: body
+        widget: markdown
+  - label: Docs
+    label_singular: Doc
+    name: docs
+    description: Here you can create or edit docs
+    folder: content/docs
+    preview: false
+    create: true
+    view_filters:
+      - label: Drafts
+        field: draft
+        pattern: true
+    fields:
+      - label: title
+        name: title
+        widget: string
+      - label: description
+        name: description
+        widget: string
+      - label: image
+        name: image
+        widget: image
+      - label: date
+        name: date
+        widget: datetime
+      - label: tags
+        name: tags
+        widget: list
+      - label: draft
+        name: draft
+        widget: boolean
+      - label: body
+        name: body
+        widget: markdown
+  - label: Pages
+    name: pages
+    description: Here you can edit your individual pages
+    preview: false
+    files:
+      - label: About
+        name: about
+        file: /content/about.md
+        fields: &ref_0
+          - label: title
+            name: title
+            widget: string
+          - label: url
+            name: url
+            widget: string
+          - label: body
+            name: body
+            widget: markdown
+          - label: menu
+            name: menu
+            widget: object
+            fields:
+              - label: visible
+                name: visible
+                widget: boolean
+              - label: order
+                name: order
+                widget: number
+          - label: templateClass
+            name: templateclass
+            widget: hidden
+          - label: layout
+            name: layout
+            widget: hidden
+      - label: '404'
+        name: '404'
+        file: /content/404.md
+        fields: *ref_0
+      - label: Privacy Policy
+        name: privacy
+        file: /content/privacy.md
+        fields: *ref_0
+      - label: Terms
+        name: terms
+        file: /content/terms.md
+        fields: *ref_0

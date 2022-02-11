@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Logging Feature Usages with Exceptionless - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Logging Feature Usages with Exceptionless - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Logging Feature Usages with Exceptionless - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Logging Feature Usages with Exceptionless</h1>
+          </header>
+          <div class="entry-content">
+            <p><img src="/website/assets/img/news/feature-usage.png" alt="Exceptionless Feature Usage">The ability to log feature usages is one of the many <a title="Exceptionless 2.0 Launch Article" href="/website/its-go-time-exceptionless-2-0-launched/" target="_blank" rel="noopener noreferrer">new... features... of Exceptionless 2.0</a>.</p>
+<p>If you&nbsp;want to know when a button is being clicked, or what users are&nbsp;doing certain tasks, feature usage logging will help you track and visualize each occurrence.</p>
+<p>What you learn from logging these types of feature usages might surprise you, and at the very least you'll know more about how users interact with your system.<!--more--></p>
+<h2>How to Submit a Feature Usage</h2>
+<h3>Using the client</h3>
+<p>For this example, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="/website/docs/clients/dotnet/configuration/" target="_blank" rel="noopener noreferrer">configured</a> the Exceptionless 2.0 client. If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="/website/docs/clients/dotnet/upgrading/" target="_blank" rel="noopener noreferrer">upgrade</a> to send us feature usage events. Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/website/contact/" target="_blank" rel="noopener noreferrer">contact page</a> if you have any questions or need assistance in this area.</p>
+<h4>Example 1 - Signup</h4>
+<p>In the example below, we are going to submit a feature usage when any user signs up.</p>
+<p><strong>To submit the feature occurrence, you just need to call our api as follows:</strong></p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.SubmitFeatureUsage(<span class="hljs-string">"Signup"</span>);
+</code></pre>
+<p>SubmitFeatureUsage creates a simple feature usage and submits it. To include more information, please use CreateFeatureUsage (example below).</p>
+<h4>More detailed examples</h4>
+<p>You can also submit additional information with a feature usage using our fluent api. This is nice when you want to add contextual information, contact information, or a tag.</p>
+<h4>Example 2 - Signup with tags</h4>
+<p>If, for instance, you wanted to indicate how a user signs up, you can add a tag to the feature usage occurrence. In the below example, we are tagging a feature usage that uses GitHub to sign up.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.CreateFeatureUsage(<span class="hljs-string">"Signup"</span>).AddTags(<span class="hljs-string">"GitHub"</span>).Submit();
+</code></pre>
+<h4>Example 3 - Who's Searching?</h4>
+<p>As another example, maybe we want to log a feature usage when users search, and then set their identity.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.CreateFeatureUsage(<span class="hljs-string">"Searching"</span>).SetUserIdentity(<span class="hljs-string">"John Smith"</span>);
+</code></pre>
+<h4>What else can I add to a submission?</h4>
+<p>There are a number of additional pieces of data you can use for your event.&nbsp;The below bullets&nbsp;include the current EventBuilder list, but we are always adding more that can be found on <a title="Exceptionless EventBuilder.cs" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/EventBuilder.cs" target="_blank" rel="noopener noreferrer">GitHub</a>. Also, view more examples here on our <a title="Send Exceptionless Events" href="/website/docs/clients/dotnet/sending-events/" target="_blank" rel="noopener noreferrer">Sending Events</a> page.</p>
+<ul>
+<li>AddTags</li>
+<li>SetProperty</li>
+<li>AddObject</li>
+<li>MarkAsCritical</li>
+<li>SetUserIdentity</li>
+<li>SetUserDescription</li>
+<li>SetVersion</li>
+<li>SetSource</li>
+<li>SetSessionId</li>
+<li>SetReferenceId</li>
+<li>SetMessage</li>
+<li>SetGeo</li>
+<li>SetValue</li>
+<li>And more, depending on your client</li>
+</ul>
+<h3>Using the&nbsp;REST API</h3>
+<p>You can also submit a feature usage by posting JSON to our API. See details in our <a title="Exceptionless JSON Post API Documentation" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_Post" target="_blank" rel="noopener noreferrer">API Documentation</a>. If you need an API key for simply posting events, you can find it in your <a title="Exceptionless" href="https://be.exceptionless.io" target="_blank" rel="noopener noreferrer">project settings</a>. Otherwise, please refer to the&nbsp;<a title="Exceptionless Auth Login API Documentation" href="https://api.exceptionless.io/docs/index.html#!/Auth/Auth_Login" target="_blank" rel="noopener noreferrer">auth login documentation</a>&nbsp;to get a user&nbsp;scoped api key.</p>
+<pre><code class="language-json hljs"><span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"usage"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"source"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Signup"</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h2>The Dashboard</h2>
+<p>Feature usage logging&nbsp;makes it very easy to see how often&nbsp;a feature, such as logging into an account, is used over time. If usage of one type of login, for instances, is never used, there might be an issue or you could consider removing it (less code debt). Or, if one is used the majority of the time, maybe it should be first in the list. There are almost unlimited ways you can use feature usage data to improve user experience.</p>
+<p><img src="/website/assets/img/news/feature-usage-dashboard-1024x603.png" alt="Exceptionless Feature Usage Dashboard"></p>
+<p>If we&nbsp;click on the stack for the signup feature, it shows the tag list of the providers that have been used to signup (GitHub and Google, in this instance).</p>
+<p><img src="/website/assets/img/news/feature-usage-stack-tags.png" alt="Exceptionless Feature Usage Stack"></p>
+<p>You can even go further and filter by a tag to see exactly how people are logging into your system using the search filter. Example: "tag:GitHub"</p>
+<p><img src="/website/assets/img/news/feature-usage-tag-github.png" alt="Exceptionless Feature Usage Filtering Searching"></p>
+<p>Regarding the SetUserIdentity example above, we can see that user information being appended to a feature usage occurrence if we visit the "Search" feature and view an occurrence.</p>
+<p><img src="/website/assets/img/news/feature-usage-searching-userID.png" alt="Exceptionless Feature Usage User Info"></p>
+<h2>Cool Stuff, Right?</h2>
+<p>We think so, and we hope you do too. Either way, we're always looking for feedback, so let us know what you think via the comments below, an in app support message, or via the <a href="/website/contact/" title="Contact Exceptionless">contact page</a>.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

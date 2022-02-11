@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Client Configuration Values - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Client Configuration Values - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Client Configuration Values - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Documentation</h1>
+</div>
+
+<div id="wrap" class="container" role="document">  
+  <div id="responsive-menu"><button class="btn btn-primary" onclick="handleMenu()">Table of Contents</button></div>
+  <div id="content" class="row-fluid">
+    <div class="toc well span3 visible-toc">
+      <div class="input-append">
+        <input class="span9" id="search-input" type="text" placeholder="Search docs...">
+        <button class="btn" type="button" onclick="handleSearch()">Go!</button>
+      </div>
+      
+
+    </div>
+    <div class="well span9 docs">
+      <h1>Client Configuration Values</h1>
+      <h2>Index</h2>
+<ul>
+<li><a href="#index">Index</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#usage-example">Usage Example</a></li>
+<li><a href="#net-helpers">.NET Helpers</a></li>
+<li><a href="#updating-client-configuration-settings">Updating Client Configuration settings</a></li>
+<li><a href="#subscribing-to-client-configuration-setting-changes">Subscribing to Client Configuration Setting changes</a></li>
+</ul>
+<h2>About</h2>
+<p><a href="/website/docs/project-settings/">Read about client configuration and view in-depth examples</a></p>
+<h2>Usage Example</h2>
+<p>The below example demonstrates <strong>how we would turn on or off log event submissions at runtime</strong> without redeploying the app or changing server config settings.</p>
+<p>First, we add a (completely arbitrary for this example) <code>enableLogSubmission</code> client configuration value key with value <code>true</code> in the Project's Settings in the Exceptionless dashboard.</p>
+<p>Then, we register a new client side plugin that runs each time an event is created. If our key (<code>enableLogSubmission</code>) is set to false and the event type is set to log, we will discard the event.</p>
+<pre><code class="language-csharp hljs">ExceptionlessClient.Default.Configuration.AddPlugin(<span class="hljs-string">"Conditionally cancel log submission"</span>, <span class="hljs-number">100</span>, context =&gt; {
+    <span class="hljs-keyword">var</span> enableLogSubmission = context.Client.Configuration.Settings.GetBoolean(<span class="hljs-string">"enableLogSubmission"</span>, <span class="hljs-literal">true</span>);
+ 
+    <span class="hljs-comment">// only cancel event submission if it’s a log event and enableLogSubmission is false</span>
+    <span class="hljs-keyword">if</span> (context.Event.Type == Event.KnownTypes.Log &amp;&amp; !enableLogSubmission) {
+        context.Cancel = <span class="hljs-literal">true</span>;
+    }
+});
+</code></pre>
+<hr>
+<h2>.NET Helpers</h2>
+<p>The <code>GetBoolean</code> method checks the <code>enableLogSubmission</code> key. This helper method makes it easy to consume saved client configuration values. The first parameter defines the settings key (name). The second parameter is optional and allows you to set a default value if the key doesn’t exist in the settings or was unable to be converted to the proper type (e.g., a boolean).</p>
+<p>We have a few helpers to convert string configuration values to different system types. These methods also contain overloads that allow you to specify default values.</p>
+<p>###Helpers###</p>
+<ul>
+<li><code>GetString</code></li>
+<li><code>GetBoolean</code></li>
+<li><code>GetInt32</code></li>
+<li><code>GetInt64</code></li>
+<li><code>GetDouble</code></li>
+<li><code>GetDateTime</code></li>
+<li><code>GetDateTimeOffset</code></li>
+<li><code>GetGuid</code></li>
+<li><code>GetStringCollection</code> (breaks a comma delimited list into an IEnumerable of strings)</li>
+</ul>
+<hr>
+<h2>Updating Client Configuration settings</h2>
+<p>All project settings are synced to the client in almost real time. When an event is submitted to Exceptionless we send down a response header with the current configuration version. If a newer version is available we will immediately retrieve and apply the latest configuration.</p>
+<p>By default the client will check after <code>5 seconds</code> on client startup (<em>if no events are submitted on startup</em>) and then every <code>2 minutes</code> after the last event submission for updated configuration settings.</p>
+<ul>
+<li>Checking for updated settings doesn't count towards plan limits.</li>
+<li>Only the current configuration version is sent when checking for updated settings (no user information will ever be sent).</li>
+<li>If the settings haven't changed, then no settings will be retrieved.</li>
+</ul>
+<p>You can also <strong>turn off the automatic updating of configuration settings when idle</strong> using the code below.</p>
+<pre><code class="language-csharp hljs">ExceptionlessClient.Default.Configuration.UpdateSettingsWhenIdleInterval = TimeSpan.Zero;
+</code></pre>
+<p>You can also manually update the configuration settings using the code below.</p>
+<pre><code class="language-csharp hljs">Exceptionless.Configuration.SettingsManager.UpdateSettings(ExceptionlessClient.Default.Configuration);
+</code></pre>
+<h2>Subscribing to Client Configuration Setting changes</h2>
+<p>To be notified when client configuration settings change, subscribe to them using the below code.</p>
+<pre><code class="language-csharp hljs">ExceptionlessClient.Default.Configuration.Settings.Changed += SettingsOnChanged;
+ 
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SettingsOnChanged</span>(<span class="hljs-params"><span class="hljs-built_in">object</span> sender, ChangedEventArgs&lt;KeyValuePair&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">string</span>&gt;&gt; args</span>)</span> {
+   Console.WriteLine(<span class="hljs-string">"The key {0} was {1}"</span>, args.Item.Key, args.Action);
+}
+</code></pre>
+<hr>
+<p class="text-right"><a href="/website/docs/clients/dotnet/guides/">Next &gt; Platform Guides</a></p>
+   
+    </div>
+  </div>
+</div>
+
+<script>
+    const handleMenu = () => {
+        const menu = document.querySelector(".toc");
+        menu.classList.toggle("hidden-toc");
+        menu.classList.toggle("visible-toc");
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const search = document.getElementById("search-input")
+        search.addEventListener("keyup", ({key}) => {
+          if (key === "Enter") {
+            handleSearch();
+          }
+        })
+    })
+    const handleSearch = async () => {
+      const searchTerm = document.getElementById("search-input").value;
+      const queryString = encodeURI(searchTerm)
+      window.location = `/search?term=${queryString}`;
+    }
+</script>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

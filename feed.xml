@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Exceptionless</title>
+	<subtitle>Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.</subtitle>
+	<link href="https://exceptionless.github.io/website/feed.xml" rel="self"/>
+	<link href="https://exceptionless.github.io/website/"/>
+	
+	<updated>2022-02-11T14:26:18Z</updated>
+	<id>https://exceptionless.github.io/website/</id>
+	<author>
+		<name>Exceptionless Team</name>
+		<email>team@exceptionless.com</email>
+	</author>
+	<entry>
+		<title>Announcing The New Exceptionless JavaScript Client</title>
+		<link href="https://exceptionless.github.io/website/news/2021/2021-09-09-announcing-the-new-exceptionless-javascript-client/"/>
+		<updated>2021-09-09T00:00:00Z</updated>
+		<id>https://exceptionless.github.io/website/news/2021/2021-09-09-announcing-the-new-exceptionless-javascript-client/</id>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;./js_client_2_0_announcement.png&quot; alt=&quot;Exceptionless announcement&quot;&gt;&lt;/p&gt;
+&lt;p&gt;We have had a JavaScript client for several years, but it was quickly becoming out of date. To help address the issues with a fast-moving JavaScript landscape and to extend our JavaScript support, we have recently released a completely rewritten client that supports multiple JavaScript frameworks.&lt;/p&gt;
+&lt;p&gt;If you just want to dive into the documentation, &lt;a href=&quot;../../docs/clients/javascript/index.md&quot;&gt;you can review that here&lt;/a&gt;. If you want the story behind the rewrite, let&#39;s talk about some of the challenges we wanted to solve.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Support for additional frameworks&lt;/li&gt;
+&lt;li&gt;Bring the client up to modern JavaScript standards&lt;/li&gt;
+&lt;li&gt;Have a little more code separation&lt;/li&gt;
+&lt;li&gt;Provide a better developer experience&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We&#39;ll talk about each one of these points in a little more detail. But first, let&#39;s dive into the architecture a bit.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./exceptionless.drawio.png&quot; alt=&quot;Exceptionless JS architecture diagram&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Everything starts with Exceptionless JS Core. From there, we extend into specific environment implementations. The Node.js environment has different requirements than tha browser environment. Framework-specific environments like React and Vue have different requirements than the browser environment. By starting with the Core JS implementation, we can extend in any direction to any framework.&lt;/p&gt;
+&lt;p&gt;Speaking of frameworks...&lt;/p&gt;
+&lt;h2&gt;Support for additional frameworks&lt;/h2&gt;
+&lt;p&gt;When Exceptionless launched, the JavaScript ecosystem was powered by Bower, front-end applications were built with jQuery, and supporting IE6 was a legitimate concern on the minds of many developers. Over time, the ecosystem grew. We got React, Vue, Express, Typescript support became popular, and React Native made it easy for web devs to jump into building mobile apps.&lt;/p&gt;
+&lt;p&gt;While Exceptionless continued to work well for most use cases, it was clear we needed an updated client to support the exploding ecosystem. React Native was one of our specific targets because Exceptionless&#39;s JS client flat-out couldn&#39;t work in React Native. But while we were at it, we wanted to make Vue.js support easier, add some native React functionality, and more. What we arrived at is a more robust client with individual sub-clients for various frameworks.&lt;/p&gt;
+&lt;h2&gt;Bring the client up to modern JavaScript standards&lt;/h2&gt;
+&lt;p&gt;ECMAScript has progressed a lot in the last ten years. It was clear that we would need to re-write our client to keep up. With our new implementation, it will be much easier to stay on top of new features and experimental features.&lt;/p&gt;
+&lt;p&gt;The JavaScript client is a set of ESM modules built on modern JavaScript, so Exceptionless is set now and into the future.&lt;/p&gt;
+&lt;h2&gt;Have a little more code separation&lt;/h2&gt;
+&lt;p&gt;This is not a question of monorepo or not. Instead, we recognized that we were trying to cover browser code and server code all in one package. This made things difficult, not to mention we didn&#39;t yet have support for specific frameworks (besides Angular 1.0).&lt;/p&gt;
+&lt;p&gt;Since we knew we were going to extend our support, it made sense to rebuild the client in a way that allowed us to publish updates to specific sub-modules rather than to the entire core JavaScript client every time.&lt;/p&gt;
+&lt;h2&gt;Provide a better developer experience&lt;/h2&gt;
+&lt;p&gt;Developers are at Exceptionless&#39;s core. We are developers. We are part of the open-source community. Everything we build should make life easier for developers.&lt;/p&gt;
+&lt;p&gt;This new version of our JavaScript client makes things significantly easier. Developers can reach for a specific client module, like Vue.js for example, rather than trying to shoehorn in a vanilla JavaScript client. React developers now have Error Boundary support built into the Exceptionless client. React Native developers can now use the client instead of writing raw API requests on their own.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;It took months of work, but the new Exceptionless JavaScript client is a completely rebuilt, all-new solution to event monitoring in JS. Exceptionless is proud to support the vibrant JavaScript ecosystem, and we believe this release positions us to update and stay ahead (or as close to ahead as anyone can get) of new JavaScript standards and updates into the future.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>How To Use Error Boundaries in React</title>
+		<link href="https://exceptionless.github.io/website/news/2021/2021-08-16-how-to-use-error-boundaries-in-react/"/>
+		<updated>2021-08-16T00:00:00Z</updated>
+		<id>https://exceptionless.github.io/website/news/2021/2021-08-16-how-to-use-error-boundaries-in-react/</id>
+		<content type="html">&lt;p&gt;Backend engineers have all the tools. Nice error handling. Reporting. Metrics. What about us frontend devs? Sure, we can catch errors in our functions, but what about errors in our presentational code? Take React for example. Write some bad code in your function component and the whole app crashes.&lt;/p&gt;
+&lt;p&gt;Fortunately, frontend devs are getting more and more tools to help them with error handling. In fact, with the release of React 16, a new tool was added to the toolbox designed to specifically handle errors in components. &lt;a href=&quot;https://reactjs.org/docs/error-boundaries.html&quot;&gt;Error Boundaries allow developers to catch and handle&lt;/a&gt; errors in the presentational layer of React applications. From the React team&#39;s announcement:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the past, JavaScript errors inside components used to corrupt React’s internal state and cause it to emit cryptic errors on next renders. These errors were always caused by an earlier error in the application code, but React did not provide a way to handle them gracefully in components, and could not recover from them.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That all changed with React 16. However, if you wanted to recover from a presentational layer error AND report it, there wasn&#39;t anything out of the box to help you. This is where &lt;a href=&quot;https://exceptionless.com/?utm_source=first_signup&amp;amp;utm_medium=blog&amp;amp;utm_campaign=error_boundary&quot;&gt;Exceptionless&lt;/a&gt; (an open-source error handling and monitoring tool) and React work really well together.&lt;/p&gt;
+&lt;p&gt;Let&#39;s run through a quick tutorial that creates a React app that does the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Creates an Error Boundary&lt;/li&gt;
+&lt;li&gt;Forces an error in a function component&lt;/li&gt;
+&lt;li&gt;Recovers from that error&lt;/li&gt;
+&lt;li&gt;Reports it to our monitoring service (Exceptionless)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Getting Started&lt;/h2&gt;
+&lt;p&gt;For this tutorial, you will need to have the following installed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js v12 or greater&lt;/li&gt;
+&lt;li&gt;NPM&lt;/li&gt;
+&lt;li&gt;Text editor&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://exceptionless.com/?utm_source=second_signup&amp;amp;utm_medium=blog&amp;amp;utm_campaign=error_boundary&quot;&gt;Free account on Exceptionless&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With those things in place, let&#39;s generate our React app. From the command line, run the following:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;npx create-react-app error-boundary-example&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;When your app is created, change into the directory and install the Exceptionless React package:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd error-boundary-example &amp;amp;&amp;amp; npm i @exceptionless/react&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This should get you set up with an app and the required package. Now, let&#39;s write a bit of code to show off the functionality. We&#39;ll walk through setting up an Error Boundary first.&lt;/p&gt;
+&lt;h2&gt;Creating an Error Boundary in React&lt;/h2&gt;
+&lt;p&gt;The first thing we need to do is create an Error Boundary file. This will act as a wrapper component for the rest of our application. In &lt;code&gt;src&lt;/code&gt; folder of your React application, create a new file called &lt;code&gt;ErrorBoundary.js&lt;/code&gt;. This will allow us to render a fallback when we hit an error in our component. We&#39;ll use Exceptionless&#39;s built-in Error Boundary to actually handle reporting the error. You&#39;ll see that soon, but let&#39;s focus on rendering the fallback for now.&lt;/p&gt;
+&lt;p&gt;Inside your new file, add the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;import React from &amp;quot;react&amp;quot;;
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        &amp;lt;div&amp;gt;
+          &amp;lt;h1&amp;gt;Uh oh!&amp;lt;/h1&amp;gt;
+          &amp;lt;p&amp;gt;
+            This wasn&#39;t supposed to happen. If you continue to see this message,
+            please reach out to support.
+          &amp;lt;/p&amp;gt;
+        &amp;lt;/div&amp;gt;
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This file will, again, wrap our main application code. So it will work throughout all of our components. If there&#39;s an error in a component, rather than totally crashing the application, it will render what we have in our render method here. You can change this to include whatever styling and information you&#39;d like. I kept mine pretty simple.&lt;/p&gt;
+&lt;p&gt;Now, we need to connect this to our application components.&lt;/p&gt;
+&lt;h2&gt;Wrapping The App Component&lt;/h2&gt;
+&lt;p&gt;You may have many providers in your application that all wrap your main &lt;code&gt;App&lt;/code&gt; component. That&#39;s OK. This new Error Boundary component will simply wrap everything at the top level. Go to your &lt;code&gt;index.js&lt;/code&gt; and update your file to look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;import React from &#39;react&#39;;
+import ReactDOM from &#39;react-dom&#39;;
+import &#39;./index.css&#39;;
+import App from &#39;./App&#39;;
+import reportWebVitals from &#39;./reportWebVitals&#39;;
+import ErrorBoundary from &#39;./ErrorBoundary&#39;;
+
+ReactDOM.render(
+  &amp;lt;React.StrictMode&amp;gt;
+    &amp;lt;ErrorBoundary&amp;gt;
+      &amp;lt;App /&amp;gt;
+    &amp;lt;/ErrorBoundary&amp;gt;
+  &amp;lt;/React.StrictMode&amp;gt;,
+  document.getElementById(&#39;root&#39;)
+);
+
+reportWebVitals();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, before we handle reporting the error to Exceptionless, let&#39;s make sure this code works. Start up your application with &lt;code&gt;npm start&lt;/code&gt;. We need to force an error. So, go into your &lt;code&gt;App.js&lt;/code&gt; file and add an undefined variable into your component body:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;import logo from &#39;./logo.svg&#39;;
+import &#39;./App.css&#39;;
+
+function App() {
+  return (
+    &amp;lt;div className=&amp;quot;App&amp;quot;&amp;gt;
+      &amp;lt;header className=&amp;quot;App-header&amp;quot;&amp;gt;
+        &amp;lt;p&amp;gt;{undefinedVariable}&amp;lt;/p&amp;gt;
+        &amp;lt;img src={logo} className=&amp;quot;App-logo&amp;quot; alt=&amp;quot;logo&amp;quot; /&amp;gt;
+        &amp;lt;p&amp;gt;
+          Edit &amp;lt;code&amp;gt;src/App.js&amp;lt;/code&amp;gt; and save to reload.
+        &amp;lt;/p&amp;gt;
+        &amp;lt;a
+          className=&amp;quot;App-link&amp;quot;
+          href=&amp;quot;https://reactjs.org&amp;quot;
+          target=&amp;quot;_blank&amp;quot;
+          rel=&amp;quot;noopener noreferrer&amp;quot;
+        &amp;gt;
+          Learn React
+        &amp;lt;/a&amp;gt;
+      &amp;lt;/header&amp;gt;
+    &amp;lt;/div&amp;gt;
+  );
+}
+
+export default App;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can see I&#39;ve added &lt;code&gt;undefinedVariable&lt;/code&gt; into the component. Because that variable is, well, undefined, the component will break. Save your code and check out the app. You&#39;ll see...&lt;/p&gt;
+&lt;p&gt;...an error message still. What gives?&lt;/p&gt;
+&lt;p&gt;Well, in development mode, React is going to try to help you out by rendering the error on screen. If you refresh the page, you should see your fallback component render for a split-second before the error appears on screen. When this code is deployed to a production environment, the error won&#39;t be displayed on screen. You know this because you&#39;ve seen your production React apps crash. We all have. It shows a white screen. That&#39;s it. Now, though, your app will show the fallback screen.&lt;/p&gt;
+&lt;p&gt;Pretty cool!&lt;/p&gt;
+&lt;p&gt;Now, we need to make sure the error is reported back to our monitoring system. We will surely get emails from customers about this, but having the details handy might help us solve the problem before our support team can even get to those emails.&lt;/p&gt;
+&lt;h2&gt;Capturing Errors&lt;/h2&gt;
+&lt;p&gt;Now that we can display a message, Let&#39;s work on capturing the error and sending it to our reporting system—Exceptionless.&lt;/p&gt;
+&lt;p&gt;The Exceptionless React package includes an Error Boundary helper called &lt;code&gt;ExceptionlessErrorBoundary&lt;/code&gt;. All we need to do is import this into our &lt;code&gt;index.js&lt;/code&gt; and wrap our &lt;code&gt;App&lt;/code&gt; component with it. You&#39;ll need to grab yourself an API key from your Exceptionless account for this. You can &lt;a href=&quot;../../docs/api/api-getting-started.md&quot;&gt;follow this guide to do so&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let&#39;s take a look at what the code looks like. This is what you should update your &lt;code&gt;index.js&lt;/code&gt; file to look like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;import React from &#39;react&#39;;
+import ReactDOM from &#39;react-dom&#39;;
+import &#39;./index.css&#39;;
+import App from &#39;./App&#39;;
+import reportWebVitals from &#39;./reportWebVitals&#39;;
+import {
+  Exceptionless, 
+  ExceptionlessErrorBoundary
+} from &amp;quot;@exceptionless/react&amp;quot;;
+import ErrorBoundary from &#39;./ErrorBoundary&#39;;
+
+const startExceptionless = async () =&amp;gt; {
+  await Exceptionless.startup((c) =&amp;gt; {
+    c.apiKey = &amp;quot;YOUR API KEY&amp;quot;;
+    c.useDebugLogger();
+
+    c.defaultTags.push(&amp;quot;Example&amp;quot;, &amp;quot;React&amp;quot;);
+  });
+};
+
+startExceptionless();
+
+ReactDOM.render(
+  &amp;lt;React.StrictMode&amp;gt;
+    &amp;lt;ErrorBoundary&amp;gt;
+      &amp;lt;ExceptionlessErrorBoundary&amp;gt;
+        &amp;lt;App /&amp;gt;
+      &amp;lt;/ExceptionlessErrorBoundary&amp;gt;
+    &amp;lt;/ErrorBoundary&amp;gt;
+  &amp;lt;/React.StrictMode&amp;gt;,
+  document.getElementById(&#39;root&#39;)
+);
+
+reportWebVitals();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now go back to your React app and re-load. You won&#39;t necessarily see it there, but the error event was sent to Exceptionless. Open up your Exceptionless dashboard and take a look at the Exceptions events:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./ErrorBoundaryException.png&quot; alt=&quot;exception events with error boundary example&quot;&gt;&lt;/p&gt;
+&lt;p&gt;You can click into your exceptions to get more details. In this case, we will see what the variable was and the full stack trace for our React app.&lt;/p&gt;
+&lt;h2&gt;Wrapping Up&lt;/h2&gt;
+&lt;p&gt;Error Boundaries in React are powerful tools in helping you debug and quickly fix your applications. You can see how quickly we set this up to not only render a fallback UI and to report to an error monitoring service. You could write even less code and only report the error if you wanted to, but I&#39;ll leave that up to you.&lt;/p&gt;
+&lt;p&gt;There are plenty of error monitoring services out there that you can plug this into, but if you&#39;re interested in an open-source solution, get started with &lt;a href=&quot;https://exceptionless.com/?utm_source=third_signup&amp;amp;utm_medium=blog&amp;amp;utm_campaign=error_boundary&quot;&gt;Exceptionless&lt;/a&gt; today.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>Navigating The Exceptionless World of Go</title>
+		<link href="https://exceptionless.github.io/website/news/2021/2021-04-19-navigating-the-exceptionless-world-of-go/"/>
+		<updated>2021-04-19T00:00:00Z</updated>
+		<id>https://exceptionless.github.io/website/news/2021/2021-04-19-navigating-the-exceptionless-world-of-go/</id>
+		<content type="html">&lt;p&gt;Go does not have the concept of exceptions. Welp, I guess &lt;a href=&quot;https://exceptionless.com/&quot;&gt;Exceptionless&lt;/a&gt; doesn&#39;t apply. Let&#39;s pack it up and head home, everyone.&lt;/p&gt;
+&lt;p&gt;Kidding, of course. While Go really doesn&#39;t have the concept of exceptions, errors still happen in Go codebases, and those errors need to be handled. Having recently built an Exceptionless client in Go, we had the opportunity to take a deep dive into the Go programming language, and we&#39;d like to share some of what we discovered along the way.&lt;/p&gt;
+&lt;h3&gt;No Scrubs, No Exceptions&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/ty48ztZKklU6k/giphy.gif&quot; alt=&quot;Gif of No Scrubs music video&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Let&#39;s take a quick look at why the Go programming language doesn&#39;t have exceptions, and then we can dive into how we work around this. From the Go FAQ:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We believe that coupling exceptions to a control structure, as in the try-catch-finally idiom, results in convoluted code. It also tends to encourage programmers to label too many ordinary errors, such as failing to open a file, as exceptional.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Essentially, Go doesn&#39;t want any scrubs (try/catch paradigm) hanging out the passenger side of their best friend&#39;s (that&#39;s you) ride trying to call things exceptions. Not everything is fatal. Not everything is an exception. Errors can happen without being so extraordinary to be considered an exception. As such, Go made the opinionated decision to simply not acknowledge exceptions as a construct.&lt;/p&gt;
+&lt;p&gt;For those instances where an error is truly catastrophic, Go has some build in mechanism to handle and recover. Those are &lt;a href=&quot;https://blog.golang.org/defer-panic-and-recover&quot;&gt;documented here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So with no exceptions, how should errors be handled when using Exceptionless?&lt;/p&gt;
+&lt;h3&gt;No Exceptions != No Errors&lt;/h3&gt;
+&lt;p&gt;Just because there are no exceptions doesn&#39;t mean there are no errors. Fortunately, Go has a well-documented paradigm for handling errors without the need for something like an exception.&lt;/p&gt;
+&lt;p&gt;Every function you write in Go can have multiple return values. So, a well-written function will return both an error and the actual function&#39;s response. Let&#39;s take a look at a very basic example of this.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;package main 
+
+import ( 
+	&amp;quot;github.com/go-errors/errors&amp;quot;
+)
+
+func CombineStrings(string1 string, string2 string) (string, error) {
+	var errToReturn error
+	
+  if string1 == &amp;quot;&amp;quot; || string2 == &amp;quot;&amp;quot; {
+    errToReturn = errors.New(fmt.Sprintf(&amp;quot;Strings must have at least one character&amp;quot;))
+  }
+
+  returnValue := string1 + string2
+	return returnValue, errToReturn
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this example, we are using the &lt;code&gt;go-errors&lt;/code&gt; module to build an error of the type &lt;code&gt;error&lt;/code&gt;. We do a simple check to see if both of the string arguments to our function are not empty. If either is empty, we assign an error to the variable &lt;code&gt;errToReturn&lt;/code&gt;. Then, in our return statement, we return both the expected return value of the function and the error.&lt;/p&gt;
+&lt;p&gt;When calling this function, the developer needs to first check for an error before moving on. That might look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;combinedString, err := CombineString(&amp;quot;hello, &amp;quot;, &amp;quot;world&amp;quot;)
+
+if err != nil {
+  //Handle Error
+}
+
+fmt.Print(combinedString)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If an error is so bad that your code cannot execute any further, you may want to call Go&#39;s built in handler, &lt;code&gt;panic&lt;/code&gt;, like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;if err != nil {
+  panic(err)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Ok, So How Do We Use Exceptionless in an Exceptionless Environment?&lt;/h3&gt;
+&lt;p&gt;Exceptionless (that&#39;s us) is a way of thinking about your code. It does not actually rely on the concepts of exceptions. In fact, Exceptionless is so much more than error/exception handling.&lt;/p&gt;
+&lt;p&gt;So, with that framing, it becomes a lot more clear that Exceptionless can very easily be used within Go code to handle errors. In fact, the structure for using Exceptionless in Go is not all that different from other programming languages.&lt;/p&gt;
+&lt;p&gt;We have a (currently as of the writing of this post) beta version of a &lt;a href=&quot;https://github.com/exceptionless/Exceptionless.Go&quot;&gt;Go Exceptionless client&lt;/a&gt;. You can find that here. I&#39;ll show you how to use the client, but do note that the client API could change until it&#39;s out of beta. The goal here is less about showing off the Go client and more about showing you how to handle errors with an event monitoring service within Go.&lt;/p&gt;
+&lt;p&gt;The first thing you&#39;ll need to do is sign up for Exceptionless and get an API Key. &lt;a href=&quot;https://exceptionless.com/&quot;&gt;You can sign up here&lt;/a&gt;. Once you&#39;ve done that, you&#39;ll need to install the Exceptionless Go client in your project. To do so, simply run the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;go get https://github.com/exceptionless/Exceptionless.Go
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once that&#39;s installed, import it into your project like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;import (
+  &amp;quot;github.com/exceptionless/Exceptionless.Go&amp;quot;
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, let&#39;s take a look at how we would use the client. On app startup (probably in your &lt;code&gt;main&lt;/code&gt; function), you can initialize and configure the client like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;func main() {
+  config := exceptionless.Exceptionless{
+    ApiKey: &amp;quot;YOUR API KEY&amp;quot;
+  }
+  exceptionless.Configure(config)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With the Exceptionless client configured, you can now use it to handle all sorts of events in your app. We&#39;re going to focus in on exception—or, not exceptions as the case might be with go 😉.&lt;/p&gt;
+&lt;p&gt;Let&#39;s use our example function from earlier as the example.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;package main 
+
+import ( 
+	&amp;quot;github.com/go-errors/errors&amp;quot;
+  &amp;quot;github.com/exceptionless/Exceptionless.Go&amp;quot;
+)
+
+func SomOtherFunction() {
+  combinedString, err := CombineString(&amp;quot;&amp;quot;, &amp;quot;world&amp;quot;)
+
+if err != nil {
+  exceptionless.SubmitError(err)
+}
+
+fmt.Print(combinedString)
+}
+
+func CombineStrings(string1 string, string2 string) (string, error) {
+	var errToReturn error
+	
+  if string1 == &amp;quot;&amp;quot; || string2 == &amp;quot;&amp;quot; {
+    errToReturn = errors.New(fmt.Sprintf(&amp;quot;Strings must have at least one character&amp;quot;))
+  }
+
+  returnValue := string1 + string2
+	return returnValue, errToReturn
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you remember the &lt;code&gt;CombineStrings&lt;/code&gt; function will return an error if either string is empty. So in my mock function &lt;code&gt;SomeOtherFunction&lt;/code&gt;, I am calling &lt;code&gt;CombineStrings&lt;/code&gt; and passing in an empty string. When the error comes back, all we need to do is handle it with Exceptionless using &lt;code&gt;exceptionless.SubmitError()&lt;/code&gt;. Simple as that.&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;There is a lot more you could do. The Exceptionless Go client allows you to build custom events with more info. You could even bypass the client entirely and make an http request directly to the &lt;a href=&quot;https://api.exceptionless.com/&quot;&gt;Exceptionless API&lt;/a&gt; in your error handler.&lt;/p&gt;
+&lt;p&gt;But the point is, despite Go being an exceptionless programming environment, you can catch errors and report them. So that means Exceptionless is actually a match made in heaven for the &lt;em&gt;exceptionless&lt;/em&gt; environment of Go.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>How To Monitor Events in Swift</title>
+		<link href="https://exceptionless.github.io/website/news/2021/2021-04-02-how-to-monitor-events-in-swift/"/>
+		<updated>2021-04-02T00:00:00Z</updated>
+		<id>https://exceptionless.github.io/website/news/2021/2021-04-02-how-to-monitor-events-in-swift/</id>
+		<content type="html">&lt;p&gt;Swift, best known as the programming language that enables iOS, iPadOS, and macOS developers to build apps, has been growing in popularity over the years. &lt;a href=&quot;https://www.zdnet.com/article/programming-language-popularity-apples-objective-c-tumbles-down-the-rankings/&quot;&gt;As of February of 2020&lt;/a&gt;, it had leaped into the top-10 of most popular programming languages. While Swift can be used for more than just Apple platform products, we&#39;re going to keep things simple today and focus on how to set up event monitoring with Swift in an iOS app.&lt;/p&gt;
+&lt;p&gt;For this tutorial, we&#39;re going to be using &lt;a href=&quot;https://exceptionless.com/&quot;&gt;Exceptionless to collect events, so you&#39;ll need to sign up for a free account here&lt;/a&gt;. You&#39;re also going to need the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mac computer (sorry Windows and Linux folks)&lt;/li&gt;
+&lt;li&gt;Xcode&lt;/li&gt;
+&lt;li&gt;Xcode command line tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Getting Set Up&lt;/h2&gt;
+&lt;p&gt;If you don&#39;t already have Xcode installed on your Mac, do so now. &lt;a href=&quot;https://developer.apple.com/xcode/&quot;&gt;You can grab an install here&lt;/a&gt;. If you already have it installed, you will need to make sure you are upgraded to Xcode 12. To check your version, open Xcode and check to see that you have version 12 or above. It&#39;ll look like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./xcode_version.png&quot; alt=&quot;Xcode version&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Once you&#39;re done installing it, you can check that everything was successful by either firing up Xcode or running the command I showed above. Now, we need to make sure you have the Xcode command line tools. These should be installed automatically when you install Xcode, but we want to be sure. To check if these were installed, run the following in Terminal:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xcode-select -p
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If a path is printed out, you&#39;re all good. That&#39;s all you need. Open up Xcode, and we&#39;ll get started.&lt;/p&gt;
+&lt;h2&gt;Creating a Project&lt;/h2&gt;
+&lt;p&gt;Once you&#39;ve opened Xcode, you&#39;re going to create a new project. Choose iOS and choose App, then click Next.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./create_app.png&quot; alt=&quot;iOS app creation in Xcode&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Next, you&#39;ll give the app a name in the Product Name section. I&#39;ll call mine Exceptionless Events. Make sure your interface is SwiftUI, your lifecycle is SwiftUI App, and your language is Swift. Then, click Next.&lt;/p&gt;
+&lt;p&gt;You&#39;ll be asked where you want to store your code. Choose a folder that makes sense for you. When you&#39;ve done that, your new project will load up. It should look like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./example_project.png&quot; alt=&quot;Example iOS project&quot;&gt;&lt;/p&gt;
+&lt;p&gt;We&#39;re not going to spend a lot of time building an actual iOS app here, but we&#39;ll add enough functionality to test errors and test logging events. To set ourselves up, we&#39;re going to create two buttons in the UI. So, inside your &lt;code&gt;ContentView.Swift&lt;/code&gt; file, replace the &lt;code&gt;Text&lt;/code&gt; element with this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;VStack{
+    Spacer()
+    Button(action: {}) {
+        Text(&amp;quot;Log Message&amp;quot;)
+    }
+    Spacer()
+    Button(action: {}) {
+        Text(&amp;quot;Log Error&amp;quot;)
+    }
+    Spacer()
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note: the &lt;code&gt;Spacer&lt;/code&gt; items are just there to make the screen a little more manageable (not necessarily prettier). Each button has a label and each has an action. However, the actions don&#39;t do anything just yet. We&#39;ll get that taken care of next.&lt;/p&gt;
+&lt;p&gt;Above your &lt;code&gt;body&lt;/code&gt; declaration, add these two functions:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;private func submitEvent() {
+    print(&amp;quot;event&amp;quot;)
+}
+private func submitError() {
+    print(&amp;quot;error&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, back inside your body, change each button&#39;s action to call the associated function like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;VStack{
+    Spacer()
+    Button(action: submitEvent) {
+        Text(&amp;quot;Log Message&amp;quot;)
+    }
+    Spacer()
+    Button(action: submitError) {
+        Text(&amp;quot;Log Error&amp;quot;)
+    }
+    Spacer()
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Just to test that everything is working, click the play button at the top of the Xcode window. This will build the app and launch a simulator. Click each button and make sure &amp;quot;event&amp;quot; and &amp;quot;error&amp;quot; print out in the console. Pro tip: the console may be shrunk down and hidden. At the bottom of your Xcode window, hover over the section that looks like this and drag to increase the window size so you can see the console.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./console.png&quot; alt=&quot;console example&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Assuming all is working, we can move on to using Exceptionless!&lt;/p&gt;
+&lt;h2&gt;Creating the Exceptionless Class&lt;/h2&gt;
+&lt;p&gt;We&#39;re going to handle all of the event processing and posting through a single class. You may want to refactor into multiple classes in a production project, but this will get the point across, I think.&lt;/p&gt;
+&lt;p&gt;Let&#39;s create a new file. In the file menu bar, click File, New, File, and be sure to choose a Swift file and not SwiftUI. Let&#39;s name the new file &lt;code&gt;Exceptionless.swift&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Inside that file, we&#39;re going to create our &lt;code&gt;Exceptionless&lt;/code&gt; class. Add the following so your file looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;import Foundation
+
+class Exceptionless {
+    var apiKey: String
+    init(apiKey: String) {
+        self.apiKey = apiKey
+    }
+    
+    func submit(type: String, event: String) {
+        switch type {
+        case &amp;quot;log&amp;quot;:
+            print(&amp;quot;log&amp;quot;)
+        case &amp;quot;error&amp;quot;:
+            print(&amp;quot;error&amp;quot;)
+        default:
+            print(&amp;quot;log&amp;quot;)
+        }
+    }
+    
+    private func logMessage(logMessage: String) {
+       
+    }
+    
+    private func logError(errorEvent: String) {
+        
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This class doesn&#39;t do anything besides accept the Exceptionless API key, but you can see we&#39;re starting to frame out how to build our event monitoring system. To keep things simple, the &lt;code&gt;submit&lt;/code&gt; function accepts a type of event (in string form) and it accepts the event string. The event string for the purposes of this example should be a simple log message or error message.&lt;/p&gt;
+&lt;p&gt;Let&#39;s test what we have out so far. We want to connect our two buttons from earlier to the function, &lt;code&gt;submit&lt;/code&gt;, that we created in the &lt;code&gt;Exceptionless&lt;/code&gt; class. We should see the console print out &amp;quot;log&amp;quot; or &amp;quot;error&amp;quot; depending on what button we press.&lt;/p&gt;
+&lt;p&gt;Back inside your &lt;code&gt;ContentView.swift&lt;/code&gt; file, replace the actions for each button like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;var body: some View {
+    VStack{
+        Spacer()
+        Button(action: {Exceptionless.init(apiKey: &amp;quot;YOUR API KEY&amp;quot;).submit(type: &amp;quot;log&amp;quot;, event: &amp;quot;Log Message&amp;quot;)}) {
+            Text(&amp;quot;Log Message&amp;quot;)
+        }
+        Spacer()
+        Button(action:{Exceptionless.init(apiKey: &amp;quot;YOUR API KEY&amp;quot;).submit(type: &amp;quot;error&amp;quot;, event: &amp;quot;Log Error&amp;quot;)}) {
+            Text(&amp;quot;Log Error&amp;quot;)
+        }
+        Spacer()
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is a very simplified example. In reality, your buttons would be calling some other action and you&#39;d be catching errors or logging events dependent on what that action does. Let&#39;s test this out, though. We don&#39;t actually need an API Key yet, so leave the &lt;code&gt;apiKey&lt;/code&gt; string as is. Run your project on a simulator and click each button. You should see &amp;quot;log&amp;quot; and &amp;quot;error&amp;quot; printed in the console.&lt;/p&gt;
+&lt;p&gt;Congratulations! You just built a class within Swift that will act as the framework for submitting events.&lt;/p&gt;
+&lt;h2&gt;Building Events&lt;/h2&gt;
+&lt;p&gt;We&#39;re going to keep things simple. &lt;a href=&quot;https://api.exceptionless.io/docs/index.html&quot;&gt;The Exceptionless API&lt;/a&gt; has some great documentation and some simple examples that we&#39;ll be making use of. Let&#39;s start by updating out switch statement to actually call the functions specific to events or errors:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;func submit(type: String, event: String) {
+    switch type {
+    case &amp;quot;log&amp;quot;:
+        return logMessage(logMessage: event)
+    case &amp;quot;error&amp;quot;:
+        return logError(errorEvent: event)
+    default:
+        print(&amp;quot;log&amp;quot;)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can do whatever you&#39;d like with your default case. I&#39;m going to keep it as a print statement, though. What we&#39;ve done is we&#39;ve said if we call &lt;code&gt;submit&lt;/code&gt; with a type of &amp;quot;log&amp;quot;, we will call the &lt;code&gt;logMessage&lt;/code&gt; function. If we call &lt;code&gt;submit&lt;/code&gt; with a type of &amp;quot;error&amp;quot;, we will call the &lt;code&gt;logError&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;Let&#39;s build out the &lt;code&gt;logMessage&lt;/code&gt; function fist. Replace the existing empty function with this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;private func logMessage(logMessage: String) {
+    let now = Date()
+    let formatter = ISO8601DateFormatter()
+    let datetime = formatter.string(from: now)
+    let eventDictionary : [String: Any] = [ &amp;quot;type&amp;quot;: &amp;quot;log&amp;quot;, &amp;quot;message&amp;quot;:logMessage, &amp;quot;date&amp;quot;: datetime ]
+    let jsonData = (try? JSONSerialization.data(withJSONObject: eventDictionary, options: []))!
+    let jsonString = String(data: jsonData, encoding: String.Encoding.ascii)!
+    print (jsonString)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Because the Exceptionless API takes JSON body payloads, we want to build our event into JSON. To do that, we first start with a dictionary. As you can see, we are creating an &lt;code&gt;eventDictionary&lt;/code&gt; which is simply keyvalue pairs in string format. We add in the date in ISO format so we know when our events happen. The actual event message is what we passed in all the way back from when we clicked the button.&lt;/p&gt;
+&lt;p&gt;We take that dictionary and convert it to JSON with Swift&#39;s built-in &lt;code&gt;JSONSerialization&lt;/code&gt; function. Before posting to the API, let&#39;s take a look at the output in the console and make sure we&#39;re happy with it.&lt;/p&gt;
+&lt;p&gt;Build and run the app, then click &amp;quot;Log Message&amp;quot;. You should see the following printed in the console:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{&amp;quot;message&amp;quot;:&amp;quot;Log Message&amp;quot;,&amp;quot;date&amp;quot;:&amp;quot;2021-04-05T13:34:39Z&amp;quot;,&amp;quot;type&amp;quot;:&amp;quot;log&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Your date will, of course, be different.&lt;/p&gt;
+&lt;p&gt;Ok, we&#39;ve gotten this far. Let&#39;s build our error function. Don&#39;t worry, we&#39;ll come back and think about how we want to actually post these events to Exceptionless.&lt;/p&gt;
+&lt;p&gt;Replace the empty &lt;code&gt;logError&lt;/code&gt; function with this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;private func logError(errorEvent: String) {
+    let now = Date()
+    let formatter = ISO8601DateFormatter()
+    let datetime = formatter.string(from: now)
+    
+    let errorDictionary : [String: Any] = [&amp;quot;message&amp;quot;: errorEvent, &amp;quot;type&amp;quot;: &amp;quot;System.Exception&amp;quot;]
+    
+    let errorJson = (try? JSONSerialization.data(withJSONObject:errorDictionary, options: []))!
+    let errorJsonString = String(data: errorJson, encoding: String.Encoding.ascii)!
+    let eventDictionary : [String: Any] = [ &amp;quot;type&amp;quot;: &amp;quot;error&amp;quot;, &amp;quot;@simple_error&amp;quot;:errorJsonString, &amp;quot;date&amp;quot;: datetime ]
+    let jsonData = (try? JSONSerialization.data(withJSONObject: eventDictionary, options: []))!
+    let jsonString = String(data: jsonData, encoding: String.Encoding.ascii)!
+    print (jsonString)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You&#39;ll see this function is very similar to the &lt;code&gt;logMessage&lt;/code&gt; function. However, we are nesting data in our JSON, so we need two dictionaries. We use one dictionary to house the &amp;quot;@simple_error&amp;quot; and another to house the entire event. In other words, nest the JSON version of our &lt;code&gt;errorDictionary&lt;/code&gt; inside the JSON version of our &lt;code&gt;eventDictionary&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Let&#39;s build and run the app and try both buttons. You should see the following printed out:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{&amp;quot;message&amp;quot;:&amp;quot;Log Message&amp;quot;,&amp;quot;date&amp;quot;:&amp;quot;2021-04-05T13:46:58Z&amp;quot;,&amp;quot;type&amp;quot;:&amp;quot;log&amp;quot;}
+{&amp;quot;type&amp;quot;:&amp;quot;error&amp;quot;,&amp;quot;@simple_error&amp;quot;:&amp;quot;{\&amp;quot;message\&amp;quot;:\&amp;quot;Log Error\&amp;quot;,\&amp;quot;type\&amp;quot;:\&amp;quot;System.Exception\&amp;quot;}&amp;quot;,&amp;quot;date&amp;quot;:&amp;quot;2021-04-05T13:46:59Z&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Your dates will be different, but the rest should look about the same. We now have a Log Event AND an Error Event. I think we&#39;re ready to post to the Exceptionless API.&lt;/p&gt;
+&lt;p&gt;Remember, if you haven&#39;t done so, you&#39;ll need to sign up for a &lt;a href=&quot;https://exceptionless.com/&quot;&gt;free Exceptionless account&lt;/a&gt;, create a project, and grab an API Key.&lt;/p&gt;
+&lt;h2&gt;Posting To The API&lt;/h2&gt;
+&lt;p&gt;When we post to the Exceptionless API, we are posting JSON data. In the examples above, we are printing the JSON string version of what we will ultimately push to the API. Let&#39;s see how it will look when actually posting to the API.&lt;/p&gt;
+&lt;p&gt;Within our Exceptionless class, let&#39;s create a new private function called &lt;code&gt;postToAPI&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;private func postToApi(event: Data) {
+    let url = URL(string: &amp;quot;https://collector.exceptionless.com/api/v2/events&amp;quot;)!
+
+    var request = URLRequest(url: url)
+    request.httpMethod = &amp;quot;POST&amp;quot;
+
+    // insert json data to the request
+    request.httpBody = event
+    request.setValue(&amp;quot;application/json; charset=utf-8&amp;quot;,
+         forHTTPHeaderField: &amp;quot;Content-Tye&amp;quot;)
+    request.setValue(&amp;quot;application/json; charset=utf-8&amp;quot;,
+         forHTTPHeaderField: &amp;quot;Accept&amp;quot;)
+    request.setValue(&amp;quot;Bearer &amp;quot; + self.apiKey,
+         forHTTPHeaderField: &amp;quot;Authorization&amp;quot;)
+
+    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        guard let data = data, error == nil else {
+            print(error?.localizedDescription ?? &amp;quot;No data&amp;quot;)
+            return
+        }
+        let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+        if let responseJSON = responseJSON as? [String: Any] {
+            print(responseJSON)
+        }
+    }
+
+    task.resume()
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Walking through this new function, let&#39;s take a look at what&#39;s going on. First, we are setting the URL for our API request. This is a hardcoded value and probably not something you&#39;d want to do in a production application.&lt;/p&gt;
+&lt;p&gt;Next, we are creating a new request and assigning values to the request. You&#39;ll note that our &lt;code&gt;postToAPI&lt;/code&gt; function accepts a &lt;code&gt;Data&lt;/code&gt; value argument called &lt;code&gt;event&lt;/code&gt;. That is what we will be posting to the API and it represents the JSON version of the event we build when we click Log Message or Log Error.&lt;/p&gt;
+&lt;p&gt;Then, we set header values for our request. Take note, that we are assigning the &lt;code&gt;Authorization&lt;/code&gt; value by using our Exceptionless API key. We&#39;ll need to get that key from Exceptionless before actually sending events. \&lt;/p&gt;
+&lt;p&gt;Finally, we are posting the request using &lt;code&gt;URLSession&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To actually call this function, we need to make two minor changes. First, back in your &lt;code&gt;ContentView.swift&lt;/code&gt; file, we need to add our Exceptionless API key in where we left placeholder text. Again, this is not how you&#39;d assign the API Key in a production app, but it&#39;s a simple example to get you going.&lt;/p&gt;
+&lt;p&gt;Now, back in the &lt;code&gt;Exceptionless.swift&lt;/code&gt; file, let&#39;s update both the &lt;code&gt;logMessage&lt;/code&gt; and &lt;code&gt;logError&lt;/code&gt; functions. Instead of converting our event to a JSON string, we&#39;re going to leave it as JSON and pass it through to our &lt;code&gt;postToAPI&lt;/code&gt; function like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;private func logMessage(logMessage: String) {
+    let now = Date()
+    let formatter = ISO8601DateFormatter()
+    let datetime = formatter.string(from: now)
+    let eventDictionary : [String: Any] = [ &amp;quot;type&amp;quot;: &amp;quot;log&amp;quot;, &amp;quot;message&amp;quot;:logMessage, &amp;quot;date&amp;quot;: datetime ]
+    let jsonData = (try? JSONSerialization.data(withJSONObject: eventDictionary, options: []))!
+    postToApi(event: jsonData)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And here&#39;s the &lt;code&gt;logError&lt;/code&gt; function:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-swift&quot;&gt;private func logError(errorEvent: String) {
+    let now = Date()
+    let formatter = ISO8601DateFormatter()
+    let datetime = formatter.string(from: now)
+    
+    let errorDictionary : [String: Any] = [&amp;quot;message&amp;quot;: errorEvent, &amp;quot;type&amp;quot;: &amp;quot;System.Exception&amp;quot;]
+    
+    let errorJson = (try? JSONSerialization.data(withJSONObject:errorDictionary))!
+    let errorJsonString = String(data: errorJson, encoding: String.Encoding.ascii)!
+    let eventDictionary : [String: Any] = [ &amp;quot;type&amp;quot;: &amp;quot;error&amp;quot;, &amp;quot;@simple_error&amp;quot;:errorJsonString, &amp;quot;date&amp;quot;: datetime ]
+    let jsonData = (try? JSONSerialization.data(withJSONObject: eventDictionary))!
+
+    postToApi(event: jsonData)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Go ahead and build and run your app. Click the Log Message button and then the Log Error button. You won&#39;t see anything printed in the console, but if you go into your Exceptionless dashboard, you should see a new log and a new exception.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./example_swift_events.png&quot; alt=&quot;Exceptionless dashboard&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Congratulations! You just built a simple event monitoring service in native Swift code. You can extend this pretty easily thanks to the Exceptionless class and leverage it in a production application.&lt;/p&gt;
+&lt;p&gt;Swift is a fun language, but when using it to build mobile applications, it can be difficult to debug and track events. Exceptionless can help, and hopefully this tutorial shows how to implement such event tracking in SwiftUI and Swift.&lt;/p&gt;
+&lt;p&gt;If you&#39;d like to see the sample Xcode project, &lt;a href=&quot;https://github.com/exceptionless/Exceptionless-Swift-Example&quot;&gt;we have a repo for it here&lt;/a&gt;.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>How to Build a Custom Go Client For a REST API</title>
+		<link href="https://exceptionless.github.io/website/news/2021/2021-03-24-how-to-build-a-custom-go-api-client/"/>
+		<updated>2021-03-24T00:00:00Z</updated>
+		<id>https://exceptionless.github.io/website/news/2021/2021-03-24-how-to-build-a-custom-go-api-client/</id>
+		<content type="html">&lt;p&gt;&lt;img src=&quot;./go_gophers.jpg&quot; alt=&quot;Picture of gophers working&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://exceptionless.com/&quot;&gt;Exceptionless&lt;/a&gt; is powered by a REST API. When you interact with the dashboard UI, when you use the .NET client, and when you use the JavaScript client, you are interacting with the REST API. It is well-documented, and it can be used without any client libraries. This paradigm makes it simple for developers to create their own wrappers around the API. In fact, we recently started work on building an official Go client for Exceptionless. Along the way, we learned some tips and tricks that may be helpful for others that want to build clients and SDKs in Go that wrap RESTful APIs.&lt;/p&gt;
+&lt;p&gt;First, a little about Go. &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt; is a statically typed language, built originally by the folks at Google. Go, while close in syntax to many other statically typed languages, differs in that it is no object oriented. Go is also very well suited for &lt;a href=&quot;https://www.programmableweb.com/news/what-grpc-api-and-how-does-it-work/analysis/2020/10/08&quot;&gt;gRPC APIs&lt;/a&gt;, but that does not prevent it from being used with REST APIs, as we&#39;ll see here today.&lt;/p&gt;
+&lt;h3&gt;Getting Started&lt;/h3&gt;
+&lt;p&gt;In order to build our Go client, we will need to have Go installed. Honestly, this can be the hardest step as it involves setting environment variables and updating your profile source PATH. So rather than risk confusing you with the steps to install Go and get started, I&#39;m going to simply point you to Go&#39;s official install instructions.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://golang.org/doc/install&quot;&gt;You can find those instructions here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Once you&#39;ve installed Go, you will need to have a text editor handy so that we can write our new Go code. From the command line, create a new folder and call it &amp;quot;go-rest&amp;quot;. Change into that directory, and let&#39;s start writing some code.&lt;/p&gt;
+&lt;h3&gt;The Main File&lt;/h3&gt;
+&lt;p&gt;In Go, you will always have a &lt;code&gt;main.go&lt;/code&gt; file which acts as the entry point for your source code. We need to set that up first, so let&#39;s do that now. In the root of your project folder, create your &lt;code&gt;main.go&lt;/code&gt; file. Inside that file, let&#39;s start by declaring our package and importing a module. Add the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;package main
+
+import (
+	&amp;quot;fmt&amp;quot;
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Your file won&#39;t do anything yet, but we&#39;re laying the groundwork. We have declared our package as &lt;code&gt;main&lt;/code&gt;, and we have imported the built-in &lt;code&gt;fmt&lt;/code&gt; library from Go for formatting.&lt;/p&gt;
+&lt;p&gt;Next, we need a &lt;code&gt;main&lt;/code&gt; function, so let&#39;s create that. Add the following below your import statement:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;func main() {
+  fmt.Println(&amp;quot;Hello, world&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is the example program Go&#39;s example docs show, so we might as well run it. From your command line, inside your project directory, run this command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;go run .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You should see &lt;code&gt;Hello, world&lt;/code&gt; printed in the command line terminal window.&lt;/p&gt;
+&lt;p&gt;Now that we have the fundamentals down, let&#39;s talk about how Go works so that we can build our REST API client. You can include as many functions in your &lt;code&gt;main.go&lt;/code&gt; file as you&#39;d like and you can call those function from within other functions. But, like any other programming language, it&#39;s probably smart to separate code to make it easier to work with.&lt;/p&gt;
+&lt;h3&gt;Creating an API Helper&lt;/h3&gt;
+&lt;p&gt;The nice thing about Go is that when you create a new file, that file is automatically available from any of your other files as long as they share the same main package.&lt;/p&gt;
+&lt;p&gt;Since we are building a REST client, it probably makes sense to create a file that would handle all our API routing request. So, create a file in the root of your project called &lt;code&gt;api.go&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Inside that file, make sure to reference the main package at the top like this:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pacakage main&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;We are also going to import a couple packages here as well, so your file should look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;package main
+
+import (
+	&amp;quot;bytes&amp;quot;
+	&amp;quot;log&amp;quot;
+	&amp;quot;net/http&amp;quot;
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These packages are all built into Go itself. You can install external packages as well, and we&#39;ll explore that soon.&lt;/p&gt;
+&lt;p&gt;Now that we have the start of our API file, it&#39;s good to think about what our client needs to do. With a REST API, you may have the following request methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GET&lt;/li&gt;
+&lt;li&gt;POST&lt;/li&gt;
+&lt;li&gt;PUT&lt;/li&gt;
+&lt;li&gt;DELETE&lt;/li&gt;
+&lt;li&gt;PATCH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You may not need all of these for your client, but it&#39;s good to know that they exist. In our case, we are going to implement the GET and POST methods and with those as a template, you should be able to extend your code to implement PUT, PATCH, and DELETE.&lt;/p&gt;
+&lt;p&gt;Let&#39;s start by building the POST method since its the backbone of our client. In your &lt;code&gt;api.go&lt;/code&gt; file, below the import statement, add the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;//Post posts to the Exceptionless Server
+func Post(endpoint string, postBody string, authorization string) string {
+	baseURL := &amp;quot;YOUR API URL/&amp;quot;
+	url := baseURL + endpoint
+	var jsonStr = []byte(postBody)
+	req, err := http.NewRequest(&amp;quot;POST&amp;quot;, url, bytes.NewBuffer(jsonStr))
+	req.Header.Set(&amp;quot;Authorization&amp;quot;, &amp;quot;Bearer &amp;quot;+authorization)
+	req.Header.Set(&amp;quot;Content-Type&amp;quot;, &amp;quot;application/json&amp;quot;)
+	client := &amp;amp;http.Client{}
+	resp, err := client.Do(req)
+	if err != nil {
+		panic(err)
+	}
+	defer resp.Body.Close()
+	return string(resp.Status)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In our real-world use case, we are making requests to the Exceptionless API, so we know the post body needs to be a JSON string. This is why the &lt;code&gt;postBody&lt;/code&gt; is of type &lt;code&gt;string&lt;/code&gt;. If your API is expecting a different format, make sure you type your variable properly here. The other two arguments in our &lt;code&gt;Post&lt;/code&gt; function are pretty self explanatory. The &lt;code&gt;endpoint&lt;/code&gt; string is the endpoint on your API you want to call. The &lt;code&gt;authorization&lt;/code&gt; string is the token/API key needed to authenticate into the API. You could choose to handle the authorization differently, if you wanted. For example, if your API expected basic authentication, your authorization variable might be a string mapping of username and password.&lt;/p&gt;
+&lt;p&gt;One of the tricks here is if you are sending JSON to your REST API, you will need to convert the body into a format the http client library within Go can handle. We&#39;re doing that with the &lt;code&gt;bytes.NewBuffer(jsonStr)&lt;/code&gt; call.&lt;/p&gt;
+&lt;p&gt;Now, let&#39;s put together our &lt;code&gt;GET&lt;/code&gt; function:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;//GET makes api GET requests
+func Get(endpoint string, authorization string) map[string]interface{} {
+	baseURL := &amp;quot;YOUR API URL/&amp;quot;
+
+	url := baseURL + endpoint
+
+	httpClient := &amp;amp;http.Client{}
+	req, err := http.NewRequest(&amp;quot;GET&amp;quot;, url, nil)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	req.Header.Add(&amp;quot;accept&amp;quot;, &amp;quot;application/json&amp;quot;)
+	req.Header.Add(&amp;quot;Authorization&amp;quot;, &amp;quot;Bearer &amp;quot;+authorization)
+
+	res, err := httpClient.Do(req)
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer res.Body.Close()
+
+	body, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	var result map[string]interface{}
+	json.Unmarshal([]byte(body), &amp;amp;result)
+	return result
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Much like out &lt;code&gt;POST&lt;/code&gt; request, our &lt;code&gt;GET&lt;/code&gt; request takes in arguments. We only need the &lt;code&gt;endpoint&lt;/code&gt; and the &lt;code&gt;authorization&lt;/code&gt; arguments for this function. This function is pretty straight forward. However, if you want to read the response as JSON, you need to take an extra step as I&#39;ve shown above.&lt;/p&gt;
+&lt;p&gt;You will want to a string mapping by unmarshaling the JSON returned by the API. Of course, your API may not return JSON, so use this accordingly. If you do need to unmarshal the JSON, you simply need to pass the response body into the &lt;code&gt;json.Unmarshal()&lt;/code&gt; as shown above.&lt;/p&gt;
+&lt;p&gt;These two functions should help you build your other REST-related functions. Now, let&#39;s take a look at helper functions that will make your client easy to use while sending the correct data to your API.&lt;/p&gt;
+&lt;h2&gt;Convenience Functions&lt;/h2&gt;
+&lt;p&gt;A good SDK or client API wrapper will include helper functions so the developer using it doesn&#39;t have to still manually build requests to your API. The best way to build helper functions is to start with your data model. Let&#39;s say, for example, your API expects a JSON payload like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-json&quot;&gt;{
+	&amp;quot;BookTitle&amp;quot;: &amp;quot;The Great Gatsby&amp;quot;, 
+	&amp;quot;Author&amp;quot;: &amp;quot;F. Scott Fitzgerald&amp;quot;, 
+	&amp;quot;Rating&amp;quot;: 7
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this case, we&#39;d probably want to create a struct type variable that we can use to build our payload for the reqest. That might look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;type BookRating struct {
+	BookTitle       string
+	Author          string
+	Rating 					uint
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A quick note on Go variables and functions. If the variable or the function name is capitalized, it is exported and available throughout your program.&lt;/p&gt;
+&lt;p&gt;Now that we have a struct we can use, we can start to build a helper function that would build a payload for our API. In keeping with the example in the JSON and the struct above, let&#39;s pretend our API take a &lt;code&gt;POST&lt;/code&gt; request to rate a specific book. For some reason, our API needs the string title and string author of the book, and it needs an interger for the rating. You might create a helper function like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;func RateBook(title string, author string, rating uint): bool {
+	newRating := BookRating{
+		BookTitle: title, 
+		Author: author, 
+		Rating: rating
+	}
+
+	json, err := json.Marshal(newRating)
+	if err != nil {
+		fmt.Println(err)
+		return false
+	}
+
+	resp, err := Post(&amp;quot;rateBook&amp;quot;, string(json), &amp;quot;API KEY&amp;quot;)
+	if err != nil {
+		fmt.Println(err)
+		return false
+	}	
+
+	return true
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the &lt;code&gt;RateBook&lt;/code&gt; function, we are allowing the developer to simply pass in the title, author, and the rating. We then build the JSON payload for the developer and send it to the &lt;code&gt;Post&lt;/code&gt; function we created earlier. When we are building the JSON payload, we must use &lt;code&gt;json.Marshal&lt;/code&gt; to convert our struct to a type that can be used with our REST API.&lt;/p&gt;
+&lt;p&gt;You&#39;ll note, the authorization argument in the above example is &amp;quot;API KEY&amp;quot;, but a good SDK will have stored that API Key when the client was initialized. I&#39;ll leave it up to you on how you&#39;d like to handle this, but it could be as simple as calling &lt;code&gt;Configure&lt;/code&gt; function with the developer&#39;s API Key and storing the key in memory.&lt;/p&gt;
+&lt;h2&gt;Wrapping Up&lt;/h2&gt;
+&lt;p&gt;This is a simple example of how you might build a Go client for a REST API. The concepts are general, but they hopefully help you if you find yourself needing to build your own client. Exceptionless will be launching its own Go client soon. If you haven&#39;t tried Exceptionless for your application&#39;s event monitoring, &lt;a href=&quot;https://exceptionless.com/&quot;&gt;give it a shot now&lt;/a&gt;.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>How to Debug Electron Apps</title>
+		<link href="https://exceptionless.github.io/website/news/2021/2021-02-22-how-to-debug-electron-apps/"/>
+		<updated>2021-02-22T00:00:00Z</updated>
+		<id>https://exceptionless.github.io/website/news/2021/2021-02-22-how-to-debug-electron-apps/</id>
+		<content type="html">&lt;p&gt;Electron is a great framework that makes developing cross-platform desktop applications easy. If you&#39;re a JavaScript developer, it is probably the first thing you&#39;ll reach for when you decide to build a desktop application. I know I did. In building my first and second desktop applications, I used Electron. In that process, I learned some tricks to help the development process go a little smoother. One such trick is how to better debug issues that may arise in the packaged, production version of your Electron app that you won&#39;t see in development.&lt;/p&gt;
+&lt;p&gt;If you&#39;re not familiar with &lt;a href=&quot;https://www.electronjs.org/&quot;&gt;Electron&lt;/a&gt;, it is a framework that allows you to write apps with web technologies and use them on the desktop. This is accomplished by packaging your app within its own dedicated Chromium-based application. Think of a web browser. All it is is a desktop application that allows you to explore web apps and web pages. That&#39;s what Electron does for your app. It creates a one off desktop browser. In doing so, you get access to native desktop functionalities that are not available to traditional web applications.&lt;/p&gt;
+&lt;p&gt;Like with many software projects, you might find that your local development experience doesn&#39;t exactly match what happens in production. When an app is minified, built, compiled, and packaged for production use, there can be subtle changes that can break the experience of the application or break the app entirely. This is especially true when dealing with desktop applications that have more access than you might be used to with web apps. Debugging problems when your application works locally but doesn&#39;t work in its production state can be frustrating. This becomes even more frustrating in Electron when you only have access to the web application&#39;s JavaScript output in production and not the underling Electron code&#39;s output. Fortunately, we can solve this by using an error monitoring service.&lt;/p&gt;
+&lt;p&gt;We&#39;re going to be making use of &lt;a href=&quot;https://exceptionless.com/&quot;&gt;Exceptionless&lt;/a&gt; and the Exceptionless JavaScript client to debug and monitor our Electron application. Exceptionless is free to get started and totally open-source. Let&#39;s get started.&lt;/p&gt;
+&lt;p&gt;From within your Electron app&#39;s project directory run &lt;code&gt;npm i exceptionless&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now, we can configure the Exceptionless client and use it anywhere. This means we can use it in both the &amp;quot;front end&amp;quot; (web app) code and the &amp;quot;back end&amp;quot; Electron code. For the sake of this tutorial, we are only going to be focusing on the Electron code. Inside your &lt;code&gt;main.js&lt;/code&gt; file, add the following below your other import/require statements:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const { ExceptionlessClient } = require(&amp;quot;exceptionless&amp;quot;)
+const client = ExceptionlessClient.default.config.apiKey = &amp;quot;YOUR API KEY&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can get your project API key in the Exceptionless project settings page.&lt;/p&gt;
+&lt;p&gt;Now, with the client configured, you can start using Exceptionless to log events. The cool thing is these don&#39;t need to just be errors. If you want to log when a particular function is called within your main Electron code, you can use &lt;code&gt;client.submitLog(&amp;quot;Function called&amp;quot;)&lt;/code&gt; but with something more descriptive. By submitting log events for particular functions, you will know for sure the function is being called. Of course, you can and should also track errors. This is as simple as calling &lt;code&gt;client.submitException(error)&lt;/code&gt; with your error.&lt;/p&gt;
+&lt;p&gt;This is all very abstract, though. So, let&#39;s look at a practical example. Let&#39;s say your Electron app is listening to some event in order to write some data to the computer&#39;s hard disk. We need a trigger to come from our &amp;quot;frontend&amp;quot; html/js code, and then we need to read that trigger and take some action. In Electron, we use &lt;code&gt;ipcMain&lt;/code&gt; to listen for events from the frontend code. An example of this might look like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;ipcMain.on(&amp;quot;Save File&amp;quot;, async (event, message) =&amp;gt; {
+  try {
+    await fs.writeFileSync(&amp;quot;/path/to/where/you/want/to/store/the/file&amp;quot;, message)
+    client.submitLog(`Wrote file successfully with the following content: ${message}`)
+  } catch(e) {
+    client.submitException(e)
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I added a log event that is sent to Exceptionless in the try and I catch the error and send that to Exceptionless in the catch. The beauty of this is we know when the event is successful, which is comforting, but we also know when it fails and why. This is important, because a failure here would be a silent failure in your app.&lt;/p&gt;
+&lt;p&gt;Let&#39;s say the file path you think you&#39;re trying to write to does not exist after your Electron app is built and packaged (a common issue is that PATH variables exposed by default to applications can be different than what you use and have available in your development environment). If that path did not exist, the &lt;code&gt;writeFileSync&lt;/code&gt; command would not work. You would have no idea why, and your users would only know it when they tried to fetch the file that should have been written.&lt;/p&gt;
+&lt;p&gt;Imagine trying to debug that without error and event monitoring. You&#39;d fire it up locally on your machine, run some tests, try to replicate the steps exactly as the user did them. And everything would work. You wouldn&#39;t see the error because your development environment is just different enough from the production environment to keep you from realizing that the write path in production doesn&#39;t exist.&lt;/p&gt;
+&lt;p&gt;There are a million other ways your Electron app can fail silently. By adding error and event monitoring, you can quickly debug problems that would otherwise have you banging your head off your desk.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>Saying Thanks to the Open Source Community Through Sponsorship</title>
+		<link href="https://exceptionless.github.io/website/news/2021/2021-01-26-saying-thanks-to-the-open-source-community-through-sponsorship/"/>
+		<updated>2021-01-26T00:00:00Z</updated>
+		<id>https://exceptionless.github.io/website/news/2021/2021-01-26-saying-thanks-to-the-open-source-community-through-sponsorship/</id>
+		<content type="html">&lt;p&gt;Exceptionless has always been committed to the open-source software ecosystem. In fact, &lt;a href=&quot;https://github.com/Exceptionless&quot;&gt;Exceptionless is entirely open-source&lt;/a&gt;, and we try our best to make it easy for anyone to host their own instance of our software. Our main repository has nearly 2,000 stars on Github and has seen contributions from 26 different people. Across all our repositories, we&#39;ve seen hundreds of issues opened, dozens of pull requests, and countless comments. And for all of that, we are so appreciative. But we wanted to show our appreciation by doing more than just saying thanks.&lt;/p&gt;
+&lt;h2&gt;Thanking Open Source Contributions Through Sponsorship&lt;/h2&gt;
+&lt;p&gt;Today, we&#39;re excited to announce that &lt;a href=&quot;https://github.com/sponsors/benaadams&quot;&gt;we have sponsored Ben Adams&lt;/a&gt; through the Github Sponsors program. As you all know, we are huge fans of .NET, and Exceptionless is one of the only monitoring tools built around the .NET ecosystem first. Ben, like us, cares deeply about open-source software and the .NET community. We hope that by sponsoring him, we will be giving back in a tangible way, not just to Ben but to the sustainability of open-source.&lt;/p&gt;
+&lt;p&gt;Before diving into more about who Ben is and why we&#39;re sponsoring him specifically, it might be good to reflect on the importance of sustainable open-source development. Exceptionless survives through a hosted service, but many open-source projects don&#39;t have that option. This leaves maintainers in the unenviable position of having to write software, fix bugs, and respond to issues while receiving nothing more than &amp;quot;thanks&amp;quot; as payment.&lt;/p&gt;
+&lt;p&gt;&amp;quot;Thanks&amp;quot; doesn&#39;t pay the bills. Exposure doesn&#39;t pay the bills.&lt;/p&gt;
+&lt;p&gt;We don&#39;t want to see open-source developers shut down their projects. We want developers to have optionality. &lt;a href=&quot;https://medium.com/@kitze/github-stars-wont-pay-your-rent-8b348e12baed&quot;&gt;A quote from Kitze&lt;/a&gt;, the founder of Sizzy and other products, really illustrates this sentiment well:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Open source, writing blog posts, and playing with tweaking lint settings and editor themes all day are completely fine until your landlord knocks on your door or you’re at the checkout at the grocery store.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It&#39;s not just the viability of creating open-source software that becomes a problem, it&#39;s also the long-term sustainability when larger companies use that software. When we see companies like Amazon abuse open-source contributions, we see a door closing on the viability of software that is designed to survive through community and contribution.&lt;/p&gt;
+&lt;p&gt;So, while Exceptionless might not change the world by itself with its sponsorship, we want to lead by example. As Kitze said, Github stars don&#39;t pay the bills, but money does. So, we&#39;re opening our wallet and helping Ben Adams do what he&#39;s done so well for years.&lt;/p&gt;
+&lt;h2&gt;Ben Adams&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;./benadams.png&quot; alt=&quot;Ben Admas Github Profile&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Ben has been working on open-source projects for years. He has thousands of contributions across dozens of repositories. In fact, he is so prolific in his .NET contributions that everyone else with more contributions than him are Microsoft employees. It doesn&#39;t get more impressive than that. Here&#39;s a quick summary of Ben&#39;s open-source contributions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;His projects have 2,600 Github stars (which, again, don&#39;t pay the bills 😉)&lt;/li&gt;
+&lt;li&gt;He has over 20,000 commits&lt;/li&gt;
+&lt;li&gt;He has contributed to 25 different projects&lt;/li&gt;
+&lt;li&gt;He&#39;s opened over 1,500 pull requests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It should be clear by now that Ben knows his stuff. As mentioned before, Ben cares a whole lot about .NET, and so do we. So, this sponsorship makes perfect sense for us.&lt;/p&gt;
+&lt;p&gt;For the gamers and the game developers, Ben has you covered too. He is the CTO of Illyriad Games which makes &lt;a href=&quot;https://www.ageofascent.com/&quot;&gt;Age of Ascent&lt;/a&gt;. Age of Ascent is a real-time MMO that puts players in the cockpits of fighter ships in space. As you might expect, the game&#39;s tech stack &lt;a href=&quot;https://youtu.be/dqYlKkexth0&quot;&gt;makes heavy use of .NET&lt;/a&gt; and other Microsoft-related services.&lt;/p&gt;
+&lt;p&gt;Other people recognize Ben&#39;s contributions too:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Since the beginning of the .NET Core journey we’ve had some amazing contributors but I seriously enjoy working with
+@ben_a_adams!
+-&lt;a href=&quot;https://twitter.com/davidfowl/status/1353087429364879361&quot;&gt;David Fowler&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There&#39;s smart, then there&#39;s crazy. Then there&#39;s Crazy Smart. That&#39;s Ben (and he&#39;s a lovely chap, too)!
+-&lt;a href=&quot;https://twitter.com/bitcrazed/status/1354144181837414400&quot;&gt;Rich Turner&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Junior .Net Developer
+Senior .Net Developer
+Ben Adams .Net Developer
+😁 😁 😁
+-&lt;a href=&quot;https://twitter.com/MarcoRossignoli/status/1166733777206468608&quot;&gt;Marco Rossignoli&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;How Does Sponsorship Work?&lt;/h2&gt;
+&lt;p&gt;Github Sponsors allows each developer to define what comes along with sponsorship at various levels. Ben was gracious enough to offer his own development time to Gold Level sponsors, and we simply could not pass that up. While we would be happy to simply sponsor Ben&#39;s work, having him contribute code to our open-source repositories will help Exceptionless take a major step forward.&lt;/p&gt;
+&lt;p&gt;Sponsoring open-source developers is not a new concept, but having it built into Github has help elivate the visibility of portential sponsorship opportunities. We hope that by having companies like Exceptionless sponsor (and publicize those sponsorships) developers, it will encourage others to do the same. Open-source sustainability still has a long way to go, but any step forward we can help the ecosystem take, we&#39;re willing to do it.&lt;/p&gt;
+&lt;p&gt;Thanks so much, Ben! We look forward to working with you and following your continued contributions across the open-source community.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>How to Use React Hooks to Monitor Events in Your App</title>
+		<link href="https://exceptionless.github.io/website/news/2021/2021-01-19-how-to-use-react-hooks-to-monitor-events-in-your-app/"/>
+		<updated>2021-01-19T00:00:00Z</updated>
+		<id>https://exceptionless.github.io/website/news/2021/2021-01-19-how-to-use-react-hooks-to-monitor-events-in-your-app/</id>
+		<content type="html">&lt;p&gt;The &lt;a href=&quot;https://reactjs.org/docs/hooks-intro.html&quot;&gt;introduction of Hooks in React&lt;/a&gt; was a game-changer. Developers now had options when it came to creating stateful components. It used to be that if you had a stateful component, you&#39;d have to use a class component, and if you had a presentational component, you could choose between a class or a function component. Now, with hook, state can be managed inside function components. But that&#39;s not all Hooks did for React developers.&lt;/p&gt;
+&lt;p&gt;Hooks introduced a better way to reuse stateful functions. Today, we&#39;re going to explore how to build a custom React hook that will allow us to monitor events in our application. Those events can be errors, messages, feature usage, logs, or anything you want. There are plenty of error monitoring services out there, but we&#39;re going to make use of &lt;a href=&quot;https://exceptionless.com/&quot;&gt;Exceptionless&lt;/a&gt; for three reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Real-time updates&lt;/li&gt;
+&lt;li&gt;It&#39;s open-source&lt;/li&gt;
+&lt;li&gt;The Exceptionless JavaScript client gives us a singleton option (which makes for a good example in this post)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Let&#39;s get started by starting a new React project. You&#39;ll need to have the following available on your machine:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Node &amp;gt;= 8.10&lt;/li&gt;
+&lt;li&gt;npm &amp;gt;= 5.6&lt;/li&gt;
+&lt;li&gt;Text editor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Assuming you have that ready, open up a terminal. To create a new React project, simply run:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;npx create-react-app Monitoring-App&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Replace &lt;code&gt;Monitoring-App&lt;/code&gt; with whatever you&#39;d like to call your project. When everything is done, change into your new application&#39;s directory (&lt;code&gt;cd Monitoring-App&lt;/code&gt;). Now, we need to install the Exceptionless JavaScript client.&lt;/p&gt;
+&lt;p&gt;To do so, simple run:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;npm install exceptionless&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;When that&#39;s done installing, start your app (&lt;code&gt;npm start&lt;/code&gt;) and open your project directory in the text editor of your choice.&lt;/p&gt;
+&lt;h3&gt;What are Hooks?&lt;/h3&gt;
+&lt;p&gt;React&#39;s docs have the simplest definition of Hooks and I think it&#39;s worth calling that out here:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The popularity of classes in JavaScript in general has oscillated greatly. However, within the React ecosystem, it was the ONLY option for creating components that could actually do &lt;em&gt;anything&lt;/em&gt;. Because many JavaScript developers do not like and do not want to use classes, the option to write function components was a huge step forward. But outside of developer preferences, React Hooks open up new ways to write code in React apps, and hopefully help you reduce your code footprint in the process.&lt;/p&gt;
+&lt;p&gt;Hooks introduced a new way to handle lifecycle events in React as well. Gone are the &lt;code&gt;componentDidMount&lt;/code&gt; and &lt;code&gt;componentDidUpdate&lt;/code&gt; methods. In is the simple and elegant &lt;code&gt;useEffect&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;You can read a lot more about the logic behind React&#39;s introduction of hooks &lt;a href=&quot;https://reactjs.org/docs/hooks-intro.html&quot;&gt;here&lt;/a&gt;, but for the sake of this tutorial, I think that&#39;s enough of an intro.&lt;/p&gt;
+&lt;h2&gt;Creating our first Hook&lt;/h2&gt;
+&lt;p&gt;A hook is just a function that returns a value. The big gotcha with Hooks, though, is that they can only be called within the body of a function component. Keep that in mind as we progress. It&#39;s still relatively early in the life of Hooks, but there are some standards and conventions in place. Convention is to house your custom hooks in a folder called something like &lt;code&gt;hooks&lt;/code&gt;. Let&#39;s do that.&lt;/p&gt;
+&lt;p&gt;Create a folder within the &lt;code&gt;src&lt;/code&gt; directory of your project called &lt;code&gt;hooks&lt;/code&gt;. Inside that folder, we&#39;re going to create a file using another convention within the React Hooks community. Developers will generally name their hooks with a &lt;code&gt;useFunctionPurpose&lt;/code&gt; type of pattern. For example, if you were building a Hook that determined whether a navigation bar should show up or not, you might name the Hook file &lt;code&gt;useNavigation&lt;/code&gt;. For us, we&#39;re going to call our file &lt;code&gt;useMonitoring&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Create that file inside the &lt;code&gt;hooks&lt;/code&gt; directory, and then we can begin building the function. We&#39;e going to go line by line and then I&#39;ll show the whole file in one snippet. Let&#39;s start by importing the necessary functions from React.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;import { useState, useEffect } from &#39;react&#39;;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;I briefly touched on &lt;code&gt;useEffect&lt;/code&gt;. It can be thought of in the same context as &lt;code&gt;componentDidMount&lt;/code&gt; or &lt;code&gt;componentDidUpdate&lt;/code&gt;. We&#39;ll make use of this to handle some logic in the setup of our Exceptionless client. &lt;code&gt;useState&lt;/code&gt; can be thought of like &lt;code&gt;this.state&lt;/code&gt; and &lt;code&gt;this.setState&lt;/code&gt; in React class components.&lt;/p&gt;
+&lt;p&gt;Next, we&#39;ll get access to the Exceptionless JavaScript client like this:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;import { ExceptionlessClient } from &amp;quot;exceptionless/dist/exceptionless&amp;quot;;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Note: it&#39;s important to reference the &lt;code&gt;/dist/exceptionless&lt;/code&gt; file because Exceptionless targets multiple environments and we want to make sure to import the right one.&lt;/p&gt;
+&lt;p&gt;Next we&#39;re going to handle something I mentioned earlier. Exceptionless is a class-based client. This means we have the option of instantiating that class everytime we use it, or we can make use of a singleton provided to us out of the box by Exceptionless. We set up the singleton patter first and then we will use some logic to handle situations where that singleton may not need to be used. Go ahead and grab the &lt;code&gt;default&lt;/code&gt; client from Exceptionless like this:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;const defaultClient = ExceptionlessClient.default;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If you haven&#39;t done so, get yourself an API Key from Exceptionless. You can &lt;a href=&quot;https://exceptionless.com/&quot;&gt;sign up for a free account here&lt;/a&gt;. Once you have that, we&#39;re going to provide that key to to the default Exceptionless client. I like to make use of environment variables even when using keys that are safe to expose in the browser. So mine looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;defaultClient.config.apiKey = process.env.REACT_APP_EXCEPTIONLESS_API_KEY;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now that we&#39;ve handled all our imports and initial configuration, we can frame out our hook function. The bare bones function looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;export const useMonitoring = ({ config, useDefault }) =&amp;gt; {
+  // Code goes here
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That&#39;s not much to look at, but there are two things I want to call out. The function name follows the convention I mentioned before, and this function takes two props: &lt;code&gt;config&lt;/code&gt; and &lt;code&gt;useDefault&lt;/code&gt;. If we are making use of the default singleton instance of the Exceptionless client, &lt;code&gt;useDefault&lt;/code&gt; would be true and &lt;code&gt;config&lt;/code&gt; would be null. However, if we are creating a custom instance of the Exceptionless client, &lt;code&gt;config&lt;/code&gt; would be an object and &lt;code&gt;useDefault&lt;/code&gt; would be either null or false.&lt;/p&gt;
+&lt;p&gt;Let&#39;s handle that logic. At the top of your function add the following:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;const [client, setClient] = useState(defaultClient);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;We are making use of the built-in &lt;code&gt;useState&lt;/code&gt; hook here. We are simply defining a &lt;code&gt;client&lt;/code&gt; state variable, defining a function that will be used to update that variable (&lt;code&gt;setClient&lt;/code&gt;), and setting a defualt value for our variable. As you can see, we set the default value to use the default client from Exceptionless. Makes sense, right?&lt;/p&gt;
+&lt;p&gt;Next, we&#39;re going to use the built-in &lt;code&gt;useEffect&lt;/code&gt; hook to determine what client should be returned for use in the particular part of the app that requested it.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;useEffect(() =&amp;gt; {
+    if(useDefault) {
+      return client;      
+    } else if(config) {
+      config.apiKey = process.env.REACT_APP_EXCEPTIONLESS_API_KEY;      
+      setClient(new ExceptionlessClient(config));
+    } else {
+      throw &amp;quot;Please pass useDefault as true or a config object in&amp;quot;;
+    }
+  });
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this case, it&#39;s best to think of our &lt;code&gt;useEffect&lt;/code&gt; function in the same way you think of &lt;code&gt;componentDidUpdate&lt;/code&gt;. Any update to the component that called our &lt;code&gt;useMonitoring&lt;/code&gt; Hook will trigger another event within our &lt;code&gt;useEffect&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;If you wanted this &lt;code&gt;useEffect&lt;/code&gt; method to operate more like &lt;code&gt;componentDidMount&lt;/code&gt;, you would structure it like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;useEffect(() =&amp;gt; {
+
+}, []) // &amp;lt;-- This array says only run this function once when the component mounts
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The empty array in the above example can be filled with a list of dependencies. Say, for example, you want your &lt;code&gt;useEffect&lt;/code&gt; method to run everytime some specific variable changes, you would just pass that variable name into the array.&lt;/p&gt;
+&lt;p&gt;Ok back to our &lt;code&gt;useEffect&lt;/code&gt; method. You can see we are checking the &lt;code&gt;useDefault&lt;/code&gt; prop I mentioned before. If it is truthy, we return the client state variable. We had already set that variable to use the singleton Exceptionless client, so all we have to do is return it. If &lt;code&gt;useDefault&lt;/code&gt; is falsey, we then check for the config object. If it&#39;s there, we add the apiKey to whatever values were passed into the config object, and then we instantiate a new Exceptionless client.&lt;/p&gt;
+&lt;p&gt;If no &lt;code&gt;config&lt;/code&gt; object is provided, we throw an error. You could take this a step further and check if the &lt;code&gt;config&lt;/code&gt; prop is actually of type object, but, hey, that&#39;s what Typescript is for, right? We&#39;re living dangerously in this crazy, crazy dynamically typed world.&lt;/p&gt;
+&lt;p&gt;The final thing you need to do in your &lt;code&gt;useMonitoring&lt;/code&gt; function is return the client. Just as easy as it sounds:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;return client;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Here&#39;s the whole, complete file:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;import { useState, useEffect } from &#39;react&#39;;
+import { ExceptionlessClient } from &amp;quot;exceptionless/dist/exceptionless&amp;quot;;
+const defaultClient = ExceptionlessClient.default;
+defaultClient.config.apiKey = process.env.REACT_APP_EXCEPTIONLESS_API_KEY;
+
+export const useMonitoring = ({ config, useDefault }) =&amp;gt; {
+  const [client, setClient] = useState(defaultClient);
+  useEffect(() =&amp;gt; {
+    if(useDefault) {
+      return client;      
+    } else if(config) {
+      config.apiKey = process.env.REACT_APP_EXCEPTIONLESS_API_KEY;      
+      setClient(new ExceptionlessClient(config));
+    } else {
+      throw &amp;quot;Please pass useDefault as true or a config object in&amp;quot;;
+    }
+  });
+  return client;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ready to use this bad boy?&lt;/p&gt;
+&lt;h2&gt;Using your custom Hook&lt;/h2&gt;
+&lt;p&gt;We created a basic React app, so let&#39;s just make use of what comes out of the box. Open your &lt;code&gt;App.js&lt;/code&gt; file, and import your new custom Hook.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;import { useMonitoring } from &amp;quot;./hooks/useMonitoring&amp;quot;;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You&#39;ll also need to import the built-in &lt;code&gt;useEffect&lt;/code&gt; Hook from React:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;import { useEffect } from &#39;react&#39;;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now, withing the main &lt;code&gt;App&lt;/code&gt; function, you can use your new custom Hook:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;const exceptionlessClient = useMonitoring({ useDefault: true });&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;How can we test this now? Well, let&#39;s make use of the &lt;code&gt;useEffect&lt;/code&gt; function to throw an error as soon as the component mounts.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;useEffect(() =&amp;gt; {
+  throwException();
+}, []);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you remember, the empty array at the end of the function says this should only run once when the component mounts.&lt;/p&gt;
+&lt;p&gt;Now, define the actual &lt;code&gt;throwException&lt;/code&gt; function like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;const throwException = () =&amp;gt; {
+  try {
+    throw new Error(&amp;quot;Whoops, it broke&amp;quot;); 
+  } catch (error) {
+    exceptionlessClient.submitException(error);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ready to test this out? If you previously started your React app, it probably already has worked. If you haven&#39;t started the app, go ahead and do that now.&lt;/p&gt;
+&lt;p&gt;You won&#39;t see much beyond the default starter React boiletplate. But that&#39;s OK. Open up your Exceptionless dashboard, and you should see an exception has, in fact, been captured.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://exceptionless.github.io/website/example_react_exception.png&quot; alt=&quot;Example exception from React app&quot;&gt;&lt;/p&gt;
+&lt;p&gt;If you click into that exception, you&#39;ll get a bunch of additional, useful, information. You can start to see how this can be helpful.&lt;/p&gt;
+&lt;p&gt;Now is the time where I remind you, our custom Hook can only be used within the body of your component functions. If you were to try to use your Hook in a Redux action function, you&#39;d see an error. The beauty is, even if you&#39;re using Redux or something else, you can still throw errors back to your component and handle the error with your &lt;code&gt;useMonitoring&lt;/code&gt; hook.&lt;/p&gt;
+&lt;p&gt;But Exceptionless is more than just errors. Let&#39;s build a quick, more practical example.&lt;/p&gt;
+&lt;h2&gt;Usage Tracking&lt;/h2&gt;
+&lt;p&gt;In your &lt;code&gt;App.js&lt;/code&gt; file, we&#39;re going to remove all the boilerplate and add some ugly buttons. No styling in this post. This is what your &lt;code&gt;App.js&lt;/code&gt; file should look like now:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;import { useMonitoring } from &amp;quot;./hooks/useMonitoring&amp;quot;;
+
+function App() {
+  const exceptionlessClient = useMonitoring({ useDefault: true });
+
+  const handleButtonClick = (planName) =&amp;gt; {
+    exceptionlessClient.submitFeatureUsage(planName);
+  }
+  return (
+    &amp;lt;div&amp;gt;
+      &amp;lt;button onClick={() =&amp;gt; handleButtonClick(&amp;quot;Free&amp;quot;)}&amp;gt;Free Plan - Learn More&amp;lt;/button&amp;gt;
+      &amp;lt;button onClick={() =&amp;gt; handleButtonClick(&amp;quot;Starter&amp;quot;)}&amp;gt;Starter Plan - Learn More&amp;lt;/button&amp;gt;
+      &amp;lt;button onClick={() =&amp;gt; handleButtonClick(&amp;quot;Premium&amp;quot;)}&amp;gt;Premium Plan - Learn More&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+  );
+}
+
+export default App;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can see we have what might be a pricing page in an app. There are three buttons, one for each plan. We have wired up a button that will call a function that ultimately sends a feature usage event to Exceptionless. Go ahead and try clicking the buttons.&lt;/p&gt;
+&lt;p&gt;If you go to your Exceptionless dashboard and click the Feature Usage link on the left, you&#39;ll see these events have been captured in a dedicated section that makes it easy for you to track, well, feature usage. This may not replace your analytics provider, but it goes a long way.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://exceptionless.github.io/website/feature_usage_react.png&quot; alt=&quot;Feature usage example&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;Wrapping up&lt;/h2&gt;
+&lt;p&gt;There is a lot more you can do with Exceptionless. For example, you may have noticed, we have only passed in the &lt;code&gt;useDefault&lt;/code&gt; prop to our custom Hook. You can completely customize your Exceptionless configuration and pass in a &lt;code&gt;config&lt;/code&gt; prop instead. I would encourage you to &lt;a href=&quot;https://exceptionless.com/docs/clients/javascript/client-configuration/&quot;&gt;read up on the options here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Exceptionless &lt;a href=&quot;https://exceptionless.com/docs/clients/javascript/sending-events/&quot;&gt;provides a lot of methods&lt;/a&gt; built into its JavaScript client that will make debugging, logging, and tracking easier.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>Why You Should be Practicing Exception Driven Development</title>
+		<link href="https://exceptionless.github.io/website/news/2020/2020-12-7-why-you-should-be-practicing-exception-driven-development/"/>
+		<updated>2020-12-07T00:00:00Z</updated>
+		<id>https://exceptionless.github.io/website/news/2020/2020-12-7-why-you-should-be-practicing-exception-driven-development/</id>
+		<content type="html">&lt;p&gt;You&#39;ve heard of test-driven development. You&#39;ve heard of behavior-driven development. Maybe you&#39;ve even heard of acceptance-driven development. But you probably haven&#39;t heard much about exception-driven development. Let&#39;s take a look at what that type of development process is and why you should be practicing it.&lt;/p&gt;
+&lt;h2&gt;Exception Driven Development&lt;/h2&gt;
+&lt;p&gt;Jeff Atwood, of &lt;a href=&quot;https://blog.codinghorror.com/&quot;&gt;Coding Horror&lt;/a&gt;, wrote a &lt;a href=&quot;https://blog.codinghorror.com/exception-driven-development/&quot;&gt;blog post&lt;/a&gt; almost 12 years ago about this topic. In those dozen years since his post, the need for exception-driven development has only increased, but developers and companies need a clear understanding of how and why to practice this type of development.&lt;/p&gt;
+&lt;p&gt;At a high-level, exception-driven development is simply the practice of monitoring for exceptions in your code and shipping fixes quickly. To ensure you are monitoring the right things and shipping the right fixes, all without burdening your users, you have to make sure you are collecting the right data.&lt;/p&gt;
+&lt;p&gt;Contextual data is the key to exception-driven development. Arbitrary data from various points of input may not be useful. Data that is highly contextual to user actions, user experiences, and points in time during the use of your app will allow you to target better solutions and ship faster.&lt;/p&gt;
+&lt;p&gt;With your contextual data in hand, you can start to fix issues. But here&#39;s the rub: You can&#39;t wait until you &amp;quot;have enough&amp;quot; fixed for a deployment. Part of the exception-driven development process is deploying often. Have a single bug that took one line to fix? Cool, ship it. Know that you&#39;ll have additional features to put out in a few days and you&#39;re considering holding your bug fix for that deployment? Don&#39;t. Ship the bug fix, then ship the features.&lt;/p&gt;
+&lt;p&gt;Exception-driven development isn&#39;t a mysterious new process for most developers, but it is a mindset shift within many organizations. Bug fixes, listening to the data, and responsiveness must take priority if you are to transition to an exception-driven development cycle. While it may not take much effort to change your company&#39;s internal process, it may still take some convincing. So, why should you and your company practice exception-driven development?&lt;/p&gt;
+&lt;h2&gt;Why Exception Driven Development&lt;/h2&gt;
+&lt;p&gt;The first reason you should care is the most obvious reason. Your code has bugs. It does. No matter how good you are, you&#39;re going to ship bugs and you need to be ready to fix those bugs. Jeff Atwood probably said it best in his post about exception-driven development:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The question isn&#39;t how many bugs you will ship but how fast you can fix them.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bugs are a part of code. Some never get fixed. But the ones that need to be fixed need to be fixed quickly. The trouble, of course, is that if you are relying on your users to tell you about these bugs, you&#39;ve already taken too long to fix the issue.&lt;/p&gt;
+&lt;p&gt;Wait, what?&lt;/p&gt;
+&lt;p&gt;It&#39;s true. If your users have told you about bugs through email or Slack or Discord, you have already taken too long to resolve the issue. This is where the heart of exception-driven development comes in. You need to know about issues the second they arise.&lt;/p&gt;
+&lt;p&gt;You don&#39;t want to turn into this guy, right?&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;https://exceptionless.github.io/website/tech_support.png&quot; alt=&quot;Picture of an angry cat acting as tech support&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Think about it this way. How many lines of code does your application have? Got that number in mind? Ok, now divide it by 1000. Take your resulting number and multiply it by 15. &lt;a href=&quot;https://www.quora.com/What-is-the-average-ratio-of-bugs-to-a-line-of-code&quot;&gt;That is possibly how many bugs&lt;/a&gt; you have in your software &lt;em&gt;right now&lt;/em&gt;. Knowing this, don&#39;t you think it&#39;s important to try to find these bugs before your users have to tell you about them?&lt;/p&gt;
+&lt;p&gt;By practicing exception-driven development, you make your customers happier which protects your brand image. Do you want to be the brand that has a ton of bugs or do you want to be the brand that solves problems? You also make your developers happier. Would you rather fix a bug on a piece of code shortly after you were working on it, or do you want to try to fix it six months later after you&#39;ve long forgotten about that code?&lt;/p&gt;
+&lt;p&gt;Customer retention, customer conversion, productivity, morale, and more are the reasons exception-driven development is important. Convinced yet? Good, now how do you do it?&lt;/p&gt;
+&lt;h2&gt;How to Practice Exception Driven Development&lt;/h2&gt;
+&lt;p&gt;If you remember, the first step of exception-driven development is to collect &lt;em&gt;contextual&lt;/em&gt; data. Contextual data means data more than the stack trace itself. You should be collecting those traces, but the stack trace is just part of the picture. Some of the questions your contextual data should be answering include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What user had this problem?&lt;/li&gt;
+&lt;li&gt;Where in the application did the problem occur?&lt;/li&gt;
+&lt;li&gt;Has the problem occurred previously?&lt;/li&gt;
+&lt;li&gt;What actions did the user take leading up to the issue?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can probably think of other questions you&#39;d like answered to help you with the bugs that come in. But notice that the suggestion here is not to collect this information directly from your users. Don&#39;t wait for an email from them. Don&#39;t follow-up with questions about their operating system and browser. Collect that information upfront without the user having to take action, and you will have your contextual data. Services like &lt;a href=&quot;https://exceptionless.com/&quot;&gt;Exceptionless&lt;/a&gt; make this easy.&lt;/p&gt;
+&lt;p&gt;But why use a service like Exceptionless? You&#39;re a developer, you can just build the solution yourself. Sure you can, but then you have to manage that solution. You have to fix bugs on that solution while also fixing bugs you&#39;ve found from your actual production application. You&#39;re not in the business of running an error monitoring service. But &lt;a href=&quot;https://exceptionless.com/&quot;&gt;Exceptionless&lt;/a&gt; is.&lt;/p&gt;
+&lt;p&gt;Once you&#39;ve collected your contextual data, you should know what to fix, where to fix it, and why it needs to be fixed. So, the logical thing to do is—well—fix it. The trick, though, is not to allow code creep to slow your release down. It&#39;s easy (trust me we all do it) to say, &amp;quot;oh, I&#39;ll just add this little feature or change this one other thing&amp;quot; when you&#39;re trying to fix a bug. You have to fight that urge, fix the bug, commit the code, and ship it. Then, you can go back and work on the shiny thing that &lt;strong&gt;almost&lt;/strong&gt; distracted you.&lt;/p&gt;
+&lt;p&gt;Once your code is shipped, if you are using &lt;a href=&quot;https://exceptionless/&quot;&gt;Exceptionless&lt;/a&gt;, you can mark the version that fixed the bug right within your dashboard. By doing this, you&#39;ll automatically know if you have any regressions. Exceptionless will track new occurrences of the error and compare the occurrence against the version of software the user is using and the version you marked as solving the problem. If those versions match, it&#39;s a regression.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;The whole flow of collecting data, analyzing the data, writing code, and shipping should not be foreign to you. Yet, exception-driven development is still not practiced everywhere. Hopefully, this article helps you understand why you should change your ways and how to do it.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>Comparing Monitoring Services</title>
+		<link href="https://exceptionless.github.io/website/news/2020/2020-10-29-comparing-monitoring-services/"/>
+		<updated>2020-10-29T00:00:00Z</updated>
+		<id>https://exceptionless.github.io/website/news/2020/2020-10-29-comparing-monitoring-services/</id>
+		<content type="html">&lt;p&gt;Error monitoring is vital to the success of any application. Console logs only get you so far. Once your app is out in the wild, asking your customers to open up the developer tools window and inspect it for errors is a deal-breaker. This is where error monitoring services come in. Let&#39;s take a look at three different services:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://logrocket.com/&quot;&gt;Log Rocket&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sentry.io/&quot;&gt;Sentry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://exceptionless.com/&quot;&gt;Exceptionless&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each service, generally speaking, handles errors and logging for your applications, but not all services are created equally. Let&#39;s take a closer look at each and see how they stack up.&lt;/p&gt;
+&lt;h1&gt;Log Rocket&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://logrocket.com/&quot;&gt;Log Rocket&lt;/a&gt; was founded in 2015 and is an error monitoring service that focuses on replaying the events that led up to the error. While some services focus on digging into the error details themselves, Log Rocket uses HTML from the user&#39;s session to reconstruct a playback of what the user experienced.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What LogRocket does is we capture a recording in real time of all the user activity so the developer on the other end can replay exactly what went wrong and troubleshoot issues faster.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://techcrunch.com/2019/03/21/logrocked-nabs-11m-series-a-to-fix-web-application-errors-faster/?guccounter=1&amp;amp;guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp;amp;guce_referrer_sig=AQAAAIPY3DnugxcKUD8lyUXLl-FXSS29_pkxK32gWJb_Kp0lGk2YWj19tXm2PCHIjj4kFV6DBtRurKKebhBH5czcymF2Ct0k_D1UFvoJtxkD-76DSFmTqD07uaoxVS69YzFZLa-QsEcsoiwVbHWBFkLyRywxOBu8baLFu34hztJrZSCa&quot;&gt;Matthew Arbesfeld, co-founder of Log Rocket&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://exceptionless.github.io/website/log_rocket.png&quot; alt=&quot;Log Rocket example&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Log Rocket is a venture-backed company that has raised $30 million in its history. It provides its tools exclusively as a for-profit, hosted solution. They do offer self-hosted options, but only as part of their enterprise, custom pricing.&lt;/p&gt;
+&lt;p&gt;Their focus is on user experience through the tracking of everything a user does on the site. While this is helpful, it is also a bit invasive in the fact that the default installation of Log Rocket captures just about everything a user does in the application.&lt;/p&gt;
+&lt;h1&gt;Sentry&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://sentry.io/&quot;&gt;Sentry&lt;/a&gt; was founded in 2012 and is focused on capturing errors at the code-level and sending them to a repository for review and organization. Sentry allows you to configure the groupings of errors and presents them in an interface designed to surface the most-pressing errors first.&lt;/p&gt;
+&lt;p&gt;In addition to surfacing errors, Sentry allows users to create custom alerts. For example, should a specific event occur, you can set up a trigger to send an email to your team. This is generally used for errors, but it could be used for just about any event sent through to Sentry.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://exceptionless.github.io/website/sentry.png&quot; alt=&quot;Sentry Example&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Sentry, like Log Rocket, is also a venture-backed company. They have raised over $66 million in their history. Unlike Log Rocket, Sentry provides an open-source and self-hosted solution for free. For users that do not want to pay for Sentry&#39;s hosted option, they can utilize Docker to run a self-hosted, containerized version of the Sentry platform.&lt;/p&gt;
+&lt;p&gt;One big differentiator for Sentry is its focus on providing services for a wide array of platforms.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sentry differentiates from legacy application performance monitoring solutions by focusing on software that runs on devices its developers have no control over, including mobile and IoT devices and smart sensor networks.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://techcrunch.com/2019/09/24/sentry-raises-40-million-series-c-led-by-accel-for-its-error-tracking-software/&quot;&gt;Techcrunch, 2019&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Exceptionless&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://exceptionless.com/&quot;&gt;Exceptionless&lt;/a&gt; has been around the longest of the three services reviewed here. Created as a software offering from the parent company &lt;a href=&quot;https://www.codesmithtools.com/&quot;&gt;CodeSmith Tools&lt;/a&gt;, Exceptionless was established in 2010 and is privately held. It is positioned as a tool to help first and a product second. This is why one of Exceptionless&#39;s main focuses is the open-source community.&lt;/p&gt;
+&lt;p&gt;Exceptionless lets developers capture logs, events, and errors. However, Exceptionless&#39;s real differentiator is its real-time delivery mechanisms. Rather than costly code deployments to change your error monitoring configurations, Exceptionless allows you to make changes from their user interface and those changes will apply instantly in your application. This is key when it becomes clear that additional errors need to be surfaced quickly.&lt;/p&gt;
+&lt;p&gt;From the user experience and customer experience front, Exceptionless works hard to stand out from the competition. In Exceptionless 7.0, customers are now able to mark stacks of errors and logs as &amp;quot;discarded&amp;quot;, the events will no longer count against plan quotas. Combine that with their chat, email, and Discord support, and Exceptionless proves its focus on customers.&lt;/p&gt;
+&lt;p&gt;Digging into the product features, Exceptionless provides one of the cleanest views for understanding events and errors in your application.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://exceptionless.github.io/website/assets/img/event-occurrence-1024x791.jpg&quot; alt=&quot;Example error details&quot;&gt;&lt;/p&gt;
+&lt;p&gt;All the information you need about errors and events are captured in a simple, easy to read view. From your dashboard, you can consolidate events into stacks to help group relevant issues. You can also indicate the resolution of events based not just on the fact that the issue was resolve but based on the version of your software that fixed the event. Exceptionless will automatically recognize any new errors that come in with an older version and group them in the resolved bucket. However, should the error surface on the version of your software in which you marked the issue fixed, Exceptionless will classify this event as a regression without you having to manually do so.&lt;/p&gt;
+&lt;h1&gt;So Which One is Right For You?&lt;/h1&gt;
+&lt;p&gt;The answer to this often comes down to what&#39;s most important for your application. Each service has its merits, but the value provided differs based on use-cases. Log Rocket offers full session replays, but may not be the right solution for digging deep into stack traces. Sentry offers full stack trace reviews and error categorization, but it may not be the right solution if you need the ability to update your error handling configuration in real-time. Exceptionless provides real-time error monitoring and configuration, and it is committed to the open-source community.&lt;/p&gt;
+&lt;p&gt;In the end, the choice is yours.&lt;/p&gt;</content>
+	</entry>
+</feed>

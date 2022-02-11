@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Kubernetes - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Kubernetes - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Kubernetes - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Documentation</h1>
+</div>
+
+<div id="wrap" class="container" role="document">  
+  <div id="responsive-menu"><button class="btn btn-primary" onclick="handleMenu()">Table of Contents</button></div>
+  <div id="content" class="row-fluid">
+    <div class="toc well span3 visible-toc">
+      <div class="input-append">
+        <input class="span9" id="search-input" type="text" placeholder="Search docs...">
+        <button class="btn" type="button" onclick="handleSearch()">Go!</button>
+      </div>
+      
+
+    </div>
+    <div class="well span9 docs">
+      <h1>Kubernetes</h1>
+      <p>Please follow this section to set up Exceptionless in a Kubernetes environment. Please note this section is a work in progress, any contributions is greatly appreciated.</p>
+<h2>Requirements</h2>
+<ul>
+<li><a href="https://kubernetes.io">Kubernetes</a></li>
+<li><a href="https://helm.sh">Helm</a></li>
+</ul>
+<h2>Instructions</h2>
+<p>Please note that we recommend you use Kubernetes for running in production.</p>
+<ol>
+<li>Follow the steps <a href="https://github.com/exceptionless/Exceptionless/blob/master/k8s/ex-setup.ps1">here</a> for how to create it in AKS</li>
+<li>View the configuration settings below for more information on configuring Exceptionless.</li>
+<li><a href="../clients/">Configure your clients</a> to send errors to your website.</li>
+</ol>
+<p>Now, you can create a local account, organization, and project and send events to it.</p>
+<h2>Configuration</h2>
+<p>The following section will cover how to configure exceptionless inside of a Kubernetes instance using the <code>exceptionless-config</code> config map. All exceptionless configuration keys are prefixed with <code>EX_</code>. Please note that these instructions also apply to docker using environment variables.</p>
+<p>All configuration options and settings can be found in the various option classes located <a href="https://github.com/exceptionless/Exceptionless/tree/master/src/Exceptionless.Core/Configuration">here</a>.</p>
+<p><em>Please note that if you are specifying configuration via <code>docker-compose</code>, then you will need to drop the <code>EX_</code> and <code>EX_ConnectionStrings__</code> prefixes.</em></p>
+<h2>ConnectionStrings</h2>
+<pre><code class="language-yaml hljs"><span class="hljs-comment"># connection string used for any provider specifying Redis.</span>
+<span class="hljs-attr">EX_ConnectionStrings__Redis:</span> <span class="hljs-string">server=localhost:6379,abortConnect=false</span>
+
+<span class="hljs-attr">EX_ConnectionStrings__Cache:</span> <span class="hljs-string">provider=redis;</span>
+<span class="hljs-attr">EX_ConnectionStrings__Elasticsearch:</span> <span class="hljs-string">server=http://10.0.0.4:9200;</span>
+<span class="hljs-attr">EX_ConnectionStrings__Email:</span> <span class="hljs-string">smtps://user%40domain.com:password@smtp.domain.com:465</span>
+<span class="hljs-attr">EX_ConnectionStrings__MessageBus:</span> <span class="hljs-string">provider=redis;</span>
+<span class="hljs-attr">EX_ConnectionStrings__Metrics:</span> <span class="hljs-string">provider=statsd;server=localhost</span>
+<span class="hljs-attr">EX_ConnectionStrings__Queue:</span> <span class="hljs-string">provider=redis;</span>
+<span class="hljs-attr">EX_ConnectionStrings__Storage:</span> <span class="hljs-string">provider=azurestorage;</span>
+</code></pre>
+<p>You can append values to any connection string using a <code>;</code>. For example, you can control many shards and replicas each Elasticsearch index should be created with by appending to the <code>EX_ConnectionStrings__Elasticsearch</code> connection string. For a Elasticsearch cluster (3 nodes, two masters), you would append <code>shards=3;replicas=1</code>.</p>
+<p>The <code>provider</code> value determines what implementations to use for the various abstractions. We've made it easier to reuse a single connection string by automatically looking up a connection string by the provider name and adding any key value pairs to the current connection string (as shown above with redis).</p>
+<h2>General Configuration</h2>
+<ol>
+<li>You'll want to set the <code>EX_ApiUrl</code> key to your external url of the api.</li>
+<li>You'll want to set the <code>EX_BaseUrl</code> key to your external url of the website. If you are not following the clean urls optional section below, please make sure you also add the hashbang (<code>/#!</code>) to the base url.</li>
+<li><code>EX_AppMode</code> should be set to <code>Production</code> if you want to send unrestricted emails.</li>
+<li>Please take a quick look at all the configuration options and settings that can be found in the various option classes located <a href="https://github.com/exceptionless/Exceptionless/tree/master/src/Exceptionless.Core/Configuration">here</a>.</li>
+</ol>
+<h2>Active Directory Authentication</h2>
+<p>To enable Active Directory authentication, update the Update the <code>exceptionless-config</code> config map to include the <code>EX_ConnectionStrings__LDAP</code> connection string. The value should be your domain's LDAP URI (e.g. <code>LDAP://ad.domain.com/</code> or <code>LDAP://ad.domain.com/DC=domain,DC=com</code>).</p>
+<p>Please note the following:</p>
+<ol>
+<li>Users must still go through the registration process using their AD credentials. This allows account setup to proceed as normal. AD credentials are <strong>not</strong> stored.</li>
+<li>Exceptionless relies on the following properties being available in AD:
+<ul>
+<li><code>mail</code>: user's email address</li>
+<li><code>givenName</code>: user's first name</li>
+<li><code>sn</code>: user's last name</li>
+<li><code>sAMAccountName</code>: user's username</li>
+</ul>
+</li>
+<li>To ensure the correct account information is retrieved for a user, consider using a more specific connection string to narrow down the LDAP account type. For example: <code>LDAP://ad.domain.com/OU=Standard Users,OU=User Accounts,DC=domain,DC=com</code></li>
+</ol>
+<h2>Enabling Slack Integrations</h2>
+<ol>
+<li>Create a Slack app for your workspace
+<ul>
+<li><strong>Please do not distribute your app outside of your organization.</strong></li>
+</ul>
+</li>
+<li>Go to the <code>OAuth &amp; Permissions</code> feature. Add a new redirect URL. The redirect URL should be your Exceptionless base URL.</li>
+<li>On the <em>basic info</em> page of your Slack App, you will need to find the Client ID and Client Secret</li>
+<li>Update the <code>exceptionless-config</code> config map <code>ConnectionStrings__OAuth</code> value to include <code>SlackId=YOUR_ID;SlackSecret=YOUR_SECRET;</code> and restart the associated pods.</li>
+<li>If you've already loaded a page in Exceptionless, you will need to do a hard refresh for the config changes to apply.</li>
+</ol>
+<h2>Upgrading</h2>
+<p>Please see the <a href="/website/docs/self-hosting/upgrading-self-hosted-instance/">Upgrading</a> for details on how to upgrade to the current version.</p>
+<h2>Troubleshooting</h2>
+<p>If you are having issues please try the following to resolve the issues. If this doesn't work please open an issue or contact us on <a href="https://discord.gg/xv3sjurVwA">Discord</a>.</p>
+<ul>
+<li>Make sure you are running the latest release by visiting our <a href="https://github.com/exceptionless/Exceptionless/releases">releases page</a>. You can verify the version you are currently running by accessing the status page <a href="http://localhost/api/v2/about"><code>http://localhost/api/v2/about</code></a>.</li>
+<li>You can also enable detailed logging by updating the <code>Serilog__MinimumLevel__Default</code> config map value to <code>Debug</code>.</li>
+</ul>
+<hr>
+<p class="text-right"><a href="/website/docs/self-hosting/upgrading-self-hosted-instance/">Next &gt; Upgrading</a></p>
+   
+    </div>
+  </div>
+</div>
+
+<script>
+    const handleMenu = () => {
+        const menu = document.querySelector(".toc");
+        menu.classList.toggle("hidden-toc");
+        menu.classList.toggle("visible-toc");
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const search = document.getElementById("search-input")
+        search.addEventListener("keyup", ({key}) => {
+          if (key === "Enter") {
+            handleSearch();
+          }
+        })
+    })
+    const handleSearch = async () => {
+      const searchTerm = document.getElementById("search-input").value;
+      const queryString = encodeURI(searchTerm)
+      window.location = `/search?term=${queryString}`;
+    }
+</script>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

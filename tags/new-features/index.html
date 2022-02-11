@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Tagged “new features” - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Tagged “new features” - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Tagged “new features” - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      <h1>Tagged “new features”</h1>
+
+
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2014/2014-07-29-job-system-enhancements-version-2s-got-em/">Job System Enhancements - Version 2's Got Em!</a></h2>
+    <p>Summer means vacations and pool time, but we haven't stopped working on Exceptionless 2.0. Things are coming along nicely, and today we're here to talk about the job system and the code being written to enhance it.</p>
+<p><strong>After you read this article</strong>,&nbsp;check out the previous V2.0 feature and detail articles, if you haven't already. Good stuff in there!</p>
+<ol>
+<li><a href="/website/exceptionless-2-in-the-making/" title="Exceptionless 2.0 – In the Making">Exceptionless 2.0 – In the Making</a></li>
+<li><a href="/website/event-based-reporting-system-coming-version-2-0/" title="Event Based Reporting System Coming in Version 2.0">Event Based Reporting System</a></li>
+<li><a href="/website/upcoming-exceptionless-2-0-simplified-api/" title="More from the Upcoming Exceptionless 2.0: Simplified API">Simplified API</a></li>
+<li><a href="/website/coming-exceptionless-2-0-pluggable-system/" title="Coming in Exceptionless 2.0 – A Pluggable System">A Pluggable System</a></li>
+<li><a href="/website/exceptionless-2-0-client-rewrite-sneak-peek-usage-example/" title="Exceptionless 2.0 Client Rewrite Sneak Peek Usage Example">Exceptionless 2.0 Client Rewrite Sneak Peak and Example</a></li>
+<li><a title="Version 2.0′s New Message Bus and Queueing Systems" href="/website/version-2-0s-new-message-bus-queueing-systems/" target="_blank">New Message Bus and Queuing System</a></li>
+<li><a href="/website/job-system-enhancements-version-2s-got-em/" title="Job System Enhancements – Version 2′s Got Em!">Job System Enhancements</a></li>
+</ol>
+<!--more-->
+<h2>Job System Enhancements</h2>
+<h3>Standalone</h3>
+<p>Jobs can easily be run standalone now, which makes it much easier to test the system. You won't have to worry about your application pool shutting down prematurely and killing your job half way through it's long-running work item.</p>
+<h3>More Ways to Run</h3>
+<p>With 2.0, you'll be able to run jobs in process, as a service, as a standalone exe, or as Azure WebJobs. Cool, huh?</p>
+<h3>Need More? Run More!</h3>
+<p>If you need to process more tasks, simply fire up more jobs. This will save resources and money when using Azure WebJobs, as you can auto-scale jobs based on resource constraints.</p>
+<p>We use jobs to send emails, call web hooks, process events, and much more, so these enhancements will allow for better resource control when scaling, and in general.</p>
+<h2>Questions?</h2>
+<p>We've thrown out a lot of information about Exceptionless 2.0 and all the new features, enhancements, and tweaks that it's going to get. We'd love to hear from some of the regulars out there and see if we've missed anything obvious. Check out the links to the other articles at the top of the page and let us know. Thanks!</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/new-features/" class="tag">new features</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2014/2014-08-07-new-price-plans-medium-large-teamsprojects/">New Price Plans for Medium to Large Teams/Projects</a></h2>
+    <p>We've had quite a few requests for pricing plans that support users, retention, and errors somewhere between our old medium and enterprise plans, so we crunched the numbers and came up with new large and extra large plans that find a happy medium.</p>
+<p>Both plans include more users, more retention, and more errors. Check out the details on each&nbsp;package below or <a href="/website/pricing/" title="Pricing Plans">view the Pricing Page</a> for a quick summary.<!--more--></p>
+<h2>Free</h2>
+<p>The free plan, which is great for trying things out or super small personal projects, includes provisions for <strong>one project, one user, three days of error retention, and three thousand errors per month</strong>.</p>
+<p>It does not include premium features such as advanced notifications, web hooks, and other future premium features.</p>
+<h2>Small - $15</h2>
+<p>For $15 per month, you get <strong>five projects, ten users, thirty days of retention, 15,000 errors per month</strong>, and premium features.</p>
+<h2>Medium - $49</h2>
+<p>The medium Exceptionless plan offers <strong>fifteen projects and twenty-five users</strong>. You get <strong>ninety days of retention, 75,000 errors per month</strong>, and premium features.</p>
+<h2>Large Plan - $99&nbsp;<em>(new)</em></h2>
+<p>The large plan is new, and includes <strong>unlimited projects and users, 180 days of error retention, 250,000 errors per month</strong>, and premium features.</p>
+<p>This is quickly becoming a popular plan and makes sense for a lot of medium to medium-large teams and projects.</p>
+<h2>Extra Large - $199&nbsp;<em>(new)</em></h2>
+<p>The extra large plan was created to bridge the gap between large and enterprise by quadrupling the <strong>number of errors per month to 1,000,000</strong>. You still get unlimited projects and users, as well as 180 days of retention and premium features.</p>
+<h2>Enterprise - $499</h2>
+<p>For those businesses and enterprise-level teams that have several large projects and need to handle huge&nbsp;numbers of errors, the Enterprise plan offers everything that the Extra Large plan offers, with <strong>3,000,000 errors per month</strong>.</p>
+<h2>Custom</h2>
+<p>And, of course, should you need to customize a plan to handle even more errors, we can always get you taken care of, just let us know!</p>
+<div class="signup center">
+  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup">Sign Up Now!</a>
+</div>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/new-features/" class="tag">new features</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2014/2014-08-13-upcoming-exceptionless-version-2-0-overview-review/">Upcoming Exceptionless Version 2.0 Overview &amp; Review</a></h2>
+    <p>Many of you guys have been following along in previous posts as we went through the details of the new features and enhancements coming with the next version of Exceptionless, V2.0.</p>
+<p>To make things easier for everyone, we thought we'd do an overview post as well, so all the new features can be found in one location and people can click to read more on the specific ones they are interested in.<!--more--></p>
+<h2>Exceptionless 2.0 Features &amp; Enhancements</h2>
+<h3>Event Based Reporting System</h3>
+<p><a href="/website/assets/img/ex-curl.png"><img src="/website/assets/img/news/ex-curl-150x150.png" alt="Post Event Exceptionless"></a>Many users have asked for ways to use Exceptionless to report additional types of events, rather than just errors. With version 2.0, we are moving to an event based system that will accommodate such requests.</p>
+<p><a href="/website/event-based-reporting-system-coming-version-2-0/" title="Event Based Reporting System Coming in Version 2.0">Read full article...</a></p>
+<h3>Simplified API</h3>
+<p><a href="/website/assets/img/Screen-shot-2014-06-11-at-5.20.44-PM.png"><img src="/website/assets/img/news/Screen-shot-2014-06-11-at-5.20.44-PM-150x150.png" alt="Exceptionless API Documentation"></a>2.0 will&nbsp;have a new, manageable&nbsp;API with tons of great documentation and examples. Take a look at the preliminary documentation at the below link, and make sure to give us any feedback you might have.</p>
+<p><a href="/website/upcoming-exceptionless-2-0-simplified-api/" title="More from the Upcoming Exceptionless 2.0: Simplified API">Read full article...</a></p>
+<h3>A Pluggable System</h3>
+<p><a href="/website/assets/img/pluggable-system.jpg"><img src="/website/assets/img/news/pluggable-system-150x150.jpg" alt="Pluggable System"></a>The new pluggable system will allow&nbsp;customization and translation throughout the Exceptionless platform, including integration with third-party services and more.&nbsp;Read on for more details and source code about event parsing, the event pipeline, and formatting.</p>
+<p><a href="/website/coming-exceptionless-2-0-pluggable-system/" title="Coming in Exceptionless 2.0 – A Pluggable System">Read full article...</a></p>
+<h3>Client Rewrite</h3>
+<p><a href="/website/assets/img/new-client-header.jpg"><img src="/website/assets/img/news/new-client-header-150x150.jpg" alt="new-client-header"></a>The Exceptionless client has been completely rewritten to be highly simplified and extensible, work with Mono and Project K, include additional platform specific clients, and much more. Take a look at an extended event data usage example at the link below.</p>
+<p><a href="/website/exceptionless-2-0-client-rewrite-sneak-peek-usage-example/" title="Exceptionless 2.0 Client Rewrite Sneak Peek Usage Example">Read full article...</a></p>
+<h3>New Message Bus &amp; Queueing</h3>
+<p>In an effort to improve scalability, allow for new functionality to easily be added to Exceptionless, make the system less coupled, process things more efficiently, go fully Async, and further support Azure, we’ve been working hard on a new&nbsp;message bus and queueing system.</p>
+<p><a href="/website/version-2-0s-new-message-bus-queueing-systems/" title="Version 2.0′s New Message Bus and Queueing Systems">Read full article...</a></p>
+<h3>Job System Enhancements</h3>
+<p>A lot of time has been spent on enhancing the job system behind Exceptionless. From the ability to run jobs standalone, making testing easier, to more ways to run jobs and the ability to auto-scale jobs based on resource constraints, lots of great changes are coming!</p>
+<p><a href="/website/job-system-enhancements-version-2s-got-em/" title="Job System Enhancements – Version 2′s Got Em!">Ready full article...</a></p>
+<h2>Feedback Welcome!</h2>
+<p>If you've taken a look at the upcoming features and have any comments, please let us know! We're working on everything as fast and hard as we can, and will hopefully have an ETA to have everything finished soon.</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/new-features/" class="tag">new features</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2014/2014-09-03-making-move-elastic-search-exceptionless-2-0/">Making the Move to Elasticsearch for Exceptionless 2.0</a></h2>
+    <p><img src="/website/assets/img/news/Screenshot-2014-09-03-15.03.16.png" alt="Screenshot 2014-09-03 15.03.16">We know you've thought about it when using Exceptionless, and many developers have submitted formal requests. <strong>Search</strong>.</p>
+<p>You need it, and we want to provide it. That's why we've decided to integrate Elasticsearch into 2.0, and it's going to be awesome!</p>
+<p>Check out a few of the cool things we're going to be able to do with it, below, and let us know what you think!<!--more--></p>
+<h2>What Elasticsearch Brings to the Table</h2>
+<h3>Simple scaleability</h3>
+<p>Moving to <a title="Elasticsearch" href="http://www.elasticsearch.org/" target="_blank">Elasticsearch</a> for event and stack storage will enable us to simplify many areas of the system, like stats, and also enable us to easily scale the service as it continues to grow.</p>
+<h3>Search ALL the things</h3>
+<p>The new system will allow users to search by tags, date range, keywords, error type, and more, all while providing full statistics at the same time. This, specifically, has been&nbsp;our most requested feature, and we're glad to finally be able to say it's coming soon!</p>
+<h3>Faster, too!</h3>
+<p>Elasticsearch removes the need for us to do stats incrementing for every type of view that we want to show. This simplifies the system, further increases performance, and improves throughput for the event collector.</p>
+<h3>Statistics everywhere</h3>
+<p>You're not just going to get more accurate stats within Exceptionless, you're going to get them in real time, and we'll be able to display them in multiple time zones, too.</p>
+<h3>Future-proofing</h3>
+<p>Instead of having to think of everything up front while we're building Exceptionless 2.0, Elasticsearch will enable us to provide new insights in the future, something every developer dreams of!</p>
+<h2>We Hope You're as Stoked as We Are</h2>
+<p>Search has been a long time coming for&nbsp;Exceptionless, and we're super excited to be able to provide a robust, thorough, scaleable solution that will cover 99.99% of possible use cases. Hang in there - we're coding it in as fast as we can!</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/new-features/" class="tag">new features</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2014/2014-11-26-exceptionless-2-0-user-interface-first-look/">Exceptionless 2.0 User Interface FIRST LOOK</a></h2>
+    <p>We can prove it! Exceptionless 2.0 is real, and we've got evidence!</p>
+<p>We've been wanting to give everyone a sneak peak for a long time, and today we are excited to finally be able to. Watch the video above to see a high level overview of the new UI and features.</p>
+<p>There are still quite a few small things to take care of before we release it, but we are happy to say that we are around the 85% mark as far as being finished. Once we get closer, we will be putting up a live demo/preview site for everyone to play with and give feedback on.</p>
+<p>Please don't hesitate to give us any feedback you may have after watching the video or reading the transcript below. We want to hear it!</p>
+<!--more-->
+<h2><strong>Video Transcript</strong></h2>
+<p><img src="/website/assets/img/news/v2VideoThumbnail-300x179.png" alt="Exceptionless 2.0"> Lets take a quick look around, shall we?</p>
+<p>Everything is built on angularJS and talking to the REST api, so the UI itself is static, with no more server-rendered views.</p>
+<p>There are a few upfront differences - mainly the fact that we're using all the screen real estate now and everything is mobile responsive</p>
+<h3>Navigation &amp; Exception Types</h3>
+<p>On the left navigation bar, we have the 4 default event types, exceptions, log messages, broken links, and feature usages. Each has a dashboard, most recent, most frequent, and new view, which generates a page very similar to what you're used to seeing.</p>
+<p>As promised with version 2.0, we also have an all events section, which you can send literally any event to. We'll go into more detail on that in future posts and videos.</p>
+<h3>Cross Project Views &amp; Filtering</h3>
+<p>If we move to the top navigation bar, we see that you can now view data across all projects or by individual projects - a highly requested feature. We then have a quick time period selector, and finally the new filtering system, which allows you to quickly filter your exceptions. We'll show off that feature in it's own video soon.</p>
+<h3>Bulk Actions!</h3>
+<p>Moving down into the data portion of the view, one feature that actually isn't new is that you can click and drag to select a period of time on the graph. Just a quick pointer there. Something that is new is the ability to select multiple exceptions or instances of an exception and perform bulk actions on it, such as Mark Fixed, Mark Hidden, or Delete. Again, more on that soon.</p>
+<h3>Anywhere. Anytime.</h3>
+<p>One last quick feature that we thought we would highlight today is that all times are now translated to the user's timezone, so your team members can always be working in their specific time no matter where they are.</p>
+<p>That's about it for today, but keep an eye out for more updates as we close in on a release date for Exceptionless 2.0. We know some of these features and enhancements have been on your request list, and we're really excited to be this close to shipping them for you guys.</p>
+<p>Until next time, take care!</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/new-features/" class="tag">new features</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-01-12-exceptionless-2-0-update-close/">Exceptionless 2.0 Update - SO CLOSE!</a></h2>
+    <p><img src="/website/assets/img/news/exceptionless-2.0-screenshot-300x171.png" alt="Exceptionless Error Logging Service">We know, we know... It's been a while since our last update. As so often is the case, the holidays took their toll on work and waists here at Exceptionless over the past few months. However, we're not slacking too bad.&nbsp;In fact, we've got a small update on Exceptionless 2.0 that proves it's hasn't been&nbsp;all turkey and naps!</p>
+<p>In general, the primary features and functionality of the new version are complete and we are in the testing, bug fix, and tweaking phase before we officially launch a production environment and begin orchestrating the process of data migration and rolling users over into the new system.<!--more--></p>
+<h2>Recent Changes &amp; Progress</h2>
+<p>We thought we would throw out some of the most recent stuff we've been working on. We're sure you'll approve!</p>
+<h3>Filter / Search</h3>
+<p>One of the main things we've been working hard to get right is the new filtering system. Since we put together our <a href="/website/filter-your-exceptions-video-demo/" title="Exceptionless Search Filter Feature">filter demo video</a>, we've added in the following searchable&nbsp;items:</p>
+<ul>
+<li>Exception Type</li>
+<li>IP Address</li>
+<li>Messages</li>
+<li>Machine Name</li>
+<li>User</li>
+<li>Codes</li>
+<li>URL Path</li>
+<li>and more!</li>
+</ul>
+<h3>Documentation</h3>
+<p>Another major feature we want to make sure is ready to go when we launch is the documentation. We aren't quite finished with the user documentation, but the <a href="/website/upcoming-exceptionless-2-0-simplified-api/" title="Exceptionless API Documentation">API documentation</a>&nbsp;has been updated and is current. Of course, we'll keep updating everything as development continues and will field any support related questions you may have.</p>
+<h3>Queue Processor</h3>
+<p>We've been bragging about how fast Exceptionless 2.0 will be, and we're not joking. We've been putting a lot of time recently into optimizing the queue processor so that it's not just fast, but <em><strong>really</strong></em> fast. You'll see!</p>
+<h3>Bots</h3>
+<p>Another little feature we've added is the ability to specify custom user agent strings to treat as bots. We're sure a few of you guys will find that handy.</p>
+<h2>Coming Soon. Not Tomorrow, but Soon.</h2>
+<p>As mentioned above, we're still working out some bugs and preparing to enter the production and migration phase. We'll be sure to keep everyone updated via the blog, social media, email, and in-app as we&nbsp;get closer to launch.</p>
+<p>Until next time, we hope everyone had a great holiday season and is enjoying a happy new year!</p>
+<h3>Previously, Re: Exceptionless 2.0</h3>
+<ul>
+<li><a href="/website/exceptionless-2-0-user-interface-first-look/" title="Exceptionless 2.0 First Look">Version 2.0 First Look</a></li>
+<li><a href="/website/filter-your-exceptions-video-demo/" title="Exceptionless 2.0 Filtering and Search Demo">Filtering Demo</a></li>
+<li><a href="/website/bulk-actions-sneak-peak-exceptionless-2-0-video/" title="Exceptionless Bulk Actions Demo">Bulk Actions Demo</a></li>
+</ul>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/new-features/" class="tag">new features</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+
+
+<hr>
+
+<p>See <a href="/website/tags/">all tags</a>.</p>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

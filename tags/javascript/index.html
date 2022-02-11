@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Tagged “javascript” - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Tagged “javascript” - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Tagged “javascript” - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      <h1>Tagged “javascript”</h1>
+
+
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2014/2014-10-23-angularjs-exceptionless-2-0/">AngularJS and Exceptionless 2.0</a></h2>
+    <p><img src="/website/assets/img/news/AngularJS-large-300x84.png" alt="Angular JS">As we plug away at Exceptionless 2.0, perfecting and future-proofing it, we wanted to stop and take the time to talk about AngularJS, how we are using it in version two, and what benefits we're going to get out of it.</p>
+<p>Naturally, we want to maintain all current functionality while supporting planned V2.0 features like search and filtering. We also want it to be static and use the REST API for everything. We're pretty determined to not cheat on that point. Then, thinking ahead, building it to support easily adding new features in the future is a huge priority.</p>
+<p>Lets look at these points in a bit more detail.<!--more--></p>
+<h2>Static UI</h2>
+<p>Using our fully documented REST API, the new Exceptionless 2.0 UI will be static, with no server side logic. What this allows us to do is host the UI on a content delivery network (CDN), guaranteeing faster load times for users anywhere in the world. <strong>Everyone</strong> loves fast load times!</p>
+<h2>Much, Much Faster</h2>
+<p>Being a single page application (SPA), the new version of the app eliminates page loads. The only thing&nbsp;being loaded is the JSON data, and we can pre-load other content as users navigate the site. That, along with the static UI mentioned above, means we can deliver an app that responds almost instantaneously to the user's input. What a time to be alive.</p>
+<h2>Maintainable Modularity</h2>
+<p>Version 1 taught us a lot. We gained valuable feedback from users, beat our head against several complex problems, and made countless wish lists for the future. Most of that lead to the desire for a more modular, easily maintainable system that new features could be added to with minimal reinvention.</p>
+<p>AngularJS has helped us fulfill those dreams. We can now add new features very easily, without breaking other sections of the site, and our code based has been greatly simplified. And, even with all the modularity, we are still able to run tests on the UI. Pretty snazzy!</p>
+<p>Event type support is handled via pluggable view modules, and we'll be able to add new ones that we haven't even conceived of with relative ease.</p>
+<h2>Do You Angular?</h2>
+<p>Making the choice to go with AngularJS wasn't easy or quick, but be believe it was the right path to take.</p>
+<p>Do you Angular? What apps have you used it on? If not, what other frameworks&nbsp;do you use for this type of app, and why?</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/angularjs/" class="tag">AngularJS</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/javascript/" class="tag">javascript</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-06-04-javascript-node-js-client-version-1-release-candidate/">JavaScript &amp; Node.js Client Version 1 Release Candidate</a></h2>
+    <p><img src="/website/assets/img/news/javascript-release-candidate.jpg" alt="Exceptionless JavaScript Client"></p>
+<p>If you've been following along the last few weeks, you know we've been working hard to get the new <a href="/website/javascript-client-available-for-preview-testing/" target="_blank">JavaScript Client</a> up to speed and ready for a version 1 release.</p>
+<p><strong>We think we're there!</strong></p>
+<p>Whether you're a <a href="/website/javascript-client-demo-exceptionless/" target="_blank">JavaScript</a> or <a href="/website/exceptionless-node-js-javascript-client-demo/" target="_blank">Node.js</a> user, you'll be able to enjoy the same full featured exception and event reporting platform that our primary .NET client offers, with fewer platform specific boundaries.<!--more--></p>
+<h2>Sure It's Ready?</h2>
+<p>We have been doing extensive testing over the course of the last month, which has allowed us to identify issues and inefficiencies throughout. Each of those has been addressed with several improvements and fixes, leaving us with a much faster, more stable client.</p>
+<p>Many of the tweaks we made were related to IE9 and Node. Those issues have been resolved and things are working well now. In addition, we further increased performance by shrinking the library size fairly drastically.</p>
+<p>Moving forward, we will just be working on bug fixes related to user-reported issues as usage picks up.</p>
+<h3>Recent Bug Fixes, Issue Resolutions, &amp; Improvements</h3>
+<ul>
+<li>Ensured compatibility with module formats like <a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts" target="_blank">es6</a> (<a href="https://github.com/systemjs/systemjs" target="_blank">SystemJS</a>/<a href="http://jspm.io/" target="_blank">jspm</a>) and <a href="http://requirejs.org/" target="_blank">RequireJS</a></li>
+<li>Various IE9 and Node compatibility issues fixed</li>
+<li>Decreased library size to improve performance and efficiency</li>
+<li>Various other performance&nbsp;improvements</li>
+<li>Fixed Angular integration failures with Angular Router</li>
+<li>Fixed - Unable to integrate with Aurelia due to node being improperly detected</li>
+<li>Changed the implementation of the InMemoryStorage to do a get instead of a get and delete</li>
+<li>Unable to post events with the NodeSubmissionClient over http fixed</li>
+<li>Fixed - Unit tests are failing due to transpilation</li>
+</ul>
+<h2>Start Using It!</h2>
+<p>We've already released a few blog posts (linked&nbsp;below) that detail how to get up and running, but please visit the <a href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless.JavaScript GitHub Repo</a> for the most up-to-date documentation.</p>
+<p><strong><a href="/website/javascript-client-demo-exceptionless/" target="_blank">JavaScript Users</a></strong> can find&nbsp;installation, configuration, usage details and examples <a href="/website/javascript-client-demo-exceptionless/" target="_blank">here</a>.</p>
+<p>If you're a <strong><a href="/website/exceptionless-node-js-javascript-client-demo/" target="_blank">Node.js</a> user</strong>, follow <a href="/website/exceptionless-node-js-javascript-client-demo/" target="_blank">this article</a> to get set up and running.</p>
+<p>We've also got <a href="https://github.com/exceptionless/Exceptionless.JavaScript/tree/master/example" target="_blank"><strong>examples/samples on GitHub</strong></a> for JavaScript, Express, TypeScript, SystemJS, and RequireJS.</p>
+<div class="signup center">
+  <a class="btn btn-large btn-primary" href="https://github.com/exceptionless/Exceptionless.JavaScript">Try It Today!</a>
+</div>
+<h2>Let Us Know What You Think</h2>
+<p>We're suckers for feedback, so let us have it whether good, bad, or indifferent. Bugs, etc should be reported on the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">GitHub Issues</a> page, but feel free to shoot us an in-app message, email, etc and let us know what you think and if you had any issues getting everything working.</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/javascript/" class="tag">javascript</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/node.js/" class="tag">node.js</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-09-02-find-software-bugs-exceptionless-javascript-client/">Find Software Bugs with the Exceptionless JavaScript Client in Minutes</a></h2>
+    <p><img src="/website/assets/img/news/blog-header-image-post2b.png" alt="Exceptionless JavaScript Client">
+If you missed our <a href="/website/news/2015/2015-06-04-javascript-node-js-client-version-1-release-candidate" target="_blank">JavaScript Client announcement</a>, this is a great chance to see just how <strong>quick and easy</strong>&nbsp;the client&nbsp;is to install and use! You can be finding those hard to track down bugs, errors, and exceptions, as well as tracking other events and log messages, in literally minutes.</p>
+<p>We've made it super easy to get up and running, as you'll see below. Take a look and let us know what you think!</p>
+<h2>Report &amp; Log Errors &amp; Events in 1:37</h2>
+<!--more-->
+<p>https://youtu.be/fNiJ0YolRPY</p>
+<div class="signup center" style="margin-top: 30px;">
+  <a class="btn btn-large btn-primary" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Try It Today</a>
+</div>
+<h2>The Text Version</h2>
+<p>A simple <strong>step-by-step guide</strong> to getting the Exceptionless JavaScript Client demo up and running on your local machine.</p>
+<p>The only <strong>pre-requisite</strong> is an <a href="https://be.exceptionless.io/signup" target="_blank">Exceptionless account</a>, or you can <a href="/website/self-hosting-exceptionless-free-and-fast/" target="_blank">host the entire platform yourself</a>.&nbsp;<strong>Open source</strong>, baby!</p>
+<ol>
+<li>Download and extract the <a href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless JavaScript Client</a> from GitHub</li>
+<li>Log in&nbsp;to your <a href="https://be.exceptionless.io/" target="_blank">Exceptionless Dashboard</a> and get your project's API key (Admin &gt; Projects &gt; <em>Select Project</em> &gt; API Keys)
+* If you don't have a project, you'll need to create one by going to Admin &gt; Projects &gt; Add New Project</li>
+<li>Open the extracted folder on your local machine and go to the "example" folder, then edit index.html.</li>
+<li>Replace the API key in the exceptionless.js script tag with your own, and comment out the line with serverURL in it (not needed for demo).</li>
+<li>Open index.html in your browser and open your browser's developer tools console so we can see the events&nbsp;fire.
+* We've added quick-fire buttons to this page that automatically generate events for you to play around with for the purpose of this demo.</li>
+<li>Click on one, generate 100 random events for instance, and you'll see the events queue up in the console. After a few seconds, you should see a queue processing notification&nbsp;telling you it's done processing.</li>
+<li>Go back to your Exceptionless project dashboard, and you will see the events hit the system in real time.
+* Make sure you are viewing the appropriate project and time period in your dashboard, otherwise you might not see the new events come in.</li>
+</ol>
+<h3>It's That Easy!</h3>
+<p>As you can see, the JavaScript client is super easy, super fast, and super flexible, for use in almost any project you might have.</p>
+<p>We hope you'll give it a shot, and we also hope you'll let us know what you think by contacting us via an in-app message, <a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">submitting an issue on GitHub</a>, or <a href="/website/contact/" target="_blank">through the website</a>.</p>
+<p><em>Here's to becoming Exceptionless!</em></p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/javascript/" class="tag">javascript</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-12-03-exceptionles-javascript-1-2-release-notes/">Exceptionless.JavaScript 1.2 Release Notes</a></h2>
+    <p><img src="/website/assets/img/news/blog-header-image-post2b-300x106.png" alt="Exceptionless JavaScript Client">We've got a quick release for the Exceptionless JavaScript Client that includes a few new additions to what it supports and a quick bug fix or two.</p>
+<p>Shout out to <a href="https://github.com/frankebersoll" target="_blank">@frankebersoll</a>&nbsp;for his help!</p>
+<p><strong>Please download and update to&nbsp;the</strong> <a href="https://github.com/exceptionless/Exceptionless.JavaScript/releases/tag/v1.2.0" target="_blank">source code here</a>, and view the full <a href="https://github.com/exceptionless/Exceptionless.JavaScript/compare/v1.1.1...v1.2.0" target="_blank">change log here</a>.<!--more--></p>
+<h2>JavaScript Client v1.2 Notes</h2>
+<h3>Errors</h3>
+<p>@frankebersoll added support for deduplicating JavaScript errors. Thanks!</p>
+<h3>Data Collection</h3>
+<p>Frank's back at it, adding support for collecting extra exception data that was already in the .NET client like module info, custom exception properties, and everything else that was already displayed in the UI when using the .NET client.</p>
+<h3>Node Info</h3>
+<p>Support for collecting Node module info has also been added (thanks again, @frankebersoll).</p>
+<h3>Bug Fix - Invalid States</h3>
+<p>An issue where Data Exclusions could cause events to be submitted in an invalid state has been fixed.</p>
+<h3>As always, let us know if you have any questions or feedback!</h3>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/javascript/" class="tag">javascript</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-05-02-exceptionless-weekly-update-4172017/">Exceptionless Weekly Update 4/17/2017</a></h2>
+    <p>Nothing too crazy going on in this week's update. A few tweaks to Exceptionless, Exceptionless.NET, and Exceptionless.JavaScript. Check out the details below, and don't forget to let us know how we're doing!<!--more--></p>
+<h2>Weekly Code &amp; Development Update - 4/17/2017</h2>
+<h3>Exceptionless Core Updates</h3>
+<p>This week we released the Exceptionless 4.0.2 minor release with a few fixes and tweaks. Check out the <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v4.0.2">Exceptionless 4.0.2&nbsp;release details</a> over on GitHub. Self hosters are the only ones that will need to worry about upgrading.</p>
+<p>We also made some good strides in reducing&nbsp;the amount of IO work the event post queues&nbsp;have to do. Woohoo!</p>
+<p>Lastly, for Exceptionless core, we merged in MailKit and continued improving email notifications.</p>
+<h2>Exceptionless.NET Client Update</h2>
+<p>The only really notable thing we did for the .NET client is fix the&nbsp;ProcessQueue method, making sure it blocks until the queue has been processed.</p>
+<h2>Exceptionless.JavaScript Client Update</h2>
+<p>For our JavaScript client, we want to work on supporting universal apps, but first we have to upgrade to the latest version of TypeScript, so we did some work this week toward that.</p>
+<h2 style="text-align: center;">
+  <a href="https://youtu.be/NH1sDXUnsBI?list=PLGHP7IVwFs_81fZTMgF7Dm5e0Ax4YvW_V">WATCH NOW</a>
+</h2>
+<p style="text-align: center;">
+  <a href="/website/category/weekly-updates/">Watch more Live Code Demos</a>
+</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/.net/" class="tag">.NET</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/client/" class="tag">client</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/email/" class="tag">email</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/javascript/" class="tag">javascript</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-08-15-javascript-client-v1-5-release-details-notes/">JavaScript Client V1.5 Release Details &amp; Notes</a></h2>
+    <p><img src="/website/assets/img/news/js-client-1.5-release-1024x538.jpg" alt="exceptionless.javascript 1.5">
+Exceptionless.JavaScript v1.5 Release Notes</p>
+<h3>Unversal App Support</h3>
+<p>The major update for 1.5 is that we have added support for universal apps (React Universal).</p>
+<p>To view the exact changes required to get everything working and set up, <a href="https://github.com/niemyjski/react-redux-universal-hot-example/commit/7f7c01ca1b328f3389c3919a53376bccbbfe1f08">click here</a>.</p>
+<h3>Other 1.5 Updates</h3>
+<!--more-->
+<ul>
+<li>Added support for exceptions that are passed in and are just strings.</li>
+<li>Updated TraceKit to the latest version, which adds support for parsing PhantomJS errors and greatly improves native stack traces.</li>
+<li>Thanks <a href="https://github.com/caesay">@caesay</a> for updating TypeScript to the latest version, as well!</li>
+</ul>
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fixed a bug where exceptionless would fail to load when used with webpack.</li>
+<li>Fixed a bug where browser module info was not being populated.</li>
+<li>Fixed a bug where ILog.trace was piped to the wrong console function which would error under IE (thanks&nbsp;<a href="https://github.com/srijken" class="user-mention">@srijken</a>!)</li>
+<li>Fixed a few bugs with angular integration</li>
+<li>Fixed a bug with submitLog not respecting log message and log level</li>
+</ul>
+<p>For a full change log, select an applicable release on the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/releases">Exceptionless.JavaScript GitHub Release page</a>.</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/javascript/" class="tag">javascript</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/react/" class="tag">react</a>
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-08-30-universal-javascript-support-added-exceptionless-javascript/">Universal JavaScript Support Added to Exceptionless.JavaScript</a></h2>
+    <p><img src="/website/assets/img/news/universal-javascript-1024x538.jpg" alt="Exceptionless Universal JavaScript"></p>
+<p>Recently, we released <a href="/website/news/2017/2017-08-15-javascript-client-v1-5-release-details-notes">Exceptionless.JavaScript 1.5</a>. The major update for the release was the addition of universal JavaScript (React Universal) support! More details below.&nbsp;The key is that we can now run in server side node apps, or in the browser, with a single script and do the right thing!</p>
+<blockquote>
+<p>TL;DR: Isomorphism is the functional aspect of seamlessly switching between client- and server-side rendering without losing state. Universal is a term used to emphasize the fact that a particular piece of JavaScript code is able to run in multiple environments. - <a href="https://medium.com/@ghengeveld/isomorphism-vs-universal-javascript-4b47fb481beb">Gert Hengeveld, Isomorphism vs Universal JavaScript</a></p>
+</blockquote>
+<!--more-->
+<p>We have gotten lots of requests for Universal JavaScript support. What this means is that you can use a library in the browser or server without any changes from the end user. This is great because you can just consume the library and just know it will work using the same API service no matter where you want to use it. The main con of using a universal client is the increased payload size as you know have to send node support to the browser as well.</p>
+<p>We implemented universal JavaScript support by bundling both the browser and node scripts together. But it wasn't as easy as concatenating the files together. We had to refactor the node and browser entry points so that they would automatically run, while ensuring that the initialization of environment specific code (storage, network, etc.) only ran when specific environment conditions were met. This is pretty easy to do with an <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">IIFE function</a> and a quick if check as shown <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.5.4/src/exceptionless.ts#L14-L38">here</a>. Next, we needed to provide a <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.5.4/src/exceptionless.universal.ts">new entry point that imported both of the entry points</a> which ensures that browser and node entry points run.</p>
+<p>This update adds support for universal apps, and a React Universal sample that shows the exact changes that were required to get everything working and setup can be found <a href="https://github.com/niemyjski/react-redux-universal-hot-example/commit/7f7c01ca1b328f3389c3919a53376bccbbfe1f08">here</a>. The pull request for universal support can be found <a href="https://github.com/exceptionless/Exceptionless.JavaScript/pull/75">here</a>.</p>
+<p><strong>To target it</strong>, you just need to reference the universal script (exceptionless.universal.js), this will happen automatically if you install via browserfiy or webpack.</p>
+<h2>Questions? Feedback?</h2>
+<p>Let us know what you think about the new Universal JavaScript support over on <a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues">GitHub</a>!</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/javascript/" class="tag">javascript</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/react/" class="tag">react</a>
+    
+    
+    
+  
+
+
+
+<hr>
+
+<p>See <a href="/website/tags/">all tags</a>.</p>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

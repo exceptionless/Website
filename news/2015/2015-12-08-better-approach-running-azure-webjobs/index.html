@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>A Better Approach to Running Azure WebJobs - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="A Better Approach to Running Azure WebJobs - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="A Better Approach to Running Azure WebJobs - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">A Better Approach to Running Azure WebJobs</h1>
+          </header>
+          <div class="entry-content">
+            <p><img src="/website/assets/img/news/jobs-blog-header-image.jpg" alt="Azure Webjobs"></p>
+<p>Lets talk about jobs in the Exceptionless world for a minute and <strong>how you can use our methods to improve your Azure WebJobs.</strong></p>
+<p>A job is a specific task/process that runs and does something like send a mail message, etc.</p>
+<h2>Out with the Old</h2>
+<p><strong>Prior to version 3.1</strong>, we used&nbsp;an early version of the Foundatio Jobs system to run our out-of-process jobs via Azure WebJobs. We found it to be quite a pain to figure out which jobs were running or eating up system resources because every job was titled Job.exe (just like figuring out the&nbsp;w3wp IIS process is running).&nbsp;Also, just&nbsp;to run an out-of-process job,&nbsp;one would have to compile the source, copy dependencies to a common bin folder, and then run&nbsp;an executable (Job.exe) with parameters that specify the job type.</p>
+<p>These tedious and error-prone tasks that had to be completed just to get a job to run&nbsp;are a thing of the past.</p>
+<h2>In with the New</h2>
+<!--more-->
+<p><strong>In Exceptionless 3.1</strong> we focused on refining and improving jobs. To do so, we created a <a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Jobs" target="_blank" rel="noopener">new console application for each job</a> and specified settings in the code versus <a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Jobs/EventPostsJob.cs#L16-L22" target="_blank" rel="noopener">error prone command line options as shown here</a>.</p>
+<p>Now, with <a href="/website/introducing-foundatio-3-0-async-efficiency/">Foundatio</a>, our open source app building block solution used in Exceptionless, you just define a&nbsp;new <a href="https://github.com/FoundatioFx/Foundatio#jobs">Job</a> that runs (via the run method) and you can use the <a href="https://github.com/FoundatioFx/Foundatio#jobs">Foundatio Jobs API</a>&nbsp;to run the job in process, out of process, continuous, or one time without changing the implementation.</p>
+<p>This new approach also gave us a great deployment strategy, for free. Simply copy the job executable and bin folders and run it anywhere!</p>
+<h3>Jobs (processes) running in Azure as an Azure web job</h3>
+<p><img src="/website/assets/img/news/Jobs-1024x670.jpg" alt="Exceptionless Jobs and Processes"></p>
+<h3>How you can implement&nbsp;a better&nbsp;Azure WebJob</h3>
+<p><a href="https://github.com/FoundatioFx/Foundatio#jobs">Foundatio Jobs</a> allows you to run a long running process (in process or out of process) with out worrying about it being terminated prematurely. By using Foundatio Jobs you gain all of the following features <strong>without changing your job implementation</strong>:</p>
+<ul>
+<li>Run job&nbsp;in process</li>
+<li>Run job out of process</li>
+<li>Run job&nbsp;with a start up delay</li>
+<li>Run job in an&nbsp;continuous loop with an optional interval delay.</li>
+</ul>
+<p>In this sample we'll just define a new class called HelloWorldJob that will hold our job that increments a counter and derives from JobBase. Please note that there are a few different base classes you can derive from based on your use case.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Foundatio.Jobs;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorldJob</span> : <span class="hljs-title">JobBase</span> {
+   <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> RunCount { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+
+   <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">override</span> Task&lt;JobResult&gt; <span class="hljs-title">RunInternalAsync</span>(<span class="hljs-params">JobRunContext context</span>)</span> {
+       RunCount++;
+       <span class="hljs-keyword">return</span> Task.FromResult(JobResult.Success);
+   }
+}
+</code></pre>
+<p>Now that we have our job defined we can run our job in process with a few different options:</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">var</span> job = <span class="hljs-keyword">new</span> HelloWorldJob();
+<span class="hljs-keyword">await</span> job.RunAsync(); <span class="hljs-comment">// job.RunCount = 1;</span>
+<span class="hljs-keyword">await</span> job.RunContinuousAsync(iterationLimit: <span class="hljs-number">2</span>); <span class="hljs-comment">// job.RunCount = 3;</span>
+<span class="hljs-keyword">await</span> job.RunContinuousAsync(cancellationToken: <span class="hljs-keyword">new</span> CancellationTokenSource(TimeSpan.FromMilliseconds(<span class="hljs-number">10</span>)).Token); <span class="hljs-comment">// job.RunCount &gt; 10;</span>
+</code></pre>
+<p>But our goal is to run this out of process in an Azure WebJob (this also works if you want to run this as a service or from the desktop).</p>
+<p>The&nbsp;first step is to create a new console application and reference the <a style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;" href="https://www.nuget.org/packages/Foundatio/">Foundatio NuGet Package</a>&nbsp;and the project that contains our HelloWorldJob.&nbsp;We are going to call our console application HelloWorldJob. Inside of the Program class, we'll update the main method to run our job.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.IO;
+<span class="hljs-keyword">using</span> JobSample;
+<span class="hljs-keyword">using</span> Foundatio.Jobs;
+<span class="hljs-keyword">using</span> Foundatio.ServiceProviders;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">HelloWorldJob</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span> {
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-built_in">int</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-built_in">string</span>[] args</span>)</span> {
+            <span class="hljs-comment">// <span class="hljs-doctag">NOTE:</span> This should be the path to your App_Data folder of your website.</span>
+            <span class="hljs-keyword">var</span> path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, <span class="hljs-string">@"..\..\..\Api\App_Data"</span>);
+            <span class="hljs-keyword">if</span> (Directory.Exists(path))
+                AppDomain.CurrentDomain.SetData(<span class="hljs-string">"DataDirectory"</span>, path);
+
+            <span class="hljs-comment">// Get a service provider so we can create an instance of our job.</span>
+            <span class="hljs-keyword">var</span> serviceProvider = ServiceProvider.GetServiceProvider(<span class="hljs-string">"JobSample.JobBootstrappedServiceProvider,JobSample"</span>);
+
+            <span class="hljs-keyword">var</span> job = serviceProvider.GetService&lt;JobSample.HelloWorldJob&gt;();
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> JobRunner(job, initialDelay: TimeSpan.FromSeconds(<span class="hljs-number">2</span>), interval: TimeSpan.Zero).RunInConsole();
+        }
+    }
+}
+</code></pre>
+<p>The last steps are to simply compile the project and deploy it to your Azure website!</p>
+<h3>Questions?</h3>
+<p>If you have any questions please feel free to contact us via our contact page, in app message, <a href="https://github.com/FoundatioFx/Foundatio/issues">GitHub issues</a> or <a href="https://discord.gg/6HxgFCx">Discord</a>.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

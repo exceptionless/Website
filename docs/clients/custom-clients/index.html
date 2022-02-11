@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Custom Exceptionless Clients - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Custom Exceptionless Clients - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Custom Exceptionless Clients - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Documentation</h1>
+</div>
+
+<div id="wrap" class="container" role="document">  
+  <div id="responsive-menu"><button class="btn btn-primary" onclick="handleMenu()">Table of Contents</button></div>
+  <div id="content" class="row-fluid">
+    <div class="toc well span3 visible-toc">
+      <div class="input-append">
+        <input class="span9" id="search-input" type="text" placeholder="Search docs...">
+        <button class="btn" type="button" onclick="handleSearch()">Go!</button>
+      </div>
+      
+
+    </div>
+    <div class="well span9 docs">
+      <h1>Custom Exceptionless Clients</h1>
+      <p>Exceptionless provides a <a href="/website/docs/clients/dotnet/">.NET Client</a> and a <a href="/website/docs/clients/javascript/">JavaScript Client</a> to make things convenient. However, we recognize that developers write code in all sorts of languages beyond .NET and JS. It is possible to use Exceptionless with any programming language. In fact, our API makes it really simple. However, to get the full power of Exceptionless, you may want to create your own custom client in the language of your choice.</p>
+<p>This guide will focus on the concepts necessary to successfully implement your custom client. Building a client in Exceptionless requires three main things:</p>
+<ol>
+<li>Authentication</li>
+<li>Understanding of the data models</li>
+<li>Usage of the correct API endpoints</li>
+</ol>
+<h3>Authentication</h3>
+<p>One of the key things to understand when creating a custom client (or when using the Exceptionless API) is the security implications of the API token generated and used. Exceptionless has two types of API tokens:</p>
+<ul>
+<li>User-scoped</li>
+<li>Client/Project-scoped</li>
+</ul>
+<p>Think of a user-scoped key as the master key for that particular user. It allows for EVERYTHING. This includes password resets, deleting organizations, deleting users, and more. This is not the type of key you want to generate with your custom client. You also don't want to manually generate and use these types of keys within your client.</p>
+<p>Instead, you should use a client-scoped key. A client-scoped key only has access to very specific endpoints and provides a significantly increased level of security compared to using a user-scoped key.</p>
+<p>In the Exceptionless UI, you can create a project API key by going to a project's settings page. To do so, click on the project dropdown in the top-menu, hover over the project's name, and then click the gear icon. On the settings page, you'll see an API Keys tab. Click that and you can generate a new client-scoped key.</p>
+<p><img src="../../img/apiKeyGeneration.png" alt="Generate API Key in UI"></p>
+<p>This is the key that will need to be passed into the configuration settings of your custom client.</p>
+<h3>Understanding the Data Models</h3>
+<p>Exceptionless is designed to be as flexible as possible. In fact, you can send in almost any data you want with an event. We will display some pieces of data better than others, and if you make use of well-known keys, we can use those to make sure your events are stacked properly and displayed in a usable way within your dashboard.</p>
+<p>However, before you can begin to throw any and everything at Exceptionless, it's important to understand the basic structure of an event. Let's take a look at the event model:</p>
+<pre><code class="language-json hljs"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"error"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"source"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"code.js line 655"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"reference_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"123"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"message"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"some event message"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"geo"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"stringified lat and long values separated by a comma"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"date"</span><span class="hljs-punctuation">:</span><span class="hljs-string">"2030-01-01T12:00:00.0000000-05:00"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"value"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"tags"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">"string"</span><span class="hljs-punctuation">,</span> <span class="hljs-string">"string"</span><span class="hljs-punctuation">,</span> <span class="hljs-string">"string"</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"data"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<p>Let's take each of these properties and explain them one-by-one.</p>
+<h4>type</h4>
+<p>The type property is an important one because it tells Exceptionless how to treat your event. Remember that Exceptionless is not just for errors. If you look at your Dashboard, you'll see categories like Exceptions, Logs, and Feature Usage. We group events into these categories for you based on the <code>type</code> value you pass in.</p>
+<p>You can pass in any type value you'd like as long as it is a string value. However, we recommend the following type values:</p>
+<ul>
+<li>error</li>
+<li>log</li>
+<li>usage</li>
+<li>404</li>
+<li>session</li>
+<li>sessionend</li>
+</ul>
+<p>These values are pretty self-explanatory. If you have an error, use the <code>error</code> value, if you are logging an event, use <code>log</code>, and so on and so forth.</p>
+<h4>source</h4>
+<p>The source value should be a string representing where the error happened in your code. This usually comes from the error object in whatever programming language you are writing in. This should be a string value representing the error location.</p>
+<h4>reference_id</h4>
+<p>The reference id is an identifier you can pass in in order to use later. For example, if you know that you will have other events that reference this one, you can make use of the reference identifier you pass in. This identifier can be any unique string value. UUID is good option here, but as long as the value is unique, you'll be good to go.</p>
+<h4>message</h4>
+<p>The message can mean different things depending on the type of event you're passing through. If it's an error event, you may want to pick off the error message from the error object you receive, or you may want to create a custom error message. For a log event, you can simply pass in whatever message makes sense for the event.</p>
+<p>Whatever message you send through, just make sure it is a string value.</p>
+<h4>geo</h4>
+<p>If you are capturing ip information, you may have location-based information. If so, and if you want to capture that alongside your events, you can pass that as a value for the <code>geo</code> property. This needs to be a string value, so you should pass in the longitude followed by a comma then the latitude.</p>
+<h4>value</h4>
+<p>The value property is an open-ended integer field that allows you capture additional information about your events. This could be number of ice cream scoops served before the event happened, it could be number of dogs walked, or any other arbitrary piece of information.</p>
+<h4>tags</h4>
+<p>The tags property is a string array of values you want to use to categorize your events. We have some built-in understanding of how certain tags should work. For example, events with a "critical" tag will be labels and handled as such in the interface.</p>
+<p>The tags array takes string values only, and all tags will be visibile on the event details page.</p>
+<h4>data</h4>
+<p>This is the most flexible of the properties that you send into Exceptionless. It is a dictionary object containing key/value pairs of any bits of information you want. That said, there are some know keys that will help Exceptionless better display information in this data dictionary:</p>
+<p><code>@error</code> - this indicates to Exceptionless that the event is an error. We will handle the event as such.
+<code>@simple_error</code> - this, like @error, indicates that the event is in an error. However, a simple error is less complex and the event object itself fits more neatly into what we've defined here so far.
+<code>@request</code> - Events from a web server will have a request object. <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/packages/core/src/models/data/RequestInfo.ts">Here is an example of how this data should be formed</a>.
+<code>@environment</code> - This would be a string environment about your user's environment. <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/master/packages/core/src/models/data/EnvironmentInfo.ts">Here is an example of how that model should be formed</a>.
+<code>@user</code> - This is an object that can contain the following: <code>identity</code>: string value, <code>name</code>: string value, <code>data</code>: any value.
+<code>@user_description</code> - This is an object that can contain the following: <code>email_address</code>: string value, <code>description</code>: string value, <code>data</code>: any value.
+<code>@level</code> - This is designed for log events to represent the log level. It can also be used to prevent logs from being captured depending on your log level settings in Exceptionless.
+<code>@submission_method</code> - Many apps have both global event listeners and specific areas where an event can be captured manually or ad hoc. To separate the submission methods of events, you can pass in whether an event was captured in a global listener, ad hoc, or however you want to describe the capturing of the event.
+<code>@stack</code> - This is the stringified error stack for an exception.</p>
+<p>When providing data to the Exceptionless server, there are specific data models dependent on the information you're trying to provide. We'll cover those models here.</p>
+<h3>Using the API</h3>
+<p>When building your custom client, the consumers of your client will be calling methods you create, but you, of course, will be wiring up those methods to reach out to the Exceptionless API. The API is well-documented with auto-generating docs for each endpoint. To get started, you can take a look at our <a href="/website/docs/api/">API Usage docs here</a>.</p>
+<h3>Wrapping Up</h3>
+<p>A custom client gives you full flexibility. While the two clients provided by Exceptionless do all of the above work for you, extending them would require forking the code. If you want extended capabilities or client support for additional programming languages, building a custom client might be the right move for you.</p>
+<p>We can't way to see what you build.</p>
+   
+    </div>
+  </div>
+</div>
+
+<script>
+    const handleMenu = () => {
+        const menu = document.querySelector(".toc");
+        menu.classList.toggle("hidden-toc");
+        menu.classList.toggle("visible-toc");
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const search = document.getElementById("search-input")
+        search.addEventListener("keyup", ({key}) => {
+          if (key === "Enter") {
+            handleSearch();
+          }
+        })
+    })
+    const handleSearch = async () => {
+      const searchTerm = document.getElementById("search-input").value;
+      const queryString = encodeURI(searchTerm)
+      window.location = `/search?term=${queryString}`;
+    }
+</script>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

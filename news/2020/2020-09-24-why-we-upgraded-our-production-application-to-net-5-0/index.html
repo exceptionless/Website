@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Why We Upgraded Our Production Application to .NET 5.0 - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Justin Hunter">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Why We Upgraded Our Production Application to .NET 5.0 - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Why We Upgraded Our Production Application to .NET 5.0 - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Why We Upgraded Our Production Application to .NET 5.0</h1>
+          </header>
+          <div class="entry-content">
+            <hr>
+<blockquote>
+<h2>Update: Microsoft has <a href="https://devblogs.microsoft.com/dotnet/announcing-net-5-0/">officially released .NET 5.0!</a></h2>
+</blockquote>
+<hr>
+<p>For anyone who has built an application, you've probably built it on some library or framework that changes over time. To keep up, you have to upgrade your application. However, there are varying schools of thought around when you should upgrade. At&nbsp;<a href="https://exceptionless.com/">Exceptionless</a>, we like to be on the bleeding edge. As an open-source company, we feel a responsibility to the community to know and understand the open-source tools we use. As such, we have already upgraded Exceptionless to use .NET 5.0.</p>
+<p>To give you a little background, .NET 5.0 was <a href="https://devblogs.microsoft.com/dotnet/introducing-net-5/">introduced in May of 2019</a>. The announcement was a big one as Microsoft chose to drop the .NET Core distinction. Going forward, we will just see cross-platform support in the form of ".NET X.X". The first release candidate for .NET 5.0 was <a href="https://devblogs.microsoft.com/dotnet/announcing-net-5-0-rc-1/">announced September 13, 2020</a>. We chose to upgrade and begin using .NET 5.0 immediately. That decision was driven by Microsoft's commitment to supporting production usage of the rc1 release. And as it turned out, the upgrade process was not too painful at all.</p>
+<p>All in, the upgrade took about one hour and was a very small commit. You can actually <a href="https://github.com/exceptionless/Exceptionless/commit/874f08e70a3ded2762f8d34df0378de38d7a3193">see the commit here</a>. This is really a testament to the foundation we've built here combined with the long-running foundation Microsoft has built with the .NET framework. Exceptionless is no small application and yet we were able to upgrade to an early release candidate in order to capitalize on new capabilities. To highlight the scale of Exceptionless and the relatively minor impact the upgrade process had, let's take a look at some of our numbers.</p>
+<ul>
+<li>1.4 TB Elasticsearch Cluster</li>
+<li>173M Elasticsearch Documents</li>
+<li>384M Redis Operations/Day</li>
+<li>122M HTTP Requests/Day</li>
+<li>2,476 GitHub Stars</li>
+<li>568 GitHub Forks</li>
+</ul>
+<p>There are always multiple schools of thought around running pre-release code on production applications, but for us, the decision was a no-brainer. The top motivators were performance improvements, availability of new C# features, and Docker improvements for our self-hosted solution.</p>
+<h2>Performance Improvements</h2>
+<p>We are a developer tool, and as such, performance is important. .NET 5.0 allows us to leverage the performance boosts associated with the upgrade and pass that along to our customers and the community around us. We compared our memory and performance from .NET Core 3.1 to the .NET 5.0 rc-1 release and saw enough gains to help support our decision to move forward with rolling this out to production.</p>
+<p>The .NET team's focus on pushing the boundaries of garbage collection was an important factor for us. GC is such a critical component to performance, and it impacts almost everything within the framework. We were excited to see the <a href="https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/#gc">focus Microsoft put on continuing to improve performance</a> in this area and felt the gains were enough to really tilt us towards our production release of Exceptionless using .NET 5.0.</p>
+<p>As a quick, visual example, of other improvements, here's a table Ben Adams tweeted that gives us glimpse into the performance gains of .NET 5.0 over .NET 3.1</p>
+<p>https://twitter.com/ben_a_adams/status/1306817978927902720</p>
+<h2>New C# Features</h2>
+<p>With the release of C# 9, we, once again, get significant improvements. Anytime a programming language releases new features, it's important to ask yourself whether those features are necessary for your application. In the case of C# 9, there are multiple features we believe will help improve the code legibility, overall codebase size, and ultimately performance. It always comes back to performance!</p>
+<p>Pattern matching in C# 9 is a feature we are particularly excited about. If you're interested in a deep dive into the improvements here, <a href="https://anthonygiretti.com/2020/06/23/introducing-c-9-improved-pattern-matching/">Anthony Giretti has a great post</a> highlighting the new functionality. For Exceptionless, pattern matching represents a better way for us to execute logical operations we already support. In doing so, we can reduce code complexity, improve performance, and deliver a better experience.</p>
+<p>Records are an exciting new feature in C# 9 as well. Data immutability is important, once again, for—you guessed it—performance. The way <a href="https://daveabrock.com/2020/07/06/c-sharp-9-deep-dive-records">Dave Brock puts it</a> on his blog is apt:</p>
+<blockquote>
+<p>Immutable types reduce risk, are safer, and help to prevent a lot of nasty bugs that occur when you update your object.</p>
+</blockquote>
+<p>Data records give us immutability in the form of a dedicated struct. Rather than extending the functionality of C#'s existing structs, records give us the ability to reach for a data-specific type that offers built-in immutability.</p>
+<h2>Docker Improvements</h2>
+<p>We are proud of our open-source roots. We want to make self-hosting Exceptionless as easy as possible, and Docker has made this a reality. Our Docker image is the fastest and easiest way to get started with self-hosting and .NET 5.0 only improves the Docker experience.</p>
+<p>.NET 5.0 enables better resource compaction which, in turn, reduces the cost associated with Docker images. This is important to the bottom line, but .NET 5.0's improvements go beyond dollar-savings with Docker. The new features also improve memory constraints which—say it with me now—improve performance.</p>
+<p>One additional benefit of the .NET 5.0 rc-1 release candidate is how our Docker image now works better with Kubernetes resource constraints. We're pretty big fans of Docker and Kubernetes, so anything to improve the experience around both is a win in our eyes.</p>
+<h2>Conclusion</h2>
+<p>We took an early release candidate from a massive framework and rolled it out to production almost immediately after it was announced. Are we crazy? We don't think so, but you decide.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

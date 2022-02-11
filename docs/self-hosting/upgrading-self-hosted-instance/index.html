@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Upgrading - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Upgrading - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Upgrading - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Documentation</h1>
+</div>
+
+<div id="wrap" class="container" role="document">  
+  <div id="responsive-menu"><button class="btn btn-primary" onclick="handleMenu()">Table of Contents</button></div>
+  <div id="content" class="row-fluid">
+    <div class="toc well span3 visible-toc">
+      <div class="input-append">
+        <input class="span9" id="search-input" type="text" placeholder="Search docs...">
+        <button class="btn" type="button" onclick="handleSearch()">Go!</button>
+      </div>
+      
+
+    </div>
+    <div class="well span9 docs">
+      <h1>Upgrading</h1>
+      <p><strong>Please ensure that you have created backups before upgrading!</strong></p>
+<p><strong>If you are upgrading from v1 or <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v2.0.0">v2</a> you will need to upgrade to <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v3.0.0">v3.0</a> before upgrading to the latest release.</strong></p>
+<h2>Upgrading from v7 to v7.1</h2>
+<p>We made some changes to email configuration. Yoy wukk now be required to set the <code>EX_SmtpFrom</code> config map/environment variable in order to send email. The value should be in the following format: <code>"Exceptionless &lt;noreply@YOUR_CUSTOM_DOMAIN_NAME&gt;"</code></p>
+<h2>Upgrading from v6 to v7</h2>
+<p>A migration job will need to be run as there are several in place data migrations that need to be applied. The migrations will add new index mappings for soft delete support as well as stack status and populate various stack fields with data.</p>
+<ol>
+<li>You'll need to run an out of process <code>Migration</code> job. In order to do this you'll need to update configuration to ensure it's pointing to your Elasticsearch (e.g., <code>EX_ConnectionStrings__Elasticsearch</code> environment variable/connection string) and Redis instances.</li>
+<li>Scale down existing Exceptionless apps and jobs.</li>
+<li>Start the <code>Migration</code> job.
+<ol>
+<li>For docker, you just need to pass the <code>Migration</code> argument to the <code>exceptionless/job</code> container image (e.g., <code>docker run exceptionless/job:latest Migration</code>). Please remember to pass any configuration settings (e.g., connection strings) to the migration job.</li>
+<li>For Kubernetes, you can run <a href="https://github.com/exceptionless/Exceptionless/blob/master/k8s/manual-migration-job.yaml"><code>kubectl apply -f manual-migration-job.yaml</code></a>. Please note that you may have to tweak namespaces and container image version.</li>
+</ol>
+</li>
+<li>Scale back up and you should be good to go.</li>
+</ol>
+<h2>Upgrading from v5 to v6</h2>
+<p>Version 6 added support for Elasticsearch 7, which requires a complete data migration from Elasticsearch 5.x. This tutorial assumes you have docker/Kubernetes installed and have followed the <a href="/website/docs/self-hosting/">setup guide</a>.</p>
+<ol>
+<li>Create a new Elasticsearch 7 cluster or modify your existing <code>docker-compose</code> file to also include our Elasticsearch 7.x image (There will need to be two Elasticsearch docker instances (5.x and 7.x). Please note that we've included the Elasticsearch major version number in the data path of the docker data path, this allows you to run two versions side by side without losing the data.</li>
+<li>Add a new environment variable or config map setting for <code>EX_ElasticsearchToMigrate</code> with the value of the <code>EX_Elasticsearch</code> 5.x connection string.</li>
+<li>Add your existing Elasticsearch instance to <code>reindex.remote.whitelist</code> in Elasticsearch 7's <code>elasticsearch.yml</code>. Make sure you include the port as well, for example <code>reindex.remote.whitelist: 127.0.0.1:9200</code>.</li>
+<li>Update the existing <code>EX_Elasticsearch</code> environment variable or config map entry to point to the Elasticsearch 7.x Cluster.</li>
+<li>Scale down existing Exceptionless apps and jobs.</li>
+<li>Start the Data Migration by running the <code>DataMigration</code> job. You can run it by opening the CLI and executing <code>dotnet Exceptionless.Job.dll DataMigration</code>. If you receive a warning that the port is already used, you need to change <code>ASPNETCORE_URLS</code> first, for example <code>ASPNETCORE_URLS=http://+:808</code>. You can also run an incremental reindex by setting the <code>EX_ReindexCutOffDate</code> with a date value (E.G., <code>2022-01-28T18:00:00.00Z</code>., environment variable or config map entry and rerunning the Migration Job.</li>
+<li>Scale up the rest of the app!</li>
+</ol>
+<h2>Upgrading from v4 to v5</h2>
+<p>We now only provide official docker images as release artifacts. This tutorial assumes you have docker/Kubernetes installed and have followed the <a href="/website/docs/self-hosting/">setup guide</a>.</p>
+<ol>
+<li>We now can run on linux or windows as we are running on ASP.NET Core! As a result we've completely redone the configuration. For the most part we've prefixed configuration with <code>EX_</code> and simplified it as much as possible. I'd recommend taking a look at your previous configuration settings and then read over the following <a href="/website/docs/self-hosting/kubernetes/#configuration">configuration document</a> to migrate your settings.</li>
+<li>Please note that no Elasticsearch changes are required. You can continue to use your existing Elasticsearch cluster. You just need to update the connection string by following step 1.</li>
+<li>Please note that the UI and API no longer run on the same port as they are now two different docker images. You may need to update your server url accordingly in your client applications.</li>
+</ol>
+<h2>Upgrading from v3 to v4</h2>
+<p>This process requires you to setup and configure a new Elasticsearch 5 instance and reindex your existing Elasticsearch 1.x data into the Elasticsearch 5 instance using <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html">external reindexing</a>. This tutorial assumes you have Elasticsearch 5 Kibana instance installed and configured.</p>
+<ol>
+<li>Edit the Elasticsearch 5's <code>elasticsearch.yml</code> configuration file.
+<ol>
+<li>Add the <code>reindex.remote.whitelist: 10.0.0.9:9200</code> setting with a value that contains the IP address or hostname of the 1.x server. This allows you to reindex the 1.x data into your new 5.x instance.</li>
+<li>Temporarily comment out (with a leading <code>#</code>) the following line: <code>#action.auto_create_index: .security,.monitoring*,.watches,.triggered_watches,.watcher-history*</code></li>
+<li>Restart the elasticsearch service.</li>
+</ol>
+</li>
+<li>Open Kibana (E.G., <a href="http://localhost:5601">http://localhost:5601</a>) and execute the following scripts to reindex your data.</li>
+</ol>
+<h3>Create Organization Index with the correct mappings:</h3>
+<pre><code class="language-json hljs">PUT organizations-v1
+<span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"settings"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"index.number_of_replicas"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"index.number_of_shards"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"analysis"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"keyword_lowercase"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"custom"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"filter"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-string">"lowercase"</span>
+          <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"tokenizer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"aliases"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"organizations"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"mappings"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"organization"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"dynamic"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"created_utc"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"updated_utc"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"stripe_customer_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"has_premium_features"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"boolean"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"plan_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"plan_name"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"subscribe_date"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"billing_status"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"float"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"billing_price"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"double"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"is_suspended"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"boolean"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"retention_days"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"integer"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"invites"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"object"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"token"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"email_address"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword_lowercase"</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"usage"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"object"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"date"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"total"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"float"</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"blocked"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"float"</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"limit"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"float"</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"too_big"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"float"</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"overage_hours"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"object"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"date"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"total"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"float"</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"blocked"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"float"</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"limit"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"float"</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"too_big"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"float"</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"project"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"dynamic"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"created_utc"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"updated_utc"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"organization_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"next_summary_end_of_day_ticks"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"long"</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"token"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"dynamic"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"created_utc"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"updated_utc"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"expires_utc"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"organization_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"project_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"default_project_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"user_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"refresh"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"scopes"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"byte"</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"user"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"dynamic"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"created_utc"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"updated_utc"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"organization_ids"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"full_name"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"email_address"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword_lowercase"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"verify_email_address_token"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"password_reset_token"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"roles"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"o_auth_accounts"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"object"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"provider"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"provider_user_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"username"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"webhook"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"dynamic"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"created_utc"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"organization_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"project_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"url"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"event_types"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h3>Reindex Organization data from 1.x into 5.x <strong>Please make sure you update the host name</strong>:</h3>
+<pre><code class="language-json hljs">POST _reindex
+<span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"source"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"remote"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"host"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"http://10.0.0.9:9200"</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"index"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"organizations-v1"</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"dest"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"index"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"organizations-v1"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"op_type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"create"</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"script"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"inline"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"if (ctx._source.modified_utc != null) { ctx._source.updated_utc = ctx._source.remove('modified_utc'); }"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"lang"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"painless"</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h3>Create Stack Index with the correct mappings:</h3>
+<pre><code class="language-json hljs">PUT stacks-v1
+<span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"settings"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"index.number_of_replicas"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"index.number_of_shards"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"aliases"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"stacks"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"mappings"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"stacks"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"dynamic"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"organization_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"project_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"signature_hash"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"first_occurrence"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"last_occurrence"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"title"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"boost"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1.1</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"tags"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"boost"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1.2</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"references"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"date_fixed"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"fixed"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"boolean"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"fixed_in_version"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"is_hidden"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"boolean"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"is_regressed"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"boolean"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"occurrences_are_critical"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"boolean"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"total_occurrences"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"integer"</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h3>Reindex Stack data from 1.x into 5.x <strong>Please make sure you update the host name</strong>:</h3>
+<pre><code class="language-json hljs">POST _reindex
+<span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"source"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"remote"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"host"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"http://10.0.0.9:9200"</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"index"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"stacks-v1"</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"dest"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"index"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"stacks-v1"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"op_type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"create"</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h3>Create Event Template so daily indexes can be created with the correct mappings:</h3>
+<pre><code class="language-json hljs">PUT _template/events-v1
+<span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"template"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"events-v1-*"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"settings"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"number_of_shards"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"number_of_replicas"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"analysis"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"comma_whitespace"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"pattern"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"pattern"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"[,\\s]+"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"email"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"custom"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"filter"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-string">"email"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"lowercase"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"unique"</span>
+          <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"tokenizer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"version_index"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"custom"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"filter"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-string">"version_pad1"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"version_pad2"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"version_pad3"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"version_pad4"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"version"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"lowercase"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"unique"</span>
+          <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"tokenizer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"whitespace"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"version_search"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"custom"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"filter"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-string">"version_pad1"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"version_pad2"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"version_pad3"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"version_pad4"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"lowercase"</span>
+          <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"tokenizer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"whitespace"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"whitespace_lower"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"custom"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"filter"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-string">"lowercase"</span>
+          <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"tokenizer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"whitespace"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"typename"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"custom"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"filter"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-string">"typename"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"lowercase"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"unique"</span>
+          <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"tokenizer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"typename_hierarchy"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"standardplus"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"custom"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"filter"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-string">"standard"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"typename"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"lowercase"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"stop"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"unique"</span>
+          <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"tokenizer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"comma_whitespace"</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"filter"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"email"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"pattern_capture"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"patterns"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-string">"(\\w+)"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"(\\p{L}+)"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"(\\d+)"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"(.+)@"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"@(.+)"</span>
+          <span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"typename"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"pattern_capture"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"patterns"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-string">"\\.(\\w+)"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"([^\\()]+)"</span>
+          <span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"version"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"pattern_capture"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"patterns"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+            <span class="hljs-string">"^(\\d+)\\."</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"^(\\d+\\.\\d+)"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-string">"^(\\d+\\.\\d+\\.\\d+)"</span>
+          <span class="hljs-punctuation">]</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"version_pad1"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"pattern_replace"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"pattern"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"(\\.|^)(\\d{1})(?=\\.|-|$)"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"replacement"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"$10000$2"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"version_pad2"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"pattern_replace"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"pattern"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"(\\.|^)(\\d{2})(?=\\.|-|$)"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"replacement"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"$1000$2"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"version_pad3"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"pattern_replace"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"pattern"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"(\\.|^)(\\d{3})(?=\\.|-|$)"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"replacement"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"$100$2"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"version_pad4"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"pattern_replace"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"pattern"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"(\\.|^)(\\d{4})(?=\\.|-|$)"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"replacement"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"$10$2"</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-attr">"tokenizer"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"comma_whitespace"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"pattern"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"pattern"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"[,\\s]+"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"typename_hierarchy"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"path_hierarchy"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"delimiter"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"."</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"mappings"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"events"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"dynamic"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"false"</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"standardplus"</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"search_analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"whitespace_lower"</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"_size"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"enabled"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+        <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"dynamic_templates"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+          <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"idx_reference"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"match"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"*-r"</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"mapping"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+          <span class="hljs-attr">"count"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"integer"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"created_utc"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"data"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"@environment"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"architecture"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+                  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                  <span class="hljs-attr">"ip_address"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"index"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"copy_to"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                      <span class="hljs-string">"ip"</span>
+                    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+                  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                  <span class="hljs-attr">"machine_name"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"boost"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1.1</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                      <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                        <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                      <span class="hljs-punctuation">}</span>
+                    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+                  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                  <span class="hljs-attr">"o_s_name"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"copy_to"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                      <span class="hljs-string">"os"</span>
+                    <span class="hljs-punctuation">]</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"@error"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"data"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                      <span class="hljs-attr">"@target"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                          <span class="hljs-attr">"ExceptionType"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"index"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"copy_to"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                              <span class="hljs-string">"error.targettype"</span>
+                            <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+                          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                          <span class="hljs-attr">"Method"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"index"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"copy_to"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                              <span class="hljs-string">"error.targetmethod"</span>
+                            <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+                          <span class="hljs-punctuation">}</span>
+                        <span class="hljs-punctuation">}</span>
+                      <span class="hljs-punctuation">}</span>
+                    <span class="hljs-punctuation">}</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"@level"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"@location"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"country"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+                  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                  <span class="hljs-attr">"level1"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+                  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                  <span class="hljs-attr">"level2"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+                  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                  <span class="hljs-attr">"locality"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"@request"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"client_ip_address"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"index"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"copy_to"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                      <span class="hljs-string">"ip"</span>
+                    <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+                  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                  <span class="hljs-attr">"data"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                      <span class="hljs-attr">"@browser"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                        <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                          <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                          <span class="hljs-punctuation">}</span>
+                        <span class="hljs-punctuation">}</span>
+                      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                      <span class="hljs-attr">"@browser_major_version"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span>
+                      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                      <span class="hljs-attr">"@browser_version"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                        <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                          <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                          <span class="hljs-punctuation">}</span>
+                        <span class="hljs-punctuation">}</span>
+                      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                      <span class="hljs-attr">"@device"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                        <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                          <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                          <span class="hljs-punctuation">}</span>
+                        <span class="hljs-punctuation">}</span>
+                      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                      <span class="hljs-attr">"@is_bot"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"boolean"</span>
+                      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                      <span class="hljs-attr">"@os"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                        <span class="hljs-attr">"index"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+                        <span class="hljs-attr">"copy_to"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                          <span class="hljs-string">"os"</span>
+                        <span class="hljs-punctuation">]</span>
+                      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                      <span class="hljs-attr">"@os_major_version"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span>
+                      <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                      <span class="hljs-attr">"@os_version"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                        <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                          <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                          <span class="hljs-punctuation">}</span>
+                        <span class="hljs-punctuation">}</span>
+                      <span class="hljs-punctuation">}</span>
+                    <span class="hljs-punctuation">}</span>
+                  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                  <span class="hljs-attr">"path"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                      <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                        <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                      <span class="hljs-punctuation">}</span>
+                    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+                  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                  <span class="hljs-attr">"user_agent"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                      <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                        <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                      <span class="hljs-punctuation">}</span>
+                    <span class="hljs-punctuation">}</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"@simple_error"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"data"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                      <span class="hljs-attr">"@target"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                          <span class="hljs-attr">"ExceptionType"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"index"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">false</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"copy_to"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+                              <span class="hljs-string">"error.targettype"</span>
+                            <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+                            <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+                          <span class="hljs-punctuation">}</span>
+                        <span class="hljs-punctuation">}</span>
+                      <span class="hljs-punctuation">}</span>
+                    <span class="hljs-punctuation">}</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"@submission_method"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"@user"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"identity"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"boost"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1.1</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                      <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                        <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                      <span class="hljs-punctuation">}</span>
+                    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"email"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"search_analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"whitespace_lower"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+                  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                  <span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                      <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                        <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                      <span class="hljs-punctuation">}</span>
+                    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"@user_description"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+                  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                  <span class="hljs-attr">"email_address"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"boost"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1.1</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                      <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                        <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                        <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                      <span class="hljs-punctuation">}</span>
+                    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"email"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"search_analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"simple"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"@version"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"version_index"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"search_analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"version_search"</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"date"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"error"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"properties"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"code"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"boost"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1.1</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"message"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"targetmethod"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"boost"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1.2</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"typename"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"search_analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"whitespace_lower"</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"targettype"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"boost"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1.2</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"typename"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"search_analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"whitespace_lower"</span>
+              <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+              <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"boost"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1.1</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                  <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                    <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                    <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+                  <span class="hljs-punctuation">}</span>
+                <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"typename"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"search_analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"whitespace_lower"</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"geo"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"geo_point"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"idx"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"object"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"dynamic"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"true"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"ip"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"comma_whitespace"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"is_deleted"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"boolean"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"is_first_occurrence"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"boolean"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"is_fixed"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"boolean"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"is_hidden"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"boolean"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"message"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"organization_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"os"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">}</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"project_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"reference_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"source"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"stack_id"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"tags"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"text"</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"boost"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1.2</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"fields"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+              <span class="hljs-attr">"keyword"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+                <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span><span class="hljs-punctuation">,</span>
+                <span class="hljs-attr">"ignore_above"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">256</span>
+              <span class="hljs-punctuation">}</span>
+            <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+            <span class="hljs-attr">"include_in_all"</span><span class="hljs-punctuation">:</span> <span class="hljs-keyword">true</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"keyword"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"updated_utc"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"date"</span>
+          <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+          <span class="hljs-attr">"value"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+            <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"double"</span>
+          <span class="hljs-punctuation">}</span>
+        <span class="hljs-punctuation">}</span>
+      <span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h3>Reindex Event data from 1.x into 5.x <strong>Please make sure you update the host name</strong>:</h3>
+<pre><code class="language-json hljs">POST _reindex
+<span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"source"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"remote"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+      <span class="hljs-attr">"host"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"http://10.0.0.9:9200"</span>
+    <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"index"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"events-v1-*"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"size"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">200</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"dest"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"index"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"events-v1-error"</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"script"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"lang"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"painless"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"inline"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ctx._index = 'events-v1-' + DateTimeFormatter.ofPattern('yyyy.MM.dd').format(OffsetDateTime.parse(ctx._source.date).toInstant().atZone(ZoneOffset.UTC)); if (ctx._source.updated_utc == null) { ctx._source.updated_utc = ctx._source.created_utc; } if (ctx._source.is_deleted == null) { ctx._source.is_deleted = false; } if (!ctx.containsKey('data') || !(ctx.data.containsKey('@error') || ctx.data.containsKey('@simple_error'))) return null;def types = [];def messages = [];def codes = [];def err = ctx.data.containsKey('@error') ? ctx.data['@error'] : ctx.data['@simple_error'];def curr = err;while (curr != null) { if (curr.containsKey('type'))  types.add(curr.type); if (curr.containsKey('message'))  messages.add(curr.message); if (curr.containsKey('code'))  codes.add(curr.code); curr = curr.inner;}if (ctx.error == null) ctx.error = new HashMap();ctx.error.type = types;ctx.error.message = messages;ctx.error.code = codes;"</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h3>Delete the previous Event Template:</h3>
+<pre><code class="language-json hljs">DELETE _template/events-v1
+</code></pre>
+<h2>Upgrading from v2 to v3</h2>
+<p><em>Please note that upgrading from <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v2.0.0">v2</a> to <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v3.0.0">v3</a> requires that <code>Redis</code> is installed and configured.</em></p>
+<ol>
+<li>
+<p>Download and extract the <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v3.0.0">v3</a> release to a temp folder.</p>
+</li>
+<li>
+<p>Update the connection strings in the <code>App_Data\JobRunner\Job.exe.config</code> config file.</p>
+<ol>
+<li>
+<p>You'll also need to add a <code>Migration:MongoConnectionString</code> connection string for the migration jobs to run.</p>
+<pre><code class="language-xml hljs"><span class="hljs-tag">&lt;<span class="hljs-name">add</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Migration:MongoConnectionString"</span> <span class="hljs-attr">connectionString</span>=<span class="hljs-string">"mongodb://localhost/exceptionless"</span> /&gt;</span>
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Open the terminal and run the following jobs to migrate data from previous major versions of Exceptionless. <code>Jobs.exe</code> can be found in the <code>\wwwroot\App_Data\JobRunner\</code> folder.</p>
+</li>
+</ol>
+<pre><code class="language-powershell hljs">Job.exe <span class="hljs-literal">-t</span> <span class="hljs-string">"Exceptionless.EventMigration.OrganizationMigrationJob, Exceptionless.EventMigration"</span> <span class="hljs-literal">-s</span> <span class="hljs-string">"Exceptionless.Core.Jobs.JobBootstrapper, Exceptionless.Core"</span>
+</code></pre>
+<h2>Upgrading from v1 to v3</h2>
+<p><em>Please note that upgrading from v1 to <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v3.0.0">v3</a> requires that <code>Redis</code> is installed and configured.</em></p>
+<ol>
+<li>
+<p>Download and extract the <a href="https://github.com/exceptionless/Exceptionless/releases/tag/v3.0.0">v3</a> release to a temp folder.</p>
+</li>
+<li>
+<p>Update the connection strings in the <code>App_Data\JobRunner\Job.exe.config</code> config file.</p>
+<ol>
+<li>
+<p>You'll also need to add a <code>Migration:MongoConnectionString</code> connection string for the migration jobs to run.</p>
+<pre><code class="language-xml hljs"><span class="hljs-tag">&lt;<span class="hljs-name">add</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Migration:MongoConnectionString"</span> <span class="hljs-attr">connectionString</span>=<span class="hljs-string">"mongodb://localhost/exceptionless"</span> /&gt;</span>
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Open the terminal and run the following jobs to migrate data from previous major versions of Exceptionless. <code>Jobs.exe</code> can be found in the <code>\wwwroot\App_Data\JobRunner\</code> folder.</p>
+</li>
+</ol>
+<pre><code class="language-powershell hljs">Job.exe <span class="hljs-literal">-t</span> <span class="hljs-string">"Exceptionless.EventMigration.StackMigrationJob, Exceptionless.EventMigration"</span> <span class="hljs-literal">-s</span> <span class="hljs-string">"Exceptionless.Core.Jobs.JobBootstrapper, Exceptionless.Core"</span>
+Job.exe <span class="hljs-literal">-t</span> <span class="hljs-string">"Exceptionless.EventMigration.QueueEventMigrationsJob, Exceptionless.EventMigration"</span> <span class="hljs-literal">-s</span> <span class="hljs-string">"Exceptionless.Core.Jobs.JobBootstrapper, Exceptionless.Core"</span>
+Job.exe <span class="hljs-literal">-t</span> <span class="hljs-string">"Exceptionless.EventMigration.EventMigrationJob, Exceptionless.EventMigration"</span> <span class="hljs-literal">-c</span> <span class="hljs-literal">-s</span> <span class="hljs-string">"Exceptionless.Core.Jobs.JobBootstrapper, Exceptionless.Core"</span>
+Job.exe <span class="hljs-literal">-t</span> <span class="hljs-string">"Exceptionless.EventMigration.OrganizationMigrationJob, Exceptionless.EventMigration"</span> <span class="hljs-literal">-s</span> <span class="hljs-string">"Exceptionless.Core.Jobs.JobBootstrapper, Exceptionless.Core"</span>
+</code></pre>
+   
+    </div>
+  </div>
+</div>
+
+<script>
+    const handleMenu = () => {
+        const menu = document.querySelector(".toc");
+        menu.classList.toggle("hidden-toc");
+        menu.classList.toggle("visible-toc");
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const search = document.getElementById("search-input")
+        search.addEventListener("keyup", ({key}) => {
+          if (key === "Enter") {
+            handleSearch();
+          }
+        })
+    })
+    const handleSearch = async () => {
+      const searchTerm = document.getElementById("search-input").value;
+      const queryString = encodeURI(searchTerm)
+      window.location = `/search?term=${queryString}`;
+    }
+</script>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

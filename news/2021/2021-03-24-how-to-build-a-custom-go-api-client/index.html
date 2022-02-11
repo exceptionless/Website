@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>How to Build a Custom Go Client For a REST API - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="How to Build a Custom Go Client For a REST API - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="How to Build a Custom Go Client For a REST API - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">How to Build a Custom Go Client For a REST API</h1>
+          </header>
+          <div class="entry-content">
+            <p><img src="./go_gophers.jpg" alt="Picture of gophers working"></p>
+<p><a href="https://exceptionless.com">Exceptionless</a> is powered by a REST API. When you interact with the dashboard UI, when you use the .NET client, and when you use the JavaScript client, you are interacting with the REST API. It is well-documented, and it can be used without any client libraries. This paradigm makes it simple for developers to create their own wrappers around the API. In fact, we recently started work on building an official Go client for Exceptionless. Along the way, we learned some tips and tricks that may be helpful for others that want to build clients and SDKs in Go that wrap RESTful APIs.</p>
+<p>First, a little about Go. <a href="https://golang.org/">Go</a> is a statically typed language, built originally by the folks at Google. Go, while close in syntax to many other statically typed languages, differs in that it is no object oriented. Go is also very well suited for <a href="https://www.programmableweb.com/news/what-grpc-api-and-how-does-it-work/analysis/2020/10/08">gRPC APIs</a>, but that does not prevent it from being used with REST APIs, as we'll see here today.</p>
+<h3>Getting Started</h3>
+<p>In order to build our Go client, we will need to have Go installed. Honestly, this can be the hardest step as it involves setting environment variables and updating your profile source PATH. So rather than risk confusing you with the steps to install Go and get started, I'm going to simply point you to Go's official install instructions.</p>
+<p><a href="https://golang.org/doc/install">You can find those instructions here</a>.</p>
+<p>Once you've installed Go, you will need to have a text editor handy so that we can write our new Go code. From the command line, create a new folder and call it "go-rest". Change into that directory, and let's start writing some code.</p>
+<h3>The Main File</h3>
+<p>In Go, you will always have a <code>main.go</code> file which acts as the entry point for your source code. We need to set that up first, so let's do that now. In the root of your project folder, create your <code>main.go</code> file. Inside that file, let's start by declaring our package and importing a module. Add the following:</p>
+<pre><code class="language-go hljs"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+	<span class="hljs-string">"fmt"</span>
+)
+</code></pre>
+<p>Your file won't do anything yet, but we're laying the groundwork. We have declared our package as <code>main</code>, and we have imported the built-in <code>fmt</code> library from Go for formatting.</p>
+<p>Next, we need a <code>main</code> function, so let's create that. Add the following below your import statement:</p>
+<pre><code class="language-go hljs"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+  fmt.Println(<span class="hljs-string">"Hello, world"</span>)
+}
+</code></pre>
+<p>This is the example program Go's example docs show, so we might as well run it. From your command line, inside your project directory, run this command:</p>
+<pre><code>go run .
+</code></pre>
+<p>You should see <code>Hello, world</code> printed in the command line terminal window.</p>
+<p>Now that we have the fundamentals down, let's talk about how Go works so that we can build our REST API client. You can include as many functions in your <code>main.go</code> file as you'd like and you can call those function from within other functions. But, like any other programming language, it's probably smart to separate code to make it easier to work with.</p>
+<h3>Creating an API Helper</h3>
+<p>The nice thing about Go is that when you create a new file, that file is automatically available from any of your other files as long as they share the same main package.</p>
+<p>Since we are building a REST client, it probably makes sense to create a file that would handle all our API routing request. So, create a file in the root of your project called <code>api.go</code>.</p>
+<p>Inside that file, make sure to reference the main package at the top like this:</p>
+<p><code>pacakage main</code></p>
+<p>We are also going to import a couple packages here as well, so your file should look like this:</p>
+<pre><code class="language-go hljs"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+	<span class="hljs-string">"bytes"</span>
+	<span class="hljs-string">"log"</span>
+	<span class="hljs-string">"net/http"</span>
+)
+</code></pre>
+<p>These packages are all built into Go itself. You can install external packages as well, and we'll explore that soon.</p>
+<p>Now that we have the start of our API file, it's good to think about what our client needs to do. With a REST API, you may have the following request methods:</p>
+<ul>
+<li>GET</li>
+<li>POST</li>
+<li>PUT</li>
+<li>DELETE</li>
+<li>PATCH</li>
+</ul>
+<p>You may not need all of these for your client, but it's good to know that they exist. In our case, we are going to implement the GET and POST methods and with those as a template, you should be able to extend your code to implement PUT, PATCH, and DELETE.</p>
+<p>Let's start by building the POST method since its the backbone of our client. In your <code>api.go</code> file, below the import statement, add the following:</p>
+<pre><code class="language-go hljs"><span class="hljs-comment">//Post posts to the Exceptionless Server</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Post</span><span class="hljs-params">(endpoint <span class="hljs-keyword">string</span>, postBody <span class="hljs-keyword">string</span>, authorization <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">string</span></span> {
+	baseURL := <span class="hljs-string">"YOUR API URL/"</span>
+	url := baseURL + endpoint
+	<span class="hljs-keyword">var</span> jsonStr = []<span class="hljs-keyword">byte</span>(postBody)
+	req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, url, bytes.NewBuffer(jsonStr))
+	req.Header.Set(<span class="hljs-string">"Authorization"</span>, <span class="hljs-string">"Bearer "</span>+authorization)
+	req.Header.Set(<span class="hljs-string">"Content-Type"</span>, <span class="hljs-string">"application/json"</span>)
+	client := &amp;http.Client{}
+	resp, err := client.Do(req)
+	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+		<span class="hljs-built_in">panic</span>(err)
+	}
+	<span class="hljs-keyword">defer</span> resp.Body.Close()
+	<span class="hljs-keyword">return</span> <span class="hljs-keyword">string</span>(resp.Status)
+}
+</code></pre>
+<p>In our real-world use case, we are making requests to the Exceptionless API, so we know the post body needs to be a JSON string. This is why the <code>postBody</code> is of type <code>string</code>. If your API is expecting a different format, make sure you type your variable properly here. The other two arguments in our <code>Post</code> function are pretty self explanatory. The <code>endpoint</code> string is the endpoint on your API you want to call. The <code>authorization</code> string is the token/API key needed to authenticate into the API. You could choose to handle the authorization differently, if you wanted. For example, if your API expected basic authentication, your authorization variable might be a string mapping of username and password.</p>
+<p>One of the tricks here is if you are sending JSON to your REST API, you will need to convert the body into a format the http client library within Go can handle. We're doing that with the <code>bytes.NewBuffer(jsonStr)</code> call.</p>
+<p>Now, let's put together our <code>GET</code> function:</p>
+<pre><code class="language-go hljs"><span class="hljs-comment">//GET makes api GET requests</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Get</span><span class="hljs-params">(endpoint <span class="hljs-keyword">string</span>, authorization <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">map</span>[<span class="hljs-title">string</span>]<span class="hljs-title">interface</span></span>{} {
+	baseURL := <span class="hljs-string">"YOUR API URL/"</span>
+
+	url := baseURL + endpoint
+
+	httpClient := &amp;http.Client{}
+	req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, url, <span class="hljs-literal">nil</span>)
+
+	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+		fmt.Println(err)
+	}
+
+	req.Header.Add(<span class="hljs-string">"accept"</span>, <span class="hljs-string">"application/json"</span>)
+	req.Header.Add(<span class="hljs-string">"Authorization"</span>, <span class="hljs-string">"Bearer "</span>+authorization)
+
+	res, err := httpClient.Do(req)
+	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+		fmt.Println(err)
+	}
+	<span class="hljs-keyword">defer</span> res.Body.Close()
+
+	body, err := ioutil.ReadAll(res.Body)
+	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+		fmt.Println(err)
+	}
+
+	<span class="hljs-keyword">var</span> result <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">interface</span>{}
+	json.Unmarshal([]<span class="hljs-keyword">byte</span>(body), &amp;result)
+	<span class="hljs-keyword">return</span> result
+}
+</code></pre>
+<p>Much like out <code>POST</code> request, our <code>GET</code> request takes in arguments. We only need the <code>endpoint</code> and the <code>authorization</code> arguments for this function. This function is pretty straight forward. However, if you want to read the response as JSON, you need to take an extra step as I've shown above.</p>
+<p>You will want to a string mapping by unmarshaling the JSON returned by the API. Of course, your API may not return JSON, so use this accordingly. If you do need to unmarshal the JSON, you simply need to pass the response body into the <code>json.Unmarshal()</code> as shown above.</p>
+<p>These two functions should help you build your other REST-related functions. Now, let's take a look at helper functions that will make your client easy to use while sending the correct data to your API.</p>
+<h2>Convenience Functions</h2>
+<p>A good SDK or client API wrapper will include helper functions so the developer using it doesn't have to still manually build requests to your API. The best way to build helper functions is to start with your data model. Let's say, for example, your API expects a JSON payload like this:</p>
+<pre><code class="language-json hljs"><span class="hljs-punctuation">{</span>
+	<span class="hljs-attr">"BookTitle"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"The Great Gatsby"</span><span class="hljs-punctuation">,</span> 
+	<span class="hljs-attr">"Author"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"F. Scott Fitzgerald"</span><span class="hljs-punctuation">,</span> 
+	<span class="hljs-attr">"Rating"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">7</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<p>In this case, we'd probably want to create a struct type variable that we can use to build our payload for the reqest. That might look like this:</p>
+<pre><code class="language-go hljs"><span class="hljs-keyword">type</span> BookRating <span class="hljs-keyword">struct</span> {
+	BookTitle       <span class="hljs-keyword">string</span>
+	Author          <span class="hljs-keyword">string</span>
+	Rating 					<span class="hljs-keyword">uint</span>
+}
+</code></pre>
+<p>A quick note on Go variables and functions. If the variable or the function name is capitalized, it is exported and available throughout your program.</p>
+<p>Now that we have a struct we can use, we can start to build a helper function that would build a payload for our API. In keeping with the example in the JSON and the struct above, let's pretend our API take a <code>POST</code> request to rate a specific book. For some reason, our API needs the string title and string author of the book, and it needs an interger for the rating. You might create a helper function like this:</p>
+<pre><code class="language-go hljs"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">RateBook</span><span class="hljs-params">(title <span class="hljs-keyword">string</span>, author <span class="hljs-keyword">string</span>, rating <span class="hljs-keyword">uint</span>)</span>: <span class="hljs-title">bool</span></span> {
+	newRating := BookRating{
+		BookTitle: title, 
+		Author: author, 
+		Rating: rating
+	}
+
+	json, err := json.Marshal(newRating)
+	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+		fmt.Println(err)
+		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+	}
+
+	resp, err := Post(<span class="hljs-string">"rateBook"</span>, <span class="hljs-keyword">string</span>(json), <span class="hljs-string">"API KEY"</span>)
+	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+		fmt.Println(err)
+		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+	}	
+
+	<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+}
+</code></pre>
+<p>In the <code>RateBook</code> function, we are allowing the developer to simply pass in the title, author, and the rating. We then build the JSON payload for the developer and send it to the <code>Post</code> function we created earlier. When we are building the JSON payload, we must use <code>json.Marshal</code> to convert our struct to a type that can be used with our REST API.</p>
+<p>You'll note, the authorization argument in the above example is "API KEY", but a good SDK will have stored that API Key when the client was initialized. I'll leave it up to you on how you'd like to handle this, but it could be as simple as calling <code>Configure</code> function with the developer's API Key and storing the key in memory.</p>
+<h2>Wrapping Up</h2>
+<p>This is a simple example of how you might build a Go client for a REST API. The concepts are general, but they hopefully help you if you find yourself needing to build your own client. Exceptionless will be launching its own Go client soon. If you haven't tried Exceptionless for your application's event monitoring, <a href="https://exceptionless.com">give it a shot now</a>.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

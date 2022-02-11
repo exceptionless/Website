@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>How To Monitor Events in Swift - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="How To Monitor Events in Swift - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="How To Monitor Events in Swift - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">How To Monitor Events in Swift</h1>
+          </header>
+          <div class="entry-content">
+            <p>Swift, best known as the programming language that enables iOS, iPadOS, and macOS developers to build apps, has been growing in popularity over the years. <a href="https://www.zdnet.com/article/programming-language-popularity-apples-objective-c-tumbles-down-the-rankings/">As of February of 2020</a>, it had leaped into the top-10 of most popular programming languages. While Swift can be used for more than just Apple platform products, we're going to keep things simple today and focus on how to set up event monitoring with Swift in an iOS app.</p>
+<p>For this tutorial, we're going to be using <a href="https://exceptionless.com">Exceptionless to collect events, so you'll need to sign up for a free account here</a>. You're also going to need the following:</p>
+<ul>
+<li>Mac computer (sorry Windows and Linux folks)</li>
+<li>Xcode</li>
+<li>Xcode command line tools</li>
+</ul>
+<h2>Getting Set Up</h2>
+<p>If you don't already have Xcode installed on your Mac, do so now. <a href="https://developer.apple.com/xcode/">You can grab an install here</a>. If you already have it installed, you will need to make sure you are upgraded to Xcode 12. To check your version, open Xcode and check to see that you have version 12 or above. It'll look like this:</p>
+<p><img src="./xcode_version.png" alt="Xcode version"></p>
+<p>Once you're done installing it, you can check that everything was successful by either firing up Xcode or running the command I showed above. Now, we need to make sure you have the Xcode command line tools. These should be installed automatically when you install Xcode, but we want to be sure. To check if these were installed, run the following in Terminal:</p>
+<pre><code>xcode-select -p
+</code></pre>
+<p>If a path is printed out, you're all good. That's all you need. Open up Xcode, and we'll get started.</p>
+<h2>Creating a Project</h2>
+<p>Once you've opened Xcode, you're going to create a new project. Choose iOS and choose App, then click Next.</p>
+<p><img src="./create_app.png" alt="iOS app creation in Xcode"></p>
+<p>Next, you'll give the app a name in the Product Name section. I'll call mine Exceptionless Events. Make sure your interface is SwiftUI, your lifecycle is SwiftUI App, and your language is Swift. Then, click Next.</p>
+<p>You'll be asked where you want to store your code. Choose a folder that makes sense for you. When you've done that, your new project will load up. It should look like this:</p>
+<p><img src="./example_project.png" alt="Example iOS project"></p>
+<p>We're not going to spend a lot of time building an actual iOS app here, but we'll add enough functionality to test errors and test logging events. To set ourselves up, we're going to create two buttons in the UI. So, inside your <code>ContentView.Swift</code> file, replace the <code>Text</code> element with this:</p>
+<pre><code class="language-swift hljs"><span class="hljs-type">VStack</span>{
+    <span class="hljs-type">Spacer</span>()
+    <span class="hljs-type">Button</span>(action: {}) {
+        <span class="hljs-type">Text</span>(<span class="hljs-string">"Log Message"</span>)
+    }
+    <span class="hljs-type">Spacer</span>()
+    <span class="hljs-type">Button</span>(action: {}) {
+        <span class="hljs-type">Text</span>(<span class="hljs-string">"Log Error"</span>)
+    }
+    <span class="hljs-type">Spacer</span>()
+}
+</code></pre>
+<p>Note: the <code>Spacer</code> items are just there to make the screen a little more manageable (not necessarily prettier). Each button has a label and each has an action. However, the actions don't do anything just yet. We'll get that taken care of next.</p>
+<p>Above your <code>body</code> declaration, add these two functions:</p>
+<pre><code class="language-swift hljs"><span class="hljs-keyword">private</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">submitEvent</span>() {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"event"</span>)
+}
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">submitError</span>() {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"error"</span>)
+}
+</code></pre>
+<p>Then, back inside your body, change each button's action to call the associated function like this:</p>
+<pre><code class="language-swift hljs"><span class="hljs-type">VStack</span>{
+    <span class="hljs-type">Spacer</span>()
+    <span class="hljs-type">Button</span>(action: submitEvent) {
+        <span class="hljs-type">Text</span>(<span class="hljs-string">"Log Message"</span>)
+    }
+    <span class="hljs-type">Spacer</span>()
+    <span class="hljs-type">Button</span>(action: submitError) {
+        <span class="hljs-type">Text</span>(<span class="hljs-string">"Log Error"</span>)
+    }
+    <span class="hljs-type">Spacer</span>()
+}
+</code></pre>
+<p>Just to test that everything is working, click the play button at the top of the Xcode window. This will build the app and launch a simulator. Click each button and make sure "event" and "error" print out in the console. Pro tip: the console may be shrunk down and hidden. At the bottom of your Xcode window, hover over the section that looks like this and drag to increase the window size so you can see the console.</p>
+<p><img src="./console.png" alt="console example"></p>
+<p>Assuming all is working, we can move on to using Exceptionless!</p>
+<h2>Creating the Exceptionless Class</h2>
+<p>We're going to handle all of the event processing and posting through a single class. You may want to refactor into multiple classes in a production project, but this will get the point across, I think.</p>
+<p>Let's create a new file. In the file menu bar, click File, New, File, and be sure to choose a Swift file and not SwiftUI. Let's name the new file <code>Exceptionless.swift</code>.</p>
+<p>Inside that file, we're going to create our <code>Exceptionless</code> class. Add the following so your file looks like this:</p>
+<pre><code class="language-swift hljs"><span class="hljs-keyword">import</span> Foundation
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Exceptionless</span> {
+    <span class="hljs-keyword">var</span> apiKey: <span class="hljs-type">String</span>
+    <span class="hljs-keyword">init</span>(<span class="hljs-params">apiKey</span>: <span class="hljs-type">String</span>) {
+        <span class="hljs-keyword">self</span>.apiKey <span class="hljs-operator">=</span> apiKey
+    }
+    
+    <span class="hljs-keyword">func</span> <span class="hljs-title function_">submit</span>(<span class="hljs-params">type</span>: <span class="hljs-type">String</span>, <span class="hljs-params">event</span>: <span class="hljs-type">String</span>) {
+        <span class="hljs-keyword">switch</span> type {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"log"</span>:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">"log"</span>)
+        <span class="hljs-keyword">case</span> <span class="hljs-string">"error"</span>:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">"error"</span>)
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">"log"</span>)
+        }
+    }
+    
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">logMessage</span>(<span class="hljs-params">logMessage</span>: <span class="hljs-type">String</span>) {
+       
+    }
+    
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">logError</span>(<span class="hljs-params">errorEvent</span>: <span class="hljs-type">String</span>) {
+        
+    }
+}
+</code></pre>
+<p>This class doesn't do anything besides accept the Exceptionless API key, but you can see we're starting to frame out how to build our event monitoring system. To keep things simple, the <code>submit</code> function accepts a type of event (in string form) and it accepts the event string. The event string for the purposes of this example should be a simple log message or error message.</p>
+<p>Let's test what we have out so far. We want to connect our two buttons from earlier to the function, <code>submit</code>, that we created in the <code>Exceptionless</code> class. We should see the console print out "log" or "error" depending on what button we press.</p>
+<p>Back inside your <code>ContentView.swift</code> file, replace the actions for each button like this:</p>
+<pre><code class="language-swift hljs"><span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> {
+    <span class="hljs-type">VStack</span>{
+        <span class="hljs-type">Spacer</span>()
+        <span class="hljs-type">Button</span>(action: {<span class="hljs-type">Exceptionless</span>.<span class="hljs-keyword">init</span>(apiKey: <span class="hljs-string">"YOUR API KEY"</span>).submit(type: <span class="hljs-string">"log"</span>, event: <span class="hljs-string">"Log Message"</span>)}) {
+            <span class="hljs-type">Text</span>(<span class="hljs-string">"Log Message"</span>)
+        }
+        <span class="hljs-type">Spacer</span>()
+        <span class="hljs-type">Button</span>(action:{<span class="hljs-type">Exceptionless</span>.<span class="hljs-keyword">init</span>(apiKey: <span class="hljs-string">"YOUR API KEY"</span>).submit(type: <span class="hljs-string">"error"</span>, event: <span class="hljs-string">"Log Error"</span>)}) {
+            <span class="hljs-type">Text</span>(<span class="hljs-string">"Log Error"</span>)
+        }
+        <span class="hljs-type">Spacer</span>()
+    }
+}
+</code></pre>
+<p>This is a very simplified example. In reality, your buttons would be calling some other action and you'd be catching errors or logging events dependent on what that action does. Let's test this out, though. We don't actually need an API Key yet, so leave the <code>apiKey</code> string as is. Run your project on a simulator and click each button. You should see "log" and "error" printed in the console.</p>
+<p>Congratulations! You just built a class within Swift that will act as the framework for submitting events.</p>
+<h2>Building Events</h2>
+<p>We're going to keep things simple. <a href="https://api.exceptionless.io/docs/index.html">The Exceptionless API</a> has some great documentation and some simple examples that we'll be making use of. Let's start by updating out switch statement to actually call the functions specific to events or errors:</p>
+<pre><code class="language-swift hljs"><span class="hljs-keyword">func</span> <span class="hljs-title function_">submit</span>(<span class="hljs-params">type</span>: <span class="hljs-type">String</span>, <span class="hljs-params">event</span>: <span class="hljs-type">String</span>) {
+    <span class="hljs-keyword">switch</span> type {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">"log"</span>:
+        <span class="hljs-keyword">return</span> logMessage(logMessage: event)
+    <span class="hljs-keyword">case</span> <span class="hljs-string">"error"</span>:
+        <span class="hljs-keyword">return</span> logError(errorEvent: event)
+    <span class="hljs-keyword">default</span>:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"log"</span>)
+    }
+}
+</code></pre>
+<p>You can do whatever you'd like with your default case. I'm going to keep it as a print statement, though. What we've done is we've said if we call <code>submit</code> with a type of "log", we will call the <code>logMessage</code> function. If we call <code>submit</code> with a type of "error", we will call the <code>logError</code> function.</p>
+<p>Let's build out the <code>logMessage</code> function fist. Replace the existing empty function with this:</p>
+<pre><code class="language-swift hljs"><span class="hljs-keyword">private</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">logMessage</span>(<span class="hljs-params">logMessage</span>: <span class="hljs-type">String</span>) {
+    <span class="hljs-keyword">let</span> now <span class="hljs-operator">=</span> <span class="hljs-type">Date</span>()
+    <span class="hljs-keyword">let</span> formatter <span class="hljs-operator">=</span> <span class="hljs-type">ISO8601DateFormatter</span>()
+    <span class="hljs-keyword">let</span> datetime <span class="hljs-operator">=</span> formatter.string(from: now)
+    <span class="hljs-keyword">let</span> eventDictionary : [<span class="hljs-type">String</span>: <span class="hljs-keyword">Any</span>] <span class="hljs-operator">=</span> [ <span class="hljs-string">"type"</span>: <span class="hljs-string">"log"</span>, <span class="hljs-string">"message"</span>:logMessage, <span class="hljs-string">"date"</span>: datetime ]
+    <span class="hljs-keyword">let</span> jsonData <span class="hljs-operator">=</span> (<span class="hljs-keyword">try?</span> <span class="hljs-type">JSONSerialization</span>.data(withJSONObject: eventDictionary, options: []))<span class="hljs-operator">!</span>
+    <span class="hljs-keyword">let</span> jsonString <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(data: jsonData, encoding: <span class="hljs-type">String</span>.<span class="hljs-type">Encoding</span>.ascii)<span class="hljs-operator">!</span>
+    print (jsonString)
+}
+</code></pre>
+<p>Because the Exceptionless API takes JSON body payloads, we want to build our event into JSON. To do that, we first start with a dictionary. As you can see, we are creating an <code>eventDictionary</code> which is simply keyvalue pairs in string format. We add in the date in ISO format so we know when our events happen. The actual event message is what we passed in all the way back from when we clicked the button.</p>
+<p>We take that dictionary and convert it to JSON with Swift's built-in <code>JSONSerialization</code> function. Before posting to the API, let's take a look at the output in the console and make sure we're happy with it.</p>
+<p>Build and run the app, then click "Log Message". You should see the following printed in the console:</p>
+<pre><code>{"message":"Log Message","date":"2021-04-05T13:34:39Z","type":"log"}
+</code></pre>
+<p>Your date will, of course, be different.</p>
+<p>Ok, we've gotten this far. Let's build our error function. Don't worry, we'll come back and think about how we want to actually post these events to Exceptionless.</p>
+<p>Replace the empty <code>logError</code> function with this:</p>
+<pre><code class="language-swift hljs"><span class="hljs-keyword">private</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">logError</span>(<span class="hljs-params">errorEvent</span>: <span class="hljs-type">String</span>) {
+    <span class="hljs-keyword">let</span> now <span class="hljs-operator">=</span> <span class="hljs-type">Date</span>()
+    <span class="hljs-keyword">let</span> formatter <span class="hljs-operator">=</span> <span class="hljs-type">ISO8601DateFormatter</span>()
+    <span class="hljs-keyword">let</span> datetime <span class="hljs-operator">=</span> formatter.string(from: now)
+    
+    <span class="hljs-keyword">let</span> errorDictionary : [<span class="hljs-type">String</span>: <span class="hljs-keyword">Any</span>] <span class="hljs-operator">=</span> [<span class="hljs-string">"message"</span>: errorEvent, <span class="hljs-string">"type"</span>: <span class="hljs-string">"System.Exception"</span>]
+    
+    <span class="hljs-keyword">let</span> errorJson <span class="hljs-operator">=</span> (<span class="hljs-keyword">try?</span> <span class="hljs-type">JSONSerialization</span>.data(withJSONObject:errorDictionary, options: []))<span class="hljs-operator">!</span>
+    <span class="hljs-keyword">let</span> errorJsonString <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(data: errorJson, encoding: <span class="hljs-type">String</span>.<span class="hljs-type">Encoding</span>.ascii)<span class="hljs-operator">!</span>
+    <span class="hljs-keyword">let</span> eventDictionary : [<span class="hljs-type">String</span>: <span class="hljs-keyword">Any</span>] <span class="hljs-operator">=</span> [ <span class="hljs-string">"type"</span>: <span class="hljs-string">"error"</span>, <span class="hljs-string">"@simple_error"</span>:errorJsonString, <span class="hljs-string">"date"</span>: datetime ]
+    <span class="hljs-keyword">let</span> jsonData <span class="hljs-operator">=</span> (<span class="hljs-keyword">try?</span> <span class="hljs-type">JSONSerialization</span>.data(withJSONObject: eventDictionary, options: []))<span class="hljs-operator">!</span>
+    <span class="hljs-keyword">let</span> jsonString <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(data: jsonData, encoding: <span class="hljs-type">String</span>.<span class="hljs-type">Encoding</span>.ascii)<span class="hljs-operator">!</span>
+    print (jsonString)
+}
+</code></pre>
+<p>You'll see this function is very similar to the <code>logMessage</code> function. However, we are nesting data in our JSON, so we need two dictionaries. We use one dictionary to house the "@simple_error" and another to house the entire event. In other words, nest the JSON version of our <code>errorDictionary</code> inside the JSON version of our <code>eventDictionary</code>.</p>
+<p>Let's build and run the app and try both buttons. You should see the following printed out:</p>
+<pre><code>{"message":"Log Message","date":"2021-04-05T13:46:58Z","type":"log"}
+{"type":"error","@simple_error":"{\"message\":\"Log Error\",\"type\":\"System.Exception\"}","date":"2021-04-05T13:46:59Z"}
+</code></pre>
+<p>Your dates will be different, but the rest should look about the same. We now have a Log Event AND an Error Event. I think we're ready to post to the Exceptionless API.</p>
+<p>Remember, if you haven't done so, you'll need to sign up for a <a href="https://exceptionless.com">free Exceptionless account</a>, create a project, and grab an API Key.</p>
+<h2>Posting To The API</h2>
+<p>When we post to the Exceptionless API, we are posting JSON data. In the examples above, we are printing the JSON string version of what we will ultimately push to the API. Let's see how it will look when actually posting to the API.</p>
+<p>Within our Exceptionless class, let's create a new private function called <code>postToAPI</code>.</p>
+<pre><code class="language-swift hljs"><span class="hljs-keyword">private</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">postToApi</span>(<span class="hljs-params">event</span>: <span class="hljs-type">Data</span>) {
+    <span class="hljs-keyword">let</span> url <span class="hljs-operator">=</span> <span class="hljs-type">URL</span>(string: <span class="hljs-string">"https://collector.exceptionless.com/api/v2/events"</span>)<span class="hljs-operator">!</span>
+
+    <span class="hljs-keyword">var</span> request <span class="hljs-operator">=</span> <span class="hljs-type">URLRequest</span>(url: url)
+    request.httpMethod <span class="hljs-operator">=</span> <span class="hljs-string">"POST"</span>
+
+    <span class="hljs-comment">// insert json data to the request</span>
+    request.httpBody <span class="hljs-operator">=</span> event
+    request.setValue(<span class="hljs-string">"application/json; charset=utf-8"</span>,
+         forHTTPHeaderField: <span class="hljs-string">"Content-Tye"</span>)
+    request.setValue(<span class="hljs-string">"application/json; charset=utf-8"</span>,
+         forHTTPHeaderField: <span class="hljs-string">"Accept"</span>)
+    request.setValue(<span class="hljs-string">"Bearer "</span> <span class="hljs-operator">+</span> <span class="hljs-keyword">self</span>.apiKey,
+         forHTTPHeaderField: <span class="hljs-string">"Authorization"</span>)
+
+    <span class="hljs-keyword">let</span> task <span class="hljs-operator">=</span> <span class="hljs-type">URLSession</span>.shared.dataTask(with: request) { data, response, error <span class="hljs-keyword">in</span>
+        <span class="hljs-keyword">guard</span> <span class="hljs-keyword">let</span> data <span class="hljs-operator">=</span> data, error <span class="hljs-operator">==</span> <span class="hljs-literal">nil</span> <span class="hljs-keyword">else</span> {
+            <span class="hljs-built_in">print</span>(error<span class="hljs-operator">?</span>.localizedDescription <span class="hljs-operator">??</span> <span class="hljs-string">"No data"</span>)
+            <span class="hljs-keyword">return</span>
+        }
+        <span class="hljs-keyword">let</span> responseJSON <span class="hljs-operator">=</span> <span class="hljs-keyword">try?</span> <span class="hljs-type">JSONSerialization</span>.jsonObject(with: data, options: [])
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> responseJSON <span class="hljs-operator">=</span> responseJSON <span class="hljs-keyword">as?</span> [<span class="hljs-type">String</span>: <span class="hljs-keyword">Any</span>] {
+            <span class="hljs-built_in">print</span>(responseJSON)
+        }
+    }
+
+    task.resume()
+}
+</code></pre>
+<p>Walking through this new function, let's take a look at what's going on. First, we are setting the URL for our API request. This is a hardcoded value and probably not something you'd want to do in a production application.</p>
+<p>Next, we are creating a new request and assigning values to the request. You'll note that our <code>postToAPI</code> function accepts a <code>Data</code> value argument called <code>event</code>. That is what we will be posting to the API and it represents the JSON version of the event we build when we click Log Message or Log Error.</p>
+<p>Then, we set header values for our request. Take note, that we are assigning the <code>Authorization</code> value by using our Exceptionless API key. We'll need to get that key from Exceptionless before actually sending events. \</p>
+<p>Finally, we are posting the request using <code>URLSession</code>.</p>
+<p>To actually call this function, we need to make two minor changes. First, back in your <code>ContentView.swift</code> file, we need to add our Exceptionless API key in where we left placeholder text. Again, this is not how you'd assign the API Key in a production app, but it's a simple example to get you going.</p>
+<p>Now, back in the <code>Exceptionless.swift</code> file, let's update both the <code>logMessage</code> and <code>logError</code> functions. Instead of converting our event to a JSON string, we're going to leave it as JSON and pass it through to our <code>postToAPI</code> function like this:</p>
+<pre><code class="language-swift hljs"><span class="hljs-keyword">private</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">logMessage</span>(<span class="hljs-params">logMessage</span>: <span class="hljs-type">String</span>) {
+    <span class="hljs-keyword">let</span> now <span class="hljs-operator">=</span> <span class="hljs-type">Date</span>()
+    <span class="hljs-keyword">let</span> formatter <span class="hljs-operator">=</span> <span class="hljs-type">ISO8601DateFormatter</span>()
+    <span class="hljs-keyword">let</span> datetime <span class="hljs-operator">=</span> formatter.string(from: now)
+    <span class="hljs-keyword">let</span> eventDictionary : [<span class="hljs-type">String</span>: <span class="hljs-keyword">Any</span>] <span class="hljs-operator">=</span> [ <span class="hljs-string">"type"</span>: <span class="hljs-string">"log"</span>, <span class="hljs-string">"message"</span>:logMessage, <span class="hljs-string">"date"</span>: datetime ]
+    <span class="hljs-keyword">let</span> jsonData <span class="hljs-operator">=</span> (<span class="hljs-keyword">try?</span> <span class="hljs-type">JSONSerialization</span>.data(withJSONObject: eventDictionary, options: []))<span class="hljs-operator">!</span>
+    postToApi(event: jsonData)
+}
+</code></pre>
+<p>And here's the <code>logError</code> function:</p>
+<pre><code class="language-swift hljs"><span class="hljs-keyword">private</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">logError</span>(<span class="hljs-params">errorEvent</span>: <span class="hljs-type">String</span>) {
+    <span class="hljs-keyword">let</span> now <span class="hljs-operator">=</span> <span class="hljs-type">Date</span>()
+    <span class="hljs-keyword">let</span> formatter <span class="hljs-operator">=</span> <span class="hljs-type">ISO8601DateFormatter</span>()
+    <span class="hljs-keyword">let</span> datetime <span class="hljs-operator">=</span> formatter.string(from: now)
+    
+    <span class="hljs-keyword">let</span> errorDictionary : [<span class="hljs-type">String</span>: <span class="hljs-keyword">Any</span>] <span class="hljs-operator">=</span> [<span class="hljs-string">"message"</span>: errorEvent, <span class="hljs-string">"type"</span>: <span class="hljs-string">"System.Exception"</span>]
+    
+    <span class="hljs-keyword">let</span> errorJson <span class="hljs-operator">=</span> (<span class="hljs-keyword">try?</span> <span class="hljs-type">JSONSerialization</span>.data(withJSONObject:errorDictionary))<span class="hljs-operator">!</span>
+    <span class="hljs-keyword">let</span> errorJsonString <span class="hljs-operator">=</span> <span class="hljs-type">String</span>(data: errorJson, encoding: <span class="hljs-type">String</span>.<span class="hljs-type">Encoding</span>.ascii)<span class="hljs-operator">!</span>
+    <span class="hljs-keyword">let</span> eventDictionary : [<span class="hljs-type">String</span>: <span class="hljs-keyword">Any</span>] <span class="hljs-operator">=</span> [ <span class="hljs-string">"type"</span>: <span class="hljs-string">"error"</span>, <span class="hljs-string">"@simple_error"</span>:errorJsonString, <span class="hljs-string">"date"</span>: datetime ]
+    <span class="hljs-keyword">let</span> jsonData <span class="hljs-operator">=</span> (<span class="hljs-keyword">try?</span> <span class="hljs-type">JSONSerialization</span>.data(withJSONObject: eventDictionary))<span class="hljs-operator">!</span>
+
+    postToApi(event: jsonData)
+}
+</code></pre>
+<p>Go ahead and build and run your app. Click the Log Message button and then the Log Error button. You won't see anything printed in the console, but if you go into your Exceptionless dashboard, you should see a new log and a new exception.</p>
+<p><img src="./example_swift_events.png" alt="Exceptionless dashboard"></p>
+<p>Congratulations! You just built a simple event monitoring service in native Swift code. You can extend this pretty easily thanks to the Exceptionless class and leverage it in a production application.</p>
+<p>Swift is a fun language, but when using it to build mobile applications, it can be difficult to debug and track events. Exceptionless can help, and hopefully this tutorial shows how to implement such event tracking in SwiftUI and Swift.</p>
+<p>If you'd like to see the sample Xcode project, <a href="https://github.com/exceptionless/Exceptionless-Swift-Example">we have a repo for it here</a>.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

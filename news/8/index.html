@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Archive - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Archive - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Archive - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Archive</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+
+    <h1>Archive</h1>
+
+
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-12-02-exceptionless-net-3-2-release-notes/">Exceptionless.NET 3.2 Release Notes</a></h2>
+    <p><img src="/website/assets/img/news/exceptionless-logoBLK.png" alt="Exceptionless Logo">The .NET Exceptionless client has received <strong>several improvements</strong> and <strong>some bug fixes</strong> in version 3.2. Details below!</p>
+<p>A special shout-out to @airwareic, <a href="https://github.com/srijken" target="_blank">@srijken</a>, <a href="https://github.com/xbelt" target="_blank">@xbelt</a>, and <a href="https://github.com/mgnslndh" target="_blank">@mgnslndh</a> for contributing and helping make this release happen.&nbsp;<strong>You guys rock!</strong></p>
+<p><strong>Please download and update to the latest</strong> <a href="https://github.com/exceptionless/Exceptionless.Net/releases/tag/v3.2.0" target="_blank">source here</a>, and you can view the full <a href="/website/why/" target="_blank">change log here</a>.<!--more--></p>
+<h2>.NET Exceptionless Client v3.2.0 Release Details</h2>
+<h3>Additions &amp; Improvements</h3>
+<p><strong>Read Configuration</strong>
+We added support for reading configuration from environmental variables and app settings</p>
+<p>**Closing Applications
+** Closing applications after submission is now easier due to the new <code>SubmittedEvent</code> event handler.</p>
+<p>**Custom Persistence Settings
+** The new <code>QueueMaxAttempts</code> and <code>QueueMaxAge</code> configuration settings allow custom persistence settings and are intended to improve offline support. Thanks @airwareic!</p>
+<p><strong>Data Exclusions Improvements</strong>
+We've made huge improvements to Data Exclusions, which now check default data and extra exception properties.</p>
+<p>**New Overloads
+** Thanks @xbelt for creating overloads for <code>CreateLog</code> and <code>SubmitLog</code> to accept the <code>LogLevel</code> enum!</p>
+<p><strong>Custom Themes</strong>
+@mgnslndh updated the styling of the <code>CrashReportDialog</code> to play nice with custom themes. Thanks!</p>
+<p>**Dependencies
+** All dependencies (Nancy, NLog, etc) have been updated.</p>
+<p>**Deprecated!
+** The <code>EnableSSL</code> property has been marked Obsolete because it is no longer used. <code>ServerURL</code> is now being looked at for this.</p>
+<h3>Fixes</h3>
+<p>**Startup()
+** <code>Startup()</code> was overriding configured dependencies - Fixed!</p>
+<p>**Empty Errors
+** We fixed a bug where you could have empty errors submitted with no stack trace info.</p>
+<p><strong>API Keys</strong></p>
+<ul>
+<li>Previously set valid API keys were being overwritten with default API keys, so we fixed it.</li>
+<li>We also fixed an issue where&nbsp;<code>ApiKey</code>&nbsp;couldn't be changed after the client was initialized.</li>
+</ul>
+<p><strong>Reference IDs</strong>
+An issue with submitting generated reference IDs was resolved, thanks to @srijken</p>
+<p>**Updating WebAPI Package
+** @srijken also fixed another issue where updating the WebApi package would remove the Exceptionless Module. Thanks again!</p>
+<p><strong>NLog</strong>
+Nlog wasn't working with .NET 4.0. This has been resolved.</p>
+<p><strong>IsolatedStorage</strong>
+There was a problem that caused IsolatedStorage to not be able to be used. Fixed!</p>
+<p><strong>Min Log Level</strong>
+NLog and log4net have been updated to allow setting the min log level.</p>
+<h2>What Say You?</h2>
+<p>As always, we're listening to your feedback, comments, suggestions, and rants!</p>
+<ul>
+<li><a href="https://github.com/exceptionless/Exceptionless.UI/issues/new">User Interface Feedback</a></li>
+<li><a href="https://github.com/exceptionless/Exceptionless.Net/issues/new">.NET Client Feedback</a></li>
+<li><a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues/new">JavaScript Client Feedback</a></li>
+<li><a href="https://github.com/exceptionless/exceptionless/issues/new">Exceptionless Feedback</a></li>
+</ul>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-10-28-exceptionless-3-1-released-if-you-thought-it-was-fast-before/">Exceptionless 3.1 Released! If You Thought It was Fast Before...</a></h2>
+    <p><img src="/website/assets/img/news/exceptionles-3-1-header.png" alt="exceptionles-3-1-header">If you thought Exceptionless was fast before, <strong>prepare to have your mind&nbsp;blown</strong> by what we've been able to do in version 3.1, which released today.</p>
+<p>In short, we've reduced cpu and memory usage, increase caching efficiency, and sped up searching, all quite significantly as you'll see below.</p>
+<p>Along with these speed boosts, we've also made Job improvements (look for a blog post on this soon) and upgraded to .NET 4.6 (<strong>self-hosters</strong>, please install .NET 4.6 on your servers before upgrading).</p>
+<p>Details on the release changes can be found below.<!--more--></p>
+<h2>It's All About Speed!</h2>
+<h3>CPU &amp; Memory</h3>
+<p>We reduced the CPU and Memory load <strong>across the entire app</strong>. This allows the application to use fewer&nbsp;resources, meaning it has more time to process additional events, making everything faster. Between making Exceptionless and <a href="https://github.com/FoundatioFx/Foundatio">Foundatio</a> 100% Async and these improvements, we've drastically increased the efficiency of the entire platform.</p>
+<p><strong>Below</strong>, we see the increase in performance from two examples.&nbsp;On the left, we see a reduction in CPU and Memory usage for a deployed web app instance. On the right is a visible reduction in CPU usage for an Elasticsearch node.</p>
+<p><img src="/website/assets/img/news/cpu-memory-percentage-improvements-e1446046152986-1024x343.png" alt="cpu-memory-percentage-improvements"></p>
+<h3>Elasticsearch Queries</h3>
+<p>By profiling the Elasticsearch queries for efficiency and usage, we've been able to reduce the overall number we were running and improve the efficiency on the ones that still are.</p>
+<p><img src="/website/assets/img/news/search-request-rate-improvements-e1446046076483.png" alt="search-request-rate-improvements"></p>
+<h3>Caching</h3>
+<p>Caching efficiency has been improved by removing redundant components that were utilizing valuable resources.&nbsp;For example, we removed the SignalR Redis Backplane, which drastically decreased the number of calls to Redis. Overall, we've made the app smarter throughout regarding how we cache and retrieve data.</p>
+<p><img src="/website/assets/img/news/cache-improvements-2-e1446046201498-1024x346.png" alt="cache-improvements-2"></p>
+<p><img src="/website/assets/img/news/Caching-improvements-e1446046263253-300x224.png" alt="Caching-improvements"></p>
+<h3>Long-running API Tasks</h3>
+<p>We've offloaded long-running API tasks to background jobs, freeing up a lot of resources in the app and allowing us to scale work items independently. For example, marking a stack as fixed or removing a project may take a few moments to be updated now, but the trade-off is worth it. We're working on updating the UI experience to prompt users that the task is running in the background.</p>
+<h2>Other Improvements</h2>
+<h3>Jobs</h3>
+<p>We've made each Job a console app, so it's much easier to debug and deploy. Look for a full blog post on Job improvements soon.</p>
+<h3>.NET 4.6</h3>
+<p>Exceptionless is now running on .NET 4.6, which has improved startup time due to various improvements with the new version. <strong>Self-hosting users</strong> should be sure to upgrade to .NET 4.6 on their servers before updating Exceptionless.</p>
+<h2>Upgrading</h2>
+<p>For full release notes and to download the latest version, please visit the <a href="https://github.com/exceptionless/Exceptionless/releases">GitHub Release Page</a>.</p>
+<h2>Always Improving</h2>
+<p><strong>We're always striving to improve</strong> the efficiency of Exceptionless and all of our projects. If you see any room for improvement or have any comments when using anything from us, please send us an in-app message, submit a GitHub issue or <a href="/website/contact/">contact us</a>&nbsp;on the website.</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/.net/" class="tag">.NET</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-10-26-javascript-client-v1-1-0-release/">Exceptionless JavaScript Client V1.1.0 Release</a></h2>
+    <p><img src="/website/assets/img/news/blog-header-image-post2b-300x106.png" alt="Exceptionless JavaScript Client">We've been hard at work on several things here at Exceptionless, including a minor version release of our <a href="https://github.com/exceptionless/Exceptionless.JavaScript">JavaScript Client</a>!</p>
+<p>Please see the details of this release below.</p>
+<p>Also, we would like to give a shout out to <a href="https://github.com/frankebersoll">@frankerbersoll</a>, <a href="https://github.com/srijken">@srijken</a> and the entire community for help squashing bugs, reporting issues, and providing general feedback. You guys rock.</p>
+<h2>Exceptionless JavaScript Client V1.1.0 Release Notes</h2>
+<ul>
+<li>Improved readme and docs. [<a href="https://github.com/exceptionless/Exceptionless.JavaScript/pull/31">issue thread</a>]&nbsp;//&nbsp;<em>Credit: <a href="https://github.com/frankebersoll">@frankebersoll</a></em></li>
+<li>Bug Fix - Unhandled exceptions in Node.js were not being capture. [<a href="https://github.com/exceptionless/Exceptionless.JavaScript/pull/30">issue thread</a>]&nbsp;//&nbsp;<em>Credit: <a href="https://github.com/frankebersoll">@frankebersoll</a></em></li>
+<li>Bug Fix - Data exclusions were not always working. [<a href="https://github.com/exceptionless/Exceptionless.JavaScript/pull/28">issue thread</a>] // <em>Credit: <a href="https://github.com/srijken">@srijken</a></em></li>
+<li>Bug Fix - Cancelled state wasn't properly passed through the SubmitEvent callback.</li>
+<li>Temporarily disabled capturing of ajax errors [<a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues/26">issue thread</a>]</li>
+</ul>
+<p>You can <a href="https://github.com/exceptionless/Exceptionless.JavaScript/compare/v1.0.1...v1.1.0">view the full change log</a> for a list of all changes in this release.</p>
+<p>You can also <a href="https://github.com/exceptionless/Exceptionless.JavaScript/releases/tag/v1.1.0">Download Exceptionless JavaScript Client V1.1.0</a> on the official release page.</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-10-22-introducing-foundatio-3-0-async-efficiency/">Introducing Foundatio 3.0! Now with Async &amp; Increased Efficiency</a></h2>
+    <p><img src="/website/assets/img/news/foundatio-blog-header-image-small.png" alt="Foundatio 3.0">Foundatio is a pluggable, scalable, painless, open source solution for caching, queues, locks, messaging, jobs, file storage, and metrics in your app.</p>
+<p>In Version 3.0, we've made several improvements, including, as promised in our <a href="/website/news/2015/2015-07-14-foundatio-pluggable-blocks-building-distributed-apps" target="_blank">initial Foundatio blog post</a>, going full async.</p>
+<p>Take a closer look at the new enhancements, below, and <a href="https://github.com/FoundatioFx/Foundatio" target="_blank">head over to the GitHub repo</a> to try Foundatio today. We think you'll find it very handy.</p>
+<p>For all our current users, you'll need to upgrade&nbsp;your <a href="https://www.nuget.org/packages?q=Foundatio" target="_blank">Foundatio NuGet package</a>&nbsp;and existing Foundatio code to use the async implementations/conventions. The update should be fairly straightforward&nbsp;- we haven't had or heard of any issues so far, including when upgrading Exceptionless.<!--more--></p>
+<h2>What's New in Foundatio 3.0</h2>
+<h3>API Changes</h3>
+<p>We've gone <strong>100% async</strong>, which means no more blocking synchronous code, allowing your apps to be even more responsive. For more on async and its benefits, <a href="https://msdn.microsoft.com/en-us/library/vstudio/hh191443(v=vs.140).aspx" target="_blank">take a look at this Microsoft article</a>.</p>
+<p>Along with going completely async, we've <strong>removed non async methods</strong> from the API and <strong>simplified the API overall</strong>. We wanted to make it easy for developers to roll out new implementations and use the existing API.</p>
+<h4>New methods</h4>
+<p>We also <strong>added new, useful methods</strong> across all the APIs to make it easier to perform&nbsp;common tasks. One example includes adding CalculateProgress() to WorkItemHandlerJobs. We hope these helpers allow&nbsp;you to be more productive.</p>
+<h3>Efficiency Improvements</h3>
+<p>Because we always want more speed out of our apps (and we know you do, too), we used Red Gate's <a href="http://www.red-gate.com/products/dotnet-development/ants-performance-profiler/" target="_blank">ANTS Performance Profiler</a> to profile various apps, such as Exceptionless, and track down "hot" sections of code. By hot, we mean those pieces of code devoured more resources and took longer to run than all other application code. By doing so, we were able to pinpoint core pieces of Foundatio that were performing poorly compared to what they could be doing. <strong>Then we fixed them.</strong></p>
+<h4>A few optimization examples</h4>
+<ul>
+<li><strong>Maintenance code</strong> in various locations like queues, caches, etc, could and would run in a tight loop, sometimes pegging the CPU to 100% depending on the configuration. By running through and removing that maintenance code, or changing the way it was implemented to be triggered only when needed, rather than running in a constant worker loop, we drastically reduced CPU load and increased efficiency.</li>
+<li>We also made <strong>massive improvements to queues and locks</strong>, on top of the maintenance code changes. Our Dequeue and AcquireLock methods would constantly pull for new items in a loop with a small timeout, which is obviously inefficient. Now we are using <a href="https://github.com/StephenCleary/AsyncEx/wiki/AsyncMonitor" target="_blank">async monitors</a> and pulse when a message is received over the message bus. This allows for <strong>huge improvements</strong> as the code will wait/sleep for a single monitor (of multiple monitors that could be waiting) to get triggered. This means your app isn’t wasting CPU cycles waiting, or external network calls looking for locks or new queue items. Instead, it’s running your app code and getting immediately notified when the lock is available or a new queue item is enqueued. Pretty slick!</li>
+<li><strong>Caching</strong> got a huge performance boost, too. For InMemoryCache clients, we moved from reflection-based object copying to using <a href="https://msdn.microsoft.com/en-us/library/bb397951.aspx" target="_blank">Expression Trees</a>. This reduced the time required to get items from cache by a large percentage. Read more about implementing Expression Trees and see the difference it makes <a href="http://blog.nuclex-games.com/mono-dotnet/fast-deep-cloning/" target="_blank">here</a>.</li>
+</ul>
+<h2>Check It Out - Feedback Appreciated!</h2>
+<p>We made many other improvements to ensure your apps run fast when using Foundatio, too many to be listed here. If you're already using it, just update your NuGet package to the latest version to take advantage of these improvements. If you're not using it yet, <a href="https://github.com/FoundatioFx/Foundatio" target="_blank">try it out</a>. It's worth a shot, we promise!</p>
+<p>Once you've given it a go, please let us know what you like, or what you hate, by posting a <a href="https://github.com/FoundatioFx/Foundatio/issues" target="_blank">issue on Foundatio's GitHub Repo</a>.</p>
+<p>Until next time, happy coding!</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-09-02-find-software-bugs-exceptionless-javascript-client/">Find Software Bugs with the Exceptionless JavaScript Client in Minutes</a></h2>
+    <p><img src="/website/assets/img/news/blog-header-image-post2b.png" alt="Exceptionless JavaScript Client">
+If you missed our <a href="/website/news/2015/2015-06-04-javascript-node-js-client-version-1-release-candidate" target="_blank">JavaScript Client announcement</a>, this is a great chance to see just how <strong>quick and easy</strong>&nbsp;the client&nbsp;is to install and use! You can be finding those hard to track down bugs, errors, and exceptions, as well as tracking other events and log messages, in literally minutes.</p>
+<p>We've made it super easy to get up and running, as you'll see below. Take a look and let us know what you think!</p>
+<h2>Report &amp; Log Errors &amp; Events in 1:37</h2>
+<!--more-->
+<p>https://youtu.be/fNiJ0YolRPY</p>
+<div class="signup center" style="margin-top: 30px;">
+  <a class="btn btn-large btn-primary" href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Try It Today</a>
+</div>
+<h2>The Text Version</h2>
+<p>A simple <strong>step-by-step guide</strong> to getting the Exceptionless JavaScript Client demo up and running on your local machine.</p>
+<p>The only <strong>pre-requisite</strong> is an <a href="https://be.exceptionless.io/signup" target="_blank">Exceptionless account</a>, or you can <a href="/website/self-hosting-exceptionless-free-and-fast/" target="_blank">host the entire platform yourself</a>.&nbsp;<strong>Open source</strong>, baby!</p>
+<ol>
+<li>Download and extract the <a href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">Exceptionless JavaScript Client</a> from GitHub</li>
+<li>Log in&nbsp;to your <a href="https://be.exceptionless.io/" target="_blank">Exceptionless Dashboard</a> and get your project's API key (Admin &gt; Projects &gt; <em>Select Project</em> &gt; API Keys)
+* If you don't have a project, you'll need to create one by going to Admin &gt; Projects &gt; Add New Project</li>
+<li>Open the extracted folder on your local machine and go to the "example" folder, then edit index.html.</li>
+<li>Replace the API key in the exceptionless.js script tag with your own, and comment out the line with serverURL in it (not needed for demo).</li>
+<li>Open index.html in your browser and open your browser's developer tools console so we can see the events&nbsp;fire.
+* We've added quick-fire buttons to this page that automatically generate events for you to play around with for the purpose of this demo.</li>
+<li>Click on one, generate 100 random events for instance, and you'll see the events queue up in the console. After a few seconds, you should see a queue processing notification&nbsp;telling you it's done processing.</li>
+<li>Go back to your Exceptionless project dashboard, and you will see the events hit the system in real time.
+* Make sure you are viewing the appropriate project and time period in your dashboard, otherwise you might not see the new events come in.</li>
+</ol>
+<h3>It's That Easy!</h3>
+<p>As you can see, the JavaScript client is super easy, super fast, and super flexible, for use in almost any project you might have.</p>
+<p>We hope you'll give it a shot, and we also hope you'll let us know what you think by contacting us via an in-app message, <a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues" target="_blank">submitting an issue on GitHub</a>, or <a href="/website/contact/" target="_blank">through the website</a>.</p>
+<p><em>Here's to becoming Exceptionless!</em></p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/javascript/" class="tag">javascript</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-08-27-squash-bugs-faster-speed-up-development-with-exceptionless/">Squash Bugs Faster &amp; Speed Up Development with Exceptionless</a></h2>
+    <p><img src="/website/assets/img/news/blog-header-image-js-demo.jpg" alt="Developer Bug Tracking"></p>
+<h2 style="margin-top: 30px;">
+  Calling All Developers!
+</h2>
+<h3 style="font-size: 18px; line-height: 26px; color: #555; margin-bottom: 20px;">
+  **Stop** beating your head against the keyboard tracking down those hard-to-find bugs and cut down your development time in general by using Exceptionless to **report and log errors, feature usages, and any other event** within your project.
+</h3>
+<p style="clear: both;">
+  We're not just for <a href="https://github.com/exceptionless/Exceptionless.Net" target="_blank">.NET developers</a> anymore. Our <a href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">JavaScript client</a> allows you to use&nbsp;Exceptionless&nbsp;in almost **any development environment**, and you can get it up and running in minutes!
+</p>
+<p style="clear: both;">
+  Learn more below, including how to get started in **just about a minute and a half**!<!--more-->
+</p>
+<p style="text-align: center; padding: 20px 0; background: #f6f6f6; margin-top: 30px;">
+  <span style="text-decoration: underline;">Now Serving...</span><br> <span style="color: #777; font-size: 24px; line-height: 28px;">**5,000,000+ Events Per Month<br> 2000+ Active Projects**</span>
+</p>
+<blockquote>
+<p>"Exceptionless is <strong>awesome</strong>. I've <strong>STOPPED</strong> worrying about whether I'm losing customers to bugs I don't know about." - Eric B.</p>
+</blockquote>
+<p><img src="/website/assets/img/news/codesmith-client-logo-bar-left-short.png" alt=""></p>
+<h2>Up &amp;&nbsp;Running In Minutes</h2>
+<p>This 1:37 video demonstrates how quick and easy it is to get the Exceptionless JavaScript client up and running.&nbsp;Take a few minutes to integrate it with your project and <strong>gain&nbsp;visibility you've never had before</strong> on bugs, feature usages, and more!</p>
+<p>https://youtu.be/fNiJ0YolRPY</p>
+<p><img src="/website/assets/img/news/codesmith-client-logo-bar-right-short.png" alt=""></p>
+<h2><strong>IT'S. THAT. EASY.</strong></h2>
+<blockquote>
+<p>"Exceptionless allows us to prioritize fixes smarter by showing frequently occurring errors. In real time!" - Ryan H.</p>
+</blockquote>
+<p>The only thing you need to get started is a <a href="https://be.exceptionless.io/signup" target="_blank"><strong>free</strong> Exceptionless account</a>, or you can even <a href="/website/self-hosting-exceptionless-free-and-fast/" target="_blank">host it yourself</a>! Once you have that, you can user the <a href="https://github.com/exceptionless/Exceptionless.JavaScript" target="_blank">JavaScript </a>or .<a href="https://github.com/exceptionless/Exceptionless.Net" target="_blank">NET</a> client to get started pushing events to your new dashboard.</p>
+<p>Then you'll be on your way to becoming... <strong>Exceptionless</strong>.</p>
+<div class="signup center">
+  <a class="btn btn-large btn-primary" href="https://be.exceptionless.io/signup" target="_blank">Sign Up Today - FREE</a>
+</div>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-08-17-user-spotlight-fun-stats-thanks-users/">User Spotlight, Plus Fun Stats -  Thank You to All of Our Awesome Users!</a></h2>
+    <p><img src="/website/assets/img/news/blog-header-image-small-growth.png" alt="Exceptionless Growth Statistics">This month (Aug, '15) we will surpass&nbsp;<strong>5 MILLION EVENTS PER MONTH!</strong></p>
+<p>That's pretty huge, so we thought we would celebrate by <strong>highlighting a few of the awesome companies</strong> that use Exceptionless and throw out a some pretty cool statistics we dug up from the database.</p>
+<p>If your company&nbsp;isn't on&nbsp;this list, don't worry - it's not because we don't love you! If you would like your company highlighted on the website, simply send us an in-app message explaining how Exceptionless has helped you squash bugs and improve your development.<!--more--></p>
+<h2>Fun Stats</h2>
+<ul>
+<li>Nearly <strong>2000 ACTIVE&nbsp;projects</strong></li>
+<li>More than&nbsp;<strong>1350 ACTIVE organizations</strong></li>
+<li>Right at <strong>100 new organizations</strong> and <strong>140 new users</strong> per month!</li>
+<li><strong>800,000 new events each month</strong>, month over month&nbsp;-&nbsp;<strong>4,600,000</strong>&nbsp;total in July!</li>
+</ul>
+<h2>A Few of Our Awesome Users/Companies</h2>
+<h3>User Report</h3>
+<p><a href="http://www.userreport.com/"><img src="/website/assets/img/news/userreport_logo_cmyk.png" alt="userreport_logo_cmyk"></a>User Report is an online survey and feedback tool used to collect information&nbsp;about and from website visitors. The&nbsp;data User Report's tools identifies is useful in usability studies, helps websites better identify their demographics, gives users an easy way to provide feedback, and more. The company's solutions are used by ebay, Toyota, National Geographic, and other large national and international brands.</p>
+<p>Visit the <a href="http://www.userreport.com/" target="_blank">User Report website</a> to learn more.</p>
+<h3>eMarketer</h3>
+<p><a href="http://www.emarketer.com/"><img src="/website/assets/img/news/eMarketerLogo-black-300x93.png" alt="eMarketerLogo-black"></a>Used by Facebook, MasterCard, and other large worldwide brands, <a href="http://www.emarketer.com/" target="_blank">eMarketer</a> provides insights into the digital marketing world by providing customers with the information they need to run their business effectively and efficiently online. This information includes industry-specific research, insights, and benchmarks.</p>
+<blockquote>
+<p>"Exceptionless allows us to prioritize fixes smarter by showing frequently occurring errors. In real time!" - Ryan Hoffman, eMarketer</p>
+</blockquote>
+<h3>Actipro Software</h3>
+<p><a href="http://www.actiprosoftware.com/"><img src="/website/assets/img/news/PageHeaderCompanyLogo.png" alt="PageHeaderCompanyLogo"></a>Actipro Software provides industry-leading .NET user interface controls for a variety of frameworks, including WPF, WinRT, Silverlight, and WinForms. They are known for their syntax-highlighting code editor control, SyntaxEditor, among other things.</p>
+<p>.NET developers should definitely check out <a href="http://www.actiprosoftware.com/" target="_blank">Actipro Software</a>.</p>
+<h3>Beth Israel Deaconess Medical Center - Harvard Medical School Teaching Hospital</h3>
+<p><a href="http://www.bidmc.org/" target="_blank">BIDMC </a>is one of the nation's preeminent academic medical centers focusing on excellence in clinical care, research, and education.</p>
+<p><a href="http://www.bidmc.org/"><img src="/website/assets/img/news/header_logo.png" alt="header_logo"></a></p>
+<blockquote>
+<p>"The primary reasons that we switched to Exceptionless from our own code is that Exceptionless captures additional detail (including code line numbers), Exceptionless has a better interface and design for reviewing and managing errors and bugs (including summary views that we didn’t previously have), and we no longer need to maintain our own error-logging code." - Philip Dickerson, BIDMC</p>
+</blockquote>
+<h3>LegalDesk</h3>
+<p><a href="https://legaldesk.it/"><img src="/website/assets/img/news/legaldesk.logo_-150x150.png" alt="legaldesk.logo"></a>LegalDesk is software designed for managing law firms or independent legal practices and includes everything from document organization and sharing to timesheets and finances/billing.</p>
+<p>Check out <a href="https://legaldesk.it/" target="_blank">LegalDesk's Website</a> (Italian)</p>
+<h3>CodeSmith Tools</h3>
+<p><a href="http://www.codesmithtools.com/"><img src="/website/assets/img/news/codesmith-tools-large-300x51.png" alt="codesmith-tools-large"></a>CodeSmith Tools is a Dallas-based software development company focused on creating software tools that increase developer productivity. Their flagship product, CodeSmith Generator, has seen huge success over the years as a template driven source code generator that automates common application source code creation for text-based languages. They also provide a variety of frameworks for generating proven architectures.</p>
+<p>Learn more about <a href="http://www.codesmithtools.com/product/generator" target="_blank">CodeSmith Generator</a>&nbsp;or CodeSmith's other <a href="http://www.codesmithtools.com/product/frameworks" target="_blank">Frameworks</a>.</p>
+<h3>IKA</h3>
+<p><a href="http://ika.in/"><img src="/website/assets/img/news/imagesX-e1439833186121.png" alt="imagesX"></a>IKA is a laboratory equipment maker in the research and development field that builds innovative magnetic stirrers, mixers, overhead stirrers, shakers, homogenizers, mills, rotary evaporators, calorimeters, laboratory reactors and the specially developed software for analysis applications.</p>
+<blockquote>
+<p>"I’m using Exceptionless to report bugs /crashes which I encounter routinely while testing the UI.&nbsp;It helps me zero in on what could be the issue, AND have a documented track of what all errors I’ve seen...&nbsp;I’d say that Exceptionless helps me find all the bugs which I’d have to spend more time on zeroing in on, faster." - Bharat Mallapur, IKA</p>
+</blockquote>
+<p>Want to learn more, visit <a href="http://ika.in/" target="_blank">IKA.in</a>.</p>
+<h3>Teamaton</h3>
+<p><a href="http://www.teamaton.com/"><img src="/website/assets/img/news/logo-tagline-teamaton-300x78.png" alt="logo-tagline-teamaton"></a>Teamaton is a small software development company focused on creating user-friendly and profitable web applications for its clients using .NET technologies.</p>
+<p>Right now, Teamaton is working on an intuitive time tracking tool where they have implemented Exceptionless to monitor errors during development.</p>
+<p>Learn more at&nbsp;<a href="http://www.teamaton.com/" target="_blank">Teamaton.com</a>.</p>
+<h3>The Agileist</h3>
+<p><a href="http://theagileist.com/"><img src="/website/assets/img/news/the-agileist-300x124.png" alt="the-agileist"></a>The Agileist is a development company based in Kansas City that specializes in Azure web development, systems development, and systems integration in an agile environment.</p>
+<p><a href="http://theagileist.com/" target="_blank">TheAgileist.com</a></p>
+<h2>Thanks Again!</h2>
+<p>Once again, we'd like to extend our thanks to all the awesome users we have that&nbsp;make Exceptionless such a great project to work on and use. Everyone has provided excellent feedback, allowing us to continue pushing towards a faster, more efficient, more effective solution for all your error and event reporting needs.</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-07-29-self-hosting-exceptionless-free-and-fast/">Self Hosting Exceptionless - Free and Fast!</a></h2>
+    <p><img src="/website/assets/img/news/blog-header-image-self-hosting.jpg" alt="Self Hosting Exceptionless"></p>
+<p><strong>Self hosting allows you to&nbsp;run your own instance of <a href="/website/" target="_blank">Exceptionless</a>, our real-time error, feature, and log reporting tool, on your own systems - FOR FREE!</strong></p>
+<h2>Not Just&nbsp;Free, but Fast!</h2>
+<p>When developing&nbsp;<a href="/website/exceptionless-3-0-changes-to-build-process-dependencies-self-hosting/" target="_blank">Exceptionless 3.0</a>, we put extensive focus on making self hosting much easier, and therefore&nbsp;more viable, for our users.</p>
+<p>It is now possible to get a test environment up and running on your local machine in <strong>only a few minutes</strong>, and production environments&nbsp;can be set up very quickly as well.</p>
+<div class="signup center">
+  <a class="btn btn-large btn-primary" href="/website/docs/self-hosting/" target="_blank">Self Host Today!</a>
+</div>
+<p style="text-align: center;">
+  Or continue reading for more information and a demonstration.
+</p>
+<!--more-->
+<h2>How Easy? Super Easy!</h2>
+<h3>Demo Time!</h3>
+<p>Getting your self hosted instance of Exceptionless up and running is super easy. In the video below, Blake does the entire install on his local machine and is sending&nbsp;events to Exceptionless in&nbsp;<strong>less than 2 minutes!</strong></p>
+<p>Please note that you should review the requirements on the <a href="/website/docs/self-hosting/" target="_blank">Self Hosting Documentation</a> page before installing your own instance.</p>
+<p>https://youtu.be/P01v289dR10</p>
+<h2>We're Always Improving</h2>
+<p>Exceptionless has come a long way, and it's only going to get easier, faster, and more robust moving forward. Our users are a huge part of that, so please <a href="https://github.com/exceptionless/Exceptionless/issues" target="_blank">submit an issue on GitHub</a>&nbsp;or send us an in-app message if you have any feedbacks, bugs, installation questions, etc. Thanks!</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-07-23-exceptionless-3-0-changes-to-build-process-dependencies-self-hosting/">Exceptionless V3.0 - Changes to the Build Process, Dependencies, and Self Hosting</a></h2>
+    <p><img src="/website/assets/img/news/version-3-featured.png" alt="version-3-featured">Version 2.0 was a pretty big rewrite for us, and we're happy with how everything played out, but that doesn't mean we're done!</p>
+<p>We've been working on 3.0, and it's ready.</p>
+<p>What was the focus, you ask?&nbsp;To make life&nbsp;<strong>easier</strong>&nbsp;for&nbsp;<strong>you</strong>! We've simplified the build process, removed dependencies, and drastically improved the ease of self hosting.</p>
+<p>Check out the details, below, and upgrade today!<!--more--></p>
+<h2>Removed Dependencies</h2>
+<p>Previously, MongoDB was a major dependency that increase the complexity of the overall project. All the data previously hosted in MongoDB is now hosted in ElasticSearch, making it <strong>super easy</strong> for users to self host or develop Exceptionless since you only need to set up ElasticSearch (which you had to do anyway).</p>
+<p>With this, Redis is no longer configured by default, but you can set it up easily by setting the connection string. We definitely recommend using it.</p>
+<p>Removal of the MongoDB dependency brings us one step closer to running Exceptionless on vNext, on any operating system. We hope to achieve this soon, but do not have a timeline.</p>
+<h2>Easier Self Hosting</h2>
+<p>The goal is to make self hosting&nbsp;<strong>as easy as possible</strong> so anyone can set it up and try Exceptionless out.</p>
+<p>With Exceptionless 3.0, we now have a single build artifact that contains bo the SPA app and the API end server, with default configuration. The ZIP file contains a batch file you can run to download and start ElasticSearch, launch IIS Express with a temp website, and load your browser automatically with the Exceptionless test instance. This lets you load up everything and play around with Exceptionless&nbsp;<strong>in a single click!</strong></p>
+<p>Another change to the&nbsp;configuration is that you now have&nbsp;the ability to set every Exceptionless API Setting via Environmental Variables.</p>
+<p>Check out the documentation for <a href="/website/docs/self-hosting/" target="_blank">detailed Self Hosting Configuration docs</a>.</p>
+<h2>Simplified&nbsp;Build Process</h2>
+<p>In order to make it easier and faster to deploy, we removed the <a href="http://octopusdeploy.com" target="_blank">OctopusDeploy</a> build dependency and are now using <a href="https://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control/" target="_blank">Azure Git deploy</a>, which pulls directly from a GitHub repository that contains the build artifacts.</p>
+<p>With this move, our mindset changed regarding the master branch. For us it means production, but for you it means that whatever is in our master branch is stable and currently deployed to live. We&nbsp;<strong>no longer have to wait</strong> for a build to complete, create a production release in OctopusDeploy, then manually&nbsp;deploy it, we just commit to git and the rest is history!</p>
+<p>Expect more on this topic from us soon. In the mean time, enjoy the simplified build process.</p>
+<h2>Upgrading to 3.0</h2>
+<p>The only users that need to worry about upgrading anything for this new release are self hosters. If you are self hosting Exceptionless, please review the <a href="/website/docs/self-hosting/" target="_blank">Self Hosting Documentation</a>, which contains information about upgrading your existing install.</p>
+<h2>So What?</h2>
+<p>Well, what all this means for you is that we will be able to update things much quicker, and that life just got way easier for all you self hosters out there!</p>
+<p>Let us know what else we can do to make life easier for you.</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2015/2015-07-14-foundatio-pluggable-blocks-building-distributed-apps/">Introducing Foundatio - Pluggable Foundation Blocks for Building Distributed Apps</a></h2>
+    <p><img src="/website/assets/img/news/foundatio-article-featured-image.png" alt="Exceptionless Foundatio App Building Blocks">In the process of developing Exceptionless, we realized there was a lack of good, simple, open source solutions for caching, queues, locks, messaging, jobs, file storage, and metrics when building scaleable applications.</p>
+<p>We tried an open source Redis cache client for caching, but it went commercial (expensive) and there wasn't any in-memory implementations. For the message bus, we looked at <a href="http://particular.net/nservicebus" target="_blank">NServiceBus</a> (good product, high cost, not open source friendly) and <a href="http://masstransit-project.com/" target="_blank">MassTransit</a> (local setup a pain, Azure support lacking), but were left disappointed. For storage, we simply could not find a solution that was decoupled and supported in memory, file storage, or Azure Blog Storage.</p>
+<p>So, naturally, we built our own!</p>
+<p>Meet&nbsp;<a href="https://github.com/FoundatioFx/Foundatio" target="_blank">Foundatio</a>&nbsp;- your key to painless, scalable development and testing for your app! Let's take a look at some examples, below.</p>
+<div class="signup center">
+  <a class="btn btn-large btn-primary" href="https://github.com/FoundatioFx/Foundatio" target="_blank">Try Foundatio Today</a>
+</div>
+<!--more-->
+<h2>Using Foundatio</h2>
+<p>To start using Foundatio for your project, simply <a href="https://www.nuget.org/packages?q=Foundatio" target="_blank">get the appropriate package from NuGet</a>.</p>
+<p>Below are small examples of what is possible with Foundatio caching, queues, locks, messaging, jobs, file storage, and metrics. We hope you find these explanations and samples useful, but please let us know if you have any questions or comments.</p>
+<h3>Caching</h3>
+<p>Foundatio provides four cache implementations, all derived from the <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Caching/ICacheClient.cs" target="_blank"><code>ICacheClient</code> interface</a>, that save you expensive operations when creating or getting data by allowing you to store and access the data super fast.</p>
+<p>These implementations include <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Caching/InMemoryCacheClient.cs" target="_blank">InMemoryCacheClient</a>, <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Caching/HybridCacheClient.cs" target="_blank">HybridCacheClient</a>, <a href="https://github.com/FoundatioFx/Foundatio.Redis/blob/master/src/Foundatio.Redis/Cache/RedisCacheClient.cs" target="_blank">RedisCacheClient</a>, and <a href="https://github.com/FoundatioFx/Foundatio.Redis/blob/master/src/Foundatio.Redis/Cache/RedisHybridCacheClient.cs" target="_blank">RedisHybridCacheClient</a>. Learn more about each in the <a href="https://github.com/FoundatioFx/Foundatio#caching" target="_blank">Foundatio Readme Caching section</a>.</p>
+<p>For Exceptionless,&nbsp;we&nbsp;use RedisHybridCacheClient to cache users, organizations, and projects, which has a huge performance boost since we don't have to serialize the item if it's in local memory cache.</p>
+<h4>Foundatio Caching Sample</h4>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Foundatio.Caching;
+
+ICacheClient cache = <span class="hljs-keyword">new</span> InMemoryCacheClient();
+cache.Set(<span class="hljs-string">"test"</span>, <span class="hljs-number">1</span>);
+<span class="hljs-keyword">var</span> <span class="hljs-keyword">value</span> = cache.Get&lt;<span class="hljs-built_in">int</span>&gt;(<span class="hljs-string">"test"</span>);
+</code></pre>
+<h3>Queues</h3>
+<p>Foundatio includes three queue implementations, each derived from the <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Queues/IQueue.cs" target="_blank"><code>IQueue</code> interface</a>, for First In, First Out (FIFO) message delivery. These include <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Queues/InMemoryQueue.cs" target="_blank">InMemoryQueue</a>, <a href="https://github.com/FoundatioFx/Foundatio.Redis/blob/master/src/Foundatio.Redis/Queues/RedisQueue.cs" target="_blank">RedisQueue</a>, and <a href="https://github.com/FoundatioFx/Foundatio.AzureServiceBus/blob/master/src/Foundatio.AzureServiceBus/Queues/AzureServiceBusQueue.cs" target="_blank">ServiceBusQueue</a>. Read more in the <a href="https://github.com/FoundatioFx/Foundatio#queues" target="_blank">queues section of the readme</a>.</p>
+<p><a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Web/Controllers/EventController.cs#L1142-L1151" target="_blank">We use queues</a>, along with Foundatio Storage (below) to queue events for Exceptionless. Using both allows us to keep payloads small and limit system load.</p>
+<h4>Foundatio Queue&nbsp;Example</h4>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Foundatio.Queues;
+
+IQueue queue = <span class="hljs-keyword">new</span> InMemoryQueue();
+
+queue.Enqueue(<span class="hljs-keyword">new</span> SimpleWorkItem {
+Data = <span class="hljs-string">"Hello"</span>
+});
+
+<span class="hljs-keyword">var</span> workItem = queue.Dequeue(TimeSpan.Zero);
+</code></pre>
+<h3>Locks</h3>
+<p>To ensure any resource is only accessed by one consumer at any one time, use one of the two Foundatio Locks implementations, each derived from the <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Lock/ILockProvider.cs" target="_blank"><code>ILockProvider</code> interface</a>. These implementations include <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Lock/CacheLockProvider.cs" target="_blank">CacheLockProvider</a> and <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Lock/ThrottlingLockProvider.cs" target="_blank">ThrottlingLockProvider</a>. These providers take an <code>ICacheClient</code>, ensuring code locks across machines. <a href="https://github.com/FoundatioFx/Foundatio#locks" target="_blank">Read more on the repo</a>.</p>
+<p>We use locks&nbsp;to only run single instances of jobs (below), and more.</p>
+<h4>Foundatio Locks Sample</h4>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Foundatio.Lock;
+
+ILockProvider locker = <span class="hljs-keyword">new</span> CacheLockProvider(<span class="hljs-keyword">new</span> InMemoryCacheClient());
+
+<span class="hljs-keyword">using</span> (locker) {
+  locker.ReleaseLock(<span class="hljs-string">"test"</span>);
+
+  <span class="hljs-keyword">using</span> (locker.AcquireLock(<span class="hljs-string">"test"</span>, acquireTimeout: TimeSpan.FromSeconds(<span class="hljs-number">1</span>))) {
+    <span class="hljs-comment">// ...</span>
+  }
+}
+</code></pre>
+<h3>Messaging</h3>
+<p>Derived from the <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Messaging/IMessageBus.cs" target="_blank"><code>IMessageBus</code> interface</a>, our three message bus implementations let you publish and subscribe to messages&nbsp;within your application. Use the <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Messaging/InMemoryMessageBus.cs" target="_blank">InMemoryMessageBus</a>, <a href="https://github.com/FoundatioFx/Foundatio.Redis/blob/master/src/Foundatio.Redis/Messaging/RedisMessageBus.cs" target="_blank">RedisMessageBus</a>,or <a href="https://github.com/FoundatioFx/Foundatio.AzureServiceBus/blob/master/src/Foundatio.AzureServiceBus/Messaging/AzureServiceBusMessageBus.cs" target="_blank">ServiceBusMessageBus</a> implementations based on your needs. <a href="https://github.com/FoundatioFx/Foundatio#messaging" target="_blank">Read more about each implementation on GitHub</a>.</p>
+<p><a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Web/Hubs/MessageBusBroker.cs" target="_blank">Exceptionless utilizes the message bus</a> extensively to pass messages such as events being created, stacks being changed, etc, throughout the system.</p>
+<h4>Foundatio Messaging Example</h4>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Foundatio.Messaging;
+
+IMessageBus messageBus = <span class="hljs-keyword">new</span> InMemoryMessageBus();
+
+<span class="hljs-keyword">using</span> (messageBus) {
+  messageBus.Subscribe&lt;SimpleMessageA&gt;(msg =&gt; {
+    <span class="hljs-comment">// Got message</span>
+  });
+
+  messageBus.Publish(<span class="hljs-keyword">new</span> SimpleMessageA {
+      Data = <span class="hljs-string">"Hello"</span>
+  });
+}
+</code></pre>
+<h3>Jobs</h3>
+<p>Run jobs by calling <code>Run()</code> or passing it to the <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Jobs/JobRunner.cs" target="_blank"><code>JobRunner</code> class</a>, which allows you to easily run jobs as Azure Web Jobs. All jobs are required to derive from the <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Jobs/JobBase.cs" target="_blank"><code>JobBase</code> class</a>.</p>
+<p>Around here, <a href="https://github.com/exceptionless/Exceptionless/tree/master/src/Exceptionless.Core/Jobs" target="_blank">we use the jobs feature</a> for processing events, sending mail messages, and more. Some jobs, such as our <a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Jobs/DailySummaryJob.cs#L51-L53" target="_blank">DailySummaryJob</a>, which we only want to run once, also use locks (above) to only run one instance.</p>
+<h4>Foundatio Jobs Sample</h4>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Foundatio.Jobs;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorldJob</span> : <span class="hljs-title">JobBase</span> {
+  <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> RunCount { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+
+  <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">override</span> Task&lt;JobResult&gt; <span class="hljs-title">RunInternalAsync</span>(<span class="hljs-params">CancellationToken token</span>)</span> {
+    RunCount++;
+
+    <span class="hljs-keyword">return</span> Task.FromResult(JobResult.Success);
+  }
+}
+
+<span class="hljs-keyword">var</span> job = <span class="hljs-keyword">new</span> HelloWorldJob();
+job.Run(); <span class="hljs-comment">// job.RunCount = 1;</span>
+job.RunContinuous(iterationLimit: <span class="hljs-number">2</span>); <span class="hljs-comment">// job.RunCount = 3;</span>
+job.RunContinuous(token: <span class="hljs-keyword">new</span> CancellationTokenSource(TimeSpan.FromMilliseconds(<span class="hljs-number">10</span>)).Token); <span class="hljs-comment">// job.RunCount &gt; 10;</span>
+</code></pre>
+<p><code>Job.exe -t "MyLib.HelloWorldJob,MyLib"</code></p>
+<h3>File Storage</h3>
+<p>Derived from the <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Storage/IFileStorage.cs" target="_blank"><code>IFileStorage</code> interface</a>, we offer three file storage implementations, including <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Storage/InMemoryFileStorage.cs" target="_blank">InMemoryFileStorage</a>, <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Storage/FolderFileStorage.cs" target="_blank">FolderFileStorage</a>, and <a href="https://github.com/FoundatioFx/Foundatio.AzureStorage/blob/master/src/Foundatio.AzureStorage/Storage/AzureFileStorage.cs" target="_blank">AzureFileStorage</a>. Read more on each in the <a href="https://github.com/FoundatioFx/Foundatio#file-storage" target="_blank">ReadMe</a>. <em>Using all <code>IFileStorage</code> implementations as singletons is recommended.</em></p>
+<p>File storage is used by Exceptionless in conjunction with queues&nbsp;(above), among other things.</p>
+<h4>Foundatio File Storage Example</h4>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Foundatio.Storage;
+
+IFileStorage storage = <span class="hljs-keyword">new</span> InMemoryFileStorage();
+storage.SaveFile(<span class="hljs-string">"test.txt"</span>, <span class="hljs-string">"test"</span>);
+<span class="hljs-built_in">string</span> content = storage.GetFileContents(<span class="hljs-string">"test.txt"</span>)
+</code></pre>
+<h3>Metrics</h3>
+<p>Our three&nbsp;metric implementations derive from the <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Metrics/IMetricsClient.cs" target="_blank"><code>IMetricsClient</code> interface</a> and include <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Metrics/InMemoryMetricsClient.cs" target="_blank">InMemoryMetricsClient</a>, <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio/Metrics/StatsDMetricsClient.cs" target="_blank">StatsDMetricsClient</a>, and <a href="https://github.com/FoundatioFx/Foundatio/blob/master/src/Foundatio.MetricsNET/MetricsNETClient.cs" target="_blank">MetricsNETClient</a>. <a href="https://github.com/FoundatioFx/Foundatio#metrics" target="_blank">Get the details on the repo</a>. <em>Note that these implementations should be used as singletons.</em></p>
+<p>Metrics are used throughout the Exceptionless system to provide insight into how the system is working and get external alerts if events are not processing or report how much load is on the current system.</p>
+<h4>Foundatio Metrics Sample</h4>
+<pre><code class="language-cs hljs language-csharp">metrics.Counter(<span class="hljs-string">"c1"</span>);
+metrics.Gauge(<span class="hljs-string">"g1"</span>, <span class="hljs-number">2.534</span>);
+metrics.Timer(<span class="hljs-string">"t1"</span>, <span class="hljs-number">50788</span>);
+</code></pre>
+<h2>Development</h2>
+<p>If you would like to contribute to Foundatio, clone the repo&nbsp;and open the Foundatio.sln Visual Studio solution file to get started. Let us know if you have any questions or need any assistance.</p>
+<h2>The Future of Foundatio</h2>
+<p>As with any development project, Foundatio is a work in progress and we will continue developing it, however it is extremely stable and used in production by various companies, including Exceptionless (obviously). The next major steps are <strong>full Async support</strong> (some implementations already have it), and <strong>vnext support</strong>.</p>
+<p>Naturally, we want to know what you think and what we should work on next, so <a href="https://github.com/FoundatioFx/Foundatio/issues">please let us know</a>!</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/open-source/" class="tag">open source</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+
+
+<hr>
+
+<nav class="post-navigation">
+  <ul>
+    <li>
+      <a href="/website/news/7/" rel="prev">← Previous</a>
+    </li>
+    
+
+    <li>
+      Page 8
+    </li>
+    <li>
+      <a href="/website/news/9/" rel="next">Next →</a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</div>
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Replacing DIY Exception Logging with Exceptionless - Case Study - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Replacing DIY Exception Logging with Exceptionless - Case Study - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Replacing DIY Exception Logging with Exceptionless - Case Study - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Replacing DIY Exception Logging with Exceptionless - Case Study</h1>
+          </header>
+          <div class="entry-content">
+            <p><a href="https://referralrock.com" rel="attachment wp-att-14073" target="_blank"><img src="/website/assets/img/news/referral-rock-logo.png" alt="referral-rock-logo"></a>Today we bring you a case study from the&nbsp;founder of <a href="https://referralrock.com" target="_blank">Referral Rock</a>&nbsp;and serial entrepreneur, <strong>Joshua Ho</strong>.</p>
+<p>Referral Rock is a referral platform for small businesses that Josh created after he "... <strong>realized small businesses lacked the tools to <a href="https://referralrock.com/blog/referral-programs-101-everything-you-need-to-build-a-referral-marketing-program/" target="_blank">make a customer referral program work</a>.</strong>" The app allows businesses to easily and effectively create, implement, and administer a rock-solid referral program to help grow their business.</p>
+<p>Exceptionless recently became a part of Referral Rock's exception reporting and logging toolkit, replacing Joshua's home-grown exception logging solutions, and here are his thoughts!</p>
+<!--more-->
+<p style="text-align: center;margin-top: 45px;margin-bottom: -40px;">
+  <span style="font-size:100px">"</span>
+</p>
+<hr style="margin: 10px 0;">
+I've always done my own exception logging. Very basic stuff, where I would just log exceptions to my local drive. This gave me a nice place to just look at errors in my ASP.NET code. As with most code, it ended up in production deployments. At one point, I even built some web pages to view the logs remotely. Those little exception logging code snippets also made it into about 3-5 other projects as the years went by. I knew there was software out there that could do this, but I more or less had it solved for myself.
+**But that changed recently.**<p></p>
+<blockquote>
+<p>"One <strong>huge benefit</strong> Exceptionless adds to my business is giving me the ability to provide&nbsp;better customer support."</p>
+</blockquote>
+<h2>Enter Exceptionless</h2>
+<p>As I've been growing my own SaaS business for referral software, called <a href="https://referralrock.com/" target="_blank">Referral Rock</a>, I realized there were times my old solution wasn't effectively capturing all the exceptions and I would have to venture into the Event Log to find out what happened. Also, I liked being able to view the production server remotely, but my little web pages got lost somewhere and I wasn't excited about coding them again. Who likes to code the same thing more than once? Not I.</p>
+<blockquote>
+<p>"I could see details on the requests, browser cookies, user identity... all much more than I could see using my old solution."</p>
+</blockquote>
+<p>So that led me to look for other solutions to view my exceptions remotely, which is when I found Exceptionless. With the help of support, I got it up and running fairly quickly. The guys at Exceptionless were very responsive and helpful in getting me setup.</p>
+<h3>Usage &amp; Evaluation</h3>
+<p>Being a startup, I was initially using the free version for about 2 weeks and was <strong>blown away</strong>. The UI was great and I love the AngularJS based responsiveness. Soon I had a great pulse on my production server. I could see details on the requests, browser cookies, user identity... all much more than I could see using my old solution. Once I had it set up, I started to see the benefits using other types of events in Exceptionless, such as&nbsp;logging. I started adding some logs when I was debugging an issue with a customer, and it worked great.</p>
+<blockquote>
+<p>"With the help of support, I got it up and running fairly quickly. The guys at Exceptionless were very responsive and helpful in getting me setup."</p>
+</blockquote>
+<p>One <strong>huge benefit</strong> Exceptionless adds to my business is giving me the ability to provide&nbsp;better customer support. Not only do I know when errors are happening, but also who is seeing them. This allows me to have an opportunity to reach out to that specific customer, once the issue is fixed, and say something like "I saw you had and error when you did XYZ, I wanted to let you know it is fixed now so you can try it again". Taking opportunities to provide that level of service has helped my business.</p>
+<p>We are now running a paid version of Exceptionless with multiple projects and I look forward to adding more logs and playing with other features to give me even greater visibility into my web app. Thanks guys!</p>
+<p><span style="font-size:20px;"><i>- Joshua Ho // Founder, <a href="https://referralrock.com" target="_blank">Referral Rock</a></i></span></p>
+<hr style="margin: 10px 0;">
+<p style="text-align: center;margin-top: 45px;margin-bottom: -50px;">
+  <span style="font-size:100px">”</span>
+</p>
+<h2>No - Thank You, Josh!</h2>
+<p>We love to see people enjoying Exceptionless - it's our baby, and we've put a lot of blood, sweat, and tears (I blame Blake) into it. Keep rocking it with Referral Rock!</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

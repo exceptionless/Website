@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Filtering &amp; Searching - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Filtering &amp; Searching - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Filtering &amp; Searching - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Documentation</h1>
+</div>
+
+<div id="wrap" class="container" role="document">  
+  <div id="responsive-menu"><button class="btn btn-primary" onclick="handleMenu()">Table of Contents</button></div>
+  <div id="content" class="row-fluid">
+    <div class="toc well span3 visible-toc">
+      <div class="input-append">
+        <input class="span9" id="search-input" type="text" placeholder="Search docs...">
+        <button class="btn" type="button" onclick="handleSearch()">Go!</button>
+      </div>
+      
+
+    </div>
+    <div class="well span9 docs">
+      <h1>Filtering &amp; Searching</h1>
+      <ul>
+<li><a href="#filter-by-organization-and-project">Filter by Organization &amp; Project</a></li>
+<li><a href="#filter-by-time-frame">Filter by Time Frame</a></li>
+<li><a href="#filter-search-by-specific-criteria">Filter / Search by Specific Criteria</a></li>
+<li><a href="#searchable-fields-and-requirements">Searchable Fields &amp; Requirements</a></li>
+<li><a href="#multiple-queries">Multiple Queries</a></li>
+<li><a href="#wild-cards">Wild Cards</a></li>
+<li><a href="#exclusions">Exclusions</a></li>
+<li><a href="#set-and-unset-fields">Set and Unset Fields</a></li>
+<li><a href="#ranges">Ranges</a></li>
+<li><a href="#custom-extended-data">Custom Extended Data</a></li>
+<li><a href="#demo-video">Demo Video</a></li>
+</ul>
+<h2>Filter by Organization &amp; Project</h2>
+<p>The dashboard loads up with all projects selected by default.</p>
+<p>Click on the “All Projects” drop down in the top left of the dashboard and select your organization or project to filter the data to your liking.</p>
+<p><img src="img/filter-by-project-organization.png" alt="Exceptionless Filter Project Organization"></p>
+<h2>Filter by Time Frame</h2>
+<p>Click on the calendar icon in the header to select from multiple preset time frame filters, or click "Custom" and select your own.</p>
+<p><img src="img/filter-by-timeframe.png" alt="Exceptionless Filter Time Frame"></p>
+<h2>Filter / Search by Specific Criteria</h2>
+<p>Click the magnifying glass to search by specific criteria.</p>
+<p>You can filter by tag, ID, organization, project, stack, type, value, IP, architecture, user, and much more.</p>
+<p>Some searches, such as ID, require a prefix (“id:”) on the search, but others, such as error.message, can be entered as strings (“A NullReferenceException occurred”).</p>
+<p>View a complete list of searchable terms, examples, and FAQs below.</p>
+<p><img src="img/filter-by-search-filter-criteria.png" alt="Exceptionless Filter Search Criteria Field"></p>
+<h2>Searchable Fields &amp; Requirements</h2>
+<table>
+<thead>
+<tr>
+<th>TERM</th>
+<th>EXAMPLE</th>
+<th>FIELD REQUIRED? (field:term)</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*</code></td>
+<td><code>*</code></td>
+<td>false</td>
+<td>Shows all events (including hidden and fixed)</td>
+</tr>
+<tr>
+<td>id</td>
+<td><code>id:54d8315ce6bb2d0500bcc7b4</code></td>
+<td>true</td>
+<td>Documents id</td>
+</tr>
+<tr>
+<td>organization</td>
+<td><code>organization:54d8315ce6bb2d0500bcc7b4</code></td>
+<td>true</td>
+<td>Organization id</td>
+</tr>
+<tr>
+<td>project</td>
+<td><code>project:54d8315ce6bb2d0500bcc7b4</code></td>
+<td>true</td>
+<td>Project id</td>
+</tr>
+<tr>
+<td>stack</td>
+<td><code>stack:54d8315ce6bb2d0500bcc7b4</code></td>
+<td>true</td>
+<td>Stack id</td>
+</tr>
+<tr>
+<td>reference</td>
+<td><code>reference:12345678</code></td>
+<td>true</td>
+<td>Reference id</td>
+</tr>
+<tr>
+<td>session</td>
+<td><code>session:12345678</code></td>
+<td>true</td>
+<td>Session id</td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>type:error</code></td>
+<td>true</td>
+<td>Event type</td>
+</tr>
+<tr>
+<td>source</td>
+<td><code>source:"my log source"</code> or <code>"my log source"</code></td>
+<td>false</td>
+<td>Event source</td>
+</tr>
+<tr>
+<td>level</td>
+<td><code>level:Error</code></td>
+<td>true</td>
+<td>Log level</td>
+</tr>
+<tr>
+<td>date</td>
+<td><code>date:"2020-10-16T12:00:00.000"</code></td>
+<td>true</td>
+<td>Occurrence date</td>
+</tr>
+<tr>
+<td>first</td>
+<td><code>first:true</code></td>
+<td>true</td>
+<td>True if first occurrence of event</td>
+</tr>
+<tr>
+<td>message</td>
+<td><code>message:"My error message"</code> or <code>"My error message"</code></td>
+<td>false</td>
+<td>Event message</td>
+</tr>
+<tr>
+<td>tag</td>
+<td><code>tag:"Blake Niemyjski"</code> or <code>tag:Blake</code> or <code>blake</code></td>
+<td>false</td>
+<td>Tags</td>
+</tr>
+<tr>
+<td>value</td>
+<td><code>value:1</code></td>
+<td>true</td>
+<td>Value of event (used in charts)</td>
+</tr>
+<tr>
+<td>status</td>
+<td><code>status:open</code> or <code>status:discarded</code> or <code>status:fixed</code> or <code>status:regressed</code> or <code>status:snoozed</code> or <code>status:ignored</code></td>
+<td>true</td>
+<td>Stack status</td>
+</tr>
+<tr>
+<td>version</td>
+<td><code>version:1</code> or <code>version:1.0</code> or <code>version:1.0.0</code></td>
+<td>true</td>
+<td>Application version</td>
+</tr>
+<tr>
+<td>machine</td>
+<td><code>machine:Server</code> or <code>Server</code></td>
+<td>false</td>
+<td>Machine name</td>
+</tr>
+<tr>
+<td>ip</td>
+<td><code>ip:127.0.0.1</code> or <code>127.0.0.1</code></td>
+<td>false</td>
+<td>IP address</td>
+</tr>
+<tr>
+<td>architecture</td>
+<td><code>architecture:x64</code></td>
+<td>true</td>
+<td>Machine architecture</td>
+</tr>
+<tr>
+<td>useragent</td>
+<td><code>useragent:IE</code> or <code>useragent:"Mozilla/5.0"</code></td>
+<td>true</td>
+<td>User Agent</td>
+</tr>
+<tr>
+<td>path</td>
+<td><code>path:"/cart"</code> or <code>"/cart"</code></td>
+<td>false</td>
+<td>URL path</td>
+</tr>
+<tr>
+<td>browser</td>
+<td><code>browser:Chrome</code></td>
+<td>true</td>
+<td>Browser</td>
+</tr>
+<tr>
+<td>browser.version</td>
+<td><code>browser.version:50.0</code></td>
+<td>true</td>
+<td>Browser version</td>
+</tr>
+<tr>
+<td>browser.major</td>
+<td><code>browser.major:50</code></td>
+<td>true</td>
+<td>Browser major version</td>
+</tr>
+<tr>
+<td>device</td>
+<td><code>device:iPhone</code></td>
+<td>true</td>
+<td>Device</td>
+</tr>
+<tr>
+<td>os</td>
+<td><code>os:iOS</code></td>
+<td>true</td>
+<td>Operating System</td>
+</tr>
+<tr>
+<td>os.version</td>
+<td><code>os.version:8.0</code></td>
+<td>true</td>
+<td>Operating System version</td>
+</tr>
+<tr>
+<td>os.major</td>
+<td><code>os.major:8</code></td>
+<td>true</td>
+<td>Operating System major version</td>
+</tr>
+<tr>
+<td>bot</td>
+<td><code>bot:true</code></td>
+<td>true</td>
+<td>bot</td>
+</tr>
+<tr>
+<td>error.code</td>
+<td><code>error.code:500</code> or <code>500</code></td>
+<td>false</td>
+<td>Error code</td>
+</tr>
+<tr>
+<td>error.message</td>
+<td><code>error.message:"A NullReferenceException occurred"</code> or <code>"A NullReferenceException occurred"</code></td>
+<td>false</td>
+<td>Error message</td>
+</tr>
+<tr>
+<td>error.type</td>
+<td><code>error.type:"System.NullReferenceException"</code> or <code>"System.NullReferenceException"</code></td>
+<td>false</td>
+<td>Error type</td>
+</tr>
+<tr>
+<td>error.targettype</td>
+<td><code>error.targettype:"System.NullReferenceException"</code> or <code>"System.NullReferenceException"</code></td>
+<td>false</td>
+<td>Error target type</td>
+</tr>
+<tr>
+<td>error.targetmethod</td>
+<td><code>error.targetmethod:AssociateWithCurrentThread</code> or <code>AssociateWithCurrentThread</code></td>
+<td>false</td>
+<td>Error target method</td>
+</tr>
+<tr>
+<td>user</td>
+<td><code>user:"random user identifier"</code> or <code>"random user identifier"</code></td>
+<td>false</td>
+<td>Uniquely identifies user</td>
+</tr>
+<tr>
+<td>user.name</td>
+<td><code>user:"Exceptionless User"</code> or <code>"Exceptionless User"</code></td>
+<td>false</td>
+<td>Friendly name of user</td>
+</tr>
+<tr>
+<td>user.description</td>
+<td><code>user.description:"I clicked the button"</code> or <code>"I clicked the button"</code></td>
+<td>false</td>
+<td>User Description</td>
+</tr>
+<tr>
+<td>user.email</td>
+<td><code>user.email:"support@exceptionless.io"</code> or <code>"support@exceptionless.io"</code></td>
+<td>false</td>
+<td>User Email Address</td>
+</tr>
+</tbody>
+</table>
+<h2>Multiple Queries</h2>
+<p>All queries separated by a space will be an <code>AND</code> operation. If you wish to <code>OR</code> queries you’ll need to use an <code>OR</code> statement. We recommend wrapping conditional statements with parentheses.</p>
+<p><strong>Example:</strong> Lets assume we want to return all events that have a <code>blue</code> or <code>red</code> tag. To search for these events our query would be <code>(tag:blue OR tag:red)</code>.</p>
+<h2>Wild Cards</h2>
+<p>Suffix your query with <code>*</code> for wild card searches.</p>
+<h2>Exclusions</h2>
+<p>Prefix the field name with <code>-</code> for exclusions.</p>
+<p><strong>Example:</strong> Lets assume that we want to return all events that are not marked as a bot. To search for these events our query would be <code>-bot:true</code>.
+*NOTE: In some cases searching with <code>-bot:true</code> is more accurate than searching with <code>bot:false</code>. This happens because the first query returns all records where <code>bot</code> field is <code>not set</code> or <code>not equal to true</code>. The second query returns results only where the <code>bot</code> field is set to <code>false</code>.</p>
+<h2>Set and Unset Fields</h2>
+<p>Prefix the field name with <code>_missing_</code> or <code>_exists_</code>.</p>
+<p><strong>Example:</strong> Lets assume that we want to return all events that do not contain any tags. To search for these events our query would be <code>_missing_:tag</code>.</p>
+<h2>Ranges</h2>
+<p>Specify a <code>date</code> or <code>numeric</code> range as part of the term.</p>
+<p><strong>Date Range Example:</strong> Lets assume that we want to return all events that occurred in 2020. To search for these events our query would be <code>date:[2020-01-01 TO 2020-12-31]</code>.</p>
+<p><strong>Numeric Range Example:</strong> Lets assume that we want to return all events that contain contain a <code>value</code> between 1 and 10. To search for these events our query would be <code>value:(&gt;0 AND &lt;=10)</code>.</p>
+<h2>Custom Extended Data</h2>
+<p>All simple data types (<code>string</code>, <code>boolean</code>, <code>date</code>, <code>number</code>) that are stored in extended data will be indexed. <em>NOTE: Field names will be lowercased and escaped. If your field contains a <code>space</code> it will be escaped with a -.</em></p>
+<p><strong>Example:</strong> Lets assume that our events extended data contains a property called <code>Age</code> with a value of <code>18</code>. To search for this value our query would be <code>data.age:18</code>.</p>
+<hr>
+<h2>Demo Video</h2>
+<p><a href="http://www.youtube.com/watch?v=ed8uEVs3IO0">http://www.youtube.com/watch?v=ed8uEVs3IO0</a></p>
+<hr>
+<p class="text-right"><a href="/website/docs/bulk-actions/">Next &gt; Bulk Actions</a></p>
+   
+    </div>
+  </div>
+</div>
+
+<script>
+    const handleMenu = () => {
+        const menu = document.querySelector(".toc");
+        menu.classList.toggle("hidden-toc");
+        menu.classList.toggle("visible-toc");
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const search = document.getElementById("search-input")
+        search.addEventListener("keyup", ({key}) => {
+          if (key === "Enter") {
+            handleSearch();
+          }
+        })
+    })
+    const handleSearch = async () => {
+      const searchTerm = document.getElementById("search-input").value;
+      const queryString = encodeURI(searchTerm)
+      window.location = `/search?term=${queryString}`;
+    }
+</script>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

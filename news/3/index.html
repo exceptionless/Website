@@ -1,0 +1,2382 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Archive - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Archive - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Archive - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Archive</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+
+    <h1>Archive</h1>
+
+
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-10-06-slack-integration-update-recap/">Slack Integration Update &amp; Recap</a></h2>
+    <p><img src="/website/assets/img/news/slack-integration-ft-img-1024x538.jpg" alt="Exceptionless Slack Integration">/</p>
+<p>Since we first introduced Slack integration with the goal of further improving notifications in Exceptionless, we've come back around with updates, a few bug fixes, and wanted to give everyone a quick all-in-one overview of the feature!</p>
+<p>Thanks to everyone that has provided feedback, bug reports, and suggestions. If <em>you</em> have any, don't hesitate to <a href="https://github.com/exceptionless/Exceptionless/issues">submit an issue over on GitHub</a>. We're always looking to improve and would love your input!<!--more--></p>
+<p>Along the way, we have run into <strong>incoming webhook issues</strong>, some <strong>usability/setup workflow updates</strong> that needed to be made to make the process more usable, and, among other things, <strong>incorrectly created action URLs</strong> that weren't being handled correctly with rate limiting.</p>
+<p>We'll cover <strong>setting up Slack integration with Exceptionless</strong> below, but you can also review the <a href="/website/news/2017/2017-06-05-exceptionless-slack-integration/">original post</a> and <a href="https://youtu.be/U9GbYqWK1ik">weekly update video</a>, the <a href="/website/news/2017/2017-06-20-slack-integration-updates-bug-fixes-weekly-update-5222017">first bug fix update</a> and <a href="https://youtu.be/WtHj9e4M9zU">video</a>, and the most recent <a href="/website/news/2017/2017-06-26-improvements-exceptionless-slack-integration">Slack integration improvement update</a> and <a href="https://youtu.be/k4CMOk5lpVw">video</a>.</p>
+<h2>Setting up Slack Notifications for Exceptionless</h2>
+<p>First, go into your project's settings in the Exceptionless app and click on the Integrations tab.</p>
+<p>[&lt;img loading="lazy" class="aligncenter wp-image-15626 size-full" src="/k-setup.png" alt="" width="811" height="595" data-id="15626" srcset="/assets/img/news/exceptionless-sla//exceptionless-slack-setup-300x220.png 300w/ack-setup-768x563.png 768w" sizes="(max-width: 811p/ts/exceptionless-slack-setup.png)/</p>
+<p>Then, click on "Add Slack Notifications" and log in to your slack team.</p>
+<p>Once logged in, you will need to select the channel you want Exceptionless Notifications to post to and click Authorize.</p>
+<p>Once authorized, you can then configure the different notification settings by going back to the Exceptionless app and into the project's integrations tab again.</p>
+<p>Once integrated and configured, notifications will look something like the below screenshot, with the message, type of event, stack trace, links to actions, etc.</p>
+<p>We're excited to keep improving notifications, and would love for you guys to continue testing and providing feedback! What else would you like to see happening with notifications? What are we doing right, and wrong?</p>
+<p>Integrations with other chat &amp; productivity tools like HipChat and Microsoft Teams are on our list, as well, so if you use these please ping us and let us know so we can gauge interest!</p>
+<p>Until next time, code on my friends.</p>
+</article>
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-08-30-universal-javascript-support-added-exceptionless-javascript/">Universal JavaScript Support Added to Exceptionless.JavaScript</a></h2>
+    <p><img src="/website/assets/img/news/universal-javascript-1024x538.jpg" alt="Exceptionless Universal JavaScript"></p>
+<p>Recently, we released <a href="/website/news/2017/2017-08-15-javascript-client-v1-5-release-details-notes">Exceptionless.JavaScript 1.5</a>. The major update for the release was the addition of universal JavaScript (React Universal) support! More details below.&nbsp;The key is that we can now run in server side node apps, or in the browser, with a single script and do the right thing!</p>
+<blockquote>
+<p>TL;DR: Isomorphism is the functional aspect of seamlessly switching between client- and server-side rendering without losing state. Universal is a term used to emphasize the fact that a particular piece of JavaScript code is able to run in multiple environments. - <a href="https://medium.com/@ghengeveld/isomorphism-vs-universal-javascript-4b47fb481beb">Gert Hengeveld, Isomorphism vs Universal JavaScript</a></p>
+</blockquote>
+<!--more-->
+<p>We have gotten lots of requests for Universal JavaScript support. What this means is that you can use a library in the browser or server without any changes from the end user. This is great because you can just consume the library and just know it will work using the same API service no matter where you want to use it. The main con of using a universal client is the increased payload size as you know have to send node support to the browser as well.</p>
+<p>We implemented universal JavaScript support by bundling both the browser and node scripts together. But it wasn't as easy as concatenating the files together. We had to refactor the node and browser entry points so that they would automatically run, while ensuring that the initialization of environment specific code (storage, network, etc.) only ran when specific environment conditions were met. This is pretty easy to do with an <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">IIFE function</a> and a quick if check as shown <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.5.4/src/exceptionless.ts#L14-L38">here</a>. Next, we needed to provide a <a href="https://github.com/exceptionless/Exceptionless.JavaScript/blob/v1.5.4/src/exceptionless.universal.ts">new entry point that imported both of the entry points</a> which ensures that browser and node entry points run.</p>
+<p>This update adds support for universal apps, and a React Universal sample that shows the exact changes that were required to get everything working and setup can be found <a href="https://github.com/niemyjski/react-redux-universal-hot-example/commit/7f7c01ca1b328f3389c3919a53376bccbbfe1f08">here</a>. The pull request for universal support can be found <a href="https://github.com/exceptionless/Exceptionless.JavaScript/pull/75">here</a>.</p>
+<p><strong>To target it</strong>, you just need to reference the universal script (exceptionless.universal.js), this will happen automatically if you install via browserfiy or webpack.</p>
+<h2>Questions? Feedback?</h2>
+<p>Let us know what you think about the new Universal JavaScript support over on <a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues">GitHub</a>!</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/javascript/" class="tag">javascript</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/react/" class="tag">react</a>
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-08-15-javascript-client-v1-5-release-details-notes/">JavaScript Client V1.5 Release Details &amp; Notes</a></h2>
+    <p><img src="/website/assets/img/news/js-client-1.5-release-1024x538.jpg" alt="exceptionless.javascript 1.5">
+Exceptionless.JavaScript v1.5 Release Notes</p>
+<h3>Unversal App Support</h3>
+<p>The major update for 1.5 is that we have added support for universal apps (React Universal).</p>
+<p>To view the exact changes required to get everything working and set up, <a href="https://github.com/niemyjski/react-redux-universal-hot-example/commit/7f7c01ca1b328f3389c3919a53376bccbbfe1f08">click here</a>.</p>
+<h3>Other 1.5 Updates</h3>
+<!--more-->
+<ul>
+<li>Added support for exceptions that are passed in and are just strings.</li>
+<li>Updated TraceKit to the latest version, which adds support for parsing PhantomJS errors and greatly improves native stack traces.</li>
+<li>Thanks <a href="https://github.com/caesay">@caesay</a> for updating TypeScript to the latest version, as well!</li>
+</ul>
+<h3>Bug Fixes</h3>
+<ul>
+<li>Fixed a bug where exceptionless would fail to load when used with webpack.</li>
+<li>Fixed a bug where browser module info was not being populated.</li>
+<li>Fixed a bug where ILog.trace was piped to the wrong console function which would error under IE (thanks&nbsp;<a href="https://github.com/srijken" class="user-mention">@srijken</a>!)</li>
+<li>Fixed a few bugs with angular integration</li>
+<li>Fixed a bug with submitLog not respecting log message and log level</li>
+</ul>
+<p>For a full change log, select an applicable release on the <a href="https://github.com/exceptionless/Exceptionless.JavaScript/releases">Exceptionless.JavaScript GitHub Release page</a>.</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/javascript/" class="tag">javascript</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/react/" class="tag">react</a>
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-06-28-weekly-update-codesmith-generator-serilog-sink-foundatio-redis-updates/">Weekly Update: CodeSmith Generator, Serilog Sink, and Foundatio.Redis Updates</a></h2>
+    <p>Blake's been busy lately, including some work on one of our other projects, <a href="http://www.codesmithtools.com/product/generator">CodeSmith Generator</a>, to update Exceptionless to the latest version. Naturally, this got him thinking about other potential improvements while we were doing work on Serilog Sink for Exceptionless and Foundatio.Redis, as well.</p>
+<p>Watch the video to hear the full story!<!--more--></p>
+<h2>CodeSmith Generator Gets Latest Exceptionless Update</h2>
+<p>While updating our WPF application, <a href="http://www.codesmithtools.com/product/generator">CodeSmith Generator</a>, to the latest version of Exceptionless, Blake brainstorms several improvements that could be made&nbsp;to help take advantage of plugins, isolate Exceptionless from other plugins, etc.</p>
+<h2>Serilog Sink</h2>
+<p>There was an issue that was breaking the ability to update to the latest version of Exceptionless. This has now been fixed.</p>
+<h2>Foundatio.Redis Update</h2>
+<p>Deserialization wasn't working properly with binary serializers, but the issue has been resolved.</p>
+<h2 style="text-align: center;">
+  <a href="https://youtu.be/bqhdaFdgr4M">WATCH NOW</a>
+</h2>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/codesmith/" class="tag">CodeSmith</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/foundatio/" class="tag">Foundatio</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/generator/" class="tag">Generator</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/redis/" class="tag">redis</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/serilog/" class="tag">Serilog</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-06-26-improvements-exceptionless-slack-integration/">More Improvements to Exceptionless Slack Integration</a></h2>
+    <p>In this week's video, Blake covers a quick update on the Exceptionless Slack integration, along with a minor update to Foundatio.</p>
+<p>Take a look!<!--more--></p>
+<h2>Slack Integration Update</h2>
+<p>We have been tweaking the recent Slack integration over the past month or so, and this week we noticed that action URLs being created incorrectly&nbsp;and failures weren't being handle correctly with rate limiting. So, those two issues have been tweaked and should be working much better now.</p>
+<h3>In Foundatio News</h3>
+<p>A big shout out to <a href="https://github.com/pwelter34">@pwelter34</a> for submitting a pull request that added support for <a href="https://serilog.net/">Serilog</a> to <a href="https://github.com/FoundatioFx">Foundatio</a> - Paul!</p>
+<h2 style="text-align: center;">
+  <a href="https://youtu.be/k4CMOk5lpVw">WATCH NOW</a>
+</h2>
+<p style="text-align: center;">
+  <a href="/website/category/weekly-updates/">Watch more Live Code Demos</a>
+</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/foundatio/" class="tag">Foundatio</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/serilog/" class="tag">Serilog</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/slack/" class="tag">slack</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-06-20-slack-integration-updates-bug-fixes-weekly-update-5222017/">Slack Integration Updates and Bug Fixes - Weekly Update 5/22/2017</a></h2>
+    <p>https://youtu.be/WtHj9e4M9zU</p>
+<p>This week we have a quick update, where we focus on bug fixes and improvements to our <a href="/website/exceptionless-slack-integration/">recent Slack Integration</a>.</p>
+<p>Check out the video, above, and please let us know if you have any questions, comments, or concerns!</p>
+<p style="text-align: center;">
+  <a href="/website/category/weekly-updates/">Watch more Live Code Demos</a>
+</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/bugs/" class="tag">bugs</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/notifications/" class="tag">notifications</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/slack/" class="tag">slack</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-06-05-exceptionless-slack-integration/">Exceptionless Slack Integration, Further Improved Notifications</a></h2>
+    <p>As you guys know, we've been working on <a href="/website/email-notification-improvements-walkthrough-and-details/">notification improvements</a> lately. This latest video update by Blake is no different and involves <a href="https://slack.com/">Slack</a> integration!<!--more--></p>
+<p>If you're not familiar with Slack, definitely check it out. It's a great app for communicating with your team, and much more. For Exceptionless, it's been something we've wanted to integrate closely with for a while now, because email can be very tedious and overwhelming. With Slack integration, you can set up a specific channel for your Exceptionless notifications to go to, and have an organized eye on your events.</p>
+<p>Watch the video above for an explanation of the integration, and see below on how to set it up for yourself.</p>
+<h2>Set up Slack Notifications for Exceptionless</h2>
+<p>First, go into your project's settings in the Exceptionless app and click on the Integrations tab.</p>
+<p><img src="/website/assets/img/news/exceptionless-slack-setup.png" alt="">(/assets/img/news/exceptionless-slack-setup.png)</p>
+<p>Then, click on "Add Slack Notifications" and log in to your slack team.</p>
+<p>Once logged in, you will need to select the channel you want Exceptionless Notifications to post to and click Authorize.</p>
+<p>Once authorized, you can then configure the different notification settings by going back to the Exceptionless app and into the project's integrations tab again.</p>
+<p><img src="/website/assets/img/news/exceptionless-slack-settings.png" alt="">(/assets/exceptionless-slack-settings.png)</p>
+<p>Once integrated and configured, notifications will look something like the below screenshot, with the message, type of event, stack trace, links to actions, etc.</p>
+<p><img src="/website/assets/img/news/exceptionless-slack-example.jpg" alt="Exceptionless Slack notification">(/assets/exceptionless-slack-example.jpg)</p>
+<p>We're excited to keep improving notifications, and would love for you guys to test this out for us.</p>
+<p>Integrations with other chat &amp; productivity tools like HipChat and Microsoft Teams are on our list, as well, so if you use these please ping us and let us know so we can gauge interest!</p>
+<h2 style="text-align: center;">
+  <a href="https://youtu.be/U9GbYqWK1ik">WATCH NOW</a>
+</h2>
+<p style="text-align: center;">
+  <a href="/website/category/weekly-updates/">Watch more Live Code Demos</a>
+</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/notifications/" class="tag">notifications</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/slack/" class="tag">slack</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-05-30-email-notification-improvements-walkthrough-and-details/">Email Notification Improvements - Walkthrough and Details</a></h2>
+    <p><img src="/website/assets/img/news/email-improvements-header-1024x538.jpg" alt="exceptionless email notifications"></p>
+<p>Recently, we made several improvements to our email notifications, adding additional details, improving rendering, and more. Blake has mentioned it in a few of his <a href="/website/category/weekly-updates/">weekly update videos</a>, but today we wanted to walk you through it and add a few more details, with examples. Check it out!<!--more--></p>
+<h2>Exceptionless Email Notification Implementation</h2>
+<p>We decided to use <a href="https://github.com/zurb/foundation-emails">Zurb's Foundation for Emails</a>&nbsp;to help us create emails that look great on all email clients. The reason we went with Zurb is because it has clean markup that translates to good old (ugly) HTML that just works. It also works great with <a href="https://github.com/rexm/Handlebars.Net">Handlebars.Net</a> which we use to render the email content.</p>
+<p>An example of one of our event notification emails can be found <a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.EmailTemplates/src/pages/event-notice.html">here</a>.</p>
+<p>Then,&nbsp;we&nbsp;run a <a href="https://github.com/exceptionless/Exceptionless/tree/master/src/Exceptionless.EmailTemplates#build-commands">Node.js build task</a>&nbsp;to transform the templates into some pretty <a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Mail/Templates/event-notice.html">crazy html markup</a>&nbsp;that works everywhere. The markup at that link contains the Handlebars.Net syntax.</p>
+<p>These templates are stored as embedded resources so we can use them from any environment and render them out with ease! Here is a <a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Mail/Mailer.cs#L260-L277">code example</a> of how we perform that task.</p>
+<p>We added <a href="https://json-ld.org/">JSON-LD</a>&nbsp;support, to the emails to give us rich contextual actions, by starting with this <a href="https://developers.google.com/gmail/markup/getting-started">Google Developer tutorial</a> and ended up with <a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.EmailTemplates/src/pages/event-notice.html#L75-L94">the below implementation</a>.&nbsp;<em>It's worth noting that we had to go through their verification process for the actions to be enabled.</em></p>
+<pre><code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/ld+json"</span>&gt;</span><span class="language-javascript">
+{
+ <span class="hljs-string">"@context"</span>: <span class="hljs-string">"http://schema.org"</span>,
+ <span class="hljs-string">"@type"</span>: <span class="hljs-string">"EmailMessage"</span>,
+ <span class="hljs-string">"description"</span>: <span class="hljs-string">"\{{Subject}}"</span>,
+ <span class="hljs-string">"potentialAction"</span>: {
+ <span class="hljs-string">"@type"</span>: <span class="hljs-string">"ViewAction"</span>,
+ <span class="hljs-string">"target"</span>: <span class="hljs-string">"\{{BaseUrl}}/event/\{{EventId}}"</span>,
+ <span class="hljs-string">"url"</span>: <span class="hljs-string">"\{{BaseUrl}}/event/\{{EventId}}"</span>,
+ <span class="hljs-string">"name"</span>: <span class="hljs-string">"View Event Details"</span>
+ },
+ <span class="hljs-string">"publisher"</span>: {
+ <span class="hljs-string">"@type"</span>: <span class="hljs-string">"Organization"</span>,
+ <span class="hljs-string">"name"</span>: <span class="hljs-string">"Exceptionless"</span>,
+ <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://exceptionless.com"</span>,
+ <span class="hljs-string">"logo"</span>: <span class="hljs-string">"https://be.exceptionless.io/img/exceptionless-48.png"</span>
+ }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>We tested the emails in Outlook for Windows and Mac, Paper Cut, Gmail on Safari, and Apple Mail. Then, we used <a href="https://litmus.com">Litmus</a>&nbsp;to test a wide range of clients before publishing and pushing everything live.</p>
+<h2>Questions? Comments?</h2>
+<p>We hope our build out here can help other developers, and we would love to hear your feedback, questions, or comments either here on the blog or over on <a href="https://github.com/exceptionless/Exceptionless/issues">GitHub</a>!</p>
+<p>Code on.</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/email/" class="tag">email</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/nodejs/" class="tag">nodejs</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/notifications/" class="tag">notifications</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/zurb/" class="tag">zurb</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-05-16-project-level-usage-ui-foundatio/">Collect Project Level Usage Stats, UI Updates, Foundatio Updates - Weekly Video 5/8/2017</a></h2>
+    <p>We've snuck in lots of updates for this past week! New features have been added, such as collecting project-level usage statistics, the ability to add notes to API keys, and much more. Oh, and we're no longer throttling free plans! That's for Exceptionless core, but we've also made updates &nbsp;to the Exceptionless UI and Foundatio core, Foundatio.Repositories, and Foundatio.Parsers. Check everything out, below.<!--more--></p>
+<h2>Exceptionless Changes</h2>
+<ul>
+<li>We added the ability to collect project-level usage statistics. This allows us to view usage, show total blocked in emails, and more. It would also allow us to tweak rate limiting on a per-project basis.</li>
+<li>You can now add notes to API&nbsp;keys in the app.</li>
+<li>We also stopped throttling free plans.</li>
+<li>And, finally, we introduced variou mail templates into the mix.</li>
+</ul>
+<h2>Exceptionless.UI Updates</h2>
+<ul>
+<li>On the manage project page, we are now showing project usage statistics.</li>
+<li>On the sessions dashboard, we have added the ability to see active users.</li>
+<li>On the stack and session dashboards, we are now always showing hidden or fixed events.</li>
+<li>When you select a usage time range, you will be redirect to the organization or project dashboard.</li>
+</ul>
+<h2>Updates to Foundatio, Foundatio.Repositories, and Foundatio.Parsers</h2>
+<ul>
+<li>In Foundatio core, we merged in the CloudWatch Metric clients and SQS changes. We also moved each client into its own repo.</li>
+<li>For Foundatio.Repositories and Foundatio.Parsers, we created the final 1.x release and merged in the Elasticsearch 5 branches.</li>
+</ul>
+<h2 style="text-align: center;">
+  <a href="https://youtu.be/Ca4EOBO1EGI?list=PLGHP7IVwFs_81fZTMgF7Dm5e0Ax4YvW_V">WATCH NOW</a>
+</h2>
+<p style="text-align: center;">
+  <a href="/website/category/weekly-updates/">Watch more Live Code Demos</a>
+</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/elasticsearch/" class="tag">elasticsearch</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/email/" class="tag">email</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/notifications/" class="tag">notifications</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/statistics/" class="tag">statistics</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/usage/" class="tag">usage</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+<article class="post type-post status-publish format-standard">
+    <h2><a href="/website/news/2017/2017-05-16-email-improvements-foundatio-updates-512017/">Daily Summary Email Improvements, Foundatio Updates, and more - Weekly Update 5/1/2017</a></h2>
+    <p>In the 5/1/17 weekly update, Blake talks email notification improvements, bug fixes, and Foundatio.Repositories and Foundatio.Parsers updates. Check out the video above&nbsp;or read the details below.<!--more--></p>
+<h2>Updates to Exceptionless</h2>
+<p>In the past few weeks, we have made massive improvements to the daily summary emails, and added support for json-ld. You can keep up with continued email improvements over on <a href="https://github.com/exceptionless/Exceptionless/issues/177">issue 177 on GitHub</a>. Let us know what you think there!</p>
+<p>We also fixed a bug with the Redis cache client improperly setting batch cached keys.</p>
+<h2>Foundatio.Repositories &amp; Foundatio.Parsers&nbsp;Updates</h2>
+<p>We updated Foundatio.Repositories so that it no longer ignores the version property.</p>
+<p>For Foundatio.Parsers, we merged code and server mapping properties.</p>
+<h2 style="text-align: center;">
+  <a href="https://youtu.be/-Uyf2a9oiGw?list=PLGHP7IVwFs_81fZTMgF7Dm5e0Ax4YvW_V">WATCH NOW</a>
+</h2>
+<p style="text-align: center;">
+  <a href="/website/category/weekly-updates/">Watch more Live Code Demos</a>
+</p>
+</article>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/cache/" class="tag">cache</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/website/tags/email/" class="tag">email</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+
+
+
+<hr>
+
+<nav class="post-navigation">
+  <ul>
+    <li>
+      <a href="/website/news/2/" rel="prev">← Previous</a>
+    </li>
+    
+
+    <li>
+      Page 3
+    </li>
+    <li>
+      <a href="/website/news/4/" rel="next">Next →</a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</div>
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

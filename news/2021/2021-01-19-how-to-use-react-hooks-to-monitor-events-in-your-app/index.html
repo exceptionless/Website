@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>How to Use React Hooks to Monitor Events in Your App - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="How to Use React Hooks to Monitor Events in Your App - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="How to Use React Hooks to Monitor Events in Your App - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">How to Use React Hooks to Monitor Events in Your App</h1>
+          </header>
+          <div class="entry-content">
+            <p>The <a href="https://reactjs.org/docs/hooks-intro.html">introduction of Hooks in React</a> was a game-changer. Developers now had options when it came to creating stateful components. It used to be that if you had a stateful component, you'd have to use a class component, and if you had a presentational component, you could choose between a class or a function component. Now, with hook, state can be managed inside function components. But that's not all Hooks did for React developers.</p>
+<p>Hooks introduced a better way to reuse stateful functions. Today, we're going to explore how to build a custom React hook that will allow us to monitor events in our application. Those events can be errors, messages, feature usage, logs, or anything you want. There are plenty of error monitoring services out there, but we're going to make use of <a href="https://exceptionless.com">Exceptionless</a> for three reasons:</p>
+<ol>
+<li>Real-time updates</li>
+<li>It's open-source</li>
+<li>The Exceptionless JavaScript client gives us a singleton option (which makes for a good example in this post)</li>
+</ol>
+<p>Let's get started by starting a new React project. You'll need to have the following available on your machine:</p>
+<ul>
+<li>Node &gt;= 8.10</li>
+<li>npm &gt;= 5.6</li>
+<li>Text editor</li>
+</ul>
+<p>Assuming you have that ready, open up a terminal. To create a new React project, simply run:</p>
+<p><code>npx create-react-app Monitoring-App</code></p>
+<p>Replace <code>Monitoring-App</code> with whatever you'd like to call your project. When everything is done, change into your new application's directory (<code>cd Monitoring-App</code>). Now, we need to install the Exceptionless JavaScript client.</p>
+<p>To do so, simple run:</p>
+<p><code>npm install exceptionless</code></p>
+<p>When that's done installing, start your app (<code>npm start</code>) and open your project directory in the text editor of your choice.</p>
+<h3>What are Hooks?</h3>
+<p>React's docs have the simplest definition of Hooks and I think it's worth calling that out here:</p>
+<blockquote>
+<p>Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.</p>
+</blockquote>
+<p>The popularity of classes in JavaScript in general has oscillated greatly. However, within the React ecosystem, it was the ONLY option for creating components that could actually do <em>anything</em>. Because many JavaScript developers do not like and do not want to use classes, the option to write function components was a huge step forward. But outside of developer preferences, React Hooks open up new ways to write code in React apps, and hopefully help you reduce your code footprint in the process.</p>
+<p>Hooks introduced a new way to handle lifecycle events in React as well. Gone are the <code>componentDidMount</code> and <code>componentDidUpdate</code> methods. In is the simple and elegant <code>useEffect</code> function.</p>
+<p>You can read a lot more about the logic behind React's introduction of hooks <a href="https://reactjs.org/docs/hooks-intro.html">here</a>, but for the sake of this tutorial, I think that's enough of an intro.</p>
+<h2>Creating our first Hook</h2>
+<p>A hook is just a function that returns a value. The big gotcha with Hooks, though, is that they can only be called within the body of a function component. Keep that in mind as we progress. It's still relatively early in the life of Hooks, but there are some standards and conventions in place. Convention is to house your custom hooks in a folder called something like <code>hooks</code>. Let's do that.</p>
+<p>Create a folder within the <code>src</code> directory of your project called <code>hooks</code>. Inside that folder, we're going to create a file using another convention within the React Hooks community. Developers will generally name their hooks with a <code>useFunctionPurpose</code> type of pattern. For example, if you were building a Hook that determined whether a navigation bar should show up or not, you might name the Hook file <code>useNavigation</code>. For us, we're going to call our file <code>useMonitoring</code>.</p>
+<p>Create that file inside the <code>hooks</code> directory, and then we can begin building the function. We'e going to go line by line and then I'll show the whole file in one snippet. Let's start by importing the necessary functions from React.</p>
+<p><code>import { useState, useEffect } from 'react';</code></p>
+<p>I briefly touched on <code>useEffect</code>. It can be thought of in the same context as <code>componentDidMount</code> or <code>componentDidUpdate</code>. We'll make use of this to handle some logic in the setup of our Exceptionless client. <code>useState</code> can be thought of like <code>this.state</code> and <code>this.setState</code> in React class components.</p>
+<p>Next, we'll get access to the Exceptionless JavaScript client like this:</p>
+<p><code>import { ExceptionlessClient } from "exceptionless/dist/exceptionless";</code></p>
+<p>Note: it's important to reference the <code>/dist/exceptionless</code> file because Exceptionless targets multiple environments and we want to make sure to import the right one.</p>
+<p>Next we're going to handle something I mentioned earlier. Exceptionless is a class-based client. This means we have the option of instantiating that class everytime we use it, or we can make use of a singleton provided to us out of the box by Exceptionless. We set up the singleton patter first and then we will use some logic to handle situations where that singleton may not need to be used. Go ahead and grab the <code>default</code> client from Exceptionless like this:</p>
+<p><code>const defaultClient = ExceptionlessClient.default;</code></p>
+<p>If you haven't done so, get yourself an API Key from Exceptionless. You can <a href="https://exceptionless.com">sign up for a free account here</a>. Once you have that, we're going to provide that key to to the default Exceptionless client. I like to make use of environment variables even when using keys that are safe to expose in the browser. So mine looks like this:</p>
+<p><code>defaultClient.config.apiKey = process.env.REACT_APP_EXCEPTIONLESS_API_KEY;</code></p>
+<p>Now that we've handled all our imports and initial configuration, we can frame out our hook function. The bare bones function looks like this:</p>
+<pre><code class="language-javascript hljs"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">useMonitoring</span> = (<span class="hljs-params">{ config, useDefault }</span>) =&gt; {
+  <span class="hljs-comment">// Code goes here</span>
+}
+</code></pre>
+<p>That's not much to look at, but there are two things I want to call out. The function name follows the convention I mentioned before, and this function takes two props: <code>config</code> and <code>useDefault</code>. If we are making use of the default singleton instance of the Exceptionless client, <code>useDefault</code> would be true and <code>config</code> would be null. However, if we are creating a custom instance of the Exceptionless client, <code>config</code> would be an object and <code>useDefault</code> would be either null or false.</p>
+<p>Let's handle that logic. At the top of your function add the following:</p>
+<p><code>const [client, setClient] = useState(defaultClient);</code></p>
+<p>We are making use of the built-in <code>useState</code> hook here. We are simply defining a <code>client</code> state variable, defining a function that will be used to update that variable (<code>setClient</code>), and setting a defualt value for our variable. As you can see, we set the default value to use the default client from Exceptionless. Makes sense, right?</p>
+<p>Next, we're going to use the built-in <code>useEffect</code> hook to determine what client should be returned for use in the particular part of the app that requested it.</p>
+<pre><code class="language-javascript hljs"><span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-keyword">if</span>(useDefault) {
+      <span class="hljs-keyword">return</span> client;      
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(config) {
+      config.<span class="hljs-property">apiKey</span> = process.<span class="hljs-property">env</span>.<span class="hljs-property">REACT_APP_EXCEPTIONLESS_API_KEY</span>;      
+      <span class="hljs-title function_">setClient</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ExceptionlessClient</span>(config));
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">throw</span> <span class="hljs-string">"Please pass useDefault as true or a config object in"</span>;
+    }
+  });
+</code></pre>
+<p>In this case, it's best to think of our <code>useEffect</code> function in the same way you think of <code>componentDidUpdate</code>. Any update to the component that called our <code>useMonitoring</code> Hook will trigger another event within our <code>useEffect</code> function.</p>
+<p>If you wanted this <code>useEffect</code> method to operate more like <code>componentDidMount</code>, you would structure it like this:</p>
+<pre><code class="language-javascript hljs"><span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> {
+
+}, []) <span class="hljs-comment">// &lt;-- This array says only run this function once when the component mounts</span>
+</code></pre>
+<p>The empty array in the above example can be filled with a list of dependencies. Say, for example, you want your <code>useEffect</code> method to run everytime some specific variable changes, you would just pass that variable name into the array.</p>
+<p>Ok back to our <code>useEffect</code> method. You can see we are checking the <code>useDefault</code> prop I mentioned before. If it is truthy, we return the client state variable. We had already set that variable to use the singleton Exceptionless client, so all we have to do is return it. If <code>useDefault</code> is falsey, we then check for the config object. If it's there, we add the apiKey to whatever values were passed into the config object, and then we instantiate a new Exceptionless client.</p>
+<p>If no <code>config</code> object is provided, we throw an error. You could take this a step further and check if the <code>config</code> prop is actually of type object, but, hey, that's what Typescript is for, right? We're living dangerously in this crazy, crazy dynamically typed world.</p>
+<p>The final thing you need to do in your <code>useMonitoring</code> function is return the client. Just as easy as it sounds:</p>
+<p><code>return client;</code></p>
+<p>Here's the whole, complete file:</p>
+<pre><code class="language-javascript hljs"><span class="hljs-keyword">import</span> { useState, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">ExceptionlessClient</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"exceptionless/dist/exceptionless"</span>;
+<span class="hljs-keyword">const</span> defaultClient = <span class="hljs-title class_">ExceptionlessClient</span>.<span class="hljs-property">default</span>;
+defaultClient.<span class="hljs-property">config</span>.<span class="hljs-property">apiKey</span> = process.<span class="hljs-property">env</span>.<span class="hljs-property">REACT_APP_EXCEPTIONLESS_API_KEY</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">useMonitoring</span> = (<span class="hljs-params">{ config, useDefault }</span>) =&gt; {
+  <span class="hljs-keyword">const</span> [client, setClient] = <span class="hljs-title function_">useState</span>(defaultClient);
+  <span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-keyword">if</span>(useDefault) {
+      <span class="hljs-keyword">return</span> client;      
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(config) {
+      config.<span class="hljs-property">apiKey</span> = process.<span class="hljs-property">env</span>.<span class="hljs-property">REACT_APP_EXCEPTIONLESS_API_KEY</span>;      
+      <span class="hljs-title function_">setClient</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ExceptionlessClient</span>(config));
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">throw</span> <span class="hljs-string">"Please pass useDefault as true or a config object in"</span>;
+    }
+  });
+  <span class="hljs-keyword">return</span> client;
+}
+</code></pre>
+<p>Ready to use this bad boy?</p>
+<h2>Using your custom Hook</h2>
+<p>We created a basic React app, so let's just make use of what comes out of the box. Open your <code>App.js</code> file, and import your new custom Hook.</p>
+<p><code>import { useMonitoring } from "./hooks/useMonitoring";</code></p>
+<p>You'll also need to import the built-in <code>useEffect</code> Hook from React:</p>
+<p><code>import { useEffect } from 'react';</code></p>
+<p>Now, withing the main <code>App</code> function, you can use your new custom Hook:</p>
+<p><code>const exceptionlessClient = useMonitoring({ useDefault: true });</code></p>
+<p>How can we test this now? Well, let's make use of the <code>useEffect</code> function to throw an error as soon as the component mounts.</p>
+<pre><code class="language-javascript hljs"><span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-title function_">throwException</span>();
+}, []);
+</code></pre>
+<p>As you remember, the empty array at the end of the function says this should only run once when the component mounts.</p>
+<p>Now, define the actual <code>throwException</code> function like this:</p>
+<pre><code class="language-javascript hljs"><span class="hljs-keyword">const</span> <span class="hljs-title function_">throwException</span> = (<span class="hljs-params"></span>) =&gt; {
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">"Whoops, it broke"</span>); 
+  } <span class="hljs-keyword">catch</span> (error) {
+    exceptionlessClient.<span class="hljs-title function_">submitException</span>(error);
+  }
+}
+</code></pre>
+<p>Ready to test this out? If you previously started your React app, it probably already has worked. If you haven't started the app, go ahead and do that now.</p>
+<p>You won't see much beyond the default starter React boiletplate. But that's OK. Open up your Exceptionless dashboard, and you should see an exception has, in fact, been captured.</p>
+<p><img src="example_react_exception.png" alt="Example exception from React app"></p>
+<p>If you click into that exception, you'll get a bunch of additional, useful, information. You can start to see how this can be helpful.</p>
+<p>Now is the time where I remind you, our custom Hook can only be used within the body of your component functions. If you were to try to use your Hook in a Redux action function, you'd see an error. The beauty is, even if you're using Redux or something else, you can still throw errors back to your component and handle the error with your <code>useMonitoring</code> hook.</p>
+<p>But Exceptionless is more than just errors. Let's build a quick, more practical example.</p>
+<h2>Usage Tracking</h2>
+<p>In your <code>App.js</code> file, we're going to remove all the boilerplate and add some ugly buttons. No styling in this post. This is what your <code>App.js</code> file should look like now:</p>
+<pre><code class="language-javascript hljs"><span class="hljs-keyword">import</span> { useMonitoring } <span class="hljs-keyword">from</span> <span class="hljs-string">"./hooks/useMonitoring"</span>;
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">App</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> exceptionlessClient = <span class="hljs-title function_">useMonitoring</span>({ <span class="hljs-attr">useDefault</span>: <span class="hljs-literal">true</span> });
+
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">handleButtonClick</span> = (<span class="hljs-params">planName</span>) =&gt; {
+    exceptionlessClient.<span class="hljs-title function_">submitFeatureUsage</span>(planName);
+  }
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> handleButtonClick("Free")}&gt;Free Plan - Learn More<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> handleButtonClick("Starter")}&gt;Starter Plan - Learn More<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> handleButtonClick("Premium")}&gt;Premium Plan - Learn More<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">App</span>;
+</code></pre>
+<p>You can see we have what might be a pricing page in an app. There are three buttons, one for each plan. We have wired up a button that will call a function that ultimately sends a feature usage event to Exceptionless. Go ahead and try clicking the buttons.</p>
+<p>If you go to your Exceptionless dashboard and click the Feature Usage link on the left, you'll see these events have been captured in a dedicated section that makes it easy for you to track, well, feature usage. This may not replace your analytics provider, but it goes a long way.</p>
+<p><img src="feature_usage_react.png" alt="Feature usage example"></p>
+<h2>Wrapping up</h2>
+<p>There is a lot more you can do with Exceptionless. For example, you may have noticed, we have only passed in the <code>useDefault</code> prop to our custom Hook. You can completely customize your Exceptionless configuration and pass in a <code>config</code> prop instead. I would encourage you to <a href="https://exceptionless.com/docs/clients/javascript/client-configuration/">read up on the options here</a>.</p>
+<p>Exceptionless <a href="https://exceptionless.com/docs/clients/javascript/sending-events/">provides a lot of methods</a> built into its JavaScript client that will make debugging, logging, and tracking easier.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

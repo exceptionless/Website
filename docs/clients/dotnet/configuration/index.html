@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Configuration - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Configuration - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Configuration - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Documentation</h1>
+</div>
+
+<div id="wrap" class="container" role="document">  
+  <div id="responsive-menu"><button class="btn btn-primary" onclick="handleMenu()">Table of Contents</button></div>
+  <div id="content" class="row-fluid">
+    <div class="toc well span3 visible-toc">
+      <div class="input-append">
+        <input class="span9" id="search-input" type="text" placeholder="Search docs...">
+        <button class="btn" type="button" onclick="handleSearch()">Go!</button>
+      </div>
+      
+
+    </div>
+    <div class="well span9 docs">
+      <h1>Configuration</h1>
+      <p>There are a few ways to configure Exceptionless in your project. We'll cover them here or you can jump to app-specific examples: <a href="/website/docs/clients/dotnet/guides/console-apps-example/">Console App Example</a>, <a href="/website/docs/clients/dotnet/guides/web-server-example/">Web Server Example</a>.</p>
+<hr>
+<ul>
+<li><a href="#exceptionlessclient-configuration">ExceptionlessClient Configuration</a>
+<ul>
+<li><a href="#configuring-with-code">Configuring With Code</a></li>
+<li><a href="#configuring-with-attributes">Configuring With Attributes</a></li>
+<li><a href="#configuring-with-environment-variables">Configuring With Environment Variables</a></li>
+<li><a href="#using-webconfig">Using Web.config</a></li>
+<li><a href="#available-configuration-options">Available Configuration Options</a></li>
+<li><a href="#serverurl">ServerUrl</a></li>
+<li><a href="#includeprivateinformation">IncludePrivateInformation</a></li>
+<li><a href="#extended-data">Extended Data</a></li>
+<li><a href="#default-tags">Default Tags</a></li>
+<li><a href="#default-data">Default Data</a></li>
+</ul>
+</li>
+<li><a href="#versioning">Versioning</a></li>
+<li><a href="#offline-storage">Offline storage</a>
+<ul>
+<li><a href="#configuration-file">Configuration File</a></li>
+<li><a href="#code">Code</a></li>
+</ul>
+</li>
+<li><a href="#disabling-exceptionless">Disabling Exceptionless</a>
+<ul>
+<li><a href="#configuration-file-1">Configuration File</a></li>
+<li><a href="#attribute">Attribute</a></li>
+</ul>
+</li>
+<li><a href="#self-hosted-options">Self Hosted Options</a>
+<ul>
+<li><a href="#configuration-file-2">Configuration file</a></li>
+<li><a href="#attribute-1">Attribute</a></li>
+</ul>
+</li>
+</ul>
+<h2>ExceptionlessClient Configuration</h2>
+<p>You have a few options for how you might configure your Exceptionless client. Here are some examples of how to do this.</p>
+<h3>Configuring With Code</h3>
+<p>The examples below show the various ways (configuration file, attributes or code) that Exceptionless can be configured in your application.</p>
+<pre><code class="language-csharp hljs"><span class="hljs-keyword">using</span> Exceptionless;
+
+<span class="hljs-keyword">var</span> client = <span class="hljs-keyword">new</span> ExceptionlessClient(c =&gt; {
+    c.ApiKey = <span class="hljs-string">"YOUR_API_KEY"</span>;
+    c.SetVersion(version);
+});
+
+<span class="hljs-comment">// You can also set the api key directly on the default instance.</span>
+ExceptionlessClient.Default.Configuration.ApiKey = <span class="hljs-string">"YOUR_API_KEY"</span>
+</code></pre>
+<h3>Configuring With Attributes</h3>
+<p>You can also configure Exceptionless using attributes like this:</p>
+<pre><code class="language-csharp hljs"><span class="hljs-keyword">using</span> Exceptionless.Configuration;
+[<span class="hljs-meta">assembly: Exceptionless(<span class="hljs-string">"YOUR_API_KEY"</span>)</span>]
+</code></pre>
+<p>The Exceptionless assembly attribute will only be picked up if it’s defined in the entry or calling assembly. If you have placed the above attribute in different location you’ll need to call the method below during startup.</p>
+<pre><code class="language-csharp hljs"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.ReadFromAttributes(<span class="hljs-keyword">typeof</span>(MyClass).Assembly)
+</code></pre>
+<h3>Configuring With Environment Variables</h3>
+<p>You can also add an Environment variable or application setting with the key name <code>Exceptionless:ApiKey</code> and your <code>YOUR_API_KEY</code> as the value.</p>
+<h3>Using Web.config</h3>
+<p>Exceptionless can be configured using a config section in your web.config or app.config depending on what kind of project you have. Installing the correct NuGet package should automatically add the necessary configuration elements. It should look like this:</p>
+<pre><code class="language-xml hljs"><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">configSections</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"exceptionless"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"Exceptionless.ExceptionlessSection, Exceptionless"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">configSections</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- attribute names are cases sensitive --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">exceptionless</span> <span class="hljs-attr">apiKey</span>=<span class="hljs-string">"API_KEY_HERE"</span> /&gt;</span>
+  ...
+  <span class="hljs-tag">&lt;<span class="hljs-name">system.webServer</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">modules</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">remove</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ExceptionlessModule"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">add</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ExceptionlessModule"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"Exceptionless.Mvc.ExceptionlessModule, Exceptionless.Mvc"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">modules</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-name">system.webServer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span>
+</code></pre>
+<p>Now, before you can fully configure your Exceptionless client, it's important to know what options are available for you to configure. We'll cover that below.</p>
+<h3>Available Configuration Options</h3>
+<p>When initializing the Exceptionless client, you can set any of the following values:</p>
+<ul>
+<li>ServerUrl</li>
+<li>IncludePrivateInformation</li>
+<li>DefaultTags</li>
+<li>DefaultData</li>
+</ul>
+<h3>ServerUrl</h3>
+<p>The <code>ServerUrl</code> is used when you are self-hosting Exceptionless and need to point your client to your self-hosted server. This one is pretty self-explanatory.</p>
+<h3>IncludePrivateInformation</h3>
+<p>This is a boolean value that will automatically strip private info like credit card numbers and passwords from being sent in event handling. The default is <code>true</code>. However, you can set this value like this:</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.IncludePrivateInformation = <span class="hljs-literal">false</span>;
+</code></pre>
+<p>You can also set it in a global configuration file like this:</p>
+<pre><code class="language-xml hljs"><span class="hljs-tag">&lt;<span class="hljs-name">exceptionless</span> <span class="hljs-attr">apiKey</span>=<span class="hljs-string">"YOUR_API_KEY"</span> <span class="hljs-attr">includePrivateInformation</span>=<span class="hljs-string">"false"</span> /&gt;</span>
+</code></pre>
+<h3>Extended Data</h3>
+<p>The next two properties that can be set when configuring the Exceptionless client can be considered features that extend your data. If you want to apply additional information to every single event that is fired, you would use one of these two settings.</p>
+<h3>Default Tags</h3>
+<p>Just as you are able to apply tags to individual events, you can set default tags that will apply to all events you submit. Configuring this is simple. Here's a quick example:</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.DefaultTags.Add(<span class="hljs-string">"Tag1"</span>);
+</code></pre>
+<p>You can also set this up globally with a configuration file like this:</p>
+<pre><code class="language-xml hljs"><span class="hljs-tag">&lt;<span class="hljs-name">exceptionless</span> <span class="hljs-attr">apiKey</span>=<span class="hljs-string">"YOUR_API_KEY"</span> <span class="hljs-attr">tags</span>=<span class="hljs-string">"Tag1,Tag2"</span> /&gt;</span>
+</code></pre>
+<h3>Default Data</h3>
+<p>When viewing your stacks and individual events, you can see additional information about the events on the Extended Data tab. Data found there is usually passed in by adding info to the data object in the event payload. Here's an example of how you might do that:</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.DefaultData[<span class="hljs-string">"Data1"</span>] = <span class="hljs-string">"Exceptionless"</span>;
+</code></pre>
+<p>You can also configure this with a configuration file like this:</p>
+<pre><code class="language-xml hljs"><span class="hljs-tag">&lt;<span class="hljs-name">exceptionless</span> <span class="hljs-attr">apiKey</span>=<span class="hljs-string">"YOUR_API_KEY"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">add</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Data1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Exceptionless"</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">add</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Data2"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"10"</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">add</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Data3"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"true"</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">add</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Data4"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"{ 'Property1': 'Exceptionless', 'Property2: 10, 'Property3': true }"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">data</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">exceptionless</span>&gt;</span>
+</code></pre>
+<h2>Versioning</h2>
+<p>By specifying an application version you can <a href="/website/docs/versioning/">enable additional functionality</a>. By default, an application version will try to be resolved from assembly attributes.  However, it's a good practice to specify an application version if possible using the code below.</p>
+<pre><code class="language-csharp hljs"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.SetVersion(<span class="hljs-string">"1.2.3"</span>);
+</code></pre>
+<h2>Offline storage</h2>
+<p>By default, Exceptionless keeps events in memory. This means if the application exits before the event can be sent to the server, the event will not be sent on restart. This can be overcome by persisting events to disk.</p>
+<p>To persist events to disk for offline scenarios or to ensure no events are lost between application restarts, you will need to configure your Exceptionless client to know to store the events on disk and to know where to store them. You can simply pass in a configuration value that includes the storage path. When selecting a folder path, make sure that the identity the application is running under has full permissions to that folder.</p>
+<p>Please note that this adds a bit of overhead as events need to be serialized to disk on submission and is not recommended for high throughput logging scenarios.</p>
+<h3>Configuration File</h3>
+<pre><code class="language-xml hljs"><span class="hljs-comment">&lt;!-- Use Folder Storage --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">exceptionless</span> <span class="hljs-attr">apiKey</span>=<span class="hljs-string">"YOUR_API_KEY"</span> <span class="hljs-attr">storagePath</span>=<span class="hljs-string">"PATH OR FOLDER NAME"</span> /&gt;</span>
+</code></pre>
+<h3>Code</h3>
+<pre><code class="language-csharp hljs"><span class="hljs-comment">// Use folder storage</span>
+ExceptionlessClient.Default.Configuration.UseFolderStorage(<span class="hljs-string">"PATH OR FOLDER NAME"</span>);
+<span class="hljs-comment">// Use isolated storage</span>
+ExceptionlessClient.Default.Configuration.UseIsolatedStorage();
+</code></pre>
+<h2>Disabling Exceptionless</h2>
+<p>You can disable Exceptionless from reporting events during testing using the <code>Enabled</code> setting.</p>
+<h3>Configuration File</h3>
+<pre><code class="language-xml hljs"><span class="hljs-tag">&lt;<span class="hljs-name">exceptionless</span> <span class="hljs-attr">apiKey</span>=<span class="hljs-string">"YOUR_API_KEY"</span> <span class="hljs-attr">enabled</span>=<span class="hljs-string">"false"</span> /&gt;</span>
+</code></pre>
+<h3>Attribute</h3>
+<pre><code class="language-csharp hljs"><span class="hljs-keyword">using</span> Exceptionless.Configuration;
+[<span class="hljs-meta">assembly: Exceptionless(<span class="hljs-string">"YOUR_API_KEY"</span>, Enabled=false)</span>]
+</code></pre>
+<h2>Self Hosted Options</h2>
+<p>The Exceptionless client can also be configured to send data to your <a href="/website/docs/self-hosting/">self hosted instance</a>. This is configured by setting the <code>serverUrl</code> setting to point to your Exceptionless instance.</p>
+<h3>Configuration file</h3>
+<pre><code class="language-csharp hljs">&lt;exceptionless apiKey=<span class="hljs-string">"YOUR_API_KEY"</span> serverUrl=<span class="hljs-string">"http://localhost"</span> /&gt;
+</code></pre>
+<h3>Attribute</h3>
+<pre><code class="language-csharp hljs"><span class="hljs-keyword">using</span> Exceptionless.Configuration;
+[<span class="hljs-meta">assembly: Exceptionless(<span class="hljs-string">"YOUR_API_KEY"</span>, ServerUrl = <span class="hljs-string">"http://localhost"</span>)</span>]
+</code></pre>
+<hr>
+<p class="text-right"><a href="/website/docs/clients/dotnet/client-configuration-values/">Next &gt; Client Configuration Values</a></p>
+   
+    </div>
+  </div>
+</div>
+
+<script>
+    const handleMenu = () => {
+        const menu = document.querySelector(".toc");
+        menu.classList.toggle("hidden-toc");
+        menu.classList.toggle("visible-toc");
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const search = document.getElementById("search-input")
+        search.addEventListener("keyup", ({key}) => {
+          if (key === "Enter") {
+            handleSearch();
+          }
+        })
+    })
+    const handleSearch = async () => {
+      const searchTerm = document.getElementById("search-input").value;
+      const queryString = encodeURI(searchTerm)
+      window.location = `/search?term=${queryString}`;
+    }
+</script>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

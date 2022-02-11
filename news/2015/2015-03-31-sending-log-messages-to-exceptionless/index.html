@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Sending Log Messages to Exceptionless - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Sending Log Messages to Exceptionless - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Sending Log Messages to Exceptionless - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Sending Log Messages to Exceptionless</h1>
+          </header>
+          <div class="entry-content">
+            <p><img src="/website/assets/img/news/log-messages.png" alt="Exceptionless Log Message Events">We're all about exceptions, but sometimes, as developers, we run into bugs that don't throw them but still cause major havoc in the system.&nbsp;There are also times we just need to record an event with a custom message to help track down bottlenecks, etc.</p>
+<p>That's where Exceptionless meets log messages.</p>
+<p>In Exceptionless 2.0, you can now send custom log messages to a Log Messages dashboard where they can be tracked and view just like exceptions and other events.</p>
+<p>Lets take a closer look...<!--more--></p>
+<h2>How to Submit a Log Message to Exceptionless</h2>
+<h3>Using the Client</h3>
+<p>For this example, we are assuming that you have already created an account and installed and <a title="Configure Exceptionless" href="/website/docs/clients/dotnet/configuration/" target="_blank">configured</a> the Exceptionless 2.0 client. If you are still using the 1.x client, you will need to <a title="Upgrade Exceptionless Client" href="/website/docs/self-hosting/upgrading-self-hosted-instance/" target="_blank">upgrade</a> to send us log messages. Please contact support via an in-app support message or our <a title="Contact Exceptionless" href="/website/contact/" target="_blank">contact page</a> if you have any questions or need assistance in this area.</p>
+<h4>Let's submit a log message</h4>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.SubmitLog(<span class="hljs-string">"Application starting up"</span>);
+</code></pre>
+<p>That's your basic log message.</p>
+<h4><strong>Getting fancier</strong>, you can also specify the log source and log level.</h4>
+<p>In the below example, "<em>typeof(MainWindow)__.FullName</em>" specifies the log source, and "<em>Info</em>" specifies the log level. If no log source is specified, the log messages will be stacked under a global log stack.</p>
+<p>We recommend specifying one of the following log levels, all of which add&nbsp;a visual indicator to each log message (see below screenshot).</p>
+<ul>
+<li>Trace</li>
+<li>Debug</li>
+<li>Info</li>
+<li>Warn</li>
+<li>Error</li>
+</ul>
+<pre><code class="language-cs hljs language-csharp">ExceptionlessClient.Default.SubmitLog(<span class="hljs-keyword">typeof</span>(MainWindow).FullName, <span class="hljs-string">"Info log example"</span>, <span class="hljs-string">"Info"</span>);
+</code></pre>
+<p>Here's a screenshot of what the visual indicators for the different types of log levels look like.</p>
+<p><img src="/website/assets/img/news/log-messages-log-level.png" alt="Exceptionless Log Message Preview"></p>
+<h4>You can also add additional information using our fluent API.</h4>
+<p>This is helpful wen you want to add contextual information, contact information, or a tag.</p>
+<p>In the below example, we will use the "<em>CreateLog</em>" method to add a tag to the log message.</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.CreateLog(<span class="hljs-keyword">typeof</span>(MainWindow).FullName, <span class="hljs-string">"Info log example"</span>, <span class="hljs-string">"Info"</span>).AddTags(<span class="hljs-string">"Wpf"</span>).Submit();
+</code></pre>
+<p>There are a number of additional pieces of data you can use for your event.&nbsp;The below bullets&nbsp;include the current EventBuilder list, but we are always adding more that can be found on <a title="Exceptionless EventBuilder.cs" href="https://github.com/exceptionless/Exceptionless.Net/blob/master/src/Exceptionless/EventBuilder.cs" target="_blank">GitHub</a>. Also, view more examples here on our <a title="Send Exceptionless Events" href="/website/docs/api/posting-events/" target="_blank">Sending Events</a> page.</p>
+<ul>
+<li>AddTags</li>
+<li>SetProperty</li>
+<li>AddObject</li>
+<li>MarkAsCritical</li>
+<li>SetUserIdentity</li>
+<li>SetUserDescription</li>
+<li>SetVersion</li>
+<li>SetSource</li>
+<li>SetSessionId</li>
+<li>SetReferenceId</li>
+<li>SetMessage</li>
+<li>SetGeo</li>
+<li>SetValue</li>
+<li>And more, depending on your client</li>
+</ul>
+<h3>Using the REST API</h3>
+<p>You can also submit a log message with an HTTP&nbsp;post to our <a title="Exceptionless Events Endpoint" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_Post" target="_blank">events endpoint</a>.</p>
+<pre><code>My log message
+My second log message.
+</code></pre>
+<p>By default, any content that is submitted to the API post is a log message. The above example will be broken into two log messages because it automatically splits text content by the new line.</p>
+<h4>You can submit a log message via JSON, too.</h4>
+<p>See details in our <a title="Exceptionless JSON Post API Documentation" href="https://api.exceptionless.io/docs/index.html#!/Event/Event_Post" target="_blank">API Documentation</a>. If you need an API key for simply posting events, you can find it in your <a title="Exceptionless" href="https://be.exceptionless.io/" target="_blank">project settings</a>. Otherwise, please refer to the&nbsp;<a title="Exceptionless Auth Login API Documentation" href="https://api.exceptionless.io/docs/index.html#!/Auth/Auth_Login" target="_blank">auth login documentation</a>&nbsp;to get a user&nbsp;scoped api key.</p>
+<p>Below is a JSON example of a log message, with source, message, and log level.</p>
+<pre><code class="language-json hljs"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"log"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"source"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"WpfApplication3.MainWindow"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"message"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Application started"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"data"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"@level"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Info"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h3>Using NLog or Log4net Targets</h3>
+<p>We also have integrations with major logging frameworks. The benefits of using a logging framework is finer, more granular control over what is logged.</p>
+<p>For example, you can log only warnings or errors project-wide, but then enable trace level messages for a specific class. We do this to keep&nbsp;our system from getting filled up with noise that doesn't add any value unless there is an issue.</p>
+<p>This also allows you to quickly change what you want to log to. Maybe you want to turn off logging to Exceptionless, or log to Exceptionless and to disk.</p>
+<h4>NLog or Log4net Usage</h4>
+<p>To use the <a title="Exceptionless NLog NuGet Package" href="https://www.nuget.org/packages/exceptionless.nlog" target="_blank">NLog </a>or <a title="Exceptionless Log4net NuGet Package" href="https://www.nuget.org/packages/exceptionless.log4net" target="_blank">Log4net</a> clients, you’ll just need to bring down the NuGet package and follow the detailed readme.</p>
+<p><em><span style="color: #993300;"><strong>Note on performance: Use in-memory event storage for high volumes</strong></span></em></p>
+<p><em>There are some performance considerations you should be aware of when you are logging very high numbers&nbsp;of log events and using our client.&nbsp;We've&nbsp;spent a lot of time to ensure Exceptionless&nbsp;doesn't&nbsp;degrade your&nbsp;applications performance. However, if you are logging thousands of messages a minute, you should use the in-memory event storage.</em></p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.UseInMemoryStorage();
+</code></pre>
+<p>This tells the client not to serialize the log events to disk before sending and thus is much faster (the client doesn't need to serialize the event to disk and read it from disk before sending). This comes at the expense that if the application dies, you will lose any unsent events that were in memory. When you use the NLog or Log4net targets and specify the API&nbsp;key as part of the target configuration, we will automatically create a second&nbsp;client instance that uses in-memory storage only for log messages. This way, any logged exceptions or feature usages&nbsp;still use disk storage, while log messages use in-memory storage, allowing maximum performance.</p>
+<p><strong>Another Note:</strong> We are also working on updating the <a title="Exceptionless Serilog Github Issue" href="https://github.com/serilog/serilog/issues/381" target="_blank">Serilog implementation</a>.</p>
+<h2>Log Messages Dashboard</h2>
+<p>The Log Messages Dashboard makes it easy to see log occurrences. You can keep track of how active a component is, or how long code takes to execute using existing metrics.</p>
+<p>For metrics, we have created an <a href="https://github.com/FoundatioFx/Foundatio" target="_blank">open source&nbsp;metrics library called Foundatio</a>.&nbsp;We use it for Exceptionless, and think you will find it extremely helpful as well. Check it out! We'll be posting an article on Foundatio soon, so check back.</p>
+<h2><img src="/website/assets/img/news/log-messages-dashboard.png" alt="log-messages-dashboard"></h2>
+<p>How Are You Liking Exceptionless 2.0?</p>
+<p>We think we've added some pretty cool features to Exceptionless 2.0, including logging, but you are the ultimate judge. What's good? What's bad? What's missing? Let us know via a comment on the blog, social media, in-app, or however else you want to get in touch!</p>
+<p>If you're new to Exceptionless 2.0, make sure to <a href="/website/news/2015/2015-03-12-its-go-time-exceptionless-2-0-launched">check out the launch article</a> for more details on the new features and enhancements.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

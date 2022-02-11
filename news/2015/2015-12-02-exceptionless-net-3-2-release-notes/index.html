@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Exceptionless.NET 3.2 Release Notes - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Exceptionless.NET 3.2 Release Notes - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Exceptionless.NET 3.2 Release Notes - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Exceptionless.NET 3.2 Release Notes</h1>
+          </header>
+          <div class="entry-content">
+            <p><img src="/website/assets/img/news/exceptionless-logoBLK.png" alt="Exceptionless Logo">The .NET Exceptionless client has received <strong>several improvements</strong> and <strong>some bug fixes</strong> in version 3.2. Details below!</p>
+<p>A special shout-out to @airwareic, <a href="https://github.com/srijken" target="_blank">@srijken</a>, <a href="https://github.com/xbelt" target="_blank">@xbelt</a>, and <a href="https://github.com/mgnslndh" target="_blank">@mgnslndh</a> for contributing and helping make this release happen.&nbsp;<strong>You guys rock!</strong></p>
+<p><strong>Please download and update to the latest</strong> <a href="https://github.com/exceptionless/Exceptionless.Net/releases/tag/v3.2.0" target="_blank">source here</a>, and you can view the full <a href="/website/why/" target="_blank">change log here</a>.<!--more--></p>
+<h2>.NET Exceptionless Client v3.2.0 Release Details</h2>
+<h3>Additions &amp; Improvements</h3>
+<p><strong>Read Configuration</strong>
+We added support for reading configuration from environmental variables and app settings</p>
+<p>**Closing Applications
+** Closing applications after submission is now easier due to the new <code>SubmittedEvent</code> event handler.</p>
+<p>**Custom Persistence Settings
+** The new <code>QueueMaxAttempts</code> and <code>QueueMaxAge</code> configuration settings allow custom persistence settings and are intended to improve offline support. Thanks @airwareic!</p>
+<p><strong>Data Exclusions Improvements</strong>
+We've made huge improvements to Data Exclusions, which now check default data and extra exception properties.</p>
+<p>**New Overloads
+** Thanks @xbelt for creating overloads for <code>CreateLog</code> and <code>SubmitLog</code> to accept the <code>LogLevel</code> enum!</p>
+<p><strong>Custom Themes</strong>
+@mgnslndh updated the styling of the <code>CrashReportDialog</code> to play nice with custom themes. Thanks!</p>
+<p>**Dependencies
+** All dependencies (Nancy, NLog, etc) have been updated.</p>
+<p>**Deprecated!
+** The <code>EnableSSL</code> property has been marked Obsolete because it is no longer used. <code>ServerURL</code> is now being looked at for this.</p>
+<h3>Fixes</h3>
+<p>**Startup()
+** <code>Startup()</code> was overriding configured dependencies - Fixed!</p>
+<p>**Empty Errors
+** We fixed a bug where you could have empty errors submitted with no stack trace info.</p>
+<p><strong>API Keys</strong></p>
+<ul>
+<li>Previously set valid API keys were being overwritten with default API keys, so we fixed it.</li>
+<li>We also fixed an issue where&nbsp;<code>ApiKey</code>&nbsp;couldn't be changed after the client was initialized.</li>
+</ul>
+<p><strong>Reference IDs</strong>
+An issue with submitting generated reference IDs was resolved, thanks to @srijken</p>
+<p>**Updating WebAPI Package
+** @srijken also fixed another issue where updating the WebApi package would remove the Exceptionless Module. Thanks again!</p>
+<p><strong>NLog</strong>
+Nlog wasn't working with .NET 4.0. This has been resolved.</p>
+<p><strong>IsolatedStorage</strong>
+There was a problem that caused IsolatedStorage to not be able to be used. Fixed!</p>
+<p><strong>Min Log Level</strong>
+NLog and log4net have been updated to allow setting the min log level.</p>
+<h2>What Say You?</h2>
+<p>As always, we're listening to your feedback, comments, suggestions, and rants!</p>
+<ul>
+<li><a href="https://github.com/exceptionless/Exceptionless.UI/issues/new">User Interface Feedback</a></li>
+<li><a href="https://github.com/exceptionless/Exceptionless.Net/issues/new">.NET Client Feedback</a></li>
+<li><a href="https://github.com/exceptionless/Exceptionless.JavaScript/issues/new">JavaScript Client Feedback</a></li>
+<li><a href="https://github.com/exceptionless/exceptionless/issues/new">Exceptionless Feedback</a></li>
+</ul>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

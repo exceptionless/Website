@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Project Settings - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Project Settings - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Project Settings - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Documentation</h1>
+</div>
+
+<div id="wrap" class="container" role="document">  
+  <div id="responsive-menu"><button class="btn btn-primary" onclick="handleMenu()">Table of Contents</button></div>
+  <div id="content" class="row-fluid">
+    <div class="toc well span3 visible-toc">
+      <div class="input-append">
+        <input class="span9" id="search-input" type="text" placeholder="Search docs...">
+        <button class="btn" type="button" onclick="handleSearch()">Go!</button>
+      </div>
+      
+
+    </div>
+    <div class="well span9 docs">
+      <h1>Project Settings</h1>
+      <p>Exceptionless is different from most error monitoring services in that it provides you with real-time updates. That includes updates from your Exceptionless project settings to your client. What does that mean?</p>
+<p>All project settings are synced to the client in almost real time, so when an event is submitted to Exceptionless we send down a response header with the current configuration version. If a newer version is available we will immediately retrieve and apply the latest configuration. We will also periodically check for newer configuration when the client is idle.</p>
+<p>By default the client will check after <code>5 seconds</code> on client startup (<em>if no events are submitted on startup</em>) and then every <code>2 minutes</code> after the last event submission for updated configuration settings.</p>
+<ul>
+<li>Checking for updated settings doesn't count towards plan limits.</li>
+<li>Only the current configuration version is sent when checking for updated settings (no user information will ever be sent).</li>
+<li>If the settings haven't changed, then no settings will be retrieved.</li>
+</ul>
+<p>You can also <strong>turn off the automatic updating of configuration settings when idle</strong> in each client respectively. Please see the <a href="#clients">client specific documentation</a>.</p>
+<p>Now, let's take a look at the available settings for your projects. There are quite a few, so feel free to jump to the section that interests you below:</p>
+<!-- - [Clients](#clients) -->
+<ul>
+<li><a href="#api-keys">API Keys</a></li>
+<li><a href="#data-exclusions">Data Exclusions</a>
+<ul>
+<li><a href="#example-usage">Example usage</a></li>
+</ul>
+</li>
+<li><a href="#error-stacking">Error Stacking</a>
+<ul>
+<li><a href="#user-namespaces">User Namespaces</a></li>
+<li><a href="#common-methods">Common Methods</a></li>
+</ul>
+</li>
+<li><a href="#spam-detection">Spam Detection</a></li>
+<li><a href="#client-configuration">Client Configuration</a></li>
+<li><a href="#event-exclusions">Event Exclusions</a>
+<ul>
+<li><a href="#example">Example</a></li>
+</ul>
+</li>
+<li><a href="#using-client-configuration-settings">Using Client Configuration Settings</a></li>
+</ul>
+<hr>
+<!-- ## Clients
+
+Exceptionless has a robust API that can be used through any client interface, but as a convenience, we have provided two Exceptionless client wrappers—one for .NET and one for JavaScript.
+
+Each client wrapper has its own guide to help you get started. Visit either one below. 
+
+- [.NET](clients/dotnet/)
+- [JavaScript / Node.js](clients/javascript/) -->
+<h2>API Keys</h2>
+<p>Before doing anything, you want to create an API Key for your project. This protects you and your team by ensuring you are using a revokable key. Instead of using a user-scoped key that would provide access to everything, a project-scoped key is limited to—you guessed it—a single project.</p>
+<p>To generate an API Key, go to your project settings page and click on the API Keys tab. There, you can click the New API Key button.</p>
+<p><img src="../docs/img/apikeys.png" alt="exceptionless api keys"></p>
+<h2>Data Exclusions</h2>
+<p>Data can be excluded from your error reports by specifying the information you'd like excluded. This is especially important when you are dealing with sensitive information. For example, an error on log in might, by default, send a user's password to our server. You probably don't want that, so you can exclude that type of data from being sent. For more on how we handle security issues, check out our <a href="/website/docs/security/">security page</a>.</p>
+<p>To get started, go to your project settings page, click the Settings tab.</p>
+<p><img src="img/DataExclusions.png" alt="Settings"></p>
+<p>A comma delimited list of field names that should be removed from any error report data (e.g., extended data properties, form fields, cookies and query parameters). Data Exclusions can be configured on the project settings page. You can also specify a field name with wildcards <code>*</code> to specify starts with, ends with, or contains just to be extra safe.</p>
+<h3>Example usage</h3>
+<ul>
+<li>Entering <code>Password</code> will remove any field <strong>named</strong> <code>Password</code> from the report.</li>
+<li>Entering <code>Password*</code> will remove any field that <strong>starts with</strong> <code>Password</code> from the report.</li>
+<li>Entering <code>*Password</code> will remove any field that <strong>ends with</strong> <code>Password</code> from the report.</li>
+<li>Entering <code>*Password*</code> will remove any field that <strong>contains</strong> <code>Password</code> from the report.</li>
+</ul>
+<hr>
+<h2>Error Stacking</h2>
+<p>You can also control how errors are stacked by specifying user namespaces (if you application code utilizes namespaces) or common methods (in all apps) to ignore. Let's take a look at how each works.</p>
+<h3>User Namespaces</h3>
+<p>If your app runs on .NET or other languages that support namespaces, you can define what namespaces your code runs in. This allows Exceptionless to pick a stacking target within your code.</p>
+<p>You can set this up on the project settings page in the Settings tab. You simply need to provide, a comma delimited list of the namespace names that your applications code belongs to. If this value is set, only methods inside of these namespaces will be considered as stacking targets.</p>
+<h3>Common Methods</h3>
+<p>Slightly different from your namespace definitions above, defining common methods here will <em>exclude</em> stacks from building up for specified methods. This is important as you may have catch-all methods in your code or specific methods that you expect to have frequent errors you'd rather not pass to Exceptionless.</p>
+<p>You can set this up on the project settings page in the Settings tab. Simply supply a comma delimited list of common method names that should not be used as stacking targets.</p>
+<hr>
+<h2>Spam Detection</h2>
+<p>Spam detection allows you to prevent noise from being tracked. Bots crawling your site or app can contribute to stacks that you simply do not want to see or track. We make it easy to filter these out.</p>
+<p>On your project settings page, click the Settings tab and scroll down to the Spam Detection section. There, you can also specify a comma delimited list of user agents that should be ignored client side. This list supports wildcards and by default covers a vast major of bots.</p>
+<p><strong>Automatic Spam Detection</strong></p>
+<p><img src="img/Spam_Detection.png" alt="Automatice Spam Filtering"></p>
+<p>We also provide you with a simple tool to automatically detect spam from a single IP address sending in a high volume of activity. Click the checkbox, and we will do the rest.</p>
+<hr>
+<h2>Client Configuration</h2>
+<p>Custom client configuration values allow you to control the behavior of your app in real time. They are a dictionary of key value pairs (string key, string value). Usage examples include controlling data exclusions to protecting sensitive data and or enabling/disabling features.</p>
+<p>To set up custom client configurations, click the All Projects drop down in the navigation header when you are signed into Exceptionless. Then, hover over your project name and you'll see a gear icon. Click that icon. This will take you to your project settings screen where you can click the tab called Client Configuration.</p>
+<p><img src="img/project-settings.png" alt="Exceptionless Project Settings"></p>
+<p>Once you have made changes to your Project Settings, the configuration values will only be read by your client if your client is aware of the configuration. This happens out of the box with the <a href="/website/docs/clients/dotnet/">Exceptionless .NET Client</a> and the <a href="/website/docs/clients/javascript/">Exceptionless JS Client</a>. If you are building your own client or simply wrapping our API, you can still make use of these configuration values by reading them in periodically via a <code>GET</code> request to <code>/api/v2/projects/{id}/config</code>.</p>
+<h2>Event Exclusions</h2>
+<p>The Exceptionless clients have the ability to automatically discard events based on client configuration settings. We have a plugin that looks at the client configuration settings using a simple key name convention.</p>
+<p>To help us understand this consider that every event has a <code>Type</code> and <code>Source</code> property. The <code>Type</code> can be anything but we have a few first class types like <a href="https://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Models/Event.cs#L92-L100"><code>error</code>, <code>usage</code>, <code>log</code>, <code>404</code>, <code>session</code></a>. <code>Source</code> is usually set to the exception type when dealing with <code>error</code> events or the <code>log</code> source.</p>
+<p>With that said, you can exclude any event type and source by adding a new client configuration key <code>@@EVENT_TYPE:SOURCE</code> by replacing the <code>EVENT_TYPE</code> and <code>SOURCE</code> respectively and specify a configuration value of <code>false</code>. <em>You can also specify a wild card <code>*</code> as part of the <code>SOURCE</code>.</em></p>
+<h3>Example</h3>
+<ul>
+<li>
+<p>To discard all errors of type <code>System.ArgumentNullException</code>:</p>
+<ul>
+<li><strong>KEY:</strong> <code>@@error:System.ArgumentNullException</code></li>
+<li><strong>VALUE:</strong> <code>false</code></li>
+</ul>
+</li>
+<li>
+<p>To discard all errors in general you would use a wildcard <code>*</code>:</p>
+<ul>
+<li><strong>KEY:</strong> <code>@@error:*</code></li>
+<li><strong>VALUE:</strong> <code>false</code></li>
+</ul>
+</li>
+<li>
+<p>To discard all 404s in general you would use a wildcard <code>*</code>:</p>
+<ul>
+<li><strong>KEY:</strong> <code>@@404:*</code></li>
+<li><strong>VALUE:</strong> <code>false</code></li>
+</ul>
+</li>
+</ul>
+<p>We have also added some additional known values to support <strong>minimum log levels</strong>. The known values are: <code>Trace</code>, <code>Debug</code>, <code>Info</code>, <code>Warn</code>, <code>Error</code>, <code>Fatal</code>, <code>Off</code>.</p>
+<ul>
+<li>
+<p>Sets a minimum log level of <code>Info</code> for my application:</p>
+<ul>
+<li><strong>KEY:</strong> <code>@@log:*</code></li>
+<li><strong>VALUE:</strong> <code>Info</code></li>
+</ul>
+</li>
+<li>
+<p>You can also set a log level on a per log source basis. This will override any general minimum log level (e.g., <code>@@log:*</code> you have defined!</p>
+<ul>
+<li><strong>KEY:</strong> <code>@@log:*AuthController</code></li>
+<li><strong>VALUE:</strong> <code>Trace</code></li>
+</ul>
+</li>
+</ul>
+<h2>Using Client Configuration Settings</h2>
+<ul>
+<li><a href="/website/docs/clients/dotnet/client-configuration-values/">.NET</a></li>
+<li><a href="/website/docs/clients/javascript/client-configuration-values/">JavaScript / Node.js</a></li>
+</ul>
+<hr>
+<p class="text-right"><a href="/website/docs/versioning/">Next &gt; Versioning</a></p>
+   
+    </div>
+  </div>
+</div>
+
+<script>
+    const handleMenu = () => {
+        const menu = document.querySelector(".toc");
+        menu.classList.toggle("hidden-toc");
+        menu.classList.toggle("visible-toc");
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const search = document.getElementById("search-input")
+        search.addEventListener("keyup", ({key}) => {
+          if (key === "Enter") {
+            handleSearch();
+          }
+        })
+    })
+    const handleSearch = async () => {
+      const searchTerm = document.getElementById("search-input").value;
+      const queryString = encodeURI(searchTerm)
+      window.location = `/search?term=${queryString}`;
+    }
+</script>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

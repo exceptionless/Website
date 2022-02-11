@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Express - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Express - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Express - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Documentation</h1>
+</div>
+
+<div id="wrap" class="container" role="document">  
+  <div id="responsive-menu"><button class="btn btn-primary" onclick="handleMenu()">Table of Contents</button></div>
+  <div id="content" class="row-fluid">
+    <div class="toc well span3 visible-toc">
+      <div class="input-append">
+        <input class="span9" id="search-input" type="text" placeholder="Search docs...">
+        <button class="btn" type="button" onclick="handleSearch()">Go!</button>
+      </div>
+      
+
+    </div>
+    <div class="well span9 docs">
+      <h1>Express</h1>
+      <p>Perhaps the most popular NodeJS server-side framework, Express is used in thousands of projects. Exceptionless provides dedicated NodeJS support, and configuring your Exceptionless client in Express is easy.</p>
+<h3>Install</h3>
+<p>To install exceptionless, you can use npm or yarn:</p>
+<p>npm - <code>npm install exceptionless</code></p>
+<p>yarn - <code>yarn add exceptionless</code></p>
+<h3>Initializing the Client</h3>
+<p>With Exceptionless, you can initialize a default client which provides a singleton instance, or you can initialize a custom client. We'll go over the way to initialize each.</p>
+<p><strong>Default Client</strong></p>
+<pre><code class="language-javascript hljs"><span class="hljs-keyword">const</span> { <span class="hljs-title class_">ExceptionlessClient</span> } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'exceptionless/dist/exceptionless'</span>);
+<span class="hljs-keyword">const</span> client = <span class="hljs-title class_">ExceptionlessClient</span>.<span class="hljs-property">default</span>;
+client.<span class="hljs-property">config</span>.<span class="hljs-property">apiKey</span> = <span class="hljs-string">'YOUR API KEY'</span>;
+</code></pre>
+<p>With that set up, you can use the Exceptionless default client anywhere in your app in a number of ways. You can <a href="/website/news/2021/2021-01-19-how-to-use-react-hooks-to-monitor-events-in-your-app/">use hooks</a>, you can use <a href="https://redux.js.org/">Redux</a>, you can pass Exceptionless down through a higher-order component.</p>
+<p><strong>Custom Client</strong></p>
+<p>There are a variety of reasons you might want to instantiate a custom Exceptionless client. The custom client, for one, gives you more configuration options. Let's take a look at how to set it up.</p>
+<pre><code class="language-javascript hljs"><span class="hljs-keyword">const</span> { <span class="hljs-title class_">ExceptionlessClient</span> } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'exceptionless/dist/exceptionless'</span>);
+<span class="hljs-keyword">const</span> config = {
+  <span class="hljs-attr">apiKey</span>: <span class="hljs-string">"YOUR API KEY"</span>, 
+  <span class="hljs-attr">serverUrl</span>: <span class="hljs-string">"YOUR SELF HOSTED URL"</span>,
+  ...
+};
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ExceptionlessClient</span>(config);
+</code></pre>
+<h3>Simple Example</h3>
+<p>In this example, we're just making use of the Exceptionless client in a file that handles one of our API routes.</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">"express"</span>);
+<span class="hljs-keyword">const</span> router = express.<span class="hljs-title class_">Router</span>();
+<span class="hljs-keyword">const</span> { isAuthenticated } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./middleware"</span>);
+<span class="hljs-keyword">const</span> { <span class="hljs-title class_">ExceptionlessClient</span> } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"exceptionless/dist/exceptionless.node"</span>);
+<span class="hljs-keyword">const</span> config = {
+  <span class="hljs-attr">apiKey</span>: <span class="hljs-string">"YOUR API KEY"</span>, 
+  <span class="hljs-attr">serverUrl</span>: <span class="hljs-string">"YOUR SELF HOSTED URL"</span>, <span class="hljs-comment">// Optional, leave blank if using hosted Exceptionless</span>
+  ...
+};
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ExceptionlessClient</span>(config);
+
+router.<span class="hljs-title function_">get</span>(<span class="hljs-string">"/:userId"</span>, <span class="hljs-title function_">isAuthenticated</span>(client), <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-keyword">const</span> user = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetchUserById</span>(req.<span class="hljs-property">params</span>.<span class="hljs-property">userId</span>);        
+        <span class="hljs-keyword">return</span> res.<span class="hljs-title function_">status</span>(<span class="hljs-number">200</span>).<span class="hljs-title function_">json</span>(user);
+    } <span class="hljs-keyword">catch</span> (error) { 
+        client.<span class="hljs-title function_">createException</span>(error).<span class="hljs-title function_">submit</span>();   
+        <span class="hljs-keyword">return</span> res.<span class="hljs-title function_">status</span>(<span class="hljs-number">500</span>).<span class="hljs-title function_">send</span>(error);
+    }
+});
+
+<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = router;
+</code></pre>
+<p>You'll notice, we have an <code>isAuthenticated</code> middleware function that we are passing our client into. This is just one way to give middleware access to the Exceptionless client. In the next example, you'll see a global way of doing all of this.</p>
+<p>In the route itself, we have a try/catch and we use our client to submit an exception if an error is triggered.</p>
+<h3>Global Example</h3>
+<p>In the entry file for your Express app, which is normally <code>server.js</code> or <code>app.js</code>, we can declare our Exceptionless client the same way as above. Then, we can make use of the built-in Express</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">"express"</span>);
+<span class="hljs-keyword">const</span> <span class="hljs-variable constant_">PORT</span> = <span class="hljs-number">5000</span>;
+<span class="hljs-keyword">const</span> { <span class="hljs-title class_">ExceptionlessClient</span> } = <span class="hljs-built_in">require</span>(<span class="hljs-string">"exceptionless/dist/exceptionless.node"</span>);
+<span class="hljs-keyword">const</span> config = {
+  <span class="hljs-attr">apiKey</span>: <span class="hljs-string">"YOUR API KEY"</span>
+};
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ExceptionlessClient</span>(config);
+
+<span class="hljs-keyword">const</span> app = <span class="hljs-title function_">express</span>();
+
+app.<span class="hljs-title function_">get</span>(<span class="hljs-string">"/"</span>, <span class="hljs-function">(<span class="hljs-params">req, res, next</span>) =&gt;</span> {
+  res.<span class="hljs-title function_">status</span>(<span class="hljs-number">200</span>).<span class="hljs-title function_">send</span>(missingVariable);
+});
+
+app.<span class="hljs-title function_">use</span>(<span class="hljs-function">(<span class="hljs-params">error, req, res, next</span>) =&gt;</span> {
+  client.<span class="hljs-title function_">createException</span>(error).<span class="hljs-title function_">submit</span>();
+  <span class="hljs-keyword">return</span> res.<span class="hljs-title function_">status</span>(<span class="hljs-number">500</span>).<span class="hljs-title function_">json</span>({ <span class="hljs-attr">error</span>: error.<span class="hljs-title function_">toString</span>() });
+});
+
+app.<span class="hljs-title function_">listen</span>(<span class="hljs-variable constant_">PORT</span>, <span class="hljs-keyword">async</span> () =&gt; {       
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`App listening on port <span class="hljs-subst">${PORT}</span>`</span>);
+});
+</code></pre>
+<p>In this example, it's important that your <code>app.use</code> handler for errors comes after your routes. This makes it so that uncaught errors will automatically be sent to Exceptionless and an error response will be sent back to the user.</p>
+   
+    </div>
+  </div>
+</div>
+
+<script>
+    const handleMenu = () => {
+        const menu = document.querySelector(".toc");
+        menu.classList.toggle("hidden-toc");
+        menu.classList.toggle("visible-toc");
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const search = document.getElementById("search-input")
+        search.addEventListener("keyup", ({key}) => {
+          if (key === "Enter") {
+            handleSearch();
+          }
+        })
+    })
+    const handleSearch = async () => {
+      const searchTerm = document.getElementById("search-input").value;
+      const queryString = encodeURI(searchTerm)
+      window.location = `/search?term=${queryString}`;
+    }
+</script>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

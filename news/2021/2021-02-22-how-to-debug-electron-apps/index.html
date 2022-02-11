@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>How to Debug Electron Apps - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="How to Debug Electron Apps - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="How to Debug Electron Apps - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">How to Debug Electron Apps</h1>
+          </header>
+          <div class="entry-content">
+            <p>Electron is a great framework that makes developing cross-platform desktop applications easy. If you're a JavaScript developer, it is probably the first thing you'll reach for when you decide to build a desktop application. I know I did. In building my first and second desktop applications, I used Electron. In that process, I learned some tricks to help the development process go a little smoother. One such trick is how to better debug issues that may arise in the packaged, production version of your Electron app that you won't see in development.</p>
+<p>If you're not familiar with <a href="https://www.electronjs.org/">Electron</a>, it is a framework that allows you to write apps with web technologies and use them on the desktop. This is accomplished by packaging your app within its own dedicated Chromium-based application. Think of a web browser. All it is is a desktop application that allows you to explore web apps and web pages. That's what Electron does for your app. It creates a one off desktop browser. In doing so, you get access to native desktop functionalities that are not available to traditional web applications.</p>
+<p>Like with many software projects, you might find that your local development experience doesn't exactly match what happens in production. When an app is minified, built, compiled, and packaged for production use, there can be subtle changes that can break the experience of the application or break the app entirely. This is especially true when dealing with desktop applications that have more access than you might be used to with web apps. Debugging problems when your application works locally but doesn't work in its production state can be frustrating. This becomes even more frustrating in Electron when you only have access to the web application's JavaScript output in production and not the underling Electron code's output. Fortunately, we can solve this by using an error monitoring service.</p>
+<p>We're going to be making use of <a href="https://exceptionless.com">Exceptionless</a> and the Exceptionless JavaScript client to debug and monitor our Electron application. Exceptionless is free to get started and totally open-source. Let's get started.</p>
+<p>From within your Electron app's project directory run <code>npm i exceptionless</code>.</p>
+<p>Now, we can configure the Exceptionless client and use it anywhere. This means we can use it in both the "front end" (web app) code and the "back end" Electron code. For the sake of this tutorial, we are only going to be focusing on the Electron code. Inside your <code>main.js</code> file, add the following below your other import/require statements:</p>
+<pre><code>const { ExceptionlessClient } = require("exceptionless")
+const client = ExceptionlessClient.default.config.apiKey = "YOUR API KEY"
+</code></pre>
+<p>You can get your project API key in the Exceptionless project settings page.</p>
+<p>Now, with the client configured, you can start using Exceptionless to log events. The cool thing is these don't need to just be errors. If you want to log when a particular function is called within your main Electron code, you can use <code>client.submitLog("Function called")</code> but with something more descriptive. By submitting log events for particular functions, you will know for sure the function is being called. Of course, you can and should also track errors. This is as simple as calling <code>client.submitException(error)</code> with your error.</p>
+<p>This is all very abstract, though. So, let's look at a practical example. Let's say your Electron app is listening to some event in order to write some data to the computer's hard disk. We need a trigger to come from our "frontend" html/js code, and then we need to read that trigger and take some action. In Electron, we use <code>ipcMain</code> to listen for events from the frontend code. An example of this might look like:</p>
+<pre><code class="language-javascript hljs">ipcMain.<span class="hljs-title function_">on</span>(<span class="hljs-string">"Save File"</span>, <span class="hljs-keyword">async</span> (event, message) =&gt; {
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">await</span> fs.<span class="hljs-title function_">writeFileSync</span>(<span class="hljs-string">"/path/to/where/you/want/to/store/the/file"</span>, message)
+    client.<span class="hljs-title function_">submitLog</span>(<span class="hljs-string">`Wrote file successfully with the following content: <span class="hljs-subst">${message}</span>`</span>)
+  } <span class="hljs-keyword">catch</span>(e) {
+    client.<span class="hljs-title function_">submitException</span>(e)
+  }
+});
+</code></pre>
+<p>I added a log event that is sent to Exceptionless in the try and I catch the error and send that to Exceptionless in the catch. The beauty of this is we know when the event is successful, which is comforting, but we also know when it fails and why. This is important, because a failure here would be a silent failure in your app.</p>
+<p>Let's say the file path you think you're trying to write to does not exist after your Electron app is built and packaged (a common issue is that PATH variables exposed by default to applications can be different than what you use and have available in your development environment). If that path did not exist, the <code>writeFileSync</code> command would not work. You would have no idea why, and your users would only know it when they tried to fetch the file that should have been written.</p>
+<p>Imagine trying to debug that without error and event monitoring. You'd fire it up locally on your machine, run some tests, try to replicate the steps exactly as the user did them. And everything would work. You wouldn't see the error because your development environment is just different enough from the production environment to keep you from realizing that the write path in production doesn't exist.</p>
+<p>There are a million other ways your Electron app can fail silently. By adding error and event monitoring, you can quickly debug problems that would otherwise have you banging your head off your desk.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

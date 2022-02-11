@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Configuration - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Configuration - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Configuration - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>Documentation</h1>
+</div>
+
+<div id="wrap" class="container" role="document">  
+  <div id="responsive-menu"><button class="btn btn-primary" onclick="handleMenu()">Table of Contents</button></div>
+  <div id="content" class="row-fluid">
+    <div class="toc well span3 visible-toc">
+      <div class="input-append">
+        <input class="span9" id="search-input" type="text" placeholder="Search docs...">
+        <button class="btn" type="button" onclick="handleSearch()">Go!</button>
+      </div>
+      
+
+    </div>
+    <div class="well span9 docs">
+      <h1>Configuration</h1>
+      <ul>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#browser">Browser</a></li>
+<li><a href="#nodejs">Node.js</a></li>
+</ul>
+</li>
+<li><a href="#configuration">Configuration</a>
+<ul>
+<li><a href="#offline-storage">Offline Storage</a></li>
+<li><a href="#api-key">API Key</a></li>
+<li><a href="#extended-data">Extended Data</a>
+<ul>
+<li><a href="#default-tags">Default Tags</a></li>
+<li><a href="#default-data">Default Data</a></li>
+</ul>
+</li>
+<li><a href="#general-data-protection-regulation">General Data Protection Regulation</a></li>
+</ul>
+</li>
+<li><a href="#versioning">Versioning</a></li>
+<li><a href="#self-hosted-options">Self Hosted Options</a></li>
+</ul>
+<hr>
+<h2>Installation</h2>
+<h3>Browser</h3>
+<ol>
+<li>Install the package by running <code>npm install @exceptionless/browser</code></li>
+<li>Add the Exceptionless client to your app:</li>
+</ol>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Exceptionless</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@exceptionless/browser"</span>;
+
+<span class="hljs-keyword">await</span> <span class="hljs-title class_">Exceptionless</span>.<span class="hljs-title function_">startup</span>(<span class="hljs-function">(<span class="hljs-params">c</span>) =&gt;</span> {
+  c.<span class="hljs-property">apiKey</span> = <span class="hljs-string">"API_KEY_HERE"</span>;
+});
+</code></pre>
+<h3>Node.js</h3>
+<ol>
+<li>Install the package by running <code>npm install @exceptionless/node</code>.</li>
+<li>Add the Exceptionless client to your app:</li>
+</ol>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Exceptionless</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@exceptionless/node"</span>;
+
+<span class="hljs-keyword">await</span> <span class="hljs-title class_">Exceptionless</span>.<span class="hljs-title function_">startup</span>(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> {
+  c.<span class="hljs-property">apiKey</span> = <span class="hljs-string">"API_KEY_HERE"</span>;
+});
+</code></pre>
+<hr>
+<h2>Configuration</h2>
+<p><em>NOTE: The only required setting that you need to configure is the client's <code>apiKey</code>.</em> However, many values may be important for your application. Specifically, you may want to consider persisting events to disk.</p>
+<h3>Offline Storage</h3>
+<p>By default, Exceptionless keeps events in memory and stores server configuration to local storage if available. This means if the application exits before the event can be sent to the server, the event will not be sent on restart. This can be overcome by persisting events to disk as well.</p>
+<p>This can be done by setting the configuration value like this:</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Exceptionless</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@exceptionless/browser"</span>;
+
+<span class="hljs-keyword">await</span> <span class="hljs-title class_">Exceptionless</span>.<span class="hljs-title function_">startup</span>(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> {
+  c.<span class="hljs-property">usePersistedQueueStorage</span> = <span class="hljs-literal">true</span>;
+});
+</code></pre>
+<h3>API Key</h3>
+<p>You can set the <code>apiKey</code> two different ways. The first is by passing it to the
+startup function. This is the recommended way if you have no other client
+configuration settings to configure.</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Exceptionless</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@exceptionless/browser"</span>;
+
+<span class="hljs-keyword">await</span> <span class="hljs-title class_">Exceptionless</span>.<span class="hljs-title function_">startup</span>(<span class="hljs-string">"API_KEY_HERE"</span>);
+</code></pre>
+<p>The second way is to set it on the configuration instance passed to startup.
+This is the recommended way when configuring multiple settings.</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Exceptionless</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@exceptionless/browser"</span>;
+
+<span class="hljs-keyword">await</span> <span class="hljs-title class_">Exceptionless</span>.<span class="hljs-title function_">startup</span>(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> {
+  c.<span class="hljs-property">apiKey</span>: <span class="hljs-string">'API_KEY_HERE'</span>,
+  c.<span class="hljs-property">serverUrl</span>: <span class="hljs-string">'http://localhost:50000'</span>
+});
+</code></pre>
+<p><strong>NOTE</strong>: creating new instances is good for sending custom events. <strong>Automatic catching of errors uses default client</strong>. Make sure you setup default client as well if you need automatic catching of unhandled errors.</p>
+<h3>Extended Data</h3>
+<p>You can include information that is set globally and provided with every event you send. There are two types of data that can be provided this way: Default Tags and Default Data.</p>
+<h4>Default Tags</h4>
+<p>To add default tags to every request, you can configure your client like this:</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Exceptionless</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@exceptionless/browser"</span>;
+
+<span class="hljs-keyword">await</span> <span class="hljs-title class_">Exceptionless</span>.<span class="hljs-title function_">startup</span>(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> {
+  c.<span class="hljs-property">defaultTags</span>.<span class="hljs-title function_">push</span>(<span class="hljs-string">"Tag1"</span>, <span class="hljs-string">"Tag2"</span>);
+});
+</code></pre>
+<h4>Default Data</h4>
+<p>You can set up default data to be sent with every request very similarly to how you send default tags. You would do it like this:</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Exceptionless</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@exceptionless/browser"</span>;
+
+<span class="hljs-keyword">await</span> <span class="hljs-title class_">Exceptionless</span>.<span class="hljs-title function_">startup</span>(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> {
+  c.<span class="hljs-property">defaultData</span>[<span class="hljs-string">"data"</span>] = <span class="hljs-string">"My custom data"</span>;
+});
+</code></pre>
+<h3>General Data Protection Regulation</h3>
+<p>By default the Exceptionless Client will report all available metadata which could include potential PII data. There are various ways to limit the scope of PII data collection. For example, one could use <a href="/website/docs/security/#data-exclusions">Data Exclusions</a> to remove sensitive values but it only applies to specific collection points such as <code>Cookie Keys</code>, <code>Form Data Keys</code>, <code>Query String Keys</code> and <code>Extra Exception properties</code>. Additional data may need to be removed for the GDPR like the collection of user names and IP Addresses. Shown below is several examples of how you can configure the client to remove this additional metadata.</p>
+<p>You have the option of finely tuning what is collected via individual setting options or you can disable the collection of all PII data by setting the <code>includePrivateInformation</code> to <code>false</code>.</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Exceptionless</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@exceptionless/browser"</span>;
+
+<span class="hljs-keyword">await</span> <span class="hljs-title class_">Exceptionless</span>.<span class="hljs-title function_">startup</span>(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> {
+  c.<span class="hljs-property">includePrivateInformation</span> = <span class="hljs-literal">false</span>;
+});
+</code></pre>
+<p>If you wish to have a finer grained approach which allows you to use Data Exclusions while removing specific meta data collection you can do so via code. Please note if the below doesn't meet your needs you can always write a plugin.</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Exceptionless</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@exceptionless/browser"</span>;
+
+<span class="hljs-keyword">await</span> <span class="hljs-title class_">Exceptionless</span>.<span class="hljs-title function_">startup</span>(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> {
+  <span class="hljs-comment">// Include the username if available.</span>
+  c.<span class="hljs-property">includeUserName</span> = <span class="hljs-literal">false</span>;
+  <span class="hljs-comment">// Include the MachineName in MachineInfo.</span>
+  c.<span class="hljs-property">includeMachineName</span> = <span class="hljs-literal">false</span>;
+  <span class="hljs-comment">// Include Ip Addresses in MachineInfo and RequestInfo.</span>
+  c.<span class="hljs-property">includeIpAddress</span> = <span class="hljs-literal">false</span>;
+  <span class="hljs-comment">// Include Cookies, please note that DataExclusions are applied to all Cookie keys when enabled.</span>
+  c.<span class="hljs-property">includeCookies</span> = <span class="hljs-literal">false</span>;
+  <span class="hljs-comment">// Include Form/POST Data, please note that DataExclusions are only applied to Form data keys when enabled.</span>
+  c.<span class="hljs-property">includePostData</span> = <span class="hljs-literal">false</span>;
+  <span class="hljs-comment">// Include Query String information, please note that DataExclusions are applied to all Query String keys when enabled.</span>
+  c.<span class="hljs-property">includeQueryString</span> = <span class="hljs-literal">false</span>;
+});
+</code></pre>
+<h2>Versioning</h2>
+<p>By specifying an application version you can <a href="/website/docs/versioning/">enable additional functionality</a>. It's a good practice to specify an application version if possible using the code below.</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Exceptionless</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@exceptionless/browser"</span>;
+
+<span class="hljs-keyword">await</span> <span class="hljs-title class_">Exceptionless</span>.<span class="hljs-title function_">startup</span>(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> {
+  c.<span class="hljs-property">version</span> = <span class="hljs-string">"1.2.3"</span>;
+});
+</code></pre>
+<h2>Self Hosted Options</h2>
+<p>The Exceptionless client can also be configured to send data to your <a href="/website/docs/self-hosting/">self hosted instance</a>. This is configured by setting the <code>serverUrl</code> setting to point to your Exceptionless instance.</p>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Exceptionless</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@exceptionless/browser"</span>;
+
+<span class="hljs-keyword">await</span> <span class="hljs-title class_">Exceptionless</span>.<span class="hljs-title function_">startup</span>(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> {
+  c.<span class="hljs-property">apiKey</span>: <span class="hljs-string">'API_KEY_HERE'</span>,
+  c.<span class="hljs-property">serverUrl</span>: <span class="hljs-string">'http://localhost:50000'</span>
+});
+</code></pre>
+<hr>
+<p class="text-right"><a href="/website/docs/clients/javascript/client-configuration-values/">Next &gt; Client Configuration Values</a></p>
+   
+    </div>
+  </div>
+</div>
+
+<script>
+    const handleMenu = () => {
+        const menu = document.querySelector(".toc");
+        menu.classList.toggle("hidden-toc");
+        menu.classList.toggle("visible-toc");
+    }
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const search = document.getElementById("search-input")
+        search.addEventListener("keyup", ({key}) => {
+          if (key === "Enter") {
+            handleSearch();
+          }
+        })
+    })
+    const handleSearch = async () => {
+      const searchTerm = document.getElementById("search-input").value;
+      const queryString = encodeURI(searchTerm)
+      window.location = `/search?term=${queryString}`;
+    }
+</script>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

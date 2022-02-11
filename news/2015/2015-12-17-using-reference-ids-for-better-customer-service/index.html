@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Using Reference Ids for Better Customer Service - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Using Reference Ids for Better Customer Service - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Using Reference Ids for Better Customer Service - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Using Reference Ids for Better Customer Service</h1>
+          </header>
+          <div class="entry-content">
+            <p><img src="/website/assets/img/news/reference-ids-blog-header-image.png" alt="Exceptionless Reference IDs"></p>
+<p>This week we want to talk about <strong>reference Ids</strong> and how we use them to <strong>improve customer service</strong> for Exceptionless. And how we think you can do the same for your users.</p>
+<h2>What's a Reference Id?</h2>
+<p>A reference id is a unique identifier, generated by the user, that allows you to look up a submitted event at a later time. This is important because <em>event Ids are not created until after the event is processed</em>, so there is no other way to look up an event. We also use Reference Ids to help deduplicate events server side, which is another reason why it’s important that they are unique.</p>
+<h2>Using&nbsp;Reference Ids for the Greater Good</h2>
+<!--more-->
+<p>One of the ways we use Reference Ids is to <strong>support end users</strong>, something that is very important to us. There is nothing more frustrating than being unable to help a user that is experiencing a problem because you don’t know what they are seeing (when there could be thousands of errors in your app).</p>
+<p>To combat this issue, we always try to include a reference Id with every error message shown to the user. This allows end users to contact us with a Reference Id and receive help <strong>immediately</strong> for the error they are seeing because we can <strong>easily track down and view it</strong>.</p>
+<h2>Reference Id Example</h2>
+<p>The Exceptionless clients have built in support to generate and track unique Reference Ids for every error event. Behind the scenes, we register a default Reference Id plugin that sets a Reference Id on submitted error events and stores the Reference Id in an implementation of <a>ILastReferenceIdManager</a>. The Reference Id manager’s goal is just to persist and retrieve the last used Reference Id.</p>
+<p>Since this is a default plugin, we can enable this behavior by calling the <code>UseReferenceIds()</code> method on the configuration object to register the default Reference Id on every error event.</p>
+<h3>C# Example</h3>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+ExceptionlessClient.Default.Configuration.UseReferenceIds();
+</code></pre>
+<h3>JavaScript Example</h3>
+<pre><code class="language-js hljs language-javascript">exceptionless.<span class="hljs-property">ExceptionlessClient</span>.<span class="hljs-property">default</span>.<span class="hljs-property">config</span>.<span class="hljs-title function_">useReferenceIds</span>();
+</code></pre>
+<p>Please note that you can <strong>create your own plugin</strong> to create your very own Reference Id(s).</p>
+<p>To <strong>get the the last used Reference Id</strong>, you can call the <code>GetLastReferenceId()</code> helper method on the the <code>ExceptionlessClient</code> instance.</p>
+<h4>C#</h4>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">using</span> Exceptionless;
+<span class="hljs-comment">// Get the last created Reference Id</span>
+ExceptionlessClient.Default.GetLastReferenceId();
+</code></pre>
+<h4>JavaScript</h4>
+<pre><code class="language-js hljs language-javascript"><span class="hljs-comment">// Get the last created Reference Id</span>
+exceptionless.<span class="hljs-property">ExceptionlessClient</span>.<span class="hljs-property">default</span>.<span class="hljs-title function_">getLastReferenceId</span>();
+</code></pre>
+<p>You might have noticed how easy it is to get or add Reference Id’s to your events automatically. This makes it a breeze to let your developers track down user-facing issues by displaying the Reference Id to your end users.</p>
+<p>We <strong>display Reference Ids</strong> to all of our end users anytime an error occurs in our ASP.NET WebAPI application. We accomplish this by adding a custom <code>&lt;a href="http://www.asp.net/web-api/overview/error-handling/web-api-global-error-handling" target="_blank"&gt;IExceptionHandler&lt;/a&gt;</code> and return a new error response to include the Reference Id as shown below:</p>
+<pre><code class="language-cs hljs language-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ExceptionlessReferenceIdExceptionHandler</span> : <span class="hljs-title">IExceptionHandler</span> {
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Task <span class="hljs-title">HandleAsync</span>(<span class="hljs-params">ExceptionHandlerContext context, CancellationToken cancellationToken</span>)</span> {
+        <span class="hljs-keyword">if</span> (context == <span class="hljs-literal">null</span>)
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ArgumentNullException(<span class="hljs-keyword">nameof</span>(context));
+
+        <span class="hljs-keyword">var</span> exceptionContext = context.ExceptionContext;
+        <span class="hljs-keyword">var</span> request = exceptionContext.Request;
+        <span class="hljs-keyword">if</span> (request == <span class="hljs-literal">null</span>)
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ArgumentException(<span class="hljs-string">$"<span class="hljs-subst">{<span class="hljs-keyword">typeof</span>(ExceptionContext).Name}</span>.<span class="hljs-subst">{<span class="hljs-string">"Request"</span>}</span> must not be null"</span>, <span class="hljs-keyword">nameof</span>(context));
+
+        context.Result = <span class="hljs-keyword">new</span> ResponseMessageResult(CreateErrorResponse(request, exceptionContext.Exception, HttpStatusCode.InternalServerError));
+        <span class="hljs-keyword">return</span> TaskHelper.Completed();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> HttpResponseMessage <span class="hljs-title">CreateErrorResponse</span>(<span class="hljs-params">HttpRequestMessage request, Exception ex, HttpStatusCode statusCode</span>)</span> {
+        HttpConfiguration configuration = request.GetConfiguration();
+        HttpError error = <span class="hljs-keyword">new</span> HttpError(ex, request.ShouldIncludeErrorDetail());
+
+        <span class="hljs-built_in">string</span> lastId = ExceptionlessClient.Default.GetLastReferenceId();
+        <span class="hljs-keyword">if</span> (!String.IsNullOrEmpty(lastId))
+            error.Add(<span class="hljs-string">"Reference"</span>, lastId);
+
+        <span class="hljs-comment">// CreateErrorResponse should never fail, even if there is no configuration associated with the request</span>
+        <span class="hljs-comment">// In that case, use the default HttpConfiguration to con-neg the response media type</span>
+        <span class="hljs-keyword">if</span> (configuration == <span class="hljs-literal">null</span>) {
+            <span class="hljs-keyword">using</span> (HttpConfiguration defaultConfig = <span class="hljs-keyword">new</span> HttpConfiguration()) {
+                <span class="hljs-keyword">return</span> request.CreateResponse(statusCode, error, defaultConfig);
+            }
+        }
+
+        <span class="hljs-keyword">return</span> request.CreateResponse(statusCode, error, configuration);
+    }
+}
+</code></pre>
+<p>The next step is to replace the existing <code>IExceptionFilter</code> with the one above.</p>
+<pre><code class="language-cs hljs language-csharp">Config.Services.Replace(<span class="hljs-keyword">typeof</span>(IExceptionHandler), <span class="hljs-keyword">new</span> ExceptionlessReferenceIdExceptionHandler());
+</code></pre>
+<p>Finally, when an error occurs in your app, you’ll get a more user friendly error response that contains a Reference Id!</p>
+<pre><code class="language-cs hljs language-csharp">{
+    <span class="hljs-string">"message"</span>: <span class="hljs-string">"An error has occurred."</span>,
+    <span class="hljs-string">"reference"</span>: <span class="hljs-string">"411085622e"</span>
+}
+</code></pre>
+<p>We’ve found that this allows consumers of our API to quickly contact us with a reference id and get up and running quickly!</p>
+<h2>Looking up Events by Reference Id</h2>
+<p>You might be thinking: "Reference Ids are great, but what do I do with them now that I have one." Well, you can view the event that they reference on our site or via our API. This can be accomplished two different ways:</p>
+<ul>
+<li><strong>Hotlinking</strong>: You can link directly to a submitted event by outputting a link in your UI or logs (e.g. https://be.exceptionless.io/event/by-ref/YOUR_REFERENCE_ID)</li>
+<li><strong>Search</strong>: You can search via our api/ui with <code>reference:YOUR_REFERENCE_ID</code></li>
+</ul>
+<h2>Your Turn!</h2>
+<p>We hope this article was helpful, and we'd love to know if you're using Reference Ids&nbsp;and how they've helped you help users, solve internal issues, etc. Post a comment below!</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Using an Error Monitoring Service to Track User Experience - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Justin Hunter">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Using an Error Monitoring Service to Track User Experience - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Using an Error Monitoring Service to Track User Experience - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Using an Error Monitoring Service to Track User Experience</h1>
+          </header>
+          <div class="entry-content">
+            <p>In development, we tend to think of errors as things that are thrown when our code does not execute properly. Errors can be caught and handled or they can be missed and result in uncaught exceptions. But how do we classify errors that are not directly caused by the code we write? How do we identify and address errors that are caused by the design decisions we made (or didn't make)?</p>
+<p>You may already be using an error monitoring service, and if you are, you could continue using that and reach for yet another tool to help you with your user experience woes. Or, rather than adding another product to your endless list of tools that keep your application running, you can use the error monitoring service to both monitor for traditional errors and user experience problems.</p>
+<p>Let's take a look at how we can do this. There are plenty of logging services out there, and most of them do the same thing. However, we're going to take a look at <a href="/website/">Exceptionless</a>. Exceptionless is an especially attractive choice for three reasons:</p>
+<ol>
+<li>Fair pricing on their hosted version</li>
+<li>It's <a href="https://github.com/exceptionless/Exceptionless">open-source</a> and can be totally self-hosted</li>
+<li>The API allows us to do exactly what I'm proposing in this article.</li>
+</ol>
+<p>While self-hosting may be an attractive option (and one that I will surely write about ina future post), we're going to sign up for a free account using Exceptionless's hosted platform. To do so, go to <a href="/website/">https://exceptionless.com</a> and click the Sign Up button in the top-right:</p><figure class="wp-block-image"><p></p>
+<p><img src="/website/assets/img/news/exceptionless_site.jpeg" alt="Exceptionless home page"></p></figure><p></p>
+<p>Once you sign up, you'll be prompted to name your team and project. You'll also need to choose the language in which your project is written. I'm choosing NodeJS, but you can choose whatever language applies to you because I'll be referencing cURL commands to keep our solution as general-purpose and adaptable as possible. Once you've created a project, you will be provided an API Key. Hold on to that, we'll need to use it as a bearer token later.</p>
+<p>*Pro-tip: To convert a cURL command to the language of your choice, use <a href="https://www.postman.com/">Postman</a> and import the raw command. You can then choose the code option and see how to run the API call in the language you prefer.</p>
+<p>You'll want to follow the documentation to set up your codebase to send errors appropriately to Exceptionless, but we will also need to think about how we are going to handle these UX errors.</p>
+<p>To do this, let's first think about some of the problems a user may face on a site and how we can handle them. A simple example that I can think of is what I'm going to call "Happy Path Slippage." We build applications with a happy path in mind. It's how we test, naturally. We have to force ourselves to test outside of the happy path, so it's also important to monitor how often our users deviate from the happy path.</p>
+<p>Let's say we have a simple e-commerce application. The happy path, in this case, would be:</p>
+<ol>
+<li>User signs up</li>
+<li>User searches for a product</li>
+<li>User adds product to shopping cart</li>
+<li>User checks out</li>
+</ol>
+<p>That is the ideal flow, but we know users won't always follow that flow. However, what we don't know is how often users will deviate and if they do deviate. To track this with Exceptionless, we are going to use simple GET requests with a query parameter to build a funnel analysis. We will want to track product searches, shopping cart adds, and checkouts.</p>
+<p>Let's start with the setup for product searches. Remember, we're going to use a GET request. You can read more of the Exceptionless documentation <a href="https://api.exceptionless.io/docs/index.html">here</a>, but the request is pretty simple. We will want to pass in an indicator that the event is a <code>productSearch</code> and what the product is. We can do that like this:</p>
+<pre><code class="language-bash hljs">curl --location --request GET <span class="hljs-string">'https://api.exceptionless.io/api/v2/events/submit/usage?source=productSearch&amp;message=YOUR_PRODUCT'</span> \
+--header <span class="hljs-string">'Authorization: Bearer YOUR_API_KEY'</span>
+</code></pre>
+<p>Feel free to add whatever product name you'd like in the query. Just replace <code>YOUR_PRODUCT</code> with the name of the product you'd like to track. You can run the cURL command from the command line or you can use it to build a real request you would use in your app. If we run that then take a look at our dashboard in Exceptionless, we can start to make use of the data.</p>
+<p>The Exceptionless dashboard takes you to a handy chart of most frequent exceptions/errors. However, we're tracking User Experience issues tied to features in our application, so those events won't appear on the Exceptions dashboard. Instead, if you click the Features Usage link on the left navigation, then click Events, you should see your new <code>productSearch</code> event.</p><figure class="wp-block-image"><p></p>
+<p><img src="/website/assets/img/news/dashboard_empty.png" alt="Features Usage Dashboard Example"></p></figure><p></p>
+<p>Pretty cool! This alone starts to become useful. We can cut out a separate analytics tracking tool by using our error monitoring service (Exceptionless in this case) to track events outside the normal error reporting. But we can take it a step further.</p>
+<p>Remember, we want to track the funnel from search to checkout. So, let's send through another event representing a <code>cartAdd</code> when a user adds a product to their shopping cart. Here we are adding an extra parameter to also track how many of the product is added to the cart.</p>
+<pre><code class="language-bash hljs">curl --location --request GET <span class="hljs-string">'https://api.exceptionless.io/api/v2/events/submit/usage?source=cartAdd&amp;value=QUANTITY_ADDED&amp;message=YOUR_PRODUCT'</span> \
+--header <span class="hljs-string">'Authorization: Bearer YOUR_API_KEY'</span>
+</code></pre>
+<p>Exceptionless has real-time monitoring, so if you flip back to your dashboard after running the above command, you should already see the event in the list:</p><figure class="wp-block-image"><p></p>
+<p><img src="/website/assets/img/news/dashboard_evenets.png" alt="Cart Add Example"></p></figure><p></p>
+<p>I think you're already seeing how easy this is, but let's round this out by adding a <code>checkout</code> event to track.</p>
+<pre><code class="language-bash hljs">curl --location --request GET <span class="hljs-string">'https://api.exceptionless.io/api/v2/events/submit/usage?source=checkout&amp;message=YOUR_PRODUCT'</span> \
+--header <span class="hljs-string">'Authorization: Bearer YOUR_API_KEY'</span>
+</code></pre>
+<p>Again, your Exceptionless dashboard should update in real-time. This is starting to shape up! Now, let's dive into the events because right now we have the start of a nice funnel analysis, but we don't know yet what products were searched for, added to the cart, and checked out. The cool thing here is we can click into an event like <code>productSearch</code> for example and get detailed info.</p>
+<p>Go ahead and try it. Click on the event and you'll be taken to a dedicated Event Occurrence page.</p><figure class="wp-block-image"><p></p>
+<p><img src="/website/assets/img/news/event_occurence.png" alt="Event Occurrence Example"></p></figure><p></p>
+<p>This is useful information. Combined with our user experience funnel analysis, we can start to make product decisions. Just for fun, I want to show you what this could look like when leveraging the Most Frequent view.</p>
+<p>Again, we should click on the Features Usage link on the side navigation. This time, we'll choose the Most Frequent option. I've created a bunch of events so that we can see how useful the Most Frequent view can be.</p><figure class="wp-block-image"><p></p>
+<p><img src="/website/assets/img/news/funnel_example.png" alt="Funnel Example"></p></figure><p></p>
+<p>Now we have the makings of a useful way of tracking the user experience right from within our error reporting tool. The benefit here is that we can use a single tool to help us with monitoring, bugs, event tracking, and user experience. <a href="/website/">Exceptionless</a> makes this incredibly easy, is self-hostable, is open source, and if you choose the hosted option is very affordable.</p>
+<p>Go forth and track errors AND user experience all in one place.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>

@@ -1,0 +1,301 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Debugging a .NET Serverless App - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Debugging a .NET Serverless App - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Debugging a .NET Serverless App - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/assets/css/theme.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/">
+                    <img id="site-logo" src="/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/news/">News</a></li>
+                        <li class="menu-help"><a href="/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Debugging a .NET Serverless App</h1>
+          </header>
+          <div class="entry-content">
+            <p>Serverless development has become the hot thing in tech. Renting time on a virtual machine only when you need it saves money and resources. However, there are many gotchas that can make working with serverless technology difficult if you're not prepared. One such gotcha is event handling.</p>
+<p>Unlike a Web Server applications, events in a serverless function act very similarly to console applications. Take AWS Lambda, for example. A Lambda function is going to spin up, execute, and spin down as quickly as it can. You want this. This is one of the key selling points of serverless, and how developers can ultimately save money. However, this can lead to problems when trying to process asynchronous events. We'll cover how to solve that in this post.</p>
+<p>Today, we're going to build a simple .NET Hello World serverless application and we're going to implement event handling to log errors and other events. We're going to use the <code>dotnet</code> cli to install a new Lambda template, but first we need to make sure we have the <a href="https://www.nuget.org/packages/Amazon.Lambda.Templates">Amazon Lambda Templates Package</a>.</p>
+<p>Once that's installed, create a new directory. I'm calling mine <code>MyFunction</code>, but you can call yours whatever you'd like. Change into that directory and run the following command:</p>
+<p><code>dotnet new lambda.EmptyFunction --name MyFunction</code></p>
+<p>This will create your new serverless function project in .NET. If you open up your project in Visual Studio or whatever IDE or code editor you prefer, you'll see your main file is <code>Function.cs</code>. You'll also have a <em>very</em> helpful README, and a json file with some default configuration. We're not going to be editing anything besides the <code>Function.cs</code> file, but it's good to know what's provided out of the box when generating a new lambda project.</p>
+<p>We now need to add <a href="https://exceptionless.com?utm_source=serverless-blog-post">Exceptionless</a> to the project. Exceptionless is an open-source event monitoring service available to all programming languages, but dedicated to .NET. Let's install it by running this command at the command line:</p>
+<p><code>dotnet add package Exceptionless</code></p>
+<p>This will install the most recent version of Exceptionless and is the foundation to you adding event handling in your serverless app. Once Exceptionless is installed, we can take a look at our code and see about where we might want to utilize Exceptionless.</p>
+<p>Open up the <code>Function.cs</code> file again and add the Exceptionless namespace like this:</p>
+<p><code>using Exceptionless;</code></p>
+<p>Now, let's take a look at the function itself. It's a pretty simple function that returns a string in its uppercase form. We're going to change this around to instead return &quot;Hello&quot; plus the string passed in. Of course, that's not the focus of the tutorial, so we're going to also wire up error handling and event processing.</p>
+<p>So, let's start with error handling. We can manually force an error that will fall into the catch block of a try/catch by not passing in a string to our function. Update your function to look like this:</p>
+<pre><code class="language-csharp">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Exceptionless;
+
+using Amazon.Lambda.Core;
+
+[assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
+
+namespace MyFunction
+{
+  public class Function
+  {
+
+    public string FunctionHandler(string input, ILambdaContext context)
+    {
+      var client = new ExceptionlessClient(c =&gt;
+        {
+          c.ApiKey = &quot;YOUR EXCEPTIONLESS API KEY&quot;;
+        });
+
+      using var _ = client.ProcessQueueDeferred();
+
+      try
+      {
+        if (input == null)
+        {
+          throw new Exception(&quot;input value is required&quot;);
+        }
+        return &quot;Hello, &quot; + input + &quot;!&quot;;
+      }
+      catch (Exception ex)
+      {
+        client.SubmitException(ex);
+        return ex.Message;
+      }
+    }
+  }
+}
+</code></pre>
+<p>We've added the Exceptionless namespace, we've converted the function to take in a string and return a hello world string.</p>
+<p>To test error handling, we have set up a try/catch that will throw if no string is passed into our function. If that happens, we send the exception to Exceptionless.</p>
+<p>Because we need to make sure events are sent to Exceptionless before the function ends, we are using the Exceptionless method <code>ProcessQueueDeferred()</code>.</p>
+<p>Now, it's time to test. Fortunately, there's a super easy way to test our code before we deploy to AWS. In your root directory, find the <code>test</code> folder. Nested in that folder is a test file called <code>MyFunction.Test.cs</code>. We're going to edit this file a bit and run our tests from the command line.</p>
+<p>Update the file to look like this:</p>
+<pre><code class="language-csharp">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+using Xunit;
+using Amazon.Lambda.Core;
+using Amazon.Lambda.TestUtilities;
+
+using MyFunction;
+
+namespace MyFunction.Tests
+{
+    public class FunctionTest
+    {
+        [Fact]
+        public void HelloWorldFunction()
+        {
+            var function = new Function();
+            var context = new TestLambdaContext();
+            var upperCase = function.FunctionHandler(&quot;John&quot;, context);
+
+            Assert.Equal(&quot;Hello, John!&quot;, upperCase);
+        }
+    }
+}
+</code></pre>
+<p>This test should pass and we should not be sending anything to Exceptionless. To test it, switch into <code>MyFunction/test/MyFunction.Tests</code> and run <code>dotnet test</code>.</p>
+<p>If your test passed, you're in great shape! But we don't just want to test our function. We want to make sure errors are sent to Exceptionless. So let's force an error.</p>
+<p>Add the following to your test file:</p>
+<pre><code class="language-csharp"> public class ErrorTest
+{
+    [Fact]
+    public void ErrorFunctionTest()
+    {
+        var function = new Function();
+        var context = new TestLambdaContext();
+        var helloworld = function.FunctionHandler(null, context);
+
+        Assert.NotEqual(&quot;Hello, John!&quot;, helloworld);
+    }
+}
+</code></pre>
+<p>The test should pass because we don't get a response of &quot;Hello, John!&quot;. But what we want to do is check to see if the exception was sent to Exceptionless.</p>
+<p>Open up your Exceptionless dashboard and you shoud see something like <code>Exception in FunctionHandler input value is required</code>. If you click on it, you'll see more details like this:</p>
+<p><img src="exception.png" alt=""></p>
+<p>There are three tabs on the details page. In the above screenshot, I have selected the &quot;Overview&quot; tab. However, if you explore the other tabs, you'll see value data captured for you automatically.</p>
+<p>Cool, so we created an exception. What about something a little more complex?</p>
+<p>Let's say we want to track the usage of our new serverless function. We can do that pretty easily with Exceptionless. Let's change the current try/catch block to look like this:</p>
+<pre><code class="language-csharp"> try
+{
+  if (input == null)
+  {
+    throw new Exception(&quot;input value is required&quot;);
+  }
+  client.SubmitFeatureUsage(&quot;Serverless Function&quot;);
+  return &quot;Hello, &quot; + input + &quot;!&quot;;
+}
+catch (Exception ex)
+{
+  client.SubmitException(ex);
+  return ex.Message;
+}
+</code></pre>
+<p>Here we are sending a feature usage event to Exceptionless as soon as the serverless function is triggered and we're sure the input is not null. The nice thing about this is that it doesn't rely on any errors being thrown and the rest of your function can continue to execute.</p>
+<p>Let's run our tests again. We should get the feature usage event as well as an additional error because, remember, one of our tests forces a null exception.</p>
+<p>In our dashboard, if we look at all event, we will see our feature usage event logged.</p>
+<p><img src="featureUsage.png" alt="Feature usage event example"></p>
+<h2>Conclusion</h2>
+<p>These types of events (features, logs, errors) because especially useful in serverless environments. Often, default logging in a serverless environment is either non-existent or much more difficult to set up. By dropping <a href="https://exceptionless.com">Exceptionless</a> into your serverless application, you can track just about anything you're interested in. If you'd like to see full examples of Exceptionless in Lambda functions, check out our examples <a href="https://github.com/exceptionless/Exceptionless.Net/tree/master/samples/Exceptionless.SampleLambda">here</a> and <a href="https://github.com/exceptionless/Exceptionless.Net/tree/master/samples/Exceptionless.SampleLambdaAspNetCore">here</a>.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/tour/">Tour</a></li>
+                        <li><a href="/why/">Why?</a></li>
+                        <li><a href="/pricing/">Pricing</a></li>
+                        <li><a href="/news/">News</a></li>
+                        <li><a href="/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/terms/">Terms of Use</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  </body>
+</html>

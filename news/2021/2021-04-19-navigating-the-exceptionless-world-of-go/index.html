@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <title>Navigating The Exceptionless World of Go - Exceptionless</title>
+
+    <meta name="description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="[object Object]">
+
+    <link rel="canonical" href="NaN">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Navigating The Exceptionless World of Go - Exceptionless">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="NaN">
+    <meta property="og:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta property="og:image" content="undefined/undefined/undefined">
+    <!-- end opengraph -->
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"><meta name="twitter:site" content="@Exceptionless">
+    <meta name="twitter:url" content="NaN">
+    <meta name="twitter:title" content="Navigating The Exceptionless World of Go - Exceptionless">
+    <meta name="twitter:description" content="Real-time exception reporting for ASP.NET, Web API, WebForms, WPF, Console, and MVC applications. Includes event organization, notifications, and more.">
+    <meta name="twitter:image" content="undefined/undefined/undefined">
+    <!-- end twitter -->
+
+    <!-- google tag manager -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-433340-8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-433340-8');
+    </script>
+    <!-- end google tag manager -->
+
+    <link rel="alternate" href="/website/feed.xml" type="application/atom+xml" title="Exceptionless">
+    <link rel="alternate" href="/website/feed.json" type="application/json" title="Exceptionless">
+    <link rel="shortcut icon" href="/website/favicon.ico">
+
+    <link rel="stylesheet" href="/website/assets/cyclone-slider-pro/templates/standard/style.css">
+    <link rel="stylesheet" href="/website/assets/css/theme.css">
+    <link rel="stylesheet" href="/website/assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,300,400,600" rel="stylesheet">
+
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="/website/assets/css/prism.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <link rel="stylesheet" href="/website/assets/css/custom.css">
+  </head>
+  <body class="home page custom-background top-navbar">
+    <header id="banner" class="topnavbar navbar navbar-fixed-top" role="banner">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="/website/">
+                    <img id="site-logo" src="/website/assets/img/exceptionless-logo1.png" alt="Exceptionless - .NET Exception Reporting">
+                </a>
+                <nav id="nav-main" class="nav-main nav-collapse collapse" role="navigation">
+                    <ul id="menu-primary-navigation" class="nav pull-right"><li class="menu-tour"><a href="/website/tour/">Tour</a></li>
+                        <li class="menu-why"><a href="/website/why/">Why?</a></li>
+                        <li class="menu-pricing"><a href="/website/pricing/">Pricing</a></li>
+                        <li class="menu-news"><a href="/website/news/">News</a></li>
+                        <li class="menu-help"><a href="/website/docs/">Docs</a></li>
+                        <li class="menu-log-in"><a href="https://be.exceptionless.io">Log In</a></li>
+                        <li class="menu-sign-up"><a href="https://be.exceptionless.io/signup?domain=www.codesmithtools.com&amp;type=organic">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="megaDrop" class="container-fluid top-megamenu"><div class="container"><div class="row"></div></div></div>
+    </header>
+
+    
+      
+<div class="page-header margin-top">
+  <h1>News</h1>
+</div>
+
+<div id="wrap" class="container" role="document">
+  <div id="content" class="row-fluid">
+    <div id="main" class="span12" role="main">
+      
+        <article class="post type-post status-publish format-standard hentry category-uncategorized tag-net tag-updates">
+          <header>
+            <h1 class="entry-title">Navigating The Exceptionless World of Go</h1>
+          </header>
+          <div class="entry-content">
+            <p>Go does not have the concept of exceptions. Welp, I guess <a href="https://exceptionless.com">Exceptionless</a> doesn't apply. Let's pack it up and head home, everyone.</p>
+<p>Kidding, of course. While Go really doesn't have the concept of exceptions, errors still happen in Go codebases, and those errors need to be handled. Having recently built an Exceptionless client in Go, we had the opportunity to take a deep dive into the Go programming language, and we'd like to share some of what we discovered along the way.</p>
+<h3>No Scrubs, No Exceptions</h3>
+<p><img src="https://media.giphy.com/media/ty48ztZKklU6k/giphy.gif" alt="Gif of No Scrubs music video"></p>
+<p>Let's take a quick look at why the Go programming language doesn't have exceptions, and then we can dive into how we work around this. From the Go FAQ:</p>
+<blockquote>
+<p>We believe that coupling exceptions to a control structure, as in the try-catch-finally idiom, results in convoluted code. It also tends to encourage programmers to label too many ordinary errors, such as failing to open a file, as exceptional.</p>
+</blockquote>
+<p>Essentially, Go doesn't want any scrubs (try/catch paradigm) hanging out the passenger side of their best friend's (that's you) ride trying to call things exceptions. Not everything is fatal. Not everything is an exception. Errors can happen without being so extraordinary to be considered an exception. As such, Go made the opinionated decision to simply not acknowledge exceptions as a construct.</p>
+<p>For those instances where an error is truly catastrophic, Go has some build in mechanism to handle and recover. Those are <a href="https://blog.golang.org/defer-panic-and-recover">documented here</a>.</p>
+<p>So with no exceptions, how should errors be handled when using Exceptionless?</p>
+<h3>No Exceptions != No Errors</h3>
+<p>Just because there are no exceptions doesn't mean there are no errors. Fortunately, Go has a well-documented paradigm for handling errors without the need for something like an exception.</p>
+<p>Every function you write in Go can have multiple return values. So, a well-written function will return both an error and the actual function's response. Let's take a look at a very basic example of this.</p>
+<pre><code class="language-go hljs"><span class="hljs-keyword">package</span> main 
+
+<span class="hljs-keyword">import</span> ( 
+	<span class="hljs-string">"github.com/go-errors/errors"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">CombineStrings</span><span class="hljs-params">(string1 <span class="hljs-keyword">string</span>, string2 <span class="hljs-keyword">string</span>)</span> <span class="hljs-params">(<span class="hljs-keyword">string</span>, error)</span></span> {
+	<span class="hljs-keyword">var</span> errToReturn error
+	
+  <span class="hljs-keyword">if</span> string1 == <span class="hljs-string">""</span> || string2 == <span class="hljs-string">""</span> {
+    errToReturn = errors.New(fmt.Sprintf(<span class="hljs-string">"Strings must have at least one character"</span>))
+  }
+
+  returnValue := string1 + string2
+	<span class="hljs-keyword">return</span> returnValue, errToReturn
+}
+</code></pre>
+<p>In this example, we are using the <code>go-errors</code> module to build an error of the type <code>error</code>. We do a simple check to see if both of the string arguments to our function are not empty. If either is empty, we assign an error to the variable <code>errToReturn</code>. Then, in our return statement, we return both the expected return value of the function and the error.</p>
+<p>When calling this function, the developer needs to first check for an error before moving on. That might look like this:</p>
+<pre><code class="language-go hljs">combinedString, err := CombineString(<span class="hljs-string">"hello, "</span>, <span class="hljs-string">"world"</span>)
+
+<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+  <span class="hljs-comment">//Handle Error</span>
+}
+
+fmt.Print(combinedString)
+</code></pre>
+<p>If an error is so bad that your code cannot execute any further, you may want to call Go's built in handler, <code>panic</code>, like this:</p>
+<pre><code class="language-go hljs"><span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+  <span class="hljs-built_in">panic</span>(err)
+}
+</code></pre>
+<h3>Ok, So How Do We Use Exceptionless in an Exceptionless Environment?</h3>
+<p>Exceptionless (that's us) is a way of thinking about your code. It does not actually rely on the concepts of exceptions. In fact, Exceptionless is so much more than error/exception handling.</p>
+<p>So, with that framing, it becomes a lot more clear that Exceptionless can very easily be used within Go code to handle errors. In fact, the structure for using Exceptionless in Go is not all that different from other programming languages.</p>
+<p>We have a (currently as of the writing of this post) beta version of a <a href="https://github.com/exceptionless/Exceptionless.Go">Go Exceptionless client</a>. You can find that here. I'll show you how to use the client, but do note that the client API could change until it's out of beta. The goal here is less about showing off the Go client and more about showing you how to handle errors with an event monitoring service within Go.</p>
+<p>The first thing you'll need to do is sign up for Exceptionless and get an API Key. <a href="https://exceptionless.com">You can sign up here</a>. Once you've done that, you'll need to install the Exceptionless Go client in your project. To do so, simply run the following:</p>
+<pre><code>go get https://github.com/exceptionless/Exceptionless.Go
+</code></pre>
+<p>Once that's installed, import it into your project like this:</p>
+<pre><code class="language-go hljs"><span class="hljs-keyword">import</span> (
+  <span class="hljs-string">"github.com/exceptionless/Exceptionless.Go"</span>
+)
+</code></pre>
+<p>Now, let's take a look at how we would use the client. On app startup (probably in your <code>main</code> function), you can initialize and configure the client like this:</p>
+<pre><code class="language-go hljs"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+  config := exceptionless.Exceptionless{
+    ApiKey: <span class="hljs-string">"YOUR API KEY"</span>
+  }
+  exceptionless.Configure(config)
+}
+</code></pre>
+<p>With the Exceptionless client configured, you can now use it to handle all sorts of events in your app. We're going to focus in on exception—or, not exceptions as the case might be with go 😉.</p>
+<p>Let's use our example function from earlier as the example.</p>
+<pre><code class="language-go hljs"><span class="hljs-keyword">package</span> main 
+
+<span class="hljs-keyword">import</span> ( 
+	<span class="hljs-string">"github.com/go-errors/errors"</span>
+  <span class="hljs-string">"github.com/exceptionless/Exceptionless.Go"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">SomOtherFunction</span><span class="hljs-params">()</span></span> {
+  combinedString, err := CombineString(<span class="hljs-string">""</span>, <span class="hljs-string">"world"</span>)
+
+<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+  exceptionless.SubmitError(err)
+}
+
+fmt.Print(combinedString)
+}
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">CombineStrings</span><span class="hljs-params">(string1 <span class="hljs-keyword">string</span>, string2 <span class="hljs-keyword">string</span>)</span> <span class="hljs-params">(<span class="hljs-keyword">string</span>, error)</span></span> {
+	<span class="hljs-keyword">var</span> errToReturn error
+	
+  <span class="hljs-keyword">if</span> string1 == <span class="hljs-string">""</span> || string2 == <span class="hljs-string">""</span> {
+    errToReturn = errors.New(fmt.Sprintf(<span class="hljs-string">"Strings must have at least one character"</span>))
+  }
+
+  returnValue := string1 + string2
+	<span class="hljs-keyword">return</span> returnValue, errToReturn
+}
+</code></pre>
+<p>If you remember the <code>CombineStrings</code> function will return an error if either string is empty. So in my mock function <code>SomeOtherFunction</code>, I am calling <code>CombineStrings</code> and passing in an empty string. When the error comes back, all we need to do is handle it with Exceptionless using <code>exceptionless.SubmitError()</code>. Simple as that.</p>
+<h3>Conclusion</h3>
+<p>There is a lot more you could do. The Exceptionless Go client allows you to build custom events with more info. You could even bypass the client entirely and make an http request directly to the <a href="https://api.exceptionless.com">Exceptionless API</a> in your error handler.</p>
+<p>But the point is, despite Go being an exceptionless programming environment, you can catch errors and report them. So that means Exceptionless is actually a match made in heaven for the <em>exceptionless</em> environment of Go.</p>
+
+          </div>
+        </article>
+            
+    </div>
+  </div>
+</div>
+
+    
+
+    <div id="footer-wrapper">
+        <footer id="content-info" class="container" role="contentinfo">
+            <div class="row-fluid">
+                <div class="span4"><section id="text-2" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Quick Links</h3>
+                    <ul class="footer-links clearfix">
+                        <li><a href="/website/">Home</a></li>
+                        <li><a href="/website/tour/">Tour</a></li>
+                        <li><a href="/website/why/">Why?</a></li>
+                        <li><a href="/website/pricing/">Pricing</a></li>
+                        <li><a href="/website/news/">News</a></li>
+                        <li><a href="/website/docs/">Docs</a></li>
+                    </ul>
+                    <ul class="footer-links clearfix">
+                        <li><a href="javascript:Intercom('showNewMessage');">Contact</a></li>
+                        <li><a href="https://github.com/exceptionless/Exceptionless" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="/website/about/">About Us</a></li>
+                        <li><a href="/website/terms/">Terms of Use</a></li>
+                        <li><a href="/website/privacy/">Privacy Policy</a></li>
+                        <li>&nbsp;</li>
+                    </ul></div>
+                </div></section></div>
+                <div class="span3"></div>
+                <div class="span4"><section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3><span class="slash">//</span> Stay In Touch</h3>
+                    <p>There are real people behind Exceptionless, so if you have a question or suggestion (no matter how small) please get in touch with us:</p>
+
+                    <ul class="social-icons-container">
+                        <li>
+                            <a href="https://twitter.com/exceptionless" target="_blank" class="social-icon social-icon-twitter" rel="noopener noreferrer">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/exceptionless" target="_blank" class="social-icon social-icon-facebook" rel="noopener noreferrer">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/exceptionless/Exceptionless" target="_blank" class="social-icon social-icon-github" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul></div>
+                </div></section></div>
+            </div>
+        </footer>
+        <div class="copyrightContainer">
+            <p class="copyright">© 2020 Exceptionless</p>
+        </div>
+    </div>
+
+    <script src="/website/assets/js/main.js"></script>
+    
+    <!-- intercom -->
+<script>
+window.intercomSettings = {
+    app_id: "6c0d76e0bec950052459f5cb4b727a949aeabbe1"
+};
+</script>
+
+<script>
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/6c0d76e0bec950052459f5cb4b727a949aeabbe1';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- end intercom -->
+
+  
+
+</body></html>
