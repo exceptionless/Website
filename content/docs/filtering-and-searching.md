@@ -2,10 +2,10 @@
 title: Filtering & Searching
 order: 4
 ---
-- [Filter by Organization & Project](#filter-by-organization--project)
+- [Filter by Organization & Project](#filter-by-organization-and-project)
 - [Filter by Time Frame](#filter-by-time-frame)
-- [Filter / Search by Specific Criteria](#filter--search-by-specific-criteria)
-- [Searchable Fields & Requirements](#searchable-fields--requirements)
+- [Filter / Search by Specific Criteria](#filter-search-by-specific-criteria)
+- [Searchable Fields & Requirements](#searchable-fields-and-requirements)
 - [Multiple Queries](#multiple-queries)
 - [Wild Cards](#wild-cards)
 - [Exclusions](#exclusions)
