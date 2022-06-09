@@ -47,7 +47,7 @@ try {
 }
 ```
 
-Exceptionless supports a wide range of platforms. For a full list, see the [supported platforms page here](supported-platforms.md).
+Exceptionless supports a wide range of platforms. For a full list, see the [supported platforms page here](../supported-platforms.md).
 
 --- 
 
