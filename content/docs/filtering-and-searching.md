@@ -117,7 +117,7 @@ Specify a `date` or `numeric` range as part of the term.
 
 ## Custom Extended Data
 
-All simple data types (`string`, `boolean`, `date`, `number`) that are stored in extended data will be indexed. _NOTE: Field names will be lowercased and escaped. Any field name that is not a valid identifier (containing only letter and digits) or is longer than 25 characters will be ignored.
+All simple data types (`string`, `boolean`, `date`, `number`) that are stored in extended data will be indexed. _NOTE_: Field names will be lowercased and escaped. Any field name that is not a valid identifier (containing only letter and digits) or is longer than 25 characters will be ignored.
 
 **Example:** Lets assume that our events extended data contains a property called `Age` with a value of `18`. To search for this value our query would be `data.age:18`.
 
