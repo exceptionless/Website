@@ -85,7 +85,7 @@ The automatic recurring configuration settings check **can be disable** by calli
 
 You can now define a simple `Func<Event,bool>` callback to stop events from being submitted in the .NET client.
 
-For example, if I wanted to ignore any event with a `value` property of `2` I could use `client.Configuration.AddEventExclusion(e => e.Value.GetValueOrDefault() != 2);`
+For example, if I wanted to ignore any event with a `value` property of `2` I could use `client.Configuration.AddEventExclusion(e => e.Value.GetValueOrDefault() == 2);`
 
 ### Bug Fix for SettingsCollection Boolean Values Support in .NET Client
 
