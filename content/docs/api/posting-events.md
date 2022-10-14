@@ -15,7 +15,7 @@ We'll explore how to send through events for each category. First, it's importan
 
 ### Posting Messages
 
-Messages are arbitrary peices of information that can mean or relate to anything. They don't have to be errors or logs. Configuring a message event is simple. 
+Messages are arbitrary pieces of information that can mean or relate to anything. They don't have to be errors or logs. Configuring a message event is simple. 
 
 POST `api/v2/events`  
 
