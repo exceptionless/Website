@@ -80,7 +80,7 @@ ExceptionlessClient.Default.Configuration.UpdateSettingsWhenIdleInterval = TimeS
 You can also manually update the configuration settings using the code below.
 
 ```csharp
-Exceptionless.Configuration.SettingsManager.UpdateSettings(ExceptionlessClient.Default.Configuration);
+await Exceptionless.Configuration.SettingsManager.UpdateSettingsAsync(ExceptionlessClient.Default.Configuration);
 ```
 
 ## Subscribing to Client Configuration Setting changes
@@ -172,6 +172,6 @@ using Exceptionless;
 ExceptionlessClient.Default.Configuration.DefaultTags.Add("Tag1");
 ```
 
---- 
+---
 
 [Next > Plugins](plugins.md) {.text-right}

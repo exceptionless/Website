@@ -73,13 +73,15 @@ The automatic recurring configuration settings check **can be disable** by calli
 
 #### .NET
 
-`client.Configuration.UpdateSettingsWhenIdleInterval = TimeSpan.Zero;`
+```csharp
+client.Configuration.UpdateSettingsWhenIdleInterval = TimeSpan.Zero;
+```
 
 #### JavaScript
 
-`client.config.updateSettingsWhenIdleInterval = -1;`
-
-###
+```javascript
+client.config.updateSettingsWhenIdleInterval = -1;`
+```
 
 ### New Easy Way to Exclude Events from Being Submitted in .NET
 

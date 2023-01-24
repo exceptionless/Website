@@ -57,8 +57,8 @@ You can use our client API to start, update, or end a session. Just remember, a 
 ```csharp
 using Exceptionless;
 ExceptionlessClient.Default.SubmitSessionStart();
-ExceptionlessClient.Default.SubmitSessionHeartbeat();
-ExceptionlessClient.Default.SubmitSessionEnd();
+await ExceptionlessClient.Default.SubmitSessionHeartbeatAsync();
+await ExceptionlessClient.Default.SubmitSessionEndAsync();
 ```
 
 ### JavaScript Submit Session Events Example

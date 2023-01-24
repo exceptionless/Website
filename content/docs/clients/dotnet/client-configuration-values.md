@@ -14,6 +14,7 @@ parent: .NET
 - [Subscribing to Client Configuration Setting changes](#subscribing-to-client-configuration-setting-changes)
 
 ## About
+
 [Read about client configuration and view in-depth examples](../../project-settings.md)
 
 ## Usage Example
@@ -67,25 +68,29 @@ By default the client will check after `5 seconds` on client startup (*if no eve
   * If the settings haven't changed, then no settings will be retrieved.
 
 You can also **turn off the automatic updating of configuration settings when idle** using the code below.
+
 ```csharp
 ExceptionlessClient.Default.Configuration.UpdateSettingsWhenIdleInterval = TimeSpan.Zero;
 ```
 
 You can also manually update the configuration settings using the code below.
+
 ```csharp
-Exceptionless.Configuration.SettingsManager.UpdateSettings(ExceptionlessClient.Default.Configuration);
+await Exceptionless.Configuration.SettingsManager.UpdateSettingsAsync(ExceptionlessClient.Default.Configuration);
 ```
 
 ## Subscribing to Client Configuration Setting changes
+
 To be notified when client configuration settings change, subscribe to them using the below code.
+
 ```csharp
 ExceptionlessClient.Default.Configuration.Settings.Changed += SettingsOnChanged;
- 
+
 private void SettingsOnChanged(object sender, ChangedEventArgs<KeyValuePair<string, string>> args) {
    Console.WriteLine("The key {0} was {1}", args.Item.Key, args.Action);
 }
 ```
 
---- 
+---
 
 [Next > Platform Guides](guides/index.md) {.text-right}

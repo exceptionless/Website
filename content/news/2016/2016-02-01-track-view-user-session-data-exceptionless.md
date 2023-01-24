@@ -108,13 +108,13 @@ Sure! You can send these events manually via our client API to start, update, or
 ```cs
 using Exceptionless;
 ExceptionlessClient.Default.SubmitSessionStart();
-ExceptionlessClient.Default.SubmitSessionHeartbeat();
-ExceptionlessClient.Default.SubmitSessionEnd();
+await ExceptionlessClient.Default.SubmitSessionHeartbeatAsync();
+await ExceptionlessClient.Default.SubmitSessionEndAsync();
 ```
 
 ### JavaScript
 
-```js
+```javascript
 exceptionless.ExceptionlessClient.default.submitSessionStart();
 exceptionless.ExceptionlessClient.default.submitSessionHeartbeat();
 exceptionless.ExceptionlessClient.default.submitSessionEnd();

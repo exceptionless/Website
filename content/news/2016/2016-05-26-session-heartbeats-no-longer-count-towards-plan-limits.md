@@ -33,7 +33,7 @@ So, we created a new GET API endpoint `/api/v2/events/session/heartbeat` ([api 
 
 Our existing `CloseInactiveSessionsJob.cs` was already periodically polling for open sessions to check for inactive sessions so it could automatically close them after a period of time if no session end event was sent, so we just updated this job to check for the unique session cache keys ([source](hhttps://github.com/exceptionless/Exceptionless/blob/master/src/Exceptionless.Core/Jobs/CloseInactiveSessionsJob.cs#L52)) and get the last time a heartbeat was sent in or see if it was closed. It then takes the appropriate action and updates the session event.
 
-Then we just updated the clients to call this new API endpoint when `client.Submit.SessionHeartbeat("id")` or `client.SubmitSessionEnd("id")` is called.
+Then we just updated the clients to call this new API endpoint when `await client.SubmitSessionHeartbeatAsync("id")` or `await client.SubmitSessionEndAsync("id")` is called.
 
 ## Efficiency Achieved!
 

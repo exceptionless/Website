@@ -3,19 +3,19 @@ title: Console Apps Example
 order: 1
 ---
 
-Exceptionless runs in all types of .NET aplications. Let's take a look at how to get started with Exceptionless in a console application. First, we'll some configuration out of the way. 
+Exceptionless runs in all types of .NET aplications. Let's take a look at how to get started with Exceptionless in a console application. First, we'll some configuration out of the way.
 
-To use Exceptionless, add the Exceptionless namespace like this: `using Exceptionless;` 
+To use Exceptionless, add the Exceptionless namespace like this: `using Exceptionless;`
 
-Once you've done that, be sure to define the Exceptionless client: 
+Once you've done that, be sure to define the Exceptionless client:
 
-`var client = new ExceptionlessClient("YOUR API KEY");`  
+`var client = new ExceptionlessClient("YOUR API KEY");`
 
-Now you can send events to Exceptionless like this: 
+Now you can send events to Exceptionless like this:
 
-`client.SubmitLog("Hello World!");` 
+`client.SubmitLog("Hello World!");`
 
-Or you can capture exceptions like this: 
+Or you can capture exceptions like this:
 
 ```csharp
 try {
@@ -26,13 +26,13 @@ try {
 }
 ```
 
-Because Exceptionless is designed to process events asynchronously in the background via a queue, you may need to make sure the event is processed before the app exits. If this is a requirement for your app, you can handle this situation by telling Exceptionless about it up front with `client.Startup();`, which means Exceptionless knows to force process any events in the queue before allowing the app to exit, or by calling `client.processQueue();` before your application exists. 
+Because Exceptionless is designed to process events asynchronously in the background via a queue, you may need to make sure the event is processed before the app exits. If this is a requirement for your app, you can handle this situation by telling Exceptionless about it up front with `client.Startup();`, which means Exceptionless knows to force process any events in the queue before allowing the app to exit, or by calling `await client.ProcessQueueAsync();` before your application exists.
 
-There's one additional configuration option that doesn't require defining the client first. If you use the Exceptionless default client, it takes care of of most things for you. Simply load up the Exceptionless default client by calling `Startup` with your API Key, and you're ready to go: 
+There's one additional configuration option that doesn't require defining the client first. If you use the Exceptionless default client, it takes care of of most things for you. Simply load up the Exceptionless default client by calling `Startup` with your API Key, and you're ready to go:
 
 `ExceptionlessClient.Default.Startup("Your API Key");`
 
-When you go this route, you can send exceptions to Exceptionless just by calling a `ToExceptionless()` method on the default Exceptionless client. It looks like this: 
+When you go this route, you can send exceptions to Exceptionless just by calling a `ToExceptionless()` method on the default Exceptionless client. It looks like this:
 
 ```csharp
 // configure the default instance
@@ -49,6 +49,6 @@ try {
 
 Exceptionless supports a wide range of platforms. For a full list, see the [supported platforms page here](../supported-platforms.md).
 
---- 
+---
 
 [Next > Web Server Example](web-server-example.md) {.text-right}

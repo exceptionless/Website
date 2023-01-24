@@ -17,7 +17,7 @@ If you are using Exceptionless in a scenario where an event is submitted and the
 Events are queued to disk and sent in the background, if the application isn’t running then the events cannot be sent. You can manually force the queue to be processed by calling the following line of code before before the process ends:
 
 ```csharp
-ExceptionlessClient.Default.ProcessQueue();
+await ExceptionlessClient.Default.ProcessQueueAsync();
 ```
 
 This will cause the event queue to be processed synchronously and the events to be reported. If this doesn’t solve the issue then please enable client logging and send us the log file.
@@ -73,6 +73,6 @@ ExceptionlessClient.Default.Configuration.UseFileLogger("C:\\exceptionless.log")
 
 You can also debug the Exceptionless NuGet packages by configuring the Visual Studio source server integration. Please follow the [Symbol Source documentation](http://tripleemcoder.com/2015/10/04/moving-to-the-new-symbolsource-engine/) on configuring Visual Studio.
 
---- 
+---
 
 [Next > Upgrading](upgrading.md) {.text-right}

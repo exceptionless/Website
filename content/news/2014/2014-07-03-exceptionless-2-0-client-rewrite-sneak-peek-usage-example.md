@@ -129,7 +129,7 @@ try {
 Let users add their email address and a description of the error.
 
 ```cs
-client.UpdateUserEmailAndDescription(client.GetLastReferenceId(), "me@me.com", "It broke!");
+await client.UpdateUserEmailAndDescriptionAsync(client.GetLastReferenceId(), "me@me.com", "It broke!");
 ```
 
 * * *
