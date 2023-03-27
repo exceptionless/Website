@@ -105,7 +105,6 @@ For example, if I wanted to ignore any event with a `value` property of `2` I co
 
 We hope these new features and feature improvements help your Exceptionless experience, and we plan to continue to listen to user feedback and improve the system where improvements need to be made. To do that, though, we need to hear what you want out of the app. If you have a favorite feature request, or something that just bothers you, please let us know by dropping us a line on GitHub Issues under the appropriate repository, listed below, or just comment here and we'll figure it out!
 
-* [User Interface Feedback](https://github.com/exceptionless/Exceptionless.UI/issues/new)
 * [.NET Client Feedback](https://github.com/exceptionless/Exceptionless.Net/issues/new)
 * [JavaScript Client Feedback](https://github.com/exceptionless/Exceptionless.JavaScript/issues/new)
 * [Exceptionless Feedback](https://github.com/exceptionless/exceptionless/issues/new)

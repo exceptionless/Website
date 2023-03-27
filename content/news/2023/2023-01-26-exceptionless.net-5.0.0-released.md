@@ -18,7 +18,6 @@ Upgrading to the latest version of the Exceptionless .NET client is simple. Just
 
 We are constantly working to improve our .NET client and provide the best error tracking and reporting experience for .NET developers. With the addition of Blazor support, we believe that we have taken another step forward in achieving that goal. We can't wait to see what you build with it!
 
-* [User Interface Feedback](https://github.com/exceptionless/Exceptionless.UI/issues/new)
 * [.NET Client Feedback](https://github.com/exceptionless/Exceptionless.Net/issues/new)
 * [JavaScript Client Feedback](https://github.com/exceptionless/Exceptionless.JavaScript/issues/new)
 * [Exceptionless Feedback](https://github.com/exceptionless/exceptionless/issues/new)

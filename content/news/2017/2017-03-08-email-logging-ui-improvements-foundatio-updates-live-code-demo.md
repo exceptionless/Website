@@ -12,11 +12,11 @@ Watch out this week, Blake's on fire! We're talking email loggings, UI tweaks, E
 
 This week, we made improvements to email logging and documentation when running in dev mode. Find out more by watching the live coding video or visiting the [Exceptionless repo on GitHub](https://github.com/exceptionless/Exceptionless).
 
-## Exceptionless.UI
+## Exceptionless
 
 We were only showing the exception tab if there was an event type of error, previously, but now we are always showing the exception tab if an exception is part of an event.
 
-[View Repo](https://github.com/exceptionless/Exceptionless.UI)
+[View Repo](https://github.com/exceptionless/Exceptionless)
 
 ## Exceptionless.NET
 

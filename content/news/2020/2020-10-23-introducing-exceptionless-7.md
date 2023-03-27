@@ -23,11 +23,11 @@ All dashboards now have a both high level stats and a timeline view by default. 
 
 ![example dashboard](dashboard_7_0.png)
 
-You'll also notice we've renamed some of our stats labels to make things a little more clear.  
+You'll also notice we've renamed some of our stats labels to make things a little more clear.
 
 ## Navigation
 
-We've made some minor adjustments to navigation icons, spacing, and more to make the experience in Exceptionless better as you move throughout the application.  
+We've made some minor adjustments to navigation icons, spacing, and more to make the experience in Exceptionless better as you move throughout the application.
 
 ![example navigation](navigation.png)
 
@@ -35,7 +35,6 @@ We've made some minor adjustments to navigation icons, spacing, and more to make
 
 We are constantly improving based on user feedback. If you'd like to reach out, please do so any time. You can also add your feedback at either of the two links below:
 
-* [User Interface Feedback](https://github.com/exceptionless/Exceptionless.UI/issues/new)  
-* [Exceptionless Core Feedback](https://github.com/exceptionless/exceptionless/issues/new)  
+* [Exceptionless Feedback](https://github.com/exceptionless/exceptionless/issues/new)
 
 Happy building!

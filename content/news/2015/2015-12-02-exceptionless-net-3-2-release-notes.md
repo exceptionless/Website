@@ -69,7 +69,6 @@ NLog and log4net have been updated to allow setting the min log level.
 
 As always, we're listening to your feedback, comments, suggestions, and rants!
 
-* [User Interface Feedback](https://github.com/exceptionless/Exceptionless.UI/issues/new)
 * [.NET Client Feedback](https://github.com/exceptionless/Exceptionless.Net/issues/new)
 * [JavaScript Client Feedback](https://github.com/exceptionless/Exceptionless.JavaScript/issues/new)
 * [Exceptionless Feedback](https://github.com/exceptionless/exceptionless/issues/new)

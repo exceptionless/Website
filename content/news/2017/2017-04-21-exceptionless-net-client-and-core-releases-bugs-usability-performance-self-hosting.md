@@ -15,8 +15,8 @@ Lastly, thanks to all of our contributors for helping us solve problems, add fun
 ## Exceptionless 4.0.2 Release Notes
 
 * Both [@caesay](https://github.com/caesay) and [@edwardmeng](https://github.com/edwardmeng) submitted pull requests and helped us solve an issue with sending emails (issue [#290](https://github.com/exceptionless/Exceptionless/issues/290)). [MailKit](https://github.com/jstedfast/MailKit), a "cross-platform mail client library," has now been integrated, adding "fully featured and RFC-compliant SMTP, POP3, and IMAP client implementations" into Exceptionless.
-    * There were also a few issues with email when hosting in different environments, such as Azure Functions. In this case, all email settings must be stored in settings and not web.config. So, we moved the MailKit implementation to the insulation project and cleaned up the main mailer class, among a few other tweaks, to further improve email sending in the app. Thanks again caesay and edwardmeng!
-    * **If you are self hosting**, please update the email settings in `appSettings`
+  * There were also a few issues with email when hosting in different environments, such as Azure Functions. In this case, all email settings must be stored in settings and not web.config. So, we moved the MailKit implementation to the insulation project and cleaned up the main mailer class, among a few other tweaks, to further improve email sending in the app. Thanks again caesay and edwardmeng!
+  * **If you are self hosting**, please update the email settings in `appSettings`
 * Support for Azure Storage Queues has been added to the app.
 * A bug that could cause an exception and make the stack work queue be abandoned when a stack of events was deleted has been fixed.
 * The GeoIP database was being downloaded each time the app was restarted. That has also been fixed.
@@ -25,7 +25,7 @@ Lastly, thanks to all of our contributors for helping us solve problems, add fun
 
 ### Upgrading to Exceptionless 4.0.2
 
-You should only worry about upgrading if you are a self hoster. If this is the case, please see the [Exceptionless self hosting documentation](/docs/self-hosting/). **Note that changes to the Elasticsearch configuration were made in this release**, so make sure to review the documentation for more information.
+You should only worry about upgrading if you are a self-hoster. If this is the case, please see the [Exceptionless self hosting documentation](/docs/self-hosting/). **Note that changes to the Elasticsearch configuration were made in this release**, so make sure to review the documentation for more information.
 
 ## Exceptionless.NET 4.0.3 Release Notes
 
@@ -64,7 +64,6 @@ Just update your NuGet packages. For more info, check out the [upgrade guide](/d
 
 We **want** to know what you think about Exceptionless - what you think we should add, fix, streamline, improve, etc. Please let us know!
 
-* [User Interface Feedback](https://github.com/exceptionless/Exceptionless.UI/issues/new)
 * [.NET Client Feedback](https://github.com/exceptionless/Exceptionless.Net/issues/new)
 * [JavaScript Client Feedback](https://github.com/exceptionless/Exceptionless.JavaScript/issues/new)
-* [General Exceptionless Feedback](https://github.com/exceptionless/exceptionless/issues/new)
+* [Exceptionless Feedback](https://github.com/exceptionless/exceptionless/issues/new)
