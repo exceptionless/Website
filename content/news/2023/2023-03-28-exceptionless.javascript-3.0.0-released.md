@@ -13,16 +13,6 @@ the developer experience while addressing critical issues and enhancing the
 overall functionality of our offering. Below are some of the highlights of this
 release.
 
-## Best-in-Class Prune Implementation
-
-We now offer a [super robust prune implementation](https://github.com/exceptionless/Exceptionless.JavaScript/blob/v3.0.0/packages/core/src/Utils.ts#L193-L367)
-that supports all JavaScript types, making it the best implementation out there.
-This allows us to respect the max depth when sending custom event data,
-providing a much more efficient and streamlined experience.
-
-We made sure that we handle all the cases and data types for a consistent and
-error free experience.
-
 ## Graceful Termination
 
 The improved client behavior now ensures a graceful termination when the last
@@ -33,7 +23,10 @@ experience for developers.
 
 This release includes a plethora of new features and fixes, such as:
 
-- Support for serializing event data with a maxDepth
+- Support for serializing event data with a `maxDepth`. As part of this we did a
+  lot of work to add a [prune implementation](https://github.com/exceptionless/Exceptionless.JavaScript/blob/v3.0.0/packages/core/src/Utils.ts#L193-L367)
+  that handles all cases like circular references, Typed Arrays, Unsupported
+  types (E.G., Buffers) and more
 - Improved handling of different promise rejection error types
 - Ignoring errors created by browser extensions
 - Session management improvements
