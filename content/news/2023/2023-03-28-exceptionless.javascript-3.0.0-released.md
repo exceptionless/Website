@@ -48,7 +48,7 @@ ensuring developers have the most up-to-date guidance for using this feature.
 We have addressed several bugs in this release, including:
 
 - Fixing configuration default data not having exclusions applied
-- Ensuring queue timer fires when the API key isn't configured
+- Preventing timers from firing when the API key isn't configured
 - Preserving event type if the event has an error
 - Catching and logging storage API call errors
 
@@ -61,8 +61,8 @@ Additionally, we have added examples for various error browser integrations
 
 ## Breaking Changes
 
-Our new release targets ES2021 and ESM Node 18 (fetch built-in), which may
-require developers to adjust their projects accordingly.
+Our new release targets ES2021 and ESM Node 18 (fetch built-in). This allows
+us to reduce the size of our bundles by removing polyfills.
 
 ## We want to hear from you
 
