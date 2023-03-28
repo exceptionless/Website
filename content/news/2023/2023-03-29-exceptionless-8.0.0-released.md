@@ -24,11 +24,11 @@ You now have the ability to suspend API tokens, giving you greater control over
 your account security. Just navigate over to your manage projects `API Keys`
 tab and click on the `Disable` button.
 
-![Project Settings Disable API Key](/assets/img/news/project-settings-api-keys-disable.png)
+![Project Settings Disable API Key](../../assets/img/news/project-settings-api-keys-disable.png)
 
 This will bring up a modal to confirm you want to disable the API Key.
 
-![Project Settings Disable API Key Modal](/assets/img/news/project-settings-api-keys-disable-modal.png)
+![Project Settings Disable API Key Modal](../../assets/img/news/project-settings-api-keys-disable-modal.png)
 
 You can always reenable the API Key later by clicking on the `Enable` button.
 
