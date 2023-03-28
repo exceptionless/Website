@@ -7,7 +7,7 @@ author: Blake Niemyjski
 We are thrilled to announce our [latest update](https://github.com/exceptionless/Exceptionless/releases/tag/v8.0.0),
 packed with new features, improvements, and bug fixes designed to elevate your
 experience with our platform. With support for Discord notifications,
-Elasticsearch 8.0, OpenTelemetry, .NET 7.0, and arm64, we're confident that
+Elasticsearch 8, OpenTelemetry, .NET 7, and arm64, we're confident that
 this release will make a significant impact. Plus, we've merged our UI codebase
 into our main repo, streamlining self-hosting and development for our users.
 
@@ -38,9 +38,9 @@ We've added the ability to send Slack webhook messages if the URL ends with
 `/slack`. This feature allows you to [send notification messages](https://ptb.discord.com/developers/docs/resources/webhook#execute-slackcompatible-webhook)
 to Discord and other platforms, keeping you informed about your projects.
 
-### Elasticsearch 8.0 Support
+### Elasticsearch 8 Support
 
-Our latest update includes support for Elasticsearch 8.0, ensuring that you can
+Our latest update includes support for Elasticsearch 8, ensuring that you can
 take advantage of the latest features and improvements offered by Elasticsearch.
 
 ### OpenTelemetry Support
@@ -54,9 +54,9 @@ Our platform now supports arm64 hosting, expanding compatibility and ensuring
 a seamless experience across various platforms. This not only increases
 performance but saves on self hosting costs.
 
-### Upgrade to .NET 7.0
+### Upgrade to .NET 7
 
-We have upgraded to .NET 7.0, providing you with the latest features and
+We have upgraded to .NET 7, providing you with the latest features and
 performance enhancements from the .NET ecosystem.
 
 ## Upgrading to 8.0
