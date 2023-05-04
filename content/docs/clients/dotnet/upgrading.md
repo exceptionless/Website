@@ -4,10 +4,19 @@ order: 11
 parent: .NET
 ---
 
+- [Upgrading from Exceptionless 5.x](#upgrading-from-exceptionless-5x)
 - [Upgrading from Exceptionless 4.x](#upgrading-from-exceptionless-4x)
   - [ProcessQueueAsync IAsyncDisposable pattern](#processqueueasync-iasyncdisposable-pattern)
 - [Upgrading from Exceptionless 3.x](#upgrading-from-exceptionless-3x)
 - [Upgrading from Exceptionless 2.x](#upgrading-from-exceptionless-2x)
+
+## Upgrading from Exceptionless 5.x
+
+We bumped the major version due to serialization changes we made under the hood.
+We now only apply snake case naming strategy to known exceptionless models. Any
+extra data like custom exception properties or user defined data is preserved
+exactly as is. We also made changes to ensure that empty collections and
+dictionaries are now serialized as they were previously excluded.
 
 ## Upgrading from Exceptionless 4.x
 
