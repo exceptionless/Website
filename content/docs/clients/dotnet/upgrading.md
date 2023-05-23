@@ -90,7 +90,6 @@ We recommend creating a `ProcessQueueScope` as a reusable utility class and feel
 ## Upgrading from Exceptionless 3.x
 
 - The `Exceptionless.Portable` package and `Exceptionless.Extras` assembly was merged into the `Exceptionless` package.
-- The `ExceptionlessClient.Default.Register()` method has been removed as the functionality was merged into `ExceptionlessClient.Default.Startup()` method.
 
 ## Upgrading from Exceptionless 2.x
 
