@@ -36,7 +36,7 @@ Version 6 added support for Elasticsearch 7, which requires a complete data migr
 3. Add your existing Elasticsearch instance to `reindex.remote.whitelist` in Elasticsearch 7's `elasticsearch.yml`. Make sure you include the port as well, for example `reindex.remote.whitelist: 127.0.0.1:9200`.
 4. Update the existing `EX_Elasticsearch` environment variable or config map entry to point to the Elasticsearch 7.x Cluster.
 5. Scale down existing Exceptionless apps and jobs.
-6. Start the Data Migration by running the `DataMigration` job. You can run it by opening the CLI and executing `dotnet Exceptionless.Job.dll DataMigration`. If you receive a warning that the port is already used, you need to change `ASPNETCORE_URLS` first, for example `ASPNETCORE_URLS=http://+:808`. You can also run an incremental reindex by setting the `EX_ReindexCutOffDate` with a date value (E.G., `2022-01-28T18:00:00.00Z`., environment variable or config map entry and rerunning the Migration Job.
+6. Start the Data Migration by running the `DataMigration` job. You can run it by opening the CLI and executing `dotnet Exceptionless.Job.dll DataMigration`. If you receive a warning that the port is already used, you need to change `ASPNETCORE_URLS` first, for example `ASPNETCORE_URLS=http://+:8080`. You can also run an incremental reindex by setting the `EX_ReindexCutOffDate` with a date value (E.G., `2022-01-28T18:00:00.00Z`., environment variable or config map entry and rerunning the Migration Job.
 7. Scale up the rest of the app!
 
 ## Upgrading from v4 to v5
