@@ -165,7 +165,7 @@ So, let's get it going!
 Run the following command:
 
 ```bash
-sudo docker run --rm -it -p 5088:8080 \
+sudo docker run --rm -it -p 5200:8080 \
     -v $(pwd)/esdata:/usr/share/elasticsearch/data \
     exceptionless/exceptionless:latest
 ```
@@ -176,4 +176,4 @@ Now, we need to figure out how to access our instance from the outside world. It
 
 ## Opening Ports
 
-If you remember, we didn't really lock down our ports when setting up our VM. We're going to make sure we can access port 5088 and lock everything else down. In reality, you'll probably want to put this all behind Nginx and only allow access to the port from specific IP addresses, but that's beyond the scope of this tutorial.
+If you remember, we didn't really lock down our ports when setting up our VM. We're going to make sure we can access port 5200 and lock everything else down. In reality, you'll probably want to put this all behind Nginx and only allow access to the port from specific IP addresses, but that's beyond the scope of this tutorial.

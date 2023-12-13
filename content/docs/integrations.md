@@ -36,7 +36,7 @@ Here's an example of the event payload (this applies to v2 of the Exceptionless 
 ```json
 {
   "id": "22cd0826e447a44e78877a22",
-  "url": "http://localhost:5000/event/22cd0826e447a44e78877a22",
+  "url": "http://localhost:5200/event/22cd0826e447a44e78877a22",
   "occurrence_date": "2014-01-17T14:37:02.739-06:00",
   "type": "error",
   "message": "A potentially dangerous Request.Path value was detected from the client (&).",
@@ -45,7 +45,7 @@ Here's an example of the event payload (this applies to v2 of the Exceptionless 
   "organization_id": "537650f3b77efe23a47914f3",
   "organization_name": "Acme",
   "stack_id": "1ecd0826e447a44e78877ab1",
-  "stack_url": "http://localhost:5000/stack/1ecd0826e447a44e78877ab1",
+  "stack_url": "http://localhost:5200/stack/1ecd0826e447a44e78877ab1",
   "stack_title": "A potentially dangerous Request.Path value was detected from the client (&).",
   "stack_tags": [
     "Test"

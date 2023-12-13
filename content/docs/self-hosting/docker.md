@@ -13,7 +13,7 @@ If you would like to test Exceptionless locally, please follow this section.
 Runs Exceptionless without persisting data between runs. Good for checking out Exceptionless for the first time and testing.
 
 ```bash
-docker run --rm -it -p 5088:8080 exceptionless/exceptionless:latest
+docker run --rm -it -p 5200:8080 exceptionless/exceptionless:latest
 ```
 
 ## Simple Setup
@@ -23,7 +23,7 @@ Runs a very simple non-production setup for Exceptionless with data persisted be
 On Linux:
 
 ```bash
-docker run --rm -it -p 5088:8080 \
+docker run --rm -it -p 5200:8080 \
     -v $(pwd)/esdata:/usr/share/elasticsearch/data \
     exceptionless/exceptionless:latest
 ```
@@ -31,7 +31,7 @@ docker run --rm -it -p 5088:8080 \
 On PowerShell:
 
 ```powershell
-docker run --rm -it -p 5088:8080 `
+docker run --rm -it -p 5200:8080 `
     -v ${PWD}/esdata:/usr/share/elasticsearch/data `
     exceptionless/exceptionless:latest
 ```
@@ -43,7 +43,7 @@ Runs a very simple non-production setup for Exceptionless with data persisted be
 On Linux:
 
 ```bash
-docker run --rm -it -p 5088:8080 -p 5089:443 \
+docker run --rm -it -p 5200:8080 -p 5089:443 \
     -e EX_ConnectionStrings__Email=smtps://user:password@smtp.host.com:587 \
     -e ASPNETCORE_URLS="https://+;http://+" \
     -e ASPNETCORE_HTTPS_PORT=5001 \
@@ -57,7 +57,7 @@ docker run --rm -it -p 5088:8080 -p 5089:443 \
 On PowerShell:
 
 ```powershell
-docker run --rm -it -p 5088:8080 -p 5089:443 `
+docker run --rm -it -p 5200:8080 -p 5089:443 `
     -e EX_ConnectionStrings__Email=smtps://user:password@smtp.host.com:587 `
     -e ASPNETCORE_URLS="https://+;http://+" `
     -e ASPNETCORE_HTTPS_PORT=5001 `

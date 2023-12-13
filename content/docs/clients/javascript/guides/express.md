@@ -80,7 +80,7 @@ In the entry file for your Express app, which is normally `server.js` or `app.js
 
 ```js
 const express = require("express");
-const PORT = 5000;
+const PORT = 5200;
 const { ExceptionlessClient } = require("exceptionless/dist/exceptionless.node");
 const config = {
   apiKey: "YOUR API KEY"

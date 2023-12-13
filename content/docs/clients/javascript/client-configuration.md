@@ -86,7 +86,7 @@ import { Exceptionless } from "@exceptionless/browser";
 
 await Exceptionless.startup(c => {
   c.apiKey: 'API_KEY_HERE',
-  c.serverUrl: 'http://localhost:50000'
+  c.serverUrl: 'http://localhost:5200'
 });
 ```
 
@@ -176,7 +176,7 @@ import { Exceptionless } from "@exceptionless/browser";
 
 await Exceptionless.startup(c => {
   c.apiKey: 'API_KEY_HERE',
-  c.serverUrl: 'http://localhost:50000'
+  c.serverUrl: 'http://localhost:5200'
 });
 ```
 

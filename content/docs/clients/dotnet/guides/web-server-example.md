@@ -56,7 +56,7 @@ This gives your server application access to any configuration you've set in you
 ```json
  "Exceptionless": {
     "ApiKey": "YOUR API KEY",
-    "ServerUrl": "http://localhost:50000",
+    "ServerUrl": "http://localhost:5200",
     "DefaultData": {
         "JSON_OBJECT": "{ \"Name\": \"Alice\" }",
         "Boolean": true,
