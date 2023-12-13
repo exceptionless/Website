@@ -15,7 +15,7 @@ Let's make sure we can get Exceptionless running locally. Ready for how easy thi
 
 Ok, start up Docker Desktop, then in your command line, run:
 
-`docker run --rm -it -p 5000:80 exceptionless/exceptionless:latest`
+`docker run --rm -it -p 5088:8080 exceptionless/exceptionless:latest`
 
 This will check to see if you've already downloaded the latest Exceptionless release, and if not, it will install all of the necessary dependencies. This is important because Exceptionless is split into a client-side front-end and a server-side back-end. Docker lets all of this be combined.
 
@@ -28,7 +28,7 @@ Go ahead and sign up for an account. Keep in mind, this is not a good production
 Along with the front-end that we're looking at now, you also have a full Exceptionless server running. To prove it, let's run a simple cURL command.
 
 ```shell
-curl --location --request POST 'http://localhost:5000/api/v2/auth/login' \
+curl --location --request POST 'http://localhost:5088/api/v2/auth/login' \
   --header 'Content-Type: application/json' \
   --data-raw '{
       "email": EMAIL_ADDRESS,
@@ -43,7 +43,7 @@ The problem here is the data you save in this run of your self-hosted Exceptionl
 Go ahead and shut down Exceptionless either by exiting in the command line or by going into your Docker Desktop Dashboard and clicking the stop button your Exceptionless instance. Once it's stopped, open up your command line again and run:
 
 ```shell
-docker run --rm -it -p 5000:80 \
+docker run --rm -it -p 5088:8080 \
     -v $(pwd)/esdata:/usr/share/elasticsearch/data \
     exceptionless/exceptionless:latest
 ```
@@ -51,12 +51,12 @@ docker run --rm -it -p 5000:80 \
 If you're using PowerShell, you'll instead want to run:
 
 ```shell
-docker run --rm -it -p 5000:80 `
+docker run --rm -it -p 5088:8080 `
     -v ${PWD}/esdata:/usr/share/elasticsearch/data `
     exceptionless/exceptionless:latest
 ```
 
-Now, when you sign up at `http://localhost:5000`, your data will be persisted. You can start tracking errors locally and that data will be shown in your Exceptionless dashboard even after you shut down Docker/Exceptionless and restart it.
+Now, when you sign up at `http://localhost:5088`, your data will be persisted. You can start tracking errors locally and that data will be shown in your Exceptionless dashboard even after you shut down Docker/Exceptionless and restart it.
 
 Your homework: Try running this locally with SSL and SMTP enabled. It's just as simple as everything else we've done so far because Exceptionless has really taken the time to make sure the developer experience is top-notch. [Check out the instructions here](/docs/self-hosting/docker/#simple-setup-wssl-support-and-smtp).
 
