@@ -4,85 +4,53 @@ order: 2
 parent: JS Guides
 ---
 
-Vue is one of the more popular JavaScript frameworks out there, and Exceptionless has your back if you're working with it. Getting started is simple. 
+Vue is one of the more popular JavaScript frameworks out there, and Exceptionless has your back if you're working with it. Getting started is simple.
 
-### Install 
+### Install
 
-To install exceptionless, you can use npm or yarn: 
+To install exceptionless, you can use npm or yarn:
 
-npm - `npm install exceptionless`
+npm - `npm install @exceptionless/vue`
 
-yarn - `yarn add exceptionless`
+yarn - `yarn add @exceptionless/vue`
 
-### Initializing the Client 
+### Initializing the Client
 
-With Exceptionless, you can initialize a default client which provides a singleton instance, or you can initialize a custom client. We'll go over the way to initialize each. 
-
-**Default Client**  
-```javascript
-import { ExceptionlessClient } from 'exceptionless/dist/exceptionless';
-const client = ExceptionlessClient.default;
-client.config.apiKey = 'YOUR API KEY';
-``` 
-
-With that set up, you can use the Exceptionless default client anywhere in your app in a number of ways. You can pull it into a template file or you can create global state store to pass the client around the app.
-
-**Custom Client** 
-
-There are a variety of reasons you might want to instantiate a custom Exceptionless client. The custom client, for one, gives you more configuration options. Let's take a look at how to set it up. 
+Exceptionless provides a default singleton client instance. While we recommend
+using the default client instance for most use cases, you can also create
+custom instances (though that's beyond the scope of this guide).
 
 ```javascript
-import { ExceptionlessClient } from 'exceptionless/dist/exceptionless';
-const config = {
-  apiKey: "YOUR API KEY", 
-  serverUrl: "YOUR SELF HOSTED URL",
-  ...
-};
-const client = new ExceptionlessClient(config);
+import { Exceptionless } from "@exceptionless/vue";
+
+await Exceptionless.startup((c) => {
+  c.apiKey = "YOUR API KEY";
+});
 ```
 
-You can see an additional parameter passed into the configuration object as an example. To see all the available options, take a look at our [configuration values here](../client-configuration-values.md).
+You can see an additional parameter passed into the configuration object as an
+example. To see all the available options, take a look at our
+[configuration values here](../client-configuration-values.md).
 
-Just like with the default client, you can now pass this custom client throughout your app. If needed, you can also instantiate a new custom client anywhere in your application. 
-
-## Using Exceptionless Through Global State 
-
-If you'd like to pass the Exceptionless client around your app using global state, there are a few methods you can implement. This example is a simple example of creating a global state store that can be accessed anywhere. 
-
-Start by creating a `store.js` file that looks like this: 
+### Using Exceptionless in a Vue App
 
 ```javascript
-import { reactive, toRefs } from "vue";
-import { ExceptionlessClient } from "exceptionless/dist/exceptionless";
-const defaultClient = ExceptionlessClient.default;
-defaultClient.config.apiKey = "YOUR API KEY";
+import { createApp } from "vue";
+import App from "./App.vue";
+import { Exceptionless, ExceptionlessErrorHandler } from "@exceptionless/vue";
 
-const state = reactive({
-    client: defaultClient
+Exceptionless.startup((c) => {
+  c.apiKey = "YOUR API KEY";
 });
 
-export default function useMonitoring() {
-    return {
-        ...toRefs(state),
-    }
-}
+const app = createApp(App);
+// Set the global vue error handler.
+app.config.errorHandler = ExceptionlessErrorHandler;
+app.mount("#app");
 ```
 
-Again, this is a very simple example that literally uses global state just for the Exceptionless client. You'd likely use it for more than that. 
+With that set up, you can use the Exceptionless client anywhere in your app.
 
-Now, to make use of our global state, just import it anywhere in your app like you would call your `useMonitoring` method to get access to your state variables, and in this case get access to Exceptionless. 
-
-Since our example is making use of the default client, you could also simply import the Exceptionless default client into any script tag you have in your components like this: 
-
-```js
-import { ExceptionlessClient } from "exceptionless/dist/exceptionless";
-const defaultClient = ExceptionlessClient.default;
-defaultClient.config.apiKey = "YOUR API KEY";
-```
-
----  
+---
 
 [Next > Angular](angular.md) {.text-right}
-
-
-
