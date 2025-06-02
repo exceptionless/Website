@@ -31,7 +31,7 @@ _Please note that if you are specifying configuration via `docker-compose`, then
 
 ```yaml
 # connection string used for any provider specifying Redis.
-EX_ConnectionStrings__Redis: server=localhost:6379,abortConnect=false
+EX_ConnectionStrings__Redis: localhost:6379,abortConnect=false
 
 EX_ConnectionStrings__Cache: provider=redis;
 EX_ConnectionStrings__Elasticsearch: server=http://10.0.0.4:9200;
