@@ -12,6 +12,8 @@ We simplified the self hosting process by integrating the UI into the existing a
 
 We also upgraded to Elasticsearch 8 in the base images. One requirement of upgrading with existing data is the Elasticsearch data is loaded with the latest Elasticsearch 7.x release. If you are using the all in one image, first use `exceptionless/exceptionless:8.0.0-elasticsearch7` and wait for the app to startup and give it some time. Then turn off the app and then use `exceptionless/exceptionless:8.0.0` image. We will be deprecating the `exceptionless/exceptionless:8.0.0-elasticsearch7` image in the future, this is only there to help with the upgrade process.
 
+You may also need to update the connection strings. In v8.2.7 we updated the Redis Connection String to remove the `server=` prefix.
+
 ## Upgrading from v7 to v7.1
 
 We made some changes to email configuration. Yoy wukk now be required to set the `EX_SmtpFrom` config map/environment variable in order to send email. The value should be in the following format: `"Exceptionless <noreply@YOUR_CUSTOM_DOMAIN_NAME>"`
