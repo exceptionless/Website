@@ -9,14 +9,15 @@ The Exceptionless JavaScript client SDK makes it easy to report errors, log deta
 
 Full guides can be found below:
 
-* [Browser (no framework)](guides/javascript-example.md)
-* [React](./guides/react-example.md)
-* [Node](./guides/node-example.md)
-* [Express](./guides/express-example.md)
+* [React](./guides/react.md)
+* [Vue](./guides/vue.md)
+* [Angular](./guides/angular.md)
+* [Node](./node-example.md)
+* [Express](./guides/express.md)
 
 ---
 
-This quickstart focuses on the vanilla JavaScript implementation of Exceptionless. 
+This quickstart focuses on the vanilla JavaScript implementation of Exceptionless.
 
 ## npm
 
@@ -52,6 +53,7 @@ To install via a script tag referencing Exceptionless over a CDN, add the follow
   }
 </script>
 ```
+
 ---
 
 [Next > Configuration](client-configuration.md) {.text-right}

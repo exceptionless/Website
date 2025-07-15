@@ -169,7 +169,7 @@ metrics.Timer("t1", 50788);
 
 ## Development
 
-If you would like to contribute to Foundatio, clone the repo and open the Foundatio.sln Visual Studio solution file to get started. Let us know if you have any questions or need any assistance.
+If you would like to contribute to Foundatio, clone the repo and open the Foundatio.slnx Visual Studio solution file to get started. Let us know if you have any questions or need any assistance.
 
 ## The Future of Foundatio
 
