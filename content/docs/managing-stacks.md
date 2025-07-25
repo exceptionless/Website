@@ -5,15 +5,15 @@ order: 2
 
 Perhaps the most important thing you'll do in Exceptionless is manage your stacks. Think of stacks as your todo list for error management. And like any good todo list, you can drill into a task for more details, mark the task complete, or set the task aside for a later date.
 
-But what is a stack, exactly? It's pretty simple, actually. A stack is an automatically ([or manually](manual-stacking.md)) grouped list of events. Events can be errors, messages, or logs. Exceptionless will try to automatically group the same events together while gathering as much information about them as possible (i.e. number of users effected, frequency of the event, last occurence). 
+But what is a stack, exactly? It's pretty simple, actually. A stack is an automatically ([or manually](manual-stacking.md)) grouped list of events. Events can be errors, messages, or logs. Exceptionless will try to automatically group the same events together while gathering as much information about them as possible (i.e. number of users affected, frequency of the event, last occurrence).
 
 ### Viewing Stacks
 
-Now, let's take a look at how you manage these stacks. When you first sign in, you'll be taken to your dashboard on the Most Frequent view. 
+Now, let's take a look at how you manage these stacks. When you first sign in, you'll be taken to your dashboard on the Most Frequent view.
 
 ![Most Frequent view of stacks on dashboard](img/Most_Frequent.png)
 
-Click on a stack you'd like to manage (We recommend you start with the most frequent event because that's probably pretty annoying for your customers 😉). Clicking on a stack will take you to a detailed view that includes important information such as how many times the event occurred, the number of users impacted, and the first and last occurences of the event.
+Click on a stack you'd like to manage (We recommend you start with the most frequent event because that's probably pretty annoying for your customers 😉). Clicking on a stack will take you to a detailed view that includes important information such as how many times the event occurred, the number of users impacted, and the first and last occurrences of the event.
 
 ![Stack Details Example](img/Stack_Details.png)
 
@@ -21,11 +21,11 @@ Click on a stack you'd like to manage (We recommend you start with the most freq
 
 To apply a status on a stack, click the dropdown in the top-right and apply the appropriate selection. Selection options include:
 
-* Open  
-* Fixed  
-* Snoozed  
-* Ignored  
-* Discarded  
+* Open
+* Fixed
+* Snoozed
+* Ignored
+* Discarded
 
 ![Status Options Example](img/Status_Options.png)
 
@@ -49,9 +49,9 @@ Beyond statuses, you have options to further control your stacks.
 
 ![Options Examples](img/Options.png)
 
-Marking a stack with "Future Occurences are Critical" will automatically tag all subsequent events that come into that stack with the critical tag and will make them more prominent for you to review.
+Marking a stack with "Future Occurrences are Critical" will automatically tag all subsequent events that come into that stack with the critical tag and will make them more prominent for you to review.
 
-The "Promote to External" option allows you to send the stack details to an external source that you've configured through webhooks in the [Integrations](integrations.md) section. This can help you automate issue tracking and project management. For example, you can use this functionality to connect to [Zapier](https://zapier.com), a no-code automation tool. By doing so, you can automatically funnel events from Exceptionless to issues on Github or Jira. You can send text alerts to your devops team (just be smart about this one because those folks need sleep too!), or you can use the data from Exceptionless to build custom dashboards for your entire organization. 
+The "Promote to External" option allows you to send the stack details to an external source that you've configured through webhooks in the [Integrations](integrations.md) section. This can help you automate issue tracking and project management. For example, you can use this functionality to connect to [Zapier](https://zapier.com), a no-code automation tool. By doing so, you can automatically funnel events from Exceptionless to issues on Github or Jira. You can send text alerts to your devops team (just be smart about this one because those folks need sleep too!), or you can use the data from Exceptionless to build custom dashboards for your entire organization.
 
 Adding a "Reference Link" allows you to supply to a link from an external source. This is helpful when a customer files a Github issue, for example. You can link to Github or to a Slack conversation, or anywhere, really.
 

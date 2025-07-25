@@ -34,7 +34,7 @@ The .NET team's focus on pushing the boundaries of garbage collection was an imp
 
 As a quick, visual example, of other improvements, here's a table Ben Adams tweeted that gives us glimpse into the performance gains of .NET 5.0 over .NET 3.1
 
-https://twitter.com/ben_a_adams/status/1306817978927902720
+<https://twitter.com/ben_a_adams/status/1306817978927902720>
 
 ## New C# Features
 

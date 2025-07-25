@@ -36,7 +36,7 @@ Then, we register a new client side plugin that runs each time an event is creat
 ExceptionlessClient.Default.Configuration.AddPlugin("Conditionally cancel log submission", 100, context => {
     var enableLogSubmission = context.Client.Configuration.Settings.GetBoolean("enableLogSubmission", true);
 
-    // only cancel event submission if it’s a log event and enableLogSubmission is false
+    // only cancel event submission if it's a log event and enableLogSubmission is false
     if (context.Event.Type == Event.KnownTypes.Log && !enableLogSubmission) {
         context.Cancel = true;
     }
@@ -45,7 +45,7 @@ ExceptionlessClient.Default.Configuration.AddPlugin("Conditionally cancel log su
 
 ## Typed Helpers
 
-The `GetBoolean` method checks the `enableLogSubmission` key. This helper method makes it easy to consume saved client configuration values. The first parameter defines the settings key (name). The second parameter is optional and allows you to set a default value if the key doesn’t exist in the settings or was unable to be converted to the proper type (e.g., a boolean).
+The `GetBoolean` method checks the `enableLogSubmission` key. This helper method makes it easy to consume saved client configuration values. The first parameter defines the settings key (name). The second parameter is optional and allows you to set a default value if the key doesn't exist in the settings or was unable to be converted to the proper type (e.g., a boolean).
 
 We have a few helpers to convert string configuration values to different system types. These methods also contain overloads that allow you to specify default values.
 

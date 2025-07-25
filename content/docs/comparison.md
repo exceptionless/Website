@@ -4,18 +4,18 @@ order: 16
 ---
 | Feature                        | Exceptionless | Application Insights | Elmah | Raygun |
 | :----------------------------- | :-----------: | :------------------: | :---: | :----: |
-| Open Source                    | X             |                      | X     |
-| Free Self Hosting              | X             |                      | X     |
+| Open Source                    | X             |                      | X     |        |
+| Free Self Hosting              | X             |                      | X     |        |
 | Detailed error reports         | X             | X                    |       | X      |
 | Email Notifications            | X             | X                    | X     | X      |
-| Export Events                  |               | X                    | X     |
+| Export Events                  |               | X                    | X     |        |
 | Filtering                      | X             | X                    |       | X      |
 | Send Custom Data [^1]          | X             |                      |       | X      |
-| Real-time Client Configuration | X             |                      |       |
-| Real-time Dashboards           | X             |                      |       |
-| Complete Rest API              | X             |                      |       |
+| Real-time Client Configuration | X             |                      |       |        |
+| Real-time Dashboards           | X             |                      |       |        |
+| Complete Rest API              | X             |                      |       |        |
 | Search                         | X             | X                    |       | X      |
-| Search Custom Fields           | X             |                      |       |
+| Search Custom Fields           | X             |                      |       |        |
 | Intelligent Stacking           | X             | X                    |       | X      |
 | Custom Stacking                | X             |                      |       | X      |
 | Mark Fixed                     | X             |                      |       | X      |
@@ -26,9 +26,9 @@ order: 16
 | User % [^3]                    | X             |                      |       | ?      |
 | Broken Links                   | X             | X                    | X     | X      |
 | Releases                       |               |                      |       | X      |
-| Feature Usages                 | X             |                      |       |
-| Log Messages                   | X             |                      |       |
-| Custom Event Types             | X             | X                    |       |
+| Feature Usages                 | X             |                      |       |        |
+| Log Messages                   | X             |                      |       |        |
+| Custom Event Types             | X             | X                    |       |        |
 | Webhooks                       | X             | X                    |       | X      |
 
 - **X** = has feature, **empty box** does not have feature, **?** = unknown

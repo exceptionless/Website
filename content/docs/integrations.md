@@ -3,11 +3,11 @@ title: Integrations
 order: 14
 ---
 
-To make managing events from your application easier, Exceptionless provides some useful integrations. You can access these integrations by clicking the Project dropdown menu, clicking the settings icon next to the project name, then clicking on the Integrations tab on the Settings page. 
+To make managing events from your application easier, Exceptionless provides some useful integrations. You can access these integrations by clicking the Project dropdown menu, clicking the settings icon next to the project name, then clicking on the Integrations tab on the Settings page.
 
 ![Integrations Page Screenshot](./img/integrations.png)
 
-We provide three integrations: 
+We provide three integrations:
 
 1. Zapier
 2. Slack
@@ -15,23 +15,23 @@ We provide three integrations:
 
 ## Zapier
 
-Exceptionless has built a [first-class Zapier application](https://zapier.com/apps/exceptionless/integrations) that allows you to connect your Exceptionless account to over 3,000 other apps. To use this, simply sign into your Zapier account and search for Exceptionless. 
+Exceptionless has built a [first-class Zapier application](https://zapier.com/apps/exceptionless/integrations) that allows you to connect your Exceptionless account to over 3,000 other apps. To use this, simply sign into your Zapier account and search for Exceptionless.
 
 ![Zapier page for Exceptionless](./img/exceptionless_zapier.png)
 
 ## Slack
 
-Connecting to Slack is as simple as clicking the Slack integration button. You'll be prompted to sign into your Slack workspace. Once signed in, you can choose the channel for your notifications to be sent to. Then, back on the Settings page, you can configure what types of notifications are sent. 
+Connecting to Slack is as simple as clicking the Slack integration button. You'll be prompted to sign into your Slack workspace. Once signed in, you can choose the channel for your notifications to be sent to. Then, back on the Settings page, you can configure what types of notifications are sent.
 
 ![Slack integration example](./img/exceptionless-slack-settings.png)
 
 ## Webhooks
 
-By configuring a webhook, you are telling Exceptionless to post data to the specified endpoint whenever specific events happen. This is useful in creating custom, bespoke integrations for your Exceptionless account. Configuring a webhook is simple. Click the Add Webhook button on the Settins page and provide the information requested in the modal. 
+By configuring a webhook, you are telling Exceptionless to post data to the specified endpoint whenever specific events happen. This is useful in creating custom, bespoke integrations for your Exceptionless account. Configuring a webhook is simple. Click the Add Webhook button on the Settins page and provide the information requested in the modal.
 
 ![Webhooks example](./img/exceptionless_webhooks.png)
 
-Here's an example of the event payload (this applies to v2 of the Exceptionless API): 
+Here's an example of the event payload (this applies to v2 of the Exceptionless API):
 
 ```json
 {

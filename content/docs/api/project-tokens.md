@@ -3,22 +3,22 @@ title: Client-Scoped Tokens
 order: 2
 ---
 
-You'll likely want your events associated with a specific project, and you may want to fetch data from a specific project. To ensure this, you need to generate a project-specific API key (or token). You can do this in the Exceptionless interface by clicking the All Projects link in the navigation header, then hover over the project name and click the gear icon. On the Settings page, you'll see a tab for API Keys. You can generate a token there. 
+You'll likely want your events associated with a specific project, and you may want to fetch data from a specific project. To ensure this, you need to generate a project-specific API key (or token). You can do this in the Exceptionless interface by clicking the All Projects link in the navigation header, then hover over the project name and click the gear icon. On the Settings page, you'll see a tab for API Keys. You can generate a token there.
 
 However, you can programmatically generate these tokens as well. Let's use the [User Scoped Token](api-getting-started.md) you generated previously to get a list of projects.
 
-### Get Projects 
+### Get Projects
 
-GET `api/v2/projects`  
+GET `api/v2/projects`
 
-```
+```sh
 curl --location --request GET "https://api.exceptionless.com/api/v2/projects" \
 --header 'Authorization: Bearer YOUR_USER_SCOPED_TOKEN'
 ```
 
-The response to this request will be an array of all of your projects that looks like this: 
+The response to this request will be an array of all of your projects that looks like this:
 
-```
+```json
 [
     {
         "id": "YOUR PROJECT ID",
@@ -40,9 +40,9 @@ You'll need the `id` field from this response to generate your new project-speci
 
 ### Generate Client-Scoped Token
 
-POST `api/v2/projects/PROJECT_ID`  
+POST `api/v2/projects/PROJECT_ID`
 
-```
+```sh
 curl --location --request POST "https://api.exceptionless.com/api/v2/projects/YOUR_PROJECT_ID/tokens" \
 --header 'Authorization: Bearer YOUR_USER_SCOPED_TOKEN' \
 --header 'Content-Type: application/json' \
@@ -53,9 +53,9 @@ curl --location --request POST "https://api.exceptionless.com/api/v2/projects/YO
 }'
 ```
 
-The response you'll receive will look like this: 
+The response you'll receive will look like this:
 
-```
+```json
 {
     "id": "TOKEN",
     "organization_id": "YOUR_ORG_ID",
@@ -69,7 +69,7 @@ The response you'll receive will look like this:
 }
 ```
 
-This `TOKEN` can now be used as your API key in Bearer authorization headers for subsequent API requests related to your project. 
+This `TOKEN` can now be used as your API key in Bearer authorization headers for subsequent API requests related to your project.
 
 ---
 

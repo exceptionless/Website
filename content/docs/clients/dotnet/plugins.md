@@ -3,7 +3,7 @@ title: Plugins
 order: 8
 parent: .NET
 ---
-A plugin is a client-side addin that is run **every time** you submit an event.
+A plugin is a client-side add-in that is run **every time** you submit an event.
 
 - [Create a New Plugin](#create-a-new-plugin)
 - [Add System Uptime to Feature Usages](#add-system-uptime-to-feature-usages)

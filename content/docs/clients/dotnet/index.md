@@ -2,17 +2,17 @@
 title: .NET Client
 key: .NET
 ---
-Exceptionless provides a simple-to-use .NET client for your convenience. To get started, you'll need to install the client. There are a variety of ways to install, but for brevity we'll focus on the dotnet cli. If you don't have that installed, [follow the guide here](https://docs.microsoft.com/en-us/dotnet/core/sdk). 
+Exceptionless provides a simple-to-use .NET client for your convenience. To get started, you'll need to install the client. There are a variety of ways to install, but for brevity we'll focus on the dotnet cli. If you don't have that installed, [follow the guide here](https://docs.microsoft.com/en-us/dotnet/core/sdk).
 
-Exceptionless provides packages for specific platform (listed toward the bottom of this page), but to get started quickly, you can install the root version of Exceptionless like so: 
+Exceptionless provides packages for specific platform (listed toward the bottom of this page), but to get started quickly, you can install the root version of Exceptionless like so:
 
-`dotnet add package Exceptionless`  
+`dotnet add package Exceptionless`
 
-If you want to install a specific version, you can pass in the `--version` flag like this: 
+If you want to install a specific version, you can pass in the `--version` flag like this:
 
 `dotnet add package Exceptionless --version 4.5.0`
 
-For more specific packages for your particular target platform, we have provided the following packages: 
+For more specific packages for your particular target platform, we have provided the following packages:
 
 ## [Exceptionless.Mvc](https://www.nuget.org/packages/Exceptionless.Mvc/)
 
@@ -74,6 +74,6 @@ Serilog sink that sends log entries to Exceptionless.
 * [User Sessions](../../user-sessions.md)
 * [Manual Stacking](../../manual-stacking.md) -->
 
---- 
+---
 
 [Next > Platform Guides](guides/index.md) {.text-right}

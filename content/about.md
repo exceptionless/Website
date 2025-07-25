@@ -15,5 +15,5 @@ Our goal is to build the best developer tools available to help developers aroun
 Mission
 -------
 
-We believe in being open and available to our customers, and listening to what they have to say. Our highest priority is the success of our customers,  
+We believe in being open and available to our customers, and listening to what they have to say. Our highest priority is the success of our customers,
 followed by continued innovation with our products.

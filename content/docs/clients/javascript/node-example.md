@@ -3,7 +3,7 @@ title: Node.js Example
 # order: 7
 # parent: JS
 ---
-Here is a very simple example using a Node.js script. 
+Here is a very simple example using a Node.js script.
 
 ```js
 import { Exceptionless } from "@exceptionless/node";
@@ -18,6 +18,7 @@ const forceError = async () => {
   }
 }
 ```
+
 ---
 
 [Next > Express Example](express-example.md) {.text-right }

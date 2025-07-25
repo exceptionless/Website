@@ -19,7 +19,7 @@ layout: docs
       }
 
       const uniqueDocs = [...new Set(docs)];
-      
+
       const filtered = uniqueDocs.filter((doc) => doc.title.includes(parsedSearchTerm) || doc.content.includes(parsedSearchTerm));
 
       for (const item of filtered) {
@@ -31,13 +31,13 @@ layout: docs
         anchor.style.cursor = "pointer";
         anchor.innerText = item.title;
 
-        newItem.appendChild(anchor);   
+        newItem.appendChild(anchor);
 
-        const searchIndex = item.content.search(parsedSearchTerm);    
+        const searchIndex = item.content.search(parsedSearchTerm);
 
         const searchArray = item.content.split(" ");
         const searchArrayIndex = searchArray.indexOf(parsedSearchTerm);
-        
+
         let previewText = "No preview available";
         let previewHtml = `<p>${previewText}</p>`;
         if (searchArrayIndex > -1) {
@@ -57,7 +57,7 @@ layout: docs
         ul.appendChild(newItem);
       }
     });
-    
+
     const ul = document.getElementById("results-ul");
     let updatedWordsToDisplay = [];
 </script>

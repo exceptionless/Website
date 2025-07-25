@@ -5,9 +5,9 @@ parent: JS
 key: JS Guides
 ---
 
-Exceptionless works with all popular JavaScript frameworks on both the front end and the backend including React, Angular, Typescript, Express, and Svelte. Below, you will find our guides for those frameworks. 
+Exceptionless works with all popular JavaScript frameworks on both the front end and the backend including React, Angular, Typescript, Express, and Svelte. Below, you will find our guides for those frameworks.
 
-* [React](react.md) 
+* [React](react.md)
 * [Angular](angular.md)
 * [Vue](vue.md)
 * [Express](express.md)

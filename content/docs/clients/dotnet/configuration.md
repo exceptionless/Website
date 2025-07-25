@@ -32,7 +32,7 @@ There are a few ways to configure Exceptionless in your project. We'll cover the
 
 ## ExceptionlessClient Configuration
 
-You have a few options for how you might configure your Exceptionless client. Here are some examples of how to do this. 
+You have a few options for how you might configure your Exceptionless client. Here are some examples of how to do this.
 
 ### Configuring With Code
 
@@ -93,11 +93,11 @@ Exceptionless can be configured using a config section in your web.config or app
 </configuration>
 ```
 
-Now, before you can fully configure your Exceptionless client, it's important to know what options are available for you to configure. We'll cover that below. 
+Now, before you can fully configure your Exceptionless client, it's important to know what options are available for you to configure. We'll cover that below.
 
 ### Available Configuration Options
 
-When initializing the Exceptionless client, you can set any of the following values: 
+When initializing the Exceptionless client, you can set any of the following values:
 
 * ServerUrl
 * IncludePrivateInformation
@@ -106,18 +106,18 @@ When initializing the Exceptionless client, you can set any of the following val
 
 ### ServerUrl
 
-The `ServerUrl` is used when you are self-hosting Exceptionless and need to point your client to your self-hosted server. This one is pretty self-explanatory. 
+The `ServerUrl` is used when you are self-hosting Exceptionless and need to point your client to your self-hosted server. This one is pretty self-explanatory.
 
 ### IncludePrivateInformation
 
-This is a boolean value that will automatically strip private info like credit card numbers and passwords from being sent in event handling. The default is `true`. However, you can set this value like this: 
+This is a boolean value that will automatically strip private info like credit card numbers and passwords from being sent in event handling. The default is `true`. However, you can set this value like this:
 
 ```cs
 using Exceptionless;
 ExceptionlessClient.Default.Configuration.IncludePrivateInformation = false;
 ```
 
-You can also set it in a global configuration file like this: 
+You can also set it in a global configuration file like this:
 
 ```xml
 <exceptionless apiKey="YOUR_API_KEY" includePrivateInformation="false" />
@@ -125,18 +125,18 @@ You can also set it in a global configuration file like this:
 
 ### Extended Data
 
-The next two properties that can be set when configuring the Exceptionless client can be considered features that extend your data. If you want to apply additional information to every single event that is fired, you would use one of these two settings. 
+The next two properties that can be set when configuring the Exceptionless client can be considered features that extend your data. If you want to apply additional information to every single event that is fired, you would use one of these two settings.
 
 ### Default Tags
 
-Just as you are able to apply tags to individual events, you can set default tags that will apply to all events you submit. Configuring this is simple. Here's a quick example: 
+Just as you are able to apply tags to individual events, you can set default tags that will apply to all events you submit. Configuring this is simple. Here's a quick example:
 
 ```cs
 using Exceptionless;
 ExceptionlessClient.Default.Configuration.DefaultTags.Add("Tag1");
 ```
 
-You can also set this up globally with a configuration file like this: 
+You can also set this up globally with a configuration file like this:
 
 ```xml
 <exceptionless apiKey="YOUR_API_KEY" tags="Tag1,Tag2" />
@@ -144,14 +144,14 @@ You can also set this up globally with a configuration file like this:
 
 ### Default Data
 
-When viewing your stacks and individual events, you can see additional information about the events on the Extended Data tab. Data found there is usually passed in by adding info to the data object in the event payload. Here's an example of how you might do that: 
+When viewing your stacks and individual events, you can see additional information about the events on the Extended Data tab. Data found there is usually passed in by adding info to the data object in the event payload. Here's an example of how you might do that:
 
 ```cs
 using Exceptionless;
 ExceptionlessClient.Default.Configuration.DefaultData["Data1"] = "Exceptionless";
 ```
 
-You can also configure this with a configuration file like this: 
+You can also configure this with a configuration file like this:
 
 ```xml
 <exceptionless apiKey="YOUR_API_KEY">

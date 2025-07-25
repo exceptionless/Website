@@ -4,7 +4,7 @@ order: 6
 parent: JS
 ---
 
-If your events aren’t being sent to the server there are a few things that you can try to diagnose the issue.
+If your events aren't being sent to the server there are a few things that you can try to diagnose the issue.
 
 ## Update Your Client
 
@@ -14,7 +14,7 @@ Please make sure that you are using the latest version of the client.
 
 If you are using Exceptionless in a scenario where an event is submitted and the process is immediately terminated, then you will need to make sure that the queue is processed before the application ends. Please note that the client will try to do this automatically.
 
-Events are queued and sent in the background, if the application isn’t running then the events cannot be sent. You can manually force the queue to be processed by calling the following line of code before before the process ends:
+Events are queued and sent in the background, if the application isn't running then the events cannot be sent. You can manually force the queue to be processed by calling the following line of code before before the process ends:
 
 ```js
 import { Exceptionless } from "@exceptionless/browser";

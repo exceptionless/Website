@@ -48,6 +48,6 @@ Log4net appender that sends log entries to Exceptionless.
 
 Serilog sink that sends log entries to Exceptionless.
 
---- 
+---
 
 [Next > Settings](settings.md) {.text-right}

@@ -7,7 +7,7 @@ Exceptionless provides you the tools to track errors, logs, and events while gui
 ## Hosted Option
 
 1. [Create an account](https://be.exceptionless.io/signup)
-2. When you signup, you will be prompted to create your first project.
+2. When you sign-up, you will be prompted to create your first project.
 3. [Configure your application](https://be.exceptionless.io/project/list) by clicking the Download & Configure Client action button on the project list page.
 4. Select your project type and follow the instructions.
 5. Your application will now automatically send all unhandled errors to the Exceptionless service.

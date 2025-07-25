@@ -10,6 +10,7 @@ parent: .NET
 - [About](#about)
 - [Usage Example](#usage-example)
 - [.NET Helpers](#net-helpers)
+  - [Helpers](#helpers)
 - [Updating Client Configuration settings](#updating-client-configuration-settings)
 - [Subscribing to Client Configuration Setting changes](#subscribing-to-client-configuration-setting-changes)
 
@@ -28,8 +29,8 @@ Then, we register a new client side plugin that runs each time an event is creat
 ```csharp
 ExceptionlessClient.Default.Configuration.AddPlugin("Conditionally cancel log submission", 100, context => {
     var enableLogSubmission = context.Client.Configuration.Settings.GetBoolean("enableLogSubmission", true);
- 
-    // only cancel event submission if it’s a log event and enableLogSubmission is false
+
+    // only cancel event submission if it's a log event and enableLogSubmission is false
     if (context.Event.Type == Event.KnownTypes.Log && !enableLogSubmission) {
         context.Cancel = true;
     }
@@ -44,28 +45,29 @@ The `GetBoolean` method checks the `enableLogSubmission` key. This helper method
 
 We have a few helpers to convert string configuration values to different system types. These methods also contain overloads that allow you to specify default values.
 
-###Helpers###
+### Helpers
 
-* `GetString`
-* `GetBoolean`
-* `GetInt32`
-* `GetInt64`
-* `GetDouble`
-* `GetDateTime`
-* `GetDateTimeOffset`
-* `GetGuid`
-* `GetStringCollection` (breaks a comma delimited list into an IEnumerable of strings)
+- `GetString`
+- `GetBoolean`
+- `GetInt32`
+- `GetInt64`
+- `GetDouble`
+- `GetDateTime`
+- `GetDateTimeOffset`
+- `GetGuid`
+- `GetStringCollection` (breaks a comma delimited list into an IEnumerable of strings)
 
 ***
 
 ## Updating Client Configuration settings
 
-All project settings are synced to the client in almost real time. When an event is submitted to Exceptionless we send down a response header with the current configuration version. If a newer version is available we will immediately retrieve and apply the latest configuration. 
+All project settings are synced to the client in almost real time. When an event is submitted to Exceptionless we send down a response header with the current configuration version. If a newer version is available we will immediately retrieve and apply the latest configuration.
 
-By default the client will check after `5 seconds` on client startup (*if no events are submitted on startup*) and then every `2 minutes` after the last event submission for updated configuration settings. 
-  * Checking for updated settings doesn't count towards plan limits. 
-  * Only the current configuration version is sent when checking for updated settings (no user information will ever be sent). 
-  * If the settings haven't changed, then no settings will be retrieved.
+By default the client will check after `5 seconds` on client startup (*if no events are submitted on startup*) and then every `2 minutes` after the last event submission for updated configuration settings.
+
+- Checking for updated settings doesn't count towards plan limits.
+- Only the current configuration version is sent when checking for updated settings (no user information will ever be sent).
+- If the settings haven't changed, then no settings will be retrieved.
 
 You can also **turn off the automatic updating of configuration settings when idle** using the code below.
 

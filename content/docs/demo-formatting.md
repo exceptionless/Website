@@ -74,6 +74,6 @@ is maintained by the W3C.
 
 | Feature                        | Exceptionless | Application Insights | Elmah | Raygun |
 | :----------------------------- | :-----------: | :------------------: | :---: | :----: |
-| Open Source                    | X             |                      | X     |
-| Free Self Hosting              | X             |                      | X     |
+| Open Source                    | X             |                      | X     |        |
+| Free Self Hosting              | X             |                      | X     |        |
 | Detailed error reports         | X             | X                    |       | X      |

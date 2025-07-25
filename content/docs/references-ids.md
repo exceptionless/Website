@@ -25,7 +25,6 @@ ExceptionlessClient.Default.Configuration.UseReferenceIds();
 
 The JavaScript client will automatically manage reference ids.
 
-
 You can also create your own plugin to create your own Reference Ids.
 
 ## Get Last Used Reference Id

@@ -4,7 +4,7 @@ order: 10
 parent: .NET
 ---
 
-If your events aren’t being sent to the server there are a few things that you can try to diagnose the issue.
+If your events aren't being sent to the server there are a few things that you can try to diagnose the issue.
 
 ## Update Your Client
 
@@ -14,13 +14,13 @@ Please make sure that you are using the [latest version of the client](upgrading
 
 If you are using Exceptionless in a scenario where an event is submitted and the process is immediately terminated, then you will need to make sure that the queue is processed before the application ends. Please note that this will happen automatically if your runtime supports it _(portable profiles do not currently support this)_.
 
-Events are queued to disk and sent in the background, if the application isn’t running then the events cannot be sent. You can manually force the queue to be processed by calling the following line of code before before the process ends:
+Events are queued to disk and sent in the background, if the application isn't running then the events cannot be sent. You can manually force the queue to be processed by calling the following line of code before before the process ends:
 
 ```csharp
 await ExceptionlessClient.Default.ProcessQueueAsync();
 ```
 
-This will cause the event queue to be processed synchronously and the events to be reported. If this doesn’t solve the issue then please enable client logging and send us the log file.
+This will cause the event queue to be processed synchronously and the events to be reported. If this doesn't solve the issue then please enable client logging and send us the log file.
 
 ## How to Locate the Default Isolated Storage Queue Folder
 

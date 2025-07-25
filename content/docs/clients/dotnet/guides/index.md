@@ -8,11 +8,11 @@ This section will provide you with specific guides for setting up and configurin
 
 Exceptionless tries to provide support for platforms as long as Microsoft supports them. As such, you will be able to utilize any of our packages for your applications, but this documentation will focus on our core packages for .NET.
 
-### Platform Guides  
+### Platform Guides
 
 * [Console Apps & Services Apps](console-apps-example.md)
-* [Web Server](web-server-example.md) 
+* [Web Server](web-server-example.md)
 
---- 
+---
 
 [Next > Console App Guide](console-apps-example.md) {.text-right}
