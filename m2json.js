@@ -1,11 +1,10 @@
 /* eslint-env node */
 'use strict';
 
-const moment = require('moment');
-const truncate = require('lodash.truncate');
-const path = require('path');
-const fs = require('fs');
-const yaml = require('yaml-front-matter');
+import { DateTime } from 'luxon';
+import path from 'path';
+import fs from 'fs';
+import yaml from 'yaml-front-matter';
 
 // Side effects:
 // - Root node of JSON is files key mapping to a dictionary of files
@@ -13,6 +12,24 @@ const yaml = require('yaml-front-matter');
 //   (not translated), if width is not 0
 // - .__content is removed (potentially too large)
 // - if .date is detected, a formated date is added as .dateFormatted
+
+const truncate = function(str, options) {
+  const { length = 80, separator = /\s/, omission = ' …' } = options;
+  
+  if (str.length <= length) {
+    return str;
+  }
+  
+  let truncated = str.slice(0, length);
+  if (separator) {
+    const lastIndex = truncated.search(separator);
+    if (lastIndex > 0) {
+      truncated = truncated.slice(0, lastIndex);
+    }
+  }
+  
+  return truncated + omission;
+};
 
 const processFile = function(filename, width, content) {
   const _basename = path.basename(filename, path.extname(filename));
@@ -39,9 +56,9 @@ const processFile = function(filename, width, content) {
 
   delete _metadata['__content'];
 
-  // map user-entered date to a better one using moment's great parser
+  // map user-entered date to a better one using DateTime's parser
   if (_metadata.date) {
-    _metadata.iso8601Date = moment(_metadata.date).format();
+    _metadata.iso8601Date = DateTime.fromJSDate(new Date(_metadata.date)).toISO();
   }
 
   _metadata.basename = _basename;
@@ -61,7 +78,7 @@ const getFiles = function(filename) {
   }
 };
 
-exports.parse = function(filenames, options) {
+export const parse = function(filenames, options) {
   // http://i.qkme.me/3tmyv8.jpg
   const parseAllTheFiles = {};
   // http://i.imgur.com/EnXB9aA.jpg
@@ -87,3 +104,5 @@ exports.parse = function(filenames, options) {
     return json;
   }
 };
+
+export default { parse };

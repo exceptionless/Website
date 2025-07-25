@@ -9,7 +9,7 @@ layout:
   <subtitle>{{ site.description }}</subtitle>
   <link href="https://exceptionless.com/feed.xml" rel="self"/>
   <link href="https://exceptionless.com/news/"/>
-  <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
     <name>{{ site.author }}</name>
@@ -21,7 +21,7 @@ layout:
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date | rssDate }}</updated>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ post.data.id if post.data.id else absolutePostUrl }}</id>
     <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>

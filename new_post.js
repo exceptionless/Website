@@ -1,5 +1,6 @@
-const { exec } = require('child_process');
-const { program } = require('commander');
+import { exec } from 'child_process';
+import { program } from 'commander';
+
 program.option('-t, --title <title>', 'Post title');
 
 (() => {

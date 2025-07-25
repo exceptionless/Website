@@ -3,4 +3,16 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 layout: null
 ---
-{% sitemap collections.all %}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for item in collections.all %}
+  {%- if item.url and not item.data.eleventyExcludeFromCollections %}
+  <url>
+    <loc>https://exceptionless.com{{ item.url | trim }}</loc>
+    {%- if item.date %}
+    <lastmod>{{ item.date.toISOString().split('T')[0] }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endif %}
+  {%- endfor %}
+</urlset>
