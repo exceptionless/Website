@@ -38,7 +38,7 @@ By adding this helper method, Exceptionless is able to gather more information a
 Then in your `Configure` method, you would add:
 
 ```csharp
-app.UseExceptionless(Configuration);
+app.UseExceptionless();
 ```
 
 To get access to your Exceptionless configuration (which we'll explain next), you'll need to do create a `builder` variable in your `Startup` method and build the configuration like this:
