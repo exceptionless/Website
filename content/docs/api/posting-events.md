@@ -19,7 +19,7 @@ Messages are arbitrary pieces of information that can mean or relate to anything
 
 POST `api/v2/events`
 
-```sh
+```shell
 curl --location --request POST "https://api.exceptionless.com/api/v2/events" \
 --header 'Authorization: Bearer YOUR_PROJECT_TOKEN' \
 --header 'Content-Type: application/json' \
@@ -34,7 +34,7 @@ Logs will generally have a little more information associated with them than mes
 
 POST `api/v2/events`
 
-```sh
+```shell
 curl --location --request POST "https://api.exceptionless.com/api/v2/events" \
 --header 'Authorization: Bearer YOUR_PROJECT_TOKEN' \
 --header 'Content-Type: application/json' \
@@ -49,7 +49,7 @@ Errors will generally be the most comprehensive events you send through to Excep
 
 POST `api/v2/events`
 
-```sh
+```shell
 curl --location --request POST "https://api.exceptionless.com/api/v2/events" \
 --header 'Authorization: Bearer YOUR_PROJECT_TOKEN' \
 --header 'Content-Type: application/json' \

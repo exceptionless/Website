@@ -11,7 +11,7 @@ There may be times where you need to access the events you've sent through to Ex
 
 GET `api/v2/events/count`
 
-```sh
+```shell
 curl --location --request GET "https://api.exceptionless.com/api/v2/events/count" \
 --header 'Authorization: Bearer YOUR_SCOPED_USER_TOKEN'
 ```
@@ -30,7 +30,7 @@ Remember, you can get your Project ID in the UI when logged in or by [following 
 
 GET `api/v2/projects/YOUR_PROJECT_ID/events/count`
 
-```sh
+```shell
 curl --location --request GET "https://api.exceptionless.com/api/v2/projects/YOUR_PROJECT_ID/events/count" \
 --header 'Authorization: Bearer YOUR_PROJECT_TOKEN'
 ```
@@ -47,7 +47,7 @@ The response will be just like the global event search:
 
 GET `api/v2/events`
 
-```sh
+```shell
 curl --location --request GET 'https://api.exceptionless.com/api/v2/events' \
 --header 'Authorization: Bearer YOUR_SCOPED_USER_TOKEN'
 ```
@@ -88,7 +88,7 @@ Similar to getting all events or your organization, you can get all events for a
 
 GET `api/v2/projects/YOUR_PROJECT_ID/events`
 
-```sh
+```shell
 curl --location --request GET 'https://api.exceptionless.com/api/v2/projects/YOUR_PROJECT_ID/events' \
 --header 'Authorization: Bearer YOUR_PROJECT_TOKEN'
 ```
@@ -127,7 +127,7 @@ You can get the details of a single event by passing in the ID for the event.
 
 GET `api/v2/events/YOUR_EVENT_ID`
 
-```sh
+```shell
 curl --location --request GET 'https://api.exceptionless.com/api/v2/events/YOUR_EVENT_ID' \
 --header 'Authorization: Bearer YOUR_PROJECT_TOKEN'
 ```

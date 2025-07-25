@@ -16,7 +16,7 @@ In the example above, the events grouped under "My stack title" use custom stack
 
 ## cURL Example
 
-```sh
+```shell
 curl --location --request POST 'https://api.exceptionless.com/api/v2/events' \
 --header 'Authorization: Bearer XUlBBdgFxAlmCsAZHDFTIacXpzYuZDuqDzzFYMlR' \
 --header 'Content-Type: application/json' \
