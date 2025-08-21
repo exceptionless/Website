@@ -44,7 +44,10 @@ On Linux:
 
 ```bash
 docker run --rm -it -p 5200:8080 -p 5089:443 \
-    -e EX_ConnectionStrings__Email=smtps://user:password@smtp.host.com:587 \
+    -e EX_ConnectionStrings__Email=[smtp | smtps]://user:password@smtp.host.com:587 \
+    -e EX_AppMode="[Development | Staging | Production]" \
+    -e EX_BaseURL="[http | https]://example.com" \
+    -e EX_SmtpFrom="John Doe <john.doe@example.com>" \
     -e ASPNETCORE_URLS="https://+;http://+" \
     -e ASPNETCORE_HTTPS_PORT=5001 \
     -e ASPNETCORE_Kestrel__Certificates__Default__Password="password" \
@@ -58,7 +61,10 @@ On PowerShell:
 
 ```powershell
 docker run --rm -it -p 5200:8080 -p 5089:443 `
-    -e EX_ConnectionStrings__Email=smtps://user:password@smtp.host.com:587 `
+    -e EX_ConnectionStrings__Email=[smtp | smtps]://user:password@smtp.host.com:587 \
+    -e EX_AppMode="[Development | Staging | Production]" `
+    -e EX_BaseURL="[http | https]://example.com" `
+    -e EX_SmtpFrom="John Doe <john.doe@example.com>" `
     -e ASPNETCORE_URLS="https://+;http://+" `
     -e ASPNETCORE_HTTPS_PORT=5001 `
     -e ASPNETCORE_Kestrel__Certificates__Default__Password="password" `
